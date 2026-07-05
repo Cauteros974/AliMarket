@@ -8,4 +8,7 @@ export const color = {
     border: "#E7EAF0",
     success: "#17A673",
     warning: "#F6A609",
+    danger: "#E63B3B",
+    black: "#000000",
+    white: "#FFFFFF",
 }
