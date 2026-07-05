@@ -5,3 +5,9 @@ export type CategoryId =
     | "beauty"
     | "sports"
     | "toys";
+
+export type Category = {
+    id: CategoryId;
+    title: string;
+    icon: string;
+}
