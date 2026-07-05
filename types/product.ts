@@ -23,4 +23,7 @@ export type Product = {
     rating: number;
     reviews: number;
     sold: number;
+    discountLabel?: string;
+    delivery: string;
+    colors: string;
 }
