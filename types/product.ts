@@ -17,4 +17,7 @@ export type Product = {
     title: string;
     description: string;
     categoryId: string;
+    image: string;
+    price: number;
+    oldPrice?: number;
 }
