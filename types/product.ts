@@ -25,5 +25,5 @@ export type Product = {
     sold: number;
     discountLabel?: string;
     delivery: string;
-    colors: string;
+    colors: string[];
 }
