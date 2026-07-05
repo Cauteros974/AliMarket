@@ -3,4 +3,5 @@ export type CategoryId =
     | "fashion"
     | "home"
     | "beauty"
-    
+    | "sports"
+    | "toys";
