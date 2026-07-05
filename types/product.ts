@@ -26,4 +26,9 @@ export type Product = {
     discountLabel?: string;
     delivery: string;
     colors: string[];
-}
+};
+
+export type CartItem = {
+  productId: string;
+  quantity: number;
+};
