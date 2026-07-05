@@ -5,5 +5,7 @@ export const color = {
     primaryDark: "#E44611",
     text: "#151820",
     muted: "#7A8191",
-    border: "#E7EAF0"
+    border: "#E7EAF0",
+    success: "#17A673",
+    warning: "#F6A609",
 }
