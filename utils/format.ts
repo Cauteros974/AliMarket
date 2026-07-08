@@ -4,3 +4,7 @@ export function formatPrice(value: number) {
         currency: "EUR",
     }).format(value);
 }
+
+export function pluralizeReviews(count: number) {
+  return `${count.toLocaleString("en-US")} reviews`;
+}
