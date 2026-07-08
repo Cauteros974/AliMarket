@@ -1,5 +1,6 @@
 export function formatPrice(value: number) {
     return{
-        style: "currency"
+        style: "currency",
+        currency: "EUR",
     }
 }
