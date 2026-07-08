@@ -20,5 +20,7 @@ export const products: Product[] = [
         price: 49.99,
         oldPrice: 79.99,
         rating: 4.8,
+        reviews: 1824,
+        sold: 5300,
     }
 ]
