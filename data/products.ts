@@ -32,7 +32,7 @@ export const products: Product[] = [
         description: "RGB smart light strip for bedroom, desk or gaming setup. Includes app control, scenes and music sync.",
         categoryId: "home",
         image: 
-        ".assets/images/man.avif",
+        "./assets/images/man.avif",
         price: 18.49,
         oldPrice: 29.99,
         rating: 4.6,
@@ -41,5 +41,22 @@ export const products: Product[] = [
         discountLabel: "Hot",
         delivery: "Free delivery in 7-12 days",
         colors: ["#8B5CF6", "#06B6D4", "#F97316"],
-    }
+    },
+    {
+        id: "p3",
+        title: "Minimal Streetwear Crossbody Bag",
+        description:
+        "Compact water-resistant crossbody bag with adjustable strap, phone pocket and hidden zipper compartment.",
+        categoryId: "fashion",
+        image:
+        "./assets/images/womans_bag.avif",
+        price: 24.9,
+        oldPrice: 39.9,
+        rating: 4.7,
+        reviews: 684,
+        sold: 2400,
+        discountLabel: "-30%",
+        delivery: "Delivery in 8-15 days",
+        colors: ["#111827", "#9CA3AF", "#C2410C"],
+  },
 ]
