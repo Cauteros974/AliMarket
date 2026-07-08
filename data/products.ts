@@ -22,5 +22,6 @@ export const products: Product[] = [
         rating: 4.8,
         reviews: 1824,
         sold: 5300,
+        discountLabel: "-38%",
     }
 ]
