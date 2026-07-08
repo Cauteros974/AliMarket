@@ -15,5 +15,10 @@ export const products: Product[] = [
         title: "Wireless Noise Cancelling Headphones",
         description: "Lightweight headphones with soft ear pads, deep bass, active noise cancelling and up to 35 hours of battery life.",
         categoryId: "electronics",
+        image:
+        "assets/images/headphone.avif",
+        price: 49.99,
+        oldPrice: 79.99,
+        rating: 4.8,
     }
 ]
