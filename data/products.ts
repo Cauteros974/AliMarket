@@ -59,4 +59,21 @@ export const products: Product[] = [
         delivery: "Delivery in 8-15 days",
         colors: ["#111827", "#9CA3AF", "#C2410C"],
   },
+  {
+        id: "p4",
+        title: "Hydrating Skin Care Set",
+        description:
+        "Daily skin care set with cleanser, serum and cream. Gentle texture, travel-friendly bottles and clean routine.",
+        categoryId: "beauty",
+        image:
+        "./assets/images/cream.avif",
+        price: 32.5,
+        oldPrice: 45,
+        rating: 4.9,
+        reviews: 1202,
+        sold: 3900,
+        discountLabel: "Best",
+        delivery: "Free delivery in 10-16 days",
+        colors: ["#F9A8D4", "#FDE68A", "#BFDBFE"],
+  }
 ]
