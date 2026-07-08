@@ -24,5 +24,6 @@ export const products: Product[] = [
         sold: 5300,
         discountLabel: "-38%",
         delivery: "Free delivery in 9-14 days",
+        colors: ["#111827", "#F3F4F6", "#E85D3F"],
     }
 ]
