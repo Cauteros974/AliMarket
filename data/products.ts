@@ -23,5 +23,6 @@ export const products: Product[] = [
         reviews: 1824,
         sold: 5300,
         discountLabel: "-38%",
+        delivery: "Free delivery in 9-14 days",
     }
 ]
