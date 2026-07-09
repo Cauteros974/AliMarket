@@ -34,7 +34,9 @@ export const useShopStore = create<ShopState>()(
           return { cart: [...state.cart, { productId, quantity: 1 }] };
         }),
         removeFromCart: (productId) => 
-            
+            set((state) => ({
+                cart: state.cart.filter((item) => item.productId !== productId),
+            }))
         })
     )
 )
