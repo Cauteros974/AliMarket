@@ -34,14 +34,7 @@ export const useShopStore = create<ShopState>()(
           return { cart: [...state.cart, { productId, quantity: 1 }] };
         }),
         removeFromCart: (productId) => 
-            set((state) => ({
-                cart: state.cart.map((item) =>
-                    item.productId === productId
-                        ? { ...item, quantity: item.quantity + 1 }
-                        : item
-                )
-            }))
-
+            
         })
     )
 )
