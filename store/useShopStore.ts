@@ -6,4 +6,14 @@ import { CartItem } from "../types/product";
 type ShopState = {
     cart: CartItem[];
     favoriteIds: string[];
+    
 }
+
+export const useShopStore = create<ShopState>() (
+    persist(
+        (set) => ({
+            cart: [],
+            favoriteIds: [],
+        })
+    )
+)
