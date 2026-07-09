@@ -7,6 +7,7 @@ type ShopState = {
     cart: CartItem[];
     favoriteIds: string[];
     searchQuery: string;
+    addToCart: (productId: string) => void;
 }
 
 export const useShopStore = create<ShopState>()(
@@ -15,6 +16,10 @@ export const useShopStore = create<ShopState>()(
             cart: [],
             favoriteIds: [],
             searchQuery: "",
+            addToCart: (productId) =>
+                set((state) => {
+                    const existing = state.cart.find((item) => item.productId === productId);
+                })
         })
     )
 )
