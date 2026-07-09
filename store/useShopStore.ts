@@ -18,18 +18,20 @@ export const useShopStore = create<ShopState>()(
             searchQuery: "",
             addToCart: (productId) =>
                 set((state) => {
-                    const existing = state.cart.find((item) => item.productId === productId);
+          const existing = state.cart.find((item) => item.productId === productId);
 
-                    if(existing) {
-                        return(
-                            cart: state.cart.map((item) =>
-                                item.productId === productId
-                            ? { ...item, quantity: item.quantity + 1 }
-                            : item
-                            ),
-                        )
-                    }
-                })
+          if (existing) {
+            return {
+              cart: state.cart.map((item) =>
+                item.productId === productId
+                  ? { ...item, quantity: item.quantity + 1 }
+                  : item
+              ),
+            };
+          }
+
+          return { cart: [...state.cart, { productId, quantity: 1 }] };
+        }),
         })
     )
 )
