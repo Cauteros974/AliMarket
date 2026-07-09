@@ -19,6 +19,16 @@ export const useShopStore = create<ShopState>()(
             addToCart: (productId) =>
                 set((state) => {
                     const existing = state.cart.find((item) => item.productId === productId);
+
+                    if(existing) {
+                        return(
+                            cart: state.cart.map((item) =>
+                                item.productId === productId
+                            ? { ...item, quantity: item.quantity + 1 }
+                            : item
+                            ),
+                        )
+                    }
                 })
         })
     )
