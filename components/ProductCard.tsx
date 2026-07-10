@@ -5,7 +5,7 @@ import { Product } from "../types/product";
 import { formatPrice } from "../utils/format";
 
 type ProductCardProps = {
-    product: string;
+    product: Product;
     isFavorite: boolean;
     onPress: () => void;
     onToggleFavorite: () => void;
