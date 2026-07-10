@@ -13,4 +13,9 @@ export default function SearchBar({
   onChangeText,
   placeholder = "Search products",
 }: SearchBarProps) {
+    return(
+        <View style={styles.container}>
+            <Ionicons name="search-outline" size={20} color={colors.muted} />
+        </View>
+    )
 }
