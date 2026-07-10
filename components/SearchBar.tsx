@@ -19,6 +19,7 @@ export default function SearchBar({
             <TextInput 
                 value={value}
                 onChangeText={onChangeText}
+                placeholder={placeholder}
             />
         </View>
     );
