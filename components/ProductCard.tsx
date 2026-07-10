@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         fontSize: 11,
         fontWeight: "900"
     },
-    favoriteButton:{
+    favoriteButton: {
         position: "absolute",
         right: 8,
         top: 8,
@@ -99,5 +99,10 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(255,255,255,0.92)",
         alignItems: "center",
         justifyContent: "center",
+    },
+    title: {
+        color: colors.white,
+        fontSize: 11,
+        fontWeight: "400"
     }
 })
