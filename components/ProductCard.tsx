@@ -117,5 +117,8 @@ const styles = StyleSheet.create({
          color: colors.text,
         fontSize: 12,
         fontWeight: "800",
+    },
+    soldText: {
+        color: colors.primary
     }
 })
