@@ -94,6 +94,8 @@ const styles = StyleSheet.create({
         right: 8,
         top: 8,
         width: 32,
-        height: 32
+        height: 32,
+        borderRadius: 16,
+        backgroundColor: "rgba(255,255,255,0.92)",
     }
 })
