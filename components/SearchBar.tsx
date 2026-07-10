@@ -16,6 +16,10 @@ export default function SearchBar({
     return(
         <View style={styles.container}>
             <Ionicons name="search-outline" size={20} color={colors.muted} />
+            <TextInput 
+                value={value}
+                onChangeText={onChangeText}
+            />
         </View>
     );
 }
