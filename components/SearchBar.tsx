@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, TextInput, View } from 'react-native';
+import { color } from '../theme/colors';
 
 type SearchBarProps = {
     value: string,
