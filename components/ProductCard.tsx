@@ -128,6 +128,11 @@ const styles = StyleSheet.create({
         alignItems: "baseline",
         gap: 7,
         marginTop: 8
+    },
+    price: {
+        color: colors.primary,
+        fontSize: 17,
+        fontWeight: "700"
     }
 
 })
