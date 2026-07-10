@@ -31,5 +31,8 @@ const styles = StyleSheet.create({
         borderRadius: 999,
         backgroundColor: colors.surface,
         borderWidth: 1,
+        borderColor: colors.border,
+        flexDirection: "row",
+        alignItems: "center",
   },
 })
