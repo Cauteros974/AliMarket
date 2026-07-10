@@ -18,7 +18,7 @@ export default function CategoryChip({category, selected, onPress}: CategoryChip
                 color={selected ? colors.white : colors.primary}
             />
             <Text style={[styles.title, selected && styles.selectedTitle]}>
-                {category}
+                {category.title}
             </Text>
         </Pressable>
     )
