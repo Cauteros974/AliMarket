@@ -112,5 +112,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 4,
         marginTop: 8,
+    },
+    metaText: {
+         color: colors.text,
+        fontSize: 12,
+        fontWeight: "800",
     }
 })
