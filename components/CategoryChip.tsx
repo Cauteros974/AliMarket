@@ -36,5 +36,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 8,
         marginRight: 10,
-  },
+    },
+    selected: {
+        backgroundColor: colors.primary,
+        borderColor: colors.primary
+    }
 })
