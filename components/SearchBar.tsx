@@ -42,6 +42,6 @@ const styles = StyleSheet.create({
     input: {
         flex: 1,
         color: colors.text,
-        fontSize: 10,
+        fontSize: 15,
     }
 })
