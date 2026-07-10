@@ -4,9 +4,9 @@ import { colors } from "../theme/colors";
 import { Category } from "../types/product";
 
 type CategoryChipProps = {
-    category: Category;
-    selected: string;
-    onPress: () => void;
+  category: Category;
+  selected?: boolean;
+  onPress: () => void;
 };
 
 export default function CategoryChip({category, selected, onPress}: CategoryChipProps) {
