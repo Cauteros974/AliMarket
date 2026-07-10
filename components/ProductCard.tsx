@@ -5,11 +5,17 @@ import { Product } from "../types/product";
 import { formatPrice } from "../utils/format";
 
 type ProductCardProps = {
-    product: string
+    product: string;
+    isFavorite: boolean;
+    onPress: () => void;
+    onToggleFavorite: () => void;
 };
 
 export default function ProductCard({
-    product
+    product,
+    isFavorite,
+    onPress,
+    onToggleFavorite,
 }: ProductCardProps) {
     return(
         <Pressable onPress={onPress} style={styles.card}>
@@ -21,5 +27,9 @@ export default function ProductCard({
 };
 
 const styles = StyleSheet.create({
-
+    card: {
+        flex: 1,
+        backgroundColor: colors.surface,
+        borderRadius: 18,
+    }
 })
