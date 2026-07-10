@@ -83,5 +83,9 @@ const styles = StyleSheet.create({
         borderRadius: 999,
         paddingHorizontal: 8,
         paddingVertical: 4,
+    },
+    discountText: {
+        color: colors.white,
+        fontSize: 16,
     }
 })
