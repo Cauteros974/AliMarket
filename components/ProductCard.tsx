@@ -103,6 +103,8 @@ const styles = StyleSheet.create({
     title: {
         color: colors.white,
         fontSize: 11,
-        fontWeight: "400"
+        fontWeight: "400",
+        marginTop: 10,
+        minHeight: 30
     }
 })
