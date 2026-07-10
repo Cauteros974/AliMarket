@@ -40,5 +40,9 @@ const styles = StyleSheet.create({
         borderRadius: 14,
         backgroundColor: colors.surfaceSoft,
         overflow: "hidden"
-    }
+    },
+    image: {
+        width: "100%",
+        height: "100%",
+    },
 })
