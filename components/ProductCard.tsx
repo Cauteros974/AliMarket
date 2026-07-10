@@ -120,6 +120,8 @@ const styles = StyleSheet.create({
     },
     soldText: {
         color: colors.muted,
-        fontSize: 12
-    }
+        fontSize: 12,
+        marginLeft: 4,
+    },
+
 })
