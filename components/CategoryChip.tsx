@@ -4,10 +4,10 @@ import { colors } from "../theme/colors";
 import { Category } from "../types/product";
 
 type CategoryChipProps = {
-    cato
+    category: string;
 }
 
-export default function CategoryChip({}) {
+export default function CategoryChip({category}: CategoryChipProps) {
     return(
         <Pressable>
             <Ionicons 
