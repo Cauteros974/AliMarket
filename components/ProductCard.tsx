@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
         marginLeft: 4,
     },
     priceRow: {
-        flexDirection: "column",
+        flexDirection: "row",
         alignItems: "center"
     }
 
