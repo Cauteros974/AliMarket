@@ -40,6 +40,11 @@ export default function ProductCard({
             <Text numberOfLines={2} style={styles.title}>
                 {product.title}
             </Text>
+
+            <View style={styles.metaRow}>
+                <Ionicons name="star" size={14} color={colors.warning} />
+            </View>
+
         </Pressable>
     )
 };
