@@ -20,6 +20,8 @@ export default function SearchBar({
                 value={value}
                 onChangeText={onChangeText}
                 placeholder={placeholder}
+                 placeholderTextColor={colors.muted}
+                style={styles.input}
             />
         </View>
     );
@@ -36,5 +38,10 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         gap: 10,
+    },
+    input: {
+        flex: 1,
+        color: colors.text,
+        fontSize: 10,
     }
 })
