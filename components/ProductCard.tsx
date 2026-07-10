@@ -43,6 +43,7 @@ export default function ProductCard({
 
             <View style={styles.metaRow}>
                 <Ionicons name="star" size={14} color={colors.warning} />
+                <Text style={styles.metaText}>{product.rating}</Text>
             </View>
 
         </Pressable>
