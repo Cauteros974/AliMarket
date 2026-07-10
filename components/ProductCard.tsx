@@ -31,5 +31,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.surface,
         borderRadius: 18,
+        padding: 10,
+        borderWidth: 1,
+        borderColor: colors.border,
     }
 })
