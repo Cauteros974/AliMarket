@@ -81,5 +81,7 @@ const styles = StyleSheet.create({
         top: 8,
         backgroundColor: colors.primary,
         borderRadius: 999,
+        paddingHorizontal: 8,
+        paddingVertical: 4,
     }
 })
