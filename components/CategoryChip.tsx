@@ -44,6 +44,9 @@ const styles = StyleSheet.create({
     title: {
         color: colors.text,
         fontSize: 13,
-        fontWeight: "600"
-    }
-})
+        fontWeight: "800",
+    },
+    selectedTitle: {
+        color: colors.white
+    },
+});
