@@ -16,7 +16,7 @@ export default function CategoryChip({category, selected}: CategoryChipProps) {
                 size={18}
                 color={selected ? colors.white : colors.primary}
             />
-            <Text>
+            <Text style={[styles.title, selected && styles.selectedTitle]}>
                 {category}
             </Text>
         </Pressable>
