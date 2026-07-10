@@ -136,7 +136,8 @@ const styles = StyleSheet.create({
     },
     oldPrice: {
         color: colors.primary,
-        fontSize: 12
+        fontSize: 12,
+        textDecorationLine: "line-through"
     }
 
 })
