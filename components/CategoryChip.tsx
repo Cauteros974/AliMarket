@@ -6,11 +6,12 @@ import { Category } from "../types/product";
 type CategoryChipProps = {
     category: string;
     selected: string;
+    onPress: () => void;
 }
 
-export default function CategoryChip({category, selected}: CategoryChipProps) {
+export default function CategoryChip({category, selected, onPress}: CategoryChipProps) {
     return(
-        <Pressable>
+        <Pressable onPress={onPress} style={[styles.container, selected && styles.selected]}>
             <Ionicons 
                 name={category.icon as keyof typeof Ionicons.glyphMap}
                 size={18}
