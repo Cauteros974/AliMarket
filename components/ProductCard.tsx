@@ -105,6 +105,6 @@ const styles = StyleSheet.create({
         fontSize: 11,
         fontWeight: "400",
         marginTop: 10,
-        minHeight: 30
+        minHeight: 38
     }
 })
