@@ -125,7 +125,9 @@ const styles = StyleSheet.create({
     },
     priceRow: {
         flexDirection: "row",
-        alignItems: "center"
+        alignItems: "baseline",
+        gap: 7,
+        marginTop: 8
     }
 
 })
