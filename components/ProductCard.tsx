@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     },
     discountText: {
         color: colors.white,
-        fontSize: 16,
-        fontWeight: "600"
+        fontSize: 11,
+        fontWeight: "900"
     }
 })
