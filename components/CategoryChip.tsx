@@ -5,14 +5,16 @@ import { Category } from "../types/product";
 
 type CategoryChipProps = {
     category: string;
+    selected: string;
 }
 
-export default function CategoryChip({category}: CategoryChipProps) {
+export default function CategoryChip({category, selected}: CategoryChipProps) {
     return(
         <Pressable>
             <Ionicons 
                 name={category.icon as keyof typeof Ionicons.glyphMap}
                 size={18}
+                color={selected ? colors.white : colors.primary}
             />
         </Pressable>
     )
