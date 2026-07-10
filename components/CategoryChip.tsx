@@ -25,5 +25,9 @@ export default function CategoryChip({category, selected, onPress}: CategoryChip
 }
 
 const styles = StyleSheet.create({
-
+    container: {
+        height: 42,
+        paddingHorizontal: 14,
+        borderRadius: 999,
+  },
 })
