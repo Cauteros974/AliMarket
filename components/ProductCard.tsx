@@ -26,7 +26,15 @@ export default function ProductCard({
                     <View style={styles.discountBadge}>
                         <Text style={styles.discountText}>{product.discountLabel}</Text>
                     </View>
-                )}
+                ): null}
+
+                <Pressable onPress={onToggleFavorite} style={styles.favoriteButton}>
+                    <Ionicons
+                        name={isFavorite ? "heart" : "heart-outline"}
+                        size={18}
+                        color={isFavorite ? colors.danger : colors.text}
+                    />
+                </Pressable>
             </View>
         </Pressable>
     )
