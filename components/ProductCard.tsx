@@ -105,6 +105,12 @@ const styles = StyleSheet.create({
         fontSize: 11,
         fontWeight: "400",
         marginTop: 10,
-        minHeight: 38
+        minHeight: 38,
+    },
+    metaRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 4,
+        marginTop: 8
     }
 })
