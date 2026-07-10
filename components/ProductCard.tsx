@@ -88,5 +88,10 @@ const styles = StyleSheet.create({
         color: colors.white,
         fontSize: 11,
         fontWeight: "900"
+    },
+    favoriteButton:{
+        position: "absolute",
+        right: 8,
+        top: 8,
     }
 })
