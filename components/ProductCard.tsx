@@ -75,4 +75,9 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
     },
+    discountBadge: {
+        position: "absolute",
+        left: 8,
+        top: 8
+    }
 })
