@@ -43,5 +43,6 @@ const styles = StyleSheet.create({
         flex: 1,
         color: colors.text,
         fontSize: 15,
+        fontWeight: "600"
     }
 })
