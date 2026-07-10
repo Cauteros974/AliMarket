@@ -17,5 +17,13 @@ export default function SearchBar({
         <View style={styles.container}>
             <Ionicons name="search-outline" size={20} color={colors.muted} />
         </View>
-    )
+    );
 }
+
+const styles = StyleSheet.create({
+    container:{
+        minHeight: 48,
+        borderRadius: 16,
+        backgroundColor: colors.surface,
+    }
+})
