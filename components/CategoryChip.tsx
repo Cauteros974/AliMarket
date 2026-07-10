@@ -29,5 +29,7 @@ const styles = StyleSheet.create({
         height: 42,
         paddingHorizontal: 14,
         borderRadius: 999,
+        backgroundColor: colors.surface,
+        borderWidth: 1,
   },
 })
