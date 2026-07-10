@@ -37,7 +37,7 @@ export default function ProductCard({
                 </Pressable>
             </View>
 
-            <Text numberOfLines={2}>
+            <Text numberOfLines={2} style={styles.title}>
                 {product.title}
             </Text>
         </Pressable>
