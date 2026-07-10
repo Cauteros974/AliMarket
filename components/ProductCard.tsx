@@ -123,5 +123,9 @@ const styles = StyleSheet.create({
         fontSize: 12,
         marginLeft: 4,
     },
+    priceRow: {
+        flexDirection: "column",
+        alignItems: "center"
+    }
 
 })
