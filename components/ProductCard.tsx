@@ -78,6 +78,8 @@ const styles = StyleSheet.create({
     discountBadge: {
         position: "absolute",
         left: 8,
-        top: 8
+        top: 8,
+        backgroundColor: colors.primary,
+        borderRadius: 999,
     }
 })
