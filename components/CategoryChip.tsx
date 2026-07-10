@@ -40,5 +40,9 @@ const styles = StyleSheet.create({
     selected: {
         backgroundColor: colors.primary,
         borderColor: colors.primary
+    },
+    title: {
+        color: colors.text,
+        fontSize: 13
     }
 })
