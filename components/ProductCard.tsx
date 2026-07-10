@@ -36,6 +36,10 @@ export default function ProductCard({
                     />
                 </Pressable>
             </View>
+
+            <Text numberOfLines={2}>
+                {product.title}
+            </Text>
         </Pressable>
     )
 };
