@@ -49,6 +49,7 @@ export default function ProductCard({
 
             <View>
                 <Text style={styles.price}>{formatPrice(product.price)}</Text>
+                {product.oldPrice ? <Text style={styles.oldPrice}>{formatPrice(product.oldPrice)}</Text> : null}
             </View>
 
         </Pressable>
