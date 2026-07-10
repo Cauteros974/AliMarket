@@ -47,6 +47,10 @@ export default function ProductCard({
                 <Text style={styles.soldText}>{product.sold.toLocaleString("en-US")} sold</Text>
             </View>
 
+            <View>
+                <Text style={styles.price}>{formatPrice(product.price)}</Text>
+            </View>
+
         </Pressable>
     )
 };
