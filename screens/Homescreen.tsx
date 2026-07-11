@@ -76,6 +76,12 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                 </ScrollView>
 
                 <SectionHeader title="Flash deals" action="Today"/>
+
+                <FlatList 
+                    data={flashDeals}
+                    keyExtractor={(item) => item.id}
+                    numColumns={2}
+                />
             </ScrollView>
         </SafeAreaView>
     )
