@@ -164,6 +164,9 @@ const styles = StyleSheet.create({
     },
     bannerSubtitle: {
         alignSelf: "flex-start",
-        backgroundColor: colors.white
+        backgroundColor: colors.white,
+        paddingHorizontal: 16,
+        paddingVertical: 10,
+        borderRadius: 999,
     }
 })
