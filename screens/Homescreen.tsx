@@ -30,9 +30,10 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
-                <View>
+                <View style={styles.header}>
                     <View>
                         <Text style={styles.eyebrow}>AliMarket</Text>
+                        <Text style={styles.title}>Find anything you need</Text>
                     </View>
                 </View>
             </ScrollView>
