@@ -20,5 +20,12 @@ export default function QuantityStepper({quantity, onMinus, onPlus}: QuantitySte
                 <Text style={styles.symbol}>+</Text>
             </Pressable>
         </View>
-    )
+    );
 }
+
+const style = StyleSheet.create({
+    container: {
+        flexDirection: "column",
+        alignItems: "center"    
+    }
+})
