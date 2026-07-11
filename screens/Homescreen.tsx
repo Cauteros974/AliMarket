@@ -149,4 +149,9 @@ const styles = StyleSheet.create({
     bannerTextBlock: {
         maxWidth: "82%",
     },
+    bannerLabel: {
+        color: "rgba(255,255,255,0.8)",
+        fontSize: 13,
+        fontWeight: "800",
+    },
 })
