@@ -159,5 +159,7 @@ const styles = StyleSheet.create({
         color: colors.white,
         fontSize: 24,
         lineHeight: 30,
+        fontWeight: "900",
+        marginTop: 8,
     }
 })
