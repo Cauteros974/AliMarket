@@ -125,4 +125,10 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         marginTop: 4,
     },
+    coinsBadge: {
+        width: 44,
+        height: 44,
+        borderRadius: 22,
+        backgroundColor: colors.surface,
+    },
 })
