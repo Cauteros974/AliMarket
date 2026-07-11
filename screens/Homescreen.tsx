@@ -26,4 +26,16 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
         () => products.filter((product) => product.oldPrice).slice(0, 4),
         []
     );
+
+    return(
+        <SafeAreaView style={styles.safeArea}>
+            <ScrollView>
+                <View>
+                    <View>
+                        <Text style={styles.eyebrow}>AliMarket</Text>
+                    </View>
+                </View>
+            </ScrollView>
+        </SafeAreaView>
+    )
 }
