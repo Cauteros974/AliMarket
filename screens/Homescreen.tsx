@@ -49,7 +49,7 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                     end={{x: 1, y: 1}}
                     style={styles.banner}
                 >
-                    <View>
+                    <View style={styles.bannerTextBlock}>
                         <Text style={styles.bannerLabel}>Summer sale</Text>
                         <Text style={styles.bannerTitle}>Up to 60% off gadgets and home goods</Text>
                     </View>
