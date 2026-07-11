@@ -35,6 +35,10 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                         <Text style={styles.eyebrow}>AliMarket</Text>
                         <Text style={styles.title}>Find anything you need</Text>
                     </View>
+
+                    <View>
+                        <Text style={styles.coinsText}>EU</Text>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
