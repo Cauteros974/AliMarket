@@ -52,6 +52,7 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                     <View style={styles.bannerTextBlock}>
                         <Text style={styles.bannerLabel}>Summer sale</Text>
                         <Text style={styles.bannerTitle}>Up to 60% off gadgets and home goods</Text>
+                        <Text style={styles.bannerSubtitle}>Free delivery on selected items</Text>
                     </View>
                 </LinearGradient>
             </ScrollView>
