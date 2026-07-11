@@ -25,7 +25,7 @@ export default function QuantityStepper({quantity, onMinus, onPlus}: QuantitySte
 
 const style = StyleSheet.create({
     container: {
-        flexDirection: "column",
+        flexDirection: "row",
         alignItems: "center"    
     }
 })
