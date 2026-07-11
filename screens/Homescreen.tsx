@@ -114,4 +114,8 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
     },
+    eyebrow: {
+        color: colors.primary,
+        fontSize: 14,
+    }
 })
