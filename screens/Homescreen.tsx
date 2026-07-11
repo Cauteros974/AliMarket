@@ -106,5 +106,12 @@ const styles = StyleSheet.create({
     content: {
         paddingHorizontal: 18,
         paddingBottom: 28,
-    }
+    },
+    header: {
+        marginTop: 8,
+        marginBottom: 18,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
 })
