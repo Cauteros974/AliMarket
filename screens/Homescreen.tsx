@@ -155,4 +155,9 @@ const styles = StyleSheet.create({
         fontWeight: "800",
         textTransform: "uppercase",
     },
+    bannerTitle: {
+        color: colors.white,
+        fontSize: 24,
+        lineHeight: 30,
+    }
 })
