@@ -23,4 +23,9 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
     },
+    title: {
+        color: colors.text,
+        fontSize: 20,
+        fontWeight: "900",
+    },
 })
