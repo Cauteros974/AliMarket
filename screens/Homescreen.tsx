@@ -145,5 +145,8 @@ const styles = StyleSheet.create({
         padding: 18,
         marginTop: 18,
         justifyContent: "space-between"
-    }
+    },
+    bannerTextBlock: {
+        maxWidth: "70%",
+    },
 })
