@@ -13,6 +13,12 @@ export default function QuantityStepper({quantity, onMinus, onPlus}: QuantitySte
             <Pressable onPress={onMinus} style={styles.button}>
                 <Text style={styles.symbol}>-</Text>
             </Pressable>
+
+            <Text style={styles.quantity}>{quantity}</Text>
+
+            <Pressable onPress={onPlus} style={styles.button}>
+                <Text style={styles.symbol}>+</Text>
+            </Pressable>
         </View>
     )
 }
