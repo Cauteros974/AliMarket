@@ -28,4 +28,9 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: "900",
     },
-})
+    action: {
+        color: colors.primary,
+        fontSize: 13,
+        fontWeight: "800",
+    },
+});
