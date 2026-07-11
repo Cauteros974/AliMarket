@@ -29,7 +29,7 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
 
     return(
         <SafeAreaView style={styles.safeArea}>
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
                 <View>
                     <View>
                         <Text style={styles.eyebrow}>AliMarket</Text>
