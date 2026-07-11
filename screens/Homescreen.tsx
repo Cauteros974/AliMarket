@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
     },
-    coinText:{
+    coinsText:{
         color: colors.primary,
         fontWeight: "900",
     },
