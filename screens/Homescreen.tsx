@@ -161,5 +161,9 @@ const styles = StyleSheet.create({
         lineHeight: 30,
         fontWeight: "900",
         marginTop: 8,
+    },
+    bannerSubtitle: {
+        alignSelf: "flex-start",
+        backgroundColor: colors.white
     }
 })
