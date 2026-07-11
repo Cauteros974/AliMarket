@@ -173,4 +173,11 @@ const styles = StyleSheet.create({
         color: colors.primary,
         fontWeight: "900",
     },
+    grid: {
+        gap: 12,
+    },
+    gridRow: {
+        gap: 12,
+        marginBottom: 12,
+    },
 })
