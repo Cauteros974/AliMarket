@@ -41,6 +41,7 @@ const style = StyleSheet.create({
     },
     symbol: {
         color: colors.text,
-        fontSize: 14
+        fontSize: 17,
+        fontWeight: "900",
     }
 })
