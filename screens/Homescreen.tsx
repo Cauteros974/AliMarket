@@ -81,6 +81,9 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                     data={flashDeals}
                     keyExtractor={(item) => item.id}
                     numColumns={2}
+                    scrollEnabled={false}
+                    columnWrapperStyle={styles.gridRow}
+                    contentContainerStyle={styles.grid}
                 />
             </ScrollView>
         </SafeAreaView>
