@@ -54,6 +54,10 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                         <Text style={styles.bannerTitle}>Up to 60% off gadgets and home goods</Text>
                         <Text style={styles.bannerSubtitle}>Free delivery on selected items</Text>
                     </View>
+
+                    <Pressable>
+                        <Text style={styles.bannerButtonText}>Shop now</Text>
+                    </Pressable>
                 </LinearGradient>
             </ScrollView>
         </SafeAreaView>
