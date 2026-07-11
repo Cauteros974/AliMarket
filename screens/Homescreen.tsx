@@ -73,7 +73,9 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                             onPress={() => setSearchQuery(category.title)}
                         />
                     ))}
-        </ScrollView>
+                </ScrollView>
+
+                <SectionHeader title="Flash deals" action="Today"/>
             </ScrollView>
         </SafeAreaView>
     )
