@@ -47,10 +47,18 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                     colors={[colors.primary, "#FF8A3D"]}
                     start={{x: 0, y: 0}}
                     end={{x: 1, y: 1}}
+                    style={styles.banner}
                 >
-
+                    <View>
+                        <Text style={styles.bannerLabel}>Summer sale</Text>
+                        <Text style={styles.bannerTitle}>Up to 60% off gadgets and home goods</Text>
+                    </View>
                 </LinearGradient>
             </ScrollView>
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+
+})
