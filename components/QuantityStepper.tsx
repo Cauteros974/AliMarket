@@ -30,5 +30,11 @@ const style = StyleSheet.create({
         backgroundColor: colors.background,
         padding: 4,
         gap: 10,
+    },
+    button: {
+        width: 28,
+        height: 28,
+        borderRadius: 14,
+        backgroundColor: colors.white,
     }
 })
