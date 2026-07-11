@@ -21,4 +21,9 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
     const favoriteIds = useShopStore((state) => state.favoriteIds);
     const setSearchQuery = useShopStore((state) => state.setSearchQuery);
     const toggleFavorite = useShopStore((state) => state.toggleFavorite);
+
+    const flashDeals = useMemo(
+        () => products.filter((product) => product.oldPrice).slice(0, 4),
+        []
+    );
 }
