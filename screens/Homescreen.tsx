@@ -40,6 +40,16 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                         <Text style={styles.coinsText}>EU</Text>
                     </View>
                 </View>
+
+                <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
+
+                <LinearGradient
+                    colors={[colors.primary, "#FF8A3D"]}
+                    start={{x: 0, y: 0}}
+                    end={{x: 1, y: 1}}
+                >
+
+                </LinearGradient>
             </ScrollView>
         </SafeAreaView>
     )
