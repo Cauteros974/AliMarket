@@ -5,4 +5,14 @@ type QuantityStepperProps = {
     quantity: number;
     onMinus: () => void;
     onPlus: () => void;
+};
+
+export default function QuantityStepper({quantity, onMinus, onPlus}: QuantityStepperProps) {
+    return(
+        <View>
+            <Pressable onPress={onMinus} style={styles.button}>
+                <Text style={styles.symbol}>-</Text>
+            </Pressable>
+        </View>
+    )
 }
