@@ -168,5 +168,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         paddingVertical: 10,
         borderRadius: 999,
-    }
+    },
+    bannerButtonText: {
+        color: colors.primary,
+        fontWeight: "900",
+    },
 })
