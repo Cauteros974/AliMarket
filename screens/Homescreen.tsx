@@ -153,5 +153,6 @@ const styles = StyleSheet.create({
         color: "rgba(255,255,255,0.8)",
         fontSize: 13,
         fontWeight: "800",
+        textTransform: "uppercase",
     },
 })
