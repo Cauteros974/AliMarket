@@ -55,7 +55,10 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                         <Text style={styles.bannerSubtitle}>Free delivery on selected items</Text>
                     </View>
 
-                    <Pressable>
+                    <Pressable
+                        onPress={() => navigation.navigate("ProductDetails", { productId: "p1" })}
+                        style={styles.bannerButton}
+                    >
                         <Text style={styles.bannerButtonText}>Shop now</Text>
                     </Pressable>
                 </LinearGradient>
