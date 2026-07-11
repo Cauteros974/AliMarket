@@ -147,6 +147,6 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     bannerTextBlock: {
-        maxWidth: "70%",
+        maxWidth: "80%",
     },
 })
