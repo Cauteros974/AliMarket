@@ -62,6 +62,18 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                         <Text style={styles.bannerButtonText}>Shop now</Text>
                     </Pressable>
                 </LinearGradient>
+
+                <SectionHeader title="Categories" action="See all"/>
+
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    {categories.map((category) => (
+                        <CategoryChip
+                            key={category.id}
+                            category={category}
+                            onPress={() => setSearchQuery(category.title)}
+                        />
+                    ))}
+        </ScrollView>
             </ScrollView>
         </SafeAreaView>
     )
