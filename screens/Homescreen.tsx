@@ -36,7 +36,7 @@ export default function HomeScreen({navigation}: HomeScreenProops) {
                         <Text style={styles.title}>Find anything you need</Text>
                     </View>
 
-                    <View>
+                    <View style={styles.coinsBadge}>
                         <Text style={styles.coinsText}>EU</Text>
                     </View>
                 </View>
