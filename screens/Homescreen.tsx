@@ -118,5 +118,11 @@ const styles = StyleSheet.create({
         color: colors.primary,
         fontSize: 14,
         fontWeight: "900",
-    }
+    },
+    title: {
+        color: colors.text,
+        fontSize: 28,
+        fontWeight: "900",
+        marginTop: 4,
+    },
 })
