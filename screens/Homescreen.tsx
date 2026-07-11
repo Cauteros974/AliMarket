@@ -138,5 +138,10 @@ const styles = StyleSheet.create({
     coinText:{
         color: colors.primary,
         fontWeight: "900",
+    },
+    banner: {
+        minHeight: 20,
+        borderRadius: 24,
+        padding: 18,
     }
 })
