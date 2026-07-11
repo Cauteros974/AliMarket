@@ -169,6 +169,13 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         borderRadius: 999,
     },
+    bannerButton: {
+        alignSelf: "flex-start",
+        backgroundColor: colors.white,
+        paddingHorizontal: 16,
+        paddingVertical: 10,
+        borderRadius: 999,
+    },
     bannerButtonText: {
         color: colors.primary,
         fontWeight: "900",
