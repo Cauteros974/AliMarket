@@ -29,6 +29,6 @@ const style = StyleSheet.create({
         alignItems: "center",
         backgroundColor: colors.background,
         padding: 4,
-        gap: 5
+        gap: 10,
     }
 })
