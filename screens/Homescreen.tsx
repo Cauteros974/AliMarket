@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
         fontWeight: "900",
     },
     banner: {
-        minHeight: 20,
+        minHeight: 158,
         borderRadius: 24,
         padding: 18,
         marginTop: 18,
