@@ -38,5 +38,9 @@ const style = StyleSheet.create({
         backgroundColor: colors.white,
         alignItems: "center",
         justifyContent: "center",
+    },
+    symbol: {
+        color: colors.text,
+        fontSize: 14
     }
 })
