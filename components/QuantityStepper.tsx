@@ -23,7 +23,7 @@ export default function QuantityStepper({quantity, onMinus, onPlus}: QuantitySte
     );
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
         alignItems: "center",
@@ -42,6 +42,12 @@ const style = StyleSheet.create({
     symbol: {
         color: colors.text,
         fontSize: 17,
+        fontWeight: "900",
+    },
+    quantity: {
+        minWidth: 18,
+        color: colors.text,
+        textAlign: "center",
         fontWeight: "900",
     },
 })
