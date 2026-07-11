@@ -117,5 +117,6 @@ const styles = StyleSheet.create({
     eyebrow: {
         color: colors.primary,
         fontSize: 14,
+        fontWeight: "900",
     }
 })
