@@ -109,5 +109,8 @@ const styles = StyleSheet.create({
     gridRow: {
         gap: 12,
         marginBottom: 12,
+    },
+    grid: {
+        paddingBottom: 28
     }
 })
