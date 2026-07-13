@@ -122,5 +122,9 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontSize: 20,
         fontWeight: "900"
+    },
+    emptyText: {
+        color: colors.muted,
+        marginTop: 8
     }
 })
