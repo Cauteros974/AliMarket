@@ -114,7 +114,8 @@ const styles = StyleSheet.create({
         paddingBottom: 28
     },
     emptyState: {
-        minHeight: 200,
-        alignItems: "center"
+        minHeight: 240,
+        alignItems: "center",
+        justifyContent: "center"
     }
 })
