@@ -30,10 +30,16 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
 
         return(
             <SafeAreaView style={styles.safeArea}>
-                <View>
-                    <Text>Catalog</Text>
+                <View style={styles.content}>
+                    <Text style={styles.title}>Catalog</Text>
                 </View>
             </SafeAreaView>
         )
     })
 }
+
+const styles = StyleSheet.create({
+    safeArea:{
+
+    }
+})
