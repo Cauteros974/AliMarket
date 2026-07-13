@@ -74,6 +74,12 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
                     numColumns={2}
                     showsVerticalScrollIndicator={false}
                     columnWrapperStyle={styles.gridRow}
+                    contentContainerStyle={styles.grid}
+                    ListEmptyComponent={
+                        <View style={styles.emptyState}>
+                            <Text style={styles.emptyTitle}>Nothing found</Text>
+                        </View>
+                    }
                 />
             </View>
         </SafeAreaView>
