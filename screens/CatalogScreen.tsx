@@ -43,6 +43,7 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
                         <CategoryChip
                             category={{ id: "electronics", title: "All", icon: "apps-outline" }}
                             selected={selectedCategory === "all"}
+                            onPress={() => setSelectedCategory("all")}
                         />
                     </ScrollView>
                 </View>
