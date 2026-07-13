@@ -98,5 +98,9 @@ const styles = StyleSheet.create({
     },
     categories: {
         paddingVertical: 16,
+    },
+    gridRow: {
+        gap: 12,
+        marginBottom: 12,
     }
 })
