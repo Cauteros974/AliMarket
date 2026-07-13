@@ -57,6 +57,13 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
                         selected={selectedCategory === "all"}
                         onPress={() => setSelectedCategory("all")}
                     />
+
+                    {categories.map((category) => (
+                        <CategoryChip
+                            key={category.id}
+                            category={category}
+                        />
+                    ))}
                 </ScrollView>
             </View>
         </SafeAreaView>
