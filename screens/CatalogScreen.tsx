@@ -35,8 +35,8 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
             const matchesSearch = 
                 product.title.toLowerCase().includes(normalizedQuery) ||
                 product.description.toLowerCase().includes(normalizedQuery);
-
                 
+            return matchesCategory && matchesSearch;
         })
     }, [searchQuery, selectedCategory]);
 
