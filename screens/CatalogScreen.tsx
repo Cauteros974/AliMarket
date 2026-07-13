@@ -40,7 +40,11 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
                         showsHorizontalScrollIndicator={false}
                         contentContainerStyle={styles.categories}
                     >
-                        
+                        <CategoryChip
+                            category={{ id: "electronics", title: "All", icon: "apps-outline" }}
+                            selected={selectedCategory === "all"}
+                            onPress={() => setSelectedCategory("all")}
+                        />
                     </ScrollView>
                 </View>
             </SafeAreaView>
