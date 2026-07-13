@@ -20,5 +20,6 @@ type FilterId = CategoryId | "all";
 export default function CatalogScreen({navigation}: CatalogScreenProps) {
     const [selectedCategory, setSelectedCategory] = useState<FilterId>("all");
 
+    const searchQuery = useShopStore((state) => state.searchQuery);
     const favoriteIds = useShopStore((state) => state.favoriteIds);
 }
