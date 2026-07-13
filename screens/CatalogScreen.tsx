@@ -23,4 +23,5 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
     const searchQuery = useShopStore((state) => state.searchQuery);
     const favoriteIds = useShopStore((state) => state.favoriteIds);
     const setSearchQuery = useShopStore((state) => state.setSearchQuery);
+    const toggleFavorite = useShopStore((state) => state.toggleFavorite);
 }
