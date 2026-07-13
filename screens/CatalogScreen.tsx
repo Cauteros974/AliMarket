@@ -27,6 +27,11 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
 
     const filteredProducts = useMemo(() => {
         const normalizedQuery = searchQuery.trim().toLowerCase();
+
+        return products.filter((product) => {
+            const matchesCategory = 
+                selectedCategory === "all"
+        })
         
     })
 
