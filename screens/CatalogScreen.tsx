@@ -95,5 +95,8 @@ const styles = StyleSheet.create({
         fontSize: 28,
         fontWeight: "900",
         marginBottom: 16,
+    },
+    categories: {
+        paddingVertical: 16,
     }
 })
