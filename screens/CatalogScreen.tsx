@@ -41,6 +41,10 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
 const styles = StyleSheet.create({
     safeArea:{
         flex: 1,
-        backgroundColor: colors.background
+        backgroundColor: colors.background,
+    },
+    content: {
+        flex: 1,
+        paddingHorizontal: 10
     }
 })
