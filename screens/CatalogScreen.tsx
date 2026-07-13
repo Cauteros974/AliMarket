@@ -31,6 +31,10 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
         return products.filter((product) => {
             const matchesCategory = 
                 selectedCategory === "all"
+
+            const matchesSearch = 
+                product.title.toLowerCase().includes(normalizedQuery) ||
+                product.description.toLowerCase().includes(normalizedQuery);
         })
         
     })
