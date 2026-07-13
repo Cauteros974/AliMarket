@@ -67,6 +67,11 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
                         />
                     ))}
                 </ScrollView>
+
+                <FlatList 
+                    data={filteredProducts}
+                    keyExtractor={(item) => item.id}
+                />
             </View>
         </SafeAreaView>
     )
