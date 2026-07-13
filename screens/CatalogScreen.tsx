@@ -48,8 +48,8 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
                         onPress={() => setSelectedCategory("all")}
                     />
                 </ScrollView>
-                </View>
-            </SafeAreaView>
+            </View>
+        </SafeAreaView>
     )
 }
 
