@@ -32,6 +32,16 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
             <SafeAreaView style={styles.safeArea}>
                 <View style={styles.content}>
                     <Text style={styles.title}>Catalog</Text>
+
+                    <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
+
+                     <ScrollView
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        contentContainerStyle={styles.categories}
+                    >
+                        
+                    </ScrollView>
                 </View>
             </SafeAreaView>
         )
@@ -51,7 +61,7 @@ const styles = StyleSheet.create({
     title: {
         color: colors.text,
         fontSize: 28,
-        fontWeight: "800",
+        fontWeight: "900",
         marginBottom: 16,
     }
 })
