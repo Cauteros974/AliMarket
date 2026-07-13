@@ -24,4 +24,16 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
     const favoriteIds = useShopStore((state) => state.favoriteIds);
     const setSearchQuery = useShopStore((state) => state.setSearchQuery);
     const toggleFavorite = useShopStore((state) => state.toggleFavorite);
+
+    const filteredProducts = useMemo(() => {
+        const normalizedQuery = searchQuery.trim().toLowerCase();
+
+        return(
+            <SafeAreaView>
+                <View>
+                    <Text>Catalog</Text>
+                </View>
+            </SafeAreaView>
+        )
+    })
 }
