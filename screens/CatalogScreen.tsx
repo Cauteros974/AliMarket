@@ -38,7 +38,7 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
 
                 
         })
-    }, [searchQuery])
+    }, [searchQuery, selectedCategory]);
 
     return(
         <SafeAreaView style={styles.safeArea}>
