@@ -85,6 +85,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         <ProductCard 
                             product={item}
                             isFavorite={favoriteIds.includes(item.id)}
+                            onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
                         />
                     )}
                 />
