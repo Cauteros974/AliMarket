@@ -17,7 +17,7 @@ type CatalogScreenProps = {
 
 type FilterId = CategoryId | "all";
 
-export default function CatalogScreen({navigation}: CatalogScreenProps) {
+export default function CatalogScreen({ navigation }: CatalogScreenProps) {
     const [selectedCategory, setSelectedCategory] = useState<FilterId>("all");
 
     const searchQuery = useShopStore((state) => state.searchQuery);
@@ -127,4 +127,4 @@ const styles = StyleSheet.create({
         color: colors.muted,
         marginTop: 8
     }
-})
+});
