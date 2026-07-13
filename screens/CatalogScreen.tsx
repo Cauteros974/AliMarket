@@ -35,9 +35,10 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
             const matchesSearch = 
                 product.title.toLowerCase().includes(normalizedQuery) ||
                 product.description.toLowerCase().includes(normalizedQuery);
+
+                
         })
-        
-    })
+    }, [searchQuery])
 
     return(
         <SafeAreaView style={styles.safeArea}>
