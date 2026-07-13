@@ -27,29 +27,30 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
 
     const filteredProducts = useMemo(() => {
         const normalizedQuery = searchQuery.trim().toLowerCase();
+        
+    })
 
-        return(
-            <SafeAreaView style={styles.safeArea}>
-                <View style={styles.content}>
-                    <Text style={styles.title}>Catalog</Text>
+    return(
+        <SafeAreaView style={styles.safeArea}>
+            <View style={styles.content}>
+                <Text style={styles.title}>Catalog</Text>
+                
+                <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
 
-                    <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
-
-                     <ScrollView
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                        contentContainerStyle={styles.categories}
-                    >
-                        <CategoryChip
-                            category={{ id: "electronics", title: "All", icon: "apps-outline" }}
-                            selected={selectedCategory === "all"}
-                            onPress={() => setSelectedCategory("all")}
-                        />
-                    </ScrollView>
+                <ScrollView
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={styles.categories}
+                >
+                    <CategoryChip
+                        category={{ id: "electronics", title: "All", icon: "apps-outline" }}
+                        selected={selectedCategory === "all"}
+                        onPress={() => setSelectedCategory("all")}
+                    />
+                </ScrollView>
                 </View>
             </SafeAreaView>
-        )
-    })
+    )
 }
 
 const styles = StyleSheet.create({
