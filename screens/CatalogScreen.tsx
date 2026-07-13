@@ -81,6 +81,12 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                             <Text style={styles.emptyText}>Try another category or search phrase.</Text>
                         </View>
                     }
+                    rednderItem={({ item }) => (
+                        <ProductCard 
+                            product={item}
+                            isFavorite={favoriteIds.includes(item.id)}
+                        />
+                    )}
                 />
             </View>
         </SafeAreaView>
