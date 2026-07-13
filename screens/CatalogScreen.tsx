@@ -29,7 +29,7 @@ export default function CatalogScreen({navigation}: CatalogScreenProps) {
         const normalizedQuery = searchQuery.trim().toLowerCase();
 
         return(
-            <SafeAreaView>
+            <SafeAreaView style={styles.safeArea}>
                 <View>
                     <Text>Catalog</Text>
                 </View>
