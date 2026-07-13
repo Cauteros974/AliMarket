@@ -112,5 +112,9 @@ const styles = StyleSheet.create({
     },
     grid: {
         paddingBottom: 28
+    },
+    emptyState: {
+        minHeight: 200,
+        alignItems: "center"
     }
 })
