@@ -81,11 +81,12 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                             <Text style={styles.emptyText}>Try another category or search phrase.</Text>
                         </View>
                     }
-                    rednderItem={({ item }) => (
+                    renderItem={({ item }) => (
                         <ProductCard 
                             product={item}
                             isFavorite={favoriteIds.includes(item.id)}
                             onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
+                            onToggleFavorite={() => toggleFavorite(item.id)}
                         />
                     )}
                 />
