@@ -117,5 +117,9 @@ const styles = StyleSheet.create({
         minHeight: 240,
         alignItems: "center",
         justifyContent: "center"
+    },
+    emptyTitle: {
+        color: colors.muted,
+        fontSize: 18
     }
 })
