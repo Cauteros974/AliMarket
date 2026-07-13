@@ -14,3 +14,9 @@ import { CategoryId } from "../types/product";
 type CatalogScreenProps = {
   navigation: NativeStackNavigationProp<RootStackParamList>;
 };
+
+type FilterId = CategoryId | "all";
+
+export default function CatalogScreen({navigation}: CatalogScreenProps) {
+    const [selectedCategory, setSelectedCategory] = useState<FilterId>("all");
+}
