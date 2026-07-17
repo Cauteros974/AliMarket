@@ -24,6 +24,9 @@ export type RootStackParamList = {
   Addresses: undefined;
   Notifications: undefined;
   WishlistCollections: undefined;
+  PaymentMethods: undefined;
+  QRScanner: undefined;
+  Settings: undefined;
 };
 
 export type MainTabParamList = {
