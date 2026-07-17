@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { FlatList } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
 import { categories, products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -23,6 +23,12 @@ export default function CategoryDetailsScreen({navigation, route}: Props) {
                 numColumns={2}
                 columnWrapperStyle={styles.gridRow}
                 contentContainerStyle={styles.content}
+                ListHeaderComponent={
+                    <View>
+                        <Text>{category?.title ?? "Category"}</Text>
+                        <Text style={styles.subtitle}>{category?.subcategories.join(" · ")}</Text>
+                    </View>
+                }
             />
             
         </SafeAreaView>
