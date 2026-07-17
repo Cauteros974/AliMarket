@@ -27,6 +27,8 @@ export type RootStackParamList = {
   PaymentMethods: undefined;
   QRScanner: undefined;
   Settings: undefined;
+  Support: undefined;
+  Auth: undefined;
 };
 
 export type MainTabParamList = {
