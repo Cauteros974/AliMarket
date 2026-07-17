@@ -22,6 +22,7 @@ export default function CategoryDetailsScreen({navigation, route}: Props) {
                 keyExtractor={(item) => item.id}
                 numColumns={2}
                 columnWrapperStyle={styles.gridRow}
+                contentContainerStyle={styles.content}
             />
             
         </SafeAreaView>
