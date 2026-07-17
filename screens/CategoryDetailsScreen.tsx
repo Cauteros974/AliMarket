@@ -25,7 +25,7 @@ export default function CategoryDetailsScreen({navigation, route}: Props) {
                 contentContainerStyle={styles.content}
                 ListHeaderComponent={
                     <View>
-                        <Text>{category?.title ?? "Category"}</Text>
+                        <Text style={styles.title}>{category?.title ?? "Category"}</Text>
                         <Text style={styles.subtitle}>{category?.subcategories.join(" · ")}</Text>
                     </View>
                 }
