@@ -8,6 +8,19 @@ export type RootStackParamList = {
   ProductDetails: {
     productId: string;
   };
+
+  Seller: {
+    sellerId: string;
+  };
+
+  Checkout: undefined;
+  Orders: undefined;
+  OrderDetails: {
+    orderId: string;
+  };
+  OrderTracking: {
+    orderId: string;
+  };
 };
 
 export type MainTabParamList = {
