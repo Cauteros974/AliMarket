@@ -20,6 +20,8 @@ export default function CategoryDetailsScreen({navigation, route}: Props) {
             <FlatList
                 data={categoryProducts}
                 keyExtractor={(item) => item.id}
+                numColumns={2}
+                columnWrapperStyle={styles.gridRow}
             />
             
         </SafeAreaView>
