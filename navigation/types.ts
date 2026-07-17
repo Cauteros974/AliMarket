@@ -21,6 +21,9 @@ export type RootStackParamList = {
   OrderTracking: {
     orderId: string;
   };
+  Addresses: undefined;
+  Notifications: undefined;
+  WishlistCollections: undefined;
 };
 
 export type MainTabParamList = {
