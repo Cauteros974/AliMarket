@@ -1,6 +1,13 @@
 export type RootStackParamList = {
     MainTabs: undefined;
-    ProductDetails: { productId: string };
+
+  CategoryDetails: {
+    categoryId: string;
+  };
+
+  ProductDetails: {
+    productId: string;
+  };
 };
 
 export type MainTabParamList = {
