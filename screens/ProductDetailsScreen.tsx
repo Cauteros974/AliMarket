@@ -182,4 +182,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 12,
     },
+    deliveryTitle: {
+        color: colors.text,
+        fontWeight: "900",
+    },
+    deliveryText: {
+        color: colors.muted,
+        marginTop: 3,
+    },
 })
