@@ -218,4 +218,8 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: "900",
     },
+    checkoutButton: {
+        height: 54,
+        borderRadius: 18,
+    },
 })
