@@ -195,4 +195,8 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         marginBottom: 9,
     },
+    summaryLabel: {
+        color: colors.muted,
+        fontWeight: "700",
+    },
 })
