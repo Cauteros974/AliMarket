@@ -10,5 +10,7 @@ type ProductDetailsProps = NativeStackScreenProps<RootStackParamList, "ProductDe
 export default function ProductDetailsScreen({route}: ProductDetailsProps) {
     const product = products.find((item) => item.id === route.params.productId);
 
-    const addToCard = useShopStore((state) => state.addToCart) 
+    const addToCard = useShopStore((state) => state.addToCart);
+    const favoriteIds = useShopStore((state) => state.favoriteIds);
+    const toggleFavorite = useShopStore((state) => state.toggleFavorite);
 }
