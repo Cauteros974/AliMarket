@@ -57,6 +57,20 @@ export default function CartScreen({navigation}: CartScreenProps) {
                             <Text style={styles.emptyText}>Add something from the catalog to start.</Text>
                         </View>
                     }
+                    renderItem={({item}) => {
+                        if(!item.product) return null;
+
+                        return(
+                            <Pressable
+                                onPress={() =>
+                                    navigation.navigate("ProductDetails", { productId: item.product!.id })
+                                }
+                                style={styles.cartItem}
+                            >
+                                <Image source={{ uri: item.product.image }} style={styles.image}/>
+                            </Pressable>
+                        )
+                    }}
                 />
              </View>
         </SafeAreaView>
