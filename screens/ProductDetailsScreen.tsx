@@ -140,4 +140,14 @@ const styles = StyleSheet.create({
         alignItems: "baseline",
         gap: 10,
     },
+    price: {
+        color: colors.primary,
+        fontSize: 30,
+        fontWeight: "900",
+    },
+    oldPrice: {
+        color: colors.muted,
+        fontSize: 16,
+        textDecorationLine: "line-through",
+    },
 })
