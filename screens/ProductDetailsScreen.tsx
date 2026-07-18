@@ -78,10 +78,19 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
                     ))}
                 </View>
 
-                <Text style={styles.sectionTitle}>Description</Text>\
+                <Text style={styles.sectionTitle}>Description</Text>
                 <Text style={styles.description}>{product.description}</Text>
             </ScrollView>
 
+            <View style={styles.footer}>
+                 <Pressable onPress={() => toggleFavorite(product.id)} style={styles.secondaryButton}>
+                    <Ionicons
+                        name={isFavorite ? "heart" : "heart-outline"}
+                        size={20}
+                        color={colors.primary}
+                    />
+                </Pressable>
+            </View>
             <View>
 
             </View>
