@@ -28,9 +28,9 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
     const isFavorite = favoriteIds.includes(product.id);
 
     return(
-        <SafeAreaView>
-            <ScrollView>
-                <View>
+        <SafeAreaView style={styles.safeArea}>
+            <ScrollView style={styles.content}>
+                <View style={styles.imageWrap}>
                     <Image source={{ uri: product.image }} style={styles.image} />
                 </View>
             </ScrollView>
