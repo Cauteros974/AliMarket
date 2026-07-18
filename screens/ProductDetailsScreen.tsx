@@ -110,4 +110,15 @@ const styles = StyleSheet.create({
     content: {
         paddingBottom: 116,
     },
+    imageWrap: {
+        margin: 18,
+        height: 330,
+        borderRadius: 28,
+        backgroundColor: colors.surfaceSoft,
+        overflow: "hidden",
+    },
+    image: {
+        width: "100%",
+        height: "100%",
+    },
 })
