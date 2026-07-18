@@ -176,4 +176,8 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
     },
+    removeText: {
+        color: colors.danger,
+        fontWeight: "800",
+    },
 })
