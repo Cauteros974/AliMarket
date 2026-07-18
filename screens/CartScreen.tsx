@@ -39,5 +39,13 @@ export default function CartScreen({navigation}: CartScreenProps) {
         Alert.alert("Order placed", "Your demo order was created successfully.");
         clearCart()
     }
+
+    return(
+        <SafeAreaView style={styles.safeArea}>
+             <View style={styles.content}>
+                <Text style={styles.title}>Cart</Text>
+             </View>
+        </SafeAreaView>
+    )
 }
 
