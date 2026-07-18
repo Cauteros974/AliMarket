@@ -246,4 +246,9 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         fontSize: 16,
     },
+    missing: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })
