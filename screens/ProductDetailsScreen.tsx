@@ -201,4 +201,16 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 10,
     },
+    colorDot: {
+        width: 30,
+        height: 30,
+        borderRadius: 15,
+        borderWidth: 2,
+        borderColor: colors.white,
+    },
+    description: {
+        color: colors.muted,
+        fontSize: 15,
+        lineHeight: 23,
+    },
 })
