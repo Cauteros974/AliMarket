@@ -203,4 +203,9 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontWeight: "900",
     },
+    divider: {
+        height: 1,
+        backgroundColor: colors.border,
+        marginVertical: 8,
+    },
 })
