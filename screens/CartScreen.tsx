@@ -37,6 +37,7 @@ export default function CartScreen({navigation}: CartScreenProps) {
 
     function handleCheckout() {
         Alert.alert("Order placed", "Your demo order was created successfully.");
+        clearCart()
     }
 }
 
