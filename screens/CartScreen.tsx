@@ -111,7 +111,7 @@ export default function CartScreen({navigation}: CartScreenProps) {
                         <Text style={styles.totalValue}>{formatPrice(total)}</Text>
                     </View>
 
-                    <Pressable>
+                    <Pressable style={styles.checkoutButton}>
                         <Text style={styles.checkoutText}>Checkout</Text>
                     </Pressable>
                 </View>
