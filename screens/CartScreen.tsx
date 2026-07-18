@@ -26,5 +26,10 @@ export default function CartScreen({navigation}: CartScreenProps) {
             product: products.find((product) => product.id === item.productId),
         }))
         .filter((entry) => entry.product);
+
+    const subtotal = cartProducts.reduce(
+        (sum, entry) => sum + (entry.product?.price ?? 0) * entry.item.quantity,
+        0
+    );
 }
 
