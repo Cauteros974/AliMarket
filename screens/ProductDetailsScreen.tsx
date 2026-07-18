@@ -163,4 +163,12 @@ const styles = StyleSheet.create({
         gap: 6,
         marginTop: 12,
     },
+    ratingText: {
+        color: colors.text,
+        fontWeight: "900",
+    },
+    mutedText: {
+        color: colors.muted,
+        fontSize: 13,
+    },
 })
