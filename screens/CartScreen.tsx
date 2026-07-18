@@ -101,7 +101,10 @@ export default function CartScreen({navigation}: CartScreenProps) {
                         <Text style={styles.summaryValue}>{formatPrice(subtotal)}</Text>
                     </View>
 
-                    
+                    <View>
+                        <Text style={styles.summaryLabel}>Shipping</Text>
+                        <Text style={styles.summaryValue}>{formatPrice(shipping)}</Text>
+                    </View>
                 </View>
              )}
         </SafeAreaView>
