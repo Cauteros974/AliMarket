@@ -104,14 +104,10 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
 
 const styles = StyleSheet.create({
     safeArea: {
-
+        flex: 1,
+        backgroundColor: colors.background,
     },
-
-    missing: {
-
+    content: {
+        paddingBottom: 116,
     },
-    
-    missingTitle: {
-
-    }
 })
