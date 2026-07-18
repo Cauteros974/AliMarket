@@ -22,8 +22,20 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
                     <Text style={styles.missingTitle}>Product not found</Text>
                 </View>
             </SafeAreaView>
-        )
+        );
     }
+
+    const isFavorite = favoriteIds.includes(product.id);
+
+    return(
+        <SafeAreaView>
+            <ScrollView>
+                <View>
+                    <Image source={{ uri: product.image }} style={styles.image} />
+                </View>
+            </ScrollView>
+        </SafeAreaView>
+    )
 }
 
 const styles = StyleSheet.create({
