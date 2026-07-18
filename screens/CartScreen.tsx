@@ -77,7 +77,11 @@ export default function CartScreen({navigation}: CartScreenProps) {
                                     <Text style={styles.itemPrice}>{formatPrice(item.product.price)}</Text>
 
                                     <View style={styles.itemFooter}>
-                                        <QuantityStepper />
+                                        <QuantityStepper
+                                            quantity={item.item.quantity}
+                                            onMinus={() => decreaseQuantity(item.product!.id)}
+                                            onPlus={() => increaseQuantity(item.product!.id)}
+                                        />
 
                                         <Pressable>
                                             <Text style={styles.removeText}>Remove</Text>
