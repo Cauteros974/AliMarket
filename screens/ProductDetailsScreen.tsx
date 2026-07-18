@@ -213,4 +213,16 @@ const styles = StyleSheet.create({
         fontSize: 15,
         lineHeight: 23,
     },
+    footer: {
+        position: "absolute",
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: colors.white,
+        borderTopWidth: 1,
+        borderTopColor: colors.border,
+        padding: 16,
+        flexDirection: "row",
+        gap: 12,
+    },
 })
