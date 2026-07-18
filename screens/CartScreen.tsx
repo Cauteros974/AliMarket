@@ -115,11 +115,19 @@ export default function CartScreen({navigation}: CartScreenProps) {
                         <Text style={styles.checkoutText}>Checkout</Text>
                     </Pressable>
                 </View>
-             )}
+             ) : null}
         </SafeAreaView>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
-
+    safeArea: {
+        flex: 1,
+        backgroundColor: colors.background,
+    },
+    content: {
+        flex: 1,
+        paddingHorizontal: 18,
+        paddingTop: 8,
+    },
 })
