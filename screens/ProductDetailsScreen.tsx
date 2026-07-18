@@ -77,6 +77,9 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
                         <View key={color} style={[styles.colorDot, { backgroundColor: color }]} />
                     ))}
                 </View>
+
+                <Text>Description</Text>
+                <Text>{product.description}</Text>
             </ScrollView>
 
             <View>
