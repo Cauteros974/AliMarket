@@ -231,4 +231,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: "900",
     },
+    emptyState: {
+        minHeight: 360,
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })
