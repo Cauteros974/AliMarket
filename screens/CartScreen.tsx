@@ -180,4 +180,10 @@ const styles = StyleSheet.create({
         color: colors.danger,
         fontWeight: "800",
     },
+    summary: {
+        position: "absolute",
+        left: 0,
+        right: 0,
+        bottom: 0,
+    },
 })
