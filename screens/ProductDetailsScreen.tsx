@@ -241,4 +241,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    primaryButtonText: {
+        color: colors.white,
+        fontWeight: "900",
+        fontSize: 16,
+    },
 })
