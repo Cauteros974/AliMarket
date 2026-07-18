@@ -70,7 +70,7 @@ export default function CartScreen({navigation}: CartScreenProps) {
                                 <Image source={{ uri: item.product.image }} style={styles.image}/>
 
                                 <View style={styles.itemInfo}>
-                                    <Text>
+                                    <Text numberOfLines={2} style={styles.itemTitle}>
                                         {item.product.title}
                                     </Text>
                                 </View>
