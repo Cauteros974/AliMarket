@@ -30,7 +30,7 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
 
     return(
         <SafeAreaView style={styles.safeArea} edges={["bottom"]}>
-            <ScrollView style={styles.content}>
+            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
                 <View style={styles.imageWrap}>
                     <Image source={{ uri: product.image }} style={styles.image} />
 
@@ -41,6 +41,15 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
                             color={isFavorite ? colors.danger : colors.text}
                         />
                     </Pressable>
+                </View>
+
+                <View>
+                    <View style={styles.priceRow}>
+                        <Text style={styles.price}>{formatPrice(product.price)}</Text>
+                            {product.oldPrice ? (
+                                <Text style={styles.oldPrice}>{formatPrice(product.oldPrice)}</Text>
+                            ) : null}
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
