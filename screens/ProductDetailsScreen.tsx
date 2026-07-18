@@ -51,36 +51,33 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
                                 <Text style={styles.oldPrice}>{formatPrice(product.oldPrice)}</Text>
                             ) : null}
                     </View>
-                </View>
+                    
+                    <Text style={styles.title}>{product.title}</Text>
+                    
+                    <View style={styles.ratingRow}>
+                        <Ionicons name="star" size={16} color={colors.warning} />
+                        <Text style={styles.ratingText}>{product.rating}</Text>
+                        <Text style={styles.mutedText}>{pluralizeReviews(product.reviews)}</Text>
+                        <Text style={styles.mutedText}>{product.sold.toLocaleString("en-US")} sold</Text>
+                    </View>
 
-                <Text style={styles.title}>{product.title}</Text>
-
-                <View style={styles.ratingRow}>
-                    <Ionicons name="star" size={16} color={colors.warning} />
-                    <Text style={styles.ratingText}>{product.rating}</Text>
-                    <Text style={styles.mutedText}>{pluralizeReviews(product.reviews)}</Text>
-                    <Text style={styles.mutedText}>{product.sold.toLocaleString("en-US")} sold</Text>
-                </View>
-
-                <View style={styles.deliveryBox}>
-                    <Ionicons name="airplane-outline" size={20} color={colors.primary} />
-                    <View>
-                        <Text style={styles.deliveryTitle}>Delivery</Text>
-                        <Text style={styles.deliveryText}>{product.delivery}</Text>
+                    <View style={styles.deliveryBox}>
+                        <Ionicons name="airplane-outline" size={20} color={colors.primary} />
+                        <View>
+                            <Text style={styles.deliveryTitle}>Delivery</Text>
+                            <Text style={styles.deliveryText}>{product.delivery}</Text>
+                        </View>
                     </View>
                 </View>
 
-                <Text style={styles.sectionTitle}>Colors</Text>
-
-                <View>
-                    {product.colors.map((color) => (
-                        <View key={color} style={[styles.colorDot, { backgroundColor: color }]} />
-                    ))}
-                </View>
-
-                <Text style={styles.sectionTitle}>Descrition</Text>
-                <Text style={styles.description}>{product.description}</Text>
+                <Text>
+                    
+                </Text>
             </ScrollView>
+
+            <View>
+
+            </View>
         </SafeAreaView>
     )
 }
