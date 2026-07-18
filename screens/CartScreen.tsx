@@ -226,4 +226,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginTop: 10,
     },
+    checkoutText: {
+        color: colors.white,
+        fontSize: 16,
+        fontWeight: "900",
+    },
 })
