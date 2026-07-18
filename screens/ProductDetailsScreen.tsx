@@ -150,4 +150,17 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textDecorationLine: "line-through",
     },
+    title: {
+        color: colors.text,
+        fontSize: 24,
+        lineHeight: 30,
+        fontWeight: "900",
+        marginTop: 10,
+    },
+    ratingRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 6,
+        marginTop: 12,
+    },
 })
