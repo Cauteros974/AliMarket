@@ -233,4 +233,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    primaryButton: {
+        flex: 1,
+        height: 54,
+        borderRadius: 18,
+        backgroundColor: colors.primary,
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })
