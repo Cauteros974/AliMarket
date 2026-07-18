@@ -190,4 +190,15 @@ const styles = StyleSheet.create({
         color: colors.muted,
         marginTop: 3,
     },
+    sectionTitle: {
+        color: colors.text,
+        fontSize: 18,
+        fontWeight: "900",
+        marginTop: 24,
+        marginBottom: 10,
+    },
+    colorRow: {
+        flexDirection: "row",
+        gap: 10,
+    },
 })
