@@ -213,4 +213,9 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "900",
     },
+    totalValue: {
+        color: colors.primary,
+        fontSize: 20,
+        fontWeight: "900",
+    },
 })
