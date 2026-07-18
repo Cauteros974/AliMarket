@@ -31,5 +31,12 @@ export default function CartScreen({navigation}: CartScreenProps) {
         (sum, entry) => sum + (entry.product?.price ?? 0) * entry.item.quantity,
         0
     );
+
+    const shipping = subtotal > 0 ? 4.99 : 0;
+    const total = subtotal + shipping;
+
+    function handleCheckout() {
+        Alert.alert("Order placed", "Your demo order was created successfully.");
+    }
 }
 
