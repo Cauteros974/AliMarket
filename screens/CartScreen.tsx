@@ -155,4 +155,13 @@ const styles = StyleSheet.create({
         borderRadius: 14,
         backgroundColor: colors.surfaceSoft,
     },
+    itemInfo: {
+        flex: 1,
+    },
+    itemTitle: {
+        color: colors.text,
+        fontSize: 15,
+        lineHeight: 20,
+        fontWeight: "900",
+    },
 })
