@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { RootStackParamList } from "../navigation/types";
 import { products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
+import { colors } from "../theme/colors";
 
 type ProductDetailsProps = NativeStackScreenProps<RootStackParamList, "ProductDetails">;
 
@@ -28,10 +29,18 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
     const isFavorite = favoriteIds.includes(product.id);
 
     return(
-        <SafeAreaView style={styles.safeArea}>
+        <SafeAreaView style={styles.safeArea} edges={["bottom"]}>
             <ScrollView style={styles.content}>
                 <View style={styles.imageWrap}>
                     <Image source={{ uri: product.image }} style={styles.image} />
+
+                    <Pressable>
+                        <Ionicons
+                            name={isFavorite ? "heart" : "heart-outline"}
+                            size={22}
+                            color={isFavorite ? colors.danger : colors.text}
+                        />
+                    </Pressable>
                 </View>
             </ScrollView>
         </SafeAreaView>
