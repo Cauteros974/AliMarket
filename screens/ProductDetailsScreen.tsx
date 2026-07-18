@@ -225,4 +225,12 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 12,
     },
+    secondaryButton: {
+        width: 54,
+        height: 54,
+        borderRadius: 18,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })
