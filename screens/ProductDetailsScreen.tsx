@@ -58,6 +58,8 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
                 <View style={styles.ratingRow}>
                     <Ionicons name="star" size={16} color={colors.warning} />
                     <Text style={styles.ratingText}>{product.rating}</Text>
+                    <Text style={styles.mutedText}>{pluralizeReviews(product.reviews)}</Text>
+                    <Text style={styles.mutedText}>{product.sold.toLocaleString("en-US")} sold</Text>
                 </View>
             </ScrollView>
         </SafeAreaView>
