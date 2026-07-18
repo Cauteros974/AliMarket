@@ -130,4 +130,14 @@ const styles = StyleSheet.create({
         paddingHorizontal: 18,
         paddingTop: 8,
     },
+    title: {
+        color: colors.text,
+        fontSize: 28,
+        fontWeight: "900",
+        marginBottom: 16,
+    },
+    list: {
+        paddingBottom: 260,
+        gap: 12,
+    },
 })
