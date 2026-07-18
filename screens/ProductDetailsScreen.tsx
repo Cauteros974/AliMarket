@@ -121,4 +121,23 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
     },
+    favoriteButton: {
+        position: "absolute",
+        right: 14,
+        top: 14,
+        width: 44,
+        height: 44,
+        borderRadius: 22,
+        backgroundColor: "rgba(255,255,255,0.94)",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    info: {
+        paddingHorizontal: 18,
+    },
+    priceRow: {
+        flexDirection: "row",
+        alignItems: "baseline",
+        gap: 10,
+    },
 })
