@@ -246,4 +246,4 @@ const styles = StyleSheet.create({
         color: colors.muted,
         marginTop: 6,
     },
-})
+});
