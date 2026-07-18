@@ -242,4 +242,8 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         marginTop: 12,
     },
+    emptyText: {
+        color: colors.muted,
+        marginTop: 6,
+    },
 })
