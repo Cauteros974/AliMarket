@@ -90,6 +90,10 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
                         color={colors.primary}
                     />
                 </Pressable>
+
+                <Pressable onPress={() => addToCart(product.id)} style={styles.primaryButton}>
+                    <Text style={styles.primaryButtonText}>Add to cart</Text>
+                </Pressable>
             </View>
             <View>
 
