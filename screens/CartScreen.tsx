@@ -44,6 +44,12 @@ export default function CartScreen({navigation}: CartScreenProps) {
         <SafeAreaView style={styles.safeArea}>
              <View style={styles.content}>
                 <Text style={styles.title}>Cart</Text>
+
+                <FlatList 
+                    data={cartProducts}
+                    keyExtractor={(entry) => entry.item.productId}
+                    showsVerticalScrollIndicator={false}
+                />
              </View>
         </SafeAreaView>
     )
