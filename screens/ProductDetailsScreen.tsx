@@ -78,8 +78,8 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
                     ))}
                 </View>
 
-                <Text>Description</Text>
-                <Text>{product.description}</Text>
+                <Text style={styles.sectionTitle}>Description</Text>\
+                <Text style={styles.description}>{product.description}</Text>
             </ScrollView>
 
             <View>
