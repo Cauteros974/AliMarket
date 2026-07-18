@@ -105,9 +105,17 @@ export default function CartScreen({navigation}: CartScreenProps) {
                         <Text style={styles.summaryLabel}>Shipping</Text>
                         <Text style={styles.summaryValue}>{formatPrice(shipping)}</Text>
                     </View>
+
+                    <View style={styles.summaryRow}>
+                        <Text style={styles.totalLabel}>Total</Text>
+                        <Text style={styles.totalValue}>{formatPrice(total)}</Text>
+                    </View>
                 </View>
              )}
         </SafeAreaView>
     )
 }
 
+const styles = StyleSheet.create({
+
+})
