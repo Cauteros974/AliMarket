@@ -70,7 +70,13 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
                     </View>
                 </View>
 
-                
+                <Text style={styles.sectionTitle}>Colors</Text>
+
+                <View>
+                    {product.colors.map((color) => (
+                        <View key={color} style={[styles.colorDot, { backgroundColor: color }]} />
+                    ))}
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
