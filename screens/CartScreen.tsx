@@ -170,4 +170,10 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         marginTop: 6,
     },
+    itemFooter: {
+        marginTop: "auto",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
 })
