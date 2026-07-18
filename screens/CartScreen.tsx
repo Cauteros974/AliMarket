@@ -93,6 +93,17 @@ export default function CartScreen({navigation}: CartScreenProps) {
                     }}
                 />
              </View>
+
+             {cartProducts.length > 0 ? (
+                <View style={styles.summary}>
+                    <View style={styles.summaryRow}>
+                        <Text style={styles.summaryLabel}>Subtotal</Text>
+                        <Text style={styles.summaryValue}>{formatPrice(subtotal)}</Text>
+                    </View>
+
+                    
+                </View>
+             )}
         </SafeAreaView>
     )
 }
