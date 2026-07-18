@@ -208,4 +208,9 @@ const styles = StyleSheet.create({
         backgroundColor: colors.border,
         marginVertical: 8,
     },
+    totalLabel: {
+        color: colors.text,
+        fontSize: 18,
+        fontWeight: "900",
+    },
 })
