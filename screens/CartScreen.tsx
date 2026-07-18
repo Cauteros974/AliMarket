@@ -16,5 +16,15 @@ type CartScreenProps = {
 export default function CartScreen({navigation}: CartScreenProps) {
     const cart = useShopStore((state) => state.cart);
     const increaseQuantity = useShopStore((state) => state.increaseQuantity);
+    const decreaseQuantity = useShopStore((state) => state.decreaseQuantity);
+    const removeFromCart = useShopStore((state) => state.removeFromCart);
+    const clearCart = useShopStore((state) => state.clearCart);
+
+    const cartProducts = cart
+        .map((item) => ({
+            item,
+            product: products.find((product) => product.id === item.productId),
+        }))
+        .filter((entry) => entry.product);
 }
 
