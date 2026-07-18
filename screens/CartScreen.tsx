@@ -140,4 +140,13 @@ const styles = StyleSheet.create({
         paddingBottom: 260,
         gap: 12,
     },
+    cartItem: {
+        backgroundColor: colors.surface,
+        borderRadius: 18,
+        borderWidth: 1,
+        borderColor: colors.border,
+        padding: 10,
+        flexDirection: "row",
+        gap: 12,
+    },
 })
