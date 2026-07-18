@@ -171,4 +171,15 @@ const styles = StyleSheet.create({
         color: colors.muted,
         fontSize: 13,
     },
+    deliveryBox: {
+        marginTop: 22,
+        borderRadius: 18,
+        backgroundColor: colors.surface,
+        borderWidth: 1,
+        borderColor: colors.border,
+        padding: 14,
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 12,
+    },
 })
