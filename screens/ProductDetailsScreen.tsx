@@ -57,6 +57,7 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
 
                 <View style={styles.ratingRow}>
                     <Ionicons name="star" size={16} color={colors.warning} />
+                    <Text style={styles.ratingText}>{product.rating}</Text>
                 </View>
             </ScrollView>
         </SafeAreaView>
