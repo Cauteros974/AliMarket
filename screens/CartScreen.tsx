@@ -73,6 +73,8 @@ export default function CartScreen({navigation}: CartScreenProps) {
                                     <Text numberOfLines={2} style={styles.itemTitle}>
                                         {item.product.title}
                                     </Text>
+
+                                    <Text style={styles.itemPrice}>{formatPrice(item.product.price)}</Text>
                                 </View>
                             </Pressable>
                         )
