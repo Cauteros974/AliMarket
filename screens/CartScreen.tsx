@@ -199,4 +199,8 @@ const styles = StyleSheet.create({
         color: colors.muted,
         fontWeight: "700",
     },
+    summaryValue: {
+        color: colors.text,
+        fontWeight: "900",
+    },
 })
