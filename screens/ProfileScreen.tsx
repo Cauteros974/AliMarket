@@ -130,5 +130,6 @@ const styles = StyleSheet.create({
         borderRadius: 18,
         borderWidth: 1,
         borderColor: colors.border,
+        padding: 10,
     }
 })
