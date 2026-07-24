@@ -51,6 +51,7 @@ export default function ProfileScreen() {
                     <View key={order.id} style={styles.orderCard}>
                         <View>
                             <Text style={styles.orderId}>{order.id}</Text>
+                            <Text style={styles.orderStatus}>{order.status}</Text>
                         </View>
                     </View>
                 ))}
