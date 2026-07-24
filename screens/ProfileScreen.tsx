@@ -68,5 +68,12 @@ export default function ProfileScreen() {
                 ))}
             </ScrollView>
         </SafeAreaView>
-    )
+    );
 }
+
+const styles = StyleSheet.create({
+    safeAred: {
+        flex: 1,
+        backgroundColor: colors.background
+    }
+})
