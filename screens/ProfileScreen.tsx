@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
     },
     statLabel: {
         color: colors.muted,
-        marginTop: 10
+        marginTop: 4,
+        fontWeight: "700"
     }
 })
