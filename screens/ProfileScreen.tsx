@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
     },
     statValue: {
         color: colors.primary,
-        fontSize: 20
+        fontSize: 24,
+        fontWeight: "900"
     }
 })
