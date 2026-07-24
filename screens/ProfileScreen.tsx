@@ -126,7 +126,9 @@ const styles = StyleSheet.create({
     },
     statCard: {
         flex: 1,
-        backgroundColor: colors.muted,
-        borderRadius: 12
+        backgroundColor: colors.surface,
+        borderRadius: 18,
+        borderWidth: 1,
+        borderColor: colors.border,
     }
 })
