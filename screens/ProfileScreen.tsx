@@ -171,5 +171,10 @@ const styles = StyleSheet.create({
     orderAmount: {
         color: colors.primary,
         fontWeight: "900",
+    },
+    menuItem: {
+        minHeight: 32,
+        borderRadius: 16,
+        backgroundColor: colors.surface
     }
 })
