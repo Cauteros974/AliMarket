@@ -59,6 +59,12 @@ export default function ProfileScreen() {
                 ))}
 
                 <Text style={styles.sectionTitle}>Settings</Text>
+
+                {["Shipping addresses", "Payment methods", "Support center"].map((item) => (
+                    <View>
+                        <Text style={styles.menuText}>{item}</Text>
+                    </View>
+                ))}
             </ScrollView>
         </SafeAreaView>
     )
