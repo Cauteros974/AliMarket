@@ -173,8 +173,11 @@ const styles = StyleSheet.create({
         fontWeight: "900",
     },
     menuItem: {
-        minHeight: 32,
+        minHeight: 52,
         borderRadius: 16,
-        backgroundColor: colors.surface
+        backgroundColor: colors.surface,
+        borderWidth: 1,
+        borderColor: colors.border,
+        paddingHorizontal: 14,
     }
 })
