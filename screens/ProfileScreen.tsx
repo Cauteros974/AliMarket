@@ -63,6 +63,7 @@ export default function ProfileScreen() {
                 {["Shipping addresses", "Payment methods", "Support center"].map((item) => (
                     <View>
                         <Text style={styles.menuText}>{item}</Text>
+                        <Ionicons name="chevron-forward" size={18} color={colors.muted} />
                     </View>
                 ))}
             </ScrollView>
