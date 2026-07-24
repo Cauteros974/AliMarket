@@ -104,5 +104,10 @@ const styles = StyleSheet.create({
         backgroundColor: colors.surface,
         alignItems: "center",
         justifyContent: "center"
+    },
+    name: {
+        color: colors.text,
+        fontSize: 24,
+        fontWeight: "900"
     }
 })
