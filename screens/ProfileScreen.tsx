@@ -75,5 +75,9 @@ const styles = StyleSheet.create({
     safeAred: {
         flex: 1,
         backgroundColor: colors.background
+    },
+    content: {
+        paddingHorizontal: 18,
+        paddingTop: 8
     }
 })
