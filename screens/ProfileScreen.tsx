@@ -117,6 +117,11 @@ const styles = StyleSheet.create({
     statRow: {
         flexDirection: "column",
         gap: 12,
-        marginTop: 12
+        marginTop: 12,
+    },
+    statsRow: {
+        flexDirection: "row",
+        gap: 12,
+        marginTop: 12,
     }
 })
