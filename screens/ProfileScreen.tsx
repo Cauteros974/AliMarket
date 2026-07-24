@@ -48,7 +48,7 @@ export default function ProfileScreen() {
                 <Text style={styles.sectionTitle}>Recent orders</Text>
 
                 {orders.map((order) => (
-                    <View>
+                    <View key={order.id} style={styles.orderCard}>
                         <View>
                             <Text style={styles.orderId}>{order.id}</Text>
                         </View>
