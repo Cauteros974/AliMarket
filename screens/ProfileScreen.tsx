@@ -143,10 +143,15 @@ const styles = StyleSheet.create({
         fontWeight: "700"
     },
     sectionTitle: {
-        color: colors.muted,
+        color: colors.text,
         fontSize: 20,
         fontWeight: "900",
         marginTop: 24,
         marginBottom: 12
+    },
+    orderCard: {
+        backgroundColor: colors.surface,
+        borderRadius: 18,
+        borderWidth: 1,
     }
 })
