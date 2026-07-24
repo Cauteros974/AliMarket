@@ -32,6 +32,8 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
                     ListEmptyComponent={
                         <View>
                             <Ionicons name="heart-outline" size={48} color={colors.primary}/>
+                            <Text style={styles.emptyTitle}>No saved products</Text>
+                            <Text style={styles.emptyText}>Tap the heart on a product to save it here.</Text>
                         </View>
                     }
                 />
