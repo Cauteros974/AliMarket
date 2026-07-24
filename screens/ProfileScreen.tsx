@@ -97,4 +97,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 14,
     },
+    avatar: {
+        width: 64,
+        height: 64,
+        borderRadius: 20,
+        backgroundColor: colors.surface
+    }
 })
