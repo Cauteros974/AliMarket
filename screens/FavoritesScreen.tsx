@@ -12,5 +12,7 @@ type FavoritesScreenProps = {
   navigation: NativeStackNavigationProp<RootStackParamList>;
 };
 
-export default function FavoritesScreen({navigation}: FavoritesScreenProps) (
-)
+export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
+    const favoriteIds = useShopStore((state) => state.favoriteIds);
+    const toggleFavorite = useShopStore((state) => state.toggleFavorite);
+}
