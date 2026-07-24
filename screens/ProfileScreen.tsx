@@ -179,5 +179,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
         paddingHorizontal: 14,
+        marginBottom: 10,
+        flexDirection: "row",
+        alignItems: "center",
     }
 })
