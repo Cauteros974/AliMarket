@@ -35,7 +35,7 @@ export default function ProfileScreen() {
 
                 <View style={styles.statsRow}>
                     <View style={styles.statCard}>
-                        <Text>{cartCount}</Text>
+                        <Text style={styles.statValue}>{cartCount}</Text>
                         <Text style={styles.statLabel}>Cart items</Text>
                     </View>
 
@@ -131,5 +131,9 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
         padding: 16,
+    },
+    statValue: {
+        color: colors.primary,
+        fontSize: 20
     }
 })
