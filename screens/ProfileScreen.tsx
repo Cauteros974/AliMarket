@@ -57,6 +57,8 @@ export default function ProfileScreen() {
                         <Text style={styles.orderAmount}>{order.amount}</Text>
                     </View>
                 ))}
+
+                <Text style={styles.sectionTitle}>Settings</Text>
             </ScrollView>
         </SafeAreaView>
     )
