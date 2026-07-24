@@ -38,6 +38,8 @@ export default function ProfileScreen() {
                         <Text style={styles.statLabel}>Saved</Text>
                     </View>
                 </View>
+
+                <Text style={StyleSheet.sectionTitle}>Settings</Text>
             </ScrollView>
         </SafeAreaView>
     )
