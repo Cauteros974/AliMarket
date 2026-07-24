@@ -19,7 +19,7 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
     const favorites = products.filter((product) => favoriteIds.includes(product.id));
 
     return(
-        <SafeAreaView>
+        <SafeAreaView style={styles.safeArea}>
             <View>
                 <Text>Saved products</Text>
 
@@ -28,8 +28,16 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
                     keyExtractor={(item) => item.id}
                     numColumns={2}
                     showsVerticalScrollIndicator={false}
+                    columnWrapperStyle={styles.grid}
                 />
             </View>
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+        backgroundColor: colors.background
+    }
+})
