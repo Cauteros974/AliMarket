@@ -60,5 +60,9 @@ const styles = StyleSheet.create({
     },
     grid: {
         paddingBottom: 28,
+    },
+    emptyTitle: {
+        color: colors.text,
+        fontSize: 20,
     }
 })
