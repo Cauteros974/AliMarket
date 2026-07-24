@@ -74,7 +74,7 @@ export default function ProfileScreen() {
 const styles = StyleSheet.create({
     safeAred: {
         flex: 1,
-        backgroundColor: colors.background
+        backgroundColor: colors.background,
     },
     content: {
         paddingHorizontal: 18,
@@ -82,7 +82,9 @@ const styles = StyleSheet.create({
         paddingBottom: 28,
     },
     title: {
-        color: colors.muted,
-        fontSize: 28
+        color: colors.text,
+        fontSize: 28,
+        fontWeight: "900",
+        marginBottom: 16,
     }
 })
