@@ -4,6 +4,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
+const orders = [
+  { id: "ORD-2041", status: "In transit", amount: "€68.48" },
+  { id: "ORD-1988", status: "Delivered", amount: "€24.90" },
+  { id: "ORD-1932", status: "Delivered", amount: "€49.99" },
+];
+
 export default function ProfileScreen() {
     const cartCount = useShopStore((state) => 
         state.cart.reduce((sum,item) => sum + item.quantity, 0)
@@ -40,6 +46,8 @@ export default function ProfileScreen() {
                 </View>
 
                 <Text style={styles.sectionTitle}>Recent orders</Text>
+
+                {orders.map((order))}
             </ScrollView>
         </SafeAreaView>
     )
