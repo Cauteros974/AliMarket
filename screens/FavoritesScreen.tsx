@@ -20,8 +20,8 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
 
     return(
         <SafeAreaView style={styles.safeArea}>
-            <View >
-                <Text>Saved products</Text>
+            <View style={styles.content}>
+                <Text style={styles.title}>Saved products</Text>
 
                 <FlatList 
                     data={favorites}
