@@ -20,7 +20,7 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
 
     return(
         <SafeAreaView style={styles.safeArea}>
-            <View>
+            <View >
                 <Text>Saved products</Text>
 
                 <FlatList 
@@ -29,6 +29,11 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
                     numColumns={2}
                     showsVerticalScrollIndicator={false}
                     columnWrapperStyle={styles.grid}
+                    ListEmptyComponent={
+                        <View>
+                            <Ionicons name="heart-outline" size={22}/>
+                        </View>
+                    }
                 />
             </View>
         </SafeAreaView>
