@@ -72,7 +72,7 @@ export default function ProfileScreen() {
 }
 
 const styles = StyleSheet.create({
-    safeAred: {
+    safeArea: {
         flex: 1,
         backgroundColor: colors.background,
     },
