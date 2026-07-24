@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     orderId: {
-        color: colors.muted,
-        marginTop: 4
+        color: colors.text,
+        fontWeight: "900",
     }
 })
