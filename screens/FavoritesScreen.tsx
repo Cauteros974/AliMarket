@@ -41,6 +41,7 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
                             product={item}
                             isFavorite
                             onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
+                            onToggleFavorite={() => toggleFavorite(item.id)}
                         />
                     )}
                 />
