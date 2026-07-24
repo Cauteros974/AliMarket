@@ -163,5 +163,9 @@ const styles = StyleSheet.create({
     orderId: {
         color: colors.text,
         fontWeight: "900",
-    }
+    },
+    orderStatus: {
+        color: colors.muted,
+        marginTop: 4,
+    },
 })
