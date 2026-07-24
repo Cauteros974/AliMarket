@@ -39,6 +39,8 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
                     renderItem={({item}) => (
                         <ProductCard
                             product={item}
+                            isFavorite
+                            onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
                         />
                     )}
                 />
