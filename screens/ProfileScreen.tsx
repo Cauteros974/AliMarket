@@ -80,5 +80,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: 18,
         paddingTop: 8,
         paddingBottom: 28,
+    },
+    title: {
+        color: colors.muted,
+        fontSize: 28
     }
 })
