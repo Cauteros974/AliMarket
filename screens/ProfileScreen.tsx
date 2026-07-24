@@ -168,4 +168,8 @@ const styles = StyleSheet.create({
         color: colors.muted,
         marginTop: 4,
     },
+    orderAmount: {
+        color: colors.primary,
+        fontWeight: "900",
+    }
 })
