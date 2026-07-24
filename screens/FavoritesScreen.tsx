@@ -31,7 +31,7 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
                     columnWrapperStyle={styles.grid}
                     ListEmptyComponent={
                         <View>
-                            <Ionicons name="heart-outline" size={22}/>
+                            <Ionicons name="heart-outline" size={22} color={colors.primary}/>
                         </View>
                     }
                 />
