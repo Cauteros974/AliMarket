@@ -61,7 +61,7 @@ export default function ProfileScreen() {
                 <Text style={styles.sectionTitle}>Settings</Text>
 
                 {["Shipping addresses", "Payment methods", "Support center"].map((item) => (
-                    <View>
+                    <View key={item} style={styles.menuItem}>
                         <Text style={styles.menuText}>{item}</Text>
                         <Ionicons name="chevron-forward" size={18} color={colors.muted} />
                     </View>
