@@ -33,8 +33,8 @@ export default function ProfileScreen() {
                         <Text style={styles.statLabel}>Cart items</Text>
                     </View>
 
-                    <View>
-                        <Text>{favoriteCount}</Text>
+                    <View style={styles.statCard}>
+                        <Text style={styles.statValue}>{favoriteCount}</Text>
                         <Text style={styles.statLabel}>Saved</Text>
                     </View>
                 </View>
