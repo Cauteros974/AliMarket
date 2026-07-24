@@ -159,5 +159,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignContent: "center",
         justifyContent: "space-between"
+    },
+    orderId: {
+        color: colors.muted,
+        marginTop: 4
     }
 })
