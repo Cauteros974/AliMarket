@@ -39,7 +39,7 @@ export default function ProfileScreen() {
                     </View>
                 </View>
 
-                <Text style={StyleSheet.sectionTitle}>Settings</Text>
+                <Text style={styles.sectionTitle}>Recent orders</Text>
             </ScrollView>
         </SafeAreaView>
     )
