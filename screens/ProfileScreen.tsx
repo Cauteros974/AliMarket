@@ -27,8 +27,8 @@ export default function ProfileScreen() {
                     </View>
                 </View>
 
-                <View>
-                    <View>
+                <View style={styles.statsRow}>
+                    <View style={styles.statCard}>
                         <Text>{cartCount}</Text>
                         <Text style={styles.statLabel}>Cart items</Text>
                     </View>
