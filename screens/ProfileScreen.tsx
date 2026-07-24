@@ -12,9 +12,9 @@ export default function ProfileScreen() {
     const favoriteCount = useShopStore((state) => state.favoriteIds.length);
 
     return(
-        <SafeAreaView>
-            <ScrollView>
-                <Text>Profile</Text>
+        <SafeAreaView style={styles.safeArea}>
+            <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+                <Text style={styles.title}>Profile</Text>
 
                 <View>
                     <View>
