@@ -16,7 +16,7 @@ export default function ProfileScreen() {
             <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
                 <Text style={styles.title}>Profile</Text>
 
-                <View>
+                <View style={styles.profileCard}>
                     <View>
                         <Ionicons name="person" size={34} color={colors.primary} />
                     </View>
