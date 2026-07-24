@@ -15,4 +15,14 @@ type FavoritesScreenProps = {
 export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
     const favoriteIds = useShopStore((state) => state.favoriteIds);
     const toggleFavorite = useShopStore((state) => state.toggleFavorite);
+
+    const favorites = products.filter((product) => favoriteIds.includes(product.id));
+
+    return(
+        <SafeAreaView>
+            <View>
+                <Text>Saved products</Text>
+            </View>
+        </SafeAreaView>
+    )
 }
