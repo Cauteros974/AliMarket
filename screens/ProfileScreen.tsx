@@ -91,5 +91,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.surface,
         borderRadius: 22,
         borderWidth: 1,
+        borderColor: colors.border,
+        padding: 16,
+        flexDirection: "row",
     },
 })
