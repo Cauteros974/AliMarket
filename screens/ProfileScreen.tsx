@@ -17,7 +17,7 @@ export default function ProfileScreen() {
                 <Text style={styles.title}>Profile</Text>
 
                 <View style={styles.profileCard}>
-                    <View>
+                    <View style={styles.avatar}>
                         <Ionicons name="person" size={34} color={colors.primary} />
                     </View>
 
