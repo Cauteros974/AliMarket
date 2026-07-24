@@ -36,6 +36,11 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
                             <Text style={styles.emptyText}>Tap the heart on a product to save it here.</Text>
                         </View>
                     }
+                    renderItem={({item}) => (
+                        <ProductCard
+                            product={item}
+                        />
+                    )}
                 />
             </View>
         </SafeAreaView>
