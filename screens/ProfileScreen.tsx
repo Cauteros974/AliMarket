@@ -113,5 +113,9 @@ const styles = StyleSheet.create({
     email: {
         color: colors.muted,
         marginTop: 4,
+    },
+    statRow: {
+        flexDirection: "column",
+        gap: 12
     }
 })
