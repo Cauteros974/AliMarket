@@ -53,6 +53,8 @@ export default function ProfileScreen() {
                             <Text style={styles.orderId}>{order.id}</Text>
                             <Text style={styles.orderStatus}>{order.status}</Text>
                         </View>
+
+                        <Text style={styles.orderAmount}>{order.amount}</Text>
                     </View>
                 ))}
             </ScrollView>
