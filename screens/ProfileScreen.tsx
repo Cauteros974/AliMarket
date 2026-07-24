@@ -155,5 +155,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
         padding: 14,
+        marginBottom: 10,
+        flexDirection: "row",
     }
 })
