@@ -26,6 +26,13 @@ export default function ProfileScreen() {
                         <Text style={styles.email}>user@example.com</Text>
                     </View>
                 </View>
+
+                <View>
+                    <View>
+                        <Text>{cartCount}</Text>
+                        <Text style={styles.statLabel}>Cart items</Text>
+                    </View>
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
