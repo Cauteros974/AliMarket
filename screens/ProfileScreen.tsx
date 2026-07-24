@@ -20,6 +20,11 @@ export default function ProfileScreen() {
                     <View>
                         <Ionicons name="person" size={34} color={colors.primary} />
                     </View>
+
+                    <View>
+                        <Text style={styles.name}>User</Text>
+                        <Text style={styles.email}>user@example.com</Text>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
