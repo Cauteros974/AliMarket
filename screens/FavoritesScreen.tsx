@@ -22,6 +22,13 @@ export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
         <SafeAreaView>
             <View>
                 <Text>Saved products</Text>
+
+                <FlatList 
+                    data={favorites}
+                    keyExtractor={(item) => item.id}
+                    numColumns={2}
+                    showsVerticalScrollIndicator={false}
+                />
             </View>
         </SafeAreaView>
     )
