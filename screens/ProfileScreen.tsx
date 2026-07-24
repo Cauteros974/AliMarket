@@ -47,7 +47,13 @@ export default function ProfileScreen() {
 
                 <Text style={styles.sectionTitle}>Recent orders</Text>
 
-                {orders.map((order))}
+                {orders.map((order) => (
+                    <View>
+                        <View>
+                            <Text style={styles.orderId}>{order.id}</Text>
+                        </View>
+                    </View>
+                ))}
             </ScrollView>
         </SafeAreaView>
     )
