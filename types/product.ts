@@ -1,3 +1,5 @@
+import { ImageSourcePropType } from "react-native";
+
 export type CategoryId =  
     | "electronics"
     | "fashion"
@@ -17,7 +19,7 @@ export type Product = {
     title: string;
     description: string;
     categoryId: string;
-    image: string;
+    image: ImageSourcePropType;
     price: number;
     oldPrice?: number;
     rating: number;
