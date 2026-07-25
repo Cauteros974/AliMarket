@@ -1,4 +1,3 @@
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { LinearGradient } from "expo-linear-gradient";
 import { useMemo } from "react";
 import { FlatList, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
@@ -8,15 +7,14 @@ import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
 import SectionHeader from "../components/SectionHeader";
 import { categories, products } from "../data/products";
-import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
-type HomeScreenProops = {
-    navigation: NativeStackNavigationProp<RootStackParamList>;
+type Props = {
+    navigation: any;
 };
 
-export default function HomeScreen({navigation}: HomeScreenProops) {
+export default function HomeScreen({ navigation }: Props) {
     const searchQuery = useShopStore((state) => state.searchQuery);
     const favoriteIds = useShopStore((state) => state.favoriteIds);
     const setSearchQuery = useShopStore((state) => state.setSearchQuery);
