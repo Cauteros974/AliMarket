@@ -20,7 +20,7 @@ export default function ProductCard({
     return(
         <Pressable onPress={onPress} style={styles.card}>
             <View style={styles.imageWrap}>
-                <Image source={{ uri: product.image }} style={styles.image} />
+                <Image source={product.image} style={styles.image} />
 
                 {product.discountLabel ? (
                     <View style={styles.discountBadge}>
