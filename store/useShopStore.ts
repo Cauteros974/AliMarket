@@ -54,7 +54,7 @@ type ShopState = {
 const initialFilters: CatalogFilters = {
   minPrice: "",
   maxPrice: "",
-  minRating: "",
+  minRating: 0,
   freeDeliveryOnly: false,
   discountsOnly: false,
 }
