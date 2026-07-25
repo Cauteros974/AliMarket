@@ -34,4 +34,7 @@ export type Product = {
   reviews: number;
   sold: number;
   discountLabel?: string;
+  delivery: string;
+  freeDelivery: boolean;
+  
 };
