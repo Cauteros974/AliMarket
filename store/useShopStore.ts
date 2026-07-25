@@ -168,7 +168,10 @@ export const useShopStore = create<ShopState>()(
           set({ appliedCoupon: null });
           return false;
         }
-      }
+
+        set({ appliedCoupon: code, couponCode: code });
+        return true;
+      },
     }),
     {
       name: "alimarket-shop-storage",
