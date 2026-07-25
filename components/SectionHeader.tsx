@@ -1,16 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+import {Pressable, StyleSheet, Text, View } from "react-native";
 import { colors } from "../theme/colors";
 
 type SectionHeaderProps = {
   title: string;
   action?: string;
+  onActionPress?: () => void;
 };
 
-export default function SectionHeader({title, action}: SectionHeaderProps) {
+export default function SectionHeader({title, action, onActionPress}: SectionHeaderProps) {
     return(
         <View style={styles.container}>
             <Text style={styles.title}>{title}</Text>
-            {action ? <Text style={styles.action}>{action}</Text> : null}
+            {action ? (
+                <Pressable onPress={onActionPress}>
+                    <Text style={styles.action}>{action}</Text>
+                </Pressable>
+            ) : null}
         </View>
     );
 }
