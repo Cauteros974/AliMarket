@@ -39,3 +39,10 @@ export type Product = {
   colors: string[];
   reviewList: Review[];
 };
+
+export type CartItem = {
+  productId: string;
+  quantity: number;
+};
+
+export type SortOption = "popular" | "priceAsc" | "priceDesc" | "rating";
