@@ -32,4 +32,6 @@ export type Product = {
   oldPrice?: number;
   rating: number;
   reviews: number;
+  sold: number;
+  discountLabel?: string;
 };
