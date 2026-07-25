@@ -67,6 +67,8 @@ export const useShopStore = create<ShopState>()(
       searchQuery: "",
       selectedCategoryId: null,
       sortOption: "popular",
+      filters: initialFilters,
+      couponCode: "",
 
       addToCart: (productId) =>
         set((state) => {
