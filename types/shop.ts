@@ -54,3 +54,8 @@ export type CatalogFilters = {
   freeDeliveryOnly: boolean;
   discountsOnly: boolean;
 };
+
+export type User = {
+  name: string;
+  email: string;
+};
