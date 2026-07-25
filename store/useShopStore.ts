@@ -1,7 +1,15 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { CartItem } from "../types/product";
+import {
+  Address,
+  AppNotification,
+  CartItem,
+  CatalogFilters,
+  Order,
+  SortOption,
+  User,
+} from "../types/shop";
 import { createId } from "../utils/format";
 
 const defaultAddress: Address = {
@@ -12,6 +20,15 @@ const defaultAddress: Address = {
   postalCode: "01001",
   phone: "+380 00 000 00 00",
 }
+
+const defaultNotifications: AppNotification[] = [
+  {
+    id: "n1",
+    title: "Summer sale started",
+    message: "Selected electronics and home products are up to 60% off today.",
+    date: "2026-07-04",
+  }
+]
 
 type ShopState = {
   cart: CartItem[];
