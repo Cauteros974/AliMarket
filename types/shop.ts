@@ -70,3 +70,12 @@ export type Address = {
 };
 
 export type OrderStatus = "Processing" | "Shipped" | "Delivered";
+
+export type Order = {
+  id: string;
+  createdAt: string;
+  status: OrderStatus;
+  items: CartItem[];
+  total: number;
+  address: Address;
+};
