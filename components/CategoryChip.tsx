@@ -1,10 +1,10 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet, Text } from "react-native";
 import { colors } from "../theme/colors";
-import { Category } from "../types/product";
+import { Category } from "../types/shop";
 
 type CategoryChipProps = {
-  category: Category;
+  category: Pick<Category, "title" | "icon">;
   selected?: boolean;
   onPress: () => void;
 };
