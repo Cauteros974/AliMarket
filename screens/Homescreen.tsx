@@ -144,10 +144,11 @@ const styles = StyleSheet.create({
         borderRadius: 24,
         padding: 18,
         marginTop: 18,
-        justifyContent: "space-between"
+        justifyContent: "flex-start",
     },
     bannerTextBlock: {
         maxWidth: "85%",
+        marginBottom: 8,
     },
     bannerLabel: {
         color: "rgba(255,255,255,0.8)",
@@ -169,6 +170,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         paddingVertical: 10,
         borderRadius: 999,
+        marginTop: 14,
+        marginBottom: 10,
     },
     bannerButton: {
         alignSelf: "flex-start",
