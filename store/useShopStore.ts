@@ -73,6 +73,8 @@ export const useShopStore = create<ShopState>()(
       user: null,
       addresses: [defaultAddress],
       selectedAddresses: defaultAddress.id,
+      order: [],
+      notifications: defaultNotifications,
 
       addToCart: (productId) =>
         set((state) => {
