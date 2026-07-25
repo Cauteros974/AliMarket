@@ -15,8 +15,7 @@ export const products: Product[] = [
         title: "Wireless Noise Cancelling Headphones",
         description: "Lightweight headphones with soft ear pads, deep bass, active noise cancelling and up to 35 hours of battery life.",
         categoryId: "electronics",
-        image:
-        "./assets/images/headphone.avif",
+        image: require("../assets/images/headphone.avif"),
         price: 49.99,
         oldPrice: 79.99,
         rating: 4.8,
@@ -31,8 +30,7 @@ export const products: Product[] = [
         title: "Smart LED Ambient Light Strip",
         description: "RGB smart light strip for bedroom, desk or gaming setup. Includes app control, scenes and music sync.",
         categoryId: "home",
-        image: 
-        "./assets/images/man.avif",
+        image: require("../assets/images/man.avif"),
         price: 18.49,
         oldPrice: 29.99,
         rating: 4.6,
@@ -45,11 +43,9 @@ export const products: Product[] = [
     {
         id: "p3",
         title: "Minimal Streetwear Crossbody Bag",
-        description:
-        "Compact water-resistant crossbody bag with adjustable strap, phone pocket and hidden zipper compartment.",
+        description: "Compact water-resistant crossbody bag with adjustable strap, phone pocket and hidden zipper compartment.",
         categoryId: "fashion",
-        image:
-        "./assets/images/womans_bag.avif",
+        image: require("../assets/images/womans_bag.avif"),
         price: 24.9,
         oldPrice: 39.9,
         rating: 4.7,
@@ -58,15 +54,13 @@ export const products: Product[] = [
         discountLabel: "-30%",
         delivery: "Delivery in 8-15 days",
         colors: ["#111827", "#9CA3AF", "#C2410C"],
-  },
-  {
+    },
+    {
         id: "p4",
         title: "Hydrating Skin Care Set",
-        description:
-        "Daily skin care set with cleanser, serum and cream. Gentle texture, travel-friendly bottles and clean routine.",
+        description: "Daily skin care set with cleanser, serum and cream. Gentle texture, travel-friendly bottles and clean routine.",
         categoryId: "beauty",
-        image:
-        "./assets/images/cream.avif",
+        image: require("../assets/images/cream.avif"),
         price: 32.5,
         oldPrice: 45,
         rating: 4.9,
@@ -75,5 +69,5 @@ export const products: Product[] = [
         discountLabel: "Best",
         delivery: "Free delivery in 10-16 days",
         colors: ["#F9A8D4", "#FDE68A", "#BFDBFE"],
-  }
-]
+    }
+];
