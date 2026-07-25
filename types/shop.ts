@@ -36,5 +36,6 @@ export type Product = {
   discountLabel?: string;
   delivery: string;
   freeDelivery: boolean;
-  
+  colors: string[];
+  reviewList: Review[];
 };
