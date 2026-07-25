@@ -25,6 +25,10 @@ export default function HomeScreen({ navigation }: Props) {
         []
     );
 
+    function openCategory(categoryId: string) {
+        setSelectedCategoryId(categoryId);
+    }
+
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
