@@ -33,7 +33,7 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
         <SafeAreaView style={styles.safeArea} edges={["bottom"]}>
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
                 <View style={styles.imageWrap}>
-                    <Image source={{ uri: product.image }} style={styles.image} />
+                    <Image source={product.image} style={styles.image} />
 
                     <Pressable>
                         <Ionicons
