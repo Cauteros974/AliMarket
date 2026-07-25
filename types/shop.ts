@@ -20,3 +20,13 @@ export type Review = {
   text: string;
   date: string;
 };
+
+export type Product = {
+  id: string;
+  title: string;
+  description: string;
+  categoryId: CategoryId;
+  image: string;
+  gallery: string[];
+  price: number;
+};
