@@ -11,16 +11,15 @@ import {
   User,
 } from "../types/shop";
 import { createId } from "../utils/format";
-import { use } from "react";
 
 const defaultAddress: Address = {
   id: "addr-main",
-  title: "home",
+  title: "Home",
   city: "Kyiv",
   street: "Baridy Street 10",
   postalCode: "01001",
   phone: "+380 00 000 00 00",
-}
+};
 
 const defaultNotifications: AppNotification[] = [
   {
@@ -36,7 +35,7 @@ const defaultNotifications: AppNotification[] = [
     message: "Use WELCOME10 to get 10% off your first demo order.",
     date: "2026-07-03",
     read: false,
-  }
+  },
 ];
 
 type ShopState = {
@@ -83,7 +82,7 @@ const initialFilters: CatalogFilters = {
   minRating: 0,
   freeDeliveryOnly: false,
   discountsOnly: false,
-}
+};
 
 export const useShopStore = create<ShopState>()(
   persist(
@@ -98,8 +97,8 @@ export const useShopStore = create<ShopState>()(
       appliedCoupon: null,
       user: null,
       addresses: [defaultAddress],
-      selectedAddresses: defaultAddress.id,
-      order: [],
+      selectedAddressId: defaultAddress.id,
+      orders: [],
       notifications: defaultNotifications,
 
       addToCart: (productId) =>
@@ -118,10 +117,12 @@ export const useShopStore = create<ShopState>()(
 
           return { cart: [...state.cart, { productId, quantity: 1 }] };
         }),
+
       removeFromCart: (productId) =>
         set((state) => ({
           cart: state.cart.filter((item) => item.productId !== productId),
         })),
+
       increaseQuantity: (productId) =>
         set((state) => ({
           cart: state.cart.map((item) =>
@@ -130,6 +131,7 @@ export const useShopStore = create<ShopState>()(
               : item
           ),
         })),
+
       decreaseQuantity: (productId) =>
         set((state) => ({
           cart: state.cart
@@ -140,22 +142,25 @@ export const useShopStore = create<ShopState>()(
             )
             .filter((item) => item.quantity > 0),
         })),
+
       clearCart: () => set({ cart: [] }),
+
       toggleFavorite: (productId) =>
         set((state) => ({
           favoriteIds: state.favoriteIds.includes(productId)
             ? state.favoriteIds.filter((id) => id !== productId)
             : [...state.favoriteIds, productId],
         })),
+
       setSearchQuery: (query) => set({ searchQuery: query }),
 
-      setSelectedCategoryId: (categoryId) => set({selectedCategoryId: categoryId}),
+      setSelectedCategoryId: (categoryId) => set({ selectedCategoryId: categoryId }),
 
-      setSortOption: (option) => set({sortOption: option}),
+      setSortOption: (option) => set({ sortOption: option }),
 
-      updateFilters: (filters) => 
+      updateFilters: (filters) =>
         set((state) => ({ filters: { ...state.filters, ...filters } })),
-      
+
       resetFilters: () => set({ filters: initialFilters, sortOption: "popular" }),
 
       setCouponCode: (code) => set({ couponCode: code }),
@@ -172,6 +177,93 @@ export const useShopStore = create<ShopState>()(
         set({ appliedCoupon: code, couponCode: code });
         return true;
       },
+
+      clearCoupon: () => set({ appliedCoupon: null, couponCode: "" }),
+
+      register: (name, email) => set({ user: { name, email } }),
+
+      login: (email) =>
+        set({
+          user: {
+            name: email.split("@")[0] || "Customer",
+            email,
+          },
+        }),
+
+      logout: () => set({ user: null }),
+
+      addAddress: (address) =>
+        set((state) => {
+          const newAddress = { ...address, id: createId("addr") };
+
+          return {
+            addresses: [...state.addresses, newAddress],
+            selectedAddressId: newAddress.id,
+          };
+        }),
+
+      selectAddress: (addressId) => set({ selectedAddressId: addressId }),
+
+      removeAddress: (addressId) =>
+        set((state) => {
+          const addresses = state.addresses.filter((address) => address.id !== addressId);
+
+          return {
+            addresses,
+            selectedAddressId:
+              state.selectedAddressId === addressId
+                ? addresses[0]?.id ?? null
+                : state.selectedAddressId,
+          };
+        }),
+
+      placeOrder: (total) => {
+        const state = get();
+        const address = state.addresses.find(
+          (item) => item.id === state.selectedAddressId
+        );
+
+        if (state.cart.length === 0 || !address) {
+          return null;
+        }
+
+        const order: Order = {
+          id: createId("ORD").toUpperCase(),
+          createdAt: new Date().toISOString(),
+          status: "Processing",
+          items: state.cart,
+          total,
+          address,
+        };
+
+        set((current) => ({
+          orders: [order, ...current.orders],
+          cart: [],
+          appliedCoupon: null,
+          couponCode: "",
+          notifications: [
+            {
+              id: createId("n"),
+              title: "Order created",
+              message: `${order.id} is now processing.`,
+              date: new Date().toISOString(),
+              read: false,
+            },
+            ...current.notifications,
+          ],
+        }));
+
+        return order;
+      },
+
+      markNotificationRead: (notificationId) =>
+        set((state) => ({
+          notifications: state.notifications.map((notification) =>
+            notification.id === notificationId
+              ? { ...notification, read: true }
+              : notification
+          ),
+        })),
     }),
     {
       name: "alimarket-shop-storage",
@@ -179,6 +271,11 @@ export const useShopStore = create<ShopState>()(
       partialize: (state) => ({
         cart: state.cart,
         favoriteIds: state.favoriteIds,
+        user: state.user,
+        addresses: state.addresses,
+        selectedAddressId: state.selectedAddressId,
+        orders: state.orders,
+        notifications: state.notifications,
       }),
     }
   )
