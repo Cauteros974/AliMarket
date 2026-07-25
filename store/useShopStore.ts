@@ -11,6 +11,7 @@ import {
   User,
 } from "../types/shop";
 import { createId } from "../utils/format";
+import { use } from "react";
 
 const defaultAddress: Address = {
   id: "addr-main",
@@ -156,6 +157,13 @@ export const useShopStore = create<ShopState>()(
         set((state) => ({ filters: { ...state.filters, ...filters } })),
       
       resetFilters: () => set({ filters: initialFilters, sortOption: "popular" }),
+
+      setCouponCode: (code) => set({ couponCode: code }),
+
+      applyCoupon: () => {
+        const code = get().couponCode.trim().toUpperCase(),
+        const validCodes = ["WELCOME10", "FREESHIP", "SALE15"];
+      }
     }),
     {
       name: "alimarket-shop-storage",
