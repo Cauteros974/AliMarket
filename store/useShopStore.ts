@@ -61,10 +61,13 @@ const initialFilters: CatalogFilters = {
 
 export const useShopStore = create<ShopState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       cart: [],
       favoriteIds: [],
       searchQuery: "",
+      selectedCategoryId: null,
+      sortOption: "popular",
+
       addToCart: (productId) =>
         set((state) => {
           const existing = state.cart.find((item) => item.productId === productId);
