@@ -27,6 +27,7 @@ export default function HomeScreen({ navigation }: Props) {
 
     function openCategory(categoryId: string) {
         setSelectedCategoryId(categoryId);
+        navigation.navigate("CategoryDetails", { categoryId });
     }
 
     return(
