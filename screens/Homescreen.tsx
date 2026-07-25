@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     bannerTextBlock: {
-        maxWidth: "82%",
+        maxWidth: "85%",
     },
     bannerLabel: {
         color: "rgba(255,255,255,0.8)",
@@ -158,6 +158,7 @@ const styles = StyleSheet.create({
     bannerTitle: {
         color: colors.white,
         fontSize: 24,
+        paddingTop: 10,
         lineHeight: 30,
         fontWeight: "900",
         marginTop: 8,
