@@ -68,3 +68,5 @@ export type Address = {
   postalCode: string;
   phone: string;
 };
+
+export type OrderStatus = "Processing" | "Shipped" | "Delivered";
