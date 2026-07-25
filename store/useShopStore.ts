@@ -2,6 +2,13 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { CartItem } from "../types/product";
+import { createId } from "../utils/format";
+
+const defaultAddress: Address = {
+  id: "addr-main",
+  title: "home",
+  city: "Kyiv"
+}
 
 type ShopState = {
   cart: CartItem[];
