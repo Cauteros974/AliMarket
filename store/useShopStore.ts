@@ -36,7 +36,7 @@ const defaultNotifications: AppNotification[] = [
     date: "2026-07-03",
     read: false,
   }
-]
+];
 
 type ShopState = {
   cart: CartItem[];
@@ -50,6 +50,14 @@ type ShopState = {
   toggleFavorite: (productId: string) => void;
   setSearchQuery: (query: string) => void;
 };
+
+const initialFilters: CatalogFilters = {
+  minPrice: "",
+  maxPrice: "",
+  minRating: "",
+  freeDeliveryOnly: false,
+  discountsOnly: false,
+}
 
 export const useShopStore = create<ShopState>()(
   persist(
