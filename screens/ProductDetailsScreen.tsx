@@ -35,7 +35,7 @@ export default function ProductDetailsScreen({route}: ProductDetailsProps) {
                 <View style={styles.imageWrap}>
                     <Image source={product.image} style={styles.image} />
 
-                    <Pressable>
+                    <Pressable onPress={() => toggleFavorite(product.id)} style={styles.favoriteButton}>
                         <Ionicons
                             name={isFavorite ? "heart" : "heart-outline"}
                             size={22}
