@@ -59,3 +59,12 @@ export type User = {
   name: string;
   email: string;
 };
+
+export type Address = {
+  id: string;
+  title: string;
+  city: string;
+  street: string;
+  postalCode: string;
+  phone: string;
+};
