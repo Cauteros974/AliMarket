@@ -13,36 +13,36 @@ export default function SearchBar({
   onChangeText,
   placeholder = "Search products",
 }: SearchBarProps) {
-    return(
-        <View style={styles.container}>
-            <Ionicons name="search-outline" size={20} color={colors.muted} />
-            <TextInput 
-                value={value}
-                onChangeText={onChangeText}
-                placeholder={placeholder}
-                placeholderTextColor={colors.muted}
-                style={styles.input}
-            />
-        </View>
-    );
+  return (
+    <View style={styles.container}>
+      <Ionicons name="search-outline" size={20} color={colors.muted} />
+      <TextInput
+        value={value}
+        onChangeText={onChangeText}
+        placeholder={placeholder}
+        placeholderTextColor={colors.muted}
+        style={styles.input}
+      />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container:{
-        minHeight: 48,
-        borderRadius: 16,
-        backgroundColor: colors.surface,
-        borderWidth: 1,
-        borderColor: colors.border,
-        paddingHorizontal: 14,
-        flexDirection: "row",
-        alignItems: "center",
-        gap: 10,
-    },
-    input: {
-        flex: 1,
-        color: colors.text,
-        fontSize: 15,
-        fontWeight: "600"
-    },
+  container: {
+    minHeight: 48,
+    borderRadius: 16,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    paddingHorizontal: 14,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  input: {
+    flex: 1,
+    color: colors.text,
+    fontSize: 15,
+    fontWeight: "600",
+  },
 });
