@@ -8,3 +8,11 @@ export function formatPrice(value: number) {
 export function pluralizeReviews(count: number) {
   return `${count.toLocaleString("en-US")} reviews`;
 }
+
+export function formatDate(value: string) {
+    return new Intl.DateTimeFormat("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+    })
+}
