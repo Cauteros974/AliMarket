@@ -83,7 +83,7 @@ export default function CartScreen({navigation}: CartScreenProps) {
                                             onPlus={() => increaseQuantity(item.product!.id)}
                                         />
 
-                                        <Pressable>
+                                        <Pressable onPress={() => removeFromCart(item.product!.id)}>
                                             <Text style={styles.removeText}>Remove</Text>
                                         </Pressable>
                                     </View>
