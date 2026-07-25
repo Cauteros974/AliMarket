@@ -29,4 +29,7 @@ export type Product = {
   image: string;
   gallery: string[];
   price: number;
+  oldPrice?: number;
+  rating: number;
+  reviews: number;
 };
