@@ -46,3 +46,11 @@ export type CartItem = {
 };
 
 export type SortOption = "popular" | "priceAsc" | "priceDesc" | "rating";
+
+export type CatalogFilters = {
+  minPrice: string;
+  maxPrice: string;
+  minRating: number;
+  freeDeliveryOnly: boolean;
+  discountsOnly: boolean;
+};
