@@ -49,6 +49,8 @@ type ShopState = {
   clearCart: () => void;
   toggleFavorite: (productId: string) => void;
   setSearchQuery: (query: string) => void;
+  setSelectedCategoryId: (categoryId: string | null) => void;
+  setSortOption: (option: SortOption) => void;
 };
 
 const initialFilters: CatalogFilters = {
@@ -122,6 +124,10 @@ export const useShopStore = create<ShopState>()(
             : [...state.favoriteIds, productId],
         })),
       setSearchQuery: (query) => set({ searchQuery: query }),
+
+      setSelectedCategoryId: (categoryId) => set({selectedCategoryId: categoryId}),
+
+      setSortOption: (option) => set({sortOption: option})
     }),
     {
       name: "alimarket-shop-storage",
