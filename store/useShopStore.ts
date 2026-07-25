@@ -27,6 +27,7 @@ const defaultNotifications: AppNotification[] = [
     title: "Summer sale started",
     message: "Selected electronics and home products are up to 60% off today.",
     date: "2026-07-04",
+    read: false,
   }
 ]
 
