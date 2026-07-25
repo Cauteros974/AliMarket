@@ -129,7 +129,12 @@ export const useShopStore = create<ShopState>()(
 
       setSelectedCategoryId: (categoryId) => set({selectedCategoryId: categoryId}),
 
-      setSortOption: (option) => set({sortOption: option})
+      setSortOption: (option) => set({sortOption: option}),
+
+      updateFilters: (filters) => 
+        set((state) => ({ filters: { ...state.filters, ...filters } })),
+      
+      resetFilters: () => set({ filters: initialFilters, sortOption: "popular" }),
     }),
     {
       name: "alimarket-shop-storage",
