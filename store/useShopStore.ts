@@ -28,6 +28,13 @@ const defaultNotifications: AppNotification[] = [
     message: "Selected electronics and home products are up to 60% off today.",
     date: "2026-07-04",
     read: false,
+  },
+  {
+    id: "n2",
+    title: "Coupon available",
+    message: "Use WELCOME10 to get 10% off your first demo order.",
+    date: "2026-07-03",
+    read: false,
   }
 ]
 
