@@ -79,3 +79,11 @@ export type Order = {
   total: number;
   address: Address;
 };
+
+export type AppNotification = {
+  id: string;
+  title: string;
+  message: string;
+  date: string;
+  read: boolean;
+};
