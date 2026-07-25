@@ -71,6 +71,8 @@ export const useShopStore = create<ShopState>()(
       couponCode: "",
       appliedCoupon: null,
       user: null,
+      addresses: [defaultAddress],
+      selectedAddresses: defaultAddress.id,
 
       addToCart: (productId) =>
         set((state) => {
