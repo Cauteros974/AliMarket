@@ -44,6 +44,14 @@ type ShopState = {
   searchQuery: string;
   selectedCategoryId: string | null;
   sortOption: SortOption;
+  filters: CatalogFilters;
+  couponCode: string;
+  appliedCoupon: string | null;
+  user: User | null;
+  addresses: Address[];
+  selectedAddressId: string | null;
+  orders: Order[];
+  notifications: AppNotification[];
   addToCart: (productId: string) => void;
   removeFromCart: (productId: string) => void;
   increaseQuantity: (productId: string) => void;
@@ -53,6 +61,19 @@ type ShopState = {
   setSearchQuery: (query: string) => void;
   setSelectedCategoryId: (categoryId: string | null) => void;
   setSortOption: (option: SortOption) => void;
+  updateFilters: (filters: Partial<CatalogFilters>) => void;
+  resetFilters: () => void;
+  setCouponCode: (code: string) => void;
+  applyCoupon: () => boolean;
+  clearCoupon: () => void;
+  register: (name: string, email: string) => void;
+  login: (email: string) => void;
+  logout: () => void;
+  addAddress: (address: Omit<Address, "id">) => void;
+  selectAddress: (addressId: string) => void;
+  removeAddress: (addressId: string) => void;
+  placeOrder: (total: number) => Order | null;
+  markNotificationRead: (notificationId: string) => void;
 };
 
 const initialFilters: CatalogFilters = {
