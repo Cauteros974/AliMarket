@@ -42,6 +42,8 @@ type ShopState = {
   cart: CartItem[];
   favoriteIds: string[];
   searchQuery: string;
+  selectedCategoryId: string | null;
+  sortOption: SortOption;
   addToCart: (productId: string) => void;
   removeFromCart: (productId: string) => void;
   increaseQuantity: (productId: string) => void;
