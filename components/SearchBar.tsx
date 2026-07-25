@@ -20,7 +20,7 @@ export default function SearchBar({
                 value={value}
                 onChangeText={onChangeText}
                 placeholder={placeholder}
-                 placeholderTextColor={colors.muted}
+                placeholderTextColor={colors.muted}
                 style={styles.input}
             />
         </View>
