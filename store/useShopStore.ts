@@ -7,7 +7,10 @@ import { createId } from "../utils/format";
 const defaultAddress: Address = {
   id: "addr-main",
   title: "home",
-  city: "Kyiv"
+  city: "Kyiv",
+  street: "Baridy Street 10",
+  postalCode: "01001",
+  phone: "+380 00 000 00 00",
 }
 
 type ShopState = {
