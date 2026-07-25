@@ -161,8 +161,13 @@ export const useShopStore = create<ShopState>()(
       setCouponCode: (code) => set({ couponCode: code }),
 
       applyCoupon: () => {
-        const code = get().couponCode.trim().toUpperCase(),
+        const code = get().couponCode.trim().toUpperCase();
         const validCodes = ["WELCOME10", "FREESHIP", "SALE15"];
+
+        if (!validCodes.includes(code)) {
+          set({ appliedCoupon: null });
+          return false;
+        }
       }
     }),
     {
