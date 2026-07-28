@@ -100,6 +100,16 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 />
                             ))}
                         </ScrollView>
+
+                        <Text style = {styles.wrap}>
+                            {sortOptions.map((option) => (
+                                <Pressable>
+                                    <Text style={[styles.filterText, sortOption === option.value && styles.activeFilterText]}>
+                                        {option.label}
+                                    </Text>
+                                </Pressable>
+                            ))}
+                        </Text>
                     </View>
                 } 
             />
