@@ -124,6 +124,9 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 value={filters.minPrice}
                                 onChangeText={(value) => updateFilters({ minPrice: value })}
                                 keyboardType="numeric"
+                                placeholder="Min €"
+                                placeholderTextColor={colors.muted}
+                                style={styles.input}
                             />
                         </View>
                     </View>
