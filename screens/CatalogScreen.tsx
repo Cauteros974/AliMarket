@@ -229,6 +229,7 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         backgroundColor: colors.surface,
         paddingHorizontal: 12,
+        paddingVertical: 9,
     },
     categories: {
         paddingVertical: 16,
