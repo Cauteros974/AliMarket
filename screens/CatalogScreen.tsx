@@ -221,6 +221,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
         gap: 8,
+        marginBottom: 14
     },
     categories: {
         paddingVertical: 16,
