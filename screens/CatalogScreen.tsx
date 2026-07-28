@@ -83,6 +83,14 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                     <View>
                         <Text style={styles.title}>Catalog</Text>
                         <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
+
+                        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.row}>
+                            <CategoryChip
+                                category={{ title: "All", icon: "apps-outline" }}
+                                selected={!selectedCategoryId}
+                                onPress={() => setSelectedCategoryId(null)}
+                            />
+                        </ScrollView>
                     </View>
                 } 
             />
