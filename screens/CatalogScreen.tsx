@@ -211,6 +211,9 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         marginBottom: 16,
     },
+    row: { 
+        paddingVertical: 16 
+    },
     blockTitle: {
         color: colors.text, 
         fontSize: 16,
@@ -258,9 +261,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 12,
         color: colors.text,
         fontWeight: "700",
-    },
-    categories: {
-        paddingVertical: 16,
     },
     gridRow: {
         gap: 12,
