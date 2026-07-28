@@ -128,6 +128,15 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 placeholderTextColor={colors.muted}
                                 style={styles.input}
                             />
+
+                            <TextInput 
+                                value={filters.maxPrice}
+                                onChangeText={(value) => updateFilters({ maxPrice: value })}
+                                keyboardType="numeric"
+                                placeholder="Max €"
+                                placeholderTextColor={colors.muted}
+                                style={styles.input}
+                            />
                         </View>
                     </View>
                 } 
