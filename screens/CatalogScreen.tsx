@@ -40,6 +40,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
     const filteredProducts = useMemo(() => {
         const minPrice = Number(filters.minPrice) || 0;
         const maxPrice = Number(filters.maxPrice) || Number.MAX_SAFE_INTEGE;
+        const query = searchQuery.trim().toLowerCase();
 
         const normalizedQuery = searchQuery.trim().toLowerCase();
 
