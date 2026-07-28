@@ -40,7 +40,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
 
     const filteredProducts = useMemo(() => {
         const minPrice = Number(filters.minPrice) || 0;
-        const maxPrice = Number(filters.maxPrice) || Number.MAX_SAFE_INTEGE;
+        const maxPrice = Number(filters.maxPrice) || Number.MAX_SAFE_INTEGER;
         const query = searchQuery.trim().toLowerCase();
 
         return [...products]
@@ -265,9 +265,6 @@ const styles = StyleSheet.create({
     gridRow: {
         gap: 12,
         marginBottom: 12,
-    },
-    grid: {
-        paddingBottom: 28
     },
     emptyState: {
         minHeight: 240,
