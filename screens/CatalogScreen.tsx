@@ -148,6 +148,12 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                     Free delivery
                                 </Text>
                             </Pressable>
+
+                            <Pressable>
+                                <Text style={[styles.filterText, filters.discountsOnly && styles.activeFilterText]}>
+                                    Discounts
+                                </Text>
+                            </Pressable>
                         </View>
                     </View>
                 } 
