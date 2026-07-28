@@ -240,6 +240,9 @@ const styles = StyleSheet.create({
         fontSize: 12, 
         fontWeight: "800" 
     },
+    activeFilterText: {
+        color: colors.white
+    },
     categories: {
         paddingVertical: 16,
     },
