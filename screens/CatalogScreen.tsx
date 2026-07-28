@@ -251,7 +251,9 @@ const styles = StyleSheet.create({
     input: {
         flex: 1,
         minHeight: 46,
-        borderRadius: 16
+        borderRadius: 14,
+        backgroundColor: colors.surface,
+        borderWidth: 1,
     },
     categories: {
         paddingVertical: 16,
