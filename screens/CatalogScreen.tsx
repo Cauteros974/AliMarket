@@ -69,7 +69,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 if (sortOption === "rating") return b.rating - a.rating;
                 return b.sold - a.sold;
             })
-    }, [searchQuery, selectedCategoryId]);
+    }, [filters, searchQuery, selectedCategoryId, sortOption]);
 
     return(
         <SafeAreaView style={styles.safeArea}>
