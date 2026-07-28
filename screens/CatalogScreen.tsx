@@ -140,7 +140,9 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         </View>
 
                         <View>
-                            <Pressable>
+                            <Pressable
+                                onPress={() => updateFilters({ freeDeliveryOnly: !filters.freeDeliveryOnly })}
+                            >
                                 <Text style={[styles.filterText, filters.freeDeliveryOnly && styles.activeFilterText]}>
                                     Free delivery
                                 </Text>
