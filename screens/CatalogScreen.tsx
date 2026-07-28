@@ -101,7 +101,9 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                             ))}
                         </ScrollView>
 
-                        <Text style = {styles.wrap}>
+                        <Text style={styles.blockTitle}>Sort</Text>
+
+                        <View style = {styles.wrap}>
                             {sortOptions.map((option) => (
                                 <Pressable
                                     key={option.value}
@@ -113,7 +115,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                     </Text>
                                 </Pressable>
                             ))}
-                        </Text>
+                        </View>
                     </View>
                 } 
             />
