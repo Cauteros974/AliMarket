@@ -29,6 +29,9 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
     const filters = useShopStore((state) => state.filters);
     const favoriteIds = useShopStore((state) => state.favoriteIds);
 
+    const setSearchQuery = useShopStore((state) => state.setSearchQuery);
+    const setSelectedCategoryId = useShopStore((state) => state.setSelectedCategoryId);
+
 
     const filteredProducts = useMemo(() => {
         const normalizedQuery = searchQuery.trim().toLowerCase();
