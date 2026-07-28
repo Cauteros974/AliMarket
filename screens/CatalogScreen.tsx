@@ -162,6 +162,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 onPress={() =>
                                     updateFilters({minRating: filters.minRating === 4.5 ? 0 : 4.5 })
                                 }
+                                style={[styles.filterButton, filters.minRating === 4.5 && styles.activeFilter]}
                             >
                                 <Text style={[styles.filterText, filters.minRating === 4.5 && styles.activeFilterText]}>
                                     4.5+ rating
