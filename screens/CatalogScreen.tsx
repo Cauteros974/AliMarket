@@ -174,7 +174,12 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                             </Pressable>
                         </View>
                     </View>
-                } 
+                }
+                ListEmptyComponent={
+                    <View>
+                        <Text style={styles.emptyTitle}>Nothing found</Text>
+                    </View>
+                }
             />
         </SafeAreaView>
     )
