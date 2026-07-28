@@ -66,6 +66,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
             .sort((a, b) => {
                 if (sortOption === "priceAsc") return a.price - b.price;
                 if (sortOption === "priceDesc") return b.price - a.price;
+                if (sortOption === "rating") return b.rating - a.rating;
                 return b.sold - a.sold;
             })
     }, [searchQuery, selectedCategoryId]);
