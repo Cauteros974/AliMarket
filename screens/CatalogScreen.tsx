@@ -215,7 +215,12 @@ const styles = StyleSheet.create({
         color: colors.text, 
         fontSize: 16,
         fontWeight: "900",
-        marginBottom: 10
+        marginBottom: 10,
+    },
+    wrap: {
+        flexDirection: "row",
+        flexWrap: "wrap",
+        gap: 8,
     },
     categories: {
         paddingVertical: 16,
