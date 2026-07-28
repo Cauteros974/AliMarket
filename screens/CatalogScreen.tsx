@@ -231,6 +231,15 @@ const styles = StyleSheet.create({
         paddingHorizontal: 12,
         paddingVertical: 9,
     },
+    activeFilter: { 
+        backgroundColor: colors.primary, 
+        borderColor: colors.primary 
+    },
+    filterText: {
+        color: colors.text, 
+        fontSize: 12, 
+        fontWeight: "800" 
+    },
     categories: {
         paddingVertical: 16,
     },
