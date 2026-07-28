@@ -78,7 +78,13 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 keyExtractor={(item) => item.id}
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
-                columnWrapperStyle = {styles.content} 
+                columnWrapperStyle = {styles.content}
+                ListHeaderComponent={
+                    <View>
+                        <Text style={styles.title}>Catalog</Text>
+                        <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
+                    </View>
+                } 
             />
         </SafeAreaView>
     )
