@@ -42,18 +42,10 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
         const maxPrice = Number(filters.maxPrice) || Number.MAX_SAFE_INTEGE;
         const query = searchQuery.trim().toLowerCase();
 
-        const normalizedQuery = searchQuery.trim().toLowerCase();
-
-        return products.filter((product) => {
-            const matchesCategory = 
-                selectedCategory === "all" || product.categoryId === selectedCategory;
-
-            const matchesSearch = 
-                product.title.toLowerCase().includes(normalizedQuery) ||
-                product.description.toLowerCase().includes(normalizedQuery);
-                
-            return matchesCategory && matchesSearch;
-        })
+        return [...products]
+            .filter((product) => {
+                const matchesCategory = !selectedCategoryId || product.categoryId === selectedCategoryId;
+            })
     }, [searchQuery, selectedCategory]);
 
     return(
