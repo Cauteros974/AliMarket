@@ -33,6 +33,8 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
     const setSelectedCategoryId = useShopStore((state) => state.setSelectedCategoryId);
     const setSortOption = useShopStore((state) => state.setSortOption);
     const updateFilters = useShopStore((state) => state.updateFilters);
+    const resetFilters = useShopStore((state) => state.resetFilters);
+    const toggleFavorite = useShopStore((state) => state.toggleFavorite);
 
 
     const filteredProducts = useMemo(() => {
