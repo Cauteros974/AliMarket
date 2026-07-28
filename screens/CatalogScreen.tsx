@@ -118,6 +118,12 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         </View>
 
                         <Text style={styles.blockTitle}>Filters</Text>
+
+                        <View style={styles.priceRow}>
+                            <TextInput 
+                                value={filters.minPrice}
+                            />
+                        </View>
                     </View>
                 } 
             />
