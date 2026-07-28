@@ -52,6 +52,8 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 const matchesPrice = product.price >= minPrice && product.price <= maxPrice;
                 const matchesRating = product.rating >= filters.minRating;
                 const matchesDelivery = !filters.freeDeliveryOnly || product.delivery;
+                const matchesDiscount = !filters.discountsOnly || Boolean(product.oldPrice);
+
             })
     }, [searchQuery, selectedCategoryId]);
 
