@@ -90,6 +90,15 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 selected={!selectedCategoryId}
                                 onPress={() => setSelectedCategoryId(null)}
                             />
+
+                            {categories.map((category) => (
+                                <CategoryChip
+                                    key={category.id}
+                                    category={category}
+                                    selected={selectedCategoryId === category.id}
+                                    onPress={() => setSelectedCategoryId(category.id)}
+                                />
+                            ))}
                         </ScrollView>
                     </View>
                 } 
