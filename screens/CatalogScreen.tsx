@@ -8,6 +8,7 @@ import { categories, products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { SortOption } from "../types/shop";
+import QuantityStepper from "../components/QuantityStepper";
 
 
 type CatalogScreenProps = {
@@ -50,6 +51,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                     product.description.toLowerCase().includes(query);
                 const matchesPrice = product.price >= minPrice && product.price <= maxPrice;
                 const matchesRating = product.rating >= filters.minRating;
+                const matchesDelivery = !filters.freeDeliveryOnly || product.delivery;
             })
     }, [searchQuery, selectedCategoryId]);
 
