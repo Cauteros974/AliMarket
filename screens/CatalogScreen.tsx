@@ -248,6 +248,11 @@ const styles = StyleSheet.create({
         gap: 10, 
         marginBottom: 10 
     },
+    input: {
+        flex: 1,
+        minHeight: 46,
+        borderRadius: 16
+    },
     categories: {
         paddingVertical: 16,
     },
