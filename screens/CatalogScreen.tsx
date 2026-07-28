@@ -53,7 +53,15 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 const matchesRating = product.rating >= filters.minRating;
                 const matchesDelivery = !filters.freeDeliveryOnly || product.delivery;
                 const matchesDiscount = !filters.discountsOnly || Boolean(product.oldPrice);
-
+                
+                return(
+                    matchesCategory &&
+                    matchesSearch &&
+                    matchesPrice &&
+                    matchesRating &&
+                    matchesDelivery &&
+                    matchesDiscount
+                )
             })
     }, [searchQuery, selectedCategoryId]);
 
