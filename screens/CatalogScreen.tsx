@@ -122,6 +122,8 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         <View style={styles.priceRow}>
                             <TextInput 
                                 value={filters.minPrice}
+                                onChangeText={(value) => updateFilters({ minPrice: value })}
+                                keyboardType="numeric"
                             />
                         </View>
                     </View>
