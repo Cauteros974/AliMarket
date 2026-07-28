@@ -243,6 +243,11 @@ const styles = StyleSheet.create({
     activeFilterText: {
         color: colors.white
     },
+    priceRow: { 
+        flexDirection: "row", 
+        gap: 10, 
+        marginBottom: 10 
+    },
     categories: {
         paddingVertical: 16,
     },
