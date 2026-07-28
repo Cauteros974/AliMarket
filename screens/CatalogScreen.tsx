@@ -227,6 +227,8 @@ const styles = StyleSheet.create({
         borderRadius: 999,
         borderWidth: 1,
         borderColor: colors.border,
+        backgroundColor: colors.surface,
+        paddingHorizontal: 12,
     },
     categories: {
         paddingVertical: 16,
