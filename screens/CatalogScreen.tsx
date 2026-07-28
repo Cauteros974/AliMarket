@@ -181,6 +181,13 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         <Text style={styles.emptyText}>Try another search or reset filters.</Text>
                     </View>
                 }
+
+                renderItem={({item}) => (
+                    <ProductCard 
+                        product={item}
+                        isFavorite={favoriteIds.includes(item.id)}
+                    />
+                )}
             />
         </SafeAreaView>
     )
