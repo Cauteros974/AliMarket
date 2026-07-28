@@ -221,7 +221,12 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
         gap: 8,
-        marginBottom: 14
+        marginBottom: 14,
+    },
+        filterButton: {
+        borderRadius: 999,
+        borderWidth: 1,
+        borderColor: colors.border,
     },
     categories: {
         paddingVertical: 16,
