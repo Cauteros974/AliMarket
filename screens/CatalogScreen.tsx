@@ -45,6 +45,9 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
         return [...products]
             .filter((product) => {
                 const matchesCategory = !selectedCategoryId || product.categoryId === selectedCategoryId;
+                const matchesSearch =   
+                    product.title.toLowerCase().includes(query) || 
+                    product.description.toLowerCase().includes(query);
             })
     }, [searchQuery, selectedCategory]);
 
