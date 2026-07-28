@@ -149,7 +149,10 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 </Text>
                             </Pressable>
 
-                            <Pressable>
+                            <Pressable
+                                onPress={() => updateFilters({ discountsOnly: !filters.discountsOnly })}
+                                style={[styles.filterButton, filters.discountsOnly && styles.activeFilter]}
+                            >
                                 <Text style={[styles.filterText, filters.discountsOnly && styles.activeFilterText]}>
                                     Discounts
                                 </Text>
