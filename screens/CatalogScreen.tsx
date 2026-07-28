@@ -178,6 +178,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 ListEmptyComponent={
                     <View style={styles.emptyState}>
                         <Text style={styles.emptyTitle}>Nothing found</Text>
+                        <Text style={styles.emptyText}>Try another search or reset filters.</Text>
                     </View>
                 }
             />
