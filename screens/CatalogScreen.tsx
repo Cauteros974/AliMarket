@@ -24,6 +24,8 @@ const sortOptions: { label: string; value: SortOption }[] = [
 export default function CatalogScreen({ navigation }: CatalogScreenProps) {
 
     const searchQuery = useShopStore((state) => state.searchQuery);
+    const selectedCategoryId = useShopStore((state) => state.selectedCategoryId);
+    const sortOption = useShopStore((state) => state.sortOption);
     const favoriteIds = useShopStore((state) => state.favoriteIds);
     const setSearchQuery = useShopStore((state) => state.setSearchQuery);
     const toggleFavorite = useShopStore((state) => state.toggleFavorite);
