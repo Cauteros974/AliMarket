@@ -48,6 +48,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 const matchesSearch =   
                     product.title.toLowerCase().includes(query) || 
                     product.description.toLowerCase().includes(query);
+                const matchesPrice = product.price >= minPrice && product.price <= maxPrice;
             })
     }, [searchQuery, selectedCategoryId]);
 
