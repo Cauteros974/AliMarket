@@ -49,7 +49,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                     product.title.toLowerCase().includes(query) || 
                     product.description.toLowerCase().includes(query);
             })
-    }, [searchQuery, selectedCategory]);
+    }, [searchQuery, selectedCategoryId]);
 
     return(
         <SafeAreaView style={styles.safeArea}>
