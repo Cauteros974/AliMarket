@@ -168,6 +168,10 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                     4.5+ rating
                                 </Text>
                             </Pressable>
+
+                            <Pressable onPress={resetFilters} style={styles.filterButton}>
+                                <Text style={styles.filterText}>Reset</Text>
+                            </Pressable>
                         </View>
                     </View>
                 } 
