@@ -76,7 +76,9 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
             <FlatList
                 data = {filteredProducts}
                 keyExtractor={(item) => item.id}
-                numColumns={3}
+                numColumns={2}
+                showsVerticalScrollIndicator={false}
+                columnWrapperStyle = {styles.content} 
             />
         </SafeAreaView>
     )
