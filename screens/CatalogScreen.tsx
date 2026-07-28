@@ -256,6 +256,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
         paddingHorizontal: 12,
+        color: colors.text,
+        fontWeight: "700",
     },
     categories: {
         paddingVertical: 16,
