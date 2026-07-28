@@ -138,6 +138,12 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 style={styles.input}
                             />
                         </View>
+
+                        <View>
+                            <Pressable>
+                                <Text>Free delivery</Text>
+                            </Pressable>
+                        </View>
                     </View>
                 } 
             />
