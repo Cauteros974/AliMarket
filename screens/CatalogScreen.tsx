@@ -8,7 +8,6 @@ import { categories, products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { SortOption } from "../types/shop";
-import QuantityStepper from "../components/QuantityStepper";
 
 
 type CatalogScreenProps = {
