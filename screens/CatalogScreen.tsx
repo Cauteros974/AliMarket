@@ -254,6 +254,8 @@ const styles = StyleSheet.create({
         borderRadius: 14,
         backgroundColor: colors.surface,
         borderWidth: 1,
+        borderColor: colors.border,
+        paddingHorizontal: 12,
     },
     categories: {
         paddingVertical: 16,
