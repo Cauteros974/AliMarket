@@ -73,55 +73,11 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
 
     return(
         <SafeAreaView style={styles.safeArea}>
-            <View style={styles.content}>
-                <Text style={styles.title}>Catalog</Text>
-                
-                <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
-
-                <ScrollView
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    contentContainerStyle={styles.categories}
-                >
-                    <CategoryChip
-                        category={{ id: "electronics", title: "All", icon: "apps-outline" }}
-                        selected={selectedCategory === "all"}
-                        onPress={() => setSelectedCategory("all")}
-                    />
-
-                    {categories.map((category) => (
-                        <CategoryChip
-                            key={category.id}
-                            category={category}
-                            selected={selectedCategory === category.id}
-                            onPress={() => setSelectedCategory(category.id)}
-                        />
-                    ))}
-                </ScrollView>
-
-                <FlatList 
-                    data={filteredProducts}
-                    keyExtractor={(item) => item.id}
-                    numColumns={2}
-                    showsVerticalScrollIndicator={false}
-                    columnWrapperStyle={styles.gridRow}
-                    contentContainerStyle={styles.grid}
-                    ListEmptyComponent={
-                        <View style={styles.emptyState}>
-                            <Text style={styles.emptyTitle}>Nothing found</Text>
-                            <Text style={styles.emptyText}>Try another category or search phrase.</Text>
-                        </View>
-                    }
-                    renderItem={({ item }) => (
-                        <ProductCard 
-                            product={item}
-                            isFavorite={favoriteIds.includes(item.id)}
-                            onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
-                            onToggleFavorite={() => toggleFavorite(item.id)}
-                        />
-                    )}
-                />
-            </View>
+            <FlatList
+                data = {filteredProducts}
+                keyExtractor={(item) => item.id}
+                numColumns={3}
+            />
         </SafeAreaView>
     )
 }
