@@ -61,7 +61,11 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                     matchesRating &&
                     matchesDelivery &&
                     matchesDiscount
-                )
+                );
+            })
+            .sort((a, b) => {
+                if (sortOption === "priceAsc") return a.price - b.price;
+                return b.sold - a.sold;
             })
     }, [searchQuery, selectedCategoryId]);
 
