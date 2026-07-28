@@ -157,6 +157,12 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                     Discounts
                                 </Text>
                             </Pressable>
+
+                            <Pressable>
+                                <Text style={[styles.filterText, filters.minRating === 4.5 && styles.activeFilterText]}>
+                                    4.5+ rating
+                                </Text>
+                            </Pressable>
                         </View>
                     </View>
                 } 
