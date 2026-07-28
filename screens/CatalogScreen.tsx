@@ -211,6 +211,10 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         marginBottom: 16,
     },
+    blockTitle: {
+        color: colors.text, 
+        fontSize: 13,
+    },
     categories: {
         paddingVertical: 16,
     },
