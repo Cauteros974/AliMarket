@@ -103,7 +103,10 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
 
                         <Text style = {styles.wrap}>
                             {sortOptions.map((option) => (
-                                <Pressable>
+                                <Pressable
+                                    key={option.value}
+                                    onPress={() => setSortOption(option.value)}
+                                >
                                     <Text style={[styles.filterText, sortOption === option.value && styles.activeFilterText]}>
                                         {option.label}
                                     </Text>
