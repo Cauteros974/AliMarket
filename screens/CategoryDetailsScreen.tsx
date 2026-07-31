@@ -12,6 +12,10 @@ type Props = NativeStackScreenProps<RootStackParamList, "CategoryDetails">;
 export default function CategoryDetailsScreen({ navigation, route }: Props) {
     const category = categories.find((item) => item.id === route.params.categoryId);
 
+    const categoryProducts = products.filter(
+        (item) => item.categoryId === route.params.categoryId
+    );
+
 
     return(
         <SafeAreaView>
