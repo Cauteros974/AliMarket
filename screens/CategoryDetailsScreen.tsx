@@ -67,5 +67,6 @@ const styles = StyleSheet.create({
     subtitle: {
         color: colors.muted,
         fontWeight: "700",
+        marginBottom: 16
     }
 })
