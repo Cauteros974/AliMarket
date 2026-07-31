@@ -6,6 +6,7 @@ import { categories, products } from "../data/products";
 import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
+import FavoritesScreen from "./FavoritesScreen";
 
 type Props = NativeStackScreenProps<RootStackParamList, "CategoryDetails">;
 
@@ -31,6 +32,13 @@ export default function CategoryDetailsScreen({ navigation, route }: Props) {
                         <Text style={styles.subtitle}>{category?.subcategories.join(" · ")}</Text>
                     </View>
                 }
+
+                renderItem={({item}) => (
+                    <ProductCard 
+                        product={item}
+                        isFavorite={FavoritesScreen.includes(item.id)}
+                    />
+                )}
             />
         </SafeAreaView>
     )
