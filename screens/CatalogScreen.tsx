@@ -211,19 +211,21 @@ const styles = StyleSheet.create({
         marginBottom: 16,
     },
     row: { 
-        paddingVertical: 16 
+        paddingVertical: 20 
     },
     blockTitle: {
         color: colors.text, 
         fontSize: 16,
         fontWeight: "900",
         marginBottom: 10,
+        paddingLeft: 15,
     },
     wrap: {
         flexDirection: "row",
         flexWrap: "wrap",
         gap: 8,
         marginBottom: 14,
+        paddingLeft: 5,
     },
         filterButton: {
         borderRadius: 999,
