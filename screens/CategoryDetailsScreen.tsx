@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { FlatList } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ProductCard from "../components/ProductCard";
 import { categories, products } from "../data/products";
@@ -17,6 +17,9 @@ export default function CategoryDetailsScreen({ navigation, route }: Props) {
             <FlatList 
                 data={categoryProducts}
                 keyExtractor={(item) => item.id}
+                numColumns={2}
+                columnWrapperStyle={styles.gridRow}
+
             />
         </SafeAreaView>
     )
