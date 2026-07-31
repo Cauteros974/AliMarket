@@ -37,6 +37,7 @@ export default function CategoryDetailsScreen({ navigation, route }: Props) {
                     <ProductCard 
                         product={item}
                         isFavorite={FavoritesScreen.includes(item.id)}
+                        onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
                     />
                 )}
             />
