@@ -51,6 +51,10 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.background
     },
+    content: {
+        paddingHorizontal: 18,
+        paddingTop: 8,
+    },
     gridRow: {
         gap: 12,
         marginBottom: 12
