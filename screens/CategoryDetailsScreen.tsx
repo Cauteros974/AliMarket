@@ -38,6 +38,7 @@ export default function CategoryDetailsScreen({ navigation, route }: Props) {
                         product={item}
                         isFavorite={FavoritesScreen.includes(item.id)}
                         onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
+                        onToggleFavorite={() => toggleFavorite(item.id)}
                     />
                 )}
             />
