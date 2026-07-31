@@ -6,7 +6,6 @@ import { categories, products } from "../data/products";
 import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
-import FavoritesScreen from "./FavoritesScreen";
 
 type Props = NativeStackScreenProps<RootStackParamList, "CategoryDetails">;
 
