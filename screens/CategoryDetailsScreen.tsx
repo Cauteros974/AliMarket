@@ -24,3 +24,10 @@ export default function CategoryDetailsScreen({ navigation, route }: Props) {
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    gridRow: {
+        gap: 12,
+        marginBottom: 12
+    }
+})
