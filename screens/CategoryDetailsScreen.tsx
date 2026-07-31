@@ -12,6 +12,7 @@ type Props = NativeStackScreenProps<RootStackParamList, "CategoryDetails">;
 export default function CategoryDetailsScreen({ navigation, route }: Props) {
     const category = categories.find((item) => item.id === route.params.categoryId);
 
+
     return(
         <SafeAreaView>
             <FlatList 
@@ -23,7 +24,7 @@ export default function CategoryDetailsScreen({ navigation, route }: Props) {
                 ListHeaderComponent={
                     <View>
                         <Text style={styles.title}>{category?.title ?? "Category"}</Text>
-                        <Text style={styles.subtitle}>{category?.subcategories.join(" . ")}</Text>
+                        <Text style={styles.subtitle}>{category?.subcategories.join(" · ")}</Text>
                     </View>
                 }
             />
