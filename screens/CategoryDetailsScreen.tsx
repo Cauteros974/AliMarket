@@ -12,6 +12,8 @@ type Props = NativeStackScreenProps<RootStackParamList, "CategoryDetails">;
 
 export default function CategoryDetailsScreen({ navigation, route }: Props) {
     const category = categories.find((item) => item.id === route.params.categoryId);
+    const favoriteIds = useShopStore((state) => state.favoriteIds);
+    const toggleFavorite = useShopStore((state) => state.toggleFavorite);
 
     const categoryProducts = products.filter(
         (item) => item.categoryId === route.params.categoryId
@@ -36,7 +38,7 @@ export default function CategoryDetailsScreen({ navigation, route }: Props) {
                 renderItem={({item}) => (
                     <ProductCard 
                         product={item}
-                        isFavorite={FavoritesScreen.includes(item.id)}
+                        isFavorite={favoriteIds.includes(item.id)}
                         onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
                         onToggleFavorite={() => toggleFavorite(item.id)}
                     />
