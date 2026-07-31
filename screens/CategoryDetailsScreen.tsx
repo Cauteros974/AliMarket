@@ -56,6 +56,9 @@ const styles = StyleSheet.create({
         paddingTop: 8,
         paddingBottom: 20,
     },
+    title: {
+        color: colors.muted
+    },
     gridRow: {
         gap: 12,
         marginBottom: 12
