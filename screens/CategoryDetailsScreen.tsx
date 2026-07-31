@@ -57,7 +57,8 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
     },
     title: {
-        color: colors.muted
+        color: colors.text, 
+        fontSize: 28,
     },
     gridRow: {
         gap: 12,
