@@ -251,7 +251,9 @@ const styles = StyleSheet.create({
     priceRow: { 
         flexDirection: "column-reverse",
         gap: 10, 
-        marginBottom: 10 
+        marginBottom: 10,
+        width: 320,
+        paddingLeft: 5
     },
     input: {
         flex: 1,
