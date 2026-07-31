@@ -43,12 +43,16 @@ export default function CategoryDetailsScreen({ navigation, route }: Props) {
                 )}
             />
         </SafeAreaView>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+        backgroundColor: colors.background
+    },
     gridRow: {
         gap: 12,
         marginBottom: 12
-    }
+    },
 })
