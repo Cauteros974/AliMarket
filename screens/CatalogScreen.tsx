@@ -211,7 +211,8 @@ const styles = StyleSheet.create({
         marginBottom: 16,
     },
     row: { 
-        paddingVertical: 20 
+        paddingVertical: 20,
+        paddingLeft: 6,
     },
     blockTitle: {
         color: colors.text, 
@@ -248,7 +249,7 @@ const styles = StyleSheet.create({
         color: colors.white
     },
     priceRow: { 
-        flexDirection: "row", 
+        flexDirection: "column-reverse",
         gap: 10, 
         marginBottom: 10 
     },
