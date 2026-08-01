@@ -26,7 +26,7 @@ export default function CheckoutScreen({navigation}: Props) {
     const shipping = appliedCoupon === "FRESHIP" || subtotal === 0 ? 0 : 4.99;
 
     const discount = 
-        appliedCoupon = "WELCOME10"
+        appliedCoupon === "WELCOME10"
             ? subtotal * 0.1
             : appliedCoupon === "SALE15"
                 ? subtotal * 0.15
