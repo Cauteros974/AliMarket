@@ -171,5 +171,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         padding: 16,
         backgroundColor: colors.white,
+        borderTopWidth: 1,
+        borderTopColor: colors.border,
     }
 })
