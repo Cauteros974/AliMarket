@@ -47,9 +47,9 @@ export default function CheckoutScreen({navigation}: Props) {
     }
 
     return(
-        <SafeAreaView>
-            <ScrollView>
-                <Text>Checkout</Text>
+        <SafeAreaView style={styles.safeArea}>
+            <ScrollView style={styles.content}>
+                <Text style={styles.title}>Checkout</Text>
             </ScrollView>
         </SafeAreaView>
     )
