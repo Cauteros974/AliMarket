@@ -104,3 +104,15 @@ export default function CheckoutScreen({navigation}: Props) {
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    safeArea: { 
+        flex: 1, 
+        backgroundColor: colors.background 
+    },
+    content: { 
+        paddingHorizontal: 18, 
+        paddingTop: 8, 
+        paddingBottom: 110 
+    },
+})
