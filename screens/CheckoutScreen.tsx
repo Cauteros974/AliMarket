@@ -12,4 +12,6 @@ type Props = {
 export default function CheckoutScreen({navigation}: Props) {
     const cart = useShopStore((state) => state.cart);
     const addresses = useShopStore((state) => state.addresses);
+    const selectedAddressId = useShopStore((state) => state.selectedAddressId);
+    const appliedCoupon = useShopStore((state) => state.appliedCoupon);
 }
