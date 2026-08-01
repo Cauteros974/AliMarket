@@ -115,4 +115,10 @@ const styles = StyleSheet.create({
         paddingTop: 8, 
         paddingBottom: 110 
     },
+    title: {
+        color: colors.text,
+        fontSize: 20,
+        fontWeight: "900",
+        marginBottom: 16
+    }
 })
