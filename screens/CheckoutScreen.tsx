@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     },
     totalLabel: { color: colors.text, fontSize: 18, fontWeight: "900" },
     footer: {
-        position: "relative",
+        position: "absolute",
         left: 0,
         right: 0,
         bottom: 0,
