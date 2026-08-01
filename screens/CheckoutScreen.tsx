@@ -59,6 +59,12 @@ export default function CheckoutScreen({navigation}: Props) {
                             <Text style={styles.link}>Change</Text>
                         </Pressable>
                     </View>
+
+                    {address ? (
+                        <Text>
+                            {address.title} · {address.city}, {address.street} · {address.phone}{address.title }
+                        </Text>
+                    )}
                 </View>
             </ScrollView>
         </SafeAreaView>
