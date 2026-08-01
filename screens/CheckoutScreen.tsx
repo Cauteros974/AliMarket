@@ -148,5 +148,10 @@ const styles = StyleSheet.create({
     link: {
         color: colors.primary,
         fontWeight: "900"
+    },
+    summaryRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginTop: 10,
     }
 })
