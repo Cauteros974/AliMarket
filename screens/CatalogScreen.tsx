@@ -18,13 +18,6 @@ type CatalogScreenProps = {
 
 type FilterId = CategoryId | "all";
 
-const sortOptions: { label: string; value: SortOption }[] = [
-  { label: "Popular", value: "popular" },
-  { label: "Low price", value: "priceAsc" },
-  { label: "High price", value: "priceDesc" },
-  { label: "Rating", value: "rating" },
-];
-
 export default function CatalogScreen({ navigation }: CatalogScreenProps) {
 
     const searchQuery = useShopStore((state) => state.searchQuery);
