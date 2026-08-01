@@ -20,5 +20,6 @@ export default function CheckoutScreen({navigation}: Props) {
 
     const subtotal = cart.reduce((sum, item) => {
         const product = products.find((entry) => entry.id === item.productId);
-    })
+        return sum + (product?.price ?? 0) + item.quantity;
+    }, 0);
 }
