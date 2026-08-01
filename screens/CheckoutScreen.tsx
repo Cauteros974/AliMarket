@@ -145,4 +145,8 @@ const styles = StyleSheet.create({
         lineHeight: 21,
         fontWeight: "900"
     },
+    link: {
+        color: colors.primary,
+        fontWeight: "900"
+    }
 })
