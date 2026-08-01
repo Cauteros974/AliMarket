@@ -6,7 +6,7 @@ import { products } from "../data/products";
 import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
-import { formatPrice, pluralizeReviews } from "../utils/format";
+import { formatDate, formatPrice } from "../utils/format";
 
 type Props = NativeStackScreenProps<RootStackParamList, "ProductDetails">;
 
