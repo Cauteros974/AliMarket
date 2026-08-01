@@ -1,6 +1,6 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { useMemo, useState } from "react";
-import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useMemo } from "react";
+import { FlatList, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CategoryChip from "../components/CategoryChip";
 import ProductCard from "../components/ProductCard";
@@ -9,17 +9,19 @@ import { categories, products } from "../data/products";
 import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
-import { CategoryId } from "../types/product";  
-
 
 type CatalogScreenProps = {
     navigation: NativeStackNavigationProp<RootStackParamList>;
 };
 
-type FilterId = CategoryId | "all";
+const sortOptions = [
+    { value: "popular", label: "Popular" },
+    { value: "priceAsc", label: "Price ↑" },
+    { value: "priceDesc", label: "Price ↓" },
+    { value: "rating", label: "Top rated" },
+] as const;
 
 export default function CatalogScreen({ navigation }: CatalogScreenProps) {
-
     const searchQuery = useShopStore((state) => state.searchQuery);
     const selectedCategoryId = useShopStore((state) => state.selectedCategoryId);
     const sortOption = useShopStore((state) => state.sortOption);
@@ -33,7 +35,6 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
     const resetFilters = useShopStore((state) => state.resetFilters);
     const toggleFavorite = useShopStore((state) => state.toggleFavorite);
 
-
     const filteredProducts = useMemo(() => {
         const minPrice = Number(filters.minPrice) || 0;
         const maxPrice = Number(filters.maxPrice) || Number.MAX_SAFE_INTEGER;
@@ -42,15 +43,15 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
         return [...products]
             .filter((product) => {
                 const matchesCategory = !selectedCategoryId || product.categoryId === selectedCategoryId;
-                const matchesSearch =   
-                    product.title.toLowerCase().includes(query) || 
+                const matchesSearch =
+                    product.title.toLowerCase().includes(query) ||
                     product.description.toLowerCase().includes(query);
                 const matchesPrice = product.price >= minPrice && product.price <= maxPrice;
                 const matchesRating = product.rating >= filters.minRating;
-                const matchesDelivery = !filters.freeDeliveryOnly || product.delivery;
+                const matchesDelivery = !filters.freeDeliveryOnly || product.delivery.toLowerCase().includes("free");
                 const matchesDiscount = !filters.discountsOnly || Boolean(product.oldPrice);
-                
-                return(
+
+                return (
                     matchesCategory &&
                     matchesSearch &&
                     matchesPrice &&
@@ -64,23 +65,28 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 if (sortOption === "priceDesc") return b.price - a.price;
                 if (sortOption === "rating") return b.rating - a.rating;
                 return b.sold - a.sold;
-            })
+            });
     }, [filters, searchQuery, selectedCategoryId, sortOption]);
 
-    return(
+    return (
         <SafeAreaView style={styles.safeArea}>
             <FlatList
-                data = {filteredProducts}
+                data={filteredProducts}
                 keyExtractor={(item) => item.id}
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
-                columnWrapperStyle = {styles.content}
+                columnWrapperStyle={styles.gridRow}
+                contentContainerStyle={styles.content}
                 ListHeaderComponent={
                     <View>
                         <Text style={styles.title}>Catalog</Text>
                         <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
 
-                        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.row}>
+                        <ScrollView
+                            horizontal
+                            showsHorizontalScrollIndicator={false}
+                            contentContainerStyle={styles.row}
+                        >
                             <CategoryChip
                                 category={{ title: "All", icon: "apps-outline" }}
                                 selected={!selectedCategoryId}
@@ -99,14 +105,19 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
 
                         <Text style={styles.blockTitle}>Sort</Text>
 
-                        <View style = {styles.wrap}>
+                        <View style={styles.wrap}>
                             {sortOptions.map((option) => (
                                 <Pressable
                                     key={option.value}
                                     onPress={() => setSortOption(option.value)}
                                     style={[styles.filterButton, sortOption === option.value && styles.activeFilter]}
                                 >
-                                    <Text style={[styles.filterText, sortOption === option.value && styles.activeFilterText]}>
+                                    <Text
+                                        style={[
+                                            styles.filterText,
+                                            sortOption === option.value && styles.activeFilterText,
+                                        ]}
+                                    >
                                         {option.label}
                                     </Text>
                                 </Pressable>
@@ -116,7 +127,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         <Text style={styles.blockTitle}>Filters</Text>
 
                         <View style={styles.priceRow}>
-                            <TextInput 
+                            <TextInput
                                 value={filters.minPrice}
                                 onChangeText={(value) => updateFilters({ minPrice: value })}
                                 keyboardType="numeric"
@@ -125,7 +136,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 style={styles.input}
                             />
 
-                            <TextInput 
+                            <TextInput
                                 value={filters.maxPrice}
                                 onChangeText={(value) => updateFilters({ maxPrice: value })}
                                 keyboardType="numeric"
@@ -140,7 +151,12 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 onPress={() => updateFilters({ freeDeliveryOnly: !filters.freeDeliveryOnly })}
                                 style={[styles.filterButton, filters.freeDeliveryOnly && styles.activeFilter]}
                             >
-                                <Text style={[styles.filterText, filters.freeDeliveryOnly && styles.activeFilterText]}>
+                                <Text
+                                    style={[
+                                        styles.filterText,
+                                        filters.freeDeliveryOnly && styles.activeFilterText,
+                                    ]}
+                                >
                                     Free delivery
                                 </Text>
                             </Pressable>
@@ -149,18 +165,28 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 onPress={() => updateFilters({ discountsOnly: !filters.discountsOnly })}
                                 style={[styles.filterButton, filters.discountsOnly && styles.activeFilter]}
                             >
-                                <Text style={[styles.filterText, filters.discountsOnly && styles.activeFilterText]}>
+                                <Text
+                                    style={[
+                                        styles.filterText,
+                                        filters.discountsOnly && styles.activeFilterText,
+                                    ]}
+                                >
                                     Discounts
                                 </Text>
                             </Pressable>
 
                             <Pressable
                                 onPress={() =>
-                                    updateFilters({minRating: filters.minRating === 4.5 ? 0 : 4.5 })
+                                    updateFilters({ minRating: filters.minRating === 4.5 ? 0 : 4.5 })
                                 }
                                 style={[styles.filterButton, filters.minRating === 4.5 && styles.activeFilter]}
                             >
-                                <Text style={[styles.filterText, filters.minRating === 4.5 && styles.activeFilterText]}>
+                                <Text
+                                    style={[
+                                        styles.filterText,
+                                        filters.minRating === 4.5 && styles.activeFilterText,
+                                    ]}
+                                >
                                     4.5+ rating
                                 </Text>
                             </Pressable>
@@ -177,9 +203,8 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         <Text style={styles.emptyText}>Try another search or reset filters.</Text>
                     </View>
                 }
-
-                renderItem={({item}) => (
-                    <ProductCard 
+                renderItem={({ item }) => (
+                    <ProductCard
                         product={item}
                         isFavorite={favoriteIds.includes(item.id)}
                         onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
@@ -188,18 +213,18 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 )}
             />
         </SafeAreaView>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
-    safeArea:{
+    safeArea: {
         flex: 1,
         backgroundColor: colors.background,
     },
     content: {
-        flex: 1,
         paddingHorizontal: 18,
         paddingTop: 8,
+        paddingBottom: 28,
     },
     title: {
         color: colors.text,
@@ -207,12 +232,12 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         marginBottom: 16,
     },
-    row: { 
+    row: {
         paddingVertical: 20,
         paddingLeft: 6,
     },
     blockTitle: {
-        color: colors.text, 
+        color: colors.text,
         fontSize: 16,
         fontWeight: "900",
         marginBottom: 10,
@@ -225,7 +250,7 @@ const styles = StyleSheet.create({
         marginBottom: 14,
         paddingLeft: 5,
     },
-        filterButton: {
+    filterButton: {
         borderRadius: 999,
         borderWidth: 1,
         borderColor: colors.border,
@@ -233,24 +258,23 @@ const styles = StyleSheet.create({
         paddingHorizontal: 12,
         paddingVertical: 9,
     },
-    activeFilter: { 
-        backgroundColor: colors.primary, 
-        borderColor: colors.primary 
+    activeFilter: {
+        backgroundColor: colors.primary,
+        borderColor: colors.primary,
     },
     filterText: {
-        color: colors.text, 
-        fontSize: 12, 
-        fontWeight: "800" 
+        color: colors.text,
+        fontSize: 12,
+        fontWeight: "800",
     },
     activeFilterText: {
-        color: colors.white
+        color: colors.white,
     },
-    priceRow: { 
-        flexDirection: "column-reverse",
-        gap: 10, 
-        marginBottom: 10,
-        width: 320,
-        paddingLeft: 5
+    priceRow: {
+        flexDirection: "row",
+        gap: 10,
+        marginBottom: 14,
+        paddingLeft: 5,
     },
     input: {
         flex: 1,
@@ -270,15 +294,15 @@ const styles = StyleSheet.create({
     emptyState: {
         minHeight: 240,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
     },
     emptyTitle: {
         color: colors.text,
         fontSize: 20,
-        fontWeight: "900"
+        fontWeight: "900",
     },
     emptyText: {
         color: colors.muted,
-        marginTop: 8
-    }
+        marginTop: 8,
+    },
 });
