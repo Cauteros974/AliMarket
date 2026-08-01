@@ -89,7 +89,7 @@ export default function CheckoutScreen({navigation}: Props) {
 
                     <View style={styles.divider} />
 
-                    <View>
+                    <View style={styles.summaryRow}>
                         <Text style={styles.totalLabel}>Total</Text>
                         <Text style={styles.totalValue}>{formatPrice(total)}</Text>
                     </View>
