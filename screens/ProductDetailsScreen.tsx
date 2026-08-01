@@ -8,11 +8,10 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { formatPrice, pluralizeReviews } from "../utils/format";
 
-type ProductDetailsProps = NativeStackScreenProps<RootStackParamList, "ProductDetails">;
+type Props = NativeStackScreenProps<RootStackParamList, "ProductDetails">;
 
-export default function ProductDetailsScreen({ route }: ProductDetailsProps) {
+export default function ProductDetailsScreen({ route }: Props) {
   const product = products.find((item) => item.id === route.params.productId);
-
   const addToCart = useShopStore((state) => state.addToCart);
   const favoriteIds = useShopStore((state) => state.favoriteIds);
   const toggleFavorite = useShopStore((state) => state.toggleFavorite);
@@ -20,8 +19,8 @@ export default function ProductDetailsScreen({ route }: ProductDetailsProps) {
   if (!product) {
     return (
       <SafeAreaView style={styles.safeArea}>
-        <View style={styles.missing}>
-          <Text style={styles.missingTitle}>Product not found</Text>
+        <View style={styles.emptyState}>
+          <Text style={styles.title}>Product not found</Text>
         </View>
       </SafeAreaView>
     );
@@ -32,37 +31,39 @@ export default function ProductDetailsScreen({ route }: ProductDetailsProps) {
   return (
     <SafeAreaView style={styles.safeArea} edges={["bottom"]}>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
-        <View style={styles.imageWrap}>
-          <Image source={{ uri: product.image }} style={styles.image} />
-
-          <Pressable onPress={() => toggleFavorite(product.id)} style={styles.favoriteButton}>
-            <Ionicons
-              name={isFavorite ? "heart" : "heart-outline"}
-              size={22}
-              color={isFavorite ? colors.danger : colors.text}
-            />
-          </Pressable>
-        </View>
+        <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false}>
+          {product.gallery.map((image) => (
+            <View key={image} style={styles.imageWrap}>
+              <Image source={{ uri: image }} style={styles.image} />
+            </View>
+          ))}
+        </ScrollView>
 
         <View style={styles.info}>
           <View style={styles.priceRow}>
             <Text style={styles.price}>{formatPrice(product.price)}</Text>
+
             {product.oldPrice ? (
               <Text style={styles.oldPrice}>{formatPrice(product.oldPrice)}</Text>
             ) : null}
           </View>
 
-          <Text style={styles.title}>{product.title}</Text>
+          <Text style={styles.productTitle}>{product.title}</Text>
 
           <View style={styles.ratingRow}>
             <Ionicons name="star" size={16} color={colors.warning} />
             <Text style={styles.ratingText}>{product.rating}</Text>
-            <Text style={styles.mutedText}>{pluralizeReviews(product.reviews)}</Text>
-            <Text style={styles.mutedText}>{product.sold.toLocaleString("en-US")} sold</Text>
+            <Text style={styles.mutedText}>
+              {product.reviews.toLocaleString("en-US")} reviews
+            </Text>
+            <Text style={styles.mutedText}>
+              {product.sold.toLocaleString("en-US")} sold
+            </Text>
           </View>
 
           <View style={styles.deliveryBox}>
             <Ionicons name="airplane-outline" size={20} color={colors.primary} />
+
             <View>
               <Text style={styles.deliveryTitle}>Delivery</Text>
               <Text style={styles.deliveryText}>{product.delivery}</Text>
@@ -79,6 +80,20 @@ export default function ProductDetailsScreen({ route }: ProductDetailsProps) {
 
           <Text style={styles.sectionTitle}>Description</Text>
           <Text style={styles.description}>{product.description}</Text>
+
+          <Text style={styles.sectionTitle}>Reviews</Text>
+
+          {product.reviewList.map((review) => (
+            <View key={review.id} style={styles.reviewCard}>
+              <View style={styles.reviewHeader}>
+                <Text style={styles.reviewAuthor}>{review.author}</Text>
+                <Text style={styles.reviewDate}>{formatDate(review.date)}</Text>
+              </View>
+
+              <Text style={styles.reviewRating}>{"★".repeat(review.rating)}</Text>
+              <Text style={styles.reviewText}>{review.text}</Text>
+            </View>
+          ))}
         </View>
       </ScrollView>
 
@@ -100,54 +115,26 @@ export default function ProductDetailsScreen({ route }: ProductDetailsProps) {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: colors.background,
-  },
-  content: {
-    paddingBottom: 116,
-  },
+  safeArea: { flex: 1, backgroundColor: colors.background },
+  content: { paddingBottom: 116 },
   imageWrap: {
-    margin: 18,
+    width: 360,
     height: 330,
+    margin: 18,
     borderRadius: 28,
     backgroundColor: colors.surfaceSoft,
     overflow: "hidden",
   },
-  image: {
-    width: "100%",
-    height: "100%",
-  },
-  favoriteButton: {
-    position: "absolute",
-    right: 14,
-    top: 14,
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    backgroundColor: "rgba(255,255,255,0.94)",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  info: {
-    paddingHorizontal: 18,
-  },
-  priceRow: {
-    flexDirection: "row",
-    alignItems: "baseline",
-    gap: 10,
-  },
-  price: {
-    color: colors.primary,
-    fontSize: 30,
-    fontWeight: "900",
-  },
+  image: { width: "100%", height: "100%" },
+  info: { paddingHorizontal: 18 },
+  priceRow: { flexDirection: "row", alignItems: "baseline", gap: 10 },
+  price: { color: colors.primary, fontSize: 30, fontWeight: "900" },
   oldPrice: {
     color: colors.muted,
     fontSize: 16,
     textDecorationLine: "line-through",
   },
-  title: {
+  productTitle: {
     color: colors.text,
     fontSize: 24,
     lineHeight: 30,
@@ -160,14 +147,8 @@ const styles = StyleSheet.create({
     gap: 6,
     marginTop: 12,
   },
-  ratingText: {
-    color: colors.text,
-    fontWeight: "900",
-  },
-  mutedText: {
-    color: colors.muted,
-    fontSize: 13,
-  },
+  ratingText: { color: colors.text, fontWeight: "900" },
+  mutedText: { color: colors.muted, fontSize: 13 },
   deliveryBox: {
     marginTop: 22,
     borderRadius: 18,
@@ -179,14 +160,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 12,
   },
-  deliveryTitle: {
-    color: colors.text,
-    fontWeight: "900",
-  },
-  deliveryText: {
-    color: colors.muted,
-    marginTop: 3,
-  },
+  deliveryTitle: { color: colors.text, fontWeight: "900" },
+  deliveryText: { color: colors.muted, marginTop: 3 },
   sectionTitle: {
     color: colors.text,
     fontSize: 18,
@@ -194,10 +169,7 @@ const styles = StyleSheet.create({
     marginTop: 24,
     marginBottom: 10,
   },
-  colorRow: {
-    flexDirection: "row",
-    gap: 10,
-  },
+  colorRow: { flexDirection: "row", gap: 10 },
   colorDot: {
     width: 30,
     height: 30,
@@ -205,11 +177,24 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: colors.white,
   },
-  description: {
-    color: colors.muted,
-    fontSize: 15,
-    lineHeight: 23,
+  description: { color: colors.muted, fontSize: 15, lineHeight: 23 },
+  reviewCard: {
+    backgroundColor: colors.surface,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: 14,
+    marginBottom: 10,
   },
+  reviewHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 6,
+  },
+  reviewAuthor: { color: colors.text, fontWeight: "900" },
+  reviewDate: { color: colors.muted, fontSize: 12 },
+  reviewRating: { color: colors.warning, fontWeight: "900", marginBottom: 6 },
+  reviewText: { color: colors.muted, lineHeight: 20 },
   footer: {
     position: "absolute",
     left: 0,
@@ -243,14 +228,6 @@ const styles = StyleSheet.create({
     fontWeight: "900",
     fontSize: 16,
   },
-  missing: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  missingTitle: {
-    color: colors.text,
-    fontSize: 20,
-    fontWeight: "900",
-  },
+  emptyState: { flex: 1, alignItems: "center", justifyContent: "center" },
+  title: { color: colors.text, fontSize: 22, fontWeight: "900" },
 });
