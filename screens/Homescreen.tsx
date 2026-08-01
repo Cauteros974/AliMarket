@@ -1,4 +1,3 @@
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { LinearGradient } from "expo-linear-gradient";
 import { useMemo } from "react";
 import { FlatList, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
@@ -8,24 +7,29 @@ import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
 import SectionHeader from "../components/SectionHeader";
 import { categories, products } from "../data/products";
-import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
-type HomeScreenProps = {
-  navigation: NativeStackNavigationProp<RootStackParamList>;
+type Props = {
+  navigation: any;
 };
 
-export default function HomeScreen({ navigation }: HomeScreenProps) {
+export default function HomeScreen({ navigation }: Props) {
   const searchQuery = useShopStore((state) => state.searchQuery);
   const favoriteIds = useShopStore((state) => state.favoriteIds);
   const setSearchQuery = useShopStore((state) => state.setSearchQuery);
+  const setSelectedCategoryId = useShopStore((state) => state.setSelectedCategoryId);
   const toggleFavorite = useShopStore((state) => state.toggleFavorite);
 
   const flashDeals = useMemo(
-    () => products.filter((product) => product.oldPrice).slice(0, 4),
+    () => products.filter((item) => item.oldPrice).slice(0, 4),
     []
   );
+
+  function openCategory(categoryId: string) {
+    setSelectedCategoryId(categoryId);
+    navigation.navigate("CategoryDetails", { categoryId });
+  }
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -36,9 +40,9 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
             <Text style={styles.title}>Find anything you need</Text>
           </View>
 
-          <View style={styles.coinsBadge}>
-            <Text style={styles.coinsText}>EU</Text>
-          </View>
+          <Pressable onPress={() => navigation.navigate("Notifications")} style={styles.iconButton}>
+            <Text style={styles.iconText}>!</Text>
+          </Pressable>
         </View>
 
         <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
@@ -49,11 +53,9 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
           end={{ x: 1, y: 1 }}
           style={styles.banner}
         >
-          <View style={styles.bannerTextBlock}>
-            <Text style={styles.bannerLabel}>Summer sale</Text>
-            <Text style={styles.bannerTitle}>Up to 60% off gadgets and home goods</Text>
-            <Text style={styles.bannerSubtitle}>Free delivery on selected items</Text>
-          </View>
+          <Text style={styles.bannerLabel}>Summer sale</Text>
+          <Text style={styles.bannerTitle}>Up to 60% off gadgets and home goods</Text>
+          <Text style={styles.bannerSubtitle}>Use coupon WELCOME10 on checkout</Text>
 
           <Pressable
             onPress={() => navigation.navigate("ProductDetails", { productId: "p1" })}
@@ -63,14 +65,18 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
           </Pressable>
         </LinearGradient>
 
-        <SectionHeader title="Categories" action="See all" />
+        <SectionHeader
+          title="Categories"
+          action="Open catalog"
+          onActionPress={() => navigation.navigate("Catalog")}
+        />
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {categories.map((category) => (
             <CategoryChip
               key={category.id}
               category={category}
-              onPress={() => setSearchQuery(category.title)}
+              onPress={() => openCategory(category.id)}
             />
           ))}
         </ScrollView>
@@ -99,14 +105,8 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: colors.background,
-  },
-  content: {
-    paddingHorizontal: 18,
-    paddingBottom: 28,
-  },
+  safeArea: { flex: 1, backgroundColor: colors.background },
+  content: { paddingHorizontal: 18, paddingBottom: 28 },
   header: {
     marginTop: 8,
     marginBottom: 18,
@@ -114,41 +114,20 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  eyebrow: {
-    color: colors.primary,
-    fontSize: 14,
-    fontWeight: "900",
-  },
-  title: {
-    color: colors.text,
-    fontSize: 28,
-    fontWeight: "900",
-    marginTop: 4,
-  },
-  coinsBadge: {
+  eyebrow: { color: colors.primary, fontSize: 14, fontWeight: "900" },
+  title: { color: colors.text, fontSize: 28, fontWeight: "900", marginTop: 4 },
+  iconButton: {
     width: 44,
     height: 44,
     borderRadius: 22,
     backgroundColor: colors.surface,
-    alignItems: "center",
-    justifyContent: "center",
     borderWidth: 1,
     borderColor: colors.border,
+    alignItems: "center",
+    justifyContent: "center",
   },
-  coinsText: {
-    color: colors.primary,
-    fontWeight: "900",
-  },
-  banner: {
-    minHeight: 158,
-    borderRadius: 24,
-    padding: 18,
-    marginTop: 18,
-    justifyContent: "space-between",
-  },
-  bannerTextBlock: {
-    maxWidth: "82%",
-  },
+  iconText: { color: colors.primary, fontSize: 20, fontWeight: "900" },
+  banner: { minHeight: 170, borderRadius: 24, padding: 18, marginTop: 18 },
   bannerLabel: {
     color: "rgba(255,255,255,0.8)",
     fontSize: 13,
@@ -161,6 +140,7 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     fontWeight: "900",
     marginTop: 8,
+    maxWidth: "86%",
   },
   bannerSubtitle: {
     color: "rgba(255,255,255,0.86)",
@@ -173,16 +153,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 10,
     borderRadius: 999,
+    marginTop: 16,
   },
-  bannerButtonText: {
-    color: colors.primary,
-    fontWeight: "900",
-  },
-  grid: {
-    gap: 12,
-  },
-  gridRow: {
-    gap: 12,
-    marginBottom: 12,
-  },
+  bannerButtonText: { color: colors.primary, fontWeight: "900" },
+  grid: { gap: 12 },
+  gridRow: { gap: 12, marginBottom: 12 },
 });
