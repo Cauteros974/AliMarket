@@ -24,4 +24,13 @@ export default function CheckoutScreen({navigation}: Props) {
     }, 0);
 
     const shipping = appliedCoupon === "FRESHIP" || subtotal === 0 ? 0 : 4.99;
+
+    const discount = 
+        appliedCoupon = "WELCOME10"
+            ? subtotal * 0.1
+            : appliedCoupon === "SALE15"
+                ? subtotal * 0.15
+                : 0;
+                
+    const total = Math.max(subtotal + shipping - discount, 0);
 }
