@@ -18,4 +18,7 @@ export default function CheckoutScreen({navigation}: Props) {
 
     const address = addresses.find((item) => item.id === selectedAddressId);
 
+    const subtotal = cart.reduce((sum, item) => {
+        const product = products.find((entry) => entry.id === item.productId);
+    })
 }
