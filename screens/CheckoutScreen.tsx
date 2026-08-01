@@ -139,5 +139,10 @@ const styles = StyleSheet.create({
         fontSize: 17,
         fontWeight: "900",
         marginBottom: 0,
-    }
+    },
+    muted: {
+        color: colors.muted,
+        lineHeight: 21,
+        fontWeight: "900"
+    },
 })
