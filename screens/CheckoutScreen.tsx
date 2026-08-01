@@ -86,6 +86,13 @@ export default function CheckoutScreen({navigation}: Props) {
                         <Text style={styles.muted}>Discount</Text>
                         <Text style={styles.value}>-{formatPrice(discount)}</Text>
                     </View>
+
+                    <View style={styles.divider} />
+
+                    <View>
+                        <Text style={styles.totalLabel}>Total</Text>
+                        <Text style={styles.totalValue}>{formatPrice(total)}</Text>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
