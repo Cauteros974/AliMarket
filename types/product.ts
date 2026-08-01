@@ -12,6 +12,7 @@ export type Category = {
     id: CategoryId;
     title: string;
     icon: string;
+    subcategories: string[];
 };
 
 export type Product = {

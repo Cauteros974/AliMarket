@@ -1,12 +1,12 @@
 import { Category, Product } from "../types/product";
 
 export const categories: Category[] = [
-    { id: "electronics", title: "Electronics", icon: "phone-portrait-outline" },
-    { id: "fashion", title: "Fashion", icon: "shirt-outline" },
-    { id: "home", title: "Home", icon: "home-outline" },
-    { id: "beauty", title: "Beauty", icon: "sparkles-outline" },
-    { id: "sports", title: "Sports", icon: "barbell-outline" },
-    { id: "toys", title: "Toys", icon: "game-controller-outline" },
+    { id: "electronics", title: "Electronics", icon: "phone-portrait-outline", subcategories: ["Phones", "Laptops", "Audio"] },
+    { id: "fashion", title: "Fashion", icon: "shirt-outline", subcategories: ["Men", "Women", "Kids"] },
+    { id: "home", title: "Home", icon: "home-outline", subcategories: ["Furniture", "Lighting", "Decor"] },
+    { id: "beauty", title: "Beauty", icon: "sparkles-outline", subcategories: ["Skincare", "Makeup", "Haircare"] },
+    { id: "sports", title: "Sports", icon: "barbell-outline", subcategories: ["Fitness", "Outdoor", "Team sports"] },
+    { id: "toys", title: "Toys", icon: "game-controller-outline", subcategories: ["Educational", "Action figures", "Puzzles"] },
 ];
 
 export const products: Product[] = [
