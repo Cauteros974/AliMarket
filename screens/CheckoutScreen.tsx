@@ -22,4 +22,6 @@ export default function CheckoutScreen({navigation}: Props) {
         const product = products.find((entry) => entry.id === item.productId);
         return sum + (product?.price ?? 0) + item.quantity;
     }, 0);
+
+    const shipping = appliedCoupon === "FRESHIP" || subtotal === 0 ? 0 : 4.99;
 }
