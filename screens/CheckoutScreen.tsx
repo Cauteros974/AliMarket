@@ -14,4 +14,8 @@ export default function CheckoutScreen({navigation}: Props) {
     const addresses = useShopStore((state) => state.addresses);
     const selectedAddressId = useShopStore((state) => state.selectedAddressId);
     const appliedCoupon = useShopStore((state) => state.appliedCoupon);
+    const placeOrder = useShopStore((state) => state.placeOrder);
+
+    const address = addresses.find((item) => item.id === selectedAddressId);
+
 }
