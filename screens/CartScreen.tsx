@@ -82,7 +82,7 @@ export default function CartScreen({ navigation }: Props) {
                 }
                 style={styles.cartItem}
               >
-                <Image source={{ uri: item.product.image }} style={styles.image} />
+                <Image source={item.product.image} style={styles.image} />
 
                 <View style={styles.itemInfo}>
                   <Text numberOfLines={2} style={styles.itemTitle}>
