@@ -39,6 +39,10 @@ export default function CheckoutScreen({navigation}: Props) {
 
         if(!order) {
             Alert.alert("Checkout blocked", "Add products and select a delivery address");
+            return;
         }
+
+        Alert.alert("Order placed", `${order.id} was created successfully.`);
+        navigation.navigate("Orders");
     }
 }
