@@ -54,6 +54,10 @@ export default function CheckoutScreen({navigation}: Props) {
                 <View style={styles.card}>
                     <View style={styles.rowBetween}>
                         <Text style={styles.cardTitle}>Delivery address</Text>
+
+                        <Pressable onPress={() => navigation.navigate("Addresses")}>
+                            <Text style={styles.link}>Change</Text>
+                        </Pressable>
                     </View>
                 </View>
             </ScrollView>
