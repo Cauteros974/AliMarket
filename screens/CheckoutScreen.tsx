@@ -81,6 +81,11 @@ export default function CheckoutScreen({navigation}: Props) {
                         <Text style={styles.muted}>Shipping</Text>
                         <Text style={styles.value}>{formatPrice(shipping)}</Text>
                     </View>
+
+                    <View style={styles.summaryRow}>
+                        <Text style={styles.muted}>Discount</Text>
+                        <Text style={styles.value}>-{formatPrice(discount)}</Text>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
