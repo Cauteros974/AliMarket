@@ -97,7 +97,7 @@ export default function CheckoutScreen({navigation}: Props) {
             </ScrollView>
 
             <View style={styles.footer}>
-                <Pressable>
+                <Pressable onPress={handlePlaceOrder} style={styles.primaryButton}>
                     <Text style={styles.primaryButtonText}>Place order</Text>
                 </Pressable>
             </View>
