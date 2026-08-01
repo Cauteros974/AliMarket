@@ -184,6 +184,7 @@ const styles = StyleSheet.create({
         borderTopColor: colors.border,
     },
     primaryButton: {
-
+        height: 54,
+        borderRadius: 18,
     }
 })
