@@ -33,4 +33,12 @@ export default function CheckoutScreen({navigation}: Props) {
                 : 0;
                 
     const total = Math.max(subtotal + shipping - discount, 0);
+
+    function handlePlaceOrder() {
+        const order = placeOrder(total);
+
+        if(!order) {
+            Alert.alert("Checkout blocked", "Add products and select a delivery address");
+        }
+    }
 }
