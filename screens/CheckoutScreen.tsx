@@ -61,7 +61,7 @@ export default function CheckoutScreen({navigation}: Props) {
                     </View>
 
                     {address ? (
-                        <Text>
+                        <Text style={styles.muted}>
                             {address.title} · {address.city}, {address.street} · {address.phone}{address.title }
                         </Text>
                     )}
