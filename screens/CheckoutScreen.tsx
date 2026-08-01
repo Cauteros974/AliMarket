@@ -64,7 +64,13 @@ export default function CheckoutScreen({navigation}: Props) {
                         <Text style={styles.muted}>
                             {address.title} · {address.city}, {address.street} · {address.phone}{address.title }
                         </Text>
+                    ) : (
+                        <Text style={styles.muted}>No address selected.</Text>
                     )}
+                </View>
+
+                <View style={styles.card}>
+                    <Text style={styles.cardTitle}>Order summary</Text>
                 </View>
             </ScrollView>
         </SafeAreaView>
