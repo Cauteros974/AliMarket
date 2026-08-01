@@ -188,6 +188,10 @@ const styles = StyleSheet.create({
         borderRadius: 18,
         backgroundColor: colors.primary,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+    },
+    primaryButtonText: {
+        color: colors.white,
+        fontSize: 16,
     }
 })
