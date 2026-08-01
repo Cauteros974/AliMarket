@@ -156,6 +156,11 @@ const styles = StyleSheet.create({
     },
     value: {
         color: colors.text,
-        fontWeight: "900",
+        fontWeight: "900"
+    },
+    divider: {
+        height: 1,
+        backgroundColor: colors.border,
+
     }
 })
