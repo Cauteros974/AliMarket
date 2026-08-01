@@ -76,6 +76,11 @@ export default function CheckoutScreen({navigation}: Props) {
                         <Text style={styles.muted}>Items</Text>
                         <Text style={styles.value}>{formatPrice(subtotal)}</Text>
                     </View>
+
+                    <View style={styles.summaryRow}>
+                        <Text style={styles.muted}>Shipping</Text>
+                        <Text style={styles.value}>{formatPrice(shipping)}</Text>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
