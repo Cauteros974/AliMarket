@@ -163,7 +163,16 @@ const styles = StyleSheet.create({
         backgroundColor: colors.border,
         marginVertical: 12
     },
-    totalLabel: { color: colors.text, fontSize: 18, fontWeight: "900" },
+    totalLabel: { 
+        color: colors.text, 
+        fontSize: 18, 
+        fontWeight: "900" 
+    },
+    totalValue: { 
+        color: colors.primary, 
+        fontSize: 20, 
+        fontWeight: "900" 
+    },
     footer: {
         position: "absolute",
         left: 0,
@@ -173,5 +182,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.white,
         borderTopWidth: 1,
         borderTopColor: colors.border,
+    },
+    primaryButton: {
+
     }
 })
