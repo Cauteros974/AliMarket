@@ -50,6 +50,12 @@ export default function CheckoutScreen({navigation}: Props) {
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content}>
                 <Text style={styles.title}>Checkout</Text>
+
+                <View style={styles.card}>
+                    <View style={styles.rowBetween}>
+                        <Text style={styles.cardTitle}>Delivery address</Text>
+                    </View>
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
