@@ -45,4 +45,12 @@ export default function CheckoutScreen({navigation}: Props) {
         Alert.alert("Order placed", `${order.id} was created successfully.`);
         navigation.navigate("Orders");
     }
+
+    return(
+        <SafeAreaView>
+            <ScrollView>
+                <Text>Checkout</Text>
+            </ScrollView>
+        </SafeAreaView>
+    )
 }
