@@ -1,5 +1,5 @@
 export type RootStackParamList = {
-    MainTabs: undefined;
+  MainTabs: undefined;
 
   CategoryDetails: {
     categoryId: string;
