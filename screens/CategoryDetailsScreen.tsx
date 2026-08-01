@@ -10,64 +10,45 @@ import { colors } from "../theme/colors";
 type Props = NativeStackScreenProps<RootStackParamList, "CategoryDetails">;
 
 export default function CategoryDetailsScreen({ navigation, route }: Props) {
-    const category = categories.find((item) => item.id === route.params.categoryId);
-    const favoriteIds = useShopStore((state) => state.favoriteIds);
-    const toggleFavorite = useShopStore((state) => state.toggleFavorite);
+  const category = categories.find((item) => item.id === route.params.categoryId);
+  const favoriteIds = useShopStore((state) => state.favoriteIds);
+  const toggleFavorite = useShopStore((state) => state.toggleFavorite);
 
-    const categoryProducts = products.filter(
-        (item) => item.categoryId === route.params.categoryId
-    );
+  const categoryProducts = products.filter(
+    (item) => item.categoryId === route.params.categoryId
+  );
 
-
-    return(
-        <SafeAreaView>
-            <FlatList 
-                data={categoryProducts}
-                keyExtractor={(item) => item.id}
-                numColumns={2}
-                columnWrapperStyle={styles.gridRow}
-                contentContainerStyle={styles.content}
-                ListHeaderComponent={
-                    <View>
-                        <Text style={styles.title}>{category?.title ?? "Category"}</Text>
-                        <Text style={styles.subtitle}>{category?.subcategories.join(" · ")}</Text>
-                    </View>
-                }
-
-                renderItem={({item}) => (
-                    <ProductCard 
-                        product={item}
-                        isFavorite={favoriteIds.includes(item.id)}
-                        onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
-                        onToggleFavorite={() => toggleFavorite(item.id)}
-                    />
-                )}
-            />
-        </SafeAreaView>
-    );
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <FlatList
+        data={categoryProducts}
+        keyExtractor={(item) => item.id}
+        numColumns={2}
+        columnWrapperStyle={styles.gridRow}
+        contentContainerStyle={styles.content}
+        ListHeaderComponent={
+          <View>
+            <Text style={styles.title}>{category?.title ?? "Category"}</Text>
+            <Text style={styles.subtitle}>{category?.subcategories.join(" · ")}</Text>
+          </View>
+        }
+        renderItem={({ item }) => (
+          <ProductCard
+            product={item}
+            isFavorite={favoriteIds.includes(item.id)}
+            onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
+            onToggleFavorite={() => toggleFavorite(item.id)}
+          />
+        )}
+      />
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
-    safeArea: {
-        flex: 1,
-        backgroundColor: colors.background
-    },
-    content: {
-        paddingHorizontal: 18,
-        paddingTop: 8,
-        paddingBottom: 20,
-    },
-    title: {
-        color: colors.text, 
-        fontSize: 28,
-    },
-    gridRow: {
-        gap: 12,
-        marginBottom: 12
-    },
-    subtitle: {
-        color: colors.muted,
-        fontWeight: "700",
-        marginBottom: 16
-    },
-})
+  safeArea: { flex: 1, backgroundColor: colors.background },
+  content: { paddingHorizontal: 18, paddingTop: 8, paddingBottom: 28 },
+  title: { color: colors.text, fontSize: 28, fontWeight: "900", marginBottom: 8 },
+  subtitle: { color: colors.muted, fontWeight: "700", marginBottom: 16 },
+  gridRow: { gap: 12, marginBottom: 12 },
+});
