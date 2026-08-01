@@ -95,6 +95,12 @@ export default function CheckoutScreen({navigation}: Props) {
                     </View>
                 </View>
             </ScrollView>
+
+            <View>
+                <Pressable>
+                    <Text style={styles.primaryButtonText}>Place order</Text>
+                </Pressable>
+            </View>
         </SafeAreaView>
     )
 }
