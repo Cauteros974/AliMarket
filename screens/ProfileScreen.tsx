@@ -45,6 +45,13 @@ export default function ProfileScreen({ navigation }: Props) {
                         <Text style={styles.smallButtonText}>{user ? "Logout" : "Login"}</Text>
                     </Pressable>
                 </View>
+
+                <View>
+                    <View>
+                        <Text>{cartCount}</Text>
+                        <Text>Cart</Text>
+                    </View>
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
