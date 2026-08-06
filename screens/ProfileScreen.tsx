@@ -51,7 +51,7 @@ export default function ProfileScreen({ navigation }: Props) {
                         <Text style={styles.statValue}>{cartCount}</Text>
                         <Text style={styles.statLabel}>Cart</Text>
                     </View>
-                    
+
                     <View style={styles.statCard}>
                         <Text style={styles.statValue}>{favoriteCount}</Text>
                         <Text style={styles.statLabel}>Saved</Text>
@@ -62,6 +62,14 @@ export default function ProfileScreen({ navigation }: Props) {
                         <Text style={styles.statLabel}>Orders</Text>
                     </View>
                 </View>
+
+                <Text style={styles.sectionTitle}>Account</Text>
+
+                <MenuItem
+                    label="Order history"
+                    icon="receipt-outline"
+                    onPress={() => navigation.navigate("Orders")}
+                />
             </ScrollView>
         </SafeAreaView>
     );
