@@ -141,5 +141,13 @@ const styles = StyleSheet.create({
         backgroundColor: colors.surfaceSoft,
         alignItems: "center",
         justifyContent: "center",
+    },
+    profileInfo: {
+        flex: 1
+    },
+    name: {
+        color: colors.text,
+        fontSize: 20,
+        fontWeight: "900"
     }
 })
