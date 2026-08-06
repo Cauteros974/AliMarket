@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
     },
     menuLeft: {
-        flexDirection: "column",
+        flexDirection: "row",
         alignItems: "center",
         gap: 10,
     }
