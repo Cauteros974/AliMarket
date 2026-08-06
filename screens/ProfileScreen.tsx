@@ -98,7 +98,7 @@ function MenuItem({
 }) {
     return(
         <Pressable onPress={onPress} style={styles.menuItem}>
-            <View>
+            <View style={styles.menuLeft}>
                 <Ionicons name={icon} size={20} color={colors.primary} />
                 <Text style={styles.menuText}>{label}</Text>
             </View>
