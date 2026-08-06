@@ -52,6 +52,11 @@ export default function ProfileScreen({ navigation }: Props) {
                         <Text style={styles.statLabel}>Cart</Text>
                     </View>
                 </View>
+
+                <View style={styles.statCard}>
+                    <Text style={styles.statValue}>{favoriteCount}</Text>
+                    <Text style={styles.statLabel}>Saved</Text>
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
