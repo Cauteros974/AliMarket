@@ -9,6 +9,9 @@ type Props = {
 };
 
 export default function ProfileScreen({ navigation }: Props) {
+    const user = useShopStore((state) => state.user);
+    const logout = useShopStore((state) => state.logout);
+
     const cartCount = useShopStore((state) => 
         state.cart.reduce((sum,item) => sum + item.quantity, 0)
     );
