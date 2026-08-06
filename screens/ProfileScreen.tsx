@@ -98,6 +98,10 @@ function MenuItem({
 }) {
     return(
         <Pressable>
+            <View>
+                <Ionicons name={icon} size={20} color={colors.primary} />
+            </View>
+
             <Ionicons name="chevron-forward" size={18} color={colors.muted} />
         </Pressable>
     )
