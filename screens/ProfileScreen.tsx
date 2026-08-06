@@ -46,10 +46,10 @@ export default function ProfileScreen({ navigation }: Props) {
                     </Pressable>
                 </View>
 
-                <View>
-                    <View>
-                        <Text>{cartCount}</Text>
-                        <Text>Cart</Text>
+                <View style={styles.statsRow}>
+                    <View style={styles.statCard}>
+                        <Text style={styles.statValue}>{cartCount}</Text>
+                        <Text style={styles.statLabel}>Cart</Text>
                     </View>
                 </View>
             </ScrollView>
