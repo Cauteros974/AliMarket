@@ -37,6 +37,11 @@ export default function ProfileScreen({ navigation }: Props) {
                         <Text style={styles.name}>{user?.name ?? "Guest customer"}</Text>
                         <Text style={styles.email}>{user?.email ?? "Login to save your orders"}</Text>
                     </View>
+
+                    <Pressable 
+                        onPress={user ? logout : () => navigation.navigate("Auth")}
+                        style={styles.smallButton}
+                    />
                 </View>
             </ScrollView>
         </SafeAreaView>
