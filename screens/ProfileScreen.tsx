@@ -26,7 +26,7 @@ export default function ProfileScreen({ navigation }: Props) {
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-                <Text style={style.title}>Profile</Text>
+                <Text style={styles.title}>Profile</Text>
 
                 <View style={styles.profileCard}>
                     <View style={styles.avatar}>
@@ -211,5 +211,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         gap: 10,
+    },
+    menuText: {
+        color: colors.text,
+        fontWeight: "800",
     }
 })
