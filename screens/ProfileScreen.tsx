@@ -70,16 +70,31 @@ export default function ProfileScreen({ navigation }: Props) {
                     icon="receipt-outline"
                     onPress={() => navigation.navigate("Orders")}
                 />
-                
+
                 <MenuItem
                     label="Order history"
                     icon="receipt-outline"
                     onPress={() => navigation.navigate("Orders")}
                 />
+
+                <MenuItem
+                    label={`Notifications ${unreadCount ? `(${unreadCount})` : ""}`}
+                    icon="notifications-outline"
+                    onPress={() => navigation.navigate("Notifications")}
+                />
             </ScrollView>
         </SafeAreaView>
     );
 }
+
+function MenuItem({
+    label,
+    icon,
+    onPress,
+}: {
+    label: string;
+    icon: keyof typeof Ionicons.glyphMap;
+})
 
 const styles = StyleSheet.create({
     safeArea: {
