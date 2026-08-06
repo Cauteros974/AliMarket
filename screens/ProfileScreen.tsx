@@ -97,7 +97,7 @@ function MenuItem({
     onPress: () => void;
 }) {
     return(
-        <Pressable>
+        <Pressable onPress={onPress} style={styles.menuItem}>
             <View>
                 <Ionicons name={icon} size={20} color={colors.primary} />
                 <Text style={styles.menuText}>{label}</Text>
