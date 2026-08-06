@@ -133,5 +133,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         gap: 14,
+    },
+    avatar: {
+        width: 64,
+        height: 64
     }
 })
