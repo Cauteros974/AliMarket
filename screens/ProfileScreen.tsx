@@ -187,5 +187,10 @@ const styles = StyleSheet.create({
         color: colors.muted,
         marginTop: 4,
         fontWeight: "700"
+    },
+    sectionTitle: {
+        color: colors.text,
+        fontSize: 20,
+        fontWeight: "900"
     }
 })
