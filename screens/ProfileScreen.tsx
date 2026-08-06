@@ -26,52 +26,13 @@ export default function ProfileScreen({ navigation }: Props) {
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-                <Text style={styles.title}>Profile</Text>
+                <Text style={style.title}>Profile</Text>
 
-                <View style={styles.profileCard}>
-                    <View style={styles.avatar}>
+                <View>
+                    <View>
                         <Ionicons name="person" size={34} color={colors.primary} />
                     </View>
-
-                    <View>
-                        <Text style={styles.name}>User</Text>
-                        <Text style={styles.email}>user@example.com</Text>
-                    </View>
                 </View>
-
-                <View style={styles.statsRow}>
-                    <View style={styles.statCard}>
-                        <Text style={styles.statValue}>{cartCount}</Text>
-                        <Text style={styles.statLabel}>Cart items</Text>
-                    </View>
-
-                    <View style={styles.statCard}>
-                        <Text style={styles.statValue}>{favoriteCount}</Text>
-                        <Text style={styles.statLabel}>Saved</Text>
-                    </View>
-                </View>
-
-                <Text style={styles.sectionTitle}>Recent orders</Text>
-
-                {orders.map((order) => (
-                    <View key={order.id} style={styles.orderCard}>
-                        <View>
-                            <Text style={styles.orderId}>{order.id}</Text>
-                            <Text style={styles.orderStatus}>{order.status}</Text>
-                        </View>
-
-                        <Text style={styles.orderAmount}>{order.amount}</Text>
-                    </View>
-                ))}
-
-                <Text style={styles.sectionTitle}>Settings</Text>
-
-                {["Shipping addresses", "Payment methods", "Support center"].map((item) => (
-                    <View key={item} style={styles.menuItem}>
-                        <Text style={styles.menuText}>{item}</Text>
-                        <Ionicons name="chevron-forward" size={18} color={colors.muted} />
-                    </View>
-                ))}
             </ScrollView>
         </SafeAreaView>
     );
