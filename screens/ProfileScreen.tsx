@@ -5,7 +5,7 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
 type Props = {
-    navigation = any;
+    navigation: any;
 };
 
 export default function ProfileScreen({ navigation }: Props) {
