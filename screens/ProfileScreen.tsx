@@ -169,5 +169,10 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 10,
         marginTop: 12,
-    }
+    },
+    statCard: {
+        flex: 1,
+        backgroundColor: colors.surface,
+        borderRadius: 18,
+    },
 })
