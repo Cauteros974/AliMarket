@@ -153,5 +153,11 @@ const styles = StyleSheet.create({
     email: {
         color: colors.muted,
         marginTop: 4
-    }
+    },
+        smallButton: {
+        backgroundColor: colors.primary,
+        paddingHorizontal: 12,
+        paddingVertical: 9,
+        borderRadius: 999,
+    },
 })
