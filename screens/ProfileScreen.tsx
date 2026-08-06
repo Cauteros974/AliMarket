@@ -124,4 +124,9 @@ const styles = StyleSheet.create({
         fontWeight: "900", 
         marginBottom: 16 
     },
+    profileCard: {
+        backgroundColor: colors.surface,
+        borderRadius: 22,
+        borderWidth: 1,
+    }
 })
