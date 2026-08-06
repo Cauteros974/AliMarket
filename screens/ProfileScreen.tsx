@@ -149,5 +149,9 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontSize: 20,
         fontWeight: "900"
+    },
+    email: {
+        color: colors.muted,
+        marginTop: 4
     }
 })
