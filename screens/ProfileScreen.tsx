@@ -70,6 +70,12 @@ export default function ProfileScreen({ navigation }: Props) {
                     icon="receipt-outline"
                     onPress={() => navigation.navigate("Orders")}
                 />
+                
+                <MenuItem
+                    label="Order history"
+                    icon="receipt-outline"
+                    onPress={() => navigation.navigate("Orders")}
+                />
             </ScrollView>
         </SafeAreaView>
     );
