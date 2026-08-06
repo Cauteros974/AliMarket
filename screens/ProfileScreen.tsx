@@ -94,6 +94,7 @@ function MenuItem({
 }: {
     label: string;
     icon: keyof typeof Ionicons.glyphMap;
+    onPress: () => void;
 })
 
 const styles = StyleSheet.create({
