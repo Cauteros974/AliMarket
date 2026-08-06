@@ -164,5 +164,10 @@ const styles = StyleSheet.create({
         color: colors.white,
         fontWeight: "900",
         fontSize: 12,
+    },
+    statsRow: {
+        flexDirection: "row",
+        gap: 10,
+        marginTop: 12,
     }
 })
