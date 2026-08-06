@@ -17,6 +17,11 @@ export default function ProfileScreen({ navigation }: Props) {
     );
 
     const favoriteCount = useShopStore((state) => state.favoriteIds.length);
+    const orderCount = useShopStore((state) => state.orders.length);
+
+    const unreadCount = useShopStore(
+        (state) => state.notifications.filter((item) => !item.read).length
+    );
 
     return(
         <SafeAreaView style={styles.safeArea}>
