@@ -7,11 +7,11 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
 
-type FavoritesScreenProps = {
+type Props = {
   navigation: any;
 };
 
-export default function FavoritesScreen({navigation}: FavoritesScreenProps) {
+export default function FavoritesScreen({navigation}: Props) {
     const favoriteIds = useShopStore((state) => state.favoriteIds);
     const toggleFavorite = useShopStore((state) => state.toggleFavorite);
 
