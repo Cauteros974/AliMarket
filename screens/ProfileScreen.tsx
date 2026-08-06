@@ -207,4 +207,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
     },
+    menuLeft: {
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 10,
+    }
 })
