@@ -1,16 +1,14 @@
 import { Ionicons } from "@expo/vector-icons";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
-const orders = [
-  { id: "ORD-2041", status: "In transit", amount: "€68.48" },
-  { id: "ORD-1988", status: "Delivered", amount: "€24.90" },
-  { id: "ORD-1932", status: "Delivered", amount: "€49.99" },
-];
+type Props = {
+    navigation = any;
+};
 
-export default function ProfileScreen() {
+export default function ProfileScreen({ navigation }: Props) {
     const cartCount = useShopStore((state) => 
         state.cart.reduce((sum,item) => sum + item.quantity, 0)
     );
