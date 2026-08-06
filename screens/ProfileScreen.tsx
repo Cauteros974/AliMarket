@@ -95,7 +95,13 @@ function MenuItem({
     label: string;
     icon: keyof typeof Ionicons.glyphMap;
     onPress: () => void;
-})
+}) {
+    return(
+        <Pressable>
+            <Ionicons name="chevron-forward" size={18} color={colors.muted} />
+        </Pressable>
+    )
+}
 
 const styles = StyleSheet.create({
     safeArea: {
