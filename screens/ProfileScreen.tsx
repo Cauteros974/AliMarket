@@ -154,10 +154,14 @@ const styles = StyleSheet.create({
         color: colors.muted,
         marginTop: 4
     },
-        smallButton: {
+    smallButton: {
         backgroundColor: colors.primary,
         paddingHorizontal: 12,
         paddingVertical: 9,
         borderRadius: 999,
     },
+    smallButtonText: {
+        color: colors.white,
+        fontWeight: "900"
+    }
 })
