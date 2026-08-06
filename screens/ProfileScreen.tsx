@@ -28,9 +28,13 @@ export default function ProfileScreen({ navigation }: Props) {
             <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
                 <Text style={style.title}>Profile</Text>
 
-                <View>
-                    <View>
+                <View style={styles.profileCard}>
+                    <View style={styles.avatar}>
                         <Ionicons name="person" size={34} color={colors.primary} />
+                    </View>
+
+                    <View style={styles.profileInfo}>
+                        <Text style={styles.name}>{user?.name ?? "Guest customer"}</Text>
                     </View>
                 </View>
             </ScrollView>
