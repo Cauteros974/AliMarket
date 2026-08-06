@@ -162,6 +162,7 @@ const styles = StyleSheet.create({
     },
     smallButtonText: {
         color: colors.white,
-        fontWeight: "900"
+        fontWeight: "900",
+        fontSize: 12,
     }
 })
