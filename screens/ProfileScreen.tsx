@@ -178,4 +178,9 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         padding: 14,
     },
+    statValue: {
+        color: colors.primary,
+        fontSize: 23,
+        fontWeight: "900"
+    }
 })
