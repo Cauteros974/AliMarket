@@ -130,5 +130,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
         padding: 16,
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 14,
     }
 })
