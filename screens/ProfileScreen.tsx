@@ -41,7 +41,9 @@ export default function ProfileScreen({ navigation }: Props) {
                     <Pressable 
                         onPress={user ? logout : () => navigation.navigate("Auth")}
                         style={styles.smallButton}
-                    />
+                    >
+                        <Text style={styles.smallButtonText}>{user ? "Logout" : "Login"}</Text>
+                    </Pressable>
                 </View>
             </ScrollView>
         </SafeAreaView>
