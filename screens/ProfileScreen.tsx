@@ -35,6 +35,7 @@ export default function ProfileScreen({ navigation }: Props) {
 
                     <View style={styles.profileInfo}>
                         <Text style={styles.name}>{user?.name ?? "Guest customer"}</Text>
+                        <Text style={styles.email}>{user?.email ?? "Login to save your orders"}</Text>
                     </View>
                 </View>
             </ScrollView>
