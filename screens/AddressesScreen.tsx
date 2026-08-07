@@ -123,4 +123,9 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
     },
+    cardTitle: { 
+        color: colors.text, 
+        fontSize: 17, 
+        fontWeight: "900" 
+    },
 })
