@@ -143,8 +143,10 @@ const styles = StyleSheet.create({
         marginTop: 10 
     },
     sectionTitle:{
-        color: colors.muted,
+        color: colors.text,
         fontSize: 20,
-        fontWeight: "900"
+        fontWeight: "900",
+        marginTop: 14,
+        marginBottom: 12
     }
 })
