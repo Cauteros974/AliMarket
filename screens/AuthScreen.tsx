@@ -90,7 +90,8 @@ const styles = StyleSheet.create({
     },
     title:{
         color: colors.text,
-        fontSize: 19
+        fontSize: 18,
+        fontWeight: "800"
     }
 
 
