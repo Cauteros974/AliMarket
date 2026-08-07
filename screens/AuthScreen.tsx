@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     },
     switchButton: {
         alignItems: "center",
-        padding: 18,
+        padding: 16,
     }
 
 })
