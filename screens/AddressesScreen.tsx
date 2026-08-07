@@ -152,5 +152,7 @@ const styles = StyleSheet.create({
     input: {
         minHeight: 52,
         borderRadius: 16,
+        backgroundColor: colors.surface,
+        borderWidth: 1,
     }
 })
