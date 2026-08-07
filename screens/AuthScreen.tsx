@@ -16,6 +16,13 @@ export default function AuthScreen({ navigation}: Props) {
     const register = useShopStore((state) => state.register);
     const login = useShopStore((state) => state.login);
 
+    function submit() {
+        if(!email.includes("@")) {
+            Alert.alert("Invalid email", "Please enter a valid email address.");
+            return;
+        }
+    }
+
     return(
         <SafeAreaView style={styles.safeArea}>
             <View style={styles.content}>
