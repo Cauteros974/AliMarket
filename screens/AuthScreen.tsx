@@ -21,6 +21,13 @@ export default function AuthScreen({ navigation}: Props) {
                 </Text>
 
                 <Text style={styles.subtitle}>Demo auth is saved locally with AsyncStorage.</Text>
+
+                {mode === "register" ? (
+                    <TextInput
+                        value={name}
+                        onChangeText={setName}
+                    />
+                )}
             </View>
         </SafeAreaView>
     )
