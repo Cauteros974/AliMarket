@@ -7,7 +7,7 @@ import { colors } from "../theme/colors";
 export default function AddressesScreen() {
     return(
         <SafeAreaView style={styles.safeArea}>
-            <ScrollView>
+            <ScrollView contentContainerStyle={styles.content}>
                 <Text style={styles.title}>Addresses</Text>
             </ScrollView>
         </SafeAreaView>
