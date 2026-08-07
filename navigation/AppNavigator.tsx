@@ -1,12 +1,17 @@
 import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import AddressesScreen from "../screens/AddressesScreen";
+import AuthScreen from "../screens/AuthScreen";
 import CartScreen from "../screens/CartScreen";
 import CatalogScreen from "../screens/CatalogScreen";
+import CategoryDetailsScreen from "../screens/CategoryDetailsScreen";
+import CheckoutScreen from "../screens/CheckoutScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import HomeScreen from "../screens/Homescreen";
 import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { MainTabParamList, RootStackParamList } from "./types";
 
@@ -14,6 +19,14 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator<MainTabParamList>();
 
 function MainTabs() {
+  const cartCount = useShopStore((state) =>
+    state.cart.reduce((sum, item) => sum + item.quantity, 0)
+  );
+
+  const unreadCount = useShopStore(
+    (state) => state.notifications.filter((item) => !item.read).length
+  );
+
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -46,27 +59,44 @@ function MainTabs() {
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Catalog" component={CatalogScreen} />
-      <Tab.Screen name="Cart" component={CartScreen} />
+      <Tab.Screen
+        name="Cart"
+        component={CartScreen}
+        options={{ tabBarBadge: cartCount > 0 ? cartCount : undefined }}
+      />
       <Tab.Screen name="Favorites" component={FavoritesScreen} options={{ title: "Saved" }} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{ tabBarBadge: unreadCount > 0 ? unreadCount : undefined }}
+      />
     </Tab.Navigator>
   );
 }
 
 export default function AppNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShadowVisible: false,
+        headerTintColor: colors.text,
+        headerStyle: { backgroundColor: colors.background },
+      }}
+    >
       <Stack.Screen name="MainTabs" component={MainTabs} options={{ headerShown: false }} />
       <Stack.Screen
         name="ProductDetails"
         component={ProductDetailsScreen}
-        options={{
-          title: "Product",
-          headerShadowVisible: false,
-          headerTintColor: colors.text,
-          headerStyle: { backgroundColor: colors.background },
-        }}
+        options={{ title: "Product" }}
       />
+      <Stack.Screen
+        name="CategoryDetails"
+        component={CategoryDetailsScreen}
+        options={{ title: "Category" }}
+      />
+      <Stack.Screen name="Checkout" component={CheckoutScreen} />
+      <Stack.Screen name="Auth" component={AuthScreen} options={{ title: "Account" }} />
+      <Stack.Screen name="Addresses" component={AddressesScreen} />
     </Stack.Navigator>
   );
 }
