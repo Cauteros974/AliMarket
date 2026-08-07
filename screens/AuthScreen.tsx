@@ -19,7 +19,16 @@ export default function AuthScreen({ navigation}: Props) {
                 <Text>
                     {mode === "register" ? "Create account" : "Welcome back"}
                 </Text>
+
+                <Text style={styles.subtitle}>Demo auth is saved locally with AsyncStorage.</Text>
             </View>
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    subtitle: {
+        color: colors.muted,
+        marginTop: 10
+    }
+})
