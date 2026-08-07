@@ -57,6 +57,13 @@ export default function AddressesScreen() {
                         ): null}
                     </Pressable>
                 ))}
+
+                <Text style={styles.sectionTitle}>Add address</Text>
+
+                <TextInput 
+                    value={city}
+                    onChangeText={setCity}
+                />
             </ScrollView>
         </SafeAreaView>
     )
