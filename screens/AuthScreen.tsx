@@ -22,7 +22,7 @@ export default function AuthScreen({ navigation}: Props) {
             return;
         }
 
-        if(mode === "register " && name.trim().length < 2) {
+        if(mode === "register" && name.trim().length < 2) {
             Alert.alert("Invalid name", "Name should contain at least 2 characters.");
             return;
         }
