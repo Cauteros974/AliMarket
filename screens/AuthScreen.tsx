@@ -31,6 +31,12 @@ export default function AuthScreen({ navigation}: Props) {
                         style={styles.input}
                     />
                 ): null}
+
+                <TextInput 
+                    value={email}
+                    onChangeText={setEmail}
+                    placeholder="Email"
+                />
             </View>
         </SafeAreaView>
     )
