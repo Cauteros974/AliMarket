@@ -93,5 +93,18 @@ export default function AddressesScreen() {
 }
 
 const styles = StyleSheet.create({
-    
+    safeArea: {
+        flex: 1,
+        backgroundColor: colors.background
+    },
+    content: { 
+        padding: 18, 
+        paddingBottom: 28 
+    },
+    title: { 
+        color: colors.text, 
+        fontSize: 28, 
+        fontWeight: "900", 
+        marginBottom: 16 
+    },
 })
