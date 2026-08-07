@@ -163,5 +163,7 @@ const styles = StyleSheet.create({
     PrimaryButton: {
         height: 54,
         borderRadius: 18,
+        backgroundColor: colors.primary,
+        alignItems: "center"
     }
 })
