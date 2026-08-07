@@ -15,6 +15,10 @@ export default function AddressesScreen() {
     const [street, setStreet] = useState("Rynok Square 1");
     const [phone, setPhone] = useState("+380 00 000 00 00");
 
+    function submit() {
+        if(!city.trim() || !street.trim() || !phone.trim()) return;
+    }
+
 
 
     return(
