@@ -21,6 +21,11 @@ export default function AuthScreen({ navigation}: Props) {
             Alert.alert("Invalid email", "Please enter a valid email address.");
             return;
         }
+
+        if(mode === "register " && name.trim().length < 2) {
+            Alert.alert("Invalid name", "Name should contain at least 2 characters.");
+            return;
+        }
     }
 
     return(
