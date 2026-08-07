@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     primaryButtonText: {
         color: colors.white,
         fontSize: 16,
-
+        fontWeight: "900",
     },
 
 })
