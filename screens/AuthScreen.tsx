@@ -14,9 +14,9 @@ export default function AuthScreen({ navigation}: Props) {
     const [email, setEmail] = useState("user@example.com");
 
     return(
-        <SafeAreaView>
-            <View>
-                <Text>
+        <SafeAreaView style={styles.safeArea}>
+            <View style={styles.content}>
+                <Text style={styles.title}>
                     {mode === "register" ? "Create account" : "Welcome back"}
                 </Text>
 
@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
         color: colors.muted,
         marginTop: 8,
         marginBottom: 22,
-        fontWeight: "800"
+        fontWeight: "700"
     }
 })
