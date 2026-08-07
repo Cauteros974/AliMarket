@@ -128,4 +128,8 @@ const styles = StyleSheet.create({
         fontSize: 17, 
         fontWeight: "900" 
     },
+    badge: { 
+        color: colors.primary, 
+        fontWeight: "900" 
+    },
 })
