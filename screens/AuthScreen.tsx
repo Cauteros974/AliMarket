@@ -29,6 +29,8 @@ export default function AuthScreen({ navigation}: Props) {
 const styles = StyleSheet.create({
     subtitle: {
         color: colors.muted,
-        marginTop: 10
+        marginTop: 8,
+        marginBottom: 22,
+        fontWeight: "800"
     }
 })
