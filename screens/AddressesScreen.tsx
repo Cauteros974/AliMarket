@@ -63,6 +63,9 @@ export default function AddressesScreen() {
                 <TextInput 
                     value={city}
                     onChangeText={setCity}
+                    placeholder="City"
+                    placeholderTextColor={colors.muted}
+                    style={styles.input}
                 />
             </ScrollView>
         </SafeAreaView>
