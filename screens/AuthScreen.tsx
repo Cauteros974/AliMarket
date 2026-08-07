@@ -104,6 +104,10 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontWeight: "800",
     },
+    primaryButton: {
+        height: 54,
+        borderRadius: 54,
+    }
 
 
     subtitle: {
