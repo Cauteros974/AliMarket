@@ -92,6 +92,11 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontSize: 18,
         fontWeight: "700"
+    },
+    input: {
+        minHeight: 52,
+        borderRadius: 16,
+        backgroundColor: colors.surface,
     }
 
 
