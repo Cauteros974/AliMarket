@@ -82,6 +82,11 @@ const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
         backgroundColor: colors.background
+    },
+    content: {
+        flex: 1,
+        padding: 10,
+        justifyContent: "center"
     }
 
 
