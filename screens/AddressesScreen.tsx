@@ -17,6 +17,11 @@ export default function AddressesScreen() {
 
     function submit() {
         if(!city.trim() || !street.trim() || !phone.trim()) return;
+
+        addresses({
+            title: "New address",
+            city,
+        });
     }
 
 
