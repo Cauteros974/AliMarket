@@ -84,8 +84,8 @@ export default function AddressesScreen() {
                     style={styles.input}
                 />
 
-                <Pressable>
-                    <Text>Save address</Text>
+                <Pressable onPress={submit} style={styles.primaryButton}>
+                    <Text style={styles.primaryButtonText}>Save address</Text>
                 </Pressable>
             </ScrollView>
         </SafeAreaView>
