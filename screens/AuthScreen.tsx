@@ -26,6 +26,9 @@ export default function AuthScreen({ navigation}: Props) {
                     <TextInput
                         value={name}
                         onChangeText={setName}
+                        placeholder="Name"
+                        placeholderTextColor={colors.muted}
+                        style={styles.input}
                     />
                 )}
             </View>
