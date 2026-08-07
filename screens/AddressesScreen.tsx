@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontWeight: "800",
     },
-    PrimaryButton: {
+    primaryButton: {
         height: 54,
         borderRadius: 18,
         backgroundColor: colors.primary,
