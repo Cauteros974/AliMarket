@@ -21,6 +21,9 @@ export default function AddressesScreen() {
         addresses({
             title: "New address",
             city,
+            street,
+            phone,
+            postalCode: "79000",
         });
     }
 
