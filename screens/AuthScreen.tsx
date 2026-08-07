@@ -101,7 +101,9 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         paddingHorizontal: 14,
         marginBottom: 12,
-    }
+        color: colors.text,
+        fontWeight: "800",
+    },
 
 
     subtitle: {
