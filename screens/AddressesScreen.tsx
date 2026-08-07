@@ -83,6 +83,10 @@ export default function AddressesScreen() {
                     placeholderTextColor={colors.muted}
                     style={styles.input}
                 />
+
+                <Pressable>
+                    <Text>Save address</Text>
+                </Pressable>
             </ScrollView>
         </SafeAreaView>
     )
