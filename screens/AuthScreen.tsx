@@ -29,7 +29,11 @@ export default function AuthScreen({ navigation}: Props) {
 
         if(mode === "register") {
             register(name.trim(), email.trim());
+        } else{
+            login(email.trim());
         }
+
+        navigation.goBack();
     }
 
     return(
