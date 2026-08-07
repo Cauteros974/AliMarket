@@ -25,6 +25,9 @@ export default function AddressesScreen() {
             phone,
             postalCode: "79000",
         });
+
+        setCity("");
+        setStreet("");
     }
 
 
