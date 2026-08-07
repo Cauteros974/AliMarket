@@ -36,6 +36,8 @@ export default function AuthScreen({ navigation}: Props) {
                     value={email}
                     onChangeText={setEmail}
                     placeholder="Email"
+                    placeholderTextColor={colors.muted}
+                    autoCapitalize="none"
                 />
             </View>
         </SafeAreaView>
