@@ -30,7 +30,7 @@ export default function AuthScreen({ navigation}: Props) {
                         placeholderTextColor={colors.muted}
                         style={styles.input}
                     />
-                )}
+                ): null}
             </View>
         </SafeAreaView>
     )
