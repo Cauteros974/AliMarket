@@ -47,6 +47,14 @@ export default function AddressesScreen() {
                         <Text style={styles.muted}>
                             {address.city}, {address.street}
                         </Text>
+
+                        <Text style={styles.muted}>{address.phone}</Text>
+
+                        {addAddress.length > 1 ? (
+                            <Pressable>
+                                <Text style={styles.remove}>Remove</Text>
+                            </Pressable>
+                        ): null}
                     </Pressable>
                 ))}
             </ScrollView>
