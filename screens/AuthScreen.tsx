@@ -129,6 +129,6 @@ const styles = StyleSheet.create({
     },
     switchText: {
         color: colors.primary,
-        fontWeight: "800"
+        fontWeight: "900",
     }
 })
