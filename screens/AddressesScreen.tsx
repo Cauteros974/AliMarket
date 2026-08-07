@@ -132,4 +132,9 @@ const styles = StyleSheet.create({
         color: colors.primary, 
         fontWeight: "900" 
     },
+    muted: { 
+        color: colors.muted, 
+        marginTop: 6, 
+        fontWeight: "700" 
+    },
 })
