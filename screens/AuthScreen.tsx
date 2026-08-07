@@ -111,13 +111,17 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginTop: 8,
-    }
-
-
+    },
     subtitle: {
         color: colors.muted,
         marginTop: 8,
         marginBottom: 22,
-        fontWeight: "700"
-    }
+        fontWeight: "700",
+    },
+    primaryButtonText: {
+        color: colors.white,
+        fontSize: 16,
+
+    },
+
 })
