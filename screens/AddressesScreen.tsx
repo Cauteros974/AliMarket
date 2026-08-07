@@ -51,7 +51,7 @@ export default function AddressesScreen() {
                         <Text style={styles.muted}>{address.phone}</Text>
 
                         {addAddress.length > 1 ? (
-                            <Pressable>
+                            <Pressable onPress={() => removeAddress(address.id)}>
                                 <Text style={styles.remove}>Remove</Text>
                             </Pressable>
                         ): null}
