@@ -137,4 +137,9 @@ const styles = StyleSheet.create({
         marginTop: 6, 
         fontWeight: "700" 
     },
+    remove: { 
+        color: colors.danger, 
+        fontWeight: "900", 
+        marginTop: 10 
+    },
 })
