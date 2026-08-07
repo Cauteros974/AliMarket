@@ -13,6 +13,9 @@ export default function AuthScreen({ navigation}: Props) {
     const [name, setName] = useState("User");
     const [email, setEmail] = useState("user@example.com");
 
+    const register = useShopStore((state) => state.register);
+    const login = useShopStore((state) => state.login);
+
     return(
         <SafeAreaView style={styles.safeArea}>
             <View style={styles.content}>
