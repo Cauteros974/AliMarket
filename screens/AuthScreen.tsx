@@ -109,6 +109,8 @@ const styles = StyleSheet.create({
         borderRadius: 18,
         backgroundColor: colors.primary,
         alignItems: "center",
+        justifyContent: "center",
+        marginTop: 8,
     }
 
 
