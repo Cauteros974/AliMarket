@@ -81,7 +81,7 @@ export default function AuthScreen({ navigation}: Props) {
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
-        backgroundColor: colors.muted
+        backgroundColor: colors.background
     }
 
 
