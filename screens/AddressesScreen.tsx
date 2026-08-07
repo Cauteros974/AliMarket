@@ -18,7 +18,7 @@ export default function AddressesScreen() {
     function submit() {
         if(!city.trim() || !street.trim() || !phone.trim()) return;
 
-        addresses({
+        addAddress({
             title: "New address",
             city,
             street,
@@ -89,9 +89,9 @@ export default function AddressesScreen() {
                 </Pressable>
             </ScrollView>
         </SafeAreaView>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
-
+    
 })
