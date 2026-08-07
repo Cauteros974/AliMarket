@@ -38,6 +38,8 @@ export default function AuthScreen({ navigation}: Props) {
                     placeholder="Email"
                     placeholderTextColor={colors.muted}
                     autoCapitalize="none"
+                    keyboardType="email-address"
+                    style={styles.input}
                 />
             </View>
         </SafeAreaView>
