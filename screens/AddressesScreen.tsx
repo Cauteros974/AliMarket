@@ -6,10 +6,14 @@ import { colors } from "../theme/colors";
 
 export default function AddressesScreen() {
     return(
-        <SafeAreaView>
+        <SafeAreaView style={styles.safeArea}>
             <ScrollView>
-                <Text>Addresses</Text>
+                <Text style={styles.title}>Addresses</Text>
             </ScrollView>
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+
+})
