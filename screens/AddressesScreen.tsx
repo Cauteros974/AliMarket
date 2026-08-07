@@ -147,6 +147,10 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: "900",
         marginTop: 14,
-        marginBottom: 12
+        marginBottom: 12,
+    },
+    input: {
+        minHeight: 52,
+        borderRadius: 16,
     }
 })
