@@ -41,6 +41,12 @@ export default function AuthScreen({ navigation}: Props) {
                     keyboardType="email-address"
                     style={styles.input}
                 />
+
+                <Pressable>
+                    <Text style={styles.switchText}>
+                        {mode === "register" ? "I already have an account" : "Create new account"}
+                    </Text>
+                </Pressable>
             </View>
         </SafeAreaView>
     )
