@@ -42,7 +42,9 @@ export default function AuthScreen({ navigation}: Props) {
                     style={styles.input}
                 />
 
-                <Pressable>
+                <Pressable
+                    onPress={() => setMode(mode === "register" ? "login" : "register")}
+                >
                     <Text style={styles.switchText}>
                         {mode === "register" ? "I already have an account" : "Create new account"}
                     </Text>
