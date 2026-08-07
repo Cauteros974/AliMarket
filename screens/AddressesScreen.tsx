@@ -7,6 +7,14 @@ import { colors } from "../theme/colors";
 export default function AddressesScreen() {
     const addresses = useShopStore((state) => state.addresses);
     const selectedAddressId = useShopStore((state) => state.selectedAddressId);
+    const addAddress = useShopStore((state) => state.addAddress);
+    const selectAddress = useShopStore((state) => state.selectAddress);
+    const removeAddress = useShopStore((state) => state.removeAddress);
+
+    const [city, setCity] = useState("Lviv");
+    const [street, setStreet] = useState("Rynok Square 1");
+    const [phone, setPhone] = useState("+380 00 000 00 00");
+
 
 
     return(
