@@ -123,5 +123,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: "900",
     },
+    switchButton: {
+        alignItems: "center",
+        padding: 18,
+    }
 
 })
