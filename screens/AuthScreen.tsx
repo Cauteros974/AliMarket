@@ -131,4 +131,4 @@ const styles = StyleSheet.create({
         color: colors.primary,
         fontWeight: "900",
     }
-})
+});
