@@ -6,6 +6,7 @@ import { colors } from "../theme/colors";
 
 export default function AddressesScreen() {
     const addresses = useShopStore((state) => state.addresses);
+    const selectedAddressId = useShopStore((state) => state.selectedAddressId);
 
 
     return(
@@ -17,6 +18,9 @@ export default function AddressesScreen() {
                     <Pressable>
                         <View>
                             <Text>{address.title}</Text>
+                            <Text style={styles.badge}>
+                                {selectedAddressId === address.id ? "Selected" : "Choose"}
+                            </Text>
                         </View>
                     </Pressable>
                 ))}
