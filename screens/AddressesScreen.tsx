@@ -30,8 +30,6 @@ export default function AddressesScreen() {
         setStreet("");
     }
 
-
-
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content}>
@@ -45,6 +43,10 @@ export default function AddressesScreen() {
                                 {selectedAddressId === address.id ? "Selected" : "Choose"}
                             </Text>
                         </View>
+
+                        <Text style={styles.muted}>
+                            {address.city}, {address.street}
+                        </Text>
                     </Pressable>
                 ))}
             </ScrollView>
