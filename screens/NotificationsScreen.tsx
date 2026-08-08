@@ -95,6 +95,7 @@ const style = StyleSheet.create({
     date: {
         color: colors.primary,
         fontSize: 12,
-        fontWeight: "900"
+        fontWeight: "900",
+        marginTop: 10,
     }
 })
