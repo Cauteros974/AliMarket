@@ -119,6 +119,11 @@ const styles = StyleSheet.create({
     },
     itemLine: {
         color: colors.text,
-        fontWeight: "800"
+        fontWeight: "800",
+    },
+    divider: {
+        height: 1,
+        backgroundColor: colors.background,
+        marginVertical: 12,
     }
 })
