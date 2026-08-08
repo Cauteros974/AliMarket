@@ -103,8 +103,9 @@ const styles = StyleSheet.create({
         fontWeight: "700",
     },
     statusBadge: {
-        backgroundColor: colors.surface,
+        backgroundColor: colors.surfaceSoft,
         borderRadius: 600,
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        paddingVertical: 6
     }
 })
