@@ -54,6 +54,8 @@ export default function OrdersScreen(){
                             <Text style={styles.muted}>
                                 {item.address.city}, {item.address.street}
                             </Text>
+
+                            <Text style={styles.total}>{formatPrice(item.total)}</Text>
                         </View>
                     </View>
                 )}
