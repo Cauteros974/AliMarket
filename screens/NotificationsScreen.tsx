@@ -88,7 +88,8 @@ const style = StyleSheet.create({
     },
     message: {
         color: colors.primary,
-        lineHeight: 20,
-        fontWeight: "900"
+        lineHeight: 21,
+        fontWeight: "700",
+        marginTop: 8
     }
 })
