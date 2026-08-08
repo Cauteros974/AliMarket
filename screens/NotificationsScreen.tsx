@@ -68,5 +68,9 @@ const style = StyleSheet.create({
     unreadCard: { 
         borderColor: colors.primary 
     },
-
+    rowBetween: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between"
+    }
 })
