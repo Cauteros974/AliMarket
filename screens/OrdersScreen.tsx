@@ -10,14 +10,14 @@ export default function OrdersScreen(){
     const orders = useShopStore((state) => state.orders);
 
     return(
-        <SafeAreaView>
+        <SafeAreaView style={styles.safeArea}>
             <FlatList 
                 data={orders}
                 keyExtractor={(item) => item.id}
                 contentContainerStyle={styles.content}
                 ListHeaderComponent={<Text style={styles.title}>Order history</Text>}
                 ListEmptyComponent={
-                    <View>
+                    <View style={styles.emptyState}>
                         <Text>No orders yet</Text>
                         <Text>Your checkout orders will apears here.</Text>
                     </View>
