@@ -61,5 +61,12 @@ export default function OrdersScreen(){
                 )}
             />
         </SafeAreaView>
-    )
+    );
 }
+
+const styles = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+        backgroundColor: colors.background,
+    }
+})
