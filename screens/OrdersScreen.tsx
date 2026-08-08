@@ -27,8 +27,8 @@ export default function OrdersScreen(){
                     <View>
                         <View>
                             <View>
-                                 <Text>{item.id}</Text>
-                                 <Text>{formatDate(item.createdAt)}</Text>
+                                 <Text style={styles.orderId}>{item.id}</Text>
+                                 <Text style={styles.muted}>{formatDate(item.createdAt)}</Text>
                             </View>
                         </View>
                     </View>
