@@ -18,7 +18,7 @@ export default function OrdersScreen(){
                 ListHeaderComponent={<Text style={styles.title}>Order history</Text>}
                 ListEmptyComponent={
                     <View style={styles.emptyState}>
-                        <Ionicons name="receipt-outline" size={38} color={colors.primary} />
+                        <Ionicons name="receipt-outline" size={48} color={colors.primary} />
                         <Text>No orders yet</Text>
                         <Text>Your checkout orders will apears here.</Text>
                     </View>
