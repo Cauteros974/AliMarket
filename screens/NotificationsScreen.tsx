@@ -32,6 +32,9 @@ export default function NotificationsScreen() {
                             <Text style={styles.cardTitle}>{item.title}</Text>
                             {!item.read ? <View style={style.date}/> : null}
                         </View>
+
+                        <Text style={styles.message}>{item.message}</Text>
+                        <Text style={styles.date}>{formatDate(item.date)}</Text>
                     </Pressable>
                 )}
             />
