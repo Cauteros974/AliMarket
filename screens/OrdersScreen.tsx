@@ -111,6 +111,6 @@ const styles = StyleSheet.create({
     statusText: {
         color: colors.primary,
         fontSize: 12,
-        fontWeight: "700"
+        fontWeight: "900",
     }
 })
