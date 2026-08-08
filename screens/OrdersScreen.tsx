@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     },
     divider: {
         height: 1,
-        backgroundColor: colors.background,
+        backgroundColor: colors.border,
         marginVertical: 12,
     }
 })
