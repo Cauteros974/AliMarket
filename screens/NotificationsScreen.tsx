@@ -97,5 +97,9 @@ const style = StyleSheet.create({
         fontSize: 12,
         fontWeight: "900",
         marginTop: 10,
+    },
+    emptyState: {
+        minHeight: 400,
+        alignItems: "center"
     }
 })
