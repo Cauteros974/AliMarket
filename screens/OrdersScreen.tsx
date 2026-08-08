@@ -47,6 +47,10 @@ export default function OrdersScreen(){
                                 );
                             })}
                         </View>
+
+                        <View>
+                            <Text>{item.address.city}, {item.address.street}</Text>
+                        </View>
                     </View>
                 )}
             />
