@@ -101,5 +101,10 @@ const styles = StyleSheet.create({
     muted: {
         color: colors.muted,
         fontWeight: "700",
+    },
+    statusBadge: {
+        backgroundColor: colors.surface,
+        borderRadius: 600,
+        paddingHorizontal: 10
     }
 })
