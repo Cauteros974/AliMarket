@@ -28,7 +28,7 @@ export default function NotificationsScreen() {
                         onPress={() => markNotificationRead(item.id)}
                         style={[styles.card, !item.read && styles.unreadCard]}
                     >
-                        <View>
+                        <View style={styles.rowBetween}>
                             <Text>{item.title}</Text>
                             {!item.read ? <View style={style.date}/> : null}
                         </View>
