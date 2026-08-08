@@ -27,7 +27,12 @@ export default function NotificationsScreen() {
                     <Pressable 
                         onPress={() => markNotificationRead(item.id)}
                         style={[styles.card, !item.read && styles.unreadCard]}
-                    />
+                    >
+                        <View>
+                            <Text>{item.title}</Text>
+                            {!item.read ? <View style={style.date}/> : null}
+                        </View>
+                    </Pressable>
                 )}
             />
         </SafeAreaView>
