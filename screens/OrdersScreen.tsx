@@ -48,6 +48,8 @@ export default function OrdersScreen(){
                             })}
                         </View>
 
+                        <View style={styles.divider} />
+
                         <View style={styles.rowBetween}>
                             <Text style={styles.muted}>
                                 {item.address.city}, {item.address.street}
