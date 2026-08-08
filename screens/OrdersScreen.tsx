@@ -36,7 +36,7 @@ export default function OrdersScreen(){
                             </View>
                         </View>
 
-                        <View style={styles.item}>
+                        <View style={styles.items}>
                             {item.items.map((cartItem) => {
                                 const product = products.find((entry) => entry.id === cartItem.productId);
 
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         gap: 12,
     },
-    oderId: {
+    orderId: {
         color: colors.text,
         fontSize: 12,
         fontWeight: "900",
