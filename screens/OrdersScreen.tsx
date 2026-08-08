@@ -24,8 +24,8 @@ export default function OrdersScreen(){
                     </View>
                 }
                 renderItem={({item}) => (
-                    <View>
-                        <View>
+                    <View style={styles.card}>
+                        <View style={styles.rowBetween}>
                             <View>
                                  <Text style={styles.orderId}>{item.id}</Text>
                                  <Text style={styles.muted}>{formatDate(item.createdAt)}</Text>
