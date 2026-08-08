@@ -53,8 +53,9 @@ const style = StyleSheet.create({
     },
     title: {
         color: colors.text,
-        fontSize: 20,
-        fontWeight: "900"
+        fontSize: 28,
+        fontWeight: "900",
+        marginBottom: 16,
     }
 
 })
