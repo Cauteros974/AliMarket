@@ -112,5 +112,9 @@ const styles = StyleSheet.create({
         color: colors.primary,
         fontSize: 12,
         fontWeight: "900",
+    },
+    items: {
+        marginTop: 14,
+        gap: 8
     }
 })
