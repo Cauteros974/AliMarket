@@ -99,7 +99,8 @@ const style = StyleSheet.create({
         marginTop: 10,
     },
     emptyState: {
-        minHeight: 400,
-        alignItems: "center"
+        minHeight: 420,
+        alignItems: "center",
+        justifyContent: "center"
     }
 })
