@@ -80,4 +80,9 @@ const style = StyleSheet.create({
         fontWeight: "900",
         flex: 1,
     },
+    dot: {
+        width: 10,
+        height: 10,
+        borderRadius: 5,
+    },
 })
