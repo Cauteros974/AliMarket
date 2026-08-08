@@ -106,6 +106,11 @@ const styles = StyleSheet.create({
         backgroundColor: colors.surfaceSoft,
         borderRadius: 600,
         paddingHorizontal: 10,
-        paddingVertical: 6
+        paddingVertical: 6,
+    },
+    statusText: {
+        color: colors.primary,
+        fontSize: 12,
+        fontWeight: "700"
     }
 })
