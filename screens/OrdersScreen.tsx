@@ -16,6 +16,11 @@ export default function OrdersScreen(){
                 keyExtractor={(item) => item.id}
                 contentContainerStyle={styles.content}
                 ListHeaderComponent={<Text style={styles.title}>Order history</Text>}
+                ListEmptyComponent={
+                    <View>
+                        <Text>No orders yet</Text>
+                    </View>
+                }
             />
         </SafeAreaView>
     )
