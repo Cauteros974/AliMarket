@@ -31,7 +31,7 @@ export default function OrdersScreen(){
                                  <Text style={styles.muted}>{formatDate(item.createdAt)}</Text>
                             </View>
 
-                            <View>
+                            <View style={styles.statusBadge}>
                                 <Text style={styles.statusText}>{item.status}</Text>
                             </View>
                         </View>
