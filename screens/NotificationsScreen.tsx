@@ -26,7 +26,7 @@ export default function NotificationsScreen() {
                 renderItem={({item}) => (
                     <Pressable 
                         onPress={() => markNotificationRead(item.id)}
-                        style={[styles.card]}
+                        style={[styles.card, !item.read && styles.unreadCard]}
                     />
                 )}
             />
