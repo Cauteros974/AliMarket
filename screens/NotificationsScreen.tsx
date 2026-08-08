@@ -29,7 +29,7 @@ export default function NotificationsScreen() {
                         style={[styles.card, !item.read && styles.unreadCard]}
                     >
                         <View style={styles.rowBetween}>
-                            <Text>{item.title}</Text>
+                            <Text style={styles.cardTitle}>{item.title}</Text>
                             {!item.read ? <View style={style.date}/> : null}
                         </View>
                     </Pressable>
