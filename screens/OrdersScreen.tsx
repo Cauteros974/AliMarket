@@ -86,5 +86,9 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         padding: 16,
         marginBottom: 12,
+    },
+    rowBetween: {
+        flexDirection: "row",
+        alignItems: "center"
     }
 })
