@@ -19,6 +19,7 @@ export default function OrdersScreen(){
                 ListEmptyComponent={
                     <View>
                         <Text>No orders yet</Text>
+                        <Text>Your checkout orders will apears here.</Text>
                     </View>
                 }
             />
