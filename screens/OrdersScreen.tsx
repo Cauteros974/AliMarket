@@ -37,15 +37,15 @@ export default function OrdersScreen(){
                         </View>
 
                         <View style={styles.item}>
-                            {item.items.map(cartItem) => {
+                            {item.items.map((cartItem) => {
                                 const product = products.find((entry) => entry.id === cartItem.productId);
 
                                 return(
                                     <Text key={cartItem.productId} numberOfLines={1} style={styles.itemLine}>
                                         {cartItem.quantity}x {product?.title ?? "Product"}
                                     </Text>
-                                )
-                            }}
+                                );
+                            })}
                         </View>
                     </View>
                 )}
