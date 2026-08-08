@@ -86,4 +86,9 @@ const style = StyleSheet.create({
         borderRadius: 5,
         backgroundColor: colors.primary,
     },
+    message: {
+        color: colors.primary,
+        lineHeight: 20,
+        fontWeight: "900"
+    }
 })
