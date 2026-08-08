@@ -42,7 +42,7 @@ export default function NotificationsScreen() {
     );
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
         backgroundColor: colors.background,
@@ -102,5 +102,11 @@ const style = StyleSheet.create({
         minHeight: 420,
         alignItems: "center",
         justifyContent: "center"
+    },
+    emptyTitle: {
+        color: colors.text,
+        fontSize: 20,
+        fontWeight: "900",
+        marginTop: 12,
     }
 })
