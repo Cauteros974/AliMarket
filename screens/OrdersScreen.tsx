@@ -92,5 +92,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         gap: 12,
+    },
+    oderId: {
+        color: colors.text,
+        fontSize: 12,
+        fontWeight: "900"
     }
 })
