@@ -129,6 +129,11 @@ const styles = StyleSheet.create({
     total: {
         color: colors.primary,
         fontSize: 18,
-        fontWeight: "900"
+        fontWeight: "900",
+    },
+    emptyState: {
+        minHeight: 420, 
+        alignItems: "center", 
+        justifyContent: "center",
     }
 })
