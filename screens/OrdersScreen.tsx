@@ -115,6 +115,10 @@ const styles = StyleSheet.create({
     },
     items: {
         marginTop: 14,
-        gap: 8
+        gap: 6,
+    },
+    itemLine: {
+        color: colors.text,
+        fontWeight: "800"
     }
 })
