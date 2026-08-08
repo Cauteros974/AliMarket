@@ -23,6 +23,16 @@ export default function OrdersScreen(){
                         <Text>Your checkout orders will apears here.</Text>
                     </View>
                 }
+                renderItem={({item}) => (
+                    <View>
+                        <View>
+                            <View>
+                                 <Text>{item.id}</Text>
+                                 <Text>{formatDate(item.createdAt)}</Text>
+                            </View>
+                        </View>
+                    </View>
+                )}
             />
         </SafeAreaView>
     )
