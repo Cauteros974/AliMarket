@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.background,
     },
     content: {
-        padding: 18,
+        padding: 20,
         paddingBottom: 28,
     }
 })
