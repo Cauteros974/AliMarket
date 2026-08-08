@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import { FlatList } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
@@ -14,6 +14,8 @@ export default function OrdersScreen(){
             <FlatList 
                 data={orders}
                 keyExtractor={(item) => item.id}
+                contentContainerStyle={styles.content}
+                ListHeaderComponent={<Text style={styles.title}>Order history</Text>}
             />
         </SafeAreaView>
     )
