@@ -73,5 +73,11 @@ const style = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         gap: 12,
-    }
+    },
+    cardTitle: {
+        color: colors.text,
+        fontSize: 17,
+        fontWeight: "900",
+        flex: 1,
+    },
 })
