@@ -39,5 +39,17 @@ export default function NotificationsScreen() {
                 )}
             />
         </SafeAreaView>
-    )
+    );
 }
+
+const style = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+        backgroundColor: colors.background,
+    },
+    content: {
+        padding: 18,
+        paddingBottom: 20
+    }
+
+})
