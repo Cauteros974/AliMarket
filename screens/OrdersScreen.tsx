@@ -39,6 +39,12 @@ export default function OrdersScreen(){
                         <View style={styles.item}>
                             {item.items.map(cartItem) => {
                                 const product = products.find((entry) => entry.id === cartItem.productId);
+
+                                return(
+                                    <Text>
+                                        {cartItem.quantity}x {product?.title ?? "Product"}
+                                    </Text>
+                                )
                             }}
                         </View>
                     </View>
