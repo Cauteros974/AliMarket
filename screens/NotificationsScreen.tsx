@@ -71,6 +71,7 @@ const style = StyleSheet.create({
     rowBetween: {
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        gap: 12,
     }
 })
