@@ -15,6 +15,13 @@ export default function NotificationsScreen() {
                 data={notifications}
                 keyExtractor={(item) => item.id}
                 contentContainerStyle={styles.content}
+                ListHeaderComponent={<Text style={styles.title}>Notifications</Text>}
+                ListEmptyComponent={
+                    <View style={styles.emptyState}>
+                        <Ionicons name="notifications-outline" size={48} color={colors.primary} />
+                        <Text style={styles.emptyTitle}>No notifications</Text>
+                    </View>
+                }
             />
         </SafeAreaView>
     )
