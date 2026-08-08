@@ -125,5 +125,9 @@ const styles = StyleSheet.create({
         height: 1,
         backgroundColor: colors.border,
         marginVertical: 12,
+    },
+    total: {
+        color: colors.primary,
+        fontSize: 16,
     }
 })
