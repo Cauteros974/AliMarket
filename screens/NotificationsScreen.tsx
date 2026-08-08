@@ -20,6 +20,7 @@ export default function NotificationsScreen() {
                     <View style={styles.emptyState}>
                         <Ionicons name="notifications-outline" size={48} color={colors.primary} />
                         <Text style={styles.emptyTitle}>No notifications</Text>
+                        <Text style={styles.emptyText}>Sales and order updates will appear here.</Text>
                     </View>
                 }
             />
