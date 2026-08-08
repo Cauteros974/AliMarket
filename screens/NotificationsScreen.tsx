@@ -23,6 +23,12 @@ export default function NotificationsScreen() {
                         <Text style={styles.emptyText}>Sales and order updates will appear here.</Text>
                     </View>
                 }
+                renderItem={({item}) => (
+                    <Pressable 
+                        onPress={() => markNotificationRead(item.id)}
+                        style={[styles.card]}
+                    />
+                )}
             />
         </SafeAreaView>
     )
