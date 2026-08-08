@@ -9,6 +9,8 @@ import CategoryDetailsScreen from "../screens/CategoryDetailsScreen";
 import CheckoutScreen from "../screens/CheckoutScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import HomeScreen from "../screens/Homescreen";
+import NotificationsScreen from "../screens/NotificationsScreen";
+import OrdersScreen from "../screens/OrdersScreen";
 import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import { useShopStore } from "../store/useShopStore";
@@ -95,8 +97,10 @@ export default function AppNavigator() {
         options={{ title: "Category" }}
       />
       <Stack.Screen name="Checkout" component={CheckoutScreen} />
+      <Stack.Screen name="Orders" component={OrdersScreen} />
       <Stack.Screen name="Auth" component={AuthScreen} options={{ title: "Account" }} />
       <Stack.Screen name="Addresses" component={AddressesScreen} />
+      <Stack.Screen name="Notifications" component={NotificationsScreen} />
     </Stack.Navigator>
   );
 }
