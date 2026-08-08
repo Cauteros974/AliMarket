@@ -49,7 +49,9 @@ export default function OrdersScreen(){
                         </View>
 
                         <View style={styles.rowBetween}>
-                            <Text>{item.address.city}, {item.address.street}</Text>
+                            <Text style={styles.muted}>
+                                {item.address.city}, {item.address.street}
+                            </Text>
                         </View>
                     </View>
                 )}
