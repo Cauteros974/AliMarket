@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
     },
     total: {
         color: colors.primary,
-        fontSize: 16,
+        fontSize: 18,
+        fontWeight: "900"
     }
 })
