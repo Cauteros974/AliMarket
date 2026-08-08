@@ -91,5 +91,9 @@ const style = StyleSheet.create({
         lineHeight: 21,
         fontWeight: "700",
         marginTop: 8
+    },
+    date: {
+        color: colors.primary,
+        fontSize: 12
     }
 })
