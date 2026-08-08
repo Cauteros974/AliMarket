@@ -96,6 +96,10 @@ const styles = StyleSheet.create({
     oderId: {
         color: colors.text,
         fontSize: 12,
-        fontWeight: "900"
+        fontWeight: "900",
+    },
+    muted: {
+        color: colors.muted,
+        fontWeight: "700",
     }
 })
