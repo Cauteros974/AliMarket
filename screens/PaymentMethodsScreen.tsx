@@ -41,6 +41,7 @@ export default function PaymentMethodsScreen() {
 
         setCards((current) => [newCard, ...current]);
         setCardNumber("");
+        Alert.alert("Card added");
 
     }
 
