@@ -51,6 +51,8 @@ export default function PaymentMethodsScreen() {
                     value={holder}
                     onChangeText={setHolder}
                     placeholder="Card holder"
+                    placeholderTextColor={colors.muted}
+                    style={styles.input}
                 />
             </ScrollView>
         </SafeAreaView>
