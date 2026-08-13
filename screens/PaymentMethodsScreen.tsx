@@ -136,4 +136,9 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         alignSelf: "flex-end",
     },
+    sectionTitle: {
+        color: colors.text,
+        fontSize: 20,
+        fontWeight: "900",
+    },
 })
