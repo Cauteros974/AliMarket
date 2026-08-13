@@ -165,5 +165,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginTop: 4,
-    }
+    },
+    primaryButtonText: { 
+        color: colors.white, 
+        fontWeight: "900", 
+        fontSize: 16 
+    },
 })
