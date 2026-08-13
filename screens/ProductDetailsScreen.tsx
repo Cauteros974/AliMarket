@@ -31,13 +31,9 @@ export default function ProductDetailsScreen({ route }: Props) {
   return (
     <SafeAreaView style={styles.safeArea} edges={["bottom"]}>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
-        <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false}>
-          {product.gallery.map((image) => (
-            <View key={image} style={styles.imageWrap}>
-              <Image source={{ uri: image }} style={styles.image} />
-            </View>
-          ))}
-        </ScrollView>
+        <View style={styles.imageWrap}>
+          <Image source={product.image} style={styles.image} />
+        </View>
 
         <View style={styles.info}>
           <View style={styles.priceRow}>
@@ -83,17 +79,9 @@ export default function ProductDetailsScreen({ route }: Props) {
 
           <Text style={styles.sectionTitle}>Reviews</Text>
 
-          {product.reviewList.map((review) => (
-            <View key={review.id} style={styles.reviewCard}>
-              <View style={styles.reviewHeader}>
-                <Text style={styles.reviewAuthor}>{review.author}</Text>
-                <Text style={styles.reviewDate}>{formatDate(review.date)}</Text>
-              </View>
-
-              <Text style={styles.reviewRating}>{"★".repeat(review.rating)}</Text>
-              <Text style={styles.reviewText}>{review.text}</Text>
-            </View>
-          ))}
+          <Text style={styles.mutedText}>
+            {product.reviews.toLocaleString("en-US")} reviews
+          </Text>
         </View>
       </ScrollView>
 
