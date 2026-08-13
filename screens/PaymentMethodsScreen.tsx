@@ -131,4 +131,9 @@ const styles = StyleSheet.create({
         marginTop: 8,
         fontWeight: "700",
     },
+    removeText: {
+        color: colors.primary,
+        fontWeight: "900",
+        alignSelf: "flex-end",
+    },
 })
