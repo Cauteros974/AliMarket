@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     },
     sectionTitle: {
         color: colors.text,
-        fontSize: 20,
+        fontSize: 22,
         fontWeight: "900",
     },
 })
