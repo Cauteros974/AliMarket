@@ -24,6 +24,14 @@ export default function PaymentMethodsScreen() {
 
     const [cardNumber, setCardNumber] = useState("4242424242424242");
 
+    function addCard() {
+        const cleanNumber = cardNumber;
+
+        if (holder.trim().length < 2 || cleanNumber.length < 7) {
+            return;
+        }
+    }
+
     function removeCard(cardId: string) {
         setCards((current) => current.filter((card) => card.id !== cardId));
     }
