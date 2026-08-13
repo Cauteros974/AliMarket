@@ -25,6 +25,10 @@ export default function PaymentMethodsScreen() {
                             <Text style={styles.cardNumber}>**** **** **** {card.last4}</Text>
                             <Text style={styles.cardHolder}>{card.holder}</Text>
                         </View>
+
+                        <Pressable onPress={() => removeCard(card.id)}>
+                            <Text style={styles.removeText}>Remove</Text>
+                        </Pressable>
                     </View>
                 ))}
             </ScrollView>
