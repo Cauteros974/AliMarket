@@ -1,8 +1,6 @@
 export type RootStackParamList = {
   MainTabs: undefined;
 
-  
-
   CategoryDetails: {
     categoryId: string;
   };
