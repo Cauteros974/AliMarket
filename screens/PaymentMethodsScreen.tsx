@@ -20,6 +20,8 @@ export default function PaymentMethodsScreen() {
         },
     ]);
 
+    const [holder, setHolder] = useState("Test");
+
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content}>
@@ -41,8 +43,10 @@ export default function PaymentMethodsScreen() {
 
                 <Text style={styles.sectionTitle}>Add new card</Text>
 
-                <TextInput 
-
+                <TextInput
+                    value={holder}
+                    onChangeText={setHolder}
+                    placeholder="Card holder"
                 />
             </ScrollView>
         </SafeAreaView>
