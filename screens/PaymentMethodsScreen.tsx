@@ -22,6 +22,8 @@ export default function PaymentMethodsScreen() {
 
     const [holder, setHolder] = useState("Test");
 
+    const [cardNumber, setCardNumber] = useState("4242424242424242");
+
     function removeCard(cardId: string) {
         setCards((current) => current.filter((card) => card.id !== cardId));
     }
@@ -53,6 +55,11 @@ export default function PaymentMethodsScreen() {
                     placeholder="Card holder"
                     placeholderTextColor={colors.muted}
                     style={styles.input}
+                />
+
+                <TextInput
+                    value={cardNumber}
+                    onChangeText={setCardNumber}
                 />
             </ScrollView>
         </SafeAreaView>
