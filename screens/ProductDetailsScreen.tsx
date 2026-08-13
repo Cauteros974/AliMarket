@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   primaryButton: {
-    flex: 1,
+    width: 200,
     height: 54,
     borderRadius: 18,
     backgroundColor: colors.primary,
