@@ -126,4 +126,7 @@ const styles = StyleSheet.create({
         marginTop: 22,
         letterSpacing: 1,
     },
+    cardHolder: {
+        color: "rgba(255,255,255,0.72)",
+    },
 })
