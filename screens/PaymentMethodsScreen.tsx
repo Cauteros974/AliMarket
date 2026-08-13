@@ -28,7 +28,7 @@ export default function PaymentMethodsScreen() {
         const cleanNumber = cardNumber;
 
         if (holder.trim().length < 2 || cleanNumber.length < 12) {
-            Alert.alert("Invalid card");
+            Alert.alert("Invalid card", "Enter card holder and valid card number.");
             return;
         }
     }
