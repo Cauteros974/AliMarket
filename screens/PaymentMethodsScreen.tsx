@@ -3,6 +3,12 @@ import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 
 import { SafeAreaView } from "react-native-safe-area-context";
 import { colors } from "../theme/colors";
 
+type PaymentCard = {
+    id: string,
+    holder: string,
+    last4: string,
+}
+
 export default function PaymentMethodsScreen() {
     const [cards, setCards] = useState<PaymentCard[]> ([
         {
@@ -33,6 +39,10 @@ export default function PaymentMethodsScreen() {
                 ))}
 
                 <Text style={styles.sectionTitle}>Add new card</Text>
+
+                <TextInput 
+
+                />
             </ScrollView>
         </SafeAreaView>
     )
