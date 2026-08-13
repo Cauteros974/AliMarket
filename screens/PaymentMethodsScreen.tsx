@@ -27,7 +27,7 @@ export default function PaymentMethodsScreen() {
     function addCard() {
         const cleanNumber = cardNumber;
 
-        if (holder.trim().length < 2 || cleanNumber.length < 7) {
+        if (holder.trim().length < 2 || cleanNumber.length < 10) {
             return;
         }
     }
