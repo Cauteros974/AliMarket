@@ -86,6 +86,10 @@ export default function PaymentMethodsScreen() {
                     keyboardType="numeric"
                     style={styles.input}
                 />
+
+                <Pressable onPress={addCard} style={styles.primaryButton}>
+                    <Text style={styles.primaryButtonText}>Add card</Text>
+                </Pressable>
             </ScrollView>
         </SafeAreaView>
     )
@@ -154,4 +158,10 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontWeight: "800",
     },
+    primaryButton: {
+        height: 54,
+        borderRadius: 18,
+        alignItems: "center",
+        justifyContent: "center",
+    }
 })
