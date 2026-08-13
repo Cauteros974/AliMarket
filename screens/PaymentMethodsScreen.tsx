@@ -31,6 +31,16 @@ export default function PaymentMethodsScreen() {
             Alert.alert("Invalid card", "Enter card holder and valid card number.");
             return;
         }
+
+        const newCard: PaymentCard = {
+            id: `card-${Date.now()}`,
+            holder: holder.trim(),
+            last4: cleanNumber.slice(-4),
+            brand: cleanNumber.startsWith("4") ? "Visa" : "Mastercard",
+        };
+
+        setCards((current) => [newCard, ...current]);
+
     }
 
     function removeCard(cardId: string) {
