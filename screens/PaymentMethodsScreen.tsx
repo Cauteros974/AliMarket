@@ -22,6 +22,10 @@ export default function PaymentMethodsScreen() {
 
     const [holder, setHolder] = useState("Test");
 
+    function removeCard(cardId: string) {
+        setCards((current) => current.filter((card) => card.id !== cardId));
+    }
+
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content}>
