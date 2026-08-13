@@ -4,9 +4,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { colors } from "../theme/colors";
 
 type PaymentCard = {
-    id: string,
-    holder: string,
-    last4: string,
+    id: string;
+    holder: string;
+    last4: string;
+    brand: string;
 }
 
 export default function PaymentMethodsScreen() {
