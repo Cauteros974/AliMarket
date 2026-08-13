@@ -1,6 +1,8 @@
 export type RootStackParamList = {
   MainTabs: undefined;
 
+  
+
   CategoryDetails: {
     categoryId: string;
   };
@@ -38,3 +40,4 @@ export type MainTabParamList = {
     Favorites: undefined;
     Profile: undefined;
 }
+
