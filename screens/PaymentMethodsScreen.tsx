@@ -14,12 +14,22 @@ export default function PaymentMethodsScreen() {
     ]);
 
     return(
-        <SafeAreaView>
-            <ScrollView>
-                <Text>
-                    Payment methods
-                </Text>
+        <SafeAreaView style={styles.safeArea}>
+            <ScrollView contentContainerStyle={styles.content}>
+                <Text style={styles.title}>Payment methods</Text>
+
+                {cards.map((card) => (
+                    <View>
+                        <View>
+                            <Text>{card.brand}</Text>
+                        </View>
+                    </View>
+                ))}
             </ScrollView>
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    
+})
