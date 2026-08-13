@@ -119,4 +119,9 @@ const styles = StyleSheet.create({
         fontSize: 18, 
         fontWeight: "900" 
     },
+    cardNumber: {
+        color: colors.white,
+        fontSize: 21,
+        fontWeight: "900",
+    },
 })
