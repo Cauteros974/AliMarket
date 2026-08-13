@@ -114,4 +114,9 @@ const styles = StyleSheet.create({
         minHeight: 132,
         justifyContent: "space-between",
     },
+    cardBrand: { 
+        color: colors.white, 
+        fontSize: 18, 
+        fontWeight: "900" 
+    },
 })
