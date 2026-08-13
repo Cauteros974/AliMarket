@@ -22,6 +22,8 @@ export default function PaymentMethodsScreen() {
                     <View>
                         <View>
                             <Text>{card.brand}</Text>
+                            <Text>**** **** **** {card.last4}</Text>
+                            <Text>{card.holder}</Text>
                         </View>
                     </View>
                 ))}
