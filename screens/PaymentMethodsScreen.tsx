@@ -31,6 +31,8 @@ export default function PaymentMethodsScreen() {
                         </Pressable>
                     </View>
                 ))}
+
+                <Text style={styles.sectionTitle}>Add new card</Text>
             </ScrollView>
         </SafeAreaView>
     )
