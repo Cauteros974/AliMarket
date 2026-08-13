@@ -63,6 +63,7 @@ export default function PaymentMethodsScreen() {
                     placeholder="Card number"
                     placeholderTextColor={colors.muted}
                     keyboardType="numeric"
+                    style={styles.input}
                 />
             </ScrollView>
         </SafeAreaView>
