@@ -43,7 +43,7 @@ export default function AuthScreen({ navigation}: Props) {
                     {mode === "register" ? "Create account" : "Welcome back"}
                 </Text>
 
-                <Text style={styles.subtitle}>Demo auth is saved locally with AsyncStorage.</Text>
+                {/* <Text style={styles.subtitle}>Demo auth is saved locally with AsyncStorage.</Text> */}
 
                 {mode === "register" ? (
                     <TextInput
