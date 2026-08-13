@@ -19,11 +19,11 @@ export default function PaymentMethodsScreen() {
                 <Text style={styles.title}>Payment methods</Text>
 
                 {cards.map((card) => (
-                    <View>
+                    <View key={card.id} style={styles.card}>
                         <View>
-                            <Text>{card.brand}</Text>
-                            <Text>**** **** **** {card.last4}</Text>
-                            <Text>{card.holder}</Text>
+                            <Text style={styles.cardBrand}>{card.brand}</Text>
+                            <Text style={styles.cardNumber}>**** **** **** {card.last4}</Text>
+                            <Text style={styles.cardHolder}>{card.holder}</Text>
                         </View>
                     </View>
                 ))}
