@@ -62,6 +62,7 @@ export default function PaymentMethodsScreen() {
                     onChangeText={setCardNumber}
                     placeholder="Card number"
                     placeholderTextColor={colors.muted}
+                    keyboardType="numeric"
                 />
             </ScrollView>
         </SafeAreaView>
