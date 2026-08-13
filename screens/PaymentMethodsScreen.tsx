@@ -111,5 +111,7 @@ const styles = StyleSheet.create({
         borderRadius: 22,
         padding: 18,
         marginBottom: 12,
+        minHeight: 132,
+        justifyContent: "space-between",
     },
 })
