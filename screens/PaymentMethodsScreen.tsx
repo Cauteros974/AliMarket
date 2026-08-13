@@ -143,4 +143,9 @@ const styles = StyleSheet.create({
         marginTop: 18,
         marginBottom: 12,
     },
+    input: {
+        minHeight: 52,
+        borderRadius: 16,
+        backgroundColor: colors.surface,
+    },
 })
