@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Alert } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { colors } from "../theme/colors";
 
 export default function PaymentMethodsScreen() {
@@ -11,4 +12,14 @@ export default function PaymentMethodsScreen() {
             brand: "Visa",
         },
     ]);
+
+    return(
+        <SafeAreaView>
+            <ScrollView>
+                <Text>
+                    Payment methods
+                </Text>
+            </ScrollView>
+        </SafeAreaView>
+    )
 }
