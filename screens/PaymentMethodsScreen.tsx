@@ -150,5 +150,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
         paddingHorizontal: 14,
+        marginBottom: 10,
+        color: colors.text,
+        fontWeight: "800",
     },
 })
