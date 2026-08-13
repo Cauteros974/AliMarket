@@ -123,5 +123,7 @@ const styles = StyleSheet.create({
         color: colors.white,
         fontSize: 21,
         fontWeight: "900",
+        marginTop: 22,
+        letterSpacing: 1,
     },
 })
