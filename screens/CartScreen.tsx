@@ -238,6 +238,7 @@ const styles = StyleSheet.create({
   totalValue: { color: colors.primary, fontSize: 20, fontWeight: "900" },
   checkoutButton: {
     height: 54,
+    maxWidth: 200,
     borderRadius: 18,
     backgroundColor: colors.primary,
     alignItems: "center",
