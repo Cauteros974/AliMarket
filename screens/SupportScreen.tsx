@@ -130,4 +130,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginTop: 12,
     },
+    primaryButtonText: { 
+        color: colors.white, 
+        fontSize: 16, 
+        fontWeight: "900" 
+    },
 })
