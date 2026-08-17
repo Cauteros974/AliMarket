@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Alert } from "react-native";
+import { Alert, ScrollView, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { colors } from "../theme/colors";
 
@@ -30,4 +30,12 @@ export default function SupportScreen() {
     Alert.alert("Support request sent", "Your demo support message was created.");
     setMessage("");
   }
+
+  return(
+    <SafeAreaView>
+        <ScrollView>
+            <Text>Support Center</Text>
+        </ScrollView>
+    </SafeAreaView>
+  )
 }
