@@ -110,4 +110,9 @@ const styles = StyleSheet.create({
         padding: 16,
         marginBottom: 12,
     },
+    rowBetween: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
 })
