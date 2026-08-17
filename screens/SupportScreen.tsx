@@ -122,4 +122,9 @@ const styles = StyleSheet.create({
         fontWeight: "700",
         textAlignVertical: "top",
     },
+    primaryButton: {
+        height: 54,
+        borderRadius: 18,
+        backgroundColor: colors.primary,
+    },
 })
