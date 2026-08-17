@@ -42,6 +42,7 @@ export default function SupportScreen() {
             {faq.map((item) => (
                 <View>
                     <Text>{item.question}</Text>
+                    <Text>{item.answer}</Text>
                 </View>
             ))}
         </ScrollView>
