@@ -20,6 +20,14 @@ export default function OrderDetailsScreen({route}: Props) {
                     <Text style={styles.emptyTitle}>Order not found</Text>
                 </View>
             </SafeAreaView>
-        )
+        );
     }
+
+    return(
+        <SafeAreaView style={styles.safeArea}>
+            <ScrollView contentContainerStyle={styles.content}>
+                <Text style={styles.title}>Order details</Text>
+            </ScrollView>
+        </SafeAreaView>
+    )
 }
