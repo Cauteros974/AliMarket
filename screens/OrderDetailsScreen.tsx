@@ -41,7 +41,7 @@ export default function OrderDetailsScreen({route}: Props) {
                     </View>
                 </View>
 
-                <View>
+                <View style={styles.card}>
                     <Text style={styles.cardTitle}>Delivery address</Text>
                     <Text style={styles.muted}>
                         {order.address.city}, {order.address.street}
