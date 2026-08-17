@@ -105,4 +105,10 @@ const styles = StyleSheet.create({
         fontSize: 16, 
         fontWeight: "900" 
     },
+    answer: { 
+        color: colors.muted, 
+        marginTop: 8, 
+        lineHeight: 21, 
+        fontWeight: "700" 
+    },
 })
