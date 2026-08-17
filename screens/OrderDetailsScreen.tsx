@@ -60,6 +60,12 @@ export default function OrderDetailsScreen({route}: Props) {
                         return(
                             <View key={cartItem.productId} style={styles.productRow}>
                                 <Image source={{ uri: product.image }} style={styles.productImage} />
+
+                                <View style={styles.productInfo}>
+                                    <Text numberOfLines={2} style={styles.productTitle}>
+                                        {product.title}
+                                    </Text>
+                                </View>
                             </View>
                         )
                     })}
