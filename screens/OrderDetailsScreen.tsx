@@ -116,4 +116,14 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 12,
     },
+    orderId: { 
+        color: colors.text, 
+        fontSize: 17, 
+        fontWeight: "900" 
+    },
+    muted: { 
+        color: colors.muted, 
+        marginTop: 4, 
+        fontWeight: "700" 
+    },
 })
