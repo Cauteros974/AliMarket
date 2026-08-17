@@ -137,4 +137,10 @@ const styles = StyleSheet.create({
         fontSize: 12, 
         fontWeight: "900" 
     },
+    cardTitle: { 
+        color: colors.text, 
+        fontSize: 18, 
+        fontWeight: "900", 
+        marginBottom: 8 
+    }
 })
