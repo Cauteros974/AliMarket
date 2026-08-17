@@ -156,4 +156,12 @@ const styles = StyleSheet.create({
         borderRadius: 14,
         backgroundColor: colors.surfaceSoft,
     },
+    productInfo: { 
+        flex: 1 
+    },
+    productTitle: { 
+        color: colors.text, 
+        fontWeight: "900", 
+        lineHeight: 20 
+    },
 })
