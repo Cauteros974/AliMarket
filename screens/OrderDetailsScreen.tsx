@@ -8,3 +8,8 @@ import { colors } from "../theme/colors";
 import { formatDate, formatPrice } from "../utils/format";
 
 type Props = NativeStackScreenProps<RootStackParamList, "OrderDetails">;
+
+export default function OrderDetailsScreen({route}: Props) {
+    const orders = useShopStore((state) => state.orders);
+    const order = orders.find((item) => item.id === route.params.orderId);
+}
