@@ -111,4 +111,9 @@ const styles = StyleSheet.create({
         lineHeight: 21, 
         fontWeight: "700" 
     },
+    textArea: {
+        minHeight: 130,
+        borderRadius: 18,
+        backgroundColor: colors.surface,
+    },
 })
