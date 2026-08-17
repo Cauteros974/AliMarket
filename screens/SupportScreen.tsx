@@ -56,6 +56,10 @@ export default function SupportScreen() {
                 multiline
                 style={styles.textArea}
             />
+
+            <Pressable>
+                <Text>Send message</Text>
+            </Pressable>
         </ScrollView>
     </SafeAreaView>
   )
