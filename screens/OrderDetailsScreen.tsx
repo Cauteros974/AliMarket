@@ -56,6 +56,12 @@ export default function OrderDetailsScreen({route}: Props) {
                         const product = products.find((item) => item.id === cartItem.productId);
                         
                         if (!product) return null;
+                        
+                        return(
+                            <View key={cartItem.productId} style={styles.productRow}>
+                                <Image source={{ uri: product.image }} style={styles.productImage} />
+                            </View>
+                        )
                     })}
                 </View>
             </ScrollView>
