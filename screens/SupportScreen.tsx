@@ -51,6 +51,8 @@ export default function SupportScreen() {
             <TextInput
                 value={message}
                 onChangeText={setMessage}
+                placeholder="Describe your issue"
+                placeholderTextColor={colors.muted}
             />
         </ScrollView>
     </SafeAreaView>
