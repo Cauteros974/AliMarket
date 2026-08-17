@@ -150,4 +150,10 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: colors.border,
     },
+    productImage: {
+        width: 72,
+        height: 72,
+        borderRadius: 14,
+        backgroundColor: colors.surfaceSoft,
+    },
 })
