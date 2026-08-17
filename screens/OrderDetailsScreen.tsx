@@ -40,6 +40,13 @@ export default function OrderDetailsScreen({route}: Props) {
                         </View>
                     </View>
                 </View>
+
+                <View>
+                    <Text style={styles.cardTitle}>Delivery address</Text>
+                    <Text style={styles.muted}>
+                        {order.address.city}, {order.address.street}
+                    </Text>
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
