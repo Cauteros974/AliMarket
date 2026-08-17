@@ -47,6 +47,11 @@ export default function SupportScreen() {
             ))}
 
             <Text style={styles.sectionTitle}>Contact support</Text>
+
+            <TextInput
+                value={message}
+                onChangeText={setMessage}
+            />
         </ScrollView>
     </SafeAreaView>
   )
