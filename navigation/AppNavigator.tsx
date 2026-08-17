@@ -92,13 +92,13 @@ export default function AppNavigator() {
       <Stack.Screen name="ProductDetails" component={ProductDetailsScreen} options={{ title: "Product" }} />
       <Stack.Screen name="CategoryDetails" component={CategoryDetailsScreen} options={{ title: "Category" }} />
       <Stack.Screen name="Checkout" component={CheckoutScreen} />
-      <Stack.Screen name="OrderDetails" component={OrderDetailsScreen} />
+      <Stack.Screen name="OrderDetails" component={OrderDetailsScreen} options={{ title: "Order details" }}/>
       <Stack.Screen name="Orders" component={OrdersScreen} />
       <Stack.Screen name="Auth" component={AuthScreen} options={{ title: "Account" }} />
       <Stack.Screen name="Addresses" component={AddressesScreen} />
       <Stack.Screen name="Notifications" component={NotificationsScreen} />
       <Stack.Screen name="PaymentMethods" component={PaymentMethodsScreen} options={{ title: "Payment methods" }} />
-      <Stack.Screen name="Support" component={SupportScreen}/>
+      <Stack.Screen name="Support" component={SupportScreen} options={{ title: "Support" }}/>
     </Stack.Navigator>
   );
 }
