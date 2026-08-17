@@ -27,6 +27,15 @@ export default function OrderDetailsScreen({route}: Props) {
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content}>
                 <Text style={styles.title}>Order details</Text>
+
+                <View style={styles.card}>
+                    <View style={styles.rowBetween}>
+                        <View>
+                            <Text style={styles.orderId}>{order.id}</Text>
+                            <Text style={styles.muted}>{formatDate(order.createdAt)}</Text>
+                        </View>
+                    </View>
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
