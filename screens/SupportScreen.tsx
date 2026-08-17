@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Alert, ScrollView, Text } from "react-native";
+import { Alert, ScrollView, Text, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { colors } from "../theme/colors";
 
@@ -32,10 +32,14 @@ export default function SupportScreen() {
   }
 
   return(
-    <SafeAreaView>
-        <ScrollView>
+    <SafeAreaView style={styles.safeArea}>
+        <ScrollView contentContainerStyle={styles.content}>
             <Text>Support Center</Text>
         </ScrollView>
     </SafeAreaView>
   )
 }
+
+const styles = StyleSheet.create({
+
+})
