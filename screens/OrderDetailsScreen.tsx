@@ -51,6 +51,12 @@ export default function OrderDetailsScreen({route}: Props) {
 
                 <View style={styles.card}>
                     <Text style={styles.cardTitle}>Products</Text>
+
+                    {order.items.map((cartItem) => {
+                        const product = products.find((item) => item.id === cartItem.productId);
+                        
+                        if (!product) return null;
+                    })}
                 </View>
             </ScrollView>
         </SafeAreaView>
