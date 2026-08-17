@@ -115,5 +115,7 @@ const styles = StyleSheet.create({
         minHeight: 130,
         borderRadius: 18,
         backgroundColor: colors.surface,
+        borderWidth: 1,
+        borderColor: colors.border,
     },
 })
