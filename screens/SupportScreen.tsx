@@ -100,4 +100,9 @@ const styles = StyleSheet.create({
         padding: 16,
         marginBottom: 10,
     },
+    question: { 
+        color: colors.text, 
+        fontSize: 16, 
+        fontWeight: "900" 
+    },
 })
