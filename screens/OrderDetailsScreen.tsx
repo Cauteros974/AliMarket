@@ -84,5 +84,12 @@ export default function OrderDetailsScreen({route}: Props) {
                 </View>
             </ScrollView>
         </SafeAreaView>
-    )
+    );
 }
+
+const styles = StyleSheet.create({
+    safeArea: {
+        flex: 1, 
+        backgroundColor: colors.background 
+    }
+})
