@@ -45,6 +45,8 @@ export default function SupportScreen() {
                     <Text style={styles.answer}>{item.answer}</Text>
                 </View>
             ))}
+
+            <Text style={styles.sectionTitle}>Contact support</Text>
         </ScrollView>
     </SafeAreaView>
   )
