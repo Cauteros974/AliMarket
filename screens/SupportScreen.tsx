@@ -57,7 +57,7 @@ export default function SupportScreen() {
                 style={styles.textArea}
             />
 
-            <Pressable style={styles.primaryButton}>
+            <Pressable onPress={sendMessage} style={styles.primaryButton}>
                 <Text style={styles.primaryButtonText}>Send message</Text>
             </Pressable>
         </ScrollView>
