@@ -34,7 +34,8 @@ export default function SupportScreen() {
   return(
     <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={styles.content}>
-            <Text>Support Center</Text>
+            <Text style={styles.title}>Support center</Text>
+            <Text style={styles.subtitle}>Find answers or send a demo request to support.</Text>
         </ScrollView>
     </SafeAreaView>
   )
