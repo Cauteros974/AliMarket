@@ -75,6 +75,12 @@ export default function OrderDetailsScreen({route}: Props) {
                         )
                     })}
                 </View>
+
+                <View style={styles.card}>
+                    <View style={styles.rowBetween}>
+                        <Text style={styles.totalLabel}>Total</Text>
+                    </View>
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
