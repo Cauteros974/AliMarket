@@ -54,6 +54,7 @@ export default function SupportScreen() {
                 placeholder="Describe your issue"
                 placeholderTextColor={colors.muted}
                 multiline
+                style={styles.textArea}
             />
         </ScrollView>
     </SafeAreaView>
