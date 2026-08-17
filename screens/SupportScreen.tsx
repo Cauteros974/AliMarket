@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Alert, ScrollView, Text, StyleSheet } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { colors } from "../theme/colors";
 
@@ -38,6 +38,12 @@ export default function SupportScreen() {
             <Text style={styles.subtitle}>Find answers or send a demo request to support.</Text>
 
             <Text style={styles.sectionTitle}>FAQ</Text>
+
+            {faq.map((item) => (
+                <View>
+                    <Text>{item.question}</Text>
+                </View>
+            ))}
         </ScrollView>
     </SafeAreaView>
   )
