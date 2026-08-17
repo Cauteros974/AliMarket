@@ -78,9 +78,14 @@ export default function ProfileScreen({ navigation }: Props) {
                 />
 
                 <MenuItem
-                    label={`Notifications ${unreadCount ? `(${unreadCount})` : ""}`}
-                    icon="notifications-outline"
-                    onPress={() => navigation.navigate("Notifications")}
+                    label="Payment methods"
+                    icon="card-outline"
+                    onPress={() => navigation.navigate("PaymentMethods")}
+                />
+                <MenuItem
+                    label="Support center"
+                    icon="help-circle-outline"
+                    onPress={() => navigation.navigate("Support")}
                 />
             </ScrollView>
         </SafeAreaView>
