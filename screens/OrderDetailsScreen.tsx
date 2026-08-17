@@ -174,4 +174,19 @@ const styles = StyleSheet.create({
         fontSize: 18, 
         fontWeight: "900" 
     },
+    totalValue: { 
+        color: colors.primary, 
+        fontSize: 20, 
+        fontWeight: "900" 
+    },
+    emptyState: { 
+        flex: 1, 
+        alignItems: "center", 
+        justifyContent: "center" 
+    },
+    emptyTitle: { 
+        color: colors.text, 
+        fontSize: 22, 
+        fontWeight: "900" 
+    },
 })
