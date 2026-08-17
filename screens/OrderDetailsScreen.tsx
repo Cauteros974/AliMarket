@@ -65,6 +65,8 @@ export default function OrderDetailsScreen({route}: Props) {
                                     <Text numberOfLines={2} style={styles.productTitle}>
                                         {product.title}
                                     </Text>
+
+                                    <Text style={styles.muted}>Quantity: {cartItem.quantity}</Text>
                                 </View>
                             </View>
                         )
