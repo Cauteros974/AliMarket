@@ -119,5 +119,7 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         padding: 14,
         color: colors.text,
+        fontWeight: "700",
+        textAlignVertical: "top",
     },
 })
