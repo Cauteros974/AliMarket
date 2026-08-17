@@ -15,6 +15,7 @@ import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import PaymentMethodsScreen from "../screens/PaymentMethodsScreen";
 import SupportScreen from "../screens/SupportScreen";
+import OrderDetailsScreen from "../screens/OrderDetailsScreen";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { MainTabParamList, RootStackParamList } from "./types";
@@ -99,6 +100,7 @@ export default function AppNavigator() {
         options={{ title: "Category" }}
       />
       <Stack.Screen name="Checkout" component={CheckoutScreen} />
+      <Stack.Screen name="OrderDetails" component={OrderDetailsScreen} />
       <Stack.Screen name="Orders" component={OrdersScreen} />
       <Stack.Screen name="Auth" component={AuthScreen} options={{ title: "Account" }} />
       <Stack.Screen name="Addresses" component={AddressesScreen} />
