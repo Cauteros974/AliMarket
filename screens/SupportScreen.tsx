@@ -92,4 +92,12 @@ const styles = StyleSheet.create({
         marginTop: 24,
         marginBottom: 12,
     },
+    faqCard: {
+        backgroundColor: colors.surface,
+        borderRadius: 18,
+        borderWidth: 1,
+        borderColor: colors.border,
+        padding: 16,
+        marginBottom: 10,
+    },
 })
