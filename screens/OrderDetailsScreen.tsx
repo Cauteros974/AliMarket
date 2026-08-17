@@ -67,6 +67,9 @@ export default function OrderDetailsScreen({route}: Props) {
                                     </Text>
 
                                     <Text style={styles.muted}>Quantity: {cartItem.quantity}</Text>
+                                    <Text style={styles.productPrice}>
+                                        {formatPrice(product.price * cartItem.quantity)}
+                                    </Text>
                                 </View>
                             </View>
                         )
