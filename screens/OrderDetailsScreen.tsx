@@ -34,6 +34,10 @@ export default function OrderDetailsScreen({route}: Props) {
                             <Text style={styles.orderId}>{order.id}</Text>
                             <Text style={styles.muted}>{formatDate(order.createdAt)}</Text>
                         </View>
+
+                        <View style={styles.statusBadge}>
+                            <Text style={styles.statusText}>{order.status}</Text>
+                        </View>
                     </View>
                 </View>
             </ScrollView>
