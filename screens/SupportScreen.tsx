@@ -40,9 +40,9 @@ export default function SupportScreen() {
             <Text style={styles.sectionTitle}>FAQ</Text>
 
             {faq.map((item) => (
-                <View>
-                    <Text>{item.question}</Text>
-                    <Text>{item.answer}</Text>
+                 <View key={item.question} style={styles.faqCard}>
+                    <Text style={styles.question}>{item.question}</Text>
+                    <Text style={styles.answer}>{item.answer}</Text>
                 </View>
             ))}
         </ScrollView>
