@@ -126,4 +126,10 @@ const styles = StyleSheet.create({
         marginTop: 4, 
         fontWeight: "700" 
     },
+    statusBadge: {
+        backgroundColor: colors.surfaceSoft,
+        borderRadius: 999,
+        paddingHorizontal: 10,
+        paddingVertical: 6,
+    },
 })
