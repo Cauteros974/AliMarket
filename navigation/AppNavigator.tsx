@@ -89,16 +89,8 @@ export default function AppNavigator() {
       }}
     >
       <Stack.Screen name="MainTabs" component={MainTabs} options={{ headerShown: false }} />
-      <Stack.Screen
-        name="ProductDetails"
-        component={ProductDetailsScreen}
-        options={{ title: "Product" }}
-      />
-      <Stack.Screen
-        name="CategoryDetails"
-        component={CategoryDetailsScreen}
-        options={{ title: "Category" }}
-      />
+      <Stack.Screen name="ProductDetails" component={ProductDetailsScreen} options={{ title: "Product" }} />
+      <Stack.Screen name="CategoryDetails" component={CategoryDetailsScreen} options={{ title: "Category" }} />
       <Stack.Screen name="Checkout" component={CheckoutScreen} />
       <Stack.Screen name="OrderDetails" component={OrderDetailsScreen} />
       <Stack.Screen name="Orders" component={OrdersScreen} />
