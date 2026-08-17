@@ -15,6 +15,12 @@ export type Category = {
     subcategories: string[];
 };
 
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
 export type Product = {
     id: string;
     title: string;
