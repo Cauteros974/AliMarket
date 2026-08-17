@@ -8,6 +8,10 @@ const faq = [
     question: "How long does delivery take?",
     answer: "Most demo products show delivery in 7-17 days depending on the item.",
   },
+  {
+    question: "Can I cancel an order?",
+    answer: "In this demo, orders are saved locally. A real app would call backend order APIs.",
+  },
 ];
 
 export default function SupportScreen() {
