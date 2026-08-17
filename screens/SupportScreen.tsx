@@ -6,6 +6,7 @@ import { colors } from "../theme/colors";
 const faq = [
   {
     question: "How long does delivery take?",
+    answer: "Most demo products show delivery in 7-17 days depending on the item.",
   },
 ];
 
