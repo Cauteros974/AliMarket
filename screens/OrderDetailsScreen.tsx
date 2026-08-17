@@ -164,4 +164,14 @@ const styles = StyleSheet.create({
         fontWeight: "900", 
         lineHeight: 20 
     },
+    productPrice: { 
+        color: colors.primary, 
+        fontWeight: "900", 
+        marginTop: 6 
+    },
+    totalLabel: { 
+        color: colors.text, 
+        fontSize: 18, 
+        fontWeight: "900" 
+    },
 })
