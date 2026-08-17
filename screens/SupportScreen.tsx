@@ -36,6 +36,8 @@ export default function SupportScreen() {
         <ScrollView contentContainerStyle={styles.content}>
             <Text style={styles.title}>Support center</Text>
             <Text style={styles.subtitle}>Find answers or send a demo request to support.</Text>
+
+            <Text style={styles.sectionTitle}>FAQ</Text>
         </ScrollView>
     </SafeAreaView>
   )
