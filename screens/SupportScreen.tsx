@@ -85,4 +85,11 @@ const styles = StyleSheet.create({
         fontWeight: "700", 
         lineHeight: 21 
     },
+    sectionTitle: {
+        color: colors.text,
+        fontSize: 20,
+        fontWeight: "900",
+        marginTop: 24,
+        marginBottom: 12,
+    },
 })
