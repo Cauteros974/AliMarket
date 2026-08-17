@@ -70,4 +70,8 @@ const styles = StyleSheet.create({
         flex: 1, 
         backgroundColor: colors.background 
     },
+    content: { 
+        padding: 18, 
+        paddingBottom: 28 
+    },
 })
