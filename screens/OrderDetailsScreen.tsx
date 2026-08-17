@@ -12,4 +12,14 @@ type Props = NativeStackScreenProps<RootStackParamList, "OrderDetails">;
 export default function OrderDetailsScreen({route}: Props) {
     const orders = useShopStore((state) => state.orders);
     const order = orders.find((item) => item.id === route.params.orderId);
+
+    if(!order) {
+        return(
+            <SafeAreaView style={styles.safeArea}>
+                <View style={styles.emptyState}>
+                    <Text style={styles.emptyTitle}>Order not found</Text>
+                </View>
+            </SafeAreaView>
+        )
+    }
 }
