@@ -12,6 +12,10 @@ const faq = [
     question: "Can I cancel an order?",
     answer: "In this demo, orders are saved locally. A real app would call backend order APIs.",
   },
+  {
+    question: "Where are my saved products?",
+    answer: "Open the Saved tab from the bottom navigation.",
+  },
 ];
 
 export default function SupportScreen() {
