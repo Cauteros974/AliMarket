@@ -14,6 +14,7 @@ import OrdersScreen from "../screens/OrdersScreen";
 import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import PaymentMethodsScreen from "../screens/PaymentMethodsScreen";
+import SupportScreen from "../screens/SupportScreen";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { MainTabParamList, RootStackParamList } from "./types";
@@ -103,6 +104,7 @@ export default function AppNavigator() {
       <Stack.Screen name="Addresses" component={AddressesScreen} />
       <Stack.Screen name="Notifications" component={NotificationsScreen} />
       <Stack.Screen name="PaymentMethods" component={PaymentMethodsScreen} options={{ title: "Payment methods" }} />
+      <Stack.Screen name="Support" component={SupportScreen}/>
     </Stack.Navigator>
   );
 }
