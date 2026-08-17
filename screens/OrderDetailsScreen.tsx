@@ -142,5 +142,12 @@ const styles = StyleSheet.create({
         fontSize: 18, 
         fontWeight: "900", 
         marginBottom: 8 
-    }
+    },
+    productRow: {
+        flexDirection: "row",
+        gap: 12,
+        paddingVertical: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: colors.border,
+    },
 })
