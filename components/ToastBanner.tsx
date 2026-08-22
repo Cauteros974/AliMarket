@@ -18,6 +18,11 @@ export default function ToastBanner() {
 
     if(!toast) return null;
 
-    const background = toast.type === "success" ? colors.success
+    const background = 
+        toast.type === "success" 
+            ? colors.success
+            : toast.type === "error"
+                ? colors.danger
+                : colors.text
 
 }
