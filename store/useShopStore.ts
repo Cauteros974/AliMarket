@@ -106,8 +106,8 @@ export const useShopStore = create<ShopState>()(
       selectedAddressId: defaultAddress.id,
       orders: [],
       toast: null,
-      hideToast: null,
-      showToast: (message) => set({ toast: message }),
+      showToast: (toast) => set({ toast }),
+      hideToast: () => set({ toast: null }),
       clearToast: () => set({ toast: null }),
       notifications: defaultNotifications,
 
