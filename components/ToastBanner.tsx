@@ -16,4 +16,8 @@ export default function ToastBanner() {
         return () => clearTimeout(timer);
     }, [hideToast, toast]);
 
+    if(!toast) return null;
+
+    const background = toast.type === "success" ? colors.success
+
 }
