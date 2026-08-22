@@ -74,6 +74,9 @@ type ShopState = {
   removeAddress: (addressId: string) => void;
   placeOrder: (total: number) => Order | null;
   markNotificationRead: (notificationId: string) => void;
+  toast: string | null;
+  showToast: (message: string) => void;
+  clearToast: () => void;
 };
 
 const initialFilters: CatalogFilters = {
@@ -99,6 +102,9 @@ export const useShopStore = create<ShopState>()(
       addresses: [defaultAddress],
       selectedAddressId: defaultAddress.id,
       orders: [],
+      toast: null,
+      showToast: (message) => set({ toast: message }),
+      clearToast: () => set({ toast: null }),
       notifications: defaultNotifications,
 
       addToCart: (productId) =>
