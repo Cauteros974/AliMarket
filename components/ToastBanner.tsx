@@ -27,7 +27,7 @@ export default function ToastBanner() {
 
     return(
          <View style={[styles.container, { top: insets.top + 10 }]}>
-            <Text>{toast.message}</Text>
+            <Text style={styles.text}>{toast.message}</Text>
         </View>
     );
 }
@@ -45,5 +45,10 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.16,
         shadowRadius: 16,
         elevation: 5,
-    }
+    },
+    text: {
+        color: colors.white,
+        fontWeight: "900",
+        textAlign: "center",
+  },
 })
