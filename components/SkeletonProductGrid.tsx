@@ -3,10 +3,12 @@ import { colors } from "../theme/colors";
 
 export default function SkeletonProductGrid() {
     return(
-        <View>
-            <View>
-                <View style={styles.image} />
-            </View>
+        <View style={styles.grid}>
+            {Array.from({ length: 4}).map((_, index) => (
+                <View style={styles.card}>
+                    <View style={styles.image} />
+                </View>
+            ))}
         </View>
     )
 }
