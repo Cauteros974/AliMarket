@@ -5,7 +5,7 @@ export default function SkeletonProductGrid() {
     return(
         <View style={styles.grid}>
             {Array.from({ length: 4}).map((_, index) => (
-                <View style={styles.card}>
+                <View key={index} style={styles.card}>
                     <View style={styles.image} />
                 </View>
             ))}
