@@ -29,5 +29,13 @@ export default function ToastBanner() {
          <View style={[styles.container, { top: insets.top + 10 }]}>
             <Text>{toast.message}</Text>
         </View>
-    )
+    );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        position: "absolute",
+        left: 18,
+        right: 18,
+    }
+})
