@@ -22,8 +22,10 @@ const styles = StyleSheet.create({
         gap: 12
     },
     card: {
+        width: "48%",
         backgroundColor: colors.surface,
-        borderRadius: 18
+        borderRadius: 18,
+        borderWidth: 1
     },
     image: {
         height: 132,
