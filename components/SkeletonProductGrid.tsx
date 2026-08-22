@@ -17,8 +17,9 @@ export default function SkeletonProductGrid() {
 
 const styles = StyleSheet.create({
     grid: {
-        flexDirection: "column",
-        flexWrap: "wrap"
+        flexDirection: "row",
+        flexWrap: "wrap",
+        gap: 12
     },
     image: {
         height: 132,
