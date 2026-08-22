@@ -33,5 +33,9 @@ const styles = StyleSheet.create({
         height: 132,
         borderRadius: 14,
         backgroundColor: colors.border,
+    },
+    line: {
+        height: 12,
+        borderRadius: 10
     }
 })
