@@ -37,6 +37,9 @@ const styles = StyleSheet.create({
     line: {
         height: 12,
         borderRadius: 14,
-        backgroundColor: colors.border
+        backgroundColor: colors.border,
+    },
+    shortLine: {
+        width: "50%"
     }
 })
