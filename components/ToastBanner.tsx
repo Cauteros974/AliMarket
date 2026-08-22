@@ -25,4 +25,9 @@ export default function ToastBanner() {
                 ? colors.danger
                 : colors.text
 
+    return(
+        <View>
+            <Text>{toast.message}</Text>
+        </View>
+    )
 }
