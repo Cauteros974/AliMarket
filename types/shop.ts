@@ -88,3 +88,10 @@ export type AppNotification = {
   date: string;
   read: boolean;
 };
+
+export type ToastType = "success" | "error" | "info";
+
+export type Toast = {
+  type: ToastType;
+  message: string;
+};
