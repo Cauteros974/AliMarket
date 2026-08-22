@@ -13,6 +13,7 @@ export default function ToastBanner() {
         if(!toast) return;
 
         const timer = setTimeout(hideToast, 2200);
-    })
+        return () => clearTimeout(timer);
+    }, [hideToast, toast]);
 
 }
