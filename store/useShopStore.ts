@@ -77,6 +77,7 @@ type ShopState = {
   toast: string | null;
   showToast: (message: string) => void;
   clearToast: () => void;
+  setUser: (user: User) => void;
 };
 
 const initialFilters: CatalogFilters = {
@@ -91,6 +92,7 @@ export const useShopStore = create<ShopState>()(
   persist(
     (set, get) => ({
       cart: [],
+      setUser: (user) => set({ user }),
       favoriteIds: [],
       searchQuery: "",
       selectedCategoryId: null,
