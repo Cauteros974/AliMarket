@@ -26,7 +26,7 @@ export default function ToastBanner() {
                 : colors.text
 
     return(
-        <View>
+         <View style={[styles.container, { top: insets.top + 10 }]}>
             <Text>{toast.message}</Text>
         </View>
     )
