@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
         backgroundColor: colors.border,
     },
     shortLine: {
-        width: "50%"
+        width: "62%"
     }
 })
