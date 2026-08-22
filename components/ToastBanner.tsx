@@ -39,5 +39,7 @@ const styles = StyleSheet.create({
         right: 18,
         zIndex: 100,
         borderRadius: 16,
+        paddingHorizontal: 16,
+        paddingVertical: 12,
     }
 })
