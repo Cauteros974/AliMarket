@@ -188,11 +188,19 @@ export const useShopStore = create<ShopState>()(
 
       clearCoupon: () => set({ appliedCoupon: null, couponCode: "" }),
 
-      register: (name, email) => set({ user: { name, email } }),
+      register: (name, email) => 
+        set({
+          user: {
+            id: createId("user"),
+            name,
+            email,
+          },
+        }),
 
       login: (email) =>
         set({
           user: {
+            id: createId("user"),
             name: email.split("@")[0] || "Customer",
             email,
           },
