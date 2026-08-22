@@ -7,4 +7,12 @@ import { colors } from "../theme/colors";
 export default function ToastBanner() {
     const insets = useSafeAreaInsets();
     const toast = useShopStore((state) => state.toast);
+    const hideToast = useShopStore((state) => state.hideToast);
+
+    useEffect(() => {
+        if(!toast) return;
+
+        const timer = setTimeout(hideToast, 2200);
+    })
+
 }

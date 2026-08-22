@@ -75,6 +75,7 @@ type ShopState = {
   placeOrder: (total: number) => Order | null;
   markNotificationRead: (notificationId: string) => void;
   toast: string | null;
+  hideToast: string | null;
   showToast: (message: string) => void;
   clearToast: () => void;
   setUser: (user: User) => void;
@@ -105,6 +106,7 @@ export const useShopStore = create<ShopState>()(
       selectedAddressId: defaultAddress.id,
       orders: [],
       toast: null,
+      hideToast: null,
       showToast: (message) => set({ toast: message }),
       clearToast: () => set({ toast: null }),
       notifications: defaultNotifications,
