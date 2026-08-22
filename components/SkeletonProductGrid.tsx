@@ -21,6 +21,10 @@ const styles = StyleSheet.create({
         flexWrap: "wrap",
         gap: 12
     },
+    card: {
+        backgroundColor: colors.surface,
+        borderRadius: 18
+    },
     image: {
         height: 132,
         borderRadius: 14,
