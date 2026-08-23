@@ -20,7 +20,9 @@ export default function SearchSuggestions({query, onPick}: SearchSuggestionsProp
         <View style={styles.container}>
             {suggestions.map((suggestion) => (
                 <Pressable key={suggestion} onPress={() => onPick(suggestion)} style={styles.item}>
-                    <Text>{suggestion}</Text>
+                    <Text numberOfLines={1} style={styles.text}>
+                        {suggestion}
+                    </Text>
                 </Pressable>
             ))}
         </View>
