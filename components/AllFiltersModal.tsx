@@ -55,6 +55,7 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
 
                     <Pressable
                         onPress={() => updateFilters({ discountsOnly: !filters.discountsOnly })}
+                        style={[styles.option, filters.discountsOnly && styles.activeOption]}
                     >
                         <Text>
                             Products with disctounts
