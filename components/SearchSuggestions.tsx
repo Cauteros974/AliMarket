@@ -31,6 +31,8 @@ export default function SearchSuggestions({query, onPick}: SearchSuggestionsProp
 
 const styles = StyleSheet.create({
     container: {
-
+        backgroundColor: colors.background,
+        borderWidth: 1,
+        borderColor: colors.border
     }
 })
