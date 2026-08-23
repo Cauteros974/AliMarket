@@ -11,8 +11,8 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
     return(
         <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
             <View style={styles.backdrop}>
-                <View>
-                    <Text>All filters</Text>
+                <View style={styles.sheet}>
+                    <Text style={styles.title}>All filters</Text>
                     <Pressable>
                         <Text>Close</Text>
                     </Pressable>
@@ -21,3 +21,7 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
         </Modal>
     )
 }
+
+const styles = StyleSheet.create({
+    
+})
