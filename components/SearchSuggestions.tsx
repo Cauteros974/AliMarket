@@ -8,6 +8,8 @@ type SearchSuggestionsProps = {
 }
 
 export default function SearchSuggestions({query, onPick}: SearchSuggestionsProps){
+    const normalized = query.trim().toLowerCase();
+    
     const suggestions = Array.from(
         new Set(
             products
