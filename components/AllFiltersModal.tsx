@@ -93,5 +93,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.surface,
         borderWidth: 1,
         borderColor: colors.border,
+        paddingHorizontal: 12,
+        color: colors.text,
+        fontWeight: "900",
     }
 })
