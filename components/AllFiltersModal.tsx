@@ -32,5 +32,10 @@ const styles = StyleSheet.create({
         backgroundColor: colors.background,
         borderTopLeftRadius: 26,
         borderTopRightRadius: 26,
+        padding: 18
+    },
+    header: {
+        flexDirection: "row",
+        alignItems: "center"
     }
 })
