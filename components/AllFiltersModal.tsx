@@ -12,10 +12,12 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
         <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
             <View style={styles.backdrop}>
                 <View style={styles.sheet}>
-                    <Text style={styles.title}>All filters</Text>
-                    <Pressable>
-                        <Text style={styles.close}>Close</Text>
-                    </Pressable>
+                    <View style={styles.header}>
+                        <Text style={styles.title}>All filters</Text>
+                        <Pressable onPress={onClose}>
+                            <Text style={styles.close}>Close</Text>
+                        </Pressable>
+                    </View>
                 </View>
             </View>
         </Modal>
