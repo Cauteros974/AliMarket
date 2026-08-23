@@ -116,6 +116,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginBottom: 10,
     },
+    activeOption: {
+        borderColor: colors.primary,
+        backgroundColor: colors.surfaceSoft
+    },
     optionText: {
         color: colors.text,
         fontWeight: "900"
