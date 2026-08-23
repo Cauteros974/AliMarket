@@ -70,6 +70,12 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                             Rating 4.5+
                         </Text>
                     </Pressable>
+
+                    <View>
+                        <Pressable>
+                            <Text>Reset</Text>
+                        </Pressable>
+                    </View>
                 </View>
             </View>
         </Modal>
