@@ -77,7 +77,7 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                             <Text style={styles.secondaryText}>Reset</Text>
                         </Pressable>
 
-                        <Pressable onPress={onClose} style={styles.primarButton}>
+                        <Pressable onPress={onClose} style={styles.primaryButton}>
                             <Text style={styles.primaryText}>Show results</Text>
                         </Pressable>
                     </View>
