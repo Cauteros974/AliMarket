@@ -80,5 +80,10 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontWeight: "900",
         marginBottom: 10,
-    }
+    },
+    priceRow: {
+        flexDirection: "row",
+        gap: 10,
+        marginBottom: 12,
+    },
 })
