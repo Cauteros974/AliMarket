@@ -156,5 +156,10 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 10,
         marginTop: 8,
+    },
+    secondaryButton: {
+        flex: 1,
+        height: 50,
+        borderRadius: 17
     }
 })
