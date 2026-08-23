@@ -164,5 +164,9 @@ const styles = StyleSheet.create({
         backgroundColor: colors.surface,
         alignItems: "center",
         justifyContent: "center",
+    },
+    secondaryText: {
+        color: colors.text,
+        fontWeight: "900"
     }
 })
