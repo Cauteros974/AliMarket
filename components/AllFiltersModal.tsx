@@ -33,6 +33,15 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                             placeholderTextColor={colors.muted}
                             style={styles.input}
                         />
+
+                        <TextInput
+                            value={filters.maxPrice}
+                            onChangeText={(value) => updateFilters({ maxPrice: value })}
+                            keyboardType="numeric"
+                            placeholder="Max €"
+                            placeholderTextColor={colors.muted}
+                            style={styles.input}
+                        />
                     </View>
                 </View>
             </View>
