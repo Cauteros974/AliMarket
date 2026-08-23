@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         overflow: "hidden",
     },
     item: {
-        paddingHorizontal: 10,
+        paddingHorizontal: 14,
         paddingVertical: 10
     }
 })
