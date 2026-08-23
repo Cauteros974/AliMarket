@@ -9,6 +9,8 @@ type SearchSuggestionsProps = {
 
 export default function SearchSuggestions({query, onPick}: SearchSuggestionsProps){
     const normalized = query.trim().toLowerCase();
+
+    if (normalized.length < 2) return null;
     
     const suggestions = Array.from(
         new Set(
