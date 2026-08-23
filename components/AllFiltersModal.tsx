@@ -104,5 +104,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: 12,
         color: colors.text,
         fontWeight: "800",
+    },
+    optionText: {
+        color: colors.text,
+        fontWeight: "900"
     }
 })
