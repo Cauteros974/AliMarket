@@ -46,6 +46,7 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
 
                     <Pressable
                         onPress={() => updateFilters({ freeDeliveryOnly: !filters.freeDeliveryOnly })}
+                        style={[styles.option, filters.freeDeliveryOnly && styles.activeOption]}
                     >
                         <Text style={[styles.optionText, filters.freeDeliveryOnly && styles.activeOptionText]}>
                             Free delivery only
@@ -104,6 +105,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 12,
         color: colors.text,
         fontWeight: "800",
+    },
+    option: {
+        minHeight: 50,
+        borderRadius: 16,
+        backgroundColor: colors.surface,
     },
     optionText: {
         color: colors.text,
