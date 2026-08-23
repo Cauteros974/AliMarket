@@ -2,7 +2,12 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { products } from "../data/products";
 import { colors } from "../theme/colors";
 
-export default function SearchSuggestions(){
+type SearchSuggestionsProps = {
+    query: string;
+    onPick: (value: string) => void;
+}
+
+export default function SearchSuggestions({query, onPick}: SearchSuggestionsProps){
     const suggestions = Array.from(
         new(
             products
