@@ -23,5 +23,9 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
 }
 
 const styles = StyleSheet.create({
-    
+    backdrop: {
+        flex: 1,
+        backgroundColor: colors.background,
+        justifyContent: "flex-end"
+    }
 })
