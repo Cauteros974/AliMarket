@@ -33,6 +33,8 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: colors.surface,
         borderWidth: 1,
-        borderColor: colors.border
+        borderColor: colors.border,
+        borderRadius: 16,
+        marginTop: 8,
     }
 })
