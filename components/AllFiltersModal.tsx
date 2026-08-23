@@ -1,4 +1,4 @@
-import { Modal,View, Text, StyleSheet } from "react-native";
+import { Modal, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
@@ -7,7 +7,10 @@ export default function AllFiltersModal() {
         <Modal>
             <View>
                 <View>
-                    <Text>All filters</Text>      
+                    <Text>All filters</Text>
+                    <Pressable>
+                        <Text>Close</Text>
+                    </Pressable>
                 </View>
             </View>
         </Modal>
