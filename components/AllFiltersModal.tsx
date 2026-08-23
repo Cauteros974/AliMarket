@@ -46,5 +46,9 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontSize: 24,
         fontWeight: "900",
-    }
+    },
+    close: {
+        color: colors.primary,
+        fontWeight: "900",
+    },
 })
