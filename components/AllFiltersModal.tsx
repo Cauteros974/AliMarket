@@ -159,7 +159,9 @@ const styles = StyleSheet.create({
     },
     secondaryButton: {
         flex: 1,
-        height: 50,
-        borderRadius: 17
+        height: 52,
+        borderRadius: 16,
+        backgroundColor: colors.surface,
+        alignItems: "center",
     }
 })
