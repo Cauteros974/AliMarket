@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
     input: {
         flex: 1,
         minHeight: 30,
-        borderRadius: 14
+        borderRadius: 14,
+        backgroundColor: colors.surface,
     }
 })
