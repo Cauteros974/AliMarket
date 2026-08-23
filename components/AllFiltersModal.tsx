@@ -151,5 +151,10 @@ const styles = StyleSheet.create({
     },
     activeOptionText: {
         color: colors.primary
+    },
+    actions: {
+        flexDirection: "row",
+        gap: 10,
+        marginTop: 8,
     }
 })
