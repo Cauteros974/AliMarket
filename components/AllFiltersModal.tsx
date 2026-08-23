@@ -10,6 +10,7 @@ type AllFiltersModalProps = {
 export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps) {
     const filters = useShopStore((state) => state.filters);
     const updateFilters = useShopStore((state) => state.updateFilters);
+    const resetFilters = useShopStore((state) => state.resetFilters);
 
     return(
         <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
@@ -72,7 +73,7 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                     </Pressable>
 
                     <View>
-                        <Pressable>
+                        <Pressable onPress={resetFilters} style={styles.secondaryButton}>
                             <Text>Reset</Text>
                         </Pressable>
                     </View>
