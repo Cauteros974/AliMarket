@@ -43,5 +43,9 @@ const styles = StyleSheet.create({
         paddingVertical: 11,
         borderBottomWidth: 1,
         borderBottomColor: colors.border,
+    },
+    text: {
+        color: colors.text,
+        fontWeight: "900"
     }
 })
