@@ -40,6 +40,8 @@ const styles = StyleSheet.create({
     },
     item: {
         paddingHorizontal: 14,
-        paddingVertical: 10
+        paddingVertical: 11,
+        borderBottomWidth: 1,
+        borderBottomColor: colors.border,
     }
 })
