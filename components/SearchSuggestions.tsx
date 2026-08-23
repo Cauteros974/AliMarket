@@ -5,7 +5,9 @@ import { colors } from "../theme/colors";
 export default function SearchSuggestions(){
     const suggestions = Array.from(
         new(
-            products.filter((product) => product.title.toLowerCase().includes(normalized))
+            products
+            .filter((product) => product.title.toLowerCase().includes(normalized))
+            .map((product) => product.title)
         )
     )
 
