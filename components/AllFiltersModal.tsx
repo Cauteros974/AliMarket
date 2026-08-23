@@ -30,6 +30,8 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                             onChangeText={(value) => updateFilters({ minPrice: value })}
                             keyboardType="numeric"
                             placeholder="Min €"
+                            placeholderTextColor={colors.muted}
+                            style={styles.input}
                         />
                     </View>
                 </View>
