@@ -47,7 +47,7 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                     <Pressable
                         onPress={() => updateFilters({ freeDeliveryOnly: !filters.freeDeliveryOnly })}
                     >
-                        <Text style={[styles.optionText, filters.freeDeliveryOnly && styles.activeOptionText]}>
+                        <Text style={[styles.optionText]}>
                             Free delivery only
                         </Text>
                     </Pressable>
