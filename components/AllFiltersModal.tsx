@@ -27,5 +27,10 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.background,
         justifyContent: "flex-end"
+    },
+    sheet: {
+        backgroundColor: colors.background,
+        borderTopLeftRadius: 26,
+        borderTopRightRadius: 26,
     }
 })
