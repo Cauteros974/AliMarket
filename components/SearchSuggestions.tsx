@@ -18,7 +18,11 @@ export default function SearchSuggestions({query, onPick}: SearchSuggestionsProp
 
     return(
         <View>
-
+            {suggestions.map((suggestion) => (
+                <Pressable>
+                    <Text>{suggestion}</Text>
+                </Pressable>
+            ))}
         </View>
     )
 }
