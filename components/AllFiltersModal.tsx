@@ -113,6 +113,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
         paddingHorizontal: 14,
+        justifyContent: "center",
+        marginBottom: 10,
     },
     optionText: {
         color: colors.text,
