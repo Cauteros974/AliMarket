@@ -76,4 +76,9 @@ const styles = StyleSheet.create({
         color: colors.primary,
         fontWeight: "900",
     },
+    label: {
+        color: colors.text,
+        fontWeight: "900",
+        marginBottom: 10,
+    }
 })
