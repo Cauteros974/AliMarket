@@ -184,5 +184,5 @@ const styles = StyleSheet.create({
     primaryText: {
         color: colors.white,
         fontWeight: "900"
-    }
-})
+    },
+});
