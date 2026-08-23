@@ -9,7 +9,7 @@ type SearchSuggestionsProps = {
 
 export default function SearchSuggestions({query, onPick}: SearchSuggestionsProps){
     const suggestions = Array.from(
-        new(
+        new Set(
             products
             .filter((product) => product.title.toLowerCase().includes(normalized))
             .map((product) => product.title)
