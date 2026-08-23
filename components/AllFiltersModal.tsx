@@ -41,5 +41,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         marginBottom: 18
+    },
+    title: {
+        color: colors.text,
+        fontSize: 24,
+        fontWeight: "900",
     }
 })
