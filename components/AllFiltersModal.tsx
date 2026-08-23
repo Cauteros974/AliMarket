@@ -10,7 +10,7 @@ type AllFiltersModalProps = {
 export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps) {
     return(
         <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
-            <View>
+            <View style={styles.backdrop}>
                 <View>
                     <Text>All filters</Text>
                     <Pressable>
