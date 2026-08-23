@@ -95,6 +95,6 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         paddingHorizontal: 12,
         color: colors.text,
-        fontWeight: "900",
+        fontWeight: "800",
     }
 })
