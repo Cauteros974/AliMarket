@@ -14,7 +14,7 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                 <View style={styles.sheet}>
                     <Text style={styles.title}>All filters</Text>
                     <Pressable>
-                        <Text>Close</Text>
+                        <Text style={styles.close}>Close</Text>
                     </Pressable>
                 </View>
             </View>
