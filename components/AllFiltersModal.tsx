@@ -2,9 +2,14 @@ import { Modal, Pressable, StyleSheet, Text, TextInput, View } from "react-nativ
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
-export default function AllFiltersModal() {
+type AllFiltersModalProps = {
+  visible: boolean;
+  onClose: () => void;
+};
+
+export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps) {
     return(
-        <Modal>
+        <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
             <View>
                 <View>
                     <Text>All filters</Text>
