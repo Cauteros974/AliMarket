@@ -175,7 +175,10 @@ const styles = StyleSheet.create({
     },
     primaryButton: {
         flex: 1,
-        height: 50,
-        borderRadius: 16
+        height: 52,
+        borderRadius: 16,
+        backgroundColor: colors.primary,
+        alignItems: "center",
+        justifyContent: "center",
     }
 })
