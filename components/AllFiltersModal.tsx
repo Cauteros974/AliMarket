@@ -52,6 +52,14 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                             Free delivery only
                         </Text>
                     </Pressable>
+
+                    <Pressable
+                        onPress={() => updateFilters({ discountsOnly: !filters.discountsOnly })}
+                    >
+                        <Text>
+                            Products with disctounts
+                        </Text>
+                    </Pressable>
                 </View>
             </View>
         </Modal>
