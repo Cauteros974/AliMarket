@@ -110,6 +110,9 @@ const styles = StyleSheet.create({
         minHeight: 50,
         borderRadius: 16,
         backgroundColor: colors.surface,
+        borderWidth: 1,
+        borderColor: colors.border,
+        paddingHorizontal: 14,
     },
     optionText: {
         color: colors.text,
