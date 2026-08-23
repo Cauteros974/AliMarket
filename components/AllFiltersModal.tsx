@@ -108,5 +108,8 @@ const styles = StyleSheet.create({
     optionText: {
         color: colors.text,
         fontWeight: "900"
+    },
+    activeOptionText: {
+        color: colors.primary
     }
 })
