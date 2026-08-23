@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
         fontWeight: "900"
     },
     primaryButton: {
-        flex: 1,
+        flex: 1.4,
         height: 52,
         borderRadius: 16,
         backgroundColor: colors.primary,
