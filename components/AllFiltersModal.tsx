@@ -86,4 +86,9 @@ const styles = StyleSheet.create({
         gap: 10,
         marginBottom: 12,
     },
+    input: {
+        flex: 1,
+        minHeight: 30,
+        borderRadius: 14
+    }
 })
