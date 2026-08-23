@@ -17,12 +17,18 @@ export default function SearchSuggestions({query, onPick}: SearchSuggestionsProp
     )
 
     return(
-        <View>
+        <View style={styles.container}>
             {suggestions.map((suggestion) => (
-                <Pressable>
+                <Pressable key={suggestion} onPress={() => onPick(suggestion)} style={styles.item}>
                     <Text>{suggestion}</Text>
                 </Pressable>
             ))}
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+
+    }
+})
