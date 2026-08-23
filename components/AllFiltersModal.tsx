@@ -8,6 +8,9 @@ type AllFiltersModalProps = {
 };
 
 export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps) {
+    const filters = useShopStore((state) => state.filters);
+    const updateFilters = useShopStore((state) => state.updateFilters);
+
     return(
         <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
             <View style={styles.backdrop}>
@@ -17,6 +20,15 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                         <Pressable onPress={onClose}>
                             <Text style={styles.close}>Close</Text>
                         </Pressable>
+                    </View>
+
+                    <Text style={styles.label}>Price range</Text>
+                    
+                    <View>
+                        <TextInput
+                            value={filters.minPrice}
+                            onChangeText={(value) => updateFilters({ minPrice: value })}
+                        />
                     </View>
                 </View>
             </View>
