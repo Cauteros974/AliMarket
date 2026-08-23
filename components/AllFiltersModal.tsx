@@ -61,6 +61,12 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                             Products with discounts
                         </Text>
                     </Pressable>
+
+                    <Pressable>
+                        <Text style={[styles.optionText, filters.minRating === 4.5 && styles.activeOptionText]}>
+                            Rating
+                        </Text>
+                    </Pressable>
                 </View>
             </View>
         </Modal>
