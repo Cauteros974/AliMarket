@@ -180,5 +180,9 @@ const styles = StyleSheet.create({
         backgroundColor: colors.primary,
         alignItems: "center",
         justifyContent: "center",
+    },
+    primaryText: {
+        color: colors.white,
+        fontWeight: "900"
     }
 })
