@@ -63,7 +63,7 @@ export default function AllFiltersModal({visible, onClose}: AllFiltersModalProps
                     </Pressable>
 
                     <Pressable
-                        onPress={() => updateFilters({ minRating: filters.minRating === 4.5 ? 0 })}
+                        onPress={() => updateFilters({ minRating: filters.minRating === 4.5 ? 0 : 4.5 })}
                         style={[styles.option, filters.minRating === 4.5 && styles.activeOption]}
                     >
                         <Text style={[styles.optionText, filters.minRating === 4.5 && styles.activeOptionText]}>
