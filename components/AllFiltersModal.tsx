@@ -172,5 +172,10 @@ const styles = StyleSheet.create({
     secondaryText: {
         color: colors.text,
         fontWeight: "900"
+    },
+    primaryButton: {
+        flex: 1,
+        height: 50,
+        borderRadius: 16
     }
 })
