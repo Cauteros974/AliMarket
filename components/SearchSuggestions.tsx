@@ -37,5 +37,9 @@ const styles = StyleSheet.create({
         borderRadius: 16,
         marginTop: 8,
         overflow: "hidden",
+    },
+    item: {
+        paddingHorizontal: 10,
+        paddingVertical: 10
     }
 })
