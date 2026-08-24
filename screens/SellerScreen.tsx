@@ -83,5 +83,7 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         padding: 16,
         marginBottom: 16,
+        flexDirection: "row",
+        gap: 14,
     },
 })
