@@ -7,9 +7,9 @@ import { useShopStore } from "../store/useShopStore";
 export default function OrderTrackingScreen(){
     return(
         <SafeAreaView style={styles.safeArea}>
-            <View style={styles.emptyState}>
-                <Text style={styles.emptyTitle}>Order not found</Text>
-            </View>
+            <ScrollView contentContainerStyle={styles.content}>
+                <Text style={styles.title}>Tracking</Text>
+            </ScrollView>
         </SafeAreaView>
-    )
+    );
 }
