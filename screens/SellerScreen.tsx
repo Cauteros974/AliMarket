@@ -86,4 +86,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 14,
     },
+    avatar: {
+        width: 76,
+        height: 76,
+        borderRadius: 16
+    }
 })
