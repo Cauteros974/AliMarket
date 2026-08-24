@@ -13,6 +13,10 @@ export default function SellerScreen({navigation, route}: Props) {
     const seller = sellers.find((item) => item.id === route.params.sellerId);
     const favoriteIds = useShopStore((state) => state.favoriteIds);
     const toggleFavorite = useShopStore((state) => state.toggleFavorite);
+
+    const sellerProducts = products.filter(
+        (product) => product.sellerId === route.params.sellerId
+    );
 }
 
 return(
