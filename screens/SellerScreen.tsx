@@ -53,6 +53,15 @@ export default function SellerScreen({navigation, route}: Props) {
                         </View>
                     </View>
                 }
+
+                renderItem={({ item }) => (
+                    <ProductCard
+                        product={item}
+                        isFavorite={favoriteIds.includes(item.id)}
+                        onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
+                        onToggleFavorite={() => toggleFavorite(item.id)}
+                    />
+                )}
             />
         </SafeAreaView>
     )
