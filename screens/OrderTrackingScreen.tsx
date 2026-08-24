@@ -122,4 +122,12 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         fontSize: 16,
     },
+    activeText: {
+        color: colors.primary
+    },
+    stepText: {
+        color: colors.primary,
+        marginTop: 14,
+        fontWeight: "900"
+    }
 })
