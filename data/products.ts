@@ -59,6 +59,40 @@ export const products: Product[] = [
 
     {
         id: "p2",
+        title: "Round Fitness Smartwatch",
+        description: "Round-face smartwatch with heart rate and calorie tracking, interchangeable silicone bands and a bright touchscreen display.",
+        categoryId: "electronics",
+        sellerId: "seller-1",
+        image: require("../assets/images/smartwatch.webp"),
+        price: 99.99,
+        oldPrice: 120.99,
+        rating: 4.8,
+        reviews: 1024,
+        sold: 5300,
+        discountLabel: "-38%",
+        delivery: "Free delivery in 9-14 days",
+        colors: ["#111827", "#F3F4F6", "#E85D3F"],
+    },
+
+    {
+        id: "p3",
+        title: "Square Sport Smartwatch",
+        description: "Lightweight square smartwatch with step counter, heart rate monitor and sleep tracking in a soft silicone band.",
+        categoryId: "electronics",
+        sellerId: "seller-1",
+        image: require("../assets/images/smartwatch2.webp"),
+        price: 99.99,
+        oldPrice: 120.99,
+        rating: 4.8,
+        reviews: 1024,
+        sold: 5300,
+        discountLabel: "-38%",
+        delivery: "Free delivery in 9-14 days",
+        colors: ["#111827", "#F3F4F6", "#E85D3F"],
+    },
+
+    {
+        id: "p3",
         title: "Smart LED Ambient Light Strip",
         description: "RGB smart light strip for bedroom, desk or gaming setup. Includes app control, scenes and music sync.",
         categoryId: "home",
@@ -75,7 +109,7 @@ export const products: Product[] = [
     },
 
     {
-        id: "p3",
+        id: "p4",
         title: "Minimal Streetwear Crossbody Bag",
         description: "Compact water-resistant crossbody bag with adjustable strap, phone pocket and hidden zipper compartment.",
         categoryId: "fashion",
@@ -92,7 +126,7 @@ export const products: Product[] = [
     },
 
     {
-        id: "p4",
+        id: "p5",
         title: "Hydrating Skin Care Set",
         description: "Daily skin care set with cleanser, serum and cream. Gentle texture, travel-friendly bottles and clean routine.",
         categoryId: "beauty",
@@ -113,7 +147,7 @@ export const products: Product[] = [
     // --------------------------------------------------
 
     {
-        id: "p5",
+        id: "p6",
         title: "Oversized Cotton Hoodie",
         description: "Heavyweight oversized hoodie with dropped shoulders, kangaroo pocket and soft brushed fleece lining for everyday comfort.",
         categoryId: "fashion",
@@ -130,7 +164,7 @@ export const products: Product[] = [
     },
 
     {
-        id: "p6",
+        id: "p7",
         title: "Classic Pullover Hoodie",
         description: "Relaxed-fit pullover hoodie in soft cotton blend fabric with ribbed cuffs and adjustable drawstring hood.",
         categoryId: "fashion",
@@ -151,7 +185,7 @@ export const products: Product[] = [
     // --------------------------------------------------
 
     {
-        id: "p7",
+        id: "p8",
         title: "Ceramic Bud Vase Set",
         description: "Set of small matte ceramic bud vases in varied shapes, perfect for styling single stems or mixed floral displays.",
         categoryId: "home",
@@ -168,7 +202,7 @@ export const products: Product[] = [
     },
 
     {
-        id: "p8",
+        id: "p9",
         title: "Geometric Ceramic Vase Collection",
         description: "Sculptural ceramic vase collection with ring, wave and abstract shapes, handcrafted matte finish for modern shelf styling.",
         categoryId: "home",
@@ -189,7 +223,7 @@ export const products: Product[] = [
     // --------------------------------------------------
 
     {
-        id: "p9",
+        id: "p10",
         title: "Brightening Vitamin C Serum",
         description: "Lightweight facial serum with vitamin C and orange extract to brighten skin tone and even out complexion.",
         categoryId: "beauty",
@@ -206,7 +240,7 @@ export const products: Product[] = [
     },
 
     {
-        id: "p10",
+        id: "p11",
         title: "Green Tangerine Dark Spot Serum",
         description: "Vitamin C serum with green tangerine extract that targets dark spots and uneven skin tone for a radiant glow.",
         categoryId: "beauty",
@@ -227,7 +261,7 @@ export const products: Product[] = [
     // --------------------------------------------------
 
     {
-        id: "p11",
+        id: "p12",
         title: "Minimal Streetwear Crossbody Bag",
         description: "Compact water-resistant crossbody bag with adjustable strap, phone pocket and hidden zipper compartment.",
         categoryId: "fashion",
