@@ -1,4 +1,4 @@
-import { Category, Product } from "../types/product";
+import { Category, Product, Seller } from "../types/product";
 
 export const categories: Category[] = [
     { id: "electronics", title: "Electronics", icon: "phone-portrait-outline", subcategories: ["Phones", "Laptops", "Audio"] },
@@ -70,4 +70,18 @@ export const products: Product[] = [
         delivery: "Free delivery in 10-16 days",
         colors: ["#F9A8D4", "#FDE68A", "#BFDBFE"],
     }
+];
+
+export const sellers: Seller[] = [
+  {
+    id: "seller-1",
+    name: "TechWorld Store",
+    rating: 4.9,
+    reviews: 12840,
+    sales: 52300,
+    location: "Germany",
+    verified: true,
+    description:
+      "Official electronics marketplace seller specializing in headphones, smartphones and accessories.",
+  },
 ];
