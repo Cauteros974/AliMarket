@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { FlatList } from "react-native";
+import { FlatList, Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ProductCard from "../components/ProductCard";
 import { products, sellers } from "../data/products";
@@ -15,6 +15,11 @@ return(
             numColumns={2}
             columnWrapperStyle={styles.gridRow}
             contentContainerStyle={styles.content}
+            ListHeaderComponent={
+                <View style={styles.sellerCard}>
+                    <Image source={{ uri: seller.avatar }} style={styles.avatar} />
+                </View>
+            }
         />
     </SafeAreaView>
 )
