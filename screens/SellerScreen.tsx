@@ -147,4 +147,18 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: "900",
     },
+    avatarPlaceholder: {
+        width: 76,
+        height: 76,
+        borderRadius: 16,
+        backgroundColor: colors.primary,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+
+    avatarPlaceholderText: {
+        color: colors.white,
+        fontSize: 28,
+        fontWeight: "900",
+    },
 })
