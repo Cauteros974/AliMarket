@@ -30,8 +30,8 @@ export default function OrderTrackingScreen({ route }: Props) {
             </SafeAreaView>
         );
     }
-    
-
+  
+    const activeIndex = steps.indexOf(order.status);
 
     return(
         <SafeAreaView style={styles.safeArea}>
@@ -39,9 +39,9 @@ export default function OrderTrackingScreen({ route }: Props) {
                 <Text style={styles.title}>Tracking</Text>
                 <Text style={styles.subtitle}>{order.id}</Text>
 
-                <View>
+                <View style={styles.card}>
                     {steps.map((step, index) => {
-                        const active = index;
+                        const active = index <= activeIndex;
 
                         return(
                             <View>
