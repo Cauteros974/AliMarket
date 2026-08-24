@@ -27,21 +27,21 @@ export default function SellerScreen({navigation, route}: Props) {
         </SafeAreaView>
         );
     }
-}
 
-return(
-    <SafeAreaView>
-        <FlatList 
-            data={sellerProducts}
-            keyExtractor={(item) => item.id}
-            numColumns={2}
-            columnWrapperStyle={styles.gridRow}
-            contentContainerStyle={styles.content}
-            ListHeaderComponent={
-                <View style={styles.sellerCard}>
-                    <Image source={{ uri: seller.avatar }} style={styles.avatar} />
-                </View>
-            }
-        />
-    </SafeAreaView>
-)
+    return(
+        <SafeAreaView>
+            <FlatList 
+                data={sellerProducts}
+                keyExtractor={(item) => item.id}
+                numColumns={2}
+                columnWrapperStyle={styles.gridRow}
+                contentContainerStyle={styles.content}
+                ListHeaderComponent={
+                    <View style={styles.sellerCard}>
+                        <Image source={{ uri: seller.avatar }} style={styles.avatar} />
+                    </View>
+                }
+            />
+        </SafeAreaView>
+    )
+}
