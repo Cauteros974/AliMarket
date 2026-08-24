@@ -90,5 +90,13 @@ const styles = StyleSheet.create({
         width: 76,
         height: 76,
         borderRadius: 16
-    }
+    },
+    sellerInfo: {
+        flex: 1,
+    },
+    name: {
+        color: colors.text,
+        fontSize: 22,
+        fontWeight: "900",
+    },
 })
