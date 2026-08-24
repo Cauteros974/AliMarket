@@ -102,6 +102,13 @@ const styles = StyleSheet.create({
     meta: {
         color: colors.primary,
         fontWeight: "900",
-        marginTop: 6
-    }
+        marginTop: 6,
+    },
+    description: {
+        color: colors.muted,
+        marginTop: 8,
+        lineHeight: 20,
+        fontWeight: "700",
+    },
+
 })
