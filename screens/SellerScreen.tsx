@@ -7,6 +7,14 @@ import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
+type Props = NativeStackScreenProps<RootStackParamList, "Seller">;
+
+export default function SellerScreen({navigation, route}: Props) {
+    const seller = sellers.find((item) => item.id === route.params.sellerId);
+    const favoriteIds = useShopStore((state) => state.favoriteIds);
+    const toggleFavorite = useShopStore((state) => state.toggleFavorite);
+}
+
 return(
     <SafeAreaView>
         <FlatList 
