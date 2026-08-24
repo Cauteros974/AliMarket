@@ -116,5 +116,10 @@ const styles = StyleSheet.create({
     },
     stepInfo: {
         flex: 1
-    }
+    },
+    stepTitle: {
+        color: colors.text,
+        fontWeight: "900",
+        fontSize: 16,
+    },
 })
