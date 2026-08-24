@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     },
     stepText: {
         color: colors.primary,
-        marginTop: 14,
-        fontWeight: "900"
+        marginTop: 4,
+        fontWeight: "700"
     }
 })
