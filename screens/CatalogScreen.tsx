@@ -82,7 +82,10 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
 
     return (
         <SafeAreaView style={styles.safeArea}>
-            <FlatList
+            {loading ? (
+                <SkeletonProductGrid />
+            ): (
+                <FlatList
                 data={loading ? [] : filteredProducts}
                 keyExtractor={(item) => item.id}
                 numColumns={2}
@@ -224,6 +227,8 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                     />
                 )}
             />
+            )}
+            
         </SafeAreaView>
     );
 }
