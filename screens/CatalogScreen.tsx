@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useMemo } from "react";
 import { FlatList, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
@@ -8,6 +9,7 @@ import SearchBar from "../components/SearchBar";
 import { categories, products } from "../data/products";
 import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
+import SkeletonProductGrid from "../components/SkeletonProductGrid";
 import { colors } from "../theme/colors";
 
 type CatalogScreenProps = {
@@ -34,6 +36,16 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
     const updateFilters = useShopStore((state) => state.updateFilters);
     const resetFilters = useShopStore((state) => state.resetFilters);
     const toggleFavorite = useShopStore((state) => state.toggleFavorite);
+
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 800);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     const filteredProducts = useMemo(() => {
         const minPrice = Number(filters.minPrice) || 0;
