@@ -96,4 +96,16 @@ export const sellers: Seller[] = [
     description:
       "Home accessories, smart lighting and products for comfortable living.",
   },
+
+  {
+    id: "seller-3",
+    name: "Urban Fashion",
+    rating: 4.7,
+    reviews: 6240,
+    sales: 24100,
+    location: "France",
+    verified: true,
+    description:
+      "Modern streetwear, bags and everyday fashion accessories.",
+  },
 ];
