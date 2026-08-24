@@ -30,13 +30,31 @@ export default function OrderTrackingScreen({ route }: Props) {
             </SafeAreaView>
         );
     }
+    
+
 
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content}>
                 <Text style={styles.title}>Tracking</Text>
                 <Text style={styles.subtitle}>{order.id}</Text>
+
+                <View>
+                    {steps.map((step, index) => {
+                        const active = index;
+
+                        return(
+                            <View>
+                                {step}
+                            </View>
+                        )
+                    })}
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
 }
+
+const styles = StyleSheet.create({
+
+})
