@@ -21,6 +21,14 @@ export default function OrderTrackingScreen({ route }: Props) {
         state.orders.find((item) => item.id === route.params.orderId)
     );
 
+    if (!order) {
+        return (
+            <SafeAreaView style={styles.safeArea}>
+                    <Text style={styles.emptyTitle}>Order not found</Text>
+            </SafeAreaView>
+        );
+    }
+
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content}>
