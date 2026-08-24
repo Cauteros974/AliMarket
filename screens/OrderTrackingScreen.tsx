@@ -78,7 +78,12 @@ const styles = StyleSheet.create({
         backgroundColor: colors.background,
     },
     content: {
-        padding: 10,
-        paddingBottom: 18
+        padding: 18,
+        paddingBottom: 28,
+    },
+    title: {
+        color: colors.text,
+        fontSize: 28,
+        fontWeight: "900"
     }
 })
