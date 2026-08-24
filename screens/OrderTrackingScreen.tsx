@@ -134,5 +134,8 @@ const styles = StyleSheet.create({
         minHeight: 150,
         borderRadius: 22,
         backgroundColor: colors.surfaceSoft,
+        padding: 18,
+        marginTop: 14,
+        justifyContent: "center",
     },
 })
