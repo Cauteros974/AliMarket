@@ -64,7 +64,7 @@ export default function OrderTrackingScreen({ route }: Props) {
                 <View style={styles.mapMock}>
                     <Text style={styles.mapTitle}>Delivery route preview</Text>
                     <Text style={styles.mapText}>
-                        {order.address.city}
+                        {order.address.city}, {order.address.street}
                     </Text>
                 </View>
             </ScrollView>
