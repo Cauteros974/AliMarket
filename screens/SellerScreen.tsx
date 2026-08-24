@@ -113,7 +113,10 @@ const styles = StyleSheet.create({
     ollowButton: {
         alignSelf: "flex-start",
         backgroundColor: colors.primary,
-        borderRadius: 99,
+        borderRadius: 999,
+        paddingHorizontal: 14,
+        paddingVertical: 9,
+        marginTop: 12,
     },
 
 })
