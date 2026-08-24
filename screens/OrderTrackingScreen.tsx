@@ -6,7 +6,7 @@ import { useShopStore } from "../store/useShopStore";
 
 type Props = NativeStackScreenProps<RootStackParamList, "OrderTracking">;
 
-export default function OrderTrackingScreen(){
+export default function OrderTrackingScreen({ route }: Props) {
     const order = useShopStore((state) => 
         state.orders.find((item) => item.id === route.params.orderId)
     );
