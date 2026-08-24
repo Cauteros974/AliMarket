@@ -99,4 +99,9 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: "900",
     },
+    meta: {
+        color: colors.primary,
+        fontWeight: "900",
+        marginTop: 6
+    }
 })
