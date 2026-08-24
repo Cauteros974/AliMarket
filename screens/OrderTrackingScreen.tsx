@@ -73,5 +73,12 @@ export default function OrderTrackingScreen({ route }: Props) {
 }
 
 const styles = StyleSheet.create({
-
+    safeArea: {
+        flex: 1,
+        backgroundColor: colors.background,
+    },
+    content: {
+        padding: 10,
+        paddingBottom: 18
+    }
 })
