@@ -98,5 +98,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
         padding: 16
+    },
+    stepRow: {
+        flexDirection: "row",
+        gap: 12,
+        paddingVertical: 12,
     }
 })
