@@ -76,4 +76,9 @@ const styles = StyleSheet.create({
         padding: 18, 
         paddingBottom: 28
     },
+    sellerCard: {
+        backgroundColor: colors.surface,
+        borderRadius: 22,
+        borderWidth: 1,
+    },
 })
