@@ -49,7 +49,7 @@ export default function OrderTrackingScreen({ route }: Props) {
                                     <View>
                                         {step}    
                                     </View>
-                                    <Text>
+                                    <Text style={styles.stepText}>
                                         {active ? "Completed in demo timeline" : "Waiting for update"}
                                     </Text>
                                 </View>
