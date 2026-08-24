@@ -41,3 +41,15 @@ export type CartItem = {
   productId: string;
   quantity: number;
 };
+
+export interface Seller {
+  id: string;
+  name: string;
+  logo?: string;
+  rating: number;
+  reviews: number;
+  sales: number;
+  location: string;
+  verified: boolean;
+  description?: string;
+}
