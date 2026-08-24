@@ -46,6 +46,10 @@ export default function SellerScreen({navigation, route}: Props) {
                                 ★ {seller.rating} · {seller.sales.toLocaleString("en-US")} sales
                             </Text>
                             <Text style={styles.description}>{seller.description}</Text>
+
+                            <Pressable style={styles.followButton}>
+                                <Text style={styles.followText}>Follow store</Text>
+                            </Pressable>
                         </View>
                     </View>
                 }
