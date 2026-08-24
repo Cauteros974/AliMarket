@@ -17,6 +17,16 @@ export default function SellerScreen({navigation, route}: Props) {
     const sellerProducts = products.filter(
         (product) => product.sellerId === route.params.sellerId
     );
+
+    if (!seller) {
+        return (
+        <SafeAreaView style={styles.safeArea}>
+            <View style={styles.emptyState}>
+            <Text style={styles.emptyTitle}>Seller not found</Text>
+            </View>
+        </SafeAreaView>
+        );
+    }
 }
 
 return(
