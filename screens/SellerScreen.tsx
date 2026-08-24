@@ -38,7 +38,18 @@ export default function SellerScreen({navigation, route}: Props) {
                 contentContainerStyle={styles.content}
                 ListHeaderComponent={
                     <View style={styles.sellerCard}>
-                        <Image source={{ uri: seller.avatar }} style={styles.avatar} />
+                        {seller.logo ? (
+                            <Image
+                                source={{ uri: seller.logo }}
+                                style={styles.avatar}
+                            />
+                        ) : (
+                            <View style={styles.avatarPlaceholder}>
+                                <Text style={styles.avatarPlaceholderText}>
+                                    {seller.name.charAt(0)}
+                                </Text>
+                            </View>
+                        )}
 
                         <View style={styles.sellerInfo}>
                             <Text style={styles.name}>{seller.name}</Text>
@@ -110,7 +121,7 @@ const styles = StyleSheet.create({
         lineHeight: 20,
         fontWeight: "700",
     },
-    ollowButton: {
+    followButton: {
         alignSelf: "flex-start",
         backgroundColor: colors.primary,
         borderRadius: 999,
