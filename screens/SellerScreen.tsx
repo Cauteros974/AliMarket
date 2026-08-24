@@ -126,5 +126,14 @@ const styles = StyleSheet.create({
         gap: 12,
         marginBottom: 12,
     },
-
+    emptyState: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    emptyTitle: {
+        color: colors.text,
+        fontSize: 22,
+        fontWeight: "900",
+    },
 })
