@@ -142,5 +142,10 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontSize: 18,
         fontWeight: "900"
-    }
+    },
+    mapText: {
+        color: colors.muted,
+        marginTop: 8,
+        fontWeight: "800",
+    },
 })
