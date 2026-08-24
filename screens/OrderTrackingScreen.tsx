@@ -24,7 +24,9 @@ export default function OrderTrackingScreen({ route }: Props) {
     if (!order) {
         return (
             <SafeAreaView style={styles.safeArea}>
+                <View style={styles.emptyState}>
                     <Text style={styles.emptyTitle}>Order not found</Text>
+                </View>
             </SafeAreaView>
         );
     }
