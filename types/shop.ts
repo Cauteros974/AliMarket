@@ -70,7 +70,7 @@ export type Address = {
   phone: string;
 };
 
-export type OrderStatus = "Processing" | "Shipped" | "Delivered";
+export type OrderStatus = "Processing" | "Packed" | "Shipped" | "Delivered" | "Cancelled" | "Local warehouse";
 
 export type Order = {
   id: string;

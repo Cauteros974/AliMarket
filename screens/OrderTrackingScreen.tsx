@@ -4,12 +4,15 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { OrderStatus } from "../types/shop";
+import { colors } from "../theme/colors";
 
 type Props = NativeStackScreenProps<RootStackParamList, "OrderTracking">;
 
 const steps: OrderStatus[] = [
     "Processing",
+    "Packed",
     "Shipped",
+    "Local warehouse",
     "Delivered",
 ]
 
