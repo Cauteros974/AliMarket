@@ -45,6 +45,7 @@ export default function SellerScreen({navigation, route}: Props) {
                             <Text style={styles.meta}>
                                 ★ {seller.rating} · {seller.sales.toLocaleString("en-US")} sales
                             </Text>
+                            <Text style={styles.description}>{seller.description}</Text>
                         </View>
                     </View>
                 }
