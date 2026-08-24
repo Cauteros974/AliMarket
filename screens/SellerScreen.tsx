@@ -39,6 +39,13 @@ export default function SellerScreen({navigation, route}: Props) {
                 ListHeaderComponent={
                     <View style={styles.sellerCard}>
                         <Image source={{ uri: seller.avatar }} style={styles.avatar} />
+
+                        <View style={styles.sellerInfo}>
+                            <Text style={styles.name}>{seller.name}</Text>
+                            <Text style={styles.meta}>
+                                ★ {seller.rating} · {seller.sales.toLocaleString("en-US")} sales
+                            </Text>
+                        </View>
                     </View>
                 }
             />
