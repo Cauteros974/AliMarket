@@ -35,6 +35,7 @@ export type Product = {
     discountLabel?: string;
     delivery: string;
     colors: string[];
+    sellerId: string;
 };
 
 export type CartItem = {

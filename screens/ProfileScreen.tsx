@@ -72,12 +72,6 @@ export default function ProfileScreen({ navigation }: Props) {
                 />
 
                 <MenuItem
-                    label="Order history"
-                    icon="receipt-outline"
-                    onPress={() => navigation.navigate("Orders")}
-                />
-
-                <MenuItem
                     label="Payment methods"
                     icon="card-outline"
                     onPress={() => navigation.navigate("PaymentMethods")}

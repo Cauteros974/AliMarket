@@ -10,12 +10,14 @@ import CheckoutScreen from "../screens/CheckoutScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import HomeScreen from "../screens/Homescreen";
 import NotificationsScreen from "../screens/NotificationsScreen";
+import OrderDetailsScreen from "../screens/OrderDetailsScreen";
+import OrderTrackingScreen from "../screens/OrderTrackingScreen";
 import OrdersScreen from "../screens/OrdersScreen";
+import PaymentMethodsScreen from "../screens/PaymentMethodsScreen";
 import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
-import PaymentMethodsScreen from "../screens/PaymentMethodsScreen";
+import SellerScreen from "../screens/SellerScreen";
 import SupportScreen from "../screens/SupportScreen";
-import OrderDetailsScreen from "../screens/OrderDetailsScreen";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { MainTabParamList, RootStackParamList } from "./types";
@@ -89,16 +91,55 @@ export default function AppNavigator() {
       }}
     >
       <Stack.Screen name="MainTabs" component={MainTabs} options={{ headerShown: false }} />
-      <Stack.Screen name="ProductDetails" component={ProductDetailsScreen} options={{ title: "Product" }} />
-      <Stack.Screen name="CategoryDetails" component={CategoryDetailsScreen} options={{ title: "Category" }} />
+
+      <Stack.Screen
+        name="ProductDetails"
+        component={ProductDetailsScreen}
+        options={{ title: "Product" }}
+      />
+
+      <Stack.Screen
+        name="CategoryDetails"
+        component={CategoryDetailsScreen}
+        options={{ title: "Category" }}
+      />
+
+      <Stack.Screen
+        name="Seller"
+        component={SellerScreen}
+        options={{ title: "Store" }}
+      />
+
       <Stack.Screen name="Checkout" component={CheckoutScreen} />
-      <Stack.Screen name="OrderDetails" component={OrderDetailsScreen} options={{ title: "Order details" }}/>
       <Stack.Screen name="Orders" component={OrdersScreen} />
+
+      <Stack.Screen
+        name="OrderDetails"
+        component={OrderDetailsScreen}
+        options={{ title: "Order details" }}
+      />
+
+      <Stack.Screen
+        name="OrderTracking"
+        component={OrderTrackingScreen}
+        options={{ title: "Tracking" }}
+      />
+
       <Stack.Screen name="Auth" component={AuthScreen} options={{ title: "Account" }} />
       <Stack.Screen name="Addresses" component={AddressesScreen} />
       <Stack.Screen name="Notifications" component={NotificationsScreen} />
-      <Stack.Screen name="PaymentMethods" component={PaymentMethodsScreen} options={{ title: "Payment methods" }} />
-      <Stack.Screen name="Support" component={SupportScreen} options={{ title: "Support" }}/>
+
+      <Stack.Screen
+        name="PaymentMethods"
+        component={PaymentMethodsScreen}
+        options={{ title: "Payment methods" }}
+      />
+
+      <Stack.Screen
+        name="Support"
+        component={SupportScreen}
+        options={{ title: "Support" }}
+      />
     </Stack.Navigator>
   );
 }
