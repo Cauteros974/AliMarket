@@ -118,5 +118,13 @@ const styles = StyleSheet.create({
         paddingVertical: 9,
         marginTop: 12,
     },
+    followText: {
+        color: colors.white,
+        fontWeight: "900",
+    },
+    gridRow: {
+        gap: 12,
+        marginBottom: 12,
+    },
 
 })
