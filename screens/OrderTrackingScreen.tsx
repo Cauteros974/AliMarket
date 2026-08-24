@@ -86,6 +86,12 @@ const styles = StyleSheet.create({
         fontSize: 28,
         fontWeight: "900"
     },
+    subtitle: {
+        color: colors.muted,
+        marginTop: 6,
+        marginBottom: 16,
+        fontWeight: "800",
+    },
     card: {
         backgroundColor: colors.surface,
         borderRadius: 18,
