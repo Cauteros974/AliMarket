@@ -110,5 +110,11 @@ const styles = StyleSheet.create({
         borderRadius: 9,
         backgroundColor: colors.border,
         marginTop: 2,
+    },
+    activeDot: {
+        backgroundColor: colors.primary
+    },
+    stepInfo: {
+        flex: 1
     }
 })
