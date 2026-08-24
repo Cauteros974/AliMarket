@@ -83,7 +83,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
     return (
         <SafeAreaView style={styles.safeArea}>
             <FlatList
-                data={filteredProducts}
+                data={loading ? [] : filteredProducts}
                 keyExtractor={(item) => item.id}
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
