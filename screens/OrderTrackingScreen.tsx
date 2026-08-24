@@ -129,5 +129,10 @@ const styles = StyleSheet.create({
         color: colors.primary,
         marginTop: 4,
         fontWeight: "700"
-    }
+    },
+    mapMock: {
+        minHeight: 150,
+        borderRadius: 22,
+        backgroundColor: colors.surfaceSoft,
+    },
 })
