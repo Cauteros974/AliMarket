@@ -44,8 +44,15 @@ export default function OrderTrackingScreen({ route }: Props) {
                         const active = index <= activeIndex;
 
                         return(
-                            <View>
-                                {step}
+                            <View key={step} style={styles.stepRow}>
+                                <View style={[styles.dot, active && styles.activeDot]}>
+                                    <View>
+                                        {step}    
+                                    </View>
+                                    <Text>
+                                        {active ? "Completed in demo timeline" : "Waiting for update"}
+                                    </Text>
+                                </View>
                             </View>
                         )
                     })}
