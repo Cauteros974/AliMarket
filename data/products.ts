@@ -108,4 +108,16 @@ export const sellers: Seller[] = [
     description:
       "Modern streetwear, bags and everyday fashion accessories.",
   },
+
+  {
+    id: "seller-4",
+    name: "Beauty Lab",
+    rating: 4.9,
+    reviews: 10320,
+    sales: 39600,
+    location: "Italy",
+    verified: true,
+    description:
+      "Skincare and beauty products for everyday routines.",
+  },
 ];
