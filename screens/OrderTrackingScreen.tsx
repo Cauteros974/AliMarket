@@ -103,5 +103,12 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 12,
         paddingVertical: 12,
+    },
+    dot: {
+        width: 18,
+        height: 18,
+        borderRadius: 9,
+        backgroundColor: colors.border,
+        marginTop: 2,
     }
 })
