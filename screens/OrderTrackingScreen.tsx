@@ -60,6 +60,12 @@ export default function OrderTrackingScreen({ route }: Props) {
                         )
                     })}
                 </View>
+
+                <View>
+                    <Text>
+                        {order.address.city}
+                    </Text>
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
