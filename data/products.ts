@@ -84,4 +84,16 @@ export const sellers: Seller[] = [
     description:
       "Official electronics marketplace seller specializing in headphones, smartphones and accessories.",
   },
+
+  {
+    id: "seller-2",
+    name: "HomeStyle Store",
+    rating: 4.8,
+    reviews: 8640,
+    sales: 31800,
+    location: "Poland",
+    verified: true,
+    description:
+      "Home accessories, smart lighting and products for comfortable living.",
+  },
 ];
