@@ -110,5 +110,10 @@ const styles = StyleSheet.create({
         lineHeight: 20,
         fontWeight: "700",
     },
+    ollowButton: {
+        alignSelf: "flex-start",
+        backgroundColor: colors.primary,
+        borderRadius: 99,
+    },
 
 })
