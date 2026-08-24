@@ -153,4 +153,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    emptyTitle: {
+        color: colors.text,
+        fontSize: 22,
+        fontWeight: "900",
+    },
 })
