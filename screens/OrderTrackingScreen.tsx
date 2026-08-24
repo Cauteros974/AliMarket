@@ -148,4 +148,9 @@ const styles = StyleSheet.create({
         marginTop: 8,
         fontWeight: "800",
     },
+    emptyState: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })
