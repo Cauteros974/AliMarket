@@ -138,4 +138,9 @@ const styles = StyleSheet.create({
         marginTop: 14,
         justifyContent: "center",
     },
+    mapTitle: {
+        color: colors.text,
+        fontSize: 18,
+        fontWeight: "900"
+    }
 })
