@@ -9,7 +9,8 @@ import {
   Order,
   SortOption,
   User,
-  Toast
+  Toast,
+  WishlistCollection
 } from "../types/shop";
 import { createId } from "../utils/format";
 
@@ -80,6 +81,7 @@ type ShopState = {
   hideToast: () => void;
   clearToast: () => void;
   setUser: (user: User) => void;
+  wishlistCollections: WishlistCollection[];
 };
 
 const initialFilters: CatalogFilters = {
@@ -111,6 +113,8 @@ export const useShopStore = create<ShopState>()(
       hideToast: () => set({ toast: null }),
       clearToast: () => set({ toast: null }),
       notifications: defaultNotifications,
+      wishlistCollections: [],
+
 
       addToCart: (productId) =>
         set((state) => {
