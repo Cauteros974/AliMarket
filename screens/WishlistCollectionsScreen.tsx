@@ -149,5 +149,10 @@ const styles = StyleSheet.create({
         color: colors.muted,
         fontWeight: "700",
         lineHeight: 20
+    },
+    emptyState: {
+        minHeight: 20,
+        alignItems: "center",
+        justifyContent: "center"
     }
 })
