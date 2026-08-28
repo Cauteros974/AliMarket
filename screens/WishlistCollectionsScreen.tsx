@@ -28,6 +28,7 @@ export default function WishlistCollectionsScreen() {
                 ListEmptyComponent={
                     <View>
                         <Text style={styles.title}>Wishlist collections</Text>
+
                         <View style={styles.createRow}>
                             <TextInput
                                 value={title}
@@ -48,6 +49,12 @@ export default function WishlistCollectionsScreen() {
                         <Text style={styles.emptyTitle}>No collections yet</Text>
                     </View>
                 }
+
+                renderItem={
+                    const collectionProducts = products.filter((product) =>
+                        item.productIds.includes(product.id)
+                    );
+                } 
             />
             
         </SafeAreaView>
