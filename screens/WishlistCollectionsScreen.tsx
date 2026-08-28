@@ -148,11 +148,16 @@ const styles = StyleSheet.create({
     emptyCollectionText: {
         color: colors.muted,
         fontWeight: "700",
-        lineHeight: 20
+        lineHeight: 20,
     },
     emptyState: {
         minHeight: 20,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+    },
+    emptyTitle: {
+        color: colors.text,
+        fontSize: 20,
+        fontWeight: "900"
     }
 })
