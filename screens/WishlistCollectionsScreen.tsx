@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     },
     productLine: {
         color: colors.muted,
-        fontWeight: "900",
+        fontWeight: "700",
         marginTop: 4,
     },
 })
