@@ -109,4 +109,8 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontWeight: "800",
     },
+    addButton: {
+        minHeight: 50,
+        borderRadius: 16,
+    },
 })
