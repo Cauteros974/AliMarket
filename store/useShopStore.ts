@@ -127,7 +127,7 @@ export const useShopStore = create<ShopState>()(
               id: createId("collection"),
               title: trimmed,
               productIds: [],
-              
+              createdAt: new Date().toISOString(),
             }
           ]
         }))
