@@ -45,7 +45,7 @@ export default function WishlistCollectionsScreen() {
                 }
                 ListEmptyComponent={
                     <View style={styles.emptyState}>
-                        <Text>No collections yet</Text>
+                        <Text style={styles.emptyTitle}>No collections yet</Text>
                     </View>
                 }
             />
