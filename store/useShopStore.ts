@@ -135,15 +135,8 @@ export const useShopStore = create<ShopState>()(
           ],
         }));
       },
+      
 
-      addProductToWishlistCollection: (collectionId, productId) => 
-        set((state) => ({
-          wishlistCollections: state.wishlistCollections.map((collection) =>
-            collection.id === collectionId && !collection.productIds.includes(productId)
-              ? { ...collection, productIds: [...collection.productIds, productId] }
-              : collection
-          ),
-        })),
 
 
       addToCart: (productId) =>
