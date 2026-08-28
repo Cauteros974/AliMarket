@@ -45,6 +45,13 @@ export type CartItem = {
   quantity: number;
 };
 
+export type WishlistCollection = {
+  id: string;
+  title: string;
+  productIds: string[];
+  createdAt: string;
+}
+
 export type SortOption = "popular" | "priceAsc" | "priceDesc" | "rating";
 
 export type CatalogFilters = {
