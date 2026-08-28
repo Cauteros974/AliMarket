@@ -6,6 +6,8 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
 export default function WishlistCollectionsScreen() {
+    const [title, setTitle] = useState("")
+
     const collections = useShopStore((state) => state.wishlistCollections);
 
     return(
