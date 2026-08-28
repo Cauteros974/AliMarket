@@ -117,4 +117,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    addText: {
+        color: colors.white,
+        fontWeight: "900",
+    },
 })
