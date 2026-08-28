@@ -134,4 +134,9 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "900",
     },
+    count: {
+        color: colors.primary,
+        fontWeight: "900",
+        marginBottom: 8,
+    },
 })
