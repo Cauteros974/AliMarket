@@ -22,6 +22,7 @@ export default function WishlistCollectionsScreen() {
                                 value={title}
                                 onChangeText={setTitle}
                                 placeholder="New collection"
+                                placeholderTextColor={colors.muted}
                                 style={styles.input}
                             />
                         </View>
