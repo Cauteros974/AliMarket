@@ -18,6 +18,7 @@ import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import SellerScreen from "../screens/SellerScreen";
 import SupportScreen from "../screens/SupportScreen";
+import WishlistCollectionsScreen from "../screens/WishlistCollectionsScreen";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { MainTabParamList, RootStackParamList } from "./types";
@@ -139,6 +140,12 @@ export default function AppNavigator() {
         name="Support"
         component={SupportScreen}
         options={{ title: "Support" }}
+      />
+
+      <Stack.Screen
+        name="WishlistCollections"
+        component={WishlistCollectionsScreen}
+        options={{ title: "Wishlist" }}
       />
     </Stack.Navigator>
   );
