@@ -29,8 +29,8 @@ export default function WishlistCollectionsScreen() {
                                 style={styles.input}
                             />
 
-                            <Pressable>
-                                <Text>Add</Text>
+                            <Pressable onPress={submit} style={styles.addButton}>
+                                <Text style={styles.addText}>Add</Text>
                             </Pressable>
                         </View>
                     </View>
