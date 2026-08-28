@@ -135,9 +135,31 @@ export const useShopStore = create<ShopState>()(
           ],
         }));
       },
-      
 
-
+      addProductToWishlistCollection: (collectionId, productId) => 
+        set((state) => ({
+          wishlistCollections: state.wishlistCollections.map((collection) =>
+            collection.id === collectionId && !collection.productIds.includes(productId)
+              ? { ...collection, productIds: [...collection.productIds, productId] }
+              : collection
+          ),
+        })),
+        
+      removeProductFromWishlistCollection: (collectionId, productId) =>
+        set((state) => ({
+          wishlistCollections: state.wishlistCollections.map((collection) =>
+            collection.id === collectionId
+              ? { ...collection, productIds: collection.productIds.filter((id) => id !== productId), }
+              : collection
+          ),
+        })),
+        
+      deleteWishlistCollection: (collectionId) =>
+        set((state) => ({
+          wishlistCollections: state.wishlistCollections.filter(
+            (collection) => collection.id !== collectionId
+          ),
+        })),
 
       addToCart: (productId) =>
         set((state) => {
