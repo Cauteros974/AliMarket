@@ -140,6 +140,8 @@ export const useShopStore = create<ShopState>()(
         set((state) => ({
           wishlistCollections: state.wishlistCollections.map((collection) =>
             collection.id === collectionId && !collection.productIds.includes(productId)
+              ? { ...collection, productIds: [...collection.productIds, productId] }
+              : collection
           ),
         })),
 
