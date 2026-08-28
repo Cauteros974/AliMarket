@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     },
     emptyText: {
         color: colors.muted,
-        marginTop: 8,
+        marginTop: 6,
         fontWeight: "700"
     }
 })
