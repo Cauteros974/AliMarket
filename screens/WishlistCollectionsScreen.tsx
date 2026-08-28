@@ -56,9 +56,9 @@ export default function WishlistCollectionsScreen() {
                     );
 
                     return(
-                        <View>
+                        <View style={styles.card}>
                             <Text>
-                                <Text>{item.title}</Text>
+                                <Text style={styles.cardTitle}>{item.title}</Text>
                             </Text>
                         </View>
                     )
