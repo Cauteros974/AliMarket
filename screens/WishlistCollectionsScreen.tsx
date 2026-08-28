@@ -12,6 +12,21 @@ export default function WishlistCollectionsScreen() {
         <SafeAreaView>
             <FlatList
                 data={collections}
+                keyExtractor={(item) => item.id}
+                contentContainerStyle={styles.content}
+                ListEmptyComponent={
+                    <View>
+                        <Text style={styles.title}>Wishlist collections</Text>
+                        <View style={styles.createRow}>
+                            <TextInput
+                                value={title}
+                                onChangeText={setTitle}
+                                placeholder="New collection"
+                                style={styles.input}
+                            />
+                        </View>
+                    </View>
+                }
             />
             
         </SafeAreaView>
