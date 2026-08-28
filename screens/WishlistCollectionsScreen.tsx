@@ -54,6 +54,14 @@ export default function WishlistCollectionsScreen() {
                     const collectionProducts = products.filter((product) =>
                         item.productIds.includes(product.id)
                     );
+
+                    return(
+                        <View>
+                            <Text>
+                                <Text>{item.title}</Text>
+                            </Text>
+                        </View>
+                    )
                 } 
             />
             
