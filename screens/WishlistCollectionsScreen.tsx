@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     },
     createRow: {
         flexDirection: "row",
-        gap: 5,
+        gap: 10,
         marginBottom: 10,
     },
 })
