@@ -137,6 +137,7 @@ const styles = StyleSheet.create({
     count: {
         color: colors.primary,
         fontWeight: "900",
+        marginTop: 6,
         marginBottom: 8,
     },
 })
