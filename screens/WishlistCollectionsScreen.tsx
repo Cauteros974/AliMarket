@@ -43,6 +43,11 @@ export default function WishlistCollectionsScreen() {
                         </View>
                     </View>
                 }
+                ListEmptyComponent={
+                    <View>
+                        <Text>No collections yet</Text>
+                    </View>
+                }
             />
             
         </SafeAreaView>
