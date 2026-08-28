@@ -129,8 +129,8 @@ export const useShopStore = create<ShopState>()(
               productIds: [],
               createdAt: new Date().toISOString(),
             }
-          ]
-        }))
+          ],
+        }));
       }
 
 
@@ -312,6 +312,7 @@ export const useShopStore = create<ShopState>()(
       partialize: (state) => ({
         cart: state.cart,
         favoriteIds: state.favoriteIds,
+        wishlistCollections: state.wishlistCollections,
         user: state.user,
         addresses: state.addresses,
         selectedAddressId: state.selectedAddressId,
