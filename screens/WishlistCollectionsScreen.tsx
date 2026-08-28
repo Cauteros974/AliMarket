@@ -10,6 +10,9 @@ export default function WishlistCollectionsScreen() {
 
     const collections = useShopStore((state) => state.wishlistCollections);
     
+    function(submit) {
+        setTitle("")
+    }
 
     return(
         <SafeAreaView style={styles.safeArea}>
