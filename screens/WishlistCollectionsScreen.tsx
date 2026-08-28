@@ -66,7 +66,7 @@ export default function WishlistCollectionsScreen() {
                                 </Text>
                             ) : (
                                 collectionProducts.slice(0, 3).map((product) => (
-                                    <Text key={product.id} style={styles.productLine}>
+                                    <Text key={product.id} numberOfLines={1} style={styles.productLine}>
                                         {product.title}
                                     </Text>
                                 ))
