@@ -123,6 +123,12 @@ export const useShopStore = create<ShopState>()(
         set((state) => ({
           wishlistCollections: [
             ...state.wishlistCollections,
+            {
+              id: createId("collection"),
+              title: trimmed,
+              productIds: [],
+              
+            }
           ]
         }))
       }
