@@ -145,4 +145,9 @@ const styles = StyleSheet.create({
         fontWeight: "700",
         marginTop: 4,
     },
+    emptyCollectionText: {
+        color: colors.muted,
+        fontWeight: "900",
+        lineHeight: 20
+    }
 })
