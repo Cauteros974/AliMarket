@@ -59,6 +59,7 @@ export default function WishlistCollectionsScreen() {
                         <View style={styles.card}>
                             <Text>
                                 <Text style={styles.cardTitle}>{item.title}</Text>
+                                <Text style={styles.count}>{item.productIds.length} products</Text>
                             </Text>
                         </View>
                     )
