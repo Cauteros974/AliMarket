@@ -64,7 +64,13 @@ export default function WishlistCollectionsScreen() {
                                 <Text>
                                     Products added
                                 </Text>
-                            ) 
+                            ) : (
+                                collectionProducts.slice(0, 3).map((product) => (
+                                    <Text>
+                                        {product.title}
+                                    </Text>
+                                ))
+                            )
                             )}
                         </View>
                     )
