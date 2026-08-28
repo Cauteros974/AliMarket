@@ -83,6 +83,9 @@ type ShopState = {
   setUser: (user: User) => void;
   wishlistCollections: WishlistCollection[];
   createWishlistCollection: (title: string) => void;
+  addProductToWishlistCollection: (collectionId: string, productId: string) => void;
+  removeProductFromWishlistCollection: (collectionId: string, productId: string) => void;
+  deleteWishlistCollection: (collectionId: string) => void;
 };
 
 const initialFilters: CatalogFilters = {
@@ -131,7 +134,14 @@ export const useShopStore = create<ShopState>()(
             }
           ],
         }));
-      }
+      },
+
+      addProductToWishlistCollection: (collectionId, productId) => 
+        set((state) => ({
+          wishlistCollections: state.wishlistCollections.map((collection) =>
+            collection.id === collectionId && !collection.productIds.includes(productId)
+          ),
+        })),
 
 
       addToCart: (productId) =>
