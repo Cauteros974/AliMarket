@@ -98,4 +98,10 @@ const styles = StyleSheet.create({
         gap: 10,
         marginBottom: 16,
     },
+    input: {
+        flex: 1,
+        minHeight: 50,
+        borderRadius: 16,
+        backgroundColor: colors.surface,
+    },
 })
