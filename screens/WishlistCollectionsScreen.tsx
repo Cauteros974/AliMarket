@@ -9,9 +9,10 @@ export default function WishlistCollectionsScreen() {
     const [title, setTitle] = useState("")
 
     const collections = useShopStore((state) => state.wishlistCollections);
+    
 
     return(
-        <SafeAreaView>
+        <SafeAreaView style={styles.safeArea}>
             <FlatList
                 data={collections}
                 keyExtractor={(item) => item.id}
@@ -27,6 +28,10 @@ export default function WishlistCollectionsScreen() {
                                 placeholderTextColor={colors.muted}
                                 style={styles.input}
                             />
+
+                            <Pressable>
+                                <Text>Add</Text>
+                            </Pressable>
                         </View>
                     </View>
                 }
