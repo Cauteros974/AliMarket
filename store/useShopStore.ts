@@ -82,6 +82,7 @@ type ShopState = {
   clearToast: () => void;
   setUser: (user: User) => void;
   wishlistCollections: WishlistCollection[];
+  createWishlistCollection: (title: string) => void;
 };
 
 const initialFilters: CatalogFilters = {
@@ -114,6 +115,10 @@ export const useShopStore = create<ShopState>()(
       clearToast: () => set({ toast: null }),
       notifications: defaultNotifications,
       wishlistCollections: [],
+
+      createWishlistCollection: (title) => {
+        const trimmed = title.trim();
+      }
 
 
       addToCart: (productId) =>
