@@ -112,5 +112,7 @@ const styles = StyleSheet.create({
     addButton: {
         minHeight: 50,
         borderRadius: 16,
+        backgroundColor: colors.primary,
+        paddingHorizontal: 16,
     },
 })
