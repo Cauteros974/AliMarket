@@ -118,6 +118,13 @@ export const useShopStore = create<ShopState>()(
 
       createWishlistCollection: (title) => {
         const trimmed = title.trim();
+        if(!trimmed) return;
+
+        set((state) => ({
+          wishlistCollections: [
+            ...state.wishlistCollections,
+          ]
+        }))
       }
 
 
