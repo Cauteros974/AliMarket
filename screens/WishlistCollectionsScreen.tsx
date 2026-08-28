@@ -50,7 +50,7 @@ export default function WishlistCollectionsScreen() {
                     </View>
                 }
 
-                renderItem={
+                renderItem={({ item }) => {
                     const collectionProducts = products.filter((product) =>
                         item.productIds.includes(product.id)
                     );
