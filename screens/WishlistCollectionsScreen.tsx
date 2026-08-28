@@ -9,9 +9,14 @@ export default function WishlistCollectionsScreen() {
     const [title, setTitle] = useState("")
 
     const collections = useShopStore((state) => state.wishlistCollections);
+    const createWishlistCollection = useShopStore(
+        (state) => state.createWishlistCollection
+    );
+
     
     function(submit) {
-        setTitle("")
+        createWishlistCollection(title);
+        setTitle("");
     }
 
     return(
