@@ -140,4 +140,9 @@ const styles = StyleSheet.create({
         marginTop: 6,
         marginBottom: 8,
     },
+    productLine: {
+        color: colors.muted,
+        fontWeight: "900",
+        marginTop: 8,
+    },
 })
