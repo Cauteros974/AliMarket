@@ -105,4 +105,8 @@ const styles = StyleSheet.create({
     darkMuted: {
         color: "#CBD5E1",
     },
+    row: {
+        flexDirection: "row",
+        gap: 10,
+    },
 })
