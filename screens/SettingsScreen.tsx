@@ -37,6 +37,12 @@ export default function SettingsScreen() {
                  <Text> Theme and language are saved locally.</Text>
 
                 <Text style={[styles.subtitle, isDark && styles.darkMuted]}>Theme</Text>
+
+                <Text>Theme</Text>
+
+                <View>
+                    {(["light", "dark"] as AppTheme[].map((item)))}
+                </View>
             </View>
         </SafeAreaView>
     )
