@@ -20,6 +20,8 @@ export default function SettingsScreen() {
     const setLocale = useShopStore((state) => state.setLocale);
     const showToast = useShopStore((state) => state.showToast);
 
+    const isDark = theme === "dark";
+
     return(
         <SafeAreaView>
             <View>
