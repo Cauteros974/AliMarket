@@ -82,5 +82,9 @@ const styles = StyleSheet.create({
     content: {
         padding: 18,
     },
-
+    title: {
+        color: colors.text,
+        fontSize: 28,
+        fontWeight: "900"
+    }
 })
