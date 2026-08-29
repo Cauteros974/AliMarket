@@ -128,4 +128,7 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         textTransform: "capitalize",
     },
+    activeOptionText: {
+        color: colors.white,
+    },
 })
