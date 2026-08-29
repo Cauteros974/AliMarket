@@ -131,4 +131,9 @@ const styles = StyleSheet.create({
     activeOptionText: {
         color: colors.white,
     },
+    localeItem: {
+        minHeight: 52,
+        borderRadius: 16,
+        backgroundColor: colors.surface,
+    },
 })
