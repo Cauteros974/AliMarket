@@ -149,4 +149,7 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontWeight: "900",
     },
+    activeLocaleText: {
+        color: colors.primary,
+    },
 })
