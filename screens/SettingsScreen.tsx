@@ -123,4 +123,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.primary,
         borderColor: colors.primary,
     },
+    optionText: {
+        color: colors.text,
+        fontWeight: "900",
+    },
 })
