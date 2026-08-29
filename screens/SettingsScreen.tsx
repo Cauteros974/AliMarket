@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     option: {
         flex: 1,
         height: 52,
-        borderRadius: 16,
+        borderRadius: 20,
         backgroundColor: colors.surface,
         borderWidth: 1,
         borderColor: colors.border,
