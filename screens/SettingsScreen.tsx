@@ -109,4 +109,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 10,
     },
+    option: {
+        flex: 1,
+        height: 52,
+        borderRadius: 16,
+    },
 })
