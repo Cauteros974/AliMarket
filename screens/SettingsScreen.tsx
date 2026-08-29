@@ -98,5 +98,8 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         marginTop: 24,
         marginBottom: 12,
-    }
+    },
+    darkText: {
+        color: colors.white,
+    },
 })
