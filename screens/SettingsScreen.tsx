@@ -141,4 +141,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginBottom: 10,
     },
+    activeLocale: {
+        backgroundColor: colors.surfaceSoft,
+        borderColor: colors.primary,
+    },
 })
