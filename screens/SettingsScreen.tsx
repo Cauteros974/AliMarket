@@ -4,7 +4,7 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { AppTheme, Locale } from "../types/shop";
 
-const locals: {label: string, value: string}[] = [
+const locales: {label: string, value: string}[] = [
     { label: "English", value: "en" },
     { label: "Українська", value: "uk" },
     { label: "Deutsch", value: "de" },
@@ -55,14 +55,17 @@ export default function SettingsScreen() {
 
                 <Text style={[styles.sectionTitle, isDark && styles.darkText]}>Language</Text>
 
-                {locale.map((item) => (
-                    <Pressable
-                        key={item.value}
-                        onPress={() => setLocale(item.value)}
-                    >
-
-                    </Pressable>
-                ))}
+                {locales.map((item) => (
+          <Pressable
+            key={item.value}
+            onPress={() => setLocale(item.value)}
+            style={[styles.localeItem, locale === item.value && styles.activeLocale]}
+          >
+            <Text style={[styles.localeText, locale === item.value && styles.activeLocaleText]}>
+              {item.label}
+            </Text>
+          </Pressable>
+        ))}
             </View>
         </SafeAreaView>
     )
