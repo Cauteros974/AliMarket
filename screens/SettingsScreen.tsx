@@ -58,7 +58,7 @@ export default function SettingsScreen() {
                 {locale.map((item) => (
                     <Pressable
                         key={item.value}
-                        option={() => setLocale(item.value)}
+                        onPress={() => setLocale(item.value)}
                     >
 
                     </Pressable>
