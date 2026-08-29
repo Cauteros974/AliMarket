@@ -56,16 +56,13 @@ export default function SettingsScreen() {
                 <Text style={[styles.sectionTitle, isDark && styles.darkText]}>Language</Text>
 
                 {locales.map((item) => (
-          <Pressable
-            key={item.value}
-            onPress={() => setLocale(item.value)}
-            style={[styles.localeItem, locale === item.value && styles.activeLocale]}
-          >
-            <Text style={[styles.localeText, locale === item.value && styles.activeLocaleText]}>
-              {item.label}
-            </Text>
-          </Pressable>
-        ))}
+                    <Pressable
+                        key={item.value}
+                        onPress={() => setLocale(item.value)}
+                    >
+
+                    </Pressable>
+                ))}
             </View>
         </SafeAreaView>
     )
