@@ -36,7 +36,7 @@ export default function SettingsScreen() {
                  <Text style={[styles.title, isDark && styles.darkText]}>Settings</Text>
                  <Text> Theme and language are saved locally.</Text>
 
-                 <Text>Theme</Text>
+                <Text style={[styles.subtitle, isDark && styles.darkMuted]}>Theme</Text>
             </View>
         </SafeAreaView>
     )
