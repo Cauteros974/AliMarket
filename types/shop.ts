@@ -102,3 +102,5 @@ export type Toast = {
   type: ToastType;
   message: string;
 };
+
+export type AppTheme = "light" | "dark" | "system";
