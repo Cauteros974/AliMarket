@@ -41,7 +41,14 @@ export default function SettingsScreen() {
                 <Text style={[styles.sectionTitle, isDark && styles.darkText]}>Theme</Text>
 
                 <View>
-                    {(["light", "dark"] as AppTheme[].map((item)))}
+                    {(["light", "dark"] as AppTheme[]).map((item) => (
+                        <Pressable
+                            key={item}
+                            onPress={() => changeTheme(item)}
+                        >
+
+                        </Pressable>
+                    ))}
                 </View>
             </View>
         </SafeAreaView>
