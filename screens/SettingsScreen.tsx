@@ -75,5 +75,12 @@ const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
         backgroundColor: colors.background
-    }
+    },
+    darkSafeArea: {
+        backgroundColor: "#111827",
+    },
+    content: {
+        padding: 20
+    },
+    
 })
