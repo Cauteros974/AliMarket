@@ -126,5 +126,6 @@ const styles = StyleSheet.create({
     optionText: {
         color: colors.text,
         fontWeight: "900",
+        textTransform: "capitalize",
     },
 })
