@@ -89,6 +89,8 @@ type ShopState = {
   deleteWishlistCollection: (collectionId: string) => void;
   theme: AppTheme;
   locale: Locale;
+  setTheme: (theme: AppTheme) => void;
+  setLocale: (locale: Locale) => void;
 };
 
 const initialFilters: CatalogFilters = {
@@ -124,6 +126,8 @@ export const useShopStore = create<ShopState>()(
 
       theme: "system",
       locale: "en",
+      setTheme: (theme) => set({ theme }),
+      setLocale: (locale) => set({ locale }),
 
       createWishlistCollection: (title) => {
         const trimmed = title.trim();
