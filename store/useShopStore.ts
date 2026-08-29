@@ -13,6 +13,7 @@ import {
   WishlistCollection
 } from "../types/shop";
 import { createId } from "../utils/format";
+import { AppTheme, Locale } from "../types/shop";
 
 const defaultAddress: Address = {
   id: "addr-main",
@@ -86,6 +87,8 @@ type ShopState = {
   addProductToWishlistCollection: (collectionId: string, productId: string) => void;
   removeProductFromWishlistCollection: (collectionId: string, productId: string) => void;
   deleteWishlistCollection: (collectionId: string) => void;
+  theme: AppTheme;
+  locale: Locale;
 };
 
 const initialFilters: CatalogFilters = {
@@ -118,6 +121,9 @@ export const useShopStore = create<ShopState>()(
       clearToast: () => set({ toast: null }),
       notifications: defaultNotifications,
       wishlistCollections: [],
+
+      theme: "system",
+      locale: "en",
 
       createWishlistCollection: (title) => {
         const trimmed = title.trim();
@@ -333,6 +339,7 @@ export const useShopStore = create<ShopState>()(
           ),
         })),
     }),
+    
     {
       name: "alimarket-shop-storage",
       storage: createJSONStorage(() => AsyncStorage),
