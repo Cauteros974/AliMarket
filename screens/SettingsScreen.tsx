@@ -10,6 +10,8 @@ export default function SettingsScreen() {
             <View>
                  <Text>Settings</Text>
                  <Text> Theme and language are saved locally.</Text>
+
+                 <Text>Theme</Text>
             </View>
         </SafeAreaView>
     )
