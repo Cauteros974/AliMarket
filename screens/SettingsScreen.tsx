@@ -59,8 +59,11 @@ export default function SettingsScreen() {
                     <Pressable
                         key={item.value}
                         onPress={() => setLocale(item.value)}
+                        style={[styles.localeItem, locale === item.value && styles.activeLocale]}
                     >
-
+                        <Text style={[styles.localeText, locale === item.value && styles.activeLocaleText]}>
+                            {item.label}
+                        </Text>
                     </Pressable>
                 ))}
             </View>
