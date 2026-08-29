@@ -119,4 +119,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    activeOption: {
+        backgroundColor: colors.primary,
+        borderColor: colors.primary,
+    },
 })
