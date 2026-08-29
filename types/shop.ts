@@ -104,3 +104,5 @@ export type Toast = {
 };
 
 export type AppTheme = "light" | "dark" | "system";
+
+export type Locale = "en" | "uk" | "de" | "fr" | "ua";
