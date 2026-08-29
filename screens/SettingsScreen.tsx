@@ -38,7 +38,7 @@ export default function SettingsScreen() {
 
                 <Text style={[styles.subtitle, isDark && styles.darkMuted]}>Theme</Text>
 
-                <Text>Theme</Text>
+                <Text style={[styles.sectionTitle, isDark && styles.darkText]}>Theme</Text>
 
                 <View>
                     {(["light", "dark"] as AppTheme[].map((item)))}
