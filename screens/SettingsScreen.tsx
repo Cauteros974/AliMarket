@@ -4,6 +4,13 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { AppTheme, Locale } from "../types/shop";
 
+const locals: {label: string, value: string}[] = [
+    { label: "English", value: "en" },
+    { label: "Українська", value: "uk" },
+    { label: "Deutsch", value: "de" },
+    { label: "Français", value: "fr" },
+]
+
 export default function SettingsScreen() {
     return(
         <SafeAreaView>
