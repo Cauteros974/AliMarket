@@ -4,7 +4,7 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { AppTheme, Locale } from "../types/shop";
 
-const locales: {label: string, value: string}[] = [
+const locales: {label: string, value: Locale}[] = [
     { label: "English", value: "en" },
     { label: "Українська", value: "uk" },
     { label: "Deutsch", value: "de" },
@@ -151,5 +151,5 @@ const styles = StyleSheet.create({
     },
     activeLocaleText: {
         color: colors.primary,
-    },
+  },
 })
