@@ -102,4 +102,7 @@ const styles = StyleSheet.create({
     darkText: {
         color: colors.white,
     },
+    darkMuted: {
+        color: "#CBD5E1",
+    },
 })
