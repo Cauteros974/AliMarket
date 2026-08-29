@@ -12,6 +12,10 @@ const locals: {label: string, value: string}[] = [
 ]
 
 export default function SettingsScreen() {
+
+    const theme = useShopStore((state) => state.theme);
+    const locale = useShopStore((state) => state.locale);
+
     return(
         <SafeAreaView>
             <View>
