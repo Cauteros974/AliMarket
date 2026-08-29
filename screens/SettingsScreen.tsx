@@ -22,6 +22,11 @@ export default function SettingsScreen() {
 
     const isDark = theme === "dark";
 
+    function changeTheme(value: AppTheme) {
+        setTheme(value);
+        showToast(`${value === "dark" ? "Dark" : "Light"} theme selected`, "info");
+    }
+
     return(
         <SafeAreaView>
             <View>
