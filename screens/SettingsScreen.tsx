@@ -46,7 +46,7 @@ export default function SettingsScreen() {
                             key={item}
                             onPress={() => changeTheme(item)}
                         >
-                            <Text style={[styles.optionText]}>
+                            <Text style={[styles.optionText, theme === item && styles.activeOptionText]}>
                                 {item}
                             </Text>
                         </Pressable>
