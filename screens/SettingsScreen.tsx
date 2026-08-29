@@ -52,6 +52,8 @@ export default function SettingsScreen() {
                         </Pressable>
                     ))}
                 </View>
+
+                <Text style={[styles.sectionTitle, isDark && styles.darkText]}>Language</Text>
             </View>
         </SafeAreaView>
     )
