@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#111827",
     },
     content: {
-        padding: 20
+        padding: 18,
     },
-    
+
 })
