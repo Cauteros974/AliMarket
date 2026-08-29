@@ -32,8 +32,8 @@ export default function SettingsScreen() {
 
     return(
         <SafeAreaView style={[styles.safeArea, isDark && styles.darkSafeArea]}>
-            <View>
-                 <Text>Settings</Text>
+            <View style={styles.content}>
+                 <Text style={[styles.title, isDark && styles.darkText]}>Settings</Text>
                  <Text> Theme and language are saved locally.</Text>
 
                  <Text>Theme</Text>
@@ -43,5 +43,5 @@ export default function SettingsScreen() {
 }
 
 const styles = StyleSheet.create({
-    
+
 })
