@@ -145,4 +145,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.surfaceSoft,
         borderColor: colors.primary,
     },
+    localeText: {
+        color: colors.text,
+        fontWeight: "900",
+    },
 })
