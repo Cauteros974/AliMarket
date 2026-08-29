@@ -24,7 +24,7 @@ export default function SettingsScreen() {
 
     function changeTheme(value: AppTheme) {
         setTheme(value);
-        showToast(`${value === "dark" ? "Dark" : "Light"} theme selected`, "info");
+        
     }
 
     return(
