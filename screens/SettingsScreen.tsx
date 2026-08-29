@@ -16,6 +16,10 @@ export default function SettingsScreen() {
     const theme = useShopStore((state) => state.theme);
     const locale = useShopStore((state) => state.locale);
 
+    const setTheme = useShopStore((state) => state.setTheme);
+    const setLocale = useShopStore((state) => state.setLocale);
+    const showToast = useShopStore((state) => state.showToast);
+
     return(
         <SafeAreaView>
             <View>
