@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { z } from "zod";
 import { colors } from "../theme/colors";
 
 type PaymentCard = {
@@ -9,6 +10,11 @@ type PaymentCard = {
     last4: string;
     brand: string;
 }
+
+const cardSchema = z.object({
+  holder: z.string().min(2),
+});
+
 
 export default function PaymentMethodsScreen() {
     const [cards, setCards] = useState<PaymentCard[]> ([
@@ -26,6 +32,11 @@ export default function PaymentMethodsScreen() {
 
     function addCard() {
         const cleanNumber = cardNumber;
+
+        const result = cardSchema.safeParse({
+            holder: holder.trim(),
+            cardNumber: cleanNumber,
+        });
 
         if (holder.trim().length < 2 || cleanNumber.length < 12) {
             Alert.alert("Invalid card", "Enter card holder and valid card number.");
