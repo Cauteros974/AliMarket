@@ -16,7 +16,9 @@ import OrdersScreen from "../screens/OrdersScreen";
 import PaymentMethodsScreen from "../screens/PaymentMethodsScreen";
 import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import QRScannerScreen from "../screens/QRScannerScreen";
 import SellerScreen from "../screens/SellerScreen";
+import SettingsScreen from "../screens/SettingsScreen";
 import SupportScreen from "../screens/SupportScreen";
 import WishlistCollectionsScreen from "../screens/WishlistCollectionsScreen";
 import { useShopStore } from "../store/useShopStore";
@@ -147,6 +149,14 @@ export default function AppNavigator() {
         component={WishlistCollectionsScreen}
         options={{ title: "Wishlist" }}
       />
+
+      <Stack.Screen
+        name="QRScanner"
+        component={QRScannerScreen}
+        options={{ title: "Scanner" }}
+      />
+
+      <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
   );
 }
