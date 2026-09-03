@@ -107,5 +107,9 @@ const styles = StyleSheet.create({
     camera: {
         flex: 1,
     },
-
+    primaryButton: {
+        height: 50,
+        borderRadius: 20,
+        backgroundColor: colors.primary
+    }
 })
