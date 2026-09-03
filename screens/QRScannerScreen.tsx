@@ -49,7 +49,7 @@ export default function QRScannerScreen(){
                     />
                 </View>
 
-                <Pressable>
+                <Pressable style={styles.secondaryButton}>
                     <Text style={styles.secondaryText}>Scan again</Text>
                 </Pressable>
             </View>
