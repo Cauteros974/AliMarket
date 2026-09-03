@@ -35,6 +35,10 @@ export default function QRScannerScreen(){
         <SafeAreaView>
             <View>
                 <Text>QR scanner</Text>
+
+                <Text>
+                    Try scanning a code with WELCOME10, SALE15 or FREESHIP.
+                </Text>
             </View>
         </SafeAreaView>
     )
