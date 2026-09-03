@@ -28,8 +28,16 @@ export default function QRScannerScreen(){
                     </Pressable>
                 </View>
             </SafeAreaView>
-        )
+        );
     }
+
+    return(
+        <SafeAreaView>
+            <View>
+                <Text>QR scanner</Text>
+            </View>
+        </SafeAreaView>
+    )
 }
 
 const styles = StyleSheet.create({
