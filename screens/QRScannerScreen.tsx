@@ -39,6 +39,17 @@ export default function QRScannerScreen(){
                 <Text style={styles.subtitle}>
                     Try scanning a code with WELCOME10, SALE15 or FREESHIP.
                 </Text>
+
+                <View style={styles.cameraWrap}>
+                    <CameraView
+                        style={styles.camera}
+                        barcodeScannerSettings={{
+                            barcodeTypes: ["qr", "ean13", "code128"],
+                        }}
+                    >
+                        
+                    </CameraView>
+                </View>
             </View>
         </SafeAreaView>
     )
