@@ -39,10 +39,11 @@ export default function PaymentMethodsScreen() {
             cardNumber: cleanNumber,
         });
 
-        if (holder.trim().length < 2 || cleanNumber.length < 12) {
+        if (!result.success) {
             Alert.alert("Invalid card", "Enter card holder and valid card number.");
             return;
         }
+
 
         const newCard: PaymentCard = {
             id: `card-${Date.now()}`,
