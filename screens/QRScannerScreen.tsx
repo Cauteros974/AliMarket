@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     },
     camerWrap: {
         flex: 1,
-        borderRadius: 20,
+        borderRadius: 24,
+        overflow: "hidden",
     }
 })
