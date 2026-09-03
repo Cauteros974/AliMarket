@@ -19,6 +19,25 @@ export type Review = {
   rating: number;
   text: string;
   date: string;
+  photos: string[];
+};
+
+export type ProductQuestion = {
+  id: string;
+  question: string;
+  answer: string;
+  author: string;
+};
+
+export type Seller = {
+  id: string;
+  name: string;
+  avatar: string;
+  rating: number;
+  followers: number;
+  sales: number;
+  location: string;
+  description: string;
 };
 
 export type Product = {
@@ -26,6 +45,7 @@ export type Product = {
   title: string;
   description: string;
   categoryId: CategoryId;
+  sellerId: string;
   image: string;
   gallery: string[];
   price: number;
@@ -38,19 +58,13 @@ export type Product = {
   freeDelivery: boolean;
   colors: string[];
   reviewList: Review[];
+  questions: ProductQuestion[];
 };
 
 export type CartItem = {
   productId: string;
   quantity: number;
 };
-
-export type WishlistCollection = {
-  id: string;
-  title: string;
-  productIds: string[];
-  createdAt: string;
-}
 
 export type SortOption = "popular" | "priceAsc" | "priceDesc" | "rating";
 
@@ -63,7 +77,6 @@ export type CatalogFilters = {
 };
 
 export type User = {
-  id: string;
   name: string;
   email: string;
 };
@@ -77,7 +90,12 @@ export type Address = {
   phone: string;
 };
 
-export type OrderStatus = "Processing" | "Packed" | "Shipped" | "Delivered" | "Cancelled" | "Local warehouse";
+export type OrderStatus =
+  | "Processing"
+  | "Packed"
+  | "Shipped"
+  | "Local warehouse"
+  | "Delivered";
 
 export type Order = {
   id: string;
@@ -96,13 +114,18 @@ export type AppNotification = {
   read: boolean;
 };
 
-export type ToastType = "success" | "error" | "info";
+export type AppTheme = "light" | "dark";
 
-export type Toast = {
-  type: ToastType;
-  message: string;
+export type Locale = "en" | "uk" | "ru";
+
+export type WishlistCollection = {
+  id: string;
+  title: string;
+  productIds: string[];
 };
 
-export type AppTheme = "light" | "dark" | "system";
-
-export type Locale = "en" | "uk" | "de" | "fr";
+export type ToastMessage = {
+  id: string;
+  type: "success" | "error" | "info";
+  message: string;
+};
