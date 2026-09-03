@@ -103,5 +103,9 @@ const styles = StyleSheet.create({
         borderRadius: 24,
         overflow: "hidden",
         backgroundColor: colors.text,
-    }
+    },
+    camera: {
+        flex: 1,
+    },
+
 })
