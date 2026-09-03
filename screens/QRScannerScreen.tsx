@@ -120,4 +120,9 @@ const styles = StyleSheet.create({
         color: colors.white,
         fontWeight: "900",
     },
+    secondaryButton: {
+        height: 54,
+        borderRadius: 18,
+        backgroundColor: colors.surface,
+    },
 })
