@@ -8,6 +8,8 @@ import { colors } from "../theme/colors";
 export default function QRScannerScreen(){
     const[permission, requestPermission] = useCameraPermissions();
 
+    const [scanned, setScanned] = useState(false);
+
     if(!permission){
         return <SafeAreaView />
     }
@@ -49,7 +51,7 @@ export default function QRScannerScreen(){
                     />
                 </View>
 
-                <Pressable style={styles.secondaryButton}>
+                <Pressable onPress={() => setScanned(false)} style={styles.secondaryButton}>
                     <Text style={styles.secondaryText}>Scan again</Text>
                 </Pressable>
             </View>
