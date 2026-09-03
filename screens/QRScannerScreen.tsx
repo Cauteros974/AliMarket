@@ -23,7 +23,9 @@ export default function QRScannerScreen(){
                         Allow camera access to scan demo coupons or product codes.
                     </Text>
 
-                    <Text style={styles.primaryText}>Allow camera</Text>
+                    <Pressable onPress={requestPermission} style={styles.primaryButton}>
+                        <Text style={styles.primaryText}>Allow camera</Text>
+                    </Pressable>
                 </View>
             </SafeAreaView>
         )
