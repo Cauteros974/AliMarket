@@ -48,6 +48,11 @@ export default function QRScannerScreen(){
                         barcodeScannerSettings={{
                             barcodeTypes: ["qr", "ean13", "code128"],
                         }}
+                        onBarcodeScanned={({data}) => {
+                            if (scanned) return;
+                            
+                            setScanned(true);
+                        }}
                     />
                 </View>
 
