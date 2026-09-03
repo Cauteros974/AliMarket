@@ -148,8 +148,8 @@ const styles = StyleSheet.create({
     },
     trackButton: {
         height: 46,
-        borderRadius: 16,
-        backgroundColor: colors.background
+        borderRadius: 14,
+        backgroundColor: colors.primary
     },
     cardTitle: { 
         color: colors.text, 
