@@ -34,9 +34,9 @@ export default function QRScannerScreen(){
     return(
         <SafeAreaView>
             <View>
-                <Text>QR scanner</Text>
+                <Text style={styles.title}>QR / Barcode scanner</Text>
 
-                <Text>
+                <Text style={styles.subtitle}>
                     Try scanning a code with WELCOME10, SALE15 or FREESHIP.
                 </Text>
             </View>
