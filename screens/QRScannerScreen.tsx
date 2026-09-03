@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
         fontWeight: "700",
         lineHeight: 21,
     },
-    camerWrap: {
+    cameraWrap: {
         flex: 1,
         borderRadius: 24,
         overflow: "hidden",
