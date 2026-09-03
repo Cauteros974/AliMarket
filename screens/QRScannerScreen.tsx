@@ -10,6 +10,8 @@ export default function QRScannerScreen(){
 
     const [scanned, setScanned] = useState(false);
 
+    const setCouponCode = useShopStore((state) => state.setCouponCode);
+
     if(!permission){
         return <SafeAreaView />
     }
@@ -52,6 +54,7 @@ export default function QRScannerScreen(){
                             if (scanned) return;
                             
                             setScanned(true);
+                            setCouponCode(data.toUpperCase());
                         }}
                     />
                 </View>
