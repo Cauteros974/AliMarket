@@ -78,7 +78,7 @@ type ShopState = {
   placeOrder: (total: number) => Order | null;
   markNotificationRead: (notificationId: string) => void;
   toast: ToastMessage | null;
-  showToast: (toast: ToastMessage) => void;
+  showToast: (toast: Omit<ToastMessage, "id">) => void;
   hideToast: () => void;
   clearToast: () => void;
   setUser: (user: User) => void;
