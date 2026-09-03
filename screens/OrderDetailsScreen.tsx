@@ -146,6 +146,11 @@ const styles = StyleSheet.create({
         fontSize: 12, 
         fontWeight: "900" 
     },
+    trackButton: {
+        height: 46,
+        borderRadius: 16,
+        backgroundColor: colors.background
+    },
     cardTitle: { 
         color: colors.text, 
         fontSize: 18, 
