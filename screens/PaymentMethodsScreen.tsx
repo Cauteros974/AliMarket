@@ -13,6 +13,7 @@ type PaymentCard = {
 
 const cardSchema = z.object({
   holder: z.string().min(2),
+  cardNumber: z.string().regex(/^\d{12,19}$/),
 });
 
 
