@@ -102,5 +102,6 @@ const styles = StyleSheet.create({
         flex: 1,
         borderRadius: 24,
         overflow: "hidden",
+        backgroundColor: colors.text,
     }
 })
