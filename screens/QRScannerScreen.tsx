@@ -87,9 +87,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     title: {
-    color: colors.text,
-    fontSize: 28,
-    fontWeight: "900",
+        color: colors.text,
+        fontSize: 28,
+        fontWeight: "900",
     },
     subtitle: {
         color: colors.muted,
@@ -98,4 +98,8 @@ const styles = StyleSheet.create({
         fontWeight: "700",
         lineHeight: 21,
     },
+    camerWrap: {
+        flex: 1,
+        borderRadius: 20,
+    }
 })
