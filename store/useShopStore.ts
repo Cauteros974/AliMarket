@@ -9,7 +9,7 @@ import {
   Order,
   SortOption,
   User,
-  Toast,
+  ToastMessage,
   WishlistCollection
 } from "../types/shop";
 import { createId } from "../utils/format";
@@ -77,8 +77,8 @@ type ShopState = {
   removeAddress: (addressId: string) => void;
   placeOrder: (total: number) => Order | null;
   markNotificationRead: (notificationId: string) => void;
-  toast: Toast | null;
-  showToast: (toast: Toast) => void;
+  toast: ToastMessage | null;
+  showToast: (toast: ToastMessage) => void;
   hideToast: () => void;
   clearToast: () => void;
   setUser: (user: User) => void;
@@ -118,7 +118,10 @@ export const useShopStore = create<ShopState>()(
       selectedAddressId: defaultAddress.id,
       orders: [],
       toast: null,
-      showToast: (toast) => set({ toast }),
+      showToast: (toast) =>
+        set({
+          toast: { ...toast, id: createId("toast") },
+        }),
       hideToast: () => set({ toast: null }),
       clearToast: () => set({ toast: null }),
       notifications: defaultNotifications,

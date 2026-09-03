@@ -77,6 +77,7 @@ export type CatalogFilters = {
 };
 
 export type User = {
+  id: string;
   name: string;
   email: string;
 };
@@ -114,7 +115,7 @@ export type AppNotification = {
   read: boolean;
 };
 
-export type AppTheme = "light" | "dark";
+export type AppTheme = "light" | "dark" | "system";
 
 export type Locale = "en" | "uk" | "de" | "fr";
 
