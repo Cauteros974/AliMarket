@@ -1,41 +1,28 @@
+import { CategoryId } from "../types/shop";
+
 export type RootStackParamList = {
   MainTabs: undefined;
-
-  CategoryDetails: {
-    categoryId: string;
-  };
-
-  ProductDetails: {
-    productId: string;
-  };
-
-  Seller: {
-    sellerId: string;
-  };
-
+  ProductDetails: { productId: string };
+  CategoryDetails: { categoryId: CategoryId };
+  Seller: { sellerId: string };
   Checkout: undefined;
   Orders: undefined;
-  OrderDetails: {
-    orderId: string;
-  };
-  OrderTracking: {
-    orderId: string;
-  };
+  OrderDetails: { orderId: string };
+  OrderTracking: { orderId: string };
+  Auth: undefined;
   Addresses: undefined;
   Notifications: undefined;
-  WishlistCollections: undefined;
   PaymentMethods: undefined;
+  Support: undefined;
+  WishlistCollections: undefined;
   QRScanner: undefined;
   Settings: undefined;
-  Support: undefined;
-  Auth: undefined;
 };
 
 export type MainTabParamList = {
-    Home: undefined;
-    Catalog: undefined;
-    Cart: undefined;
-    Favorites: undefined;
-    Profile: undefined;
-}
-
+  Home: undefined;
+  Catalog: undefined;
+  Cart: undefined;
+  Favorites: undefined;
+  Profile: undefined;
+};
