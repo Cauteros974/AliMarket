@@ -6,13 +6,18 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
 export default function QRScannerScreen(){
-    return(
-        <SafeAreaView style={styles.safeArea}>
-            <View style={styles.center}>
-                <Text style={styles.title}>Camera access</Text>
-            </View>
-        </SafeAreaView>
-    )
+    const[permission, requestPermission] = useCameraPermissions();
+
+
+    if(!permission.granted){
+        return(
+            <SafeAreaView style={styles.safeArea}>
+                <View style={styles.center}>
+                    <Text style={styles.title}>Camera access</Text>
+                </View>
+            </SafeAreaView>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
