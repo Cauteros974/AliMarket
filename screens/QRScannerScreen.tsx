@@ -7,10 +7,14 @@ import { colors } from "../theme/colors";
 
 export default function QRScannerScreen(){
     return(
-        <SafeAreaView>
-            <View>
-                <Text>Camera access</Text>
+        <SafeAreaView style={styles.safeArea}>
+            <View style={styles.center}>
+                <Text style={styles.title}>Camera access</Text>
             </View>
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+
+})
