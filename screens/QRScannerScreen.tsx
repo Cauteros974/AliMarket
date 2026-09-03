@@ -17,7 +17,6 @@ export default function QRScannerScreen(){
         return <SafeAreaView />
     }
 
-
     if(!permission.granted){
         return(
             <SafeAreaView style={styles.safeArea}>
@@ -73,5 +72,12 @@ export default function QRScannerScreen(){
 }
 
 const styles = StyleSheet.create({
-
+    safeArea: {
+        flex: 1,
+        backgroundColor: colors.background,
+    },
+    content: {
+        flex: 1,
+        padding: 20,
+    }
 })
