@@ -112,6 +112,8 @@ const styles = StyleSheet.create({
         borderRadius: 18,
         backgroundColor: colors.primary,
         paddingHorizontal: 18,
-        alignItems: "center"
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 12,
     }
 })
