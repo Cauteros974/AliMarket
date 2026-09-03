@@ -8,6 +8,10 @@ import { colors } from "../theme/colors";
 export default function QRScannerScreen(){
     const[permission, requestPermission] = useCameraPermissions();
 
+    if(!permission){
+        return <SafeAreaView />
+    }
+
 
     if(!permission.granted){
         return(
