@@ -46,10 +46,12 @@ export default function QRScannerScreen(){
                         barcodeScannerSettings={{
                             barcodeTypes: ["qr", "ean13", "code128"],
                         }}
-                    >
-                        
-                    </CameraView>
+                    />
                 </View>
+
+                <Pressable>
+                    <Text style={styles.secondaryText}>Scan again</Text>
+                </Pressable>
             </View>
         </SafeAreaView>
     )
