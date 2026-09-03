@@ -95,5 +95,7 @@ const styles = StyleSheet.create({
         color: colors.muted,
         marginTop: 8,
         marginBottom: 18,
+        fontWeight: "700",
+        lineHeight: 21,
     },
 })
