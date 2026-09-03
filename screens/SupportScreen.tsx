@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import z from "zod";
 import { colors } from "../theme/colors";
 
 const faq = [
@@ -18,11 +19,13 @@ const faq = [
   },
 ];
 
+const supportSchema = z.string().min(8);
+
 export default function SupportScreen() {
     const [message, setMessage] = useState("");
 
     function sendMessage() {
-    if (message.trim().length < 8) {
+    if (!supportSchema.safeParse(message.trim()).success) {
       Alert.alert("Message is too short", "Please describe your issue in more detail.");
       return;
     }
