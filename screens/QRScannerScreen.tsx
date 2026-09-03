@@ -130,4 +130,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginTop: 14,
     },
+    secondaryText: {
+        color: colors.text,
+        fontWeight: "900",
+    },
 })
