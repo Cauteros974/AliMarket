@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     },
     trackText: {
         color: colors.white,
-        fontWeight: "900"
+        fontWeight: "900",
     },
     productRow: {
         flexDirection: "row",
