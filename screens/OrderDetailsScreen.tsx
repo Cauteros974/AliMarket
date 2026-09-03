@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { products } from "../data/products";
 import { RootStackParamList } from "../navigation/types";
@@ -9,9 +9,11 @@ import { formatDate, formatPrice } from "../utils/format";
 
 type Props = NativeStackScreenProps<RootStackParamList, "OrderDetails">;
 
-export default function OrderDetailsScreen({route}: Props) {
-    const orders = useShopStore((state) => state.orders);
-    const order = orders.find((item) => item.id === route.params.orderId);
+export default function OrderDetailsScreen({ navigation, route }: Props) {
+    const order = useShopStore((state) =>
+        state.orders.find((item) => item.id === route.params.orderId)
+    );
+
 
     if(!order) {
         return(
@@ -40,6 +42,10 @@ export default function OrderDetailsScreen({route}: Props) {
                         </View>
                     </View>
                 </View>
+
+                <Pressable>
+                    <Text style={styles.trackText}>Track order</Text>
+                </Pressable>
 
                 <View style={styles.card}>
                     <Text style={styles.cardTitle}>Delivery address</Text>
