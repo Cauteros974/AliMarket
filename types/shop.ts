@@ -116,7 +116,7 @@ export type AppNotification = {
 
 export type AppTheme = "light" | "dark";
 
-export type Locale = "en" | "uk" | "ru";
+export type Locale = "en" | "uk" | "de" | "fr";
 
 export type WishlistCollection = {
   id: string;
