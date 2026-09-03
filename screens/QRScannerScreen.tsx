@@ -32,8 +32,8 @@ export default function QRScannerScreen(){
     }
 
     return(
-        <SafeAreaView>
-            <View>
+        <SafeAreaView style={styles.safeArea}>
+            <View style={styles.content}>
                 <Text style={styles.title}>QR / Barcode scanner</Text>
 
                 <Text style={styles.subtitle}>
