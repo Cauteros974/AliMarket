@@ -160,6 +160,10 @@ const styles = StyleSheet.create({
         fontWeight: "900", 
         marginBottom: 8 
     },
+    trackText: {
+        color: colors.white,
+        fontWeight: "900"
+    },
     productRow: {
         flexDirection: "row",
         gap: 12,
