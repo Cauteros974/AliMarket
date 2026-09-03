@@ -18,6 +18,10 @@ export default function QRScannerScreen(){
             <SafeAreaView style={styles.safeArea}>
                 <View style={styles.center}>
                     <Text style={styles.title}>Camera access</Text>
+
+                    <Text>
+                        Allow camera access to scan demo coupons or product codes.
+                    </Text>
                 </View>
             </SafeAreaView>
         )
