@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     primaryButton: {
-        height: 50,
+        height: 54,
         borderRadius: 20,
         backgroundColor: colors.primary
     }
