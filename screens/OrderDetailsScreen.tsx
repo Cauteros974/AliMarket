@@ -1,4 +1,5 @@
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RouteProp } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { products } from "../data/products";
@@ -7,7 +8,10 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { formatDate, formatPrice } from "../utils/format";
 
-type Props = NativeStackScreenProps<RootStackParamList, "OrderDetails">;
+type Props = {
+  route: RouteProp<RootStackParamList, "OrderDetails">;
+  navigation: NativeStackNavigationProp<RootStackParamList, "OrderDetails">;
+};
 
 export default function OrderDetailsScreen({ navigation, route }: Props) {
     const order = useShopStore((state) =>

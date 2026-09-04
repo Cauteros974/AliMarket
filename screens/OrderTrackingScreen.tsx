@@ -1,4 +1,5 @@
-import { StackScreenProps } from "@react-navigation/stack";
+import { RouteProp } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { ScrollView, View, Text, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { RootStackParamList } from "../navigation/types";
@@ -6,7 +7,10 @@ import { useShopStore } from "../store/useShopStore";
 import { OrderStatus } from "../types/shop";
 import { colors } from "../theme/colors";
 
-type Props = StackScreenProps<RootStackParamList, "OrderTracking">;
+type Props = {
+  route: RouteProp<RootStackParamList, "OrderTracking">;
+  navigation: NativeStackNavigationProp<RootStackParamList, "OrderTracking">;
+};
 
 const steps: OrderStatus[] = [
     "Processing",
