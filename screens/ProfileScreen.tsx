@@ -77,6 +77,12 @@ export default function ProfileScreen({ navigation }: Props) {
                     onPress={() => navigation.navigate("PaymentMethods")}
                 />
                 <MenuItem
+                    label="Wishlist collections"
+                    icon="albums-outline"
+                    onPress={() => navigation.navigate("WishlistCollections")}
+                />
+
+                <MenuItem
                     label="Support center"
                     icon="help-circle-outline"
                     onPress={() => navigation.navigate("Support")}
