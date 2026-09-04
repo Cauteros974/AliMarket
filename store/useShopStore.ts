@@ -353,9 +353,9 @@ export const useShopStore = create<ShopState>()(
         addRecentlyViewed: (productId) => 
           set((state) => {
             const filtered = state.recentlyViewedIds.filter((id) => id !== productId);
-            return(
+            return{
               recentlyViewedIds: [productId, ...filtered].slice(0, 10),
-            )
+            }
           })
     }),
     
