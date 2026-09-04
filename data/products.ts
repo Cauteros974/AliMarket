@@ -361,6 +361,7 @@ const reviews = [
         id: "r1",
         author: "Emma",
         rating: 5,
+        text: "Good quality for the price.",
         date: "2026-06-14",
     }
 ]
