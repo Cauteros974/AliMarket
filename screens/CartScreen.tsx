@@ -144,8 +144,15 @@ export default function CartScreen({ navigation }: Props) {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: colors.background },
-  content: { flex: 1, paddingHorizontal: 18, paddingTop: 8 },
+  safeArea: { 
+    flex: 1, 
+    backgroundColor: colors.background 
+  },
+  content: { 
+    flex: 1, 
+    paddingHorizontal: 18, 
+    paddingTop: 8 
+  },
   title: { color: colors.text, fontSize: 28, fontWeight: "900", marginBottom: 16 },
   list: { paddingBottom: 330, gap: 12 },
   cartItem: {
