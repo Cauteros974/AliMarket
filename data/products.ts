@@ -347,5 +347,11 @@ const questions: ProductQuestion[] = [
         author: "Nina",
         question: "Does it arrive with tracking?",
         answer: "Yes, all demo orders include a local tracking timeline.",
-    }
+    },
+    {
+        id: "q2",
+        author: "Lucas",
+        question: "Can I return it if it does not fit?",
+        answer: "In a real app this would depend on the seller policy. Here it is demo-only.",
+    },
 ]
