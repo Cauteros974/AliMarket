@@ -354,4 +354,13 @@ const questions: ProductQuestion[] = [
         question: "Can I return it if it does not fit?",
         answer: "In a real app this would depend on the seller policy. Here it is demo-only.",
     },
+];
+
+const reviews = [
+    {
+        id: "r1",
+        author: "Emma",
+        rating: 5,
+        date: "2026-06-14",
+    }
 ]
