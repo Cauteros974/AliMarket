@@ -366,6 +366,15 @@ const reviews = [
         photos: [
             require("../assets/images/r1.avif"),
         ],
-        
-    }
+    },
+    {
+        id: "r2",
+        author: "Mateo",
+        rating: 4,
+        text: "Looks exactly like the photos. Packaging could be stronger.",
+        date: "2026-06-18",
+        photos: [
+            require("../assets/images/r2.avif"),
+        ],
+    },
 ]
