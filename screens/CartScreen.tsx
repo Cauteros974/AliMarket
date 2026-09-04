@@ -153,8 +153,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18, 
     paddingTop: 8 
   },
-  title: { color: colors.text, fontSize: 28, fontWeight: "900", marginBottom: 16 },
-  list: { paddingBottom: 330, gap: 12 },
+  title: { 
+    color: colors.text, 
+    fontSize: 28, 
+    fontWeight: "900", 
+    marginBottom: 16 
+  },
+  list: { 
+    paddingBottom: 330, 
+    gap: 12 
+  },
   cartItem: {
     backgroundColor: colors.surface,
     borderRadius: 18,
