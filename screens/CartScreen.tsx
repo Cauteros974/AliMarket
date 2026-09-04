@@ -157,7 +157,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 12,
   },
-  image: { width: 96, height: 96, borderRadius: 14, backgroundColor: colors.surfaceSoft },
+  image: { 
+    width: 96, 
+    height: 96, 
+    borderRadius: 14, 
+    backgroundColor: colors.surfaceSoft 
+  },
   itemInfo: { 
     flex: 1 
   },
