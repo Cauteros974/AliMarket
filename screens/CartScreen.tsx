@@ -69,7 +69,7 @@ export default function CartScreen({ navigation }: Props) {
                 onPress={() => navigation.navigate("ProductDetails", { productId: item.product!.id })}
                 style={styles.cartItem}
               >
-                <Image source={item.product.image} style={styles.image} />
+                <Image source={{ uri: item.product.image }} style={styles.image} />
 
                 <View style={styles.itemInfo}>
                   <Text numberOfLines={2} style={styles.itemTitle}>
@@ -146,22 +146,22 @@ export default function CartScreen({ navigation }: Props) {
 const styles = StyleSheet.create({
   safeArea: { 
     flex: 1, 
-    backgroundColor: colors.background 
+    backgroundColor: colors.background,
   },
   content: { 
     flex: 1, 
     paddingHorizontal: 18, 
-    paddingTop: 8 
+    paddingTop: 8,
   },
   title: { 
     color: colors.text, 
     fontSize: 28, 
     fontWeight: "900", 
-    marginBottom: 16 
+    marginBottom: 16, 
   },
   list: { 
     paddingBottom: 330, 
-    gap: 12 
+    gap: 12, 
   },
   cartItem: {
     backgroundColor: colors.surface,
@@ -176,22 +176,22 @@ const styles = StyleSheet.create({
     width: 96, 
     height: 96, 
     borderRadius: 14, 
-    backgroundColor: colors.surfaceSoft 
+    backgroundColor: colors.surfaceSoft,
   },
   itemInfo: { 
-    flex: 1 
+    flex: 1
   },
   itemTitle: { 
     color: colors.text, 
     fontSize: 15, 
     lineHeight: 20, 
-    fontWeight: "900" 
+    fontWeight: "900",
   },
   itemPrice: { 
     color: colors.primary, 
     fontSize: 17, 
     fontWeight: "900", 
-    marginTop: 6 
+    marginTop: 6,
   },
   itemFooter: {
     marginTop: "auto",
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
   },
   removeText: { 
     color: colors.danger, 
-    fontWeight: "800" 
+    fontWeight: "800",
   },
   summary: {
     position: "absolute",
@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
   couponRow: { 
     flexDirection: "row", 
     gap: 10, 
-    marginBottom: 12 
+    marginBottom: 12,
   },
   couponInput: {
     flex: 1,
@@ -246,34 +246,35 @@ const styles = StyleSheet.create({
   },
   scanText: { 
     color: colors.primary, 
-    fontWeight: "900" 
+    fontWeight: "900",
   },
   summaryRow: { 
     flexDirection: "row", 
     justifyContent: "space-between", 
-    marginBottom: 9 
+    marginBottom: 9,
   },
   summaryLabel: { 
     color: colors.muted, 
-    fontWeight: "700" 
+    fontWeight: "700",
   },
   summaryValue: { 
     color: colors.text, 
-    fontWeight: "900" 
+    fontWeight: "900",
   },
   divider: { 
     height: 1, 
     backgroundColor: colors.border, 
-    marginVertical: 8 
+    marginVertical: 8,
   },
   totalLabel: { 
     color: colors.text, 
     fontSize: 18, 
-    fontWeight: "900" },
+    fontWeight: "900",
+  },
   totalValue: { 
     color: colors.primary, 
     fontSize: 20, 
-    fontWeight: "900" 
+    fontWeight: "900",
   },
   checkoutButton: {
     height: 54,
@@ -286,21 +287,21 @@ const styles = StyleSheet.create({
   checkoutText: { 
     color: colors.white, 
     fontSize: 16, 
-    fontWeight: "900" 
+    fontWeight: "900",
   },
   emptyState: { 
     minHeight: 360, 
     alignItems: "center", 
-    justifyContent: "center" 
+    justifyContent: "center",
   },
   emptyTitle: { 
     color: colors.text, 
     fontSize: 20, 
     fontWeight: "900", 
-    marginTop: 12 
+    marginTop: 12,
   },
   emptyText: { 
     color: colors.muted, 
-    marginTop: 6 
+    marginTop: 6,
   },
 });
