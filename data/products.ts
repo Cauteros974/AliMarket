@@ -1,4 +1,4 @@
-import { Category, Product, Seller, ProductQuestion } from "../types/product";
+import { Category, Product, Seller } from "../types/product";
 
 export const categories: Category[] = [
     {
@@ -338,43 +338,5 @@ export const sellers: Seller[] = [
         location: "Italy",
         verified: true,
         description: "Skincare and beauty products for everyday routines.",
-    },
-];
-
-const questions: ProductQuestion[] = [
-    {
-        id: "q1",
-        author: "Nina",
-        question: "Does it arrive with tracking?",
-        answer: "Yes, all demo orders include a local tracking timeline.",
-    },
-    {
-        id: "q2",
-        author: "Lucas",
-        question: "Can I return it if it does not fit?",
-        answer: "In a real app this would depend on the seller policy. Here it is demo-only.",
-    },
-];
-
-const reviews = [
-    {
-        id: "r1",
-        author: "Emma",
-        rating: 5,
-        text: "Good quality for the price. Delivery was faster than expected.",
-        date: "2026-06-14",
-        photos: [
-            require("../assets/images/r1.avif"),
-        ],
-    },
-    {
-        id: "r2",
-        author: "Mateo",
-        rating: 4,
-        text: "Looks exactly like the photos. Packaging could be stronger.",
-        date: "2026-06-18",
-        photos: [
-            require("../assets/images/r2.avif"),
-        ],
     },
 ];
