@@ -91,6 +91,8 @@ type ShopState = {
   locale: Locale;
   setTheme: (theme: AppTheme) => void;
   setLocale: (locale: Locale) => void;
+  recentlyViewedIds: string[];
+  addRecentlyViewed: (productId: string) => void;
 };
 
 const initialFilters: CatalogFilters = {
@@ -345,6 +347,8 @@ export const useShopStore = create<ShopState>()(
               : notification
           ),
         })),
+
+        recentlyViewedIds: [],
     }),
     
     {
