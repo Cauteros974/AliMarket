@@ -22,10 +22,7 @@ export default function CartScreen({ navigation }: Props) {
   const removeFromCart = useShopStore((state) => state.removeFromCart);
 
   const cartProducts = cart
-    .map((item) => ({
-      item,
-      product: products.find((product) => product.id === item.productId),
-    }))
+    .map((item) => ({ item, product: products.find((product) => product.id === item.productId) }))
     .filter((entry) => entry.product);
 
   const subtotal = cartProducts.reduce(
@@ -34,14 +31,8 @@ export default function CartScreen({ navigation }: Props) {
   );
 
   const shipping = appliedCoupon === "FREESHIP" || subtotal === 0 ? 0 : 4.99;
-
   const discount =
-    appliedCoupon === "WELCOME10"
-      ? subtotal * 0.1
-      : appliedCoupon === "SALE15"
-        ? subtotal * 0.15
-        : 0;
-
+    appliedCoupon === "WELCOME10" ? subtotal * 0.1 : appliedCoupon === "SALE15" ? subtotal * 0.15 : 0;
   const total = Math.max(subtotal + shipping - discount, 0);
 
   function handleApplyCoupon() {
@@ -49,9 +40,7 @@ export default function CartScreen({ navigation }: Props) {
 
     Alert.alert(
       ok ? "Coupon applied" : "Invalid coupon",
-      ok
-        ? "Discount added to your cart."
-        : "Try WELCOME10, SALE15 or FREESHIP."
+      ok ? "Discount added to your cart." : "Try WELCOME10, SALE15 or FREESHIP."
     );
   }
 
@@ -77,18 +66,15 @@ export default function CartScreen({ navigation }: Props) {
 
             return (
               <Pressable
-                onPress={() =>
-                  navigation.navigate("ProductDetails", { productId: item.product!.id })
-                }
+                onPress={() => navigation.navigate("ProductDetails", { productId: item.product!.id })}
                 style={styles.cartItem}
               >
-                <Image source={item.product.image} style={styles.image} />
+                <Image source={{ uri: item.product.image }} style={styles.image} />
 
                 <View style={styles.itemInfo}>
                   <Text numberOfLines={2} style={styles.itemTitle}>
                     {item.product.title}
                   </Text>
-
                   <Text style={styles.itemPrice}>{formatPrice(item.product.price)}</Text>
 
                   <View style={styles.itemFooter}>
@@ -97,7 +83,6 @@ export default function CartScreen({ navigation }: Props) {
                       onMinus={() => decreaseQuantity(item.product!.id)}
                       onPlus={() => increaseQuantity(item.product!.id)}
                     />
-
                     <Pressable onPress={() => removeFromCart(item.product!.id)}>
                       <Text style={styles.removeText}>Remove</Text>
                     </Pressable>
@@ -120,22 +105,23 @@ export default function CartScreen({ navigation }: Props) {
               autoCapitalize="characters"
               style={styles.couponInput}
             />
-
             <Pressable onPress={handleApplyCoupon} style={styles.applyButton}>
               <Text style={styles.applyText}>Apply</Text>
             </Pressable>
           </View>
 
+          <Pressable onPress={() => navigation.navigate("QRScanner")} style={styles.scanButton}>
+            <Text style={styles.scanText}>Scan coupon QR / barcode</Text>
+          </Pressable>
+
           <View style={styles.summaryRow}>
             <Text style={styles.summaryLabel}>Subtotal</Text>
             <Text style={styles.summaryValue}>{formatPrice(subtotal)}</Text>
           </View>
-
           <View style={styles.summaryRow}>
             <Text style={styles.summaryLabel}>Shipping</Text>
             <Text style={styles.summaryValue}>{formatPrice(shipping)}</Text>
           </View>
-
           <View style={styles.summaryRow}>
             <Text style={styles.summaryLabel}>Discount</Text>
             <Text style={styles.summaryValue}>-{formatPrice(discount)}</Text>
@@ -171,25 +157,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 12,
   },
-  image: {
-    width: 96,
-    height: 96,
-    borderRadius: 14,
-    backgroundColor: colors.surfaceSoft,
-  },
+  image: { width: 96, height: 96, borderRadius: 14, backgroundColor: colors.surfaceSoft },
   itemInfo: { flex: 1 },
-  itemTitle: {
-    color: colors.text,
-    fontSize: 15,
-    lineHeight: 20,
-    fontWeight: "900",
-  },
-  itemPrice: {
-    color: colors.primary,
-    fontSize: 17,
-    fontWeight: "900",
-    marginTop: 6,
-  },
+  itemTitle: { color: colors.text, fontSize: 15, lineHeight: 20, fontWeight: "900" },
+  itemPrice: { color: colors.primary, fontSize: 17, fontWeight: "900", marginTop: 6 },
   itemFooter: {
     marginTop: "auto",
     flexDirection: "row",
@@ -226,19 +197,47 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   applyText: { color: colors.white, fontWeight: "900" },
-  summaryRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 9,
+  scanButton: {
+    height: 42,
+    borderRadius: 14,
+    backgroundColor: colors.surfaceSoft,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 12,
   },
-  summaryLabel: { color: colors.muted, fontWeight: "700" },
-  summaryValue: { color: colors.text, fontWeight: "900" },
-  divider: { height: 1, backgroundColor: colors.border, marginVertical: 8 },
-  totalLabel: { color: colors.text, fontSize: 18, fontWeight: "900" },
-  totalValue: { color: colors.primary, fontSize: 20, fontWeight: "900" },
+  scanText: { 
+    color: colors.primary, 
+    fontWeight: "900" 
+  },
+  summaryRow: { 
+    flexDirection: "row", 
+    justifyContent: "space-between", 
+    marginBottom: 9 
+  },
+  summaryLabel: { 
+    color: colors.muted, 
+    fontWeight: "700" 
+  },
+  summaryValue: { 
+    color: colors.text, 
+    fontWeight: "900" 
+  },
+  divider: { 
+    height: 1, 
+    backgroundColor: colors.border, 
+    marginVertical: 8 
+  },
+  totalLabel: { 
+    color: colors.text, 
+    fontSize: 18, 
+    fontWeight: "900" },
+  totalValue: { 
+    color: colors.primary, 
+    fontSize: 20, 
+    fontWeight: "900" 
+  },
   checkoutButton: {
     height: 54,
-    maxWidth: 200,
     borderRadius: 18,
     backgroundColor: colors.primary,
     alignItems: "center",
@@ -246,16 +245,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   checkoutText: { color: colors.white, fontSize: 16, fontWeight: "900" },
-  emptyState: {
-    minHeight: 360,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  emptyTitle: {
-    color: colors.text,
-    fontSize: 20,
-    fontWeight: "900",
-    marginTop: 12,
-  },
+  emptyState: { minHeight: 360, alignItems: "center", justifyContent: "center" },
+  emptyTitle: { color: colors.text, fontSize: 20, fontWeight: "900", marginTop: 12 },
   emptyText: { color: colors.muted, marginTop: 6 },
 });
