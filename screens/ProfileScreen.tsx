@@ -99,6 +99,12 @@ export default function ProfileScreen({ navigation }: Props) {
                     icon="help-circle-outline"
                     onPress={() => navigation.navigate("Support")}
                 />
+
+                <MenuItem 
+                    label="Settings" 
+                    icon="settings-outline" 
+                    onPress={() => navigation.navigate("Settings")} 
+                />
             </ScrollView>
         </SafeAreaView>
     );
