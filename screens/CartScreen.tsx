@@ -160,7 +160,12 @@ const styles = StyleSheet.create({
   image: { width: 96, height: 96, borderRadius: 14, backgroundColor: colors.surfaceSoft },
   itemInfo: { flex: 1 },
   itemTitle: { color: colors.text, fontSize: 15, lineHeight: 20, fontWeight: "900" },
-  itemPrice: { color: colors.primary, fontSize: 17, fontWeight: "900", marginTop: 6 },
+  itemPrice: { 
+    color: colors.primary, 
+    fontSize: 17, 
+    fontWeight: "900", 
+    marginTop: 6 
+  },
   itemFooter: {
     marginTop: "auto",
     flexDirection: "row",
