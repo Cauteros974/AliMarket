@@ -244,8 +244,24 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 10,
   },
-  checkoutText: { color: colors.white, fontSize: 16, fontWeight: "900" },
-  emptyState: { minHeight: 360, alignItems: "center", justifyContent: "center" },
-  emptyTitle: { color: colors.text, fontSize: 20, fontWeight: "900", marginTop: 12 },
-  emptyText: { color: colors.muted, marginTop: 6 },
+  checkoutText: { 
+    color: colors.white, 
+    fontSize: 16, 
+    fontWeight: "900" 
+  },
+  emptyState: { 
+    minHeight: 360, 
+    alignItems: "center", 
+    justifyContent: "center" 
+  },
+  emptyTitle: { 
+    color: colors.text, 
+    fontSize: 20, 
+    fontWeight: "900", 
+    marginTop: 12 
+  },
+  emptyText: { 
+    color: colors.muted, 
+    marginTop: 6 
+  },
 });
