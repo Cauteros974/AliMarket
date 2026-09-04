@@ -377,4 +377,4 @@ const reviews = [
             require("../assets/images/r2.avif"),
         ],
     },
-]
+];
