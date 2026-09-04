@@ -82,6 +82,12 @@ export default function ProfileScreen({ navigation }: Props) {
                     onPress={() => navigation.navigate("WishlistCollections")}
                 />
 
+                <MenuItem 
+                    label="QR / barcode scanner" 
+                    icon="scan-outline" 
+                    onPress={() => navigation.navigate("QRScanner")} 
+                />
+
                 <MenuItem
                     label="Support center"
                     icon="help-circle-outline"
