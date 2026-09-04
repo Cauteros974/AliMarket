@@ -178,7 +178,11 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: colors.border,
   },
-  couponRow: { flexDirection: "row", gap: 10, marginBottom: 12 },
+  couponRow: { 
+    flexDirection: "row", 
+    gap: 10, 
+    marginBottom: 12 
+  },
   couponInput: {
     flex: 1,
     minHeight: 46,
