@@ -88,6 +88,10 @@ export default function ProfileScreen({ navigation }: Props) {
                     onPress={() => navigation.navigate("QRScanner")} 
                 />
 
+                <MenuItem 
+                    label={`Notifications ${unreadCount ? `(${unreadCount})` : ""}}
+                />
+
                 <MenuItem
                     label="Support center"
                     icon="help-circle-outline"
