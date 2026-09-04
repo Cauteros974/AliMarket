@@ -125,7 +125,6 @@ function MenuItem({
                 <Ionicons name={icon} size={20} color={colors.primary} />
                 <Text style={styles.menuText}>{label}</Text>
             </View>
-
             <Ionicons name="chevron-forward" size={18} color={colors.muted} />
         </Pressable>
     )
