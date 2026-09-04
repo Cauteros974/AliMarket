@@ -1,4 +1,4 @@
-import { Category, Product, Seller } from "../types/product";
+import { Category, Product, Seller, ProductQuestion } from "../types/product";
 
 export const categories: Category[] = [
     {
@@ -340,3 +340,12 @@ export const sellers: Seller[] = [
         description: "Skincare and beauty products for everyday routines.",
     },
 ];
+
+const questions: ProductQuestion[] = [
+    {
+        id: "q1",
+        author: "Nina",
+        question: "Does it arrive with tracking?",
+        answer: "Yes, all demo orders include a local tracking timeline.",
+    }
+]
