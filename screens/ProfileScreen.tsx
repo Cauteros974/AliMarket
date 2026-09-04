@@ -89,7 +89,7 @@ export default function ProfileScreen({ navigation }: Props) {
                 />
 
                 <MenuItem 
-                    label={`Notifications ${unreadCount ? `(${unreadCount})` : ""}}
+                    label={`Notifications ${unreadCount ? `(${unreadCount})` : ""}`}
                 />
 
                 <MenuItem
