@@ -349,6 +349,11 @@ export const useShopStore = create<ShopState>()(
         })),
 
         recentlyViewedIds: [],
+
+        addRecentlyViewed: (productId) => 
+          set((state) => {
+            const filtered = state.recentlyViewedIds.filter((id) => id !== productId);
+          })
     }),
     
     {
