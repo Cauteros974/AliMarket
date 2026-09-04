@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import CategoryChip from "../components/CategoryChip";
 import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
+import SearchSuggestions from "../components/SearchSuggestions";
 import SectionHeader from "../components/SectionHeader";
 import { categories, products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
@@ -17,13 +18,18 @@ type Props = {
 export default function HomeScreen({ navigation }: Props) {
   const searchQuery = useShopStore((state) => state.searchQuery);
   const favoriteIds = useShopStore((state) => state.favoriteIds);
+  const recentlyViewedIds = useShopStore((state) => state.recentlyViewedIds);
   const setSearchQuery = useShopStore((state) => state.setSearchQuery);
   const setSelectedCategoryId = useShopStore((state) => state.setSelectedCategoryId);
   const toggleFavorite = useShopStore((state) => state.toggleFavorite);
-
-  const flashDeals = useMemo(
-    () => products.filter((item) => item.oldPrice).slice(0, 4),
-    []
+  const flashDeals = useMemo(() => products.filter((item) => item.oldPrice).slice(0, 4), []);
+  const recentlyViewed = useMemo(
+    () =>
+      recentlyViewedIds
+        .map((id) => products.find((product) => product.id === id))
+        .filter(Boolean)
+        .slice(0, 4),
+    [recentlyViewedIds]
   );
 
   function openCategory(categoryId: string) {
@@ -39,13 +45,13 @@ export default function HomeScreen({ navigation }: Props) {
             <Text style={styles.eyebrow}>AliMarket</Text>
             <Text style={styles.title}>Find anything you need</Text>
           </View>
-
           <Pressable onPress={() => navigation.navigate("Notifications")} style={styles.iconButton}>
             <Text style={styles.iconText}>!</Text>
           </Pressable>
         </View>
 
         <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
+        <SearchSuggestions query={searchQuery} onPick={setSearchQuery} />
 
         <LinearGradient
           colors={[colors.primary, "#FF8A3D"]}
@@ -56,7 +62,6 @@ export default function HomeScreen({ navigation }: Props) {
           <Text style={styles.bannerLabel}>Summer sale</Text>
           <Text style={styles.bannerTitle}>Up to 60% off gadgets and home goods</Text>
           <Text style={styles.bannerSubtitle}>Use coupon WELCOME10 on checkout</Text>
-
           <Pressable
             onPress={() => navigation.navigate("ProductDetails", { productId: "p1" })}
             style={styles.bannerButton}
@@ -82,7 +87,6 @@ export default function HomeScreen({ navigation }: Props) {
         </ScrollView>
 
         <SectionHeader title="Flash deals" action="Today" />
-
         <FlatList
           data={flashDeals}
           keyExtractor={(item) => item.id}
@@ -99,6 +103,28 @@ export default function HomeScreen({ navigation }: Props) {
             />
           )}
         />
+
+        {recentlyViewed.length > 0 ? (
+          <>
+            <SectionHeader title="Recently viewed" action="Based on your views" />
+            <FlatList
+              data={recentlyViewed}
+              keyExtractor={(item) => item!.id}
+              numColumns={2}
+              scrollEnabled={false}
+              columnWrapperStyle={styles.gridRow}
+              contentContainerStyle={styles.grid}
+              renderItem={({ item }) => (
+                <ProductCard
+                  product={item!}
+                  isFavorite={favoriteIds.includes(item!.id)}
+                  onPress={() => navigation.navigate("ProductDetails", { productId: item!.id })}
+                  onToggleFavorite={() => toggleFavorite(item!.id)}
+                />
+              )}
+            />
+          </>
+        ) : null}
       </ScrollView>
     </SafeAreaView>
   );
@@ -142,11 +168,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
     maxWidth: "86%",
   },
-  bannerSubtitle: {
-    color: "rgba(255,255,255,0.86)",
-    marginTop: 8,
-    fontWeight: "700",
-  },
+  bannerSubtitle: { color: "rgba(255,255,255,0.86)", marginTop: 8, fontWeight: "700" },
   bannerButton: {
     alignSelf: "flex-start",
     backgroundColor: colors.white,
