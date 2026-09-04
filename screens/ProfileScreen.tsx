@@ -90,6 +90,8 @@ export default function ProfileScreen({ navigation }: Props) {
 
                 <MenuItem 
                     label={`Notifications ${unreadCount ? `(${unreadCount})` : ""}`}
+                    icon="notifications-outline"
+                    onPress={() => navigation.navigate("Notifications")}
                 />
 
                 <MenuItem
