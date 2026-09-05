@@ -1,16 +1,11 @@
 import { CameraView, useCameraPermissions } from "expo-camera";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
-import { RootStackParamList } from "../navigation/types";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
-type Props = NativeStackScreenProps<RootStackParamList, "QRScanner">;
-
-export default function QRScannerScreen(navigation) : Props{
+export default function QRScannerScreen(){
     const[permission, requestPermission] = useCameraPermissions();
 
     const [scanned, setScanned] = useState(false);
@@ -26,16 +21,6 @@ export default function QRScannerScreen(navigation) : Props{
         return(
             <SafeAreaView style={styles.safeArea}>
                 <View style={styles.center}>
-                    <Pressable
-                        onPress={() => navigation.goBack()} 
-                        style={styles.backButton}
-                    >
-                        <Ionicons
-                            name="arrow-back"
-                            size={24}
-                            color={colors.warning}
-                        />
-                    </Pressable>
                     <Text style={styles.title}>Camera access</Text>
 
                     <Text style={styles.subtitle}>
