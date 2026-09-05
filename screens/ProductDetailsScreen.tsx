@@ -126,7 +126,9 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   backButton: {
-    
+    position: "absolute",
+    top: 12,
+    left: 18,
   },
   image: { width: "100%", height: "100%" },
   info: { paddingHorizontal: 18 },
