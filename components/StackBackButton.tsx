@@ -9,10 +9,15 @@ type Props = {
 export default function StackBackButton({onPress}: Props){
     return(
         <Pressable
+            onPress={onPress}
             style={styles.button}
             hitSlop={10}
         >
-
+            <Ionicons 
+                name="arrow-back"
+                size={23}
+                color={colors.text}
+            />
         </Pressable>
     )
 }
