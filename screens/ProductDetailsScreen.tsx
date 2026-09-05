@@ -20,10 +20,14 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.emptyState}>
-          <Pressable>
+          <Pressable
+            onPress={() => navigation.goBack()}
+            style={styles.backButton}
+          >
             <Ionicons
               name="arrow-back"
-              size={30}
+              size={24}
+              color={colors.warning}
             />
           </Pressable>
 
@@ -120,6 +124,9 @@ const styles = StyleSheet.create({
     borderRadius: 28,
     backgroundColor: colors.surfaceSoft,
     overflow: "hidden",
+  },
+  backButton: {
+    
   },
   image: { width: "100%", height: "100%" },
   info: { paddingHorizontal: 18 },
