@@ -6,7 +6,7 @@ type Props = {
     onPress: () => void;
 }
 
-export default function StackBackButton({}){
+export default function StackBackButton({onPress}: Props){
     return(
         <Pressable
             style={styles.button}
