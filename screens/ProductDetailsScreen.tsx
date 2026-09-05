@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
 
     width: 44,
     height: 44,
-    borderRadius: 20,
+    borderRadius: 22,
   },
   image: { width: "100%", height: "100%" },
   info: { paddingHorizontal: 18 },
