@@ -129,6 +129,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 12,
     left: 18,
+    zIndex: 100,
   },
   image: { width: "100%", height: "100%" },
   info: { paddingHorizontal: 18 },
