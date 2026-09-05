@@ -130,10 +130,12 @@ const styles = StyleSheet.create({
     top: 12,
     left: 18,
     zIndex: 100,
-
     width: 44,
     height: 44,
     borderRadius: 22,
+    backgroundColor: colors.white,
+    alignItems: "center",
+    justifyContent: "center",
   },
   image: { width: "100%", height: "100%" },
   info: { paddingHorizontal: 18 },
