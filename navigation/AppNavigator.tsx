@@ -87,11 +87,10 @@ function MainTabs() {
 export default function AppNavigator() {
   return (
     <Stack.Navigator
-      screenOptions={{
-        headerShadowVisible: false,
-        headerTintColor: colors.text,
-        headerStyle: { backgroundColor: colors.background },
-      }}
+      screenOptions={({}) => ({
+        headerShown: true,
+        headerTransparent: true,
+      })}
     >
       <Stack.Screen name="MainTabs" component={MainTabs} options={{ headerShown: false }} />
 
