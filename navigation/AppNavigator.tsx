@@ -24,6 +24,7 @@ import WishlistCollectionsScreen from "../screens/WishlistCollectionsScreen";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { MainTabParamList, RootStackParamList } from "./types";
+import StackBackButton from "../components/StackBackButton";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator<MainTabParamList>();
@@ -87,11 +88,17 @@ function MainTabs() {
 export default function AppNavigator() {
   return (
     <Stack.Navigator
-      screenOptions={({}) => ({
+      screenOptions={({navigation}) => ({
         headerShown: true,
         headerTransparent: true,
         headerTitle: "",
         headerShadowVisible: false,
+
+        headerLeft: () => (
+          <StackBackButton 
+            onPress={() => navigation.goBack()}
+          />
+        )
       })}
     >
       <Stack.Screen name="MainTabs" component={MainTabs} options={{ headerShown: false }} />
