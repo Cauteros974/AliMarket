@@ -99,8 +99,7 @@ export default function AppNavigator() {
         name="ProductDetails"
         component={ProductDetailsScreen}
         options={{
-          title: "Product",
-          headerShown: true,
+          headerShown: false,
         }}
       />
 
@@ -116,7 +115,10 @@ export default function AppNavigator() {
       <Stack.Screen
         name="Seller"
         component={SellerScreen}
-        options={{ title: "Store" }}
+        options={{ 
+          title: "Store", 
+          headerShown: true,
+        }}
       />
 
       <Stack.Screen name="Checkout" component={CheckoutScreen} />
@@ -125,13 +127,19 @@ export default function AppNavigator() {
       <Stack.Screen
         name="OrderDetails"
         component={OrderDetailsScreen}
-        options={{ title: "Order details" }}
+        options={{ 
+          title: "Order details",
+          headerShown: true,
+        }}
       />
 
       <Stack.Screen
         name="OrderTracking"
         component={OrderTrackingScreen}
-        options={{ title: "Tracking" }}
+        options={{ 
+          title: "Tracking", 
+          headerShown: true,
+        }}
       />
 
       <Stack.Screen name="Auth" component={AuthScreen} options={{ title: "Account" }} />
@@ -141,25 +149,37 @@ export default function AppNavigator() {
       <Stack.Screen
         name="PaymentMethods"
         component={PaymentMethodsScreen}
-        options={{ title: "Payment methods" }}
+        options={{ 
+          title: "Payment methods",
+          headerShown: true,
+        }}
       />
 
       <Stack.Screen
         name="Support"
         component={SupportScreen}
-        options={{ title: "Support" }}
+        options={{ 
+          title: "Support",
+          headerShown: true, 
+        }}
       />
 
       <Stack.Screen
         name="WishlistCollections"
         component={WishlistCollectionsScreen}
-        options={{ title: "Wishlist" }}
+        options={{ 
+          title: "Wishlist",
+          headerShown: true,
+        }}
       />
 
       <Stack.Screen
         name="QRScanner"
         component={QRScannerScreen}
-        options={{ title: "Scanner" }}
+        options={{ 
+          title: "Scanner",
+          headerShown: true, 
+        }}
       />
 
       <Stack.Screen name="Settings" component={SettingsScreen} />

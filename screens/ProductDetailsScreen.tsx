@@ -6,11 +6,11 @@ import { products } from "../data/products";
 import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
-import { formatDate, formatPrice } from "../utils/format";
+import { formatPrice } from "../utils/format";
 
 type Props = NativeStackScreenProps<RootStackParamList, "ProductDetails">;
 
-export default function ProductDetailsScreen({ route }: Props) {
+export default function ProductDetailsScreen({ route, navigation }: Props) {
   const product = products.find((item) => item.id === route.params.productId);
   const addToCart = useShopStore((state) => state.addToCart);
   const favoriteIds = useShopStore((state) => state.favoriteIds);
@@ -20,6 +20,14 @@ export default function ProductDetailsScreen({ route }: Props) {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.emptyState}>
+          <Pressable>
+            <Ionicons
+              name="arrow-back"
+              size={30}
+            />
+          </Pressable>
+
+
           <Text style={styles.title}>Product not found</Text>
         </View>
       </SafeAreaView>
