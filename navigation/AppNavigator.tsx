@@ -90,6 +90,8 @@ export default function AppNavigator() {
       screenOptions={({}) => ({
         headerShown: true,
         headerTransparent: true,
+        headerTitle: "",
+        headerShadowVisible: false,
       })}
     >
       <Stack.Screen name="MainTabs" component={MainTabs} options={{ headerShown: false }} />
