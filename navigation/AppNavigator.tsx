@@ -88,7 +88,7 @@ function MainTabs() {
 export default function AppNavigator() {
   return (
     <Stack.Navigator
-      screenOptions={({navigation}) => ({
+      screenOptions={({}) => ({
         headerShown: true,
         headerTransparent: true,
         headerTitle: "",
