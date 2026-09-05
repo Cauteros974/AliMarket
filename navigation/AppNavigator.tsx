@@ -94,11 +94,7 @@ export default function AppNavigator() {
         headerTitle: "",
         headerShadowVisible: false,
 
-        headerLeft: () => (
-          <StackBackButton 
-            onPress={() => navigation.goBack()}
-          />
-        )
+        headleft: () => <StackBackButton />,
       })}
     >
       <Stack.Screen name="MainTabs" component={MainTabs} options={{ headerShown: false }} />
