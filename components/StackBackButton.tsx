@@ -1,15 +1,18 @@
 import { Ionicons } from "@expo/vector-icons";
+import { NativeStackNavigationProp, } from "@react-navigation/native-stack";
 import { Pressable, StyleSheet } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { RootStackParamList } from "../navigation/types";
 import { colors } from "../theme/colors";
 
-type Props = {
-    onPress: () => void;
-}
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
-export default function StackBackButton({onPress}: Props){
+export default function StackBackButton() {
+    const navigation = useNavigation<NavigationProp>();
+
     return(
         <Pressable
-            onPress={onPress}
+            onPress={() => navigation.goBack()}
             style={styles.button}
             hitSlop={10}
         >
