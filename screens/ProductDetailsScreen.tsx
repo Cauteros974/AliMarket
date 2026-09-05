@@ -31,7 +31,6 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
             />
           </Pressable>
 
-
           <Text style={styles.title}>Product not found</Text>
         </View>
       </SafeAreaView>
@@ -41,55 +40,117 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
   const isFavorite = favoriteIds.includes(product.id);
 
   return (
-    <SafeAreaView style={styles.safeArea} edges={["bottom"]}>
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
+    <SafeAreaView
+      style={styles.safeArea}
+      edges={["top", "bottom"]}
+    >
+      {/* Back button */}
+      <Pressable
+        onPress={() => navigation.goBack()}
+        style={styles.backButton}
+        hitSlop={10}
+      >
+        <Ionicons
+          name="arrow-back"
+          size={24}
+          color={colors.text}
+        />
+      </Pressable>
+
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.content}
+      >
         <View style={styles.imageWrap}>
-          <Image source={product.image} style={styles.image} />
+          <Image
+            source={product.image}
+            style={styles.image}
+            resizeMode="cover"
+          />
         </View>
 
         <View style={styles.info}>
           <View style={styles.priceRow}>
-            <Text style={styles.price}>{formatPrice(product.price)}</Text>
+            <Text style={styles.price}>
+              {formatPrice(product.price)}
+            </Text>
 
             {product.oldPrice ? (
-              <Text style={styles.oldPrice}>{formatPrice(product.oldPrice)}</Text>
+              <Text style={styles.oldPrice}>
+                {formatPrice(product.oldPrice)}
+              </Text>
             ) : null}
           </View>
 
-          <Text style={styles.productTitle}>{product.title}</Text>
+          <Text style={styles.productTitle}>
+            {product.title}
+          </Text>
 
           <View style={styles.ratingRow}>
-            <Ionicons name="star" size={16} color={colors.warning} />
-            <Text style={styles.ratingText}>{product.rating}</Text>
+            <Ionicons
+              name="star"
+              size={16}
+              color={colors.warning}
+            />
+
+            <Text style={styles.ratingText}>
+              {product.rating}
+            </Text>
+
             <Text style={styles.mutedText}>
               {product.reviews.toLocaleString("en-US")} reviews
             </Text>
+
             <Text style={styles.mutedText}>
               {product.sold.toLocaleString("en-US")} sold
             </Text>
           </View>
 
           <View style={styles.deliveryBox}>
-            <Ionicons name="airplane-outline" size={20} color={colors.primary} />
+            <Ionicons
+              name="airplane-outline"
+              size={20}
+              color={colors.primary}
+            />
 
             <View>
-              <Text style={styles.deliveryTitle}>Delivery</Text>
-              <Text style={styles.deliveryText}>{product.delivery}</Text>
+              <Text style={styles.deliveryTitle}>
+                Delivery
+              </Text>
+
+              <Text style={styles.deliveryText}>
+                {product.delivery}
+              </Text>
             </View>
           </View>
 
-          <Text style={styles.sectionTitle}>Colors</Text>
+          <Text style={styles.sectionTitle}>
+            Colors
+          </Text>
 
           <View style={styles.colorRow}>
             {product.colors.map((color) => (
-              <View key={color} style={[styles.colorDot, { backgroundColor: color }]} />
+              <View
+                key={color}
+                style={[
+                  styles.colorDot,
+                  { backgroundColor: color },
+                ]}
+              />
             ))}
           </View>
 
-          <Text style={styles.sectionTitle}>Description</Text>
-          <Text style={styles.description}>{product.description}</Text>
+          <Text style={styles.sectionTitle}>
+            Description
+          </Text>
 
-          <Text style={styles.sectionTitle}>Reviews</Text>
+          <Text style={styles.description}>
+            {product.description}
+          </Text>
+
+          <Text style={styles.sectionTitle}>
+            Reviews
+          </Text>
 
           <Text style={styles.mutedText}>
             {product.reviews.toLocaleString("en-US")} reviews
@@ -97,8 +158,12 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
         </View>
       </ScrollView>
 
+      {/* Bottom action bar */}
       <View style={styles.footer}>
-        <Pressable onPress={() => toggleFavorite(product.id)} style={styles.secondaryButton}>
+        <Pressable
+          onPress={() => toggleFavorite(product.id)}
+          style={styles.secondaryButton}
+        >
           <Ionicons
             name={isFavorite ? "heart" : "heart-outline"}
             size={20}
@@ -106,8 +171,13 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
           />
         </Pressable>
 
-        <Pressable onPress={() => addToCart(product.id)} style={styles.primaryButton}>
-          <Text style={styles.primaryButtonText}>Add to cart</Text>
+        <Pressable
+          onPress={() => addToCart(product.id)}
+          style={styles.primaryButton}
+        >
+          <Text style={styles.primaryButtonText}>
+            Add to cart
+          </Text>
         </Pressable>
       </View>
     </SafeAreaView>
@@ -115,15 +185,12 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: colors.background },
-  content: { paddingBottom: 116 },
-  imageWrap: {
-    width: 360,
-    height: 330,
-    margin: 18,
-    borderRadius: 28,
-    backgroundColor: colors.surfaceSoft,
-    overflow: "hidden",
+  safeArea: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  content: {
+    paddingBottom: 116,
   },
   backButton: {
     position: "absolute",
@@ -145,10 +212,31 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 5,
   },
-  image: { width: "100%", height: "100%" },
-  info: { paddingHorizontal: 18 },
-  priceRow: { flexDirection: "row", alignItems: "baseline", gap: 10 },
-  price: { color: colors.primary, fontSize: 30, fontWeight: "900" },
+  imageWrap: {
+    width: 360,
+    height: 330,
+    margin: 18,
+    borderRadius: 28,
+    backgroundColor: colors.surfaceSoft,
+    overflow: "hidden",
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+  },
+  info: {
+    paddingHorizontal: 18,
+  },
+  priceRow: {
+    flexDirection: "row",
+    alignItems: "baseline",
+    gap: 10,
+  },
+  price: {
+    color: colors.primary,
+    fontSize: 30,
+    fontWeight: "900",
+  },
   oldPrice: {
     color: colors.muted,
     fontSize: 16,
@@ -167,8 +255,14 @@ const styles = StyleSheet.create({
     gap: 6,
     marginTop: 12,
   },
-  ratingText: { color: colors.text, fontWeight: "900" },
-  mutedText: { color: colors.muted, fontSize: 13 },
+  ratingText: {
+    color: colors.text,
+    fontWeight: "900",
+  },
+  mutedText: {
+    color: colors.muted,
+    fontSize: 13,
+  },
   deliveryBox: {
     marginTop: 22,
     borderRadius: 18,
@@ -180,8 +274,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 12,
   },
-  deliveryTitle: { color: colors.text, fontWeight: "900" },
-  deliveryText: { color: colors.muted, marginTop: 3 },
+  deliveryTitle: {
+    color: colors.text,
+    fontWeight: "900",
+  },
+  deliveryText: {
+    color: colors.muted,
+    marginTop: 3,
+  },
   sectionTitle: {
     color: colors.text,
     fontSize: 18,
@@ -189,7 +289,10 @@ const styles = StyleSheet.create({
     marginTop: 24,
     marginBottom: 10,
   },
-  colorRow: { flexDirection: "row", gap: 10 },
+  colorRow: {
+    flexDirection: "row",
+    gap: 10,
+  },
   colorDot: {
     width: 30,
     height: 30,
@@ -197,24 +300,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: colors.white,
   },
-  description: { color: colors.muted, fontSize: 15, lineHeight: 23 },
-  reviewCard: {
-    backgroundColor: colors.surface,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: 14,
-    marginBottom: 10,
+  description: {
+    color: colors.muted,
+    fontSize: 15,
+    lineHeight: 23,
   },
-  reviewHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 6,
-  },
-  reviewAuthor: { color: colors.text, fontWeight: "900" },
-  reviewDate: { color: colors.muted, fontSize: 12 },
-  reviewRating: { color: colors.warning, fontWeight: "900", marginBottom: 6 },
-  reviewText: { color: colors.muted, lineHeight: 20 },
   footer: {
     position: "absolute",
     left: 0,
@@ -236,7 +326,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   primaryButton: {
-    width: 200,
+    flex: 1,
     height: 54,
     borderRadius: 18,
     backgroundColor: colors.primary,
@@ -248,6 +338,14 @@ const styles = StyleSheet.create({
     fontWeight: "900",
     fontSize: 16,
   },
-  emptyState: { flex: 1, alignItems: "center", justifyContent: "center" },
-  title: { color: colors.text, fontSize: 22, fontWeight: "900" },
+  emptyState: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  title: {
+    color: colors.text,
+    fontSize: 22,
+    fontWeight: "900",
+  },
 });
