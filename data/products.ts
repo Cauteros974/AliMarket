@@ -346,6 +346,22 @@ export const products: Product[] = [
         delivery: "Free delivery in 7-12 days",
         colors: ["#060507", "#ffffff",],
     },
+
+    {
+        id: "p16",
+        title: "Mad Max Classic MFG 248 (brown) size XXL",
+        description: "brown fitness and bodybuilding glove, comfortable for women and men. Gloves are made of premium leather. In the palm area there is a double layer of leather filled with a special pad. Both layers are anatomically stitched for greater strength and a safer grip. ",
+        categoryId: "sports",
+        sellerId: "seller-4",
+        image: require("../assets/images/gloves.webp"),
+        price: 10.0,
+        rating: 4.5,
+        reviews: 120,
+        sold: 260,
+        discountLabel: "Hot",
+        delivery: "Free delivery in 7-12 days",
+        colors: ["#060507", "#ffffff",],
+    },
 ];
 
 export const sellers: Seller[] = [
