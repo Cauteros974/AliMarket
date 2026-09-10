@@ -304,7 +304,7 @@ export const products: Product[] = [
         description: "Textured 'GripForLife' surface holds traction even when your hands and feet get sweaty, at 4.2mm thick.",
         categoryId: "sports",
         sellerId: "seller-2",
-        image: require("../assets/images/yoga-mat"),
+        image: require("../assets/images/yoga-mat.jpg"),
         price: 100.0,
         oldPrice: 150,
         rating: 4.9,
