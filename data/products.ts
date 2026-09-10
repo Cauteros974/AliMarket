@@ -314,6 +314,22 @@ export const products: Product[] = [
         delivery: "Free delivery in 7-12 days",
         colors: ["#0be7c9", "#089449", "#F97316"],
     },
+
+    {
+        id: "p14",
+        title: "Stretch Fitness Rubber",
+        description: "Natural Latex elastic layered Power Heavy Duty Loop single Rubber Resistance Band For Pull Up Assisted Multi Gym stretch Use.",
+        categoryId: "sports",
+        sellerId: "seller-4",
+        image: require("../assets/images/sport-rubbers.jpg"),
+        price: 5.0,
+        rating: 4.9,
+        reviews: 112,
+        sold: 160,
+        discountLabel: "Hot",
+        delivery: "Free delivery in 7-12 days",
+        colors: ["#0be7c9", "#089449", "#F97316"],
+    },
 ];
 
 export const sellers: Seller[] = [
