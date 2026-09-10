@@ -330,6 +330,22 @@ export const products: Product[] = [
         delivery: "Free delivery in 7-12 days",
         colors: ["#0d1be7", "#089449", "#F97316", "#030303", "#f91616"],
     },
+
+    {
+        id: "p15",
+        title: "Water bottle",
+        description: "A medium convenient 550 ml food-grade plastic water bottle that will allow you to take water for yourself for the whole day. The bottle has a tight lid and a convenient handle for fixing and carrying.",
+        categoryId: "sports",
+        sellerId: "seller-4",
+        image: require("../assets/images/sports-water-bottle.jpg"),
+        price: 5.0,
+        rating: 4.9,
+        reviews: 12,
+        sold: 160,
+        discountLabel: "Hot",
+        delivery: "Free delivery in 7-12 days",
+        colors: ["#060507", "#ffffff",],
+    },
 ];
 
 export const sellers: Seller[] = [
