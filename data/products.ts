@@ -293,6 +293,27 @@ export const products: Product[] = [
         delivery: "Free delivery in 7-12 days",
         colors: ["#0be7c9", "#089449", "#F97316"],
     },
+
+    // --------------------------------------------------
+    // SPORTS
+    // --------------------------------------------------
+
+    {
+        id: "p13",
+        title: "Liforme Original Yoga Mat",
+        description: "Textured 'GripForLife' surface holds traction even when your hands and feet get sweaty, at 4.2mm thick.",
+        categoryId: "sports",
+        sellerId: "seller-2",
+        image: require("../assets/images/yoga-mat"),
+        price: 100.0,
+        oldPrice: 150,
+        rating: 4.9,
+        reviews: 592,
+        sold: 660,
+        discountLabel: "Hot",
+        delivery: "Free delivery in 7-12 days",
+        colors: ["#0be7c9", "#089449", "#F97316"],
+    },
 ];
 
 export const sellers: Seller[] = [
