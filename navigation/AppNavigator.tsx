@@ -1,7 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import StackBackButton from "../components/StackBackButton";
 import AddressesScreen from "../screens/AddressesScreen";
 import AuthScreen from "../screens/AuthScreen";
 import CartScreen from "../screens/CartScreen";
@@ -96,8 +95,7 @@ function MainTabs() {
         name="Cart"
         component={CartScreen}
         options={{
-          tabBarBadge:
-            cartCount > 0 ? cartCount : undefined,
+          tabBarBadge: cartCount > 0 ? cartCount : undefined,
         }}
       />
 
@@ -113,8 +111,7 @@ function MainTabs() {
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarBadge:
-            unreadCount > 0 ? unreadCount : undefined,
+          tabBarBadge: unreadCount > 0 ? unreadCount : undefined,
         }}
       />
     </Tab.Navigator>
@@ -125,13 +122,28 @@ export default function AppNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
+        // Header показываем на всех Stack-экранах
         headerShown: true,
-        headerTransparent: true,
-        headerTitle: "",
+
+        // Включаем стандартную кнопку назад
+        headerBackVisible: true,
+
+        // Убираем тень
         headerShadowVisible: false,
-        headerLeft: () => <StackBackButton />,
+
+        // Цвет стрелки и текста
+        headerTintColor: colors.text,
+
+        // Обычный фон header
+        headerStyle: {
+          backgroundColor: colors.background,
+        },
+
+        // Заголовок по центру
+        headerTitleAlign: "center",
       }}
     >
+      {/* Главный Tab Navigator — без header */}
       <Stack.Screen
         name="MainTabs"
         component={MainTabs}
@@ -143,76 +155,121 @@ export default function AppNavigator() {
       <Stack.Screen
         name="ProductDetails"
         component={ProductDetailsScreen}
+        options={{
+          title: "Product",
+        }}
       />
 
       <Stack.Screen
         name="CategoryDetails"
         component={CategoryDetailsScreen}
+        options={{
+          title: "Category",
+        }}
       />
 
       <Stack.Screen
         name="Seller"
         component={SellerScreen}
+        options={{
+          title: "Store",
+        }}
       />
 
       <Stack.Screen
         name="Checkout"
         component={CheckoutScreen}
+        options={{
+          title: "Checkout",
+        }}
       />
 
       <Stack.Screen
         name="Orders"
         component={OrdersScreen}
+        options={{
+          title: "Orders",
+        }}
       />
 
       <Stack.Screen
         name="OrderDetails"
         component={OrderDetailsScreen}
+        options={{
+          title: "Order details",
+        }}
       />
 
       <Stack.Screen
         name="OrderTracking"
         component={OrderTrackingScreen}
+        options={{
+          title: "Tracking",
+        }}
       />
 
       <Stack.Screen
         name="Auth"
         component={AuthScreen}
+        options={{
+          title: "Account",
+        }}
       />
 
       <Stack.Screen
         name="Addresses"
         component={AddressesScreen}
+        options={{
+          title: "Addresses",
+        }}
       />
 
       <Stack.Screen
         name="Notifications"
         component={NotificationsScreen}
+        options={{
+          title: "Notifications",
+        }}
       />
 
       <Stack.Screen
         name="PaymentMethods"
         component={PaymentMethodsScreen}
+        options={{
+          title: "Payment methods",
+        }}
       />
 
       <Stack.Screen
         name="Support"
         component={SupportScreen}
+        options={{
+          title: "Support",
+        }}
       />
 
       <Stack.Screen
         name="WishlistCollections"
         component={WishlistCollectionsScreen}
+        options={{
+          title: "Wishlist",
+        }}
       />
 
       <Stack.Screen
         name="QRScanner"
         component={QRScannerScreen}
+        options={{
+          title: "Scanner",
+        }}
       />
 
       <Stack.Screen
         name="Settings"
         component={SettingsScreen}
+        options={{
+          title: "Settings",
+        }}
       />
     </Stack.Navigator>
   );

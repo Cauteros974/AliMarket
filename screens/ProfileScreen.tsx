@@ -3,10 +3,12 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
+import { CompositeScreenProps, useNavigation } from "@react-navigation/native";
+import { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
+import { MainTabParamList, RootStackParamList } from "../navigation/types";
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-type Props = {
-    navigation: any;
-};
+type Props = CompositeScreenProps< BottomTabScreenProps<MainTabParamList, "Profile">, NativeStackScreenProps<RootStackParamList>>;
 
 export default function ProfileScreen({ navigation }: Props) {
     const user = useShopStore((state) => state.user);
