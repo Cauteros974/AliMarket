@@ -52,6 +52,9 @@ type ShopState = {
   couponCode: string;
   appliedCoupon: string | null;
   user: User | null;
+  addresses: Address[];
+  selectedAddressId: string | null;
+  orders: Order[];
 };
 
 const initialFilters: CatalogFilters = {
@@ -74,6 +77,9 @@ export const useShopStore = create<ShopState>()(
       couponCode: "",
       appliedCoupon: null,
       user: null,
+      addresses: [defaultAddress],
+      selectedAddressId: defaultAddress.id,
+      orders: [],
     })
   )
 )
