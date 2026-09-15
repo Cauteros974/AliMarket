@@ -57,6 +57,11 @@ type ShopState = {
   selectedAddressId: string | null;
   orders: Order[];
   notifications: AppNotification[];
+  recentlyViewedIds: string[];
+  wishlistCollections: WishlistCollection[];
+  theme: AppTheme;
+  locale: Locale;
+  toast: ToastMessage | null;
   addToCart: (productId: string) => void;
   removeFromCart: (productId: string) => void;
   increaseQuantity: (productId: string) => void;
@@ -79,22 +84,13 @@ type ShopState = {
   removeAddress: (addressId: string) => void;
   placeOrder: (total: number) => Order | null;
   markNotificationRead: (notificationId: string) => void;
-  toast: ToastMessage | null;
-  showToast: (toast: Omit<ToastMessage, "id">) => void;
-  hideToast: () => void;
-  clearToast: () => void;
-  setUser: (user: User) => void;
-  wishlistCollections: WishlistCollection[];
+  recordRecentlyViewed: (productId: string) => void;
   createWishlistCollection: (title: string) => void;
-  addProductToWishlistCollection: (collectionId: string, productId: string) => void;
-  removeProductFromWishlistCollection: (collectionId: string, productId: string) => void;
-  deleteWishlistCollection: (collectionId: string) => void;
-  theme: AppTheme;
-  locale: Locale;
+  toggleCollectionProduct: (collectionId: string, productId: string) => void;
   setTheme: (theme: AppTheme) => void;
   setLocale: (locale: Locale) => void;
-  recentlyViewedIds: string[];
-  addRecentlyViewed: (productId: string) => void;
+  showToast: (message: string, type?: ToastMessage["type"]) => void;
+  hideToast: () => void;
 };
 
 const initialFilters: CatalogFilters = {
