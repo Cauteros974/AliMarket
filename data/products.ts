@@ -416,5 +416,6 @@ const questions: ProductQuestion[] = [
         id: "q1",
         author: "Nina",
         question: "Does it arrive with tracking?",
+        answer: "Yes, all demo orders include a local tracking timeline.",
     }
 ]
