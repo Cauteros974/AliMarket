@@ -151,7 +151,7 @@ export const useShopStore = create<ShopState>()(
           return {
             wishlistCollections: [
               ...state.wishlistCollections,
-              {id: createId("w1")}
+              { id: createId("wl"), title: cleanTitle, productIds: [] },
             ]
           }
         })
