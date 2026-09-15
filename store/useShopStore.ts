@@ -52,6 +52,8 @@ const initialFilters: CatalogFilters = {
   minPrice: "",
   maxPrice: "",
   minRating: 0,
+  freeDeliveryOnly: false,
+  discountsOnly: false,
 };
 
 export const useShopStore = create <ShopState>() (
