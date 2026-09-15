@@ -370,6 +370,8 @@ export const sellets: Seller[] = [
         id: "1",
         name: "TechNova Store",
         avatar: require("../assets/images/graph.avif"),
+        rating: 4.8,
+        followers: 48200,
     }
 ]
 
