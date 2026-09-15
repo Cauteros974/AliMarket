@@ -434,5 +434,13 @@ const reviews = [
         text: "Good quality for the price. Delivery was faster than expected.",
         date: "2026-06-14",
         image: require("../assets/images/laptop1.avif"),
-    }
+    },
+    {
+        id: "r2",
+        author: "Mateo",
+        rating: 4,
+        text: "Looks exactly like the photos. Packaging could be stronger.",
+        date: "2026-06-18",
+        image: require("../assets/images/watch.avif"),
+  },
 ]
