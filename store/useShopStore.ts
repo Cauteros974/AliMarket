@@ -16,6 +16,7 @@ import {
 } from "../types/shop";
 import { createId } from "../utils/format";
 import { AppTheme, Locale } from "../types/shop";
+import WishlistCollectionsScreen from "../screens/WishlistCollectionsScreen";
 
 const defaultAddress: Address = {
   id: "addr-main",
@@ -147,6 +148,12 @@ export const useShopStore = create<ShopState>()(
           const cleanTitle = title.trim(),
 
           if (!cleanTitle) return state;
+
+          return {
+            wishlistCollections: [
+              ...state.wishlistCollections
+            ]
+          }
         })
       },
 
