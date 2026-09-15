@@ -134,6 +134,14 @@ export const useShopStore = create<ShopState>()(
       setTheme: (theme) => set({ theme }),
       setLocale: (locale) => set({ locale }),
 
+      recordRecentlyViewed: (productId) => 
+          set((state) => ({
+            recordRecentlyViewed: [
+              productId,
+              ...state.recentlyViewedIds.filter((id) => id !== productId),
+            ].slice(0, 12),
+          })),
+
       createWishlistCollection: (title) => {
         const trimmed = title.trim();
         if(!trimmed) return;
@@ -347,14 +355,6 @@ export const useShopStore = create<ShopState>()(
               : notification
           ),
         })),
-
-        recordRecentlyViewed: (productId) => 
-          set((state) => ({
-            recordRecentlyViewed: [
-              productId,
-              ...state.recentlyViewedIds.filter((id) => id !== productId),
-            ].slice(0, 12),
-          }))
 
         recentlyViewedIds: [],
 
