@@ -49,6 +49,9 @@ type ShopState = {
   selectedCategoryId: string | null;
   sortOption: SortOption;
   filters: CatalogFilters;
+  couponCode: string;
+  appliedCoupon: string | null;
+  user: User | null;
 };
 
 const initialFilters: CatalogFilters = {
