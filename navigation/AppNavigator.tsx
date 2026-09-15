@@ -122,28 +122,18 @@ export default function AppNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
-        // Header показываем на всех Stack-экранах
         headerShown: true,
-
-        // Включаем стандартную кнопку назад
+        // Default back buttun
         headerBackVisible: true,
-
-        // Убираем тень
         headerShadowVisible: false,
-
-        // Цвет стрелки и текста
+        // Direction color and text
         headerTintColor: colors.text,
-
-        // Обычный фон header
         headerStyle: {
           backgroundColor: colors.background,
         },
-
-        // Заголовок по центру
         headerTitleAlign: "center",
       }}
     >
-      {/* Главный Tab Navigator — без header */}
       <Stack.Screen
         name="MainTabs"
         component={MainTabs}
