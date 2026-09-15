@@ -431,6 +431,8 @@ const reviews = [
         id: "r1",
         author: "Emma",
         rating: 5,
+        text: "Good quality for the price. Delivery was faster than expected.",
         date: "2026-06-14",
+        image: require("../assets/images/laptop1.avif"),
     }
 ]
