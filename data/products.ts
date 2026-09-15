@@ -372,7 +372,10 @@ export const sellets: Seller[] = [
         avatar: require("../assets/images/graph.avif"),
         rating: 4.8,
         followers: 48200,
-    }
+        sales: 128400,
+        location: "Warsaw, Poland",
+        description: "Gadgets, accessories and smart home products with fast EU delivery.",
+  },
 ]
 
 const questions: ProductQuestion[] = [
