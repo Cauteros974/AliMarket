@@ -165,6 +165,9 @@ export const useShopStore = create<ShopState>()(
 
             return {
               ...collection,
+              productIds: exists
+                ? collection.productIds.filter((id) => id !== productId)
+                : [...collection.productIds, productId],
             };
           }),
       },
