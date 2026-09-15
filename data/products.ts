@@ -365,51 +365,13 @@ export const products: Product[] = [
     },
 ];
 
-export const sellers: Seller[] = [
+export const sellets: Seller[] = [
     {
-        id: "seller-1",
-        name: "TechWorld Store",
-        rating: 4.9,
-        reviews: 12840,
-        sales: 52300,
-        location: "Germany",
-        verified: true,
-        description: "Official electronics marketplace seller specializing in headphones, smartphones and accessories.",
-    },
-
-    {
-        id: "seller-2",
-        name: "HomeStyle Store",
-        rating: 4.8,
-        reviews: 8640,
-        sales: 31800,
-        location: "Poland",
-        verified: true,
-        description: "Home accessories, smart lighting and products for comfortable living.",
-    },
-
-    {
-        id: "seller-3",
-        name: "Urban Fashion",
-        rating: 4.7,
-        reviews: 6240,
-        sales: 24100,
-        location: "France",
-        verified: true,
-        description: "Modern streetwear, bags and everyday fashion accessories.",
-    },
-
-    {
-        id: "seller-4",
-        name: "Beauty Lab",
-        rating: 4.9,
-        reviews: 10320,
-        sales: 39600,
-        location: "Italy",
-        verified: true,
-        description: "Skincare and beauty products for everyday routines.",
-    },
-];
+        id: "1",
+        name: "TechNova Store",
+        avatar: require("../assets/images/graph.avif"),
+    }
+]
 
 const questions: ProductQuestion[] = [
     {
