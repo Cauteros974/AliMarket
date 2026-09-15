@@ -48,12 +48,21 @@ type ShopState = {
   searchQuery: string;
 };
 
+const initialFilters: CatalogFilters = {
+  minPrice: "",
+  maxPrice: "",
+  minRating: 0,
+};
+
 export const useShopStore = create <ShopState>() (
   persist(
     (set,get) => ({
       cart: [],
       favoriteIds: [],
       searchQuery: "",
+      selectedCategoryId: null,
+      sortOption: "popular",
+      filters: initialFilters,
     })
   )
 )
