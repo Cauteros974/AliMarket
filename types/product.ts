@@ -36,6 +36,7 @@ export type Product = {
     delivery: string;
     colors: string[];
     sellerId: string;
+    questions: ProductQuestion[];
 };
 
 export type CartItem = {
@@ -54,3 +55,10 @@ export interface Seller {
   verified: boolean;
   description?: string;
 }
+
+export type ProductQuestion = {
+  id: string;
+  question: string;
+  answer: string;
+  author: string;
+};
