@@ -162,6 +162,10 @@ export const useShopStore = create<ShopState>()(
             if (collection.id !== collectionId) return collection;
 
             const exists = collection.productIds.includes(productId);
+
+            return {
+              ...collection,
+            };
           }),
       },
 
