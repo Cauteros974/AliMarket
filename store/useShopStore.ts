@@ -46,6 +46,9 @@ type ShopState = {
   cart: CartItem[];
   favoriteIds: string[];
   searchQuery: string;
+  selectedCategoryId: string | null;
+  sortOption: SortOption;
+  filters: CatalogFilters;
 };
 
 const initialFilters: CatalogFilters = {
