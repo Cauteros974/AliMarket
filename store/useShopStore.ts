@@ -43,7 +43,9 @@ const defaultNotifications: AppNotification[] = [
 ];
 
 type ShopState = {
-
+  cart: CartItem[];
+  favoriteIds: string[];
+  searchQuery: string;
 };
 
 export const useShopStore = create <ShopState>() (
