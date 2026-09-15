@@ -348,6 +348,14 @@ export const useShopStore = create<ShopState>()(
           ),
         })),
 
+        recordRecentlyViewed: (productId) => 
+          set((state) => ({
+            recordRecentlyViewed: [
+              productId,
+              ...state.recentlyViewedIds.filter((id) => id !== productId),
+            ]
+          }))
+
         recentlyViewedIds: [],
 
         addRecentlyViewed: (productId) => 
