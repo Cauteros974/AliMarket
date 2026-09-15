@@ -127,7 +127,9 @@ export const useShopStore = create<ShopState>()(
       hideToast: () => set({ toast: null }),
       clearToast: () => set({ toast: null }),
       notifications: defaultNotifications,
-      wishlistCollections: [],
+      wishlistCollections: [
+        {id: "wl-home", title: "For home", productsIds:[]}
+      ],
 
       theme: "system",
       locale: "en",
