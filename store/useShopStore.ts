@@ -152,9 +152,15 @@ export const useShopStore = create<ShopState>()(
             wishlistCollections: [
               ...state.wishlistCollections,
               { id: createId("wl"), title: cleanTitle, productIds: [] },
-            ]
-          }
-        })
+            ],
+          };
+        }),
+      
+      toggleCollectionProduct: (collectionId, productId) =>
+        set((state) => ({
+          wishlistCollections: state.wishlistCollections.map((collection) => {
+            if (collection.id !== collectionId) return collection;
+          }),
       },
 
       addProductToWishlistCollection: (collectionId, productId) => 
