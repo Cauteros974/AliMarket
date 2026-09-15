@@ -160,6 +160,8 @@ export const useShopStore = create<ShopState>()(
         set((state) => ({
           wishlistCollections: state.wishlistCollections.map((collection) => {
             if (collection.id !== collectionId) return collection;
+
+            const exists = collection.productIds.includes(productId);
           }),
       },
 
