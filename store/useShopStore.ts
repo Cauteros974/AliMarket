@@ -59,7 +59,7 @@ const initialFilters: CatalogFilters = {
   discountsOnly: false,
 };
 
-export const useShopStore = create <ShopState>() (
+export const useShopStore = create<ShopState>()(
   persist(
     (set,get) => ({
       cart: [],
@@ -68,6 +68,9 @@ export const useShopStore = create <ShopState>() (
       selectedCategoryId: null,
       sortOption: "popular",
       filters: initialFilters,
+      couponCode: "",
+      appliedCoupon: null,
+      user: null,
     })
   )
 )
