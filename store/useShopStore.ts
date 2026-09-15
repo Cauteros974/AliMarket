@@ -41,3 +41,17 @@ const defaultNotifications: AppNotification[] = [
     read: false,
   },
 ];
+
+type ShopState = {
+
+};
+
+export const useShopStore = create <ShopState>() (
+  persist(
+    (set,get) => ({
+      cart: [],
+      favoriteIds: [],
+      searchQuery: "",
+    })
+  )
+)
