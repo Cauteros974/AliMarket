@@ -4,13 +4,15 @@ import { createJSONStorage, persist } from "zustand/middleware";
 import {
   Address,
   AppNotification,
+  AppTheme,
   CartItem,
   CatalogFilters,
+  Locale,
   Order,
   SortOption,
-  User,
   ToastMessage,
-  WishlistCollection
+  User,
+  WishlistCollection,
 } from "../types/shop";
 import { createId } from "../utils/format";
 import { AppTheme, Locale } from "../types/shop";
