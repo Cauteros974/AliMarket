@@ -16,7 +16,6 @@ import {
 } from "../types/shop";
 import { createId } from "../utils/format";
 import { AppTheme, Locale } from "../types/shop";
-import WishlistCollectionsScreen from "../screens/WishlistCollectionsScreen";
 
 const defaultAddress: Address = {
   id: "addr-main",
@@ -127,7 +126,7 @@ export const useShopStore = create<ShopState>()(
       clearToast: () => set({ toast: null }),
       notifications: defaultNotifications,
       wishlistCollections: [
-        {id: "wl-home", title: "For home", productsIds:[]}
+        { id: "wl-home", title: "For home", productIds: [] },
       ],
 
       theme: "system",
@@ -151,7 +150,8 @@ export const useShopStore = create<ShopState>()(
 
           return {
             wishlistCollections: [
-              ...state.wishlistCollections
+              ...state.wishlistCollections,
+              {id: createId("w1")}
             ]
           }
         })
