@@ -143,20 +143,11 @@ export const useShopStore = create<ShopState>()(
           })),
 
       createWishlistCollection: (title) => {
-        const trimmed = title.trim();
-        if(!trimmed) return;
+        set ((state) => {
+          const cleanTitle = title.trim(),
 
-        set((state) => ({
-          wishlistCollections: [
-            ...state.wishlistCollections,
-            {
-              id: createId("collection"),
-              title: trimmed,
-              productIds: [],
-              createdAt: new Date().toISOString(),
-            }
-          ],
-        }));
+          if (!cleanTitle) return state;
+        })
       },
 
       addProductToWishlistCollection: (collectionId, productId) => 
