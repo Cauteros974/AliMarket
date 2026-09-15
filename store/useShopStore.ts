@@ -258,10 +258,10 @@ export const useShopStore = create<ShopState>()(
       register: (name, email) => 
         set({
           user: {
-            id: createId("user"),
+            id: createId("user"), 
             name,
             email,
-          },
+          } 
         }),
 
       login: (email) =>
