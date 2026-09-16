@@ -143,6 +143,9 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         </View>
 
                         <Text style={styles.blockTitle}>Filters</Text>
+                        <Pressable>
+                            <Text>Open all filters</Text>
+                        </Pressable>
 
                         <View style={styles.priceRow}>
                             <TextInput
