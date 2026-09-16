@@ -1,4 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
+import * as Notifications from "expo-notifications";
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useShopStore } from "../store/useShopStore";
@@ -8,6 +9,10 @@ import { formatDate } from "../utils/format";
 export default function NotificationsScreen() {
     const notifications = useShopStore((state) => state.notifications);
     const markNotificationRead = useShopStore((state) => state.markNotificationRead);
+
+    async function sendDemoPush() {
+        const permission = await Notifications.requestPermissionsAsync();
+    }
 
     return(
         <SafeAreaView>
