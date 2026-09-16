@@ -310,6 +310,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginBottom: 12,
     },
+    allFiltersText: { 
+        backgroundColor: colors.white
+    },
     input: {
         flex: 1,
         minHeight: 46,
