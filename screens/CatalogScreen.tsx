@@ -143,7 +143,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         </View>
 
                         <Text style={styles.blockTitle}>Filters</Text>
-                        <Pressable>
+                        <Pressable onPress={() => setFiltersVisible(true)}>
                             <Text>Open all filters</Text>
                         </Pressable>
 
