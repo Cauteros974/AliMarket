@@ -11,6 +11,7 @@ import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import SkeletonProductGrid from "../components/SkeletonProductGrid";
 import { colors } from "../theme/colors";
+import { SortOption } from "../types/shop";
 
 type CatalogScreenProps = {
     navigation: any;
@@ -20,7 +21,7 @@ const sortOptions = [
     { value: "popular", label: "Popular" },
     { value: "priceAsc", label: "Price ↑" },
     { value: "priceDesc", label: "Price ↓" },
-    { value: "rating", label: "Top rated" },
+    { value: "rating", label: "Rating" },
 ] as const;
 
 export default function CatalogScreen({ navigation }: CatalogScreenProps) {
