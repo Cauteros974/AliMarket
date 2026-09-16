@@ -25,7 +25,7 @@ export default function NotificationsScreen() {
                     <View>
                         <Text style={styles.title}>Notifications</Text>
                         <Pressable onPress={sendDemoPush} style={styles.pushButton}>
-                            <Text>Send demo push</Text>
+                            <Text style={styles.pushText}>Send demo push</Text>
                         </Pressable>
                     </View>
                 }
