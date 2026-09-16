@@ -24,6 +24,9 @@ export default function NotificationsScreen() {
                 ListHeaderComponent={
                     <View>
                         <Text style={styles.title}>Notifications</Text>
+                        <Pressable>
+                            <Text>Send demo push</Text>
+                        </Pressable>
                     </View>
                 }
                 ListEmptyComponent={
