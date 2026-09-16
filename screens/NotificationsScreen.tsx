@@ -13,6 +13,12 @@ export default function NotificationsScreen() {
     async function sendDemoPush() {
         const permission = await Notifications.requestPermissionsAsync();
         if(!permission.granted) return;
+
+        await Notifications.scheduleNotificationAsync({
+            content: {
+                 title: "AliMarket sale",
+            }
+        })
     }
 
     return(
