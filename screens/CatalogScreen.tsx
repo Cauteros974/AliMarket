@@ -311,7 +311,8 @@ const styles = StyleSheet.create({
         marginBottom: 12,
     },
     allFiltersText: { 
-        backgroundColor: colors.white
+        color: colors.white,
+        fontWeight: "900"
     },
     input: {
         flex: 1,
