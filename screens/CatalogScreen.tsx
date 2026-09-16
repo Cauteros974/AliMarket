@@ -302,6 +302,10 @@ const styles = StyleSheet.create({
         marginBottom: 14,
         paddingLeft: 5,
     },
+    allFiltersButton: {
+        height: 40,
+        borderRadius: 20
+    },
     input: {
         flex: 1,
         minHeight: 46,
