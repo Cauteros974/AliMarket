@@ -24,7 +24,7 @@ export default function NotificationsScreen() {
     }
 
     return(
-        <SafeAreaView>
+        <SafeAreaView style={styles.safeArea}>
             <FlatList 
                 data={notifications}
                 keyExtractor={(item) => item.id}
@@ -134,4 +134,8 @@ const styles = StyleSheet.create({
         color: colors.muted, 
         marginTop: 6 
     },
+    pushButton: {
+        height: 48,
+        borderRadius: 10
+    }
 });
