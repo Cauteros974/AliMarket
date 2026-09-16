@@ -71,6 +71,12 @@ export default function ProfileScreen({ navigation }: Props) {
                     onPress={() => navigation.navigate("Orders")}
                 />
 
+                <MenuItem 
+                    label="Shiping address"
+                    icon="locate"
+                    onPress={() => navigation.navigate("Address")}
+                />
+
                 <MenuItem
                     label="Payment methods"
                     icon="card-outline"
