@@ -21,7 +21,11 @@ export default function NotificationsScreen() {
                 data={notifications}
                 keyExtractor={(item) => item.id}
                 contentContainerStyle={styles.content}
-                ListHeaderComponent={<Text style={styles.title}>Notifications</Text>}
+                ListHeaderComponent={
+                    <View>
+                        <Text style={styles.title}>Notifications</Text>
+                    </View>
+                }
                 ListEmptyComponent={
                     <View style={styles.emptyState}>
                         <Ionicons name="notifications-outline" size={48} color={colors.primary} />
