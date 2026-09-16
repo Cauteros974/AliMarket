@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
         borderRadius: 16,
         backgroundColor: colors.primary,
         alignItems: "center",
+        justifyContent: "center",
         marginBottom: 14,
     }
 });
