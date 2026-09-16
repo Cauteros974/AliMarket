@@ -304,7 +304,10 @@ const styles = StyleSheet.create({
     },
     allFiltersButton: {
         height: 40,
-        borderRadius: 20
+        borderRadius: 20,
+        backgroundColor: colors.text,
+        alignItems: "center",
+        justifyContent: "center",
     },
     input: {
         flex: 1,
