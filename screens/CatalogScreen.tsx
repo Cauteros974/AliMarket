@@ -1,18 +1,16 @@
-import { useState, useEffect } from "react";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FlatList, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import AllFiltersModal from "../components/AllFiltersModal";
 import CategoryChip from "../components/CategoryChip";
 import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
-import { categories, products } from "../data/products";
-import { RootStackParamList } from "../navigation/types";
-import { useShopStore } from "../store/useShopStore";
+import SearchSuggestions from "../components/SearchSuggestions";
 import SkeletonProductGrid from "../components/SkeletonProductGrid";
+import { categories, products } from "../data/products";
+import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { SortOption } from "../types/shop";
-import AllFiltersModal from "../components/AllFiltersModal";
 
 type CatalogScreenProps = {
     navigation: any;
@@ -100,6 +98,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                     <View>
                         <Text style={styles.title}>Catalog</Text>
                         <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
+                        <SearchSuggestions query={searchQuery} onPick={setSearchQuery} />
 
                         <ScrollView
                             horizontal
