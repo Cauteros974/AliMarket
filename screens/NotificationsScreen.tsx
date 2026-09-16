@@ -141,5 +141,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginBottom: 14,
+    },
+    pushText: {
+        backgroundColor: colors.white,
+        fontWeight: "900"
     }
 });
