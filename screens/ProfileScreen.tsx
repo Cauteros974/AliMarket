@@ -73,7 +73,7 @@ export default function ProfileScreen({ navigation }: Props) {
 
                 <MenuItem 
                     label="Shiping address"
-                    icon="locate"
+                    icon="location-outline"
                     onPress={() => navigation.navigate("Addresses")}
                 />
 
