@@ -25,6 +25,8 @@ const sortOptions = [
 ] as const;
 
 export default function CatalogScreen({ navigation }: CatalogScreenProps) {
+    const [filtersVisible, setFiltersVisible] = useState(false);
+
     const searchQuery = useShopStore((state) => state.searchQuery);
     const selectedCategoryId = useShopStore((state) => state.selectedCategoryId);
     const sortOption = useShopStore((state) => state.sortOption);
