@@ -12,7 +12,7 @@ export default function NotificationsScreen() {
 
     async function sendDemoPush() {
         const permission = await Notifications.requestPermissionsAsync();
-        if(!permission) return;
+        if(!permission.granted) return;
     }
 
     return(
