@@ -308,6 +308,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.text,
         alignItems: "center",
         justifyContent: "center",
+        marginBottom: 12,
     },
     input: {
         flex: 1,
