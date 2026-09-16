@@ -13,7 +13,7 @@ import SkeletonProductGrid from "../components/SkeletonProductGrid";
 import { colors } from "../theme/colors";
 
 type CatalogScreenProps = {
-    navigation: NativeStackNavigationProp<RootStackParamList>;
+    navigation: any;
 };
 
 const sortOptions = [
