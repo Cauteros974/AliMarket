@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
         marginBottom: 14,
     },
     pushText: {
-        backgroundColor: colors.white,
+        color: colors.white,
         fontWeight: "900"
     }
 });
