@@ -84,6 +84,8 @@ export default function AuthScreen({ navigation }: Props) {
 
       if(isLogin) {
         login(email.trim().toLowerCase());
+      } else {
+        register(name.trim().toLocaleLowerCase());
       }
 
       navigation.goBack();
