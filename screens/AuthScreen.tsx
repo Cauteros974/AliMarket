@@ -82,11 +82,9 @@ export default function AuthScreen({ navigation }: Props) {
       // There is intentionally no real backend.
       await new Promise((resolve) => setTimeout(resolve, 500));
 
-      setUser({
-        id: "demo-user",
-        name: isLogin ? "User" : name.trim(),
-        email: email.trim().toLowerCase(),
-      });
+      if(isLogin) {
+        login(mail.trim().toLowerCase);
+      }
 
       navigation.goBack();
     } finally {
