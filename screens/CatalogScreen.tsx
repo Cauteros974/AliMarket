@@ -144,7 +144,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
 
                         <Text style={styles.blockTitle}>Filters</Text>
                         <Pressable onPress={() => setFiltersVisible(true)}>
-                            <Text>Open all filters</Text>
+                            <Text style={styles.allFiltersText}>Open all filters</Text>
                         </Pressable>
 
                         <View style={styles.priceRow}>
