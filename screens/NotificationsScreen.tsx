@@ -17,6 +17,7 @@ export default function NotificationsScreen() {
         await Notifications.scheduleNotificationAsync({
             content: {
                  title: "AliMarket sale",
+                 body: "Your demo push notification is working.",
             }
         })
     }
