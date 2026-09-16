@@ -83,7 +83,7 @@ export default function AuthScreen({ navigation }: Props) {
       await new Promise((resolve) => setTimeout(resolve, 500));
 
       if(isLogin) {
-        login(mail.trim().toLowerCase);
+        login(email.trim().toLowerCase());
       }
 
       navigation.goBack();
