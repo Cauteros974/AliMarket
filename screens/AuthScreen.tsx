@@ -11,7 +11,7 @@ import {
   View,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
@@ -28,7 +28,8 @@ export default function AuthScreen({ navigation }: Props) {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const setUser = useShopStore((state) => state.setUser);
+  const register = useShopStore((state) => state.register);
+  const login = useShopStore((state) => state.login);
 
   const title = useMemo(
     () => (isLogin ? "Welcome back" : "Create account"),
