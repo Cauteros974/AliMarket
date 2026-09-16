@@ -136,6 +136,7 @@ const styles = StyleSheet.create({
     },
     pushButton: {
         height: 48,
-        borderRadius: 10
+        borderRadius: 10,
+        backgroundColor: colors.primary
     }
 });
