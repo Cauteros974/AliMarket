@@ -18,8 +18,9 @@ export default function NotificationsScreen() {
             content: {
                  title: "AliMarket sale",
                  body: "Your demo push notification is working.",
-            }
-        })
+            },
+            trigger: null,
+        });
     }
 
     return(
