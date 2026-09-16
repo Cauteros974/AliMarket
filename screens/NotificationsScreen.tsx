@@ -137,6 +137,8 @@ const styles = StyleSheet.create({
     pushButton: {
         height: 48,
         borderRadius: 16,
-        backgroundColor: colors.primary
+        backgroundColor: colors.primary,
+        alignItems: "center",
+        marginBottom: 14,
     }
 });
