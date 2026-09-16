@@ -12,6 +12,7 @@ import { useShopStore } from "../store/useShopStore";
 import SkeletonProductGrid from "../components/SkeletonProductGrid";
 import { colors } from "../theme/colors";
 import { SortOption } from "../types/shop";
+import AllFiltersModal from "../components/AllFiltersModal";
 
 type CatalogScreenProps = {
     navigation: any;
@@ -234,6 +235,8 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 )}
             />
             )}
+
+            <AllFiltersModal visible={filtersVisible} onClose={() => setFiltersVisible(false)}/>
             
         </SafeAreaView>
     );
