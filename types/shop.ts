@@ -32,6 +32,8 @@ export type ProductQuestion = {
 export type ProductReview = {
   id: string;
   author: string;
+  rating: string;
+  text: string;
 };
 
 export type Seller = {
