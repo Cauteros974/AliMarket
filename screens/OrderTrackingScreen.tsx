@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
         fontWeight: "800",
     },
     card: {
+        width: 380,
         backgroundColor: colors.surface,
         borderRadius: 18,
         borderWidth: 1,
