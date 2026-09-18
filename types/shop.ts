@@ -34,6 +34,7 @@ export type ProductReview = {
   author: string;
   rating: string;
   text: string;
+  date: string;
 };
 
 export type Seller = {
