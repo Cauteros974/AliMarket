@@ -132,6 +132,11 @@ export type NotificationItem = {
   read: boolean;
 };
 
+export type ProductFilters = {
+  minPrice: string;
+  maxPrice: string;
+}
+
 export type AppNotification = {
   id: string;
   title: string;
