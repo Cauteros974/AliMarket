@@ -231,7 +231,7 @@ export const useShopStore = create<ShopState>()(
       register: (name, email) =>
         set({ user: { id: createId("user"), name, email } }),
 
-      login: (email) =>
+      login: (email, name = "Alimarket Customer") =>
         set({
           user: {
             id: createId("user"),
