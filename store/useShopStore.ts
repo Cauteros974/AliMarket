@@ -53,6 +53,11 @@ const defaultCollections: WishlistCollection[] = [
     title: "Gift ideas",
     productIds: [],
   },
+  {
+    id: "wc3",
+    title: "Home status",
+    productIds: [],
+  },
 ]
 
 type ShopState = {
