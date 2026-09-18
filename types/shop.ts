@@ -148,6 +148,11 @@ export type AppNotification = {
   read: boolean;
 };
 
+export type PaymentMethod = {
+  id: string;
+  holder: string;
+}
+
 export type AppTheme = "light" | "dark" | "system";
 
 export type Locale = "en" | "uk" | "de" | "fr";
