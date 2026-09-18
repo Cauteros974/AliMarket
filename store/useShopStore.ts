@@ -42,6 +42,14 @@ const defaultNotifications: AppNotification[] = [
   },
 ];
 
+const defaultCollections: WishlistCollection[] = [
+  {
+    id:"wc1",
+    title: "For sale",
+    productIds: [],
+  }
+]
+
 type ShopState = {
   cart: CartItem[];
   favoriteIds: string[];
