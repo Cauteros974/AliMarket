@@ -116,6 +116,11 @@ export type Order = {
   address: Address;
 };
 
+export type TrackingStep = {
+  id: string;
+  title: string;
+};
+
 export type AppNotification = {
   id: string;
   title: string;
