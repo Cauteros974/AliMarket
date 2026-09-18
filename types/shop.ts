@@ -154,7 +154,11 @@ export type PaymentMethod = {
   last4: string;
   brand: "Visa" | "Mastercard";
   expires: string;
-}
+};
+
+export type SupportTicket = {
+  id: string;
+};
 
 export type AppTheme = "light" | "dark" | "system";
 
