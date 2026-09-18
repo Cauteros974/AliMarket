@@ -120,6 +120,8 @@ export type TrackingStep = {
   id: string;
   title: string;
   description: string;
+  date: string;
+  completed: string;
 };
 
 export type AppNotification = {
