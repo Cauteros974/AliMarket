@@ -7,7 +7,7 @@ export type CategoryId =
   | "toys";
 
 export type Category = {
-  id: CategoryId;
+  id?: CategoryId;
   title: string;
   icon: string;
   subcategories: string[];
