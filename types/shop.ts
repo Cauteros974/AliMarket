@@ -158,6 +158,8 @@ export type PaymentMethod = {
 
 export type SupportTicket = {
   id: string;
+  topic: string;
+  message: string;
 };
 
 export type AppTheme = "light" | "dark" | "system";
