@@ -151,6 +151,7 @@ export type AppNotification = {
 export type PaymentMethod = {
   id: string;
   holder: string;
+  last4: string;
 }
 
 export type AppTheme = "light" | "dark" | "system";
