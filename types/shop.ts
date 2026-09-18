@@ -7,10 +7,10 @@ export type CategoryId =
   | "toys";
 
 export type Category = {
-  id?: CategoryId;
+  id?: string;
   title: string;
   icon: string;
-  subcategories: string[];
+  subcategories?: string[];
 };
 
 export type Review = {
@@ -26,6 +26,11 @@ export type ProductQuestion = {
   id: string;
   question: string;
   answer: string;
+  author: string;
+};
+
+export type ProductReview = {
+  id: string;
   author: string;
 };
 
