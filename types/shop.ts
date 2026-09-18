@@ -121,12 +121,13 @@ export type TrackingStep = {
   title: string;
   description: string;
   date: string;
-  completed: string;
+  completed: boolean;
 };
 
 export type NotificationItem = {
   id: string;
   title: string;
+  description: string;
 };
 
 export type AppNotification = {
