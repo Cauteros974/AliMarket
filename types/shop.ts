@@ -153,6 +153,7 @@ export type PaymentMethod = {
   holder: string;
   last4: string;
   brand: "Visa" | "Mastercard";
+  expires: string;
 }
 
 export type AppTheme = "light" | "dark" | "system";
