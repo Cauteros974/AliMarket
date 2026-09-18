@@ -154,12 +154,15 @@ export type PaymentMethod = {
   last4: string;
   brand: "Visa" | "Mastercard";
   expires: string;
+  isDefault: boolean;
 };
 
 export type SupportTicket = {
   id: string;
   topic: string;
   message: string;
+  createAt: string;
+  status: "Open" | "Answered";
 };
 
 export type AppTheme = "light" | "dark" | "system";
