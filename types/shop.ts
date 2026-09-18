@@ -135,6 +135,9 @@ export type NotificationItem = {
 export type ProductFilters = {
   minPrice: string;
   maxPrice: string;
+  minRating: number;
+  freeDeliveryOnly: boolean;
+  discountsOnly: boolean;
 }
 
 export type AppNotification = {
