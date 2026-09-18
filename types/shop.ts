@@ -119,6 +119,7 @@ export type Order = {
 export type TrackingStep = {
   id: string;
   title: string;
+  description: string;
 };
 
 export type AppNotification = {
