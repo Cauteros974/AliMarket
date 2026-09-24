@@ -291,7 +291,7 @@ export const products: Product[] = [
     // --------------------------------------------------
 
     {
-        id: "p12",
+        id: "p14",
         title: "Minimal Streetwear Crossbody Bag",
         description: "Compact water-resistant crossbody bag with adjustable strap, phone pocket and hidden zipper compartment.",
         categoryId: "fashion",
@@ -313,7 +313,7 @@ export const products: Product[] = [
     // --------------------------------------------------
 
     {
-        id: "p13",
+        id: "p15",
         title: "Liforme Original Yoga Mat",
         description: "Textured 'GripForLife' surface holds traction even when your hands and feet get sweaty, at 4.2mm thick.",
         categoryId: "sports",
@@ -331,7 +331,7 @@ export const products: Product[] = [
     },
 
     {
-        id: "p14",
+        id: "p16",
         title: "Stretch Fitness Rubber",
         description: "Natural Latex elastic layered Power Heavy Duty Loop single Rubber Resistance Band For Pull Up Assisted Multi Gym stretch Use.",
         categoryId: "sports",
@@ -348,7 +348,7 @@ export const products: Product[] = [
     },
 
     {
-        id: "p15",
+        id: "p17",
         title: "Water bottle",
         description: "A medium convenient 550 ml food-grade plastic water bottle that will allow you to take water for yourself for the whole day. The bottle has a tight lid and a convenient handle for fixing and carrying.",
         categoryId: "sports",
@@ -365,7 +365,7 @@ export const products: Product[] = [
     },
 
     {
-        id: "p16",
+        id: "p18",
         title: "Mad Max Classic MFG 248 (brown) size XXL",
         description: "Brown fitness and bodybuilding glove, comfortable for women and men. Gloves are made of premium leather. In the palm area there is a double layer of leather filled with a special pad. Both layers are anatomically stitched for greater strength and a safer grip. ",
         categoryId: "sports",
