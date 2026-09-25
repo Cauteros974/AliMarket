@@ -119,7 +119,8 @@ const styles = StyleSheet.create({
     },
     price: {
         color: colors.primary,
-        fontSize: 20,
-        fontWeight: "900"
+        fontSize: 16,
+        fontWeight: "900",
+        marginTop: 6
     }
 })
