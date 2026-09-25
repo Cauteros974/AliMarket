@@ -41,7 +41,7 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
 
   useEffect(() => {
     addRecentlyViewId(product.id);
-  })
+  }, [product.id]);
 
   const isFavorite = favoriteIds.includes(product.id);
 
