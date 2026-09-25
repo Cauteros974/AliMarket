@@ -15,6 +15,7 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
   const addToCart = useShopStore((state) => state.addToCart);
   const favoriteIds = useShopStore((state) => state.favoriteIds);
   const toggleFavorite = useShopStore((state) => state.toggleFavorite);
+  const addRecentlyViewId = useShopStore((state) => state.addRecentlyViewed)
 
   if (!product) {
     return (
