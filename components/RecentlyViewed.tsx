@@ -73,5 +73,7 @@ export default function addRecentlyViewed({onProductPress} : Props) {
 }
 
 const styles = StyleSheet.create({
-
+    container: {
+        marginTop: 20
+    }
 })
