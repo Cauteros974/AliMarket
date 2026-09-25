@@ -5,6 +5,10 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { formatPrice } from "../utils/format";
 
+type Props = {
+    onProductPress: (productId: string) => void;
+}
+
 export default function addRecentlyViewed({}) {
     const recentlyViewedIds = useShopStore(
         (state) => state.recentlyViewedIds
