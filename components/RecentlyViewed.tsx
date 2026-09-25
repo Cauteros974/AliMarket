@@ -53,6 +53,10 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                                     resizeMode="cover"
                                 />
                             </View>
+
+                            <Text>
+                                {product.title}
+                            </Text>
                         </Pressable>
                     )
                 })}
