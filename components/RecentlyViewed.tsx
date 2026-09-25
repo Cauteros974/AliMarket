@@ -28,6 +28,12 @@ export default function addRecentlyViewed({onProductPress} : Props) {
         <View>
             <View>
                 <Text>Recently Viewed</Text>
+
+                <Ionicons 
+                    name="time-outline"
+                    size={18}
+                    color={colors.muted}
+                />
             </View>
         </View>
     )
