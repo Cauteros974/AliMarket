@@ -36,12 +36,20 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                 />
             </View>
 
-            <View>
+            <View style={styles.row}>
                 {recentlyViewedProducts.map((product) => {
                     if(!product) return null;
 
                     return(
-
+                        <Pressable>
+                            <View>
+                                <Image 
+                                    source={product.image}
+                                    style={styles.image}
+                                    resizeMode="cover"
+                                />
+                            </View>
+                        </Pressable>
                     )
                 })}
             </View>
