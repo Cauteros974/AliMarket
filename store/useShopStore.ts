@@ -391,7 +391,8 @@ export const useShopStore = create<ShopState>()(
 
         return{
           recentlyViewedIds: [productId, ...withoutCurrent].slice(0, 10),
-        }
-      })
+        };
+      }),
+      clearRecentlyViewed: () => set({ recentlyViewedIds: [] }),
   )
 );
