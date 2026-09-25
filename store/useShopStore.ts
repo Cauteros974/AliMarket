@@ -75,6 +75,8 @@ type ShopState = {
   orders: Order[];
   notifications: AppNotification[];
   recentlyViewedIds: string[];
+  addRecentlyViewed: (productId: string) => void;
+  clearRecentlyViewed: () => void;
   wishlistCollections: WishlistCollection[];
   theme: AppTheme;
   locale: Locale;
@@ -362,6 +364,18 @@ export const useShopStore = create<ShopState>()(
         set({ toast: { id: createId("toast"), message, type } }),
 
       hideToast: () => set({ toast: null }),
+
+    addRecentlyViewed: (productId) =>
+      set((state) => {
+        const withoutCurrent = state.recentlyViewedIds.filter(
+          (id) => id === productId
+        );
+
+        return{
+          recentlyViewedIds: [productId, ...withoutCurrent].slice(0, 10),
+        };
+      }),
+      clearRecentlyViewed: () => set({ recentlyViewedIds: [] }),
     }),
     {
       name: "alimarket-shop-storage",
@@ -379,20 +393,6 @@ export const useShopStore = create<ShopState>()(
         theme: state.theme,
         locale: state.locale,
       }),
-    }
-
-    recentlyViewedIds: [],
-
-    addRecentlyViewed: (productId) =>
-      set((state) => {
-        const withoutCurrent = state.recentlyViewedIds.filter(
-          (id) => id === productId
-        );
-
-        return{
-          recentlyViewedIds: [productId, ...withoutCurrent].slice(0, 10),
-        };
-      }),
-      clearRecentlyViewed: () => set({ recentlyViewedIds: [] }),
+    },
   )
 );
