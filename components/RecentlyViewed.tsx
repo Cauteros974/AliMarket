@@ -74,6 +74,11 @@ export default function addRecentlyViewed({onProductPress} : Props) {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 20
+        marginTop: 24
+    },
+    haeder: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between"
     }
 })
