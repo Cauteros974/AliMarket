@@ -25,8 +25,8 @@ export default function addRecentlyViewed({onProductPress} : Props) {
     }
 
     return(
-        <View>
-            <View>
+        <View style={styles.conteiner}>
+            <View style={styles.header}>
                 <Text>Recently Viewed</Text>
 
                 <Ionicons 
@@ -41,7 +41,7 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                     if(!product) return null;
 
                     return(
-                        
+
                     )
                 })}
             </View>
