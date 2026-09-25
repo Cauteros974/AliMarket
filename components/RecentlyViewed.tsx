@@ -20,7 +20,7 @@ export default function addRecentlyViewed({onProductPress} : Props) {
 
     // We don't show anything if the user 
     // // hasn't watched anything yet.
-    if(recentlyViewedProducts) {
+    if(recentlyViewedProducts.length === 0) {
         return null;
     }
 }
