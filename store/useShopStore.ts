@@ -380,5 +380,14 @@ export const useShopStore = create<ShopState>()(
         locale: state.locale,
       }),
     }
+
+    recentlyViewedIds: [],
+
+    addRecentlyViewed: (productId) =>
+      set((state) => {
+        const withoutCurrent = state.recentlyViewedIds.filter(
+          (id) => id === productId
+        )
+      })
   )
 );
