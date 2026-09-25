@@ -16,4 +16,5 @@ export default function addRecentlyViewed({onProductPress} : Props) {
 
     const recentlyViewedProducts = recentlyViewedIds
         .map((id) => products.find((product) => product.id))
+        .filter(Boolean);
 }
