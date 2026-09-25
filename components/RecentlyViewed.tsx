@@ -27,7 +27,7 @@ export default function addRecentlyViewed({onProductPress} : Props) {
     return(
         <View style={styles.conteiner}>
             <View style={styles.header}>
-                <Text>Recently Viewed</Text>
+                <Text style={styles.title}>Recently Viewed</Text>
 
                 <Ionicons 
                     name="time-outline"
@@ -48,3 +48,7 @@ export default function addRecentlyViewed({onProductPress} : Props) {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+
+})
