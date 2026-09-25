@@ -46,7 +46,7 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                             style={styles.card}
                             onPress={() => onProductPress(product.id)}
                         >
-                            <View>
+                            <View style={styles.imageWrapper}>
                                 <Image 
                                     source={product.image}
                                     style={styles.image}
