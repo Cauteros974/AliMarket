@@ -44,7 +44,7 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                         <Pressable
                             key={product.id}
                             style={styles.card}
-                            
+                            onPress={() => onProductPress(product.id)}
                         >
                             <View>
                                 <Image 
