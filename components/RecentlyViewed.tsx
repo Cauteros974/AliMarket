@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Image } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View} from "react-native";
 import { products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
@@ -23,4 +23,12 @@ export default function addRecentlyViewed({onProductPress} : Props) {
     if(recentlyViewedProducts.length === 0) {
         return null;
     }
+
+    return(
+        <View>
+            <View>
+                <Text>Recently Viewed</Text>
+            </View>
+        </View>
+    )
 }
