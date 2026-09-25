@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
@@ -37,6 +38,10 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
       </SafeAreaView>
     );
   }
+
+  useEffect(() => {
+    addRecentlyViewId(product.id);
+  })
 
   const isFavorite = favoriteIds.includes(product.id);
 
