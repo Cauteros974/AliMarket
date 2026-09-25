@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     haeder: {
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        marginBottom: 12
     }
 })
