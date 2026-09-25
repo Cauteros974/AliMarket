@@ -86,5 +86,9 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontSize: 20,
         fontWeight: "900"
+    },
+    row: {
+        flexDirection: "row",
+        gap: 12
     }
 })
