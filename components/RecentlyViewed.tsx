@@ -102,6 +102,8 @@ const styles = StyleSheet.create({
     imageWrapper: {
         width: "100%",
         height: 120,
-        borderRadius: 14
+        borderRadius: 14,
+        overflow: "hidden",
+        backgroundColor: colors.surfaceSoft
     }
 })
