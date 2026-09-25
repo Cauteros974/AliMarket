@@ -71,7 +71,7 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                         </Pressable>
                     )
                 })}
-            </View>
+            </ScrollView>
         </View>
     )
 }
