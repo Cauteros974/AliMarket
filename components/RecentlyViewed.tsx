@@ -9,8 +9,11 @@ type Props = {
     onProductPress: (productId: string) => void;
 }
 
-export default function addRecentlyViewed({Props}) {
+export default function addRecentlyViewed({onProductPress} : Props) {
     const recentlyViewedIds = useShopStore(
         (state) => state.recentlyViewedIds
     );
+
+    const recentlyViewedProducts = recentlyViewedIds
+        .map((id) => products.find((product) => product.id))
 }
