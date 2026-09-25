@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Image, Pressable, StyleSheet, Text, View} from "react-native";
+import { Image, Pressable, ScrollView, StyleSheet, Text, View} from "react-native";
 import { products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
@@ -36,7 +36,11 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                 />
             </View>
 
-            <View style={styles.row}>
+            <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator
+                style={styles.row}
+            >
                 {recentlyViewedProducts.map((product) => {
                     if(!product) return null;
 
