@@ -41,7 +41,11 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                     if(!product) return null;
 
                     return(
-                        <Pressable>
+                        <Pressable
+                            key={product.id}
+                            style={styles.card}
+                            
+                        >
                             <View>
                                 <Image 
                                     source={product.image}
