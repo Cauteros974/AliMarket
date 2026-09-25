@@ -115,6 +115,9 @@ const styles = StyleSheet.create({
         fontSize: 13,
         fontWeight: "800",
         marginTop: 8,
-        lineHeight: 17
+        lineHeight: 17,
+    },
+    price: {
+        color: colors.primary
     }
 })
