@@ -105,5 +105,9 @@ const styles = StyleSheet.create({
         borderRadius: 14,
         overflow: "hidden",
         backgroundColor: colors.surfaceSoft
+    },
+    image: {
+        width: "100%",
+        height: "100%",
     }
 })
