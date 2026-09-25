@@ -60,6 +60,10 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                             >
                                 {product.title}
                             </Text>
+
+                            <Text style={styles.price}>
+                                {formatPrice(product.price)}
+                            </Text>
                         </Pressable>
                     )
                 })}
