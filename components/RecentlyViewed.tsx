@@ -18,6 +18,8 @@ export default function addRecentlyViewed({onProductPress} : Props) {
         .map((id) => products.find((product) => product.id === id))
         .filter(Boolean);
 
+    // We don't show anything if the user 
+    // // hasn't watched anything yet.
     if(recentlyViewedProducts) {
         return null;
     }
