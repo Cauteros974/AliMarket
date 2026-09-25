@@ -35,6 +35,16 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                     color={colors.muted}
                 />
             </View>
+
+            <View>
+                {recentlyViewedProducts.map((product) => {
+                    if(!product) return null;
+
+                    return(
+                        
+                    )
+                })}
+            </View>
         </View>
     )
 }
