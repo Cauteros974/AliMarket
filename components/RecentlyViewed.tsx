@@ -25,7 +25,7 @@ export default function addRecentlyViewed({onProductPress} : Props) {
     }
 
     return(
-        <View style={styles.conteiner}>
+        <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.title}>Recently Viewed</Text>
 
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     container: {
         marginTop: 24
     },
-    haeder: {
+    header: {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
