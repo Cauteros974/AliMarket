@@ -460,10 +460,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
   },
 
-  // --------------------------------------------------
-  // PRODUCTS
-  // --------------------------------------------------
-
   grid: {
     gap: 12,
   },
