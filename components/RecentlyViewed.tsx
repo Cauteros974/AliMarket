@@ -112,7 +112,9 @@ const styles = StyleSheet.create({
     },
     productTitle: {
         color: colors.text,
-        fontSize: 15,
-        fontWeight: "800"
+        fontSize: 13,
+        fontWeight: "800",
+        marginTop: 8,
+        lineHeight: 20
     }
 })
