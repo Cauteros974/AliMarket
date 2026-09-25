@@ -98,5 +98,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
         padding: 10
+    },
+    imageWrapper: {
+        width: "100%",
+        height: 120,
+        borderRadius: 14
     }
 })
