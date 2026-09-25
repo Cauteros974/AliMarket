@@ -109,5 +109,10 @@ const styles = StyleSheet.create({
     image: {
         width: "100%",
         height: "100%",
+    },
+    productTitle: {
+        color: colors.text,
+        fontSize: 15,
+        fontWeight: "800"
     }
 })
