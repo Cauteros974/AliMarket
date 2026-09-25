@@ -54,7 +54,10 @@ export default function addRecentlyViewed({onProductPress} : Props) {
                                 />
                             </View>
 
-                            <Text>
+                            <Text
+                                numberOfLines={1}
+                                style={styles.productTitle}
+                            >
                                 {product.title}
                             </Text>
                         </Pressable>
