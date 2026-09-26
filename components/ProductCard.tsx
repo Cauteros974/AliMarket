@@ -21,6 +21,9 @@ export default function ProductCard({
 }: ProductCardProps) {
 
     const addToCart = useShopStore((state) => state.addToCart);
+
+    const cardOpacity = useRef(new Animated.Value(0)).current;
+    const cardTranslateY = useRef(new Animated.Value(18)).current;
     
     return(
         <Pressable onPress={onPress} style={styles.card}>
