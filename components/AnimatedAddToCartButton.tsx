@@ -13,6 +13,9 @@ export default function AnimatedAddToCartButton({
 }: Props) {
     const addToCart = useShopStore((state) => state.addToCart);
 
+    const [adding, setAdding] = useState(false);
+    const [added, setAdded] = useState(false);
+
     const scale = useRef(new Animated.Value(1)).current;
 
       function animateButton() {
