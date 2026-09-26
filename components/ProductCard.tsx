@@ -31,6 +31,11 @@ export default function ProductCard({
                 toValue: 1,
                 duration: 400,
                 useNativeDriver: true,
+            }),
+
+            Animated.spring(cardTranslateY, {
+                toValue: 0,
+                tension: 70,
             })
         ])
     })
