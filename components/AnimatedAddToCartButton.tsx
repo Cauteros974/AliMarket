@@ -13,5 +13,12 @@ export default function AnimatedAddToCartButton({
 }: Props) {
     const addToCart = useShopStore((state) => state.addToCart);
 
-    function An
+      function animateButton() {
+        Animated.spring(scale, {
+            toValue: 1,
+            tension: 200,
+            friction: 6,
+            useNativeDriver: true,
+        })
+      }
 }
