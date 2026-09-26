@@ -53,5 +53,10 @@ export default function AnimatedAddToCartButton({
         animateButton();
 
         addToCart(productId);
+
+        setTimeout(() => {
+            setAdding(false);
+            setAdded(true);
+        })
       }
 }
