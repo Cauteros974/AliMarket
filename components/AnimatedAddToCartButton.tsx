@@ -15,11 +15,13 @@ export default function AnimatedAddToCartButton({
 
     const [adding, setAdding] = useState(false);
     const [added, setAdded] = useState(false);
-
+    
+    // Animation of the button itself
     const scale = useRef(new Animated.Value(1)).current;
 
       function animateButton() {
             Animated.sequence([
+                // A little compression
                 Animated.spring(scale, {
                 toValue: 0.92,
                 tension: 180,
@@ -27,6 +29,7 @@ export default function AnimatedAddToCartButton({
                 useNativeDriver: true,
             }),
 
+            // A small increase
             Animated.spring(scale, {
                 toValue: 1.06,
                 tension: 180,
