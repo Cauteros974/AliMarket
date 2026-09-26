@@ -120,5 +120,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         gap: 7,
+    },
+
+    buttonAdded: {
+        backgroundColor: "#22C55E"
     }
 })
