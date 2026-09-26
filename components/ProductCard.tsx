@@ -58,8 +58,10 @@ export default function ProductCard({
                 tension: 100,
                 friction: 5,
                 useNativeDriver: true,
-            })
-        ])
+            }),
+        ]).start();
+
+        onToggleFavorite();
     }
     
     return(
