@@ -64,6 +64,9 @@ export default function ProductCard({
         onToggleFavorite();
     }
     
+    const cartScale = useRef(new Animated.Value(1)).current;
+    const [adding, setAdding] = useState(false);
+
     return(
         <Pressable onPress={onPress} style={styles.card}>
             <View style={styles.imageWrap}>
