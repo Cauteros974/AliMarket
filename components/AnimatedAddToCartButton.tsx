@@ -47,5 +47,11 @@ export default function AnimatedAddToCartButton({
         if(adding) {
             return;
         }
+
+        setAdding(true);
+
+        animateButton();
+
+        addCart(productId);
       }
 }
