@@ -82,6 +82,13 @@ export default function ProductCard({
                 friction: 6,
                 useNativeDriver: true,
             }),
+
+            Animated.spring(cartScale, {
+                toValue: 1.06,
+                tension: 180,
+                friction: 5,
+                useNativeDriver: true,
+            })
         ])
     }
 
