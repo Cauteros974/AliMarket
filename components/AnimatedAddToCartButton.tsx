@@ -64,6 +64,7 @@ export default function AnimatedAddToCartButton({
             setAdding(false);
             setAdded(true);
 
+            // After 1.2 seconds, return the button
             setTimeout(() => {
                 setAdded(false);
             }, 1200);
