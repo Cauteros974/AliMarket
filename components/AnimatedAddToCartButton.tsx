@@ -42,4 +42,10 @@ export default function AnimatedAddToCartButton({
             }),
         ]).start();
       }
+
+      function handlePress() {
+        if(adding) {
+            return;
+        }
+      }
 }
