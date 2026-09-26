@@ -40,6 +40,6 @@ export default function AnimatedAddToCartButton({
                 friction: 6,
                 useNativeDriver: true,
             }),
-        ])
+        ]).start();
       }
 }
