@@ -47,8 +47,8 @@ export default function ProductCard({
     function handleFavorite() {
         Animated.sequence([
             Animated.spring(favoriteScale, {
-                toValue: 1,
-                tension: 100,
+                toValue: 1.35,
+                tension: 180,
                 friction: 5,
                 useNativeDriver: true,
             })
