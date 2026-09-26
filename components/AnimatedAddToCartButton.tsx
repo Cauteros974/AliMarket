@@ -52,6 +52,6 @@ export default function AnimatedAddToCartButton({
 
         animateButton();
 
-        addCart(productId);
+        addToCart(productId);
       }
 }
