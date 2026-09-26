@@ -124,41 +124,135 @@ export default function ProductCard({
                 },
             ]}
         >
-            <Pressable onPress={onPress} style={styles.card}>
-                <View style={styles.imageWrap}>
-                    <Image source={product.image} style={styles.image} />
+            <Pressable onPress={onPress} style={styles.imageButton}>
+        <Image
+          source={product.image}
+          style={styles.image}
+          resizeMode="cover"
+        />
 
-                    {product.discountLabel ? (
-                        <View style={styles.discountBadge}>
-                            <Text style={styles.discountText}>{product.discountLabel}</Text>
-                        </View>
-                    ): null}
+        {/* Favorite button */}
 
-                    <Pressable onPress={onToggleFavorite} style={styles.favoriteButton}>
-                        <Ionicons
-                            name={isFavorite ? "heart" : "heart-outline"}
-                            size={18}
-                            color={isFavorite ? colors.danger : colors.text}
-                        />
-                    </Pressable>
-                </View>
+        <Pressable
+          onPress={handleFavorite}
+          style={styles.favoriteButton}
+          hitSlop={8}
+        >
+          <Animated.View
+            style={{
+              transform: [
+                {
+                  scale: favoriteScale,
+                },
+              ],
+            }}
+          >
+            <Ionicons
+              name={isFavorite ? "heart" : "heart-outline"}
+              size={20}
+              color={isFavorite ? colors.primary : colors.text}
+            />
+          </Animated.View>
+        </Pressable>
 
-                <Text numberOfLines={2} style={styles.title}>
-                    {product.title}
-                </Text>
+        {/* Discount badge */}
 
-                <View style={styles.metaRow}>
-                    <Ionicons name="star" size={14} color={colors.warning} />
-                    <Text style={styles.metaText}>{product.rating}</Text>
-                    <Text style={styles.soldText}>{product.sold.toLocaleString("en-US")} sold</Text>
-                </View>
+        {product.oldPrice ? (
+          <View style={styles.discountBadge}>
+            <Text style={styles.discountText}>
+              -
+              {Math.round(
+                ((product.oldPrice - product.price) /
+                  product.oldPrice) *
+                  100
+              )}
+              %
+            </Text>
+          </View>
+        ) : null}
+      </Pressable>
 
-                <View>
-                    <Text style={styles.price}>{formatPrice(product.price)}</Text>
-                    {product.oldPrice ? <Text style={styles.oldPrice}>{formatPrice(product.oldPrice)}</Text> : null}
-                </View>
+      {/* --------------------------------------------------
+          PRODUCT INFO
+      -------------------------------------------------- */}
 
-            </Pressable>
+      <Pressable onPress={onPress} style={styles.info}>
+        <Text
+          style={styles.title}
+          numberOfLines={2}
+        >
+          {product.title}
+        </Text>
+
+        <View style={styles.ratingRow}>
+          <Ionicons
+            name="star"
+            size={13}
+            color={colors.warning}
+          />
+
+          <Text style={styles.rating}>
+            {product.rating}
+          </Text>
+
+          <Text style={styles.reviews}>
+            ({product.reviews.toLocaleString("en-US")})
+          </Text>
+        </View>
+
+        <View style={styles.priceRow}>
+          <Text style={styles.price}>
+            {formatPrice(product.price)}
+          </Text>
+
+          {product.oldPrice ? (
+            <Text style={styles.oldPrice}>
+              {formatPrice(product.oldPrice)}
+            </Text>
+          ) : null}
+        </View>
+      </Pressable>
+
+      {/* --------------------------------------------------
+          ADD TO CART
+      -------------------------------------------------- */}
+
+      <Animated.View
+        style={{
+          transform: [
+            {
+              scale: cartScale,
+            },
+          ],
+        }}
+      >
+        <Pressable
+          onPress={handleAddToCart}
+          disabled={adding}
+          style={[
+            styles.cartButton,
+            added && styles.cartButtonAdded,
+          ]}
+        >
+          <Ionicons
+            name={
+              added
+                ? "checkmark-circle-outline"
+                : "bag-add-outline"
+            }
+            size={18}
+            color={colors.white}
+          />
+
+          <Text style={styles.cartButtonText}>
+            {adding
+              ? "Adding..."
+              : added
+              ? "Added"
+              : "Add to cart"}
+          </Text>
+        </Pressable>
+      </Animated.View>
         </Animated.View>
     )
 };
