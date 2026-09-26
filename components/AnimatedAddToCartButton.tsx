@@ -63,4 +63,10 @@ export default function AnimatedAddToCartButton({
             }, 1200);
         }, 350)
       }
+
+      const buttonText = adding
+        ? "Adding"
+        : added
+            ? "Added"
+            : "Add to cart"
 }
