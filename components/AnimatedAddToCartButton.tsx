@@ -61,6 +61,6 @@ export default function AnimatedAddToCartButton({
             setTimeout(() => {
                 setAdded(false);
             }, 1200);
-        }, 300)
+        }, 350)
       }
 }
