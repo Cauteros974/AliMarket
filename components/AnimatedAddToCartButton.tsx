@@ -1,7 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../theme/colors";
 import { useShopStore } from "../store/useShopStore";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Animated, Pressable, StyleSheet, Text } from "react-native";
 
 type Props = {
@@ -12,6 +12,8 @@ export default function AnimatedAddToCartButton({
     productId,
 }: Props) {
     const addToCart = useShopStore((state) => state.addToCart);
+
+    const scale = useRef(new Animated.Value(1)).current;
 
       function animateButton() {
         Animated.sequence([
