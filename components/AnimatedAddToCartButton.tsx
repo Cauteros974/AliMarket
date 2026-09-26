@@ -97,7 +97,7 @@ export default function AnimatedAddToCartButton({
                     color={colors.white}
                 />
 
-                <Text>
+                <Text style={styles.text}>
                     {buttonText}
                 </Text>
             </Pressable>
