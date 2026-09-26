@@ -115,6 +115,8 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         marginBottom: 10,
         borderRadius: 14,
-        backgroundColor: colors.background
+        backgroundColor: colors.primary,
+        flexDirection: "row",
+        alignItems: "center"
     }
 })
