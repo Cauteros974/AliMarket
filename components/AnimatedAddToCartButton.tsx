@@ -68,5 +68,9 @@ export default function AnimatedAddToCartButton({
         ? "Adding"
         : added
             ? "Added"
-            : "Add to cart"
+            : "Add to cart";
+            
+      const iconName = added
+        ? "checkmark-circle-outline"
+        : "bag-add-outline";
 }
