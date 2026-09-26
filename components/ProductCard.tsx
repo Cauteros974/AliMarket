@@ -111,41 +111,50 @@ export default function ProductCard({
     }
 
     return(
-        <Pressable onPress={onPress} style={styles.card}>
-            <View style={styles.imageWrap}>
-                <Image source={product.image} style={styles.image} />
+        <Animated.View
+            style={[
+                styles.card,
+                {
+                    opacity: cardOpacity
+                }
+            ]}
+        >
+            <Pressable onPress={onPress} style={styles.card}>
+                <View style={styles.imageWrap}>
+                    <Image source={product.image} style={styles.image} />
 
-                {product.discountLabel ? (
-                    <View style={styles.discountBadge}>
-                        <Text style={styles.discountText}>{product.discountLabel}</Text>
-                    </View>
-                ): null}
+                    {product.discountLabel ? (
+                        <View style={styles.discountBadge}>
+                            <Text style={styles.discountText}>{product.discountLabel}</Text>
+                        </View>
+                    ): null}
 
-                <Pressable onPress={onToggleFavorite} style={styles.favoriteButton}>
-                    <Ionicons
-                        name={isFavorite ? "heart" : "heart-outline"}
-                        size={18}
-                        color={isFavorite ? colors.danger : colors.text}
-                    />
-                </Pressable>
-            </View>
+                    <Pressable onPress={onToggleFavorite} style={styles.favoriteButton}>
+                        <Ionicons
+                            name={isFavorite ? "heart" : "heart-outline"}
+                            size={18}
+                            color={isFavorite ? colors.danger : colors.text}
+                        />
+                    </Pressable>
+                </View>
 
-            <Text numberOfLines={2} style={styles.title}>
-                {product.title}
-            </Text>
+                <Text numberOfLines={2} style={styles.title}>
+                    {product.title}
+                </Text>
 
-            <View style={styles.metaRow}>
-                <Ionicons name="star" size={14} color={colors.warning} />
-                <Text style={styles.metaText}>{product.rating}</Text>
-                <Text style={styles.soldText}>{product.sold.toLocaleString("en-US")} sold</Text>
-            </View>
+                <View style={styles.metaRow}>
+                    <Ionicons name="star" size={14} color={colors.warning} />
+                    <Text style={styles.metaText}>{product.rating}</Text>
+                    <Text style={styles.soldText}>{product.sold.toLocaleString("en-US")} sold</Text>
+                </View>
 
-            <View>
-                <Text style={styles.price}>{formatPrice(product.price)}</Text>
-                {product.oldPrice ? <Text style={styles.oldPrice}>{formatPrice(product.oldPrice)}</Text> : null}
-            </View>
+                <View>
+                    <Text style={styles.price}>{formatPrice(product.price)}</Text>
+                    {product.oldPrice ? <Text style={styles.oldPrice}>{formatPrice(product.oldPrice)}</Text> : null}
+                </View>
 
-        </Pressable>
+            </Pressable>
+        </Animated.View>
     )
 };
 
