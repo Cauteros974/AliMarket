@@ -96,6 +96,10 @@ export default function AnimatedAddToCartButton({
                     size={18}
                     color={colors.white}
                 />
+
+                <Text>
+                    {buttonText}
+                </Text>
             </Pressable>
         </Animated.View>
       )
