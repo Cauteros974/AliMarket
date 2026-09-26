@@ -59,6 +59,7 @@ export default function AnimatedAddToCartButton({
 
         addToCart(productId);
 
+        // Show the Adding state...
         setTimeout(() => {
             setAdding(false);
             setAdded(true);
