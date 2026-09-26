@@ -104,3 +104,15 @@ export default function AnimatedAddToCartButton({
         </Animated.View>
       )
 }
+
+const styles = StyleSheet.create({
+    wrapper: {
+        width: "100%"
+    },
+    
+    button: {
+        minHeight: 32,
+        marginHorizontal: 10,
+        borderRadius: 10
+    }
+})
