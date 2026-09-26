@@ -72,6 +72,17 @@ export default function ProductCard({
         if(adding) {
             return;
         }
+
+        setAdding(true);
+
+        Animated.sequence([
+            Animated.spring(cartScale, {
+                toValue: 0.92,
+                tension: 180,
+                friction: 6,
+                useNativeDriver: true,
+            }),
+        ])
     }
 
     return(
