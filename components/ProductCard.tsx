@@ -38,9 +38,9 @@ export default function ProductCard({
                 tension: 70,
                 friction: 8,
                 useNativeDriver: true,
-            })
-        ])
-    })
+            }),
+        ]).start();
+    }, []);
     
     return(
         <Pressable onPress={onPress} style={styles.card}>
