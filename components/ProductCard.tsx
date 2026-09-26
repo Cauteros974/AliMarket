@@ -103,6 +103,10 @@ export default function ProductCard({
         setTimeout(() => {
             setAdding(false);
             setAdded(true);
+
+            setTimeout(() => {
+                setAdded(false);
+            })
         })
     }
 
