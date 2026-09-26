@@ -73,4 +73,16 @@ export default function AnimatedAddToCartButton({
       const iconName = added
         ? "checkmark-circle-outline"
         : "bag-add-outline";
+
+      return(
+        <Animated.View>
+            <Pressable>
+                <Ionicons 
+                    name={iconName}
+                    size={18}
+                    color={colors.white}
+                />
+            </Pressable>
+        </Animated.View>
+      )
 }
