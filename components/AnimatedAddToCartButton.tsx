@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
         minHeight: 32,
         marginHorizontal: 10,
         marginBottom: 10,
-        borderRadius: 14
+        borderRadius: 14,
+        backgroundColor: colors.background
     }
 })
