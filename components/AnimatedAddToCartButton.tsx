@@ -75,7 +75,14 @@ export default function AnimatedAddToCartButton({
         : "bag-add-outline";
 
       return(
-        <Animated.View>
+        <Animated.View
+            style={[
+                styles.wrapper,
+                {
+                    transform: {{scale}},
+                }
+            ]}
+        >
             <Pressable>
                 <Ionicons 
                     name={iconName}
