@@ -68,6 +68,12 @@ export default function ProductCard({
     const [adding, setAdding] = useState(false);
     const [added, setAdded] = useState(false);
 
+    function handleAddToCart() {
+        if(adding) {
+            return;
+        }
+    }
+
     return(
         <Pressable onPress={onPress} style={styles.card}>
             <View style={styles.imageWrap}>
