@@ -41,6 +41,19 @@ export default function ProductCard({
             }),
         ]).start();
     }, []);
+
+    const favoriteScale = useRef(new Animated.Value(1)).current;
+
+    function handleFavorite() {
+        Animated.sequence([
+            Animated.spring(favoriteScale, {
+                toValue: 1,
+                tension: 100,
+                friction: 5,
+                useNativeDriver: true,
+            })
+        ])
+    }
     
     return(
         <Pressable onPress={onPress} style={styles.card}>
