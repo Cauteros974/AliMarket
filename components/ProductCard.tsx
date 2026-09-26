@@ -97,6 +97,13 @@ export default function ProductCard({
                 useNativeDriver: true,
             }),
         ]).start();
+
+        addToCart(product.id);
+
+        setTimeout(() => {
+            setAdding(false);
+            setAdded(true);
+        })
     }
 
     return(
