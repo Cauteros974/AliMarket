@@ -124,5 +124,10 @@ const styles = StyleSheet.create({
 
     buttonAdded: {
         backgroundColor: "#22C55E"
+    },
+
+    text: {
+        color: colors.white,
+        fontSize: 20,
     }
 })
