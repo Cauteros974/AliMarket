@@ -106,8 +106,8 @@ export default function ProductCard({
 
             setTimeout(() => {
                 setAdded(false);
-            })
-        })
+            }, 1200);
+        }, 350);
     }
 
     return(
