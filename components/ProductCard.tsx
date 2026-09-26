@@ -66,6 +66,7 @@ export default function ProductCard({
     
     const cartScale = useRef(new Animated.Value(1)).current;
     const [adding, setAdding] = useState(false);
+    const [added, setAdded] = useState(false);
 
     return(
         <Pressable onPress={onPress} style={styles.card}>
