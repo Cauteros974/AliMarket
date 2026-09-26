@@ -25,6 +25,13 @@ export default function AnimatedAddToCartButton({
             tension: 200,
             friction: 6,
             useNativeDriver: true,
+        }),
+
+        Animated.spring(scale, {
+            toValue: 1,
+            tension: 100,
+            friction: 5,
+            useNativeDriver: true,
         })
         ])
       }
