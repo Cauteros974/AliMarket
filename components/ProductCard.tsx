@@ -29,6 +29,8 @@ export default function ProductCard({
         Animated.parallel([
             Animated.timing(cardOpacity, {
                 toValue: 1,
+                durating: 400,
+                useNativeDriver: true,
             })
         ])
     })
