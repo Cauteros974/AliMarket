@@ -259,86 +259,156 @@ export default function ProductCard({
 
 const styles = StyleSheet.create({
     card: {
-        flex: 1,
-        backgroundColor: colors.surface,
-        borderRadius: 18,
-        padding: 10,
-        borderWidth: 1,
-        borderColor: colors.border,
-    },
-    imageWrap: {
-        height: 110,
-        borderRadius: 14,
-        backgroundColor: colors.surfaceSoft,
-        overflow: "hidden"
-    },
-    image: {
-        width: "100%",
-        height: "100%",
-    },
-    discountBadge: {
-        position: "absolute",
-        left: 8,
-        top: 8,
-        backgroundColor: colors.primary,
-        borderRadius: 999,
-        paddingHorizontal: 8,
-        paddingVertical: 4,
-    },
-    discountText: {
-        color: colors.white,
-        fontSize: 11,
-        fontWeight: "900"
-    },
-    favoriteButton: {
-        position: "absolute",
-        right: 8,
-        top: 8,
-        width: 32,
-        height: 32,
-        borderRadius: 16,
-        backgroundColor: "rgba(255,255,255,0.92)",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    title: {
-        color: colors.white,
-        fontSize: 11,
-        fontWeight: "400",
-        marginTop: 10,
-        minHeight: 38,
-    },
-    metaRow: {
-        flexDirection: "row",
-        alignItems: "center",
-        gap: 4,
-        marginTop: 8,
-    },
-    metaText: {
-         color: colors.text,
-        fontSize: 12,
-        fontWeight: "800",
-    },
-    soldText: {
-        color: colors.muted,
-        fontSize: 12,
-        marginLeft: 4,
-    },
-    priceRow: {
-        flexDirection: "row",
-        alignItems: "baseline",
-        gap: 7,
-        marginTop: 8
-    },
-    price: {
-        color: colors.primary,
-        fontSize: 17,
-        fontWeight: "900"
-    },
-    oldPrice: {
-        color: colors.muted,
-        fontSize: 12,
-        textDecorationLine: "line-through"
-    }
+    flex: 1,
+    minWidth: 0,
+    backgroundColor: colors.surface,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: colors.border,
+    overflow: "hidden",
+  },
 
+  // --------------------------------------------------
+  // IMAGE
+  // --------------------------------------------------
+
+  imageButton: {
+    position: "relative",
+    width: "100%",
+    height: 170,
+    backgroundColor: colors.surfaceSoft,
+  },
+
+  image: {
+    width: "100%",
+    height: "100%",
+  },
+
+  favoriteButton: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+
+    width: 38,
+    height: 38,
+
+    borderRadius: 19,
+
+    backgroundColor: "rgba(255,255,255,0.94)",
+
+    alignItems: "center",
+    justifyContent: "center",
+
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+
+    elevation: 3,
+  },
+
+  discountBadge: {
+    position: "absolute",
+    left: 10,
+    bottom: 10,
+
+    paddingHorizontal: 8,
+    paddingVertical: 5,
+
+    borderRadius: 999,
+
+    backgroundColor: colors.primary,
+  },
+
+  discountText: {
+    color: colors.white,
+    fontSize: 11,
+    fontWeight: "900",
+  },
+
+  // --------------------------------------------------
+  // INFO
+  // --------------------------------------------------
+
+  info: {
+    padding: 12,
+  },
+
+  title: {
+    color: colors.text,
+    fontSize: 15,
+    lineHeight: 19,
+    fontWeight: "800",
+    minHeight: 38,
+  },
+
+  ratingRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
+    marginTop: 8,
+  },
+
+  rating: {
+    color: colors.text,
+    fontSize: 12,
+    fontWeight: "800",
+  },
+
+  reviews: {
+    color: colors.muted,
+    fontSize: 11,
+  },
+
+  priceRow: {
+    flexDirection: "row",
+    alignItems: "baseline",
+    gap: 7,
+    marginTop: 7,
+  },
+
+  price: {
+    color: colors.primary,
+    fontSize: 20,
+    fontWeight: "900",
+  },
+
+  oldPrice: {
+    color: colors.muted,
+    fontSize: 12,
+    textDecorationLine: "line-through",
+  },
+
+  // --------------------------------------------------
+  // CART
+  // --------------------------------------------------
+
+  cartButton: {
+    marginHorizontal: 10,
+    marginBottom: 10,
+
+    minHeight: 42,
+
+    borderRadius: 14,
+
+    backgroundColor: colors.primary,
+
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+
+    gap: 7,
+  },
+
+  cartButtonAdded: {
+    backgroundColor: "#22C55E",
+  },
+
+  cartButtonText: {
+    color: colors.white,
+    fontSize: 13,
+    fontWeight: "900",
+  },
 });
