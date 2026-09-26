@@ -19,20 +19,27 @@ export default function AnimatedAddToCartButton({
     const scale = useRef(new Animated.Value(1)).current;
 
       function animateButton() {
-        Animated.sequence([
-            Animated.spring(scale, {
-            toValue: 0.92,
-            tension: 180,
-            friction: 6,
-            useNativeDriver: true,
-        }),
+            Animated.sequence([
+                Animated.spring(scale, {
+                toValue: 0.92,
+                tension: 180,
+                friction: 6,
+                useNativeDriver: true,
+            }),
 
-        Animated.spring(scale, {
-            toValue: 1.06,
-            tension: 180,
-            friction: 5,
-            useNativeDriver: true,
-        })
+            Animated.spring(scale, {
+                toValue: 1.06,
+                tension: 180,
+                friction: 5,
+                useNativeDriver: true,
+            }),
+
+            Animated.spring(scale, {
+                toValue: 1,
+                tension: 160,
+                friction: 6,
+                useNativeDriver: true,
+            }),
         ])
       }
 }
