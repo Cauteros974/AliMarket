@@ -37,6 +37,7 @@ export default function AnimatedAddToCartButton({
                 useNativeDriver: true,
             }),
 
+            // A small increase
             Animated.spring(scale, {
                 toValue: 1,
                 tension: 160,
@@ -47,6 +48,7 @@ export default function AnimatedAddToCartButton({
       }
 
       function handlePress() {
+        // Protecting against repeated pressing
         if(adding) {
             return;
         }
