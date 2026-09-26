@@ -24,6 +24,14 @@ export default function ProductCard({
 
     const cardOpacity = useRef(new Animated.Value(0)).current;
     const cardTranslateY = useRef(new Animated.Value(18)).current;
+
+    useEffect(() => {
+        Animated.parallel([
+            Animated.timing(cardOpacity, {
+                toValue: 1,
+            })
+        ])
+    })
     
     return(
         <Pressable onPress={onPress} style={styles.card}>
