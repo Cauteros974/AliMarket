@@ -88,8 +88,15 @@ export default function ProductCard({
                 tension: 180,
                 friction: 5,
                 useNativeDriver: true,
-            })
-        ])
+            }),
+
+            Animated.spring(cartScale, {
+                toValue: 1,
+                tension: 160,
+                friction: 6,
+                useNativeDriver: true,
+            }),
+        ]).start();
     }
 
     return(
