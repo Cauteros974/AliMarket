@@ -36,6 +36,8 @@ export default function ProductCard({
             Animated.spring(cardTranslateY, {
                 toValue: 0,
                 tension: 70,
+                friction: 8,
+                useNativeDriver: true,
             })
         ])
     })
