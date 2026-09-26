@@ -115,8 +115,13 @@ export default function ProductCard({
             style={[
                 styles.card,
                 {
-                    opacity: cardOpacity
-                }
+                    opacity: cardOpacity,
+                    transform: [
+                        {
+                            translateY: cardTranslateY,
+                        },
+                    ],
+                },
             ]}
         >
             <Pressable onPress={onPress} style={styles.card}>
