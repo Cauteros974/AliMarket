@@ -79,7 +79,7 @@ export default function AnimatedAddToCartButton({
             style={[
                 styles.wrapper,
                 {
-                    transform: {{scale}},
+                    transform: [{scale}],
                 }
             ]}
         >
