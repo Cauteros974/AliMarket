@@ -80,10 +80,17 @@ export default function AnimatedAddToCartButton({
                 styles.wrapper,
                 {
                     transform: [{scale}],
-                }
+                },
             ]}
         >
-            <Pressable>
+            <Pressable
+                onPress={handlePress}
+                disabled={adding}
+                style={[
+                    styles.button,
+                    added && styles.buttonAdded,
+                ]}
+            >
                 <Ionicons 
                     name={iconName}
                     size={18}
