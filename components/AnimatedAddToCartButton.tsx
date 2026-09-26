@@ -14,11 +14,13 @@ export default function AnimatedAddToCartButton({
     const addToCart = useShopStore((state) => state.addToCart);
 
       function animateButton() {
-        Animated.spring(scale, {
+        Animated.sequence([
+            Animated.spring(scale, {
             toValue: 1,
             tension: 200,
             friction: 6,
             useNativeDriver: true,
         })
+        ])
       }
 }
