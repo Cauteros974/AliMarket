@@ -1,5 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { useEffect, useRef,useState } from "react";
+import { Animated, Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { Product } from "../types/product";
 import { formatPrice } from "../utils/format";
@@ -17,6 +19,9 @@ export default function ProductCard({
     onPress,
     onToggleFavorite,
 }: ProductCardProps) {
+
+    const addToCart = useShopStore((state) => state.addToCart);
+    
     return(
         <Pressable onPress={onPress} style={styles.card}>
             <View style={styles.imageWrap}>
