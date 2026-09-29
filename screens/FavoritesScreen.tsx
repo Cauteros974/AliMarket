@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         color: colors.text,
         fontSize: 28,
         fontWeight: "900",
-        marginBottom: 16
+        marginBottom: 16,
     },
     grid: {
         paddingBottom: 28,
