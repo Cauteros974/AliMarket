@@ -380,6 +380,23 @@ export const products: Product[] = [
         delivery: "Free delivery in 7-12 days",
         colors: ["#060507", "#ffffff",],
     },
+
+    {
+        id: "p19",
+        title: "Wooden Building Blocks",
+        description: "Building block sets are made of high-quality wood and durable acrylic materials, ensuring safety and longevity. With smooth, burr-free edges, they provide a worry-free, screen-free play experience for your little ones.",
+        categoryId: "toys",
+        sellerId: "seller-1",
+        image: require("../assets/images/Children's educational set of wooden building blocks (cubes).jpg"),
+        price: 33.0,
+        rating: 4.5,
+        reviews: 90,
+        sold: 200,
+        questions: [], 
+        discountLabel: "Best",
+        delivery: "Free delivery in 7-12 days",
+        colors: ["#060507", "#ffffff",],
+    },
 ];
 
 export const sellers: Seller[] = [
