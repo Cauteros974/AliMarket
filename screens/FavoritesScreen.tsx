@@ -29,8 +29,8 @@ export default function FavoritesScreen({navigation}: Props) {
                     showsVerticalScrollIndicator={false}
                     columnWrapperStyle={styles.grid}
                     ListEmptyComponent={
-                        <View>
-                            <Ionicons name="heart-outline" size={48} color={colors.primary}/>
+                        <View style={styles.emptyState}>
+                            <Ionicons name="heart-outline" size={46} color={colors.primary}/>
                             <Text style={styles.emptyTitle}>No saved products</Text>
                             <Text style={styles.emptyText}>Tap the heart on a product to save it here.</Text>
                         </View>
@@ -68,15 +68,21 @@ const styles = StyleSheet.create({
     grid: {
         paddingBottom: 28,
     },
-    emptyTitle: {
-        color: colors.text,
-        fontSize: 20,
-        fontWeight: "900",
+
+    emptyState: { 
+        minHeight: 360, 
+        alignItems: "center", 
+        justifyContent: "center",
+    },
+
+    emptyTitle: { 
+        color: colors.text, 
+        fontSize: 20, 
+        fontWeight: "900", 
         marginTop: 12,
     },
-    emptyText: {
-        color: colors.muted,
-        marginTop: 8,
-        textAlign: "center"
-    }
+    emptyText: { 
+        color: colors.muted, 
+        marginTop: 6,
+    },
 })
