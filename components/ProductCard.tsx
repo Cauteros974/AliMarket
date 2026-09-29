@@ -21,7 +21,7 @@ export default function ProductCard({
     onToggleFavorite,
 }: ProductCardProps) {
 
-    // const addToCart = useShopStore((state) => state.addToCart);
+    const addToCart = useShopStore((state) => state.addToCart);
 
     const cardOpacity = useRef(new Animated.Value(0)).current;
     const cardTranslateY = useRef(new Animated.Value(18)).current;
@@ -65,51 +65,51 @@ export default function ProductCard({
         onToggleFavorite();
     }
     
-    // const cartScale = useRef(new Animated.Value(1)).current;
-    // const [adding, setAdding] = useState(false);
-    // const [added, setAdded] = useState(false);
+    const cartScale = useRef(new Animated.Value(1)).current;
+    const [adding, setAdding] = useState(false);
+    const [added, setAdded] = useState(false);
 
-    // function handleAddToCart() {
-    //     if(adding) {
-    //         return;
-    //     }
+    function handleAddToCart() {
+        if(adding) {
+            return;
+        }
 
-    //     setAdding(true);
+        setAdding(true);
 
-    //     Animated.sequence([
-    //         Animated.spring(cartScale, {
-    //             toValue: 0.92,
-    //             tension: 180,
-    //             friction: 6,
-    //             useNativeDriver: true,
-    //         }),
+        Animated.sequence([
+            Animated.spring(cartScale, {
+                toValue: 0.92,
+                tension: 180,
+                friction: 6,
+                useNativeDriver: true,
+            }),
 
-    //         Animated.spring(cartScale, {
-    //             toValue: 1.06,
-    //             tension: 180,
-    //             friction: 5,
-    //             useNativeDriver: true,
-    //         }),
+            Animated.spring(cartScale, {
+                toValue: 1.06,
+                tension: 180,
+                friction: 5,
+                useNativeDriver: true,
+            }),
 
-    //         Animated.spring(cartScale, {
-    //             toValue: 1,
-    //             tension: 160,
-    //             friction: 6,
-    //             useNativeDriver: true,
-    //         }),
-    //     ]).start();
+            Animated.spring(cartScale, {
+                toValue: 1,
+                tension: 160,
+                friction: 6,
+                useNativeDriver: true,
+            }),
+        ]).start();
 
-    //     addToCart(product.id);
+        addToCart(product.id);
 
-    //     setTimeout(() => {
-    //         setAdding(false);
-    //         setAdded(true);
+        setTimeout(() => {
+            setAdding(false);
+            setAdded(true);
 
-    //         setTimeout(() => {
-    //             setAdded(false);
-    //         }, 1200);
-    //     }, 350);
-    // }
+            setTimeout(() => {
+                setAdded(false);
+            }, 1200);
+        }, 350);
+    }
 
     return(
         <Animated.View
@@ -218,7 +218,7 @@ export default function ProductCard({
           ADD TO CART
       -------------------------------------------------- */}
 
-      {/* <Animated.View
+      <Animated.View
         style={{
           transform: [
             {
@@ -253,7 +253,7 @@ export default function ProductCard({
               : "Add to cart"}
           </Text>
         </Pressable>
-      </Animated.View> */}
+      </Animated.View>
         </Animated.View>
     )
 };
