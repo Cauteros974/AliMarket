@@ -218,7 +218,7 @@ export default function ProductCard({
           ADD TO CART
       -------------------------------------------------- */}
 
-      <Animated.View
+      {/* <Animated.View
         style={{
           transform: [
             {
@@ -253,7 +253,7 @@ export default function ProductCard({
               : "Add to cart"}
           </Text>
         </Pressable>
-      </Animated.View>
+      </Animated.View> */}
         </Animated.View>
     )
 };
