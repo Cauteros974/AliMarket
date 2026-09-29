@@ -381,6 +381,10 @@ export const products: Product[] = [
         colors: ["#060507", "#ffffff",],
     },
 
+    // --------------------------------------------------
+    // TOYS
+    // --------------------------------------------------
+
     {
         id: "p19",
         title: "Wooden Building Blocks",
@@ -394,6 +398,41 @@ export const products: Product[] = [
         sold: 200,
         questions: [], 
         discountLabel: "Best",
+        delivery: "Free delivery in 7-12 days",
+        colors: ["#060507", "#ffffff",],
+    },
+
+    {
+        id: "p20",
+        title: "Lamborghini Remote Control Car",
+        description: "The car is a real imitation 1/24 Lamborghini SVJ Roadster rc car, with focus on every detail for making the replica of it. There is an official anti-counterfeiting label on the package of each remote control car. It is made of durable, lightweight materials and odorless spray paint, injection-molded body, strong and sturdy components to bring you an excellent racing experience.",
+        categoryId: "toys",
+        sellerId: "seller-2",
+        image: require("../assets/images/remote-control-car.avif"),
+        price: 45.0,
+        oldPrice: 65.0,
+        rating: 4.5,
+        reviews: 90,
+        sold: 200,
+        questions: [], 
+        discountLabel: "Hot",
+        delivery: "Free delivery in 7-12 days",
+        colors: ["#060507", "#ffffff",],
+    },
+
+    {
+        id: "p21",
+        title: "Lamborghini Remote Control Car",
+        description: "The car is a real imitation 1/24 Lamborghini SVJ Roadster rc car, with focus on every detail for making the replica of it. There is an official anti-counterfeiting label on the package of each remote control car. It is made of durable, lightweight materials and odorless spray paint, injection-molded body, strong and sturdy components to bring you an excellent racing experience.",
+        categoryId: "toys",
+        sellerId: "seller-2",
+        image: require("../assets/images/toy2.jpeg"),
+        price: 9.99,
+        rating: 4.5,
+        reviews: 30,
+        sold: 120,
+        questions: [], 
+        discountLabel: "Hot",
         delivery: "Free delivery in 7-12 days",
         colors: ["#060507", "#ffffff",],
     },
