@@ -5,6 +5,7 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { Product } from "../types/product";
 import { formatPrice } from "../utils/format";
+import AnimatedAddToCartButton from "./AnimatedAddToCartButton";
 
 type ProductCardProps = {
     product: Product;
