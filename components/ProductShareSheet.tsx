@@ -1,0 +1,17 @@
+import QRCode from "react-native-qrcode-svg";
+import * as Clipboard from "expo-clipboard";
+import { Pressable,Text, View, StyleSheet} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { colors } from "../theme/colors";
+import { Product } from "../types/product";
+
+export default function ProductShareSheet() {
+    return(
+            <View>
+                <Text>Share product</Text>
+                <Text>
+                    Scan or share this product
+                </Text>
+            </View>
+    )
+}
