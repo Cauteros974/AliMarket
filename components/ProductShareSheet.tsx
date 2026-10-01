@@ -58,7 +58,8 @@ export default function ProductShareSheet({
                             />
                         </View>
 
-                        <Text style={styles.productName}>
+                        {/* Product information */}
+                        <Text style={styles.productName} numberOfLines={2}>
                             {product.title}
                         </Text>
 
