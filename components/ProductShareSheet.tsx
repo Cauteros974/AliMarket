@@ -16,6 +16,7 @@ export default function ProductShareSheet({
     product,
     onClose
 } : Props) {
+
     return(
         <Modal>
             <View>
@@ -27,10 +28,14 @@ export default function ProductShareSheet({
 
             <Pressable
                 onPress={onClose}
-                style={styles.closeButtn}
+                style={styles.closeButton}
                 hitSlop={8}
             >
-
+                <Ionicons 
+                    name="close"
+                    size={22}
+                    color={colors.text}
+                />
             </Pressable>
     )   </Modal>
 }
