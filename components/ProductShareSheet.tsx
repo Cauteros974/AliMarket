@@ -11,7 +11,11 @@ type Props = {
     onClose: () => void;
 }
 
-export default function ProductShareSheet() {
+export default function ProductShareSheet({
+    visible,
+    product,
+    onClose
+} : Props) {
     return(
         <Modal>
             <View>
