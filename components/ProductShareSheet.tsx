@@ -53,7 +53,7 @@ export default function ProductShareSheet({
 }
 
 const styles = StyleSheet.create({
-    overplay: {
+    overlay: {
         flex: 1,
         backgroundColor: "rgba(0, 0, 0, 0.45)",
         justifyContent: "flex-end"
@@ -65,5 +65,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingTop: 20,
         paddingBottom: 20,
+    },
+    header: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-around"
     }
 })
