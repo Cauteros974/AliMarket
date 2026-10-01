@@ -1,6 +1,6 @@
 import QRCode from "react-native-qrcode-svg";
 import * as Clipboard from "expo-clipboard";
-import { Pressable,Text, View, StyleSheet, Modal} from "react-native";
+import { Pressable,Text, View, StyleSheet, Modal, Share} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../theme/colors";
 import { Product } from "../types/product";
@@ -22,9 +22,12 @@ export default function ProductShareSheet({
 
     async function handleShare() {
         try{
-            
+            await Share.share({
+                title: product.title,
+                message: `Check out this product in AliMarket:\n${product.title}\n${productLink}`,
+            })
         } catch(error) {
-            console.log("Share error:", error)
+            console.log("Share error:", error);
         }
     }
 
