@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     overplay: {
         flex: 1,
         backgroundColor: "rgba(0, 0, 0, 0.45)",
-        justifyContent: "center"
+        justifyContent: "flex-end"
     },
     container: {
         backgroundColor: colors.white,
