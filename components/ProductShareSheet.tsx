@@ -6,6 +6,8 @@ import { colors } from "../theme/colors";
 import { Product } from "../types/product";
 
 type Props = {
+    visible: boolean;
+    product: Product;
     onClose: () => void;
 }
 
