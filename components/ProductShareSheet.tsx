@@ -81,5 +81,10 @@ const styles = StyleSheet.create({
         fontSize: 15,
         marginTop: 4,
         color: colors.background
+    },
+    closeButton: {
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#F3F4F6",
     }
 })
