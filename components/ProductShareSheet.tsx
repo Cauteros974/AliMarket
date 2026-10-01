@@ -69,6 +69,15 @@ export default function ProductShareSheet({
                         <Text style={styles.link}>
                             {productLink}
                         </Text>
+
+                         <View>
+                            <Pressable>
+                                <Ionicons 
+                                    name="share-outline"
+                                    size={20}
+                                />
+                            </Pressable>
+                         </View>
                 </View>
             </View>
         </Modal>    
