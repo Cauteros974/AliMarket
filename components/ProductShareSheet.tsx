@@ -55,11 +55,12 @@ export default function ProductShareSheet({
 const styles = StyleSheet.create({
     overplay: {
         flex: 1,
-        backgroundColor: colors.background,
+        backgroundColor: "rgba(0, 0, 0, 0.45)",
         justifyContent: "center"
     },
     container: {
         backgroundColor: colors.white,
         borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
     }
 })
