@@ -5,6 +5,10 @@ import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../theme/colors";
 import { Product } from "../types/product";
 
+type Props = {
+    onClose: () => void;
+}
+
 export default function ProductShareSheet() {
     return(
         <Modal>
