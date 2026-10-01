@@ -20,6 +20,14 @@ export default function ProductShareSheet({
 
     const productLink = `alimarket://product/${product.id}`;
 
+    async function handleShare() {
+        try{
+            
+        } catch(error) {
+            console.log("Share error:", error)
+        }
+    }
+
     return(
         <Modal
             visible={visible}
@@ -66,15 +74,19 @@ export default function ProductShareSheet({
                             {product.title}
                         </Text>
 
-                        <Text style={styles.link}>
+                        <Text style={styles.link} numberOfLines={1}>
                             {productLink}
                         </Text>
 
                          <View>
-                            <Pressable>
+                            <Pressable
+                                style={styles.actionButton}
+                                onPress={handleShare}
+                            >
                                 <Ionicons 
                                     name="share-outline"
-                                    size={20}
+                                    size={21}
+                                    color={colors.white}
                                 />
                             </Pressable>
                          </View>
