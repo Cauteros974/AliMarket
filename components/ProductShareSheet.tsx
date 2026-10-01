@@ -20,6 +20,9 @@ export default function ProductShareSheet({
 
     const productLink = `alimarket://product/${product.id}`;
 
+    /**
+    * Default Share system.
+    */
     async function handleShare() {
         try{
             await Share.share({
