@@ -16,6 +16,9 @@ export default function ProductShareSheet({
     product,
     onClose
 } : Props) {
+    
+
+    const productLink = `alimarket://product/${product.id}`;
 
     return(
         <Modal
@@ -64,7 +67,7 @@ export default function ProductShareSheet({
                         </Text>
 
                         <Text style={styles.link}>
-                            
+                            {productLink}
                         </Text>
                 </View>
             </View>
