@@ -57,6 +57,14 @@ export default function ProductShareSheet({
                                 color="black"
                             />
                         </View>
+
+                        <Text style={styles.productName}>
+                            {product.title}
+                        </Text>
+
+                        <Text style={styles.link}>
+                            
+                        </Text>
                 </View>
             </View>
         </Modal>    
