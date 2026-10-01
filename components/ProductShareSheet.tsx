@@ -20,6 +20,8 @@ export default function ProductShareSheet({
     return(
         <Modal
             visible={visible}
+            transparent
+            animationType="slide"
             onRequestClose={onClose}
         >
             <View style={styles.header}>
