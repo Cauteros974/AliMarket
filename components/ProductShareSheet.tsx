@@ -18,24 +18,29 @@ export default function ProductShareSheet({
 } : Props) {
 
     return(
-        <Modal>
-            <View>
-                <Text style={styles.title}>Share product</Text>
-                <Text style={styles.subtitle}>
-                    Scan or share this product
-                </Text>
-            </View>
+        <Modal
+            visible={visible}
+            onRequestClose={onClose}
+        >
+            <View style={styles.header}>
+                <View>
+                    <Text style={styles.title}>Share product</Text>
+                    <Text style={styles.subtitle}>
+                        Scan or share this product
+                    </Text>
+                </View>
 
-            <Pressable
-                onPress={onClose}
-                style={styles.closeButton}
-                hitSlop={8}
-            >
-                <Ionicons 
-                    name="close"
-                    size={22}
-                    color={colors.text}
-                />
-            </Pressable>
+                <Pressable
+                    onPress={onClose}
+                    style={styles.closeButton}
+                    hitSlop={8}
+                >
+                    <Ionicons 
+                        name="close"
+                        size={22}
+                        color={colors.text}
+                    />
+                </Pressable>
+            </View>
     )   </Modal>
 }
