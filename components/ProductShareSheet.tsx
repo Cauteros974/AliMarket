@@ -24,25 +24,30 @@ export default function ProductShareSheet({
             animationType="slide"
             onRequestClose={onClose}
         >
-            <View style={styles.header}>
-                <View>
-                    <Text style={styles.title}>Share product</Text>
-                    <Text style={styles.subtitle}>
-                        Scan or share this product
-                    </Text>
-                </View>
+            <View style={styles.overlay}>
+                <View style={styles.container}>
+                        <View style={styles.header}>
+                            <View>
+                                <Text style={styles.title}>Share product</Text>
+                                <Text style={styles.subtitle}>
+                                    Scan or share this product
+                                </Text>
+                            </View>
 
-                <Pressable
-                    onPress={onClose}
-                    style={styles.closeButton}
-                    hitSlop={8}
-                >
-                    <Ionicons 
-                        name="close"
-                        size={22}
-                        color={colors.text}
-                    />
-                </Pressable>
+                            <Pressable
+                                onPress={onClose}
+                                style={styles.closeButton}
+                                hitSlop={8}
+                            >
+                                <Ionicons 
+                                    name="close"
+                                    size={22}
+                                    color={colors.text}
+                                />
+                            </Pressable>
+                    </View>
+                </View>
             </View>
+            
     )   </Modal>
 }
