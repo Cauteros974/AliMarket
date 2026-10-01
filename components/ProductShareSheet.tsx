@@ -45,9 +45,13 @@ export default function ProductShareSheet({
                                     color={colors.text}
                                 />
                             </Pressable>
-                    </View>
+                        </View>
                 </View>
             </View>
-            
-    )   </Modal>
+        </Modal>    
+    )   
 }
+
+const styles = StyleSheet.create({
+
+})
