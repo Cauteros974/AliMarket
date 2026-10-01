@@ -26,6 +26,7 @@ export default function ProductShareSheet({
         >
             <View style={styles.overlay}>
                 <View style={styles.container}>
+                        {/* Header */}
                         <View style={styles.header}>
                             <View>
                                 <Text style={styles.title}>Share product</Text>
@@ -45,6 +46,16 @@ export default function ProductShareSheet({
                                     color={colors.text}
                                 />
                             </Pressable>
+                        </View>
+
+                        {/* QR */}
+                        <View>
+                            <QRCode 
+                                value={product.id}
+                                size={28}
+                                backgroundColor="white"
+                                color="black"
+                            />
                         </View>
                 </View>
             </View>
