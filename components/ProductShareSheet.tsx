@@ -8,8 +8,8 @@ import { Product } from "../types/product";
 export default function ProductShareSheet() {
     return(
             <View>
-                <Text>Share product</Text>
-                <Text>
+                <Text style={styles.title}>Share product</Text>
+                <Text style={styles.subtitle}>
                     Scan or share this product
                 </Text>
             </View>
