@@ -64,12 +64,17 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 28,
         paddingHorizontal: 20,
         paddingTop: 20,
-        paddingBottom: 20,
+        paddingBottom: 34,
     },
     header: {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        marginBottom: 22,
+        marginBottom: 20,
+    },
+    title: {
+        color: colors.text,
+        fontSize: 20,
+        fontWeight: "900"
     }
 })
