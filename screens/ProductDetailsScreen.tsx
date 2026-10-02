@@ -17,7 +17,8 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
   const addToCart = useShopStore((state) => state.addToCart);
   const favoriteIds = useShopStore((state) => state.favoriteIds);
   const toggleFavorite = useShopStore((state) => state.toggleFavorite);
-  const addRecentlyViewId = useShopStore((state) => state.addRecentlyViewed)
+  const addRecentlyViewId = useShopStore((state) => state.addRecentlyViewed);
+  const [shareVisible, setShareVisible] = useState(false);
 
   if (!product) {
     return (
@@ -186,6 +187,16 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
             Add to cart
           </Text>
         </Pressable>
+
+        <View>
+          <Pressable>
+            <Ionicons 
+              name="qr-code-outline"
+              size={20}
+              color={colors.primary}
+            />
+          </Pressable>
+        </View>
       </View>
     </SafeAreaView>
   );
