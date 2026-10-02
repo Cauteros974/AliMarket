@@ -202,5 +202,7 @@ const styles = StyleSheet.create({
         flex: 1,
         minHeight: 48,
         borderRadius: 14,
+        backgroundColor: colors.primary,
+        flexDirection: "row",
     }
 })
