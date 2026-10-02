@@ -144,6 +144,8 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         padding: 16,
         borderRadius: 22,
+        backgroundColor: colors.white,
         
+        shadowOpacity: 0.1
     }
 })
