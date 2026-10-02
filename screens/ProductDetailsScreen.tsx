@@ -398,5 +398,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 10,
     marginTop: 14
+  },
+  shareButton: {
+    flex: 1,
+    minHeight: 46,
+    borderRadius: 14,
+    backgroundColor: "#FFF1EA",
+    borderWidth: 1,
   }
 });
