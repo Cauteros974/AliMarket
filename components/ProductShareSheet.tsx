@@ -107,6 +107,7 @@ export default function ProductShareSheet({
                                 <Ionicons 
                                     name="copy-outline"
                                     size={21}
+                                    colors={colors.primary}
                                 />
                             </Pressable>
                          </View>
