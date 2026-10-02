@@ -213,6 +213,10 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
               size={20}
               color={colors.primary}
             />
+
+            <Text style={styles.shareButtonText}>
+              Share
+            </Text>
           </Pressable>
         </View>
       </View>
