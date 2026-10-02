@@ -34,6 +34,14 @@ export default function ProductShareSheet({
         }
     }
 
+    async function handleCopyLink() {
+        try{
+            await Clipboard.setStringAsync(productLink);
+        } catch(error) {
+            console.log("Share error", error);
+        }
+    }
+
     return(
         <Modal
             visible={visible}
