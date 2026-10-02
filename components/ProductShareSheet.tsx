@@ -210,5 +210,10 @@ const styles = StyleSheet.create({
     },
     secondaryButton: {
         backgroundColor: "#FFF1EA",   
-    }
+    },
+    actionText: {
+        fontSize: 14,
+        fontWeight: "800",
+        color: colors.white,
+    },
 })
