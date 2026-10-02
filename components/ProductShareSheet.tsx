@@ -167,5 +167,6 @@ const styles = StyleSheet.create({
         marginTop: 7,
         textAlign: "center",
         fontSize: 12,
+        color: colors.muted,
     }
 })
