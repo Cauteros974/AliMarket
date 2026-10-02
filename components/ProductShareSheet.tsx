@@ -157,7 +157,9 @@ const styles = StyleSheet.create({
         elevation: 4,
     },
     productName: {
-        marginTop: 10,
-        textAlign: "center"
+        marginTop: 18,
+        textAlign: "center",
+        fontSize: 17,
+        fontWeight: "800"
     }
 })
