@@ -223,6 +223,7 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
 
       <ProductShareSheet 
         visible={shareVisible}
+        product={product}
         onClose={() => setShareVisible(false)}
       />
     </SafeAreaView>
