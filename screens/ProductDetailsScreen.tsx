@@ -394,4 +394,8 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "900",
   },
+  shareActions: {
+    flexDirection: "row",
+    gap: 12
+  }
 });
