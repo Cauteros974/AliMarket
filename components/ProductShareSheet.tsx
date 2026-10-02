@@ -160,6 +160,7 @@ const styles = StyleSheet.create({
         marginTop: 18,
         textAlign: "center",
         fontSize: 17,
-        fontWeight: "800"
+        fontWeight: "800",
+        color: colors.text
     }
 })
