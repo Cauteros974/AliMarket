@@ -407,5 +407,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#FFD8C5",
     flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 7,
   }
 });
