@@ -204,5 +204,8 @@ const styles = StyleSheet.create({
         borderRadius: 14,
         backgroundColor: colors.primary,
         flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 8,
     }
 })
