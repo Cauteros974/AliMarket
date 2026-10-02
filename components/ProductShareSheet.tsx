@@ -197,5 +197,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 10,
         marginTop: 20,
+    },
+    actionButton: {
+        flex: 1,
+        minHeight: 10
     }
 })
