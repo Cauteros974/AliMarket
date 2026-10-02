@@ -200,6 +200,7 @@ const styles = StyleSheet.create({
     },
     actionButton: {
         flex: 1,
-        minHeight: 10
+        minHeight: 40,
+        borderRadius: 12
     }
 })
