@@ -405,5 +405,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     backgroundColor: "#FFF1EA",
     borderWidth: 1,
+    borderColor: "#FFD8C5",
+    flexDirection: "row",
   }
 });
