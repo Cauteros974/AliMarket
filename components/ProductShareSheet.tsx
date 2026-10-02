@@ -84,7 +84,7 @@ export default function ProductShareSheet({
                             {productLink}
                         </Text>
 
-                         <View>
+                         <View style={styles.actions}>
                             <Pressable
                                 style={styles.actionButton}
                                 onPress={handleShare}
@@ -94,6 +94,10 @@ export default function ProductShareSheet({
                                     size={21}
                                     color={colors.white}
                                 />
+
+                                <Text style={styles.actionText}>
+                                    Share
+                                </Text>
                             </Pressable>
                          </View>
                 </View>
