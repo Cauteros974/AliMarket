@@ -99,6 +99,16 @@ export default function ProductShareSheet({
                                     Share
                                 </Text>
                             </Pressable>
+
+                            <Pressable
+                                style={[styles.actionButton, styles.secondaryButton]}
+                                onPress={handleCopyLink}
+                            >
+                                <Ionicons 
+                                    name="copy-outline"
+                                    size={21}
+                                />
+                            </Pressable>
                          </View>
                 </View>
             </View>
