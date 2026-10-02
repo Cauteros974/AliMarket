@@ -203,6 +203,14 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
               QR Code
             </Text>
           </Pressable>
+
+          <Pressable>
+            <Ionicons
+              name="share-outline"
+              size={20}
+              color={colors.primary}
+            />
+          </Pressable>
         </View>
       </View>
     </SafeAreaView>
