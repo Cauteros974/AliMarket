@@ -195,6 +195,7 @@ const styles = StyleSheet.create({
     },
     actions: {
         flexDirection: "row",
-        gap: 10
+        gap: 10,
+        marginTop: 13
     }
 })
