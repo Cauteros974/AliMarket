@@ -204,7 +204,10 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
             </Text>
           </Pressable>
 
-          <Pressable>
+          <Pressable
+            style={styles.shareButton}
+            onPress={() => setShareVisible(true)}
+          >
             <Ionicons
               name="share-outline"
               size={20}
