@@ -396,6 +396,7 @@ const styles = StyleSheet.create({
   },
   shareActions: {
     flexDirection: "row",
-    gap: 12
+    gap: 10,
+    marginTop: 14
   }
 });
