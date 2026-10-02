@@ -410,5 +410,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 7,
-  }
+  },
+  shareButtonText: {
+    color: colors.primary,
+    fontSize: 14,
+    fontWeight: "800",
+  },
 });
