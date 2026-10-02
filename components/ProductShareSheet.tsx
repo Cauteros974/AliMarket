@@ -112,7 +112,8 @@ export default function ProductShareSheet({
 
                                 <Text
                                     style={[
-                                        styles.actionText
+                                        styles.actionText,
+                                        styles.secondaryButtonText,
                                     ]}
                                 >
                                     Copy link
