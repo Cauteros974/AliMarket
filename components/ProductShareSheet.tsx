@@ -162,5 +162,10 @@ const styles = StyleSheet.create({
         fontSize: 17,
         fontWeight: "800",
         color: colors.text
+    },
+    link: {
+        marginTop: 7,
+        textAlign: "center",
+        fontSize: 12,
     }
 })
