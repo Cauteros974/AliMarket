@@ -153,7 +153,11 @@ const styles = StyleSheet.create({
             height: 4,
         },
         shadowRadius: 12,
-        
+
         elevation: 4,
+    },
+    productName: {
+        marginTop: 10,
+        textAlign: "center"
     }
 })
