@@ -109,6 +109,14 @@ export default function ProductShareSheet({
                                     size={21}
                                     colors={colors.primary}
                                 />
+
+                                <Text
+                                    style={[
+                                        styles.actionText
+                                    ]}
+                                >
+                                    Copy link
+                                </Text>
                             </Pressable>
                          </View>
                 </View>
