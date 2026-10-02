@@ -141,8 +141,9 @@ const styles = StyleSheet.create({
         borderRadius: 20,
     },
     qrContainer: {
-        alignItems: "center",
-        padding: 10,
-        borderRadius: 20
+        alignSelf: "center",
+        padding: 16,
+        borderRadius: 22,
+        
     }
 })
