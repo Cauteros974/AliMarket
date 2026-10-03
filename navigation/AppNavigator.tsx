@@ -21,7 +21,6 @@ import SellerScreen from "../screens/SellerScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import SupportScreen from "../screens/SupportScreen";
 import WishlistCollectionsScreen from "../screens/WishlistCollectionsScreen";
-
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { MainTabParamList, RootStackParamList } from "./types";

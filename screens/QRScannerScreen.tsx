@@ -1,4 +1,3 @@
-import { Ionicons } from "@expo/vector-icons";
 import { CameraView, useCameraPermissions } from "expo-camera";
 import { useState, useEffect } from "react";
 import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
