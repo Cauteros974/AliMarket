@@ -164,29 +164,6 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
             {product.reviews.toLocaleString("en-US")} reviews
           </Text>
         </View>
-      </ScrollView>
-
-      {/* Bottom action bar */}
-      <View style={styles.footer}>
-        <Pressable
-          onPress={() => toggleFavorite(product.id)}
-          style={styles.secondaryButton}
-        >
-          <Ionicons
-            name={isFavorite ? "heart" : "heart-outline"}
-            size={20}
-            color={colors.primary}
-          />
-        </Pressable>
-
-        <Pressable
-          onPress={() => addToCart(product.id)}
-          style={styles.primaryButton}
-        >
-          <Text style={styles.primaryButtonText}>
-            Add to cart
-          </Text>
-        </Pressable>
 
         <View style={styles.shareActions}>
           <Pressable
@@ -219,6 +196,29 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
             </Text>
           </Pressable>
         </View>
+      </ScrollView>
+
+      {/* Bottom action bar */}
+      <View style={styles.footer}>
+        <Pressable
+          onPress={() => toggleFavorite(product.id)}
+          style={styles.secondaryButton}
+        >
+          <Ionicons
+            name={isFavorite ? "heart" : "heart-outline"}
+            size={20}
+            color={colors.primary}
+          />
+        </Pressable>
+
+        <Pressable
+          onPress={() => addToCart(product.id)}
+          style={styles.primaryButton}
+        >
+          <Text style={styles.primaryButtonText}>
+            Add to cart
+          </Text>
+        </Pressable>
       </View>
 
       <ProductShareSheet 
