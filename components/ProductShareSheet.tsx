@@ -162,7 +162,8 @@ const styles = StyleSheet.create({
     subtitle: {
         fontSize: 15,
         marginTop: 4,
-        color: colors.background
+        color: colors.background,
+        backgroundColor: "#0000"
     },
     closeButton: {
         alignItems: "center",
