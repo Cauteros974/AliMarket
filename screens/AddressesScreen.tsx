@@ -36,7 +36,7 @@ export default function AddressesScreen() {
                 <Text style={styles.title}>Addresses</Text>
 
                 {addresses.map((address) => (
-                    <Pressable>
+                    <Pressable key={address.id}>
                         <View>
                             <Text>{address.title}</Text>
                             <Text style={styles.badge}>
