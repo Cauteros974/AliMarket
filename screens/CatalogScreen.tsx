@@ -96,7 +96,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 contentContainerStyle={styles.content}
                 ListHeaderComponent={
                     <View>
-                        <Text style={styles.title}>Catalog</Text>
+                        <Text style={styles.title}>Catalog </Text>
                         <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
                         <SearchSuggestions query={searchQuery} onPick={setSearchQuery} />
 
