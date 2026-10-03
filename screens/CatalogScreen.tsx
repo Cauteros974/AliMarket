@@ -308,7 +308,6 @@ const styles = StyleSheet.create({
         backgroundColor: colors.text,
         alignItems: "center",
         justifyContent: "center",
-        width: 220,
         marginBottom: 12,
     },
     allFiltersText: { 
