@@ -75,6 +75,8 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
           (product) => product.id === id
         )
       )
+      .filter(Boolean)
+      .slice(0, 4);
   }, [query, recentlyViewedIds]);
 
     return(
