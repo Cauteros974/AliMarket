@@ -176,6 +176,13 @@ export default function SearchSuggestions({
                         >
                             {product.title}
                         </Text>
+
+                        <Text
+                            style={styles.productDescription}
+                            numberOfLines={1}
+                        >
+                            €
+                        </Text>
                      </View>
                     </Pressable>
                 ))}
