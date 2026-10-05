@@ -24,11 +24,19 @@ const popularSearches = [
     "hoodie",
     "fitness",
     "beauty",
-]
+];
 
 export default function SearchSuggestions({visible, onSelectProduct, onSelectCategory}: Props){
     const searchQuery = useShopStore(
         (state) => state.searchQuery
+    );
+
+    const recentlyViewedIds = useShopStore(
+        (state) => state.recentlyViewedIds
+    );
+
+    const setSearchQuery = useShopStore(
+        (state) => state.setSearchQuery
     );
 
     return(
