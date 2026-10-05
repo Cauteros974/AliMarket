@@ -386,5 +386,11 @@ const styles = StyleSheet.create({
         backgroundColor: "#FFF1EA",
         alignItems: "center",
         justifyContent: "center",
+    },
+    textContainer: {
+        flex: 1,
+    },
+    producTitle: {
+        color: colors.muted
     }
 });
