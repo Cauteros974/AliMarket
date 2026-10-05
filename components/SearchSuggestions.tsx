@@ -417,4 +417,10 @@ const styles = StyleSheet.create({
         flexWrap: "wrap",
         gap: 8,
     },
+    chip: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 5,
+    },
+
 });
