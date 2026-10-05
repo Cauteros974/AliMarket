@@ -395,5 +395,9 @@ const styles = StyleSheet.create({
         fontSize: 13,
         fontWeight: "800",
     },
-
+    productDescription: {
+        marginTop: 2,
+        color: colors.muted,
+        fontSize: 12,
+    },
 });
