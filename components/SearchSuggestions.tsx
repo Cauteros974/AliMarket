@@ -382,6 +382,9 @@ const styles = StyleSheet.create({
     iconBox: {
         width: 30,
         height: 30,
-        borderRadius: 14
+        borderRadius: 11,
+        backgroundColor: "#FFF1EA",
+        alignItems: "center",
+        justifyContent: "center",
     }
 });
