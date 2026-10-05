@@ -152,7 +152,10 @@ export default function SearchSuggestions({
 
   return (
     <View>
-      <ScrollView>
+      <ScrollView
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
+      >
         
         {query && productSuggestions.length > 0 && (
             <View>
