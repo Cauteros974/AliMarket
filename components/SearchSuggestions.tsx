@@ -426,5 +426,9 @@ const styles = StyleSheet.create({
         borderRadius: 999,
         backgroundColor: "#FFF1EA",
     },
-
+    chipText: {
+        color: colors.primary,
+        fontSize: 12,
+        fontWeight: "800",
+    },
 });
