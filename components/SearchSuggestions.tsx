@@ -158,6 +158,8 @@ export default function SearchSuggestions({
                 {productSuggestions.map((product) => (
                     <Pressable
                         onPress={() => handleProductSelect(product.id)}
+                         key={product.id}
+                         style={styles.productRow}
                     >
                      <View style={styles.iconBox}>
                         <Ionicons 
