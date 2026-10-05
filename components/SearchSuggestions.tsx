@@ -91,6 +91,14 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
         .slice(0,5);
   }, [query]);
 
+  if (!visible) {
+    return null;
+  }
+
+  function handleSearchSelect(value: string) {
+    setSearchQuery(value);
+  }
+
     return(
         <View style={styles.container}>
             <ScrollView
