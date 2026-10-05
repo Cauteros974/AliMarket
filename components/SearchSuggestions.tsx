@@ -391,6 +391,9 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     producTitle: {
-        color: colors.muted
-    }
+        color: colors.muted,
+        fontSize: 13,
+        fontWeight: "800",
+    },
+
 });
