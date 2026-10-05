@@ -6,12 +6,14 @@ type SearchBarProps = {
   value: string;
   onChangeText: (value: string) => void;
   placeholder?: string;
+  onFocus?: () => void;
 };
 
 export default function SearchBar({
   value,
   onChangeText,
   placeholder = "Search products",
+  onFocus
 }: SearchBarProps) {
   return (
     <View style={styles.container}>
@@ -22,6 +24,7 @@ export default function SearchBar({
         placeholder={placeholder}
         placeholderTextColor={colors.muted}
         style={styles.input}
+        onFocus={onFocus}
       />
     </View>
   );
