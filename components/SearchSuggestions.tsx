@@ -390,7 +390,7 @@ const styles = StyleSheet.create({
     textContainer: {
         flex: 1,
     },
-    producTitle: {
+    productTitle: {
         color: colors.text,
         fontSize: 13,
         fontWeight: "800",
@@ -405,5 +405,10 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         gap: 10
+    },
+    categoryText: {
+        flex: 1,
+        color: colors.text,
+        fontSize: 12
     }
 });
