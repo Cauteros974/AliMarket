@@ -356,5 +356,12 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         overflow: "hidden",
         maxHeight: 430,
+    },
+    section: {
+        paddingHorizontal: 14,
+        paddingVertical: 12,
+    },
+    sectionHeader: {
+        flexDirection: "row"
     }
 });
