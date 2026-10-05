@@ -26,29 +26,39 @@ const popularSearches = [
     "beauty",
 ];
 
-export default function SearchSuggestions({visible, onSelectProduct, onSelectCategory}: Props){
-    const searchQuery = useShopStore(
-        (state) => state.searchQuery
-    );
+export default function SearchSuggestions({
+  visible,
+  onSelectProduct,
+  onSelectCategory,
+}: Props) {
+  const searchQuery = useShopStore(
+    (state) => state.searchQuery
+  );
 
-    const recentlyViewedIds = useShopStore(
-        (state) => state.recentlyViewedIds
-    );
+  const recentlyViewedIds = useShopStore(
+    (state) => state.recentlyViewedIds
+  );
 
-    const setSearchQuery = useShopStore(
-        (state) => state.setSearchQuery
-    );
+  const setSearchQuery = useShopStore(
+    (state) => state.setSearchQuery
+  );
 
-    const clearRecentlyViewed = useShopStore(
-        (state) => state.clearRecentlyViewed
-    );
+  const clearRecentlyViewed = useShopStore(
+    (state) => state.clearRecentlyViewed
+  );
 
-    const query = searchQuery.trim().toLowerCase();
+  const query = searchQuery.trim().toLowerCase();
 
-    const productSuggestions = useMemo(() => {
-        if (!query) {
-            return [];
-        }
+  /**
+   * Товары, которые подходят под введённый текст.
+   *
+   * Ищем не только по title,
+   * но и по description.
+   */
+  const productSuggestions = useMemo(() => {
+    if (!query) {
+      return [];
+    }
 
     return products
       .filter((product) => {
@@ -63,7 +73,10 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
       })
       .slice(0, 5);
   }, [query]);
-  
+
+  /**
+   * Подходящие категории.
+   */
   const categorySuggestions = useMemo(() => {
     if (!query) {
       return [];
@@ -136,17 +149,19 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
 
     onSelectCategory?.(categoryId);
   }
-  }
 
-    return(
-        <View style={styles.container}>
-            <ScrollView
-                keyboardShouldPersistTaps="handled"
-                showsVerticalScrollIndicator={false}
-                nestedScrollEnabled
-            >
-                {query &&  productSuggestions}
-            </ScrollView>
-        </View>
-    )
+  return (
+    <View>
+      <ScrollView>
+        
+        {query && productSuggestions.length > 0 && (
+            <View>
+                <Text>
+                    Products
+                </Text>
+            </View>
+        )}
+      </ScrollView>
+    </View>
+  );
 }
