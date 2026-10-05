@@ -184,6 +184,12 @@ export default function SearchSuggestions({
                             €{product.price.toFixed(2)}
                         </Text>
                      </View>
+                     
+                     <Ionicons
+                        name="arrow-forward"
+                        size={18}
+                        color={colors.muted}
+                     />
                     </Pressable>
                 ))}
             </View>
