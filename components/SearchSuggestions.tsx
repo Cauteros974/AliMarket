@@ -374,9 +374,14 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     productRow: {
-        minHeight: 32,
+        minHeight: 52,
         flexDirection: "row",
         alignItems: "center",
         gap: 12,
+    },
+    iconBox: {
+        width: 30,
+        height: 30,
+        borderRadius: 14
     }
 });
