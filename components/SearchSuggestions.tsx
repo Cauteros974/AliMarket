@@ -423,6 +423,8 @@ const styles = StyleSheet.create({
         gap: 5,
         paddingHorizontal: 11,
         paddingVertical: 8,
+        borderRadius: 999,
+        backgroundColor: "#FFF1EA",
     },
 
 });
