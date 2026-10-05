@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import AntDesign from '@expo/vector-icons/AntDesign';
 import { FlatList, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AllFiltersModal from "../components/AllFiltersModal";
