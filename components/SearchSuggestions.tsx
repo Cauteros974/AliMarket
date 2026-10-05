@@ -79,6 +79,12 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
       .slice(0, 4);
   }, [query, recentlyViewedIds]);
 
+  const filteredPopular = useMemo(() => {
+    if(!query){
+        return popularSearches.slice(0, 5);
+    }
+  })
+
     return(
         <View style={styles.container}>
             <ScrollView
