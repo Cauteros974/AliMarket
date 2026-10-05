@@ -24,7 +24,7 @@ const banners = [
     subtitle: "Use coupon WELCOME10 on checkout",
     button: "Shop now",
     productId: "p1",
-    colors: [colors.primary, "#FF8A3D"] as const,
+    colors: [colors.primary, "#3e200c"] as const,
   },
   {
     id: "electronics",
@@ -33,7 +33,7 @@ const banners = [
     subtitle: "Headphones, gadgets and accessories",
     button: "Explore",
     productId: "p1",
-    colors: ["#FF5A1F", "#FF9A5A"] as const,
+    colors: ["#FF5A1F", "#3e200c"] as const,
   },
   {
     id: "fashion",
@@ -42,7 +42,7 @@ const banners = [
     subtitle: "Discover new arrivals and special offers",
     button: "Discover",
     productId: "p5",
-    colors: ["#FF6B35", "#FFB067"] as const,
+    colors: ["#FF6B35", "#3e200c"] as const,
   },
 ];
 
