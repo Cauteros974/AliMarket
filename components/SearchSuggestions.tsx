@@ -348,4 +348,10 @@ export default function SearchSuggestions({
 }
 
 const styles = StyleSheet.create({
+    container: {
+        marginTop: 10,
+        borderRadius: 18,
+        backgroundColor: colors.surface,
+        borderWidth: 1,
+    }
 });
