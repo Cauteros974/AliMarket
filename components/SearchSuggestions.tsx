@@ -163,6 +163,14 @@ export default function SearchSuggestions({
                 <Text style={styles.sectionTitle}>
                     Products
                 </Text>
+
+                {productSuggestions.map((product) => (
+                    <Pressable
+                        onPress={() => handleProductSelect(product.id)}
+                    >
+                        
+                    </Pressable>
+                ))}
             </View>
         )}
       </ScrollView>
