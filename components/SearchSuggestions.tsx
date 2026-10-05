@@ -99,6 +99,16 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
     setSearchQuery(value);
   }
 
+  function handleProductSelect(productId: string) {
+    const product = product.find(
+        (item) => item.id === productId
+    );
+
+    if(product) {
+        setSearchQuery(product.title);
+    }
+  }
+
     return(
         <View style={styles.container}>
             <ScrollView
