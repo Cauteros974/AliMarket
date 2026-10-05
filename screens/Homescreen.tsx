@@ -197,6 +197,15 @@ export default function HomeScreen({ navigation }: Props) {
               productId,
             });
           }}
+          onSelectCategory={{categoryId} => {
+            setSearchFocused(false);
+
+            setSelectedCategoryId(categoryId);
+
+            navigation.navigate("CategoryDetails", {
+              categoryId,
+            });
+          }}
         />
 
         {/* --------------------------------------------------
