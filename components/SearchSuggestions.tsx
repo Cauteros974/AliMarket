@@ -59,6 +59,7 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
                     description.includes(query)
                 );
             })
+            .slice(0, 3);
     }, [query])
 
     const query = searchQuery.trim().toLowerCase();
