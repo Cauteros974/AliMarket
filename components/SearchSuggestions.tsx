@@ -438,6 +438,6 @@ const styles = StyleSheet.create({
     },
     empty: {
         alignItems: "center",
-        paddingVertical: 20,
+        paddingVertical: 30,
     },
 });
