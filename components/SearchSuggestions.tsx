@@ -169,8 +169,9 @@ export default function SearchSuggestions({
                         />
                      </View>
 
-                     <View>
-                        <Text style={styles.productTitle}
+                     <View style={styles.textContainer}>
+                        <Text 
+                            style={styles.productTitle}
                             numberOfLines={1}
                         >
                             {product.title}
