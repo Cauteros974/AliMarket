@@ -43,6 +43,8 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
         (state) => state.clearRecentlyViewed
     );
 
+    const query = searchQuery.trim().toLowerCase();
+
     const productSuggestions = useMemo(() => {
         if (!query) {
             return [];
@@ -60,9 +62,20 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
                 );
             })
             .slice(0, 3);
-    }, [query])
+    }, [query]);
 
-    const query = searchQuery.trim().toLowerCase();
+    const recentlyViewed = useMemo(() => {
+    if (query) {
+      return [];
+    }
+
+    return recentlyViewedIds
+      .map((id) =>
+        products.find(
+          (product) => product.id === id
+        )
+      )
+  }, [query, recentlyViewedIds]);
 
     return(
         <View style={styles.container}>
