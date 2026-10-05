@@ -47,6 +47,11 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
         if (!query) {
             return [];
         }
+
+        return products
+            .filter((product) => {
+                const title = product.title.toLowerCase();
+            })
     }, [])
 
     const query = searchQuery.trim().toLowerCase();
