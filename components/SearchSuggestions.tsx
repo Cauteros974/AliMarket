@@ -48,13 +48,7 @@ export default function SearchSuggestions({
   );
 
   const query = searchQuery.trim().toLowerCase();
-
-  /**
-   * Товары, которые подходят под введённый текст.
-   *
-   * Ищем не только по title,
-   * но и по description.
-   */
+  
   const productSuggestions = useMemo(() => {
     if (!query) {
       return [];
@@ -73,10 +67,7 @@ export default function SearchSuggestions({
       })
       .slice(0, 5);
   }, [query]);
-
-  /**
-   * Подходящие категории.
-   */
+  
   const categorySuggestions = useMemo(() => {
     if (!query) {
       return [];
