@@ -159,8 +159,8 @@ export default function SearchSuggestions({
       >
         
         {query && productSuggestions.length > 0 && (
-            <View>
-                <Text>
+            <View style={styles.section}>
+                <Text style={styles.sectionTitle}>
                     Products
                 </Text>
             </View>
@@ -171,5 +171,5 @@ export default function SearchSuggestions({
 }
 
 const styles = StyleSheet.create({
-    
+
 })
