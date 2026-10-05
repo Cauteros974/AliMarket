@@ -6,11 +6,9 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 
 type Props = {
-  visible: boolean;
-  onSelectProduct?: (productId: string) => void;
-  onSelectCategory?: (categoryId: string) => void;
-  query: string;
-  onPick: (query: string) => void;
+    visible?: boolean;
+    onSelectProduct?: (productId: string) => void;
+    onSelectCategory?: (categoryId: string) => void;
 };
 
 const popularSearches = [
