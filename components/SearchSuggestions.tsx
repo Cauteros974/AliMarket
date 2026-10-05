@@ -409,6 +409,12 @@ const styles = StyleSheet.create({
     categoryText: {
         flex: 1,
         color: colors.text,
-        fontSize: 12
-    }
+        fontSize: 14,
+        fontWeight: "700",
+    },
+    chips: {
+        flexDirection: "row",
+        flexWrap: "wrap",
+        gap: 8,
+    },
 });
