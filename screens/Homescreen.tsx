@@ -190,9 +190,9 @@ export default function HomeScreen({ navigation }: Props) {
 
         <SearchSuggestions
           visible={searchFocused}
-          onSelectProduct={(productId}) => {
+          onSelectProduct={(productId) => {
             setSearchFocused(false);
-
+            
             navigation.navigate("ProductDetails", {
               productId,
             });
