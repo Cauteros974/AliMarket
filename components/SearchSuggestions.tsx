@@ -375,6 +375,8 @@ const styles = StyleSheet.create({
     },
     productRow: {
         minHeight: 32,
-        flexDirection: "row"
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 12,
     }
 });
