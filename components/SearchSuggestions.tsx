@@ -39,6 +39,12 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
         (state) => state.setSearchQuery
     );
 
+    const clearRecentlyViewed = useShopStore(
+        (state) => state.clearRecentlyViewed
+    );
+
+    const query = searchQuery.trim().toLowerCase();
+
     return(
         <View style={styles.container}>
             <ScrollView
@@ -46,7 +52,7 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
                 showsVerticalScrollIndicator={false}
                 nestedScrollEnabled
             >
-                
+                {query &&  productSuggestions}
             </ScrollView>
         </View>
     )
