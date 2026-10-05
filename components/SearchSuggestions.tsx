@@ -161,8 +161,9 @@ export default function SearchSuggestions({
                     >
                      <View>
                         <Ionicons 
-                            name="search-circle"
+                            name="search-outline"
                             size={18}
+                            color={colors.primary}
                         />
                      </View>
                     </Pressable>
