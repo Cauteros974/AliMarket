@@ -100,13 +100,15 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
   }
 
   function handleProductSelect(productId: string) {
-    const product = product.find(
+    const product = products.find(
         (item) => item.id === productId
     );
 
     if(product) {
         setSearchQuery(product.title);
     }
+
+    onSelectProduct?.(productId);
   }
 
     return(
