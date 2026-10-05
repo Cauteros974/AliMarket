@@ -192,6 +192,10 @@ export default function HomeScreen({ navigation }: Props) {
           visible={searchFocused}
           onSelectProduct={{productId} => {
             setSearchFocused(false);
+
+            navigation.navigate("ProductDetails", {
+              productId,
+            });
           }}
         />
 
