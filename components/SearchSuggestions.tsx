@@ -109,6 +109,12 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
     }
 
     onSelectProduct?.(productId);
+
+    function handleCategorySelect(categoryId: string) {
+        const category = categories.find(
+            (item) => item.id === categoryId
+        )
+    }
   }
 
     return(
