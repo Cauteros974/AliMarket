@@ -1,10 +1,20 @@
+import { Ionicons } from "@expo/vector-icons";
+import { useMemo } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { products } from "../data/products";
+import { products, categories } from "../data/products";
 import { colors } from "../theme/colors";
+import { useShopStore } from "../store/useShopStore";
+
 
 type SearchSuggestionsProps = {
     query: string;
     onPick: (value: string) => void;
+}
+
+type Props = { 
+    visible: boolean;
+    onSelectProduct?: (productId: string) => void;
+    onSelectCategory?: (categoryId: string) => void;
 }
 
 export default function SearchSuggestions({query, onPick}: SearchSuggestionsProps){
