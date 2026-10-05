@@ -82,8 +82,14 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
   const filteredPopular = useMemo(() => {
     if(!query){
         return popularSearches.slice(0, 5);
-    }
-  })
+    };
+
+    return popularSearches
+        .filter((item) =>
+            item.includes(query)
+        )
+        .slice(0,5);
+  }, [query]);
 
     return(
         <View style={styles.container}>
