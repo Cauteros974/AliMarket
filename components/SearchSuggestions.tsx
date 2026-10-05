@@ -364,6 +364,13 @@ const styles = StyleSheet.create({
     sectionHeader: {
         flexDirection: "row",
         alignItems:"center",
-        justifyContent: "center"
-    }
+        justifyContent: "space-between",
+        marginBottom: 8,
+    },
+    sectionTitle: {
+        color: colors.text,
+        fontSize: 13,
+        fontWeight: "900",
+        marginBottom: 8,
+    },
 });
