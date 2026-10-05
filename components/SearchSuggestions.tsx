@@ -380,8 +380,8 @@ const styles = StyleSheet.create({
         gap: 12,
     },
     iconBox: {
-        width: 30,
-        height: 30,
+        width: 36,
+        height: 36,
         borderRadius: 11,
         backgroundColor: "#FFF1EA",
         alignItems: "center",
