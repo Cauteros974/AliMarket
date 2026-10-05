@@ -431,4 +431,9 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: "800",
     },
+    clearText: {
+        color: colors.primary,
+        fontSize: 12,
+        fontWeight: "900",
+    },
 });
