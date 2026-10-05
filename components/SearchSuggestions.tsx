@@ -151,10 +151,11 @@ export default function SearchSuggestions({
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       <ScrollView
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
+        nestedScrollEnabled
       >
         
         {query && productSuggestions.length > 0 && (
@@ -168,3 +169,7 @@ export default function SearchSuggestions({
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+    
+})
