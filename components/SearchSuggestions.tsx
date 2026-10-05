@@ -1,13 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useMemo } from "react";
-import {
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
-
+import { Pressable, ScrollView, StyleSheet, Text, View,} from "react-native";
 import { categories, products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
@@ -49,7 +42,7 @@ export default function SearchSuggestions({
   );
 
   const query = searchQuery.trim().toLowerCase();
-  
+
   const productSuggestions = useMemo(() => {
     if (!query) {
       return [];
