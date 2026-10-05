@@ -440,4 +440,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         paddingVertical: 30,
     },
+    emptyTitle: {
+        marginTop: 8,
+        color: colors.text,
+        fontSize: 16,
+        fontWeight: "900",
+    },
 });
