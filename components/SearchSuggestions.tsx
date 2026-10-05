@@ -373,4 +373,8 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         marginBottom: 8,
     },
+    productRow: {
+        minHeight: 32,
+        flexDirection: "row"
+    }
 });
