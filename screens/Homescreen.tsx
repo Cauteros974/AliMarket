@@ -136,6 +136,7 @@ export default function HomeScreen({ navigation }: Props) {
         .slice(0, 4),
     [recentlyViewedIds]
   );
+  
 
   function openCategory(categoryId: string) {
     setSelectedCategoryId(categoryId);
