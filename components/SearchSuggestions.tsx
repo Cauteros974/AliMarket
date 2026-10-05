@@ -362,6 +362,8 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
     },
     sectionHeader: {
-        flexDirection: "row"
+        flexDirection: "row",
+        alignItems:"center",
+        justifyContent: "center"
     }
 });
