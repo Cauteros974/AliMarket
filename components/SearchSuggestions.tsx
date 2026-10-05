@@ -436,4 +436,8 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: "800",
     },
+    empty: {
+        alignItems: "center",
+        paddingVertical: 20,
+    },
 });
