@@ -349,9 +349,12 @@ export default function SearchSuggestions({
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 10,
+        marginTop: 8,
         borderRadius: 18,
         backgroundColor: colors.surface,
         borderWidth: 1,
+        borderColor: colors.border,
+        overflow: "hidden",
+        maxHeight: 430,
     }
 });
