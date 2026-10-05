@@ -68,6 +68,8 @@ export default function HomeScreen({ navigation }: Props) {
 
   const currentBanner = banners[bannerIndex];
 
+  const [searchFocused, setSearchFocused] = useState(false);
+
   function changeBanner(nextIndex: number) {
     // First, hide the current banner
     Animated.parallel([
@@ -183,11 +185,14 @@ export default function HomeScreen({ navigation }: Props) {
         <SearchBar
           value={searchQuery}
           onChangeText={setSearchQuery}
+          onFocus={() => setSearchFocused(true)}
         />
 
         <SearchSuggestions
-          query={searchQuery}
-          onPick={setSearchQuery}
+          visible={searchFocused}
+          onSelectProduct={{productId} => {
+            setSearchFocused(false);
+          }}
         />
 
         {/* --------------------------------------------------
