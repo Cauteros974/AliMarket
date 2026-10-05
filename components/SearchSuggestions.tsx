@@ -1,6 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useMemo } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { products, categories } from "../data/products";
 import { colors } from "../theme/colors";
 import { useShopStore } from "../store/useShopStore";
@@ -15,30 +15,28 @@ type Props = {
     visible: boolean;
     onSelectProduct?: (productId: string) => void;
     onSelectCategory?: (categoryId: string) => void;
-}
+};
 
-export default function SearchSuggestions({query, onPick}: SearchSuggestionsProps){
-    const normalized = query.trim().toLowerCase();
+const popularSearches = [
+    "headphones",
+    "smartwatch",
+    "hoodie"
+]
 
-    if (normalized.length < 2) return null;
-    
-    const suggestions = Array.from(
-        new Set(
-            products
-            .filter((product) => product.title.toLowerCase().includes(normalized))
-            .map((product) => product.title)
-        )
-    )
+export default function SearchSuggestions({visible, onSelectProduct, onSelectCategory}: Props){
+    const searchQuery = useShopStore(
+        (state) => state.searchQuery
+    );
 
     return(
         <View style={styles.container}>
-            {suggestions.map((suggestion) => (
-                <Pressable key={suggestion} onPress={() => onPick(suggestion)} style={styles.item}>
-                    <Text numberOfLines={1} style={styles.text}>
-                        {suggestion}
-                    </Text>
-                </Pressable>
-            ))}
+            <ScrollView
+                keyboardShouldPersistTaps="handled"
+                showsVerticalScrollIndicator={false}
+                nestedScrollEnabled
+            >
+
+            </ScrollView>
         </View>
     )
 }
