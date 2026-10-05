@@ -43,6 +43,12 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
         (state) => state.clearRecentlyViewed
     );
 
+    const productSuggestions = useMemo(() => {
+        if (!query) {
+            return [];
+        }
+    })
+
     const query = searchQuery.trim().toLowerCase();
 
     return(
