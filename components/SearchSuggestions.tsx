@@ -401,7 +401,9 @@ const styles = StyleSheet.create({
         fontSize: 12,
     },
     categoryRow: {
-        minHeight: 54,
-        flexDirection: "row"
+        minHeight: 44,
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10
     }
 });
