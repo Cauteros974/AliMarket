@@ -181,7 +181,7 @@ export default function SearchSuggestions({
                             style={styles.productDescription}
                             numberOfLines={1}
                         >
-                            €
+                            €{product.price.toFixed(2)}
                         </Text>
                      </View>
                     </Pressable>
