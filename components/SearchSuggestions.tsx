@@ -446,4 +446,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: "900",
     },
+    emptyText: {
+        marginTop: 4,
+        color: colors.muted,
+        fontSize: 12,
+    },
 });
