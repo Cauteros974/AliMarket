@@ -9,6 +9,8 @@ type Props = {
   visible: boolean;
   onSelectProduct?: (productId: string) => void;
   onSelectCategory?: (categoryId: string) => void;
+  query: string;
+  onPick: (query: string) => void;
 };
 
 const popularSearches = [
