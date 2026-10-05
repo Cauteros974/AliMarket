@@ -20,7 +20,10 @@ type Props = {
 const popularSearches = [
     "headphones",
     "smartwatch",
-    "hoodie"
+    "keyboard",
+    "hoodie",
+    "fitness",
+    "beauty",
 ]
 
 export default function SearchSuggestions({visible, onSelectProduct, onSelectCategory}: Props){
@@ -35,7 +38,7 @@ export default function SearchSuggestions({visible, onSelectProduct, onSelectCat
                 showsVerticalScrollIndicator={false}
                 nestedScrollEnabled
             >
-
+                
             </ScrollView>
         </View>
     )
