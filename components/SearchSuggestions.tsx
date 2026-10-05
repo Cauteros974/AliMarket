@@ -400,4 +400,8 @@ const styles = StyleSheet.create({
         color: colors.muted,
         fontSize: 12,
     },
+    categoryRow: {
+        minHeight: 54,
+        flexDirection: "row"
+    }
 });
