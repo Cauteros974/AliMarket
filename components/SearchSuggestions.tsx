@@ -159,7 +159,12 @@ export default function SearchSuggestions({
                     <Pressable
                         onPress={() => handleProductSelect(product.id)}
                     >
-                        
+                     <View>
+                        <Ionicons 
+                            name="search-circle"
+                            size={18}
+                        />
+                     </View>
                     </Pressable>
                 ))}
             </View>
