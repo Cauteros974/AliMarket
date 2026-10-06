@@ -12,6 +12,7 @@ type Props = {
 export default function AnimatedProductCard( {children, index = 0, staggerDelay = 70}:Props) {
     const opacity = useRef(new Animated.Value(0)).current;
     const translateY = useRef(new Animated.Value(25)).current;
+    const scale = useRef(new Animated.Value(0.94)).current;
 
     return(
         <Animated.View
@@ -22,6 +23,7 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
                     transform: {
                         translateY
                     },
+                    scale
                 }
             ]}
         >
