@@ -16,6 +16,13 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
 
     useEffect: {() => {
         const delay = Math.min(index * staggerDelay)
+
+        Animated.parallel({
+            Animated.timing({
+                toValue: 1,
+                duration: 600,
+            })
+        })
     }}
 
     return(
