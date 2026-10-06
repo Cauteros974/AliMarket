@@ -331,6 +331,7 @@ export default function HomeScreen({ navigation }: Props) {
 
             <FlatList
               data={recentlyViewed}
+              horizontal
               keyExtractor={(item) => item!.id}
               numColumns={2}
               scrollEnabled={false}
