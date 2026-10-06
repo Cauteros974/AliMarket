@@ -14,7 +14,7 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
     const translateY = useRef(new Animated.Value(25)).current;
     const scale = useRef(new Animated.Value(0.94)).current;
 
-    useEffect: (() => {
+    useEffect (() => {
         const delay = Math.min(index * staggerDelay, 500)
 
         Animated.parallel({
