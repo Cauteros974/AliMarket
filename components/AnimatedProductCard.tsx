@@ -17,6 +17,13 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
     const scale = useRef(new Animated.Value(0.94)).current;
 
     useEffect (() => {
+
+        /* * Each subsequent card starts * animating a little later than the previous one. 
+            *index 0 → 0ms 
+            * index 1 → 70ms 
+            * index 2 → 140ms
+            * index 3 → 210ms 
+        */
         const delay = Math.min(index * staggerDelay, 500)
 
         Animated.parallel([
