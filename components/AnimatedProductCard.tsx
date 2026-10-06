@@ -47,13 +47,15 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
                 styles.container,
                 {
                     opacity,
-                    transform: {
-                        translateY
-                    },
-                    {
-                        scale,
-                    },
-                }
+                    transform: [
+                        {
+                            translateY,
+                        },
+                        {
+                            scale,
+                        },
+                    ],
+                },
             ]}
         >
             {children}
