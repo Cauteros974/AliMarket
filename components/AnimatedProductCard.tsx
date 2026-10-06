@@ -4,8 +4,10 @@ import { useEffect, useRef } from "react";
 type Props = {
     children: React.ReactNode;
 
+    /** * The position of the card in the list. * Used for stagger animation. */
     index?: number;
 
+    /** * Delay between cards. */
     staggerDelay?: number;
 }
 
