@@ -77,7 +77,7 @@ export default function ProductShareSheet({
                         <View style={styles.qrContainer}>
                             <QRCode 
                                 value={productLink}
-                                size={28}
+                                size={108}
                                 backgroundColor="white"
                                 color="black"
                             />
