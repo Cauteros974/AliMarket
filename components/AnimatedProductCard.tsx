@@ -31,7 +31,7 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
                 tension: 55,
                 useNativeDriver: true,
             }),
-        })
+        }).start();
     }, [opacity, translateY])
 
     return(
