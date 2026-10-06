@@ -17,7 +17,7 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
     useEffect (() => {
         const delay = Math.min(index * staggerDelay, 500)
 
-        Animated.parallel({
+        Animated.parallel([
             Animated.timing(opacity, {
                 toValue: 1,
                 duration: 400,
@@ -38,7 +38,7 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
                 tension: 60,
                 useNativeDriver: true,
             }),
-        }).start();
+        ]).start();
     }, [opacity, translateY])
 
     return(
