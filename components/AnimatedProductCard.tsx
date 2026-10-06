@@ -31,3 +31,9 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
         </Animated.View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1
+    }
+})
