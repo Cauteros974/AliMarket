@@ -315,6 +315,7 @@ export default function HomeScreen({ navigation }: Props) {
                     productId: item.id
                   })
                 }
+                onToggleFavorite={() => toggleFavorite(item.id)}
               />
             </AnimatedProductCard>
           )}
