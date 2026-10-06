@@ -50,7 +50,9 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
                     transform: {
                         translateY
                     },
-                    scale
+                    {
+                        scale,
+                    },
                 }
             ]}
         >
