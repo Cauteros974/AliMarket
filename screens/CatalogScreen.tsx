@@ -98,7 +98,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                     <View>
                         <Text style={styles.title}>Catalog </Text>
                         <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
-                        <SearchSuggestions query={searchQuery} onPick={setSearchQuery} />
+                        <SearchSuggestions searchQuery={searchQuery} onPick={setSearchQuery} />
 
                         <ScrollView
                             horizontal
