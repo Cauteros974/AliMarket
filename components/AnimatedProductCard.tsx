@@ -23,9 +23,12 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
                 duration: 400,
                 delay,
                 useNativeDriver: true,
+            }),
+            Animated.spring(translateY, {
+
             })
         })
-    }}
+    }, [opacity, translateY]}
 
     return(
         <Animated.View
