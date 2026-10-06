@@ -20,7 +20,9 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
         Animated.parallel({
             Animated.timing(opacity, {
                 toValue: 1,
-                duration: 500,
+                duration: 400,
+                delay,
+                useNativeDriver: true,
             })
         })
     }}
