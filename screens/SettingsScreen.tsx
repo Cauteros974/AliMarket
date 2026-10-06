@@ -34,7 +34,7 @@ export default function SettingsScreen() {
         <SafeAreaView style={[styles.safeArea, isDark && styles.darkSafeArea]}>
             <View style={styles.content}>
                  <Text style={[styles.title, isDark && styles.darkText]}>Settings</Text>
-                 <Text> Theme and language are saved locally.</Text>
+                 <Text style={styles.text}> Theme and language are saved locally.</Text>
 
                 <Text style={[styles.subtitle, isDark && styles.darkMuted]}>Theme</Text>
 
@@ -85,7 +85,8 @@ const styles = StyleSheet.create({
     title: {
         color: colors.text,
         fontSize: 28,
-        fontWeight: "900"
+        fontWeight: "900",
+        paddingLeft: 4
     },
     subtitle: {
         color: colors.muted,
@@ -151,5 +152,10 @@ const styles = StyleSheet.create({
     },
     activeLocaleText: {
         color: colors.primary,
-  },
+    },
+    text: {
+        fontWeight: "600",
+        padding: 10,
+        paddingLeft: 1,
+    }
 })
