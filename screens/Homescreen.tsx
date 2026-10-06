@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import CategoryChip from "../components/CategoryChip";
 import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
+import AnimatedProductCard from "../components/AnimatedProductCard";
 import SearchSuggestions from "../components/SearchSuggestions";
 import SectionHeader from "../components/SectionHeader";
 import { categories, products } from "../data/products";
