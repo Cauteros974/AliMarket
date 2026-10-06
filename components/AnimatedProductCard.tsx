@@ -15,12 +15,12 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
     const scale = useRef(new Animated.Value(0.94)).current;
 
     useEffect: {() => {
-        const delay = Math.min(index * staggerDelay)
+        const delay = Math.min(index * staggerDelay, 500)
 
         Animated.parallel({
-            Animated.timing({
+            Animated.timing(opacity, {
                 toValue: 1,
-                duration: 600,
+                duration: 500,
             })
         })
     }}
