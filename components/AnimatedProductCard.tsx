@@ -31,6 +31,13 @@ export default function AnimatedProductCard( {children, index = 0, staggerDelay 
                 tension: 55,
                 useNativeDriver: true,
             }),
+            Animated.spring(scale, {
+                toValue: 1,
+                delay,
+                friction: 8,
+                tension: 60,
+                useNativeDriver: true,
+            }),
         }).start();
     }, [opacity, translateY])
 
