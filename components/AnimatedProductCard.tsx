@@ -9,6 +9,6 @@ type Props = {
     staggerDelay?: number;
 }
 
-export default function AnimatedProductCard( {children, index, staggerDelay = 20}:Props) {
+export default function AnimatedProductCard( {children, index = 10, staggerDelay = 20}:Props) {
 
 }
