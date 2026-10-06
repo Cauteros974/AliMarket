@@ -310,6 +310,11 @@ export default function HomeScreen({ navigation }: Props) {
               <ProductCard 
                 product={item}
                 isFavorite={favoriteIds.includes(item.id)}
+                onPress={() => 
+                  navigation.navigate("ProductDetails", {
+                    productId: item.id
+                  })
+                }
               />
             </AnimatedProductCard>
           )}
