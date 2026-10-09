@@ -303,18 +303,16 @@ const styles = StyleSheet.create({
     },
     allFiltersButton: {
         height: 40,
+        width: 150,
         borderRadius: 20,
         backgroundColor: colors.text,
         alignItems: "center",
         justifyContent: "center",
-        paddingRight: 90,
         marginBottom: 12,
     },
     allFiltersText: { 
         color: colors.white,
-        fontWeight: "900",
-        textAlign: "center",
-        justifyContent: "center",
+        fontWeight: "900"
     },
     input: {
         flex: 1,
