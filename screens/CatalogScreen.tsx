@@ -307,11 +307,14 @@ const styles = StyleSheet.create({
         backgroundColor: colors.text,
         alignItems: "center",
         justifyContent: "center",
+        paddingRight: 90,
         marginBottom: 12,
     },
     allFiltersText: { 
         color: colors.white,
-        fontWeight: "900"
+        fontWeight: "900",
+        textAlign: "center",
+        justifyContent: "center",
     },
     input: {
         flex: 1,
