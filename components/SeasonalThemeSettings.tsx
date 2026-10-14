@@ -8,11 +8,11 @@ import {
 import { useSeasonalTheme } from "../store/useSeasonalThemeStore";
 
 export default function SeasonalThemeSettings() {
-    const {mode, setMode} = useSeasonalTheme();
+    const {mode, setMode, colors} = useSeasonalTheme();
 
     return(
-        <View>
-            <Text>
+        <View style={styles.container}>
+            <Text style={[styles.title, { color: colors.text }]}>
                 Application design
             </Text>
 
@@ -23,3 +23,7 @@ export default function SeasonalThemeSettings() {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+
+})
