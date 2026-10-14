@@ -10,6 +10,7 @@ import { useSeasonalTheme } from "../store/useSeasonalThemeStore";
 const OPTIONS: {
   value: SeasonMode;
   label: string;
+  emoji: string;
 }[] = []
 
 export default function SeasonalThemeSettings() {
