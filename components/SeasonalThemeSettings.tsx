@@ -147,5 +147,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: 5,
         right: 8,
+        fontSize: 13,
+        fontWeight: "700",
     },
 })
