@@ -65,7 +65,8 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         success: "#348052",
         danger: "#C44545",
     },
-    
+
+    // Winter — icy blue and cold blue.
     winter: {
         background: "#F3F8FD",
         surface: "#FFFFFF",
@@ -97,3 +98,4 @@ export function getCurrentSeason(date: Date = new Date()): Season {
         return "autumn";
     };
 }
+
