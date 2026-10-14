@@ -20,6 +20,12 @@ export default function SeasonalThemeSettings() {
                 Choose your favorite palette or let AliMarket 
                 change the design automatically with the seasons.
             </Text>
+
+            <View style={styles.options}>
+                {OPTIONS.map((option) => {
+                    const selected = mode === option.value;
+                })}
+            </View>
         </View>
     )
 }
