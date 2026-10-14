@@ -167,4 +167,8 @@ const styles = StyleSheet.create({
         flex: 1,
         gap: 4,
     },
+    previewTitle: {
+        fontSize: 14,
+        fontWeight: "700",
+    },
 })
