@@ -12,7 +12,7 @@ type SeasonalThemeState = {
     resetToAuto: () => void;
 }
 
-export const useSeasonalThemeStore = create<SeasonalThemeState>() {
+export const useSeasonalThemeStore = create<SeasonalThemeState>() (
     persist(
         (set) => ({
             mode: "auto",
@@ -26,4 +26,4 @@ export const useSeasonalThemeStore = create<SeasonalThemeState>() {
             storage: createJSONStorage(() => AsyncStorage),
         }
     )
-}
+);
