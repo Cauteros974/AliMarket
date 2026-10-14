@@ -16,7 +16,7 @@ export default function SeasonalThemeSettings() {
                 Application design
             </Text>
 
-            <Text>
+            <Text style={[styles.description, { color: colors.textSecondary }]}>
                 Choose your favorite palette or let AliMarket 
                 change the design automatically with the seasons.
             </Text>
