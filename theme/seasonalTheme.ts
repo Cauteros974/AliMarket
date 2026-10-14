@@ -64,5 +64,11 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         border: "#EEDCC6",
         success: "#348052",
         danger: "#C44545",
+    },
+    
+    winter: {
+        background: "#F3F8FD",
+        surface: "#FFFFFF",
+        surfaceElevated: "#E2EEFA",
     }
 }
