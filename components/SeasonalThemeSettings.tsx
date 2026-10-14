@@ -134,6 +134,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         alignItems: "center",
         justifyContent: "center",
-        
+        gap: 10,
     },
 })
