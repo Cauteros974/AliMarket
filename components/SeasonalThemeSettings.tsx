@@ -136,4 +136,11 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         gap: 5,
     },
+    emoji: {
+        fontSize: 23,
+    },
+    optionText: {
+        fontSize: 15,
+        fontWeight: "600"
+    }
 })
