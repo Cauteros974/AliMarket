@@ -73,5 +73,8 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         primary: "#367BB7",
         primaryPressed: "#245F94",
         onPrimary: "#FFFFFF",
+        accent: "#A9D8F5",
+        text: "#1D3044",
+        textSecondary: "#6788ab",
     }
 }
