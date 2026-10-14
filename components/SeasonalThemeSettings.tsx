@@ -84,6 +84,13 @@ export default function SeasonalThemeSettings() {
                         { backgroundColor: colors.primary },
                     ]}
                 />
+
+                <View>
+                    <Text>
+                        {SEASON_EMOJIS}
+                        {SEASON_LABELS}
+                    </Text>
+                </View>
             </View>
         </View>
     )
