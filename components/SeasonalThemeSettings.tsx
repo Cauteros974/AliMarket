@@ -14,6 +14,7 @@ const OPTIONS: {
 }[] = [
   { value: "auto", label: "Авто", emoji: "🗓️" },
   { value: "spring", label: "Весна", emoji: "🌱" },
+  { value: "summer", label: "Лето", emoji: "☀️" },
 ];
 
 export default function SeasonalThemeSettings() {
