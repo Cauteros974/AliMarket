@@ -142,5 +142,10 @@ const styles = StyleSheet.create({
     optionText: {
         fontSize: 13,
         fontWeight: "600"
-    }
+    },
+    checkmark: {
+        position: "absolute",
+        top: 5,
+        right: 10,
+    },
 })
