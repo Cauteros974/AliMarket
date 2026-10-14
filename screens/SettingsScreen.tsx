@@ -3,6 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { AppTheme, Locale } from "../types/shop";
+import SeasonalThemeSettings from "../components/SeasonalThemeSettings";
 
 const locales: {label: string, value: Locale}[] = [
     { label: "English", value: "en" },
@@ -52,6 +53,8 @@ export default function SettingsScreen() {
                         </Pressable>
                     ))}
                 </View>
+
+                <SeasonalThemeSettings />
 
                 <Text style={[styles.sectionTitle, isDark && styles.darkText]}>Language</Text>
 

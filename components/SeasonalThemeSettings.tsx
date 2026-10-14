@@ -12,11 +12,11 @@ const OPTIONS: {
   label: string;
   emoji: string;
 }[] = [
-  { value: "auto", label: "Авто", emoji: "🗓️" },
-  { value: "spring", label: "Весна", emoji: "🌱" },
-  { value: "summer", label: "Лето", emoji: "☀️" },
-  { value: "autumn", label: "Осень", emoji: "🍂" },
-  { value: "winter", label: "Зима", emoji: "❄️" },
+    {value: "auto", label: "Auto", emoji: "🗓️" },
+    { value: "spring", label: "Spring", emoji: "🌱" },
+    { value: "summer", label: "Summer", emoji: "☀️" },
+    { value: "autumn", label: "Autumn", emoji: "🍂" },
+    { value: "winter", label: "Winter", emoji: "❄️" },
 ];
 
 export default function SeasonalThemeSettings() {
