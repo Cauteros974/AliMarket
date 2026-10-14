@@ -37,6 +37,6 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
     summer: {
         background: "#F1FAFC",
         surface: "#FFFFFF",
-        surfaceElevated: "#b5f0f3",
+        surfaceElevated: "#DFF4F5",
     }
 }
