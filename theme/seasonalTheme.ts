@@ -44,5 +44,8 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         accent: "#F4CB62",
         text: "#17363C",
         textSecondary: "#617D82",
+        border: "#D2E9EB",
+        success: "#218653",
+        danger: "#C44545",
     }
 }
