@@ -308,7 +308,7 @@ export default function HomeScreen({ navigation }: Props) {
           renderItem={({ item, index }) => (
             <AnimatedProductCard
               index={index}
-              staggerDelay={90}
+              staggerDelay={80}
             >
               <ProductCard 
                 product={item}
