@@ -8,6 +8,8 @@ type SeasonalThemeState = {
     mode: SeasonMode;
 
     setMode: string;
+
+    resetToAuto: () => void;
 }
 
 export const useSeasonalThemeStore = create<SeasonalThemeState>() {
@@ -16,6 +18,8 @@ export const useSeasonalThemeStore = create<SeasonalThemeState>() {
             mode: "auto",
 
             setMode: (mode) => set({mode}),
+
+            resetToAuto: () => set({mode: "auto"}),
         })
     )
 }
