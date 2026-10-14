@@ -102,7 +102,7 @@ export function getCurrentSeason(date: Date = new Date()): Season {
 }
 
 /** Season names for the settings interface. */
-export const SEASON_LABEL: Record<Season, string> = {
+export const SEASON_LABELS: Record<Season, string> = {
     spring: "Spring",
     summer: "Summer",
     autumn: "Autumn",
