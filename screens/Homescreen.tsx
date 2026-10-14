@@ -1,23 +1,37 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Animated, Easing, FlatList, Pressable, ScrollView, StyleSheet, Text, View, } from "react-native";
+import {
+  Animated,
+  Easing,
+  FlatList,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import AnimatedProductCard from "../components/AnimatedProductCard";
 import CategoryChip from "../components/CategoryChip";
 import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
-import AnimatedProductCard from "../components/AnimatedProductCard";
 import SearchSuggestions from "../components/SearchSuggestions";
 import SectionHeader from "../components/SectionHeader";
 import { categories, products } from "../data/products";
-import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
+import { useSeasonalTheme } from "../store/useSeasonalThemeStore";
+import { useShopStore } from "../store/useShopStore";
 
 type Props = {
   navigation: any;
 };
 
-// Advertising banners
-const banners = [
+type ThemeColors = ReturnType<typeof useSeasonalTheme>["colors"];
+
+const WHITE = "#FFFFFF";
+
+// Advertising banners (gradient colors depend on the current season)
+const getBanners = (colors: ThemeColors) => [
   {
     id: "summer",
     label: "Summer sale",
@@ -47,12 +61,23 @@ const banners = [
   },
 ];
 
+const seasonText: Record<string, string> = {
+  autumn: "🍂 Cozy autumn finds",
+  winter: "❄️ Winter discoveries",
+  spring: "🌱 Time for a fresh start",
+  summer: "☀️ Summer finds",
+};
+
 export default function HomeScreen({ navigation }: Props) {
+  // Theme
+  const { colors, season } = useSeasonalTheme();
+  const styles = useMemo(() => createStyles(colors), [colors]);
+  const banners = useMemo(() => getBanners(colors), [colors]);
+
+  // Store
   const searchQuery = useShopStore((state) => state.searchQuery);
   const favoriteIds = useShopStore((state) => state.favoriteIds);
-  const recentlyViewedIds = useShopStore(
-    (state) => state.recentlyViewedIds
-  );
+  const recentlyViewedIds = useShopStore((state) => state.recentlyViewedIds);
 
   const setSearchQuery = useShopStore((state) => state.setSearchQuery);
   const setSelectedCategoryId = useShopStore(
@@ -60,8 +85,7 @@ export default function HomeScreen({ navigation }: Props) {
   );
   const toggleFavorite = useShopStore((state) => state.toggleFavorite);
 
-  
-  // Benner
+  // Banner
   const [bannerIndex, setBannerIndex] = useState(0);
 
   const bannerOpacity = useRef(new Animated.Value(1)).current;
@@ -122,7 +146,7 @@ export default function HomeScreen({ navigation }: Props) {
 
     return () => clearInterval(interval);
   }, [bannerIndex]);
-  
+
   // Products
   const flashDeals = useMemo(
     () => products.filter((item) => item.oldPrice).slice(0, 4),
@@ -137,7 +161,6 @@ export default function HomeScreen({ navigation }: Props) {
         .slice(0, 4),
     [recentlyViewedIds]
   );
-  
 
   function openCategory(categoryId: string) {
     setSelectedCategoryId(categoryId);
@@ -171,9 +194,7 @@ export default function HomeScreen({ navigation }: Props) {
           <View>
             <Text style={styles.eyebrow}>AliMarket</Text>
 
-            <Text style={styles.title}>
-              Find anything you need
-            </Text>
+            <Text style={styles.title}>Find anything you need</Text>
           </View>
 
           <Pressable
@@ -194,7 +215,7 @@ export default function HomeScreen({ navigation }: Props) {
           visible={searchFocused}
           onSelectProduct={(productId) => {
             setSearchFocused(false);
-            
+
             navigation.navigate("ProductDetails", {
               productId,
             });
@@ -209,6 +230,11 @@ export default function HomeScreen({ navigation }: Props) {
             });
           }}
         />
+
+        {/* Seasonal badge */}
+        <View style={styles.seasonBadge}>
+          <Text style={styles.seasonText}>{seasonText[season] ?? ""}</Text>
+        </View>
 
         {/* --------------------------------------------------
             ANIMATED BANNER
@@ -234,22 +260,15 @@ export default function HomeScreen({ navigation }: Props) {
               end={{ x: 1, y: 1 }}
               style={styles.banner}
             >
-              <Text style={styles.bannerLabel}>
-                {currentBanner.label}
-              </Text>
+              <Text style={styles.bannerLabel}>{currentBanner.label}</Text>
 
-              <Text style={styles.bannerTitle}>
-                {currentBanner.title}
-              </Text>
+              <Text style={styles.bannerTitle}>{currentBanner.title}</Text>
 
               <Text style={styles.bannerSubtitle}>
                 {currentBanner.subtitle}
               </Text>
 
-              <Pressable
-                onPress={openBanner}
-                style={styles.bannerButton}
-              >
+              <Pressable onPress={openBanner} style={styles.bannerButton}>
                 <Text style={styles.bannerButtonText}>
                   {currentBanner.button}
                 </Text>
@@ -263,10 +282,7 @@ export default function HomeScreen({ navigation }: Props) {
               <Pressable
                 key={banner.id}
                 onPress={() => selectBanner(index)}
-                style={[
-                  styles.dot,
-                  index === bannerIndex && styles.activeDot,
-                ]}
+                style={[styles.dot, index === bannerIndex && styles.activeDot]}
               />
             ))}
           </View>
@@ -279,10 +295,7 @@ export default function HomeScreen({ navigation }: Props) {
           onActionPress={() => navigation.navigate("Catalog")}
         />
 
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-        >
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {categories.map((category) => (
             <CategoryChip
               key={category.id}
@@ -293,10 +306,7 @@ export default function HomeScreen({ navigation }: Props) {
         </ScrollView>
 
         {/* Flash Deals */}
-        <SectionHeader
-          title="Flash deals"
-          action="Today"
-        />
+        <SectionHeader title="Flash deals" action="Today" />
 
         <FlatList
           data={flashDeals}
@@ -306,16 +316,13 @@ export default function HomeScreen({ navigation }: Props) {
           columnWrapperStyle={styles.gridRow}
           contentContainerStyle={styles.grid}
           renderItem={({ item, index }) => (
-            <AnimatedProductCard
-              index={index}
-              staggerDelay={80}
-            >
-              <ProductCard 
+            <AnimatedProductCard index={index} staggerDelay={80}>
+              <ProductCard
                 product={item}
                 isFavorite={favoriteIds.includes(item.id)}
-                onPress={() => 
+                onPress={() =>
                   navigation.navigate("ProductDetails", {
-                    productId: item.id
+                    productId: item.id,
                   })
                 }
                 onToggleFavorite={() => toggleFavorite(item.id)}
@@ -348,9 +355,7 @@ export default function HomeScreen({ navigation }: Props) {
                       productId: item!.id,
                     })
                   }
-                  onToggleFavorite={() =>
-                    toggleFavorite(item!.id)
-                  }
+                  onToggleFavorite={() => toggleFavorite(item!.id)}
                 />
               )}
             />
@@ -361,134 +366,150 @@ export default function HomeScreen({ navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: colors.background,
-  },
+const createStyles = (colors: ThemeColors) =>
+  StyleSheet.create({
+    safeArea: {
+      flex: 1,
+      backgroundColor: colors.background,
+    },
 
-  content: {
-    paddingHorizontal: 18,
-    paddingBottom: 28,
-  },
+    content: {
+      paddingHorizontal: 18,
+      paddingBottom: 28,
+    },
 
-  header: {
-    marginTop: 8,
-    marginBottom: 18,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
+    header: {
+      marginTop: 8,
+      marginBottom: 18,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
 
-  eyebrow: {
-    color: colors.primary,
-    fontSize: 14,
-    fontWeight: "900",
-  },
+    eyebrow: {
+      color: colors.primary,
+      fontSize: 14,
+      fontWeight: "900",
+    },
 
-  title: {
-    color: colors.text,
-    fontSize: 28,
-    fontWeight: "900",
-    marginTop: 4,
-  },
+    title: {
+      color: colors.text,
+      fontSize: 28,
+      fontWeight: "900",
+      marginTop: 4,
+    },
 
-  iconButton: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    backgroundColor: colors.surface,
-    borderWidth: 1,
-    borderColor: colors.border,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    iconButton: {
+      width: 44,
+      height: 44,
+      borderRadius: 22,
+      backgroundColor: colors.surface,
+      borderWidth: 1,
+      borderColor: colors.border,
+      alignItems: "center",
+      justifyContent: "center",
+    },
 
-  iconText: {
-    color: colors.primary,
-    fontSize: 20,
-    fontWeight: "900",
-  },
+    iconText: {
+      color: colors.primary,
+      fontSize: 20,
+      fontWeight: "900",
+    },
 
-  bannerContainer: {
-    marginTop: 18,
-    position: "relative",
-  },
+    seasonBadge: {
+      alignSelf: "flex-start",
+      backgroundColor: colors.surfaceElevated,
+      paddingHorizontal: 14,
+      paddingVertical: 8,
+      borderRadius: 999,
+      marginTop: 14,
+    },
 
-  bannerAnimated: {
-    width: "100%",
-  },
+    seasonText: {
+      color: colors.text,
+      fontWeight: "800",
+      fontSize: 13,
+    },
 
-  banner: {
-    minHeight: 170,
-    borderRadius: 24,
-    padding: 18,
-    overflow: "hidden",
-  },
+    bannerContainer: {
+      marginTop: 18,
+      position: "relative",
+    },
 
-  bannerLabel: {
-    color: "rgba(255,255,255,0.8)",
-    fontSize: 13,
-    fontWeight: "800",
-    textTransform: "uppercase",
-  },
+    bannerAnimated: {
+      width: "100%",
+    },
 
-  bannerTitle: {
-    color: colors.white,
-    fontSize: 24,
-    lineHeight: 30,
-    fontWeight: "900",
-    marginTop: 8,
-    maxWidth: "86%",
-  },
+    banner: {
+      minHeight: 170,
+      borderRadius: 24,
+      padding: 18,
+      overflow: "hidden",
+    },
 
-  bannerSubtitle: {
-    color: "rgba(255,255,255,0.86)",
-    marginTop: 8,
-    fontWeight: "700",
-  },
+    bannerLabel: {
+      color: "rgba(255,255,255,0.8)",
+      fontSize: 13,
+      fontWeight: "800",
+      textTransform: "uppercase",
+    },
 
-  bannerButton: {
-    alignSelf: "flex-start",
-    backgroundColor: colors.white,
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    borderRadius: 999,
-    marginTop: 16,
-  },
+    bannerTitle: {
+      color: WHITE,
+      fontSize: 24,
+      lineHeight: 30,
+      fontWeight: "900",
+      marginTop: 8,
+      maxWidth: "86%",
+    },
 
-  bannerButtonText: {
-    color: colors.primary,
-    fontWeight: "900",
-  },
+    bannerSubtitle: {
+      color: "rgba(255,255,255,0.86)",
+      marginTop: 8,
+      fontWeight: "700",
+    },
 
-  dots: {
-    position: "absolute",
-    right: 18,
-    bottom: 14,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 6,
-  },
+    bannerButton: {
+      alignSelf: "flex-start",
+      backgroundColor: WHITE,
+      paddingHorizontal: 16,
+      paddingVertical: 10,
+      borderRadius: 999,
+      marginTop: 16,
+    },
 
-  dot: {
-    width: 7,
-    height: 7,
-    borderRadius: 4,
-    backgroundColor: "rgba(255,255,255,0.5)",
-  },
+    bannerButtonText: {
+      color: colors.primary,
+      fontWeight: "900",
+    },
 
-  activeDot: {
-    width: 20,
-    backgroundColor: colors.white,
-  },
+    dots: {
+      position: "absolute",
+      right: 18,
+      bottom: 14,
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 6,
+    },
 
-  grid: {
-    gap: 12,
-  },
+    dot: {
+      width: 7,
+      height: 7,
+      borderRadius: 4,
+      backgroundColor: "rgba(255,255,255,0.5)",
+    },
 
-  gridRow: {
-    gap: 12,
-    marginBottom: 12,
-  },
-});
+    activeDot: {
+      width: 20,
+      backgroundColor: WHITE,
+    },
+
+    grid: {
+      gap: 12,
+    },
+
+    gridRow: {
+      gap: 12,
+      marginBottom: 12,
+    },
+  });
