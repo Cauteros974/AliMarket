@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
         fontSize: 23,
     },
     optionText: {
-        fontSize: 15,
+        fontSize: 13,
         fontWeight: "600"
     }
 })
