@@ -87,5 +87,9 @@ export function getCurrentSeason(date: Date = new Date()): Season {
 
     if(month >= 2 && month <= 4) {
         return "spring";
+    };
+
+    if(month >= 3 && month <= 5) {
+        return "summer";
     }
 }
