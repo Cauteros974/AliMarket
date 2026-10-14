@@ -7,6 +7,11 @@ import {
 
 import { useSeasonalTheme } from "../store/useSeasonalThemeStore";
 
+const OPTIONS: {
+  value: SeasonMode;
+  label: string;
+}[] = []
+
 export default function SeasonalThemeSettings() {
     const {mode, setMode, colors} = useSeasonalTheme();
 
