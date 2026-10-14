@@ -6,4 +6,7 @@ export type SeasonColors = {
     background: string;
     surface: string;
     primary: string;
+    text: string;
+    border: string;
+    sucess: string;
 }
