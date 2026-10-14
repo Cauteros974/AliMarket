@@ -171,4 +171,8 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "700",
     },
+    previewDescription: {
+        fontSize: 12,
+        lineHeight: 18,
+    },
 })
