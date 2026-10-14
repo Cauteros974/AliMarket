@@ -115,5 +115,14 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: "700"
-    }
+    },
+    description: {
+        fontSize: 14,
+        lineHeight: 21,
+    },
+    options: {
+        flexDirection: "row",
+        flexWrap: "wrap",
+        gap: 8,
+    },
 })
