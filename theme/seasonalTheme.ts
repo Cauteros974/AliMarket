@@ -71,7 +71,7 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         surface: "#FFFFFF",
         surfaceElevated: "#E2EEFA",
         primary: "#367BB7",
-        primaryPressed: "#2673b7",
+        primaryPressed: "#245F94",
         onPrimary: "#FFFFFF",
     }
 }
