@@ -162,5 +162,9 @@ const styles = StyleSheet.create({
         width: 12,
         height: 42,
         borderRadius: 6,
-    }
+    },
+    previewContent: {
+        flex: 1,
+        gap: 4,
+    },
 })
