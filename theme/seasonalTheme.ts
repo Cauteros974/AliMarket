@@ -18,6 +18,7 @@ export type SeasonColors = {
 };
 
 export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
+    // Spring — fresh green and minty ingredients.
     spring: {
         background: "#F3F8F1",
         surface: "#FFFFFF",
@@ -31,5 +32,11 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         border: "#D8E5D5",
         success: "#23834B",
         danger: "#C44545",
+    },
+
+    summer: {
+        background: "#F1FAFC",
+        surface: "#FFFFFF",
+        surfaceElevated: "#bfedef",
     }
 }
