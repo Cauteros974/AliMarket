@@ -13,7 +13,7 @@ export type SeasonColors = {
     text: string;
     textSecondary: string;
     border: string;
-    sucess: string;
+    success: string;
     danger: string;
 };
 
