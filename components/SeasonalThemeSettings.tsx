@@ -65,8 +65,17 @@ export default function SeasonalThemeSettings() {
                                 </Text>
                             )}
                         </Pressable>
-                    )
+                    );
                 })}
+            </View>
+
+            <View>
+                <View
+                    style={[
+                        styles.previewDot,
+                        { backgroundColor: colors.primary },
+                    ]}
+                />
             </View>
         </View>
     )
