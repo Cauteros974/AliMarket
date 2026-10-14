@@ -40,6 +40,19 @@ export default function SeasonalThemeSettings() {
                     return(
                         <Pressable>
                             <Text style={styles.emoji}>{option.emoji}</Text>
+                            
+                            <Text
+                                style={[
+                                    styles.optionText,
+                                    {
+                                        color: selected
+                                        ? colors.onPrimary
+                                        : colors.text,
+                                    },
+                                ]}
+                            >
+                                {option.label}
+                            </Text>
                         </Pressable>
                     )
                 })}
