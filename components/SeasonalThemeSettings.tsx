@@ -20,7 +20,7 @@ const OPTIONS: {
 ];
 
 export default function SeasonalThemeSettings() {
-    const {mode, setMode, colors} = useSeasonalTheme();
+    const { mode, season, colors, setMode } = useSeasonalTheme();
 
     return(
         <View style={styles.container}>
@@ -36,6 +36,12 @@ export default function SeasonalThemeSettings() {
             <View style={styles.options}>
                 {OPTIONS.map((option) => {
                     const selected = mode === option.value;
+
+                    return(
+                        <Pressable>
+                            <Text style={styles.emoji}>{option.emoji}</Text>
+                        </Pressable>
+                    )
                 })}
             </View>
         </View>
