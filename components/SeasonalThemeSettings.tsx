@@ -109,5 +109,11 @@ export default function SeasonalThemeSettings() {
 }
 
 const styles = StyleSheet.create({
-
+    container: {
+        gap: 12
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: "700"
+    }
 })
