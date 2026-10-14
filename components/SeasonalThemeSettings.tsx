@@ -129,5 +129,7 @@ const styles = StyleSheet.create({
         minWidth: "30%",
         flexGrow: 1,
         borderWidth: 1,
+        borderRadius: 14,
+        paddingVertical: 12,
     },
 })
