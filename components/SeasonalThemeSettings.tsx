@@ -91,7 +91,12 @@ export default function SeasonalThemeSettings() {
                         {SEASON_LABELS[season]}
                     </Text>
 
-                    <Text>
+                    <Text
+                        style={[
+                            styles.previewDescription,
+                            { color: colors.textSecondary },
+                        ]}
+                    >
                         {mode === "auto"
                             ? "The season is determined automatically based on the date."
                             : "You selected the season manually. Automatic switching is disabled."
