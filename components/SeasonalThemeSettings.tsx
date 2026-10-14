@@ -16,6 +16,7 @@ const OPTIONS: {
   { value: "spring", label: "Весна", emoji: "🌱" },
   { value: "summer", label: "Лето", emoji: "☀️" },
   { value: "autumn", label: "Осень", emoji: "🍂" },
+  { value: "winter", label: "Зима", emoji: "❄️" },
 ];
 
 export default function SeasonalThemeSettings() {
