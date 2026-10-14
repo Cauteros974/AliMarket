@@ -158,4 +158,8 @@ const styles = StyleSheet.create({
         borderRadius: 14,
         padding: 14,
     },
+    previewDot: {
+        width: 20,
+        height: 20
+    }
 })
