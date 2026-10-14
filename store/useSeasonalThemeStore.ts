@@ -27,3 +27,11 @@ export const useSeasonalThemeStore = create<SeasonalThemeState>() (
         }
     )
 );
+
+export function useSeasonalThemeStore() {
+    const mode = useSeasonalThemeStore((state) => state.mode);
+
+    return{
+        mode
+    }
+}
