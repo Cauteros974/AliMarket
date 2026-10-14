@@ -150,4 +150,9 @@ const styles = StyleSheet.create({
         fontSize: 13,
         fontWeight: "700",
     },
+    preview: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 12,
+    },
 })
