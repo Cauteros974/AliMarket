@@ -80,4 +80,8 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         success: "#23834B",
         danger: "#C44545",
     }
+};
+
+export function getCurrentSeason(date: Date = new Date()): Season {
+    const month = date.Month();
 }
