@@ -34,6 +34,7 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         danger: "#C44545",
     },
 
+    // Summer — turquoise and sunny shades.
     summer: {
         background: "#F1FAFC",
         surface: "#FFFFFF",
@@ -47,5 +48,11 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         border: "#D2E9EB",
         success: "#218653",
         danger: "#C44545",
+    },
+
+    autumn: {
+        background: "#FFF8EF",
+        surface: "#FFFFFF",
+        surfaceElevated: "#FBEBD7",
     }
 }
