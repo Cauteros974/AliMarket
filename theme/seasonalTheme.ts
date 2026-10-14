@@ -15,4 +15,12 @@ export type SeasonColors = {
     border: string;
     sucess: string;
     danger: string;
+};
+
+export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
+    spring: {
+        background: "#F3F8F1",
+        surface: "#FFFFFF",
+        surfaceElevated: "#E7F2E3",
+    }
 }
