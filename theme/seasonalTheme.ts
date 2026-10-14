@@ -25,5 +25,7 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         primary: "#39845A",
         primaryPressed: "#286A45",
         onPrimary: "#FFFFFF",
+        accent: "#A6CFA1",
+        text: "#203629",
     }
 }
