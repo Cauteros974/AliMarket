@@ -146,6 +146,6 @@ const styles = StyleSheet.create({
     checkmark: {
         position: "absolute",
         top: 5,
-        right: 10,
+        right: 8,
     },
 })
