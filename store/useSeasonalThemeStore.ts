@@ -31,10 +31,11 @@ export const useSeasonalThemeStore = create<SeasonalThemeState>() (
 export function useSeasonalThemeStore() {
     const mode = useSeasonalThemeStore((state) => state.mode);
     const setMode = useSeasonalThemeStore((state) => state.setMode);
-
+    const resetToAuto = useSeasonalThemeStore((state) => state.resetToAuto);
 
     return{
         mode,
         setMode,
+        resetToAuto
     }
 }
