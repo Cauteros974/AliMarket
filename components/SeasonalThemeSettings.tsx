@@ -69,7 +69,15 @@ export default function SeasonalThemeSettings() {
                 })}
             </View>
 
-            <View>
+            <View
+                style={[
+                    styles.preview,
+                    {
+                        backgroundColor: colors.surfaceElevated,
+                        borderColor: colors.border,
+                    }
+                ]}
+            >
                 <View
                     style={[
                         styles.previewDot,
