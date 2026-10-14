@@ -50,6 +50,7 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         danger: "#C44545",
     },
 
+    // Autumn — amber, orange, and cream.
     autumn: {
         background: "#FFF8EF",
         surface: "#FFFFFF",
