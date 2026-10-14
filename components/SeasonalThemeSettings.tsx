@@ -53,6 +53,17 @@ export default function SeasonalThemeSettings() {
                             >
                                 {option.label}
                             </Text>
+
+                            {selected && (
+                                <Text
+                                    style={[
+                                        styles.checkmark,
+                                        { color: colors.onPrimary },
+                                    ]}
+                                >
+                                    ✓
+                                </Text>
+                            )}
                         </Pressable>
                     )
                 })}
