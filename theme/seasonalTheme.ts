@@ -91,5 +91,9 @@ export function getCurrentSeason(date: Date = new Date()): Season {
 
     if(month >= 5 && month <= 7) {
         return "summer";
-    }
+    };
+
+    if (month >= 8 && month <= 10) {
+        return "autumn";
+    };
 }
