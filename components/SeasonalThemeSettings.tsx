@@ -131,5 +131,9 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 14,
         paddingVertical: 12,
+        paddingHorizontal: 10,
+        alignItems: "center",
+        justifyContent: "center",
+        
     },
 })
