@@ -305,8 +305,11 @@ export default function HomeScreen({ navigation }: Props) {
           scrollEnabled={false}
           columnWrapperStyle={styles.gridRow}
           contentContainerStyle={styles.grid}
-          renderItem={({ item }) => (
-            <AnimatedProductCard>
+          renderItem={({ item, index }) => (
+            <AnimatedProductCard
+              index={index}
+              staggerDelay={90}
+            >
               <ProductCard 
                 product={item}
                 isFavorite={favoriteIds.includes(item.id)}
