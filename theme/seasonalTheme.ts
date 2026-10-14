@@ -99,3 +99,9 @@ export function getCurrentSeason(date: Date = new Date()): Season {
     };
 }
 
+export const SEASON_LABEL: Record<Season, string> = {
+    spring: "Spring",
+    summer: "Summer",
+    autumn: "Autumn",
+    winter: "Winter",
+}
