@@ -107,4 +107,11 @@ export const SEASON_LABEL: Record<Season, string> = {
     summer: "Summer",
     autumn: "Autumn",
     winter: "Winter",
+};
+
+export const SEASON_EMOJIS: Record<Season, string> = {
+    spring: "🌱",
+    summer: "☀️",
+    autumn: "🍂",
+    winter: "❄️",
 }
