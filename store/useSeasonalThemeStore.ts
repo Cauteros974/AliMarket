@@ -20,6 +20,10 @@ export const useSeasonalThemeStore = create<SeasonalThemeState>() {
             setMode: (mode) => set({mode}),
 
             resetToAuto: () => set({mode: "auto"}),
-        })
+        }),
+        {
+            name: "alimarket-seasonal-theme",
+            storage: createJSONStorage(() => AsyncStorage),
+        }
     )
 }
