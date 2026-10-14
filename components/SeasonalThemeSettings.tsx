@@ -90,6 +90,13 @@ export default function SeasonalThemeSettings() {
                         {SEASON_EMOJIS[season]} Current topic:{" "}
                         {SEASON_LABELS[season]}
                     </Text>
+
+                    <Text>
+                        {mode === "auto"
+                            ? "The season is determined automatically based on the date."
+                            : "You selected the season manually. Automatic switching is disabled."
+                        }
+                    </Text>
                 </View>
             </View>
         </View>
