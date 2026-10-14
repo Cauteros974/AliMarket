@@ -85,8 +85,8 @@ export default function SeasonalThemeSettings() {
                     ]}
                 />
 
-                <View>
-                    <Text>
+                <View style={styles.previewContent}>
+                    <Text style={[styles.previewTitle, { color: colors.text }]}>
                         {SEASON_EMOJIS[season]} Current topic:{" "}
                         {SEASON_LABELS[season]}
                     </Text>
