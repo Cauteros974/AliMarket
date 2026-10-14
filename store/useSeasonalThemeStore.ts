@@ -7,7 +7,7 @@ import { getCurrentSeason, SEASONAL_THEMES, type Season, type SeasonMode } from 
 type SeasonalThemeState = {
     mode: SeasonMode;
 
-    setMode: string;
+    setMode: (mode: SeasonMode) => void;
 
     resetToAuto: () => void;
 }
