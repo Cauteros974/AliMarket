@@ -97,6 +97,8 @@ export function getCurrentSeason(date: Date = new Date()): Season {
     if (month >= 8 && month <= 10) {
         return "autumn";
     };
+
+    return "winter";
 }
 
 export const SEASON_LABEL: Record<Season, string> = {
