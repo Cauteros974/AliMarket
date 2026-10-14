@@ -86,6 +86,6 @@ export function getCurrentSeason(date: Date = new Date()): Season {
     const month = date.getMonth();
 
     if(month >= 2 && month <= 4) {
-        return("spring");
+        return "spring";
     }
 }
