@@ -11,6 +11,8 @@ export type SeasonColors = {
     onPrimary: string;
     accent: string;
     text: string;
+    textSecondary: string;
     border: string;
     sucess: string;
+    danger: string;
 }
