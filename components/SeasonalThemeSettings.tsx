@@ -11,7 +11,10 @@ const OPTIONS: {
   value: SeasonMode;
   label: string;
   emoji: string;
-}[] = []
+}[] = [
+  { value: "auto", label: "Авто", emoji: "🗓️" },
+  { value: "spring", label: "Весна", emoji: "🌱" },
+];
 
 export default function SeasonalThemeSettings() {
     const {mode, setMode, colors} = useSeasonalTheme();
