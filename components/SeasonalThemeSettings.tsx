@@ -87,7 +87,7 @@ export default function SeasonalThemeSettings() {
 
                 <View>
                     <Text>
-                        {SEASON_EMOJIS[season]}
+                        {SEASON_EMOJIS[season]} Current topic:{" "}
                         {SEASON_LABELS[season]}
                     </Text>
                 </View>
