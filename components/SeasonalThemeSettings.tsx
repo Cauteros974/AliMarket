@@ -125,4 +125,9 @@ const styles = StyleSheet.create({
         flexWrap: "wrap",
         gap: 8,
     },
+    option: {
+        minWidth: "30%",
+        flexGrow: 1,
+        borderWidth: 1,
+    },
 })
