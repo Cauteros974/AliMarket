@@ -11,6 +11,9 @@ type SeasonalThemeContextValue = {
   transition: Animated.Value;
 };
 
+const SeasonalThemeContext =
+  createContext<SeasonalThemeContextValue | null>(null);
+
 export function SeasonalThemeProvider({
     children,
 }: {
@@ -65,5 +68,11 @@ export function SeasonalThemeProvider({
             transition,
         }),
         [season, colors, transition]
+    )
+
+    return(
+        <SeasonalThemeContext.Provider>
+
+        </SeasonalThemeContext.Provider>
     )
 }
