@@ -71,8 +71,8 @@ export function SeasonalThemeProvider({
     )
 
     return(
-        <SeasonalThemeContext.Provider>
-
+        <SeasonalThemeContext.Provider value={value}>
+            {children}
         </SeasonalThemeContext.Provider>
     )
 }
