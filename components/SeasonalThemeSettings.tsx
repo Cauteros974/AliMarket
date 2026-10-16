@@ -43,6 +43,18 @@ export default function SeasonalThemeSettings() {
                             accessibilityRole="radio"
                             accessibilityState={{ selected }}
                             onPress={() => setMode(option.value)}
+                            style={({pressed}) => {
+                                styles.option,
+                                {
+                                    backgroundColor: selected
+                                        ? colors.primary
+                                        : colors.surface,
+                                    borderColor: selected
+                                        ? colors.primary
+                                        : colors.border,
+                                    opacity: pressed ? 0.8 : 1,
+                                },
+                            }}
                         >
                             <Text style={styles.emoji}>{option.emoji}</Text>
                             
