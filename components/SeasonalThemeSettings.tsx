@@ -38,7 +38,10 @@ export default function SeasonalThemeSettings() {
                     const selected = mode === option.value;
 
                     return(
-                        <Pressable>
+                        <Pressable
+                            key={option.value}
+                            accessibilityRole="radio"
+                        >
                             <Text style={styles.emoji}>{option.emoji}</Text>
                             
                             <Text
