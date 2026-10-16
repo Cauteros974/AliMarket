@@ -3,6 +3,7 @@ import { Animated,AppState, type AppStateStatus } from "react-native"
 
 import { getCurrentSeason, SEASONAL_THEMES, type Season, type SeasonColors, } from "./seasonalTheme";
 import { useSeasonalThemeStore } from "../store/useSeasonalThemeStore";
+import { set } from "zod";
 
 type SeasonalThemeContextValue = {
   season: Season;
@@ -46,4 +47,14 @@ export function SeasonalThemeProvider({
         mode === "auto" ? systemSeason : mode;
 
     const colors = SEASONAL_THEMES[season];
+
+    useEffect(() => {
+        transition.setValue(0);
+
+        Animated.timing(transition, {
+            toValue: 1,
+            duration: 450,
+            useNativeDriver: false,  
+        })
+    })
 }
