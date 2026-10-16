@@ -84,4 +84,5 @@ export function useSeasonalThemeContext() {
             "useSeasonalThemeContext must be used inside SeasonalThemeProvider"
         );
     }
+    return context;
 }
