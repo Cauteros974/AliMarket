@@ -29,6 +29,12 @@ export function SeasonalThemeProvider({
                     updateSeason();
                 }
             }
-        )
-    })
+        );
+
+        updateSeason();
+
+        return () => subscription.remove();
+    }, []);
+
+    const seoson: Season = mode === "auto" ? systemSeason : mode;
 }
