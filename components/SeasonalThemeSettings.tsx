@@ -43,7 +43,7 @@ export default function SeasonalThemeSettings() {
                             accessibilityRole="radio"
                             accessibilityState={{ selected }}
                             onPress={() => setMode(option.value)}
-                            style={({pressed}) => {
+                            style={({ pressed }) => [
                                 styles.option,
                                 {
                                     backgroundColor: selected
@@ -54,7 +54,7 @@ export default function SeasonalThemeSettings() {
                                         : colors.border,
                                     opacity: pressed ? 0.8 : 1,
                                 },
-                            }}
+                            ]}
                         >
                             <Text style={styles.emoji}>{option.emoji}</Text>
                             
