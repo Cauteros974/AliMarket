@@ -63,6 +63,7 @@ export function SeasonalThemeProvider({
             season,
             colors,
             transition,
-        })
+        }),
+        [season, colors, transition]
     )
 }
