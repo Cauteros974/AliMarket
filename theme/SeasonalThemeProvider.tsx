@@ -14,4 +14,12 @@ export function SeasonalThemeProvider({
     const [systemSeason, setSystemSeason] = useState<Season>(
         () => getCurrentSeason()
     );
+
+    const transition = useRef(new Animated.Value(1)).current;
+
+    useEffect(() => {
+        const updateSeason = () => {
+            setSystemSeason(getCurrentSeason());
+        }
+    })
 }
