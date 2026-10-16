@@ -4,6 +4,12 @@ import { Animated,AppState, type AppStateStatus } from "react-native"
 import { getCurrentSeason, SEASONAL_THEMES, type Season, type SeasonColors, } from "./seasonalTheme";
 import { useSeasonalThemeStore } from "../store/useSeasonalThemeStore";
 
+type SeasonalThemeContextValue = {
+  season: Season;
+  colors: SeasonColors;
+  transition: Animated.Value;
+};
+
 export function SeasonalThemeProvider({
     children,
 }: {
@@ -36,5 +42,8 @@ export function SeasonalThemeProvider({
         return () => subscription.remove();
     }, []);
 
-    const seoson: Season = mode === "auto" ? systemSeason : mode;
+    const seoson: Season = 
+        mode === "auto" ? systemSeason : mode;
+
+    const colors = SEASONAL_THEMES[season];
 }
