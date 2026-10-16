@@ -78,4 +78,10 @@ export function SeasonalThemeProvider({
 
 export function useSeasonalThemeContext() {
     const context = useContext(SeasonalThemeContext);
+
+    if (!context) {
+        throw new Error(
+            "useSeasonalThemeContext must be used inside SeasonalThemeProvider"
+        );
+    }
 }
