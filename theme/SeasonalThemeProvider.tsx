@@ -57,4 +57,12 @@ export function SeasonalThemeProvider({
             useNativeDriver: false,  
         }).start();
     }, [season, transition])
+
+    const value = useMemo(
+        () => ({
+            season,
+            colors,
+            transition,
+        })
+    )
 }
