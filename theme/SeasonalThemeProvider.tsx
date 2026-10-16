@@ -3,7 +3,6 @@ import { Animated,AppState, type AppStateStatus } from "react-native"
 
 import { getCurrentSeason, SEASONAL_THEMES, type Season, type SeasonColors, } from "./seasonalTheme";
 import { useSeasonalThemeStore } from "../store/useSeasonalThemeStore";
-import { set } from "zod";
 
 type SeasonalThemeContextValue = {
   season: Season;
@@ -74,5 +73,9 @@ export function SeasonalThemeProvider({
         <SeasonalThemeContext.Provider value={value}>
             {children}
         </SeasonalThemeContext.Provider>
-    )
+    );
+}
+
+export function useSeasonalThemeContext() {
+    const context = useContext(SeasonalThemeContext);
 }
