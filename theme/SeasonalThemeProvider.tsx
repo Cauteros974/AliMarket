@@ -24,11 +24,11 @@ export function SeasonalThemeProvider({
 
         const subscription = AppState.addEventListener(
             "change",
-            (state: AppStateStatus) => (
+            (state: AppStateStatus) => {
                 if (state === "active") {
                     updateSeason();
                 }
-            )
+            }
         )
     })
 }
