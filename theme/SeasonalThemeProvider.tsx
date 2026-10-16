@@ -1,4 +1,11 @@
-import React, { createContext } from "react"
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Animated,AppState, type AppStateStatus } from "react-native"
 
 import { getCurrentSeason, SEASONAL_THEMES, type Season, type SeasonColors, } from "./seasonalTheme";
@@ -10,4 +17,8 @@ export function SeasonalThemeProvider({
     children: React.ReactNode;
 }) {
     const mode = useSeasonalThemeStore((state) => state.mode);
+
+    const [systemSeason, setSystemSeason] = useState<Season>(
+        () => getCurrentSeason()
+    );
 }
