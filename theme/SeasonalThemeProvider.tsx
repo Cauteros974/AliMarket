@@ -43,7 +43,7 @@ export function SeasonalThemeProvider({
         return () => subscription.remove();
     }, []);
 
-    const seoson: Season = 
+    const season: Season = 
         mode === "auto" ? systemSeason : mode;
 
     const colors = SEASONAL_THEMES[season];
@@ -55,6 +55,6 @@ export function SeasonalThemeProvider({
             toValue: 1,
             duration: 450,
             useNativeDriver: false,  
-        })
-    })
+        }).start();
+    }, [season, transition])
 }
