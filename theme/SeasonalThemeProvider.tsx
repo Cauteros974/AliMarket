@@ -21,5 +21,14 @@ export function SeasonalThemeProvider({
         const updateSeason = () => {
             setSystemSeason(getCurrentSeason());
         }
+
+        const subscription = AppState.addEventListener(
+            "change",
+            (state: AppStateStatus) => (
+                if (state === "active") {
+                    updateSeason();
+                }
+            )
+        )
     })
 }
