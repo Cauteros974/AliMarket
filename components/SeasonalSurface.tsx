@@ -54,8 +54,17 @@ export default function SeasonalSurface({
     });
 
     return(
-        <Animated.View>
+        <Animated.View
+            {...props}
+            style={[
+                styles.container
+            ]}
+        >
             {children}
         </Animated.View>
     )
 }
+
+const styles = StyleSheet.create({
+    
+})
