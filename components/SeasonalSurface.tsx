@@ -39,7 +39,13 @@ export default function SeasonalSurface({
         setFromColor(previousColor.current);
         previousColor.current = toColor;
 
-        color.setValue(0)
+        color.setValue(0);
+
+        Animated.timing(color, {
+            toValue: 1,
+            duration: 200,
+            useNativeDriver: true,
+        })
     })
 
     return(
