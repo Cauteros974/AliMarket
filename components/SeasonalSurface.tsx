@@ -25,6 +25,10 @@ export default function SeasonalSurface({
         new Animated.Value(1)
     ).current;
 
+    const previousColor = useRef(
+        SEASONAL_THEMES[season]
+    );
+
     return(
         <Animated.View>
             {children}
