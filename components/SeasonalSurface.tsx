@@ -26,7 +26,7 @@ export default function SeasonalSurface({
     ).current;
 
     const previousColor = useRef(
-        SEASONAL_THEMES[season]
+        SEASONAL_THEMES[season][colorRole]
     );
 
     return(
