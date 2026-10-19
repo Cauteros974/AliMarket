@@ -35,6 +35,12 @@ export default function SeasonalSurface({
 
     const toColor = SEASONAL_THEMES[season][colorRole];
 
+    useEffect(() => {
+        setFromColor(previousColor.current);
+
+        color.setValue(0)
+    })
+
     return(
         <Animated.View>
             {children}
