@@ -37,7 +37,7 @@ export default function SeasonalSurface({
 
     useEffect(() => {
         setFromColor(previousColor.current);
-        previousColor.current => toColor;
+        previousColor.current = toColor;
 
         color.setValue(0)
     })
