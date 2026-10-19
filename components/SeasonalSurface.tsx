@@ -45,8 +45,8 @@ export default function SeasonalSurface({
             toValue: 1,
             duration: 450,
             useNativeDriver: false,
-        })
-    })
+        }).start()
+    }, [season, toColor])
 
     return(
         <Animated.View>
