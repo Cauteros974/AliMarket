@@ -67,6 +67,6 @@ export default function SeasonalSurface({
 
 const styles = StyleSheet.create({
     container: {
-        borderRadius: 12,
+        borderRadius: 20,
     }
 })
