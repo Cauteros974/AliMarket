@@ -13,5 +13,7 @@ type Props = ViewProps & {
 }
 
 export default function SeasonalSurface({
+    children
+}: Props) {
     const {season} = useSeasonalThemeContext();
-})
+}
