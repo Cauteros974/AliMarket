@@ -29,7 +29,7 @@ export default function SeasonalSurface({
         SEASONAL_THEMES[season][colorRole]
     );
 
-    const [fromColor, FromColor] = React.useState(
+    const [fromColor, setFromColor] = React.useState(
         previousColor.current
     );
 
