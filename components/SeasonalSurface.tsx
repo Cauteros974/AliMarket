@@ -10,10 +10,18 @@ import { useSeasonalThemeContext } from "../theme/SeasonalThemeProvider";
 
 type Props = ViewProps & {
     children?: React.ReactNode;
+    colorRole?: "background" | "surface" | "surfaceElevated";
 }
 
 export default function SeasonalSurface({
-    children
+    children,
+    colorRole
 }: Props) {
     const {season} = useSeasonalThemeContext();
+
+    return(
+        <Animated.View>
+            {children}
+        </Animated.View>
+    )
 }
