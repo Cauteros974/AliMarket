@@ -29,6 +29,10 @@ export default function SeasonalSurface({
         SEASONAL_THEMES[season][colorRole]
     );
 
+    const [fromColor, FromColor] = React.useState(
+        previousColor.current
+    );
+
     return(
         <Animated.View>
             {children}
