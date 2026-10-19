@@ -33,6 +33,8 @@ export default function SeasonalSurface({
         previousColor.current
     );
 
+    const toColor = SEASONAL_THEMES[season][colorRole];
+
     return(
         <Animated.View>
             {children}
