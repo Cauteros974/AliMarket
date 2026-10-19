@@ -43,7 +43,7 @@ export default function SeasonalSurface({
 
         Animated.timing(color, {
             toValue: 1,
-            duration: 200,
+            duration: 300,
             useNativeDriver: true,
         })
     })
