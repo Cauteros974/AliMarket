@@ -15,9 +15,15 @@ type Props = ViewProps & {
 
 export default function SeasonalSurface({
     children,
-    colorRole
+    colorRole = "surface",
+    style,
+    ...props
 }: Props) {
     const {season} = useSeasonalThemeContext();
+
+    const color = useRef(
+        new Animated.Value(1)
+    ).current;
 
     return(
         <Animated.View>
