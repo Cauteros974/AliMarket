@@ -48,6 +48,11 @@ export default function SeasonalSurface({
         }).start()
     }, [season, toColor, color]);
 
+    const backgroundColor = color.interpolate({
+        inputRange: [0, 1],
+        outputRange: [fromColor, toColor],
+    });
+
     return(
         <Animated.View>
             {children}
