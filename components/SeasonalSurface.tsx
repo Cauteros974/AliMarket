@@ -57,7 +57,8 @@ export default function SeasonalSurface({
         <Animated.View
             {...props}
             style={[
-                styles.container
+                styles.container,
+                style, {backgroundColor}
             ]}
         >
             {children}
