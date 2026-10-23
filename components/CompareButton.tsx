@@ -1,4 +1,4 @@
-import { Pressable, Text } from "react-native";
+import { Pressable, Text, StyleSheet } from "react-native";
 import { useCompareStore } from "../store/useCompareStore";
 import { useSeasonalThemeContext } from "../theme/SeasonalThemeProvider";
 
@@ -30,10 +30,20 @@ export default function CompareButton({productId}: Props) {
                 isCompared ? "Remove from comparison": "Add to comparison"
             }
             accessibilityState={{ selected: isCompared, disabled: isLimitReached }}
+            disabled={isLimitReached}
+            onPress={() => toggleCompare(productId)}
         >
-            <Text>
+            <Text
+                style={[
+                    styles.label
+                ]}
+            >
                 {isCompared}
             </Text>
         </Pressable>
     )
 }
+
+const styles = StyleSheet.create({
+    
+})
