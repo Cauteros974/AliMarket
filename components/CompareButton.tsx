@@ -35,7 +35,8 @@ export default function CompareButton({productId}: Props) {
         >
             <Text
                 style={[
-                    styles.label
+                    styles.label,
+                    { color: isCompared ? colors.onPrimary : colors.primary },
                 ]}
             >
                 {isCompared}
