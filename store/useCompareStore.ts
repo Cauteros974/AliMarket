@@ -20,6 +20,7 @@ export const useCompareStore = create<CompareState>() (
                     set({
                         compareIds: currentIds.filter((id) => id !== productId)
                     })
+                    return
                 }
             }
         })
