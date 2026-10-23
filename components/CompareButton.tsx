@@ -11,6 +11,12 @@ export default function CompareButton({productId}: Props) {
         state.compareIds.includes(productId)
     );
 
+    const toggleCompare = useCompareStore(
+        (state) => state.toggleCompare
+    )
+
+    const {colors} = useSeasonalThemeContext();
+
     const compareCount = useCompareStore(
         (state) => state.compareIds.length
     );
@@ -19,7 +25,10 @@ export default function CompareButton({productId}: Props) {
 
     return(
         <Pressable
-            accessibilityLabel="button"
+            accessibilityRole="button"
+            accessibilityLabel={
+                isCompared ? "Remove from comparison": "Add to comparison"
+            }
             accessibilityState={{ selected: isCompared, disabled: isLimitReached }}
         >
             <Text>
