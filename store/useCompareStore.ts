@@ -21,6 +21,7 @@ export const useCompareStore = create<CompareState>() (
             toggleCompare: (productId) => {
                 const currentIds = get().compareIds;
 
+                // If the product is already selected, delete it.
                 if(currentIds.includes(productId)) {
                     set({
                         compareIds: currentIds.filter((id) => id !== productId)
@@ -28,6 +29,7 @@ export const useCompareStore = create<CompareState>() (
                     return;
                 }
 
+                // We do not allow more than three products.
                 if(currentIds.length >= MAX_COMPARE_PRODUCTS) {
                     return;
                 }
