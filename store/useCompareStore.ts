@@ -25,7 +25,7 @@ export const useCompareStore = create<CompareState>() (
                     return;
                 }
 
-                if(currentIds.length => MAX_COMPARE_PRODUCTS) {
+                if(currentIds.length >= MAX_COMPARE_PRODUCTS) {
                     return;
                 }
                 set({
