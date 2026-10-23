@@ -32,6 +32,16 @@ export default function CompareButton({productId}: Props) {
             accessibilityState={{ selected: isCompared, disabled: isLimitReached }}
             disabled={isLimitReached}
             onPress={() => toggleCompare(productId)}
+            style={({ pressed }) => [
+                styles.button,
+                {
+                    backgroundColor: isCompared
+                        ? colors.primary
+                        : colors.surface,
+                        borderColor: colors.primary,
+                        opacity: isLimitReached ? 0.45 : pressed ? 0.75 : 1,
+                },
+            ]}
         >
             <Text
                 style={[
@@ -47,6 +57,10 @@ export default function CompareButton({productId}: Props) {
 
 const styles = StyleSheet.create({
     label: {
+        fontSize: 12,
+        fontWeight: "600",
+    },
+    button: {
         fontSize: 12,
         fontWeight: "600",
     }
