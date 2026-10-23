@@ -46,6 +46,9 @@ export const useCompareStore = create<CompareState>() (
             clearCompare: () => set({compareIds: []}),
 
             isCompared: (productId) => get().compareIds.includes(productId),
-        })
+        }),
+        {
+            name: "alimarket"
+        }
     )
 )
