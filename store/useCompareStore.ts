@@ -49,7 +49,7 @@ export const useCompareStore = create<CompareState>() (
         }),
         {
             name: "alimarket-compare",
-            storage: createJSONStorage(() => AsyncStorage);
+            storage: createJSONStorage(() => AsyncStorage),
         }
     )
 )
