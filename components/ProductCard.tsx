@@ -215,6 +215,10 @@ export default function ProductCard({
         </View>
       </Pressable>
 
+       <View style={styles.compareRow}>
+        <CompareButton productId={product.id} />
+      </View>
+
       {/* --------------------------------------------------
           ADD TO CART
       -------------------------------------------------- */}
@@ -412,5 +416,11 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 13,
     fontWeight: "900",
+  },
+
+  compareRow: {
+    paddingHorizontal: 12,
+    marginBottom: 10,
+    alignItems: "flex-start",
   },
 });

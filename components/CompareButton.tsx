@@ -47,5 +47,7 @@ export default function CompareButton({productId}: Props) {
 
 const styles = StyleSheet.create({
     label: {
+        fontSize: 12,
+        fontWeight: "600",
     }
 })
