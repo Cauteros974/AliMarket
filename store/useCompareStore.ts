@@ -8,12 +8,14 @@ type CompareState = {
 
     toggleCompare: (productId: string) => void;
     removeFromCompare: (productId: string) => void;
+    clearCompare: () => void;
+    isCompared: (productId: string) => boolean;
 }
 
 export const useCompareStore = create<CompareState>() (
     persist(
         (set, get) => ({
-            compareIds: []
+            compareIds: [],
 
             toggleCompare: (productId) => {
                 const currentIds = get().compareIds;
