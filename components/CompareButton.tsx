@@ -49,7 +49,7 @@ export default function CompareButton({productId}: Props) {
                     { color: isCompared ? colors.onPrimary : colors.primary },
                 ]}
             >
-                {isCompared}
+                {isCompared ? "✓ Compared" : "⇄ Compare"}
             </Text>
         </Pressable>
     )
