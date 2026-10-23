@@ -23,16 +23,23 @@ export const useCompareStore = create<CompareState>() (
                 if(currentIds.includes(productId)) {
                     set({
                         compareIds: currentIds.filter((id) => id !== productId)
-                    })
+                    });
                     return;
                 }
 
                 if(currentIds.length >= MAX_COMPARE_PRODUCTS) {
                     return;
                 }
+                
                 set({
                     compareIds: [...currentIds, productId],
-                })
+                });
+            },
+
+            removeFromCompare: (productId) => {
+                set((state) => ({
+                    compareIds: state.compareIds.filter((id) => id !== productId),
+                }))
             }
         })
     )
