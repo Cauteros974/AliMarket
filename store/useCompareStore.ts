@@ -1,6 +1,8 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
+const MAX_COMPARE_PRODUCTS = 3;
+
 type CompareState = {
     compareIds: string[];
 
@@ -23,9 +25,8 @@ export const useCompareStore = create<CompareState>() (
                     return;
                 }
 
-                if(currentIds.length) {
+                if(currentIds.length => MAX_COMPARE_PRODUCTS) {
                     return;
-                    
                 }
                 set({
                     compareIds: [...currentIds, productId],
