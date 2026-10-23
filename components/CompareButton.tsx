@@ -46,5 +46,6 @@ export default function CompareButton({productId}: Props) {
 }
 
 const styles = StyleSheet.create({
-    
+    label: {
+    }
 })

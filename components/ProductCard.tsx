@@ -5,6 +5,7 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { Product } from "../types/product";
 import { formatPrice } from "../utils/format";
+import CompareButton from "./CompareButton";
 import AnimatedAddToCartButton from "./AnimatedAddToCartButton";
 
 type ProductCardProps = {
@@ -125,7 +126,7 @@ export default function ProductCard({
                 },
             ]}
         >
-            <Pressable onPress={onPress} style={styles.imageButton}>
+          <Pressable onPress={onPress} style={styles.imageButton}>
         <Image
           source={product.image}
           style={styles.image}
@@ -217,7 +218,7 @@ export default function ProductCard({
       {/* --------------------------------------------------
           ADD TO CART
       -------------------------------------------------- */}
-
+      
       <Animated.View
         style={{
           transform: [
