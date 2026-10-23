@@ -11,8 +11,17 @@ export default function CompareButton({productId}: Props) {
         state.compareIds.includes(productId)
     );
 
+    const compareCount = useCompareStore(
+        (state) => state.compareIds.length
+    );
+
+     const isLimitReached = compareCount >= 3 && !isCompared;
+
     return(
-        <Pressable>
+        <Pressable
+            accessibilityLabel="button"
+            accessibilityState={{ selected: isCompared, disabled: isLimitReached }}
+        >
             <Text>
                 {isCompared}
             </Text>
