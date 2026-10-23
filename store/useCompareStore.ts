@@ -25,11 +25,11 @@ export const useCompareStore = create<CompareState>() (
 
                 if(currentIds.length) {
                     return;
-
-                    set({
-                        compareIds: [...currentIds, productId],
-                    })
+                    
                 }
+                set({
+                    compareIds: [...currentIds, productId],
+                })
             }
         })
     )
