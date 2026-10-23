@@ -38,7 +38,7 @@ export const useCompareStore = create<CompareState>() (
 
             removeFromCompare: (productId) => {
                 set((state) => ({
-                    compareIds: state.compareIds.filter((id)ß),
+                    compareIds: state.compareIds.filter((id) => id !== productId),
                 }))
             }
         })
