@@ -15,6 +15,12 @@ export const useCompareStore = create<CompareState>() (
 
             toggleCompare: (productId) => {
                 const currentIds = get().compareIds;
+
+                if(currentIds.includes(productId)) {
+                    set({
+                        compareIds: currentIds.filter((id) => id !== productId)
+                    })
+                }
             }
         })
     )
