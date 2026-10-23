@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { createJSONStorage } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
 
 type CompareState = {
     compareIds: string[];
@@ -8,6 +8,14 @@ type CompareState = {
     removeFromCompare: (productId: string) => void;
 }
 
-export type useCompareStore = create<CompareState>() (
+export const useCompareStore = create<CompareState>() (
+    persist(
+        (set, get) => ({
+            compareIds: []
 
+            toggleCompare: (productId) => {
+                const currentIds = get().compareIds;
+            }
+        })
+    )
 )
