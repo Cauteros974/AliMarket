@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const MAX_COMPARE_PRODUCTS = 3;
 
@@ -39,8 +40,12 @@ export const useCompareStore = create<CompareState>() (
             removeFromCompare: (productId) => {
                 set((state) => ({
                     compareIds: state.compareIds.filter((id) => id !== productId),
-                }))
-            }
+                }));
+            },
+
+            clearCompare: () => set({compareIds: []}),
+
+            isCompared: (productId) => get().compareIds.includes(productId),
         })
     )
 )
