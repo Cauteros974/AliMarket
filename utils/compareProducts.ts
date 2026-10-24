@@ -1,7 +1,11 @@
 export type ComparisonProduct = {
     id: string;
     title: string;
-    price: number | null
+    price: number | null;
+    currency: string;
+    category: string;
+    brand: string;
+    description: string;
 };
 
 type RawProduct = Record<string, unknown>;
@@ -28,4 +32,8 @@ function readPrice(value: unknown): number | null {
             return Number.isFinite(parsed) ? parsed : null;
         }
     }
+
+    return null;
 }
+
+function 
