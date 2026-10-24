@@ -67,4 +67,15 @@ export function toComparisonProduct(
         product.attributes ??
         product.specifications ??
         product.specs;
+
+    const currency = readText(product.currency) || "€";
+
+    return{
+        id: readText(product.id),
+        title: 
+            readText(product.title) ||
+            readText(product.name) ||
+            readText(product.title) ||
+            "Product without a name"
+    }
 }
