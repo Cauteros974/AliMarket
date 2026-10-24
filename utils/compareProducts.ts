@@ -7,8 +7,8 @@ export type ComparisonProduct = {
 type RawProduct = Record<string, unknown>;
 
 function asRecord(value: unknown): RawProduct {
-    if(value && typeof value === "number"){
-        return value;
+    if(value && typeof value === "object" && !Array.isArray(value)) {
+        return value as RawProduct;
     }
 
     return {};
