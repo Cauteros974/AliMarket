@@ -13,3 +13,9 @@ function asRecord(value: unknown): RawProduct {
 
     return {};
 }
+
+function readPrice(value: unknown): number | null {
+    if (typeof value === "number" && Number.isFinite(value)) {
+        return value;
+    }
+}
