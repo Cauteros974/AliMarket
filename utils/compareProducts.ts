@@ -33,6 +33,7 @@ function readPrice(value: unknown): number | null {
     }
 
     if(typeof value === "string") {
+        // Supports numbers and prices like "€59.99".
         const normalized = value.replace(/\s/g, "").replace(",", ".");
         const match = normalized.match(/-?\d+(?:\.\d+)?/);
 
@@ -45,4 +46,14 @@ function readPrice(value: unknown): number | null {
     return null;
 }
 
-function 
+function readAttributes(value: unknown): Record<string, string> {
+    const record = asRecord(value);
+
+    return Object.fromEntries(
+        Object.entries(record
+            .filter(([, item]) =>
+                ["string", "number", "boolean"].includes(typeof item)
+            )
+            .map(([key, item]) => [key, String(item)])
+    )
+}
