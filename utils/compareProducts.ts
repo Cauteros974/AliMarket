@@ -21,10 +21,11 @@ function readPrice(value: unknown): number | null {
 
     if(typeof value === "string") {
         const normalized = value.replace(/\s/g, "").replace(",", ".");
-    }
+        const match = normalized.match(/-?\d+(?:\.\d+)?/);
 
-    if (match) {
-      const parsed = Number(match[0]);
-      return Number.isFinite(parsed) ? parsed : null;
+        if (match) {
+            const parsed = Number(match[0]);
+            return Number.isFinite(parsed) ? parsed : null;
+        }
     }
 }
