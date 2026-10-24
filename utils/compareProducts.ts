@@ -1,3 +1,6 @@
+/* Prepares products for the comparison table. 
+ * Supports different catalog field names.*/
+
 export type ComparisonProduct = {
     id: string;
     title: string;
@@ -91,5 +94,16 @@ export function toComparisonProduct(
         description: readText(product.brand) || "Description missing",
 
         attributes: readAttributes(rawAttributes)
-    }
+    };
+}
+
+export function getComparisonRows(products: ComparisonProduct[]) {
+    const keys = new Set<string> ([
+        "Price",
+        "Category"
+    ]);
+
+    products.forEach((product) => {
+        Object.keys(product.attributes).forEach((key) => keys.add(key));
+    });
 }
