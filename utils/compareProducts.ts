@@ -18,4 +18,13 @@ function readPrice(value: unknown): number | null {
     if (typeof value === "number" && Number.isFinite(value)) {
         return value;
     }
+
+    if(typeof value === "string") {
+        const normalized = value.replace(/\s/g, "").replace(",", ".");
+    }
+
+    if (match) {
+      const parsed = Number(match[0]);
+      return Number.isFinite(parsed) ? parsed : null;
+    }
 }
