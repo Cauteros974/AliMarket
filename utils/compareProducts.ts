@@ -111,6 +111,8 @@ export function getComparisonRows(products: ComparisonProduct[]) {
         const values = products.map((product) => {
             if(key === "Price") {
                 return product.price === null
+                    ? "Not specified"
+                    : `${product.currency}${product.price.toFixed(2)}`;
             }
         })
     })
