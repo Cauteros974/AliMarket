@@ -85,5 +85,8 @@ export function toComparisonProduct(
             readText(product.categoryName) ||
             readText(product.category) ||
             "Not specified",
+
+        brand: readText(product.brand) || "Not specified"
+        
         }
 }
