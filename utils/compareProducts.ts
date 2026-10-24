@@ -106,4 +106,12 @@ export function getComparisonRows(products: ComparisonProduct[]) {
     products.forEach((product) => {
         Object.keys(product.attributes).forEach((key) => keys.add(key));
     });
+
+    return Array.from(keys).map((key) => {
+        const values = products.map((product) => {
+            if(key === "Price") {
+                return product.price === null
+            }
+        })
+    })
 }
