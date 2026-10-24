@@ -50,10 +50,21 @@ function readAttributes(value: unknown): Record<string, string> {
     const record = asRecord(value);
 
     return Object.fromEntries(
-        Object.entries(record
+        Object.entries(record)
             .filter(([, item]) =>
                 ["string", "number", "boolean"].includes(typeof item)
             )
             .map(([key, item]) => [key, String(item)])
-    )
+    );
+}
+
+export function toComparisonProduct(
+    value: unknown
+) : ComparisonProduct {
+    const product = asRecord(value);
+    
+    const rawAttributes =
+        product.attributes ??
+        product.specifications ??
+        product.specs;
 }
