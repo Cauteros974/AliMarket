@@ -76,6 +76,14 @@ export function toComparisonProduct(
             readText(product.title) ||
             readText(product.name) ||
             readText(product.title) ||
-            "Product without a name"
-    }
+            "Product without a name",
+
+        price: readPrice(product.price ?? product.salePrice),
+        currency,
+
+        category: 
+            readText(product.categoryName) ||
+            readText(product.category) ||
+            "Not specified",
+        }
 }
