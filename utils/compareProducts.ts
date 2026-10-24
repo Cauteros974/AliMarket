@@ -6,6 +6,7 @@ export type ComparisonProduct = {
     category: string;
     brand: string;
     description: string;
+    attributes: Record<string, string>;
 };
 
 type RawProduct = Record<string, unknown>;
@@ -16,6 +17,14 @@ function asRecord(value: unknown): RawProduct {
     }
 
     return {};
+}
+
+function readText(value: unknown): string {
+    if (typeof value === "string" || typeof value === "number") {
+        return String(value);
+    }
+
+    return"";
 }
 
 function readPrice(value: unknown): number | null {
