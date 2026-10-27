@@ -118,6 +118,10 @@ export function getComparisonRows(products: ComparisonProduct[]) {
 
             if(key === "Category") return product.category;
             if(key === "Brand") return product.brand;
+
+            return product.attributes[key] ?? "Not specified";
+
+            const normalized = values.map((value) => value.trim().toLowerCase());
         })
     })
 }
