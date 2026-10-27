@@ -325,4 +325,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 18,
         borderRadius: 12,
     },
+    primaryButtonText: {
+        fontWeight: "700",
+    },
+    productsRow: {
+        gap: 10,
+    },
 })
