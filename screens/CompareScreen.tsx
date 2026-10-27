@@ -174,7 +174,7 @@ export default function CompareScreen() {
                                 }
                             ]}
                         >
-                            <Text>
+                            <Text style={[styles.sectionTitle, {color: colors.text}]}>
                                 Characteristics
                             </Text>
 
