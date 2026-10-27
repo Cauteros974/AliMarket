@@ -331,4 +331,9 @@ const styles = StyleSheet.create({
     productsRow: {
         gap: 10,
     },
+    productCard: {
+        width: 160,
+        minHeight: 135,
+        padding: 12,
+    },
 })
