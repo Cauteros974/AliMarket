@@ -92,8 +92,16 @@ export default function CompareScreen() {
                     >
                         <Text style={styles.emptyEmoji}>⇄</Text>
 
-                        <Text>
+                        <Text style={[styles.emptyTitle, { color: colors.text }]}>
                             There is nothing to compare yet
+                        </Text>
+
+                        <Text
+                            style={[
+                                { color: colors.textSecondary },
+                            ]}
+                        >
+                            Open the catalog and click “Compare” on the product cards.
                         </Text>
                     </View>
             }}
