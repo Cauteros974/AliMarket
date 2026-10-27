@@ -165,7 +165,15 @@ export default function CompareScreen() {
                             ))}
                         </ScrollView>
 
-                        <View>
+                        <View 
+                            style={[
+                                styles.table,
+                                {
+                                    backgroundColor: colors.surface,
+                                    borderColor: colors.border,
+                                }
+                            ]}
+                        >
                             <Text>
                                 Characteristics
                             </Text>
