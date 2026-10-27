@@ -302,7 +302,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 10,
         marginBottom: 14,
-        paddingLeft: 5,
+        paddingLeft: 8,
+        padding: 15
     },
     allFiltersButton: {
         height: 40,
