@@ -98,11 +98,24 @@ export default function CompareScreen() {
 
                         <Text
                             style={[
+                                styles.emptyDescription,
                                 { color: colors.textSecondary },
                             ]}
                         >
                             Open the catalog and click “Compare” on the product cards.
                         </Text>
+
+                        <Pressable
+                            onPress={() => navigation.navigate("Catalog")}
+                            style={[
+                                styles.primaryButton,
+                                { backgroundColor: colors.primary },
+                            ]}
+                        >
+                            <Text>
+                                Go to the catalog
+                            </Text>
+                        </Pressable>
                     </View>
             }}
         </ScrollView>
