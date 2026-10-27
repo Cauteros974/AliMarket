@@ -114,21 +114,21 @@ export function getComparisonRows(products: ComparisonProduct[]) {
                 return product.price === null
                     ? "Not specified"
                     : `${product.currency}${product.price.toFixed(2)}`;
-            }
-
+                }
+                
             if(key === "Category") return product.category;
             if(key === "Brand") return product.brand;
-
+            
             return product.attributes[key] ?? "Not specified";
-
-            const normalized = values.map((value) => value.trim().toLowerCase());
-            const hasDifference = new Set(normalized).size > 1;
-
-            return{
-                key,
-                values,
-                hasDifference,
-            }
-        })
-    })
+        });
+        
+        const normalized = values.map((value) => value.trim().toLowerCase());
+        const hasDifference = new Set(normalized).size > 1;
+        
+        return {
+            key,
+            values,
+            hasDifference,
+        };
+  });
 }
