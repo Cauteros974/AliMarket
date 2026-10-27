@@ -79,6 +79,24 @@ export default function CompareScreen() {
                     <Text style={{ color: colors.text }}>Back</Text>
                 </Pressable>
             </View>
+
+            {selectedProducts.length === 0 ? (
+                    <View
+                        style={[
+                            styles.empty,
+                            {
+                                backgroundColor: colors.surface,
+                                borderColor: colors.border,
+                            },
+                        ]}
+                    >
+                        <Text style={styles.emptyEmoji}>⇄</Text>
+
+                        <Text>
+                            There is nothing to compare yet
+                        </Text>
+                    </View>
+            }}
         </ScrollView>
     )   
 }
