@@ -357,4 +357,13 @@ const styles = StyleSheet.create({
         fontSize: 17,
         fontWeight: "800",
     },
+    tableRow: {
+        padding: 12,
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        gap: 10,
+    },
+    attributeName: {
+        fontSize: 13,
+        fontWeight: "700",
+    },
 })
