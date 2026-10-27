@@ -7,10 +7,14 @@ import { useSeasonalThemeContext } from "../theme/SeasonalThemeProvider";
 import { getComparisonRows, toComparisonProduct } from "../utils/compareProducts";
 
 export default function CompareScreen() {
+    const navigation = useNavigation<any>();
 
     const {colors} = useSeasonalThemeContext();
 
     const compareIds = useCompareStore((state) => state.compareIds);
+    const removeFromCompare = useCompareStore(
+        (state) => state.compareIds
+    )
 
     const selectedProducts = useMemo(() => {
         return compareIds
