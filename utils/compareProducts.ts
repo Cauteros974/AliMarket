@@ -76,6 +76,9 @@ function buildCatalogAttributes(product: RawProduct): Record<string, string> {
     const seller = sellers.find((item) => item.id === readText(product.sellerId));
     if (seller) result["Seller"] = seller.name;
 
+    const rating = readNumber(product.rating);
+    if (rating !== null) result["Rating"] = `${rating} / 5`;
+
     return result;
 }
 
