@@ -211,6 +211,20 @@ export default function CompareScreen() {
                                 </View>
                             ))}
                         </View>
+
+                        {recommendation && (
+                            <View
+                                style={[
+                                    styles.recommendation,
+                                    {
+                                        backgroundColor: colors.surfaceElevated,
+                                        borderColor: colors.border,
+                                    },
+                                ]}
+                            >
+                                <Text style={{ fontSize: 15 }}>✨</Text>
+                            </View>
+                        )}
                     </>
             )}
         </ScrollView>
