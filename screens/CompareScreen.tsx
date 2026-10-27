@@ -374,4 +374,8 @@ const styles = StyleSheet.create({
         flex: 1,
         minWidth: 0,
     },
+    valueText: {
+        fontSize: 12,
+        lineHeight: 18,
+    },
 })
