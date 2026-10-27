@@ -79,6 +79,15 @@ function buildCatalogAttributes(product: RawProduct): Record<string, string> {
     const rating = readNumber(product.rating);
     if (rating !== null) result["Rating"] = `${rating} / 5`;
 
+    const reviews = readNumber(product.reviews);
+    if (reviews !== null) result["Reviews"] = reviews.toLocaleString("en-US");
+
+    const sold = readNumber(product.sold);
+    if (sold !== null) result["Sold"] = sold.toLocaleString("en-US");
+
+    const delivery = readText(product.delivery);
+    if (delivery) result["Delivery"] = delivery;
+
     return result;
 }
 
