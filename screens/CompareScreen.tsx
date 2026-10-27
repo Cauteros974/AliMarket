@@ -335,5 +335,9 @@ const styles = StyleSheet.create({
         width: 160,
         minHeight: 135,
         padding: 12,
+        borderRadius: 14,
+        borderWidth: 1,
+        justifyContent: "space-between",
+        gap: 12,
     },
 })
