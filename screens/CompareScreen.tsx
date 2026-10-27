@@ -7,9 +7,14 @@ import { useSeasonalThemeContext } from "../theme/SeasonalThemeProvider";
 import { getComparisonRows, toComparisonProduct } from "../utils/compareProducts";
 
 export default function CompareScreen() {
+
+    const {colors} = useSeasonalThemeContext();
+
     return(
-        <ScrollView>
-            <View>
+        <ScrollView
+            style={{ flex: 1, backgroundColor: colors.background }}
+        >
+            <View style={styles.header}>
                 <Text>
                     Product comparison
                 </Text>
