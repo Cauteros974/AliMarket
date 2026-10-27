@@ -199,7 +199,7 @@ export default function CompareScreen() {
                                                             color: row.hasDifference
                                                                 ? colors.primary
                                                                 : colors.textSecondary,
-                                                            fontWeight: row.hasDifference ? "500" : "200",
+                                                            fontWeight: row.hasDifference ? "700" : "400",
                                                         }
                                                     ]}
                                                 >
