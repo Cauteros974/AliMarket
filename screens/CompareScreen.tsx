@@ -246,7 +246,12 @@ export default function CompareScreen() {
                             </View>
                         )}
 
-                        <Pressable>
+                        <Pressable
+                            style={[
+                                styles.clearButton,
+                                { borderColor: colors.danger },
+                            ]}
+                        >
                             <Text style={{ color: colors.danger, fontWeight: "600" }}>
                                 Clear comparison
                             </Text>
