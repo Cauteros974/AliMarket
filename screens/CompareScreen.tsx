@@ -15,10 +15,16 @@ export default function CompareScreen() {
             style={{ flex: 1, backgroundColor: colors.background }}
         >
             <View style={styles.header}>
-                <Text>
-                    Product comparison
-                </Text>
+                <View style={styles.headerText}>
+                    <Text style={[styles.title, { color: colors.text }]}>
+                        Product comparison
+                    </Text>
+                </View>
             </View>
         </ScrollView>
     )   
 }
+
+const styles = StyleSheet.create({
+
+})
