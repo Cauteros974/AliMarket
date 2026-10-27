@@ -122,6 +122,20 @@ export default function CompareScreen() {
                             </Text>
                         </Pressable>
                     </View>
+                ) : (
+                    <>
+                        <Pressable>
+                            {selectedProducts.map((product) => (
+                                <View>
+                                    <Text
+                                        style={[styles.productName, { color: colors.text }]}
+                                    >
+                                        {product.title}
+                                    </Text>
+                                </View>
+                            )}
+                        </Pressable>
+                    </>
             }}
         </ScrollView>
     )   
