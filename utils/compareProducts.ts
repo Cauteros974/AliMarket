@@ -31,7 +31,7 @@ function readText(value: unknown): string {
         return String(value);
     }
 
-    return"";
+    return "";
 }
 
 function readNumber(value: unknown): number | null {
@@ -69,7 +69,15 @@ function readAttributes(value: unknown): Record<string, string> {
     );
 }
 
+// Builds attributes from fields that already exist in the catalog.
+function buildCatalogAttributes(product: RawProduct): Record<string, string> {
+    const result: Record<string, string> = {};
 
+    const seller = sellers.find((item) => item.id === readText(product.sellerId));
+    if (seller) result["Seller"] = seller.name;
+
+    return result;
+}
 
 export function toComparisonProduct(value: unknown): ComparisonProduct {
     const product = asRecord(value);
@@ -106,6 +114,7 @@ export function toComparisonProduct(value: unknown): ComparisonProduct {
         description: readText(product.description) || "Description missing",
 
         attributes: {
+            ...buildCatalogAttributes(product),
             ...readAttributes(rawAttributes),
         },
     };
