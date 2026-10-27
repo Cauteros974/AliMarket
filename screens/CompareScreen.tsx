@@ -67,7 +67,7 @@ export default function CompareScreen() {
                     </Text>
 
                     <Text style={{ color: colors.textSecondary }}>
-                        Selected: {selectedProducts.length} из 3
+                        Selected: {selectedProducts.length} of 3
                     </Text>
                 </View>
 

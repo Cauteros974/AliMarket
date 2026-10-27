@@ -28,5 +28,5 @@ export function OpenCompareButton() {
                 ⇄ Comparison {count > 0 ? `(${count})` : ""}
             </Text>
         </Pressable>
-    )
+    );
 }
