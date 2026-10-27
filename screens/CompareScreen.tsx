@@ -43,18 +43,17 @@ export default function CompareScreen() {
                 description:
                     "The products do not have prices listed. Add specifications to make the comparison more useful.",
             };
-            const cheapest = pricedProducts.reduce((best, current) =>
-                current.price! < best.price! ? current : best
-            );
-
-            return{
-                title: `The most affordable option - ${cheapest.title}`,
-                description:
-                    pricedProducts.length === selectedProducts.length
-                        ? "Only products with a listed price were taken into account. Compare other specifications before making your choice."
-                        : "This product has the lowest listed price. This does not mean it is better in terms of all specifications.",
-            };
         }
+        const cheapest = pricedProducts.reduce((best, current) =>
+                current.price! < best.price! ? current : best
+        );
+        return{
+            title: `The most affordable option - ${cheapest.title}`,
+            description:
+                pricedProducts.length === selectedProducts.length
+                    ? "Only products with a listed price were taken into account. Compare other specifications before making your choice."
+                    : "This product has the lowest listed price. This does not mean it is better in terms of all specifications.",
+            };
     }, [selectedProducts]);
 
     return(
