@@ -285,5 +285,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         gap: 12
+    },
+    headerText: {
+        flex: 1,
+        gap: 4,
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: "900"
     }
 })
