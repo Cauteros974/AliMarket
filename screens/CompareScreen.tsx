@@ -366,4 +366,12 @@ const styles = StyleSheet.create({
         fontSize: 13,
         fontWeight: "700",
     },
+    valuesRow: {
+        flexDirection: "row",
+        gap: 8,
+    },
+    valueCell: {
+        flex: 1,
+        minWidth: 0,
+    },
 })
