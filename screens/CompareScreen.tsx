@@ -10,6 +10,8 @@ export default function CompareScreen() {
 
     const {colors} = useSeasonalThemeContext();
 
+    const compareIds = useCompareStore((state) => state.compareIds);
+
     const selectedProducts = useMemo(() => {
         return compareIds
         .map((id) => products.find((product) => product.id === id))
