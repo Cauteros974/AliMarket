@@ -18,6 +18,7 @@ export function OpenCompareButton() {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center",
+                gap: 8,
             }}
         >
             <Text style={{ color: colors.onPrimary, fontWeight: "700" }}>
