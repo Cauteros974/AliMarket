@@ -168,7 +168,15 @@ export default function CompareScreen() {
                             </Text>
 
                             {rows.map((row) => (
-                                <View>
+                                <View
+                                    key={row.key}
+                                    style={[
+                                        styles.tableRow,
+                                        {
+                                            borderBottomColor: colors.border,
+                                        }
+                                    ]}
+                                >
                                     <Text>
                                         {row.key}
                                     </Text>
