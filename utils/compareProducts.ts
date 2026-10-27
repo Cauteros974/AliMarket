@@ -122,6 +122,7 @@ export function getComparisonRows(products: ComparisonProduct[]) {
             return product.attributes[key] ?? "Not specified";
 
             const normalized = values.map((value) => value.trim().toLowerCase());
+            const hasDifference = new Set(normalized).size > 1;
 
             return{
                 key,
