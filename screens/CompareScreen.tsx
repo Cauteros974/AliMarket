@@ -275,5 +275,9 @@ export default function CompareScreen() {
 }
 
 const styles = StyleSheet.create({
-
+    content: {
+        padding: 15,
+        paddingBottom: 12,
+        gap: 10
+    }
 })
