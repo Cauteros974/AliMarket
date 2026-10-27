@@ -247,6 +247,7 @@ export default function CompareScreen() {
                         )}
 
                         <Pressable
+                            onPress={clearCompare}
                             style={[
                                 styles.clearButton,
                                 { borderColor: colors.danger },
