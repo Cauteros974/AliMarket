@@ -386,4 +386,14 @@ const styles = StyleSheet.create({
         alignItems: "flex-start",
         gap: 12,
     },
+    recommendationDescription: {
+        fontSize: 13,
+        lineHeight: 20,
+    },
+    clearButton: {
+        borderWidth: 1,
+        borderRadius: 12,
+        padding: 13,
+        alignItems: "center",
+    },
 })
