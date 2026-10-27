@@ -223,6 +223,21 @@ export default function CompareScreen() {
                                 ]}
                             >
                                 <Text style={{ fontSize: 22 }}>✨</Text>
+
+                                <View style={{ flex: 1, gap: 6 }}>
+                                    <Text
+                                        style={[
+                                            styles.sectionTitle,
+                                            { color: colors.text },
+                                        ]}
+                                    >
+                                        {recommendation.title}
+                                    </Text>
+
+                                    <Text>
+                                        {recommendation.description}
+                                    </Text>
+                                </View>
                             </View>
                         )}
                     </>
