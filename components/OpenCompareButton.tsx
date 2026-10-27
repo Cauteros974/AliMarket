@@ -5,7 +5,8 @@ import { useCompareStore } from "../store/useCompareStore";
 import { useSeasonalThemeContext } from "../theme/SeasonalThemeProvider";
 
 export function OpenCompareButton() {
-    
+    const navigation = useNavigation<any>();
+
     const { colors } = useSeasonalThemeContext();
 
     const count = useCompareStore((state) => state.compareIds.length);
