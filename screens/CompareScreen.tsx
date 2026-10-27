@@ -124,7 +124,7 @@ export default function CompareScreen() {
                     </View>
                 ) : (
                     <>
-                        <Pressable>
+                        <ScrollView>
                             {selectedProducts.map((product) => (
                                 <View
                                     key={product.id}
@@ -142,11 +142,23 @@ export default function CompareScreen() {
                                     >
                                         {product.title}
                                     </Text>
+
+                                    <Text>
+                                        {product.price === null
+                                            ? "Price not specified"
+                                            : `${product.currency}${product.price.toFixed(2)}`}
+                                    </Text>
+
+                                    <Pressable>
+                                        <Text style={{ color: colors.danger, fontSize: 12 }}>
+                                            Put away
+                                        </Text>
+                                    </Pressable>
                                 </View>
-                            )}
-                        </Pressable>
+                            ))}
+                        </ScrollView>
                     </>
-            }}
+            )}
         </ScrollView>
     )   
 }
