@@ -152,7 +152,10 @@ export default function CompareScreen() {
                                             : `${product.currency}${product.price.toFixed(2)}`}
                                     </Text>
 
-                                    <Pressable>
+                                    <Pressable
+                                        onPress={() => removeFromCompare(product.id)}
+                                        accessibilityActions="button"
+                                    >
                                         <Text style={{ color: colors.danger, fontSize: 12 }}>
                                             Put away
                                         </Text>
