@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
     primaryButton: {
         marginTop: 4,
         paddingVertical: 12,
-        paddingHorizontal: 15,
+        paddingHorizontal: 18,
         borderRadius: 12,
     },
 })
