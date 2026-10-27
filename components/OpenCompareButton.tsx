@@ -8,6 +8,8 @@ export function OpenCompareButton() {
     
     const { colors } = useSeasonalThemeContext();
 
+    const count = useCompareStore((state) => state.compareIds.length);
+
     return(
         <Pressable
             onPress={() => navigation.navigate("Compare")}
@@ -22,7 +24,7 @@ export function OpenCompareButton() {
             }}
         >
             <Text style={{ color: colors.onPrimary, fontWeight: "700" }}>
-                Comparison
+                ⇄ Comparison {count > 0 ? `(${count})` : ""}
             </Text>
         </Pressable>
     )
