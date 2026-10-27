@@ -161,6 +161,20 @@ export default function CompareScreen() {
                                 </View>
                             ))}
                         </ScrollView>
+
+                        <View>
+                            <Text>
+                                Characteristics
+                            </Text>
+
+                            {rows.map((row) => (
+                                <View>
+                                    <Text>
+                                        {row.key}
+                                    </Text>
+                                </View>
+                            ))}
+                        </View>
                     </>
             )}
         </ScrollView>
