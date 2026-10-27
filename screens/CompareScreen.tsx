@@ -222,7 +222,7 @@ export default function CompareScreen() {
                                     },
                                 ]}
                             >
-                                <Text style={{ fontSize: 15 }}>✨</Text>
+                                <Text style={{ fontSize: 20 }}>✨</Text>
                             </View>
                         )}
                     </>
