@@ -46,6 +46,12 @@ export default function CompareScreen() {
             const cheapest = pricedProducts.reduce((best, current) =>
                 current.price! < best.price! ? current : best
             );
+
+            return{
+                title: `The most affordable option - ${cheapest.title}`,
+                description:
+                    pricedProducts.length === selectedProducts.length
+            }
         }
     })
 
