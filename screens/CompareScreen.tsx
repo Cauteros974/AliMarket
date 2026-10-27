@@ -112,7 +112,12 @@ export default function CompareScreen() {
                                 { backgroundColor: colors.primary },
                             ]}
                         >
-                            <Text>
+                            <Text
+                                style={[
+                                    styles.primaryButtonText,
+                                    { color: colors.onPrimary },
+                                ]}
+                            >
                                 Go to the catalog
                             </Text>
                         </Pressable>
