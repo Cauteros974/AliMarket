@@ -1,5 +1,7 @@
-/* Prepares products for the comparison table. 
+/* Prepares products for the comparison table.
  * Supports different catalog field names.*/
+
+import { categories, sellers } from "../data/products";
 
 export type ComparisonProduct = {
     id: string;
@@ -14,8 +16,10 @@ export type ComparisonProduct = {
 
 type RawProduct = Record<string, unknown>;
 
+const NOT_SPECIFIED = "Not specified";
+
 function asRecord(value: unknown): RawProduct {
-    if(value && typeof value === "object" && !Array.isArray(value)) {
+    if (value && typeof value === "object" && !Array.isArray(value)) {
         return value as RawProduct;
     }
 
@@ -30,12 +34,16 @@ function readText(value: unknown): string {
     return"";
 }
 
+function readNumber(value: unknown): number | null {
+    return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
 function readPrice(value: unknown): number | null {
     if (typeof value === "number" && Number.isFinite(value)) {
         return value;
     }
 
-    if(typeof value === "string") {
+    if (typeof value === "string") {
         // Supports numbers and prices like "€59.99".
         const normalized = value.replace(/\s/g, "").replace(",", ".");
         const match = normalized.match(/-?\d+(?:\.\d+)?/);
@@ -61,11 +69,11 @@ function readAttributes(value: unknown): Record<string, string> {
     );
 }
 
-export function toComparisonProduct(
-    value: unknown
-) : ComparisonProduct {
+
+
+export function toComparisonProduct(value: unknown): ComparisonProduct {
     const product = asRecord(value);
-    
+
     const rawAttributes =
         product.attributes ??
         product.specifications ??
@@ -73,62 +81,67 @@ export function toComparisonProduct(
 
     const currency = readText(product.currency) || "€";
 
-    return{
+    const categoryFromId = categories.find(
+        (item) => item.id === readText(product.categoryId)
+    )?.title;
+
+    return {
         id: readText(product.id),
-        title: 
+        title:
             readText(product.title) ||
             readText(product.name) ||
-            readText(product.title) ||
             "Product without a name",
 
         price: readPrice(product.price ?? product.salePrice),
         currency,
 
-        category: 
+        category:
             readText(product.categoryName) ||
             readText(product.category) ||
-            "Not specified",
+            categoryFromId ||
+            NOT_SPECIFIED,
 
-        brand: readText(product.brand) || "Not specified",
+        brand: readText(product.brand) || NOT_SPECIFIED,
 
-        description: readText(product.brand) || "Description missing",
+        description: readText(product.description) || "Description missing",
 
-        attributes: readAttributes(rawAttributes)
+        attributes: {
+            ...readAttributes(rawAttributes),
+        },
     };
 }
 
 export function getComparisonRows(products: ComparisonProduct[]) {
-    const keys = new Set<string> ([
-        "Price",
-        "Category",
-        "Brand"
-    ]);
+    const keys = new Set<string>(["Price", "Category", "Brand"]);
 
     products.forEach((product) => {
         Object.keys(product.attributes).forEach((key) => keys.add(key));
     });
 
-    return Array.from(keys).map((key) => {
-        const values = products.map((product) => {
-            if(key === "Price") {
-                return product.price === null
-                    ? "Not specified"
-                    : `${product.currency}${product.price.toFixed(2)}`;
+    return Array.from(keys)
+        .map((key) => {
+            const values = products.map((product) => {
+                if (key === "Price") {
+                    return product.price === null
+                        ? NOT_SPECIFIED
+                        : `${product.currency}${product.price.toFixed(2)}`;
                 }
-                
-            if(key === "Category") return product.category;
-            if(key === "Brand") return product.brand;
-            
-            return product.attributes[key] ?? "Not specified";
-        });
-        
-        const normalized = values.map((value) => value.trim().toLowerCase());
-        const hasDifference = new Set(normalized).size > 1;
-        
-        return {
-            key,
-            values,
-            hasDifference,
-        };
-  });
+
+                if (key === "Category") return product.category;
+                if (key === "Brand") return product.brand;
+
+                return product.attributes[key] ?? NOT_SPECIFIED;
+            });
+
+            const normalized = values.map((value) => value.trim().toLowerCase());
+            const hasDifference = new Set(normalized).size > 1;
+
+            return {
+                key,
+                values,
+                hasDifference,
+            };
+        })
+        // Hide rows where no product has data (for example, Brand).
+        .filter((row) => !row.values.every((value) => value === NOT_SPECIFIED));
 }
