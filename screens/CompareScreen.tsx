@@ -155,7 +155,7 @@ export default function CompareScreen() {
                                     <Pressable
                                         onPress={() => removeFromCompare(product.id)}
                                         accessibilityRole="button"
-                                        accessibilityLabel={`Remove from comprasion`}
+                                        accessibilityLabel={`Remove ${product.title} from comprasion`}
                                     >
                                         <Text style={{ color: colors.danger, fontSize: 12 }}>
                                             Put away
