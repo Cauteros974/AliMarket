@@ -43,6 +43,9 @@ export default function CompareScreen() {
                 description:
                     "The products do not have prices listed. Add specifications to make the comparison more useful.",
             };
+            const cheapest = pricedProducts.reduce((best, current) =>
+                current.price! < best.price! ? current : best
+            );
         }
     })
 
