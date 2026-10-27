@@ -5,9 +5,18 @@ import { useCompareStore } from "../store/useCompareStore";
 import { useSeasonalThemeContext } from "../theme/SeasonalThemeProvider";
 
 export function OpenCompareButton() {
+    
     const { colors } = useSeasonalThemeContext();
+
     return(
-        <Pressable>
+        <Pressable
+            onPress={() => navigation.navigate("Compare")}
+            style={{
+                padding: 12,
+                borderRadius: 12,
+                backgroundColor: colors.primary,
+            }}
+        >
             <Text style={{ color: colors.onPrimary, fontWeight: "700" }}>
                 Comparison
             </Text>
