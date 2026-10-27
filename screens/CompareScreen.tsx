@@ -348,4 +348,13 @@ const styles = StyleSheet.create({
         fontSize: 17,
         fontWeight: "800",
     },
+    table: {
+        borderWidth: 1,
+        borderRadius: 16,
+        overflow: "hidden",
+    },
+    sectionTitle: {
+        fontSize: 17,
+        fontWeight: "800",
+    },
 })
