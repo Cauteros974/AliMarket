@@ -22,6 +22,7 @@ export default function CompareScreen() {
         return compareIds
         .map((id) => products.find((product) => product.id === id))
         .filter((product): product is (typeof products)[number] => Boolean(product))
+        .map(toComparisonProduct);
     },[compareIds] )
 
     return(
