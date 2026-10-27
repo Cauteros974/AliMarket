@@ -192,7 +192,17 @@ export default function CompareScreen() {
                                     <View style={styles.valuesRow}>
                                         {row.values.map((value,index) => (
                                             <View key={`${row.key}-${index}`}>
-                                                <Text>
+                                                <Text
+                                                    style={[
+                                                        styles.valueText,
+                                                        {
+                                                            color: row.hasDifference
+                                                                ? colors.primary
+                                                                : colors.textSecondary,
+                                                            fontWeight: row.hasDifference ? "500" : "400",
+                                                        }
+                                                    ]}
+                                                >
                                                     {value}
                                                 </Text>
                                             </View>
