@@ -24,8 +24,9 @@ import WishlistCollectionsScreen from "../screens/WishlistCollectionsScreen";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { MainTabParamList, RootStackParamList } from "./types";
+import CompareScreen from "../screens/CompareScreen";
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList> ();
 const Tab = createBottomTabNavigator<MainTabParamList>();
 
 function MainTabs() {
@@ -258,6 +259,14 @@ export default function AppNavigator() {
         component={SettingsScreen}
         options={{
           title: "Settings",
+        }}
+      />
+
+      <Stack.Screen 
+        name="Compare"
+        component={CompareScreen}
+        options={{
+          title: "Product comparison"
         }}
       />
     </Stack.Navigator>

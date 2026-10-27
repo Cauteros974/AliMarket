@@ -17,6 +17,7 @@ export type RootStackParamList = {
   WishlistCollections: undefined;
   QRScanner: undefined;
   Settings: undefined;
+  Compare: undefined;
 };
 
 export type MainTabParamList = {
