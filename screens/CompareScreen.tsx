@@ -13,13 +13,16 @@ export default function CompareScreen() {
 
     const compareIds = useCompareStore((state) => state.compareIds);
     const removeFromCompare = useCompareStore(
-        (state) => state.compareIds
+        (state) => state.removeFromCompare
     )
+
+    const clearCompare = useCompareStore((state) => state.clearCompare);
 
     const selectedProducts = useMemo(() => {
         return compareIds
         .map((id) => products.find((product) => product.id === id))
-    } )
+        .filter((product): product is (typeof products)[number] => Boolean(product))
+    },[compareIds] )
 
     return(
         <ScrollView
