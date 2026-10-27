@@ -378,4 +378,12 @@ const styles = StyleSheet.create({
         fontSize: 12,
         lineHeight: 18,
     },
+    recommendation: {
+        borderWidth: 1,
+        borderRadius: 16,
+        padding: 14,
+        flexDirection: "row",
+        alignItems: "flex-start",
+        gap: 12,
+    },
 })
