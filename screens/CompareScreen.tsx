@@ -292,10 +292,12 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 23,
-        fontWeight: "900"
+        fontWeight: "800"
     },
-    title: {
-        fontSize: 20,
-        fontWeight: "900"
-    }
+    smallButton: {
+        paddingVertical: 9,
+        paddingHorizontal: 12,
+        borderWidth: 1,
+        borderRadius: 10,
+    },
 })
