@@ -245,6 +245,12 @@ export default function CompareScreen() {
                                 </View>
                             </View>
                         )}
+
+                        <Pressable>
+                            <Text style={{ color: colors.danger, fontWeight: "600" }}>
+                                Clear comparison
+                            </Text>
+                        </Pressable>
                     </>
             )}
         </ScrollView>
