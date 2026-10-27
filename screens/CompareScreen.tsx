@@ -300,4 +300,14 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
     },
+    empty: {
+        alignItems: "center",
+        padding: 20,
+        gap: 10,
+        borderWidth: 1,
+        borderRadius: 18,
+    },
+    emptyEmoji: {
+        fontSize: 40,
+    },
 })
