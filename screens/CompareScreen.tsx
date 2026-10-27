@@ -124,7 +124,11 @@ export default function CompareScreen() {
                     </View>
                 ) : (
                     <>
-                        <ScrollView>
+                        <ScrollView
+                            horizontal
+                            showsHorizontalScrollIndicator={false}
+                            contentContainerStyle={styles.productsRow}
+                        >
                             {selectedProducts.map((product) => (
                                 <View
                                     key={product.id}
