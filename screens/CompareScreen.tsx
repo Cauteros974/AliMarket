@@ -310,4 +310,9 @@ const styles = StyleSheet.create({
     emptyEmoji: {
         fontSize: 40,
     },
+    emptyTitle: {
+        fontSize: 19,
+        fontWeight: "900",
+        textAlign: "center",
+    },
 })
