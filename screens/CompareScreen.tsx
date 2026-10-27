@@ -8,35 +8,33 @@ import { getComparisonRows, toComparisonProduct } from "../utils/compareProducts
 
 export default function CompareScreen() {
     const navigation = useNavigation<any>();
-
-    const {colors} = useSeasonalThemeContext();
-
     const compareIds = useCompareStore((state) => state.compareIds);
     const removeFromCompare = useCompareStore(
         (state) => state.removeFromCompare
-    )
-
+    );
+    
     const clearCompare = useCompareStore((state) => state.clearCompare);
-
+    const { colors } = useSeasonalThemeContext();
+    
     const selectedProducts = useMemo(() => {
         return compareIds
-        .map((id) => products.find((product) => product.id === id))
-        .filter((product): product is (typeof products)[number] => Boolean(product))
-        .map(toComparisonProduct);
-    },[compareIds] )
+            .map((id) => products.find((product) => product.id === id))
+            .filter((product): product is (typeof products)[number] => Boolean(product))
+            .map(toComparisonProduct);
+        }, [compareIds]);
 
     const rows = useMemo(
         () => getComparisonRows(selectedProducts),
         [selectedProducts]
     );
-
+    
     const recommendation = useMemo(() => {
         if (selectedProducts.length < 2) return null;
         
         const pricedProducts = selectedProducts.filter(
             (product) => product.price !== null
         );
-
+        
         if (pricedProducts.length === 0) {
             return {
                 title: "Insufficient data",
@@ -44,247 +42,252 @@ export default function CompareScreen() {
                     "The products do not have prices listed. Add specifications to make the comparison more useful.",
             };
         }
+        
         const cheapest = pricedProducts.reduce((best, current) =>
-                current.price! < best.price! ? current : best
+            current.price! < best.price! ? current : best
         );
-        return{
+        
+        return {
             title: `The most affordable option - ${cheapest.title}`,
             description:
                 pricedProducts.length === selectedProducts.length
                     ? "Only products with a listed price were taken into account. Compare other specifications before making your choice."
                     : "This product has the lowest listed price. This does not mean it is better in terms of all specifications.",
-            };
-    }, [selectedProducts]);
+        };
+  }, [selectedProducts]);
 
-    return(
-        <ScrollView
-            style={{ flex: 1, backgroundColor: colors.background }}
+  return (
+    <ScrollView
+      style={{ flex: 1, backgroundColor: colors.background }}
+      contentContainerStyle={styles.content}
+    >
+      <View style={styles.header}>
+        <View style={styles.headerText}>
+          <Text style={[styles.title, { color: colors.text }]}>
+            Product comparison
+          </Text>
+
+          <Text style={{ color: colors.textSecondary }}>
+            Selected: {selectedProducts.length} of 3
+          </Text>
+        </View>
+
+        <Pressable
+          onPress={() => navigation.goBack()}
+          style={[styles.smallButton, { borderColor: colors.border }]}
         >
-            <View style={styles.header}>
-                <View style={styles.headerText}>
-                    <Text style={[styles.title, { color: colors.text }]}>
-                        Product comparison
-                    </Text>
+          <Text style={{ color: colors.text }}>Back</Text>
+        </Pressable>
+      </View>
 
-                    <Text style={{ color: colors.textSecondary }}>
-                        Selected: {selectedProducts.length} of 3
-                    </Text>
-                </View>
+      {selectedProducts.length === 0 ? (
+        <View
+          style={[
+            styles.empty,
+            {
+              backgroundColor: colors.surface,
+              borderColor: colors.border,
+            },
+          ]}
+        >
+          <Text style={styles.emptyEmoji}>⇄</Text>
+
+          <Text style={[styles.emptyTitle, { color: colors.text }]}>
+            There is nothing to compare yet
+          </Text>
+
+          <Text
+            style={[
+              styles.emptyDescription,
+              { color: colors.textSecondary },
+            ]}
+          >
+            Open the catalog and click “Compare” on the product cards.
+          </Text>
+
+          <Pressable
+            onPress={() => navigation.navigate("Catalog")}
+            style={[
+              styles.primaryButton,
+              { backgroundColor: colors.primary },
+            ]}
+          >
+            <Text
+              style={[
+                styles.primaryButtonText,
+                { color: colors.onPrimary },
+              ]}
+            >
+                Go to the catalog
+            </Text>
+          </Pressable>
+        </View>
+      ) : (
+        <>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.productsRow}
+          >
+            {selectedProducts.map((product) => (
+              <View
+                key={product.id}
+                style={[
+                  styles.productCard,
+                  {
+                    backgroundColor: colors.surface,
+                    borderColor: colors.border,
+                  },
+                ]}
+              >
+                <Text
+                  style={[styles.productName, { color: colors.text }]}
+                  numberOfLines={3}
+                >
+                  {product.title}
+                </Text>
+
+                <Text
+                  style={[styles.productPrice, { color: colors.primary }]}
+                >
+                  {product.price === null
+                    ? "Price not specified"
+                    : `${product.currency}${product.price.toFixed(2)}`}
+                </Text>
 
                 <Pressable
-                    onPress={() => navigation.goBack()}
-                    style={[styles.smallButton, { borderColor: colors.border }]}
+                  onPress={() => removeFromCompare(product.id)}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Remove ${product.title} from comprasion`}
                 >
-                    <Text style={{ color: colors.text }}>Back</Text>
+                  <Text style={{ color: colors.danger, fontSize: 12 }}>
+                    Put away
+                  </Text>
                 </Pressable>
-            </View>
+              </View>
+            ))}
+          </ScrollView>
 
-            {selectedProducts.length === 0 ? (
-                    <View
+          <View
+            style={[
+              styles.table,
+              {
+                backgroundColor: colors.surface,
+                borderColor: colors.border,
+              },
+            ]}
+          >
+            <Text style={[styles.sectionTitle, { color: colors.text }]}>
+              Characteristics
+            </Text>
+
+            {rows.map((row) => (
+              <View
+                key={row.key}
+                style={[
+                  styles.tableRow,
+                  {
+                    borderBottomColor: colors.border,
+                    backgroundColor: row.hasDifference
+                      ? colors.surfaceElevated
+                      : colors.surface,
+                  },
+                ]}
+              >
+                <Text
+                  style={[
+                    styles.attributeName,
+                    { color: colors.text },
+                  ]}
+                >
+                  {row.key}
+                </Text>
+
+                <View style={styles.valuesRow}>
+                  {row.values.map((value, index) => (
+                    <View key={`${row.key}-${index}`} style={styles.valueCell}>
+                      <Text
                         style={[
-                            styles.empty,
-                            {
-                                backgroundColor: colors.surface,
-                                borderColor: colors.border,
-                            },
+                          styles.valueText,
+                          {
+                            color: row.hasDifference
+                              ? colors.primary
+                              : colors.textSecondary,
+                            fontWeight: row.hasDifference ? "700" : "400",
+                          },
                         ]}
-                    >
-                        <Text style={styles.emptyEmoji}>⇄</Text>
-
-                        <Text style={[styles.emptyTitle, { color: colors.text }]}>
-                            There is nothing to compare yet
-                        </Text>
-
-                        <Text
-                            style={[
-                                styles.emptyDescription,
-                                { color: colors.textSecondary },
-                            ]}
-                        >
-                            Open the catalog and click “Compare” on the product cards.
-                        </Text>
-
-                        <Pressable
-                            onPress={() => navigation.navigate("Catalog")}
-                            style={[
-                                styles.primaryButton,
-                                { backgroundColor: colors.primary },
-                            ]}
-                        >
-                            <Text
-                                style={[
-                                    styles.primaryButtonText,
-                                    { color: colors.onPrimary },
-                                ]}
-                            >
-                                Go to the catalog
-                            </Text>
-                        </Pressable>
+                      >
+                        {value}
+                      </Text>
                     </View>
-                ) : (
-                    <>
-                        <ScrollView
-                            horizontal
-                            showsHorizontalScrollIndicator={false}
-                            contentContainerStyle={styles.productsRow}
-                        >
-                            {selectedProducts.map((product) => (
-                                <View
-                                    key={product.id}
-                                    style={[
-                                        styles.productCard,
-                                        {
-                                            backgroundColor: colors.surface,
-                                            borderColor: colors.border,
-                                        },
-                                    ]}
-                                >
-                                    <Text
-                                        style={[styles.productName, { color: colors.text }]}
-                                        numberOfLines={3}
-                                    >
-                                        {product.title}
-                                    </Text>
+                  ))}
+                </View>
+              </View>
+            ))}
+          </View>
 
-                                    <Text>
-                                        {product.price === null
-                                            ? "Price not specified"
-                                            : `${product.currency}${product.price.toFixed(2)}`}
-                                    </Text>
+          {recommendation && (
+            <View
+              style={[
+                styles.recommendation,
+                {
+                  backgroundColor: colors.surfaceElevated,
+                  borderColor: colors.border,
+                },
+              ]}
+            >
+              <Text style={{ fontSize: 22 }}>✨</Text>
 
-                                    <Pressable
-                                        onPress={() => removeFromCompare(product.id)}
-                                        accessibilityRole="button"
-                                        accessibilityLabel={`Remove ${product.title} from comprasion`}
-                                    >
-                                        <Text style={{ color: colors.danger, fontSize: 12 }}>
-                                            Put away
-                                        </Text>
-                                    </Pressable>
-                                </View>
-                            ))}
-                        </ScrollView>
+              <View style={{ flex: 1, gap: 6 }}>
+                <Text
+                  style={[
+                    styles.sectionTitle,
+                    { color: colors.text },
+                  ]}
+                >
+                  {recommendation.title}
+                </Text>
 
-                        <View 
-                            style={[
-                                styles.table,
-                                {
-                                    backgroundColor: colors.surface,
-                                    borderColor: colors.border,
-                                }
-                            ]}
-                        >
-                            <Text style={[styles.sectionTitle, {color: colors.text}]}>
-                                Characteristics
-                            </Text>
+                <Text
+                  style={[
+                    styles.recommendationDescription,
+                    { color: colors.textSecondary },
+                  ]}
+                >
+                  {recommendation.description}
+                </Text>
+              </View>
+            </View>
+          )}
 
-                            {rows.map((row) => (
-                                <View
-                                    key={row.key}
-                                    style={[
-                                        styles.tableRow,
-                                        {
-                                            borderBottomColor: colors.border,
-                                            backgroundColor: row.hasDifference
-                                                ? colors.surfaceElevated
-                                                : colors.surface,
-                                        }
-                                    ]}
-                                >
-                                    <Text
-                                        style={[
-                                            styles.attributeName,
-                                            { color: colors.text },
-                                        ]}
-                                    >
-                                        {row.key}
-                                    </Text>
-
-                                    <View style={styles.valuesRow}>
-                                        {row.values.map((value,index) => (
-                                            <View key={`${row.key}-${index}`}>
-                                                <Text
-                                                    style={[
-                                                        styles.valueText,
-                                                        {
-                                                            color: row.hasDifference
-                                                                ? colors.primary
-                                                                : colors.textSecondary,
-                                                            fontWeight: row.hasDifference ? "700" : "400",
-                                                        }
-                                                    ]}
-                                                >
-                                                    {value}
-                                                </Text>
-                                            </View>
-                                        ))}
-                                    </View>
-                                </View>
-                            ))}
-                        </View>
-
-                        {recommendation && (
-                            <View
-                                style={[
-                                    styles.recommendation,
-                                    {
-                                        backgroundColor: colors.surfaceElevated,
-                                        borderColor: colors.border,
-                                    },
-                                ]}
-                            >
-                                <Text style={{ fontSize: 22 }}>✨</Text>
-
-                                <View style={{ flex: 1, gap: 6 }}>
-                                    <Text
-                                        style={[
-                                            styles.sectionTitle,
-                                            { color: colors.text },
-                                        ]}
-                                    >
-                                        {recommendation.title}
-                                    </Text>
-
-                                    <Text
-                                        style={[
-                                            styles.recommendationDescription,
-                                            { color: colors.textSecondary },
-                                        ]}
-                                    >
-                                        {recommendation.description}
-                                    </Text>
-                                </View>
-                            </View>
-                        )}
-
-                        <Pressable
-                            onPress={clearCompare}
-                            style={[
-                                styles.clearButton,
-                                { borderColor: colors.danger },
-                            ]}
-                        >
-                            <Text style={{ color: colors.danger, fontWeight: "600" }}>
-                                Clear comparison
-                            </Text>
-                        </Pressable>
-                    </>
-            )}
-        </ScrollView>
-    )   
+          <Pressable
+            onPress={clearCompare}
+            style={[
+              styles.clearButton,
+              { borderColor: colors.danger },
+            ]}
+          >
+            <Text style={{ color: colors.danger, fontWeight: "600" }}>
+                Clear comparison
+            </Text>
+          </Pressable>
+        </>
+      )}
+    </ScrollView>
+  );
 }
 
 const styles = StyleSheet.create({
     content: {
         padding: 16,
-        paddingBottom: 12,
-        gap: 16
+        paddingBottom: 32,
+        gap: 16,
     },
     header: {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        gap: 12
+        gap: 12,
     },
     headerText: {
         flex: 1,
@@ -292,7 +295,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 23,
-        fontWeight: "800"
+        fontWeight: "800",
     },
     smallButton: {
         paddingVertical: 9,
@@ -396,4 +399,4 @@ const styles = StyleSheet.create({
         padding: 13,
         alignItems: "center",
     },
-})
+    });
