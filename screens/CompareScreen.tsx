@@ -234,7 +234,12 @@ export default function CompareScreen() {
                                         {recommendation.title}
                                     </Text>
 
-                                    <Text>
+                                    <Text
+                                        style={[
+                                            styles.recommendationDescription,
+                                            { color: colors.textSecondary },
+                                        ]}
+                                    >
                                         {recommendation.description}
                                     </Text>
                                 </View>
