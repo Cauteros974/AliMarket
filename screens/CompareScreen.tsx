@@ -25,6 +25,19 @@ export default function CompareScreen() {
         .map(toComparisonProduct);
     },[compareIds] )
 
+    const rows = useMemo(
+        () => getComparisonRows(selectedProducts),
+        [selectedProducts]
+    );
+
+    const recommendation = useMemo(() => {
+        if (selectedProducts.length < 2) return null;
+        
+        const pricedProducts = selectedProducts.filter(
+            (product) => product.price !== null
+        );
+    })
+
     return(
         <ScrollView
             style={{ flex: 1, backgroundColor: colors.background }}
