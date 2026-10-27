@@ -7,6 +7,7 @@ import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
 import SearchSuggestions from "../components/SearchSuggestions";
 import SkeletonProductGrid from "../components/SkeletonProductGrid";
+import { OpenCompareButton } from "../components/OpenCompareButton";
 import { categories, products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
@@ -146,6 +147,8 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         <Pressable onPress={() => setFiltersVisible(true)} style={styles.allFiltersButton}>
                             <Text style={styles.allFiltersText}>Open all filters</Text>
                         </Pressable>
+
+                        <OpenCompareButton />
 
                         <View style={styles.priceRow}>
                             <TextInput
