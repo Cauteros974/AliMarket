@@ -126,9 +126,19 @@ export default function CompareScreen() {
                     <>
                         <Pressable>
                             {selectedProducts.map((product) => (
-                                <View>
+                                <View
+                                    key={product.id}
+                                    style={[
+                                        styles.productCard,
+                                        {
+                                            backgroundColor: colors.surface,
+                                            borderColor: colors.border,
+                                        },
+                                    ]}
+                                >
                                     <Text
                                         style={[styles.productName, { color: colors.text }]}
+                                        numberOfLines={3}
                                     >
                                         {product.title}
                                     </Text>
