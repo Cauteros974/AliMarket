@@ -71,6 +71,13 @@ export default function CompareScreen() {
                         Selected: {selectedProducts.length} из 3
                     </Text>
                 </View>
+
+                <Pressable
+                    onPress={() => navigation.goBack()}
+                    style={[styles.smallButton, { borderColor: colors.border }]}
+                >
+                    <Text style={{ color: colors.text }}>Back</Text>
+                </Pressable>
             </View>
         </ScrollView>
     )   
