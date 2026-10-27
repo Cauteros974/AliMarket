@@ -291,6 +291,10 @@ const styles = StyleSheet.create({
         gap: 4,
     },
     title: {
+        fontSize: 23,
+        fontWeight: "900"
+    },
+    title: {
         fontSize: 20,
         fontWeight: "900"
     }
