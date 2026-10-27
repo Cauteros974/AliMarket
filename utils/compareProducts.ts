@@ -100,7 +100,8 @@ export function toComparisonProduct(
 export function getComparisonRows(products: ComparisonProduct[]) {
     const keys = new Set<string> ([
         "Price",
-        "Category"
+        "Category",
+        "Brand"
     ]);
 
     products.forEach((product) => {
@@ -114,6 +115,9 @@ export function getComparisonRows(products: ComparisonProduct[]) {
                     ? "Not specified"
                     : `${product.currency}${product.price.toFixed(2)}`;
             }
+
+            if(key === "Category") return product.category;
+            if(key === "Brand") return product.brand;
         })
     })
 }
