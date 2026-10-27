@@ -312,7 +312,11 @@ const styles = StyleSheet.create({
     },
     emptyTitle: {
         fontSize: 19,
-        fontWeight: "900",
+        fontWeight: "700",
         textAlign: "center",
+    },
+    emptyDescription: {
+        textAlign: "center",
+        lineHeight: 21,
     },
 })
