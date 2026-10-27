@@ -177,7 +177,7 @@ export default function CompareScreen() {
               },
             ]}
           >
-            <Text style={[styles.sectionTitle, { color: colors.text }]}>
+            <Text style={[styles.tableTitle, { color: colors.text }]}>
               Characteristics
             </Text>
 
@@ -359,6 +359,13 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 17,
         fontWeight: "800",
+    },
+    tableTitle: {
+        fontSize: 17,
+        fontWeight: "800",
+        paddingHorizontal: 12,
+        paddingTop: 14,
+        paddingBottom: 12,
     },
     tableRow: {
         padding: 12,
