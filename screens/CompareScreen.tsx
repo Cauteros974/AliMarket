@@ -177,9 +177,24 @@ export default function CompareScreen() {
                                         }
                                     ]}
                                 >
-                                    <Text>
+                                    <Text
+                                        style={[
+                                            styles.attributeName,
+                                            { color: colors.text },
+                                        ]}
+                                    >
                                         {row.key}
                                     </Text>
+
+                                    <View>
+                                        {row.values.map((value,index) => (
+                                            <View>
+                                                <Text>
+                                                    {value}
+                                                </Text>
+                                            </View>
+                                        ))}
+                                    </View>
                                 </View>
                             ))}
                         </View>
