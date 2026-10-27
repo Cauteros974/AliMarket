@@ -36,6 +36,14 @@ export default function CompareScreen() {
         const pricedProducts = selectedProducts.filter(
             (product) => product.price !== null
         );
+
+        if (pricedProducts.length === 0) {
+            return {
+                title: "Insufficient data",
+                description:
+                    "The products do not have prices listed. Add specifications to make the comparison more useful.",
+            };
+        }
     })
 
     return(
