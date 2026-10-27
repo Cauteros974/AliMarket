@@ -282,6 +282,8 @@ const styles = StyleSheet.create({
     },
     header: {
         flexDirection: "row",
-        alignItems: "center"
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 12
     }
 })
