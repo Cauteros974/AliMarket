@@ -174,6 +174,9 @@ export default function CompareScreen() {
                                         styles.tableRow,
                                         {
                                             borderBottomColor: colors.border,
+                                            backgroundColor: row.hasDifference
+                                                ? colors.surfaceElevated
+                                                : colors.surface,
                                         }
                                     ]}
                                 >
@@ -186,9 +189,9 @@ export default function CompareScreen() {
                                         {row.key}
                                     </Text>
 
-                                    <View>
+                                    <View style={styles.valuesRow}>
                                         {row.values.map((value,index) => (
-                                            <View>
+                                            <View key={`${row.key}-${index}`}>
                                                 <Text>
                                                     {value}
                                                 </Text>
