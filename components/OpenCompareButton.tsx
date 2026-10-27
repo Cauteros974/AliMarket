@@ -15,6 +15,9 @@ export function OpenCompareButton() {
                 padding: 12,
                 borderRadius: 12,
                 backgroundColor: colors.primary,
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
             }}
         >
             <Text style={{ color: colors.onPrimary, fontWeight: "700" }}>
