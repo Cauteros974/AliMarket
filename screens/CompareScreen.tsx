@@ -51,8 +51,10 @@ export default function CompareScreen() {
                 title: `The most affordable option - ${cheapest.title}`,
                 description:
                     pricedProducts.length === selectedProducts.length
-            }
-        }
+                        ? "Only products with a listed price were taken into account. Compare other specifications before making your choice."
+                        : "This product has the lowest listed price. This does not mean it is better in terms of all specifications.",
+            };
+        }, [selectedProducts]
     })
 
     return(
