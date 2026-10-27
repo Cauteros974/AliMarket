@@ -340,4 +340,12 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         gap: 12,
     },
+    productName: {
+        fontSize: 14,
+        fontWeight: "700",
+    },
+    productPrice: {
+        fontSize: 17,
+        fontWeight: "800",
+    },
 })
