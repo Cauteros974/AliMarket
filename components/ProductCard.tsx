@@ -27,21 +27,25 @@ export default function ProductCard({
     const cardTranslateY = useRef(new Animated.Value(14)).current;
 
     useEffect(() => {
-        Animated.parallel([
-            Animated.timing(cardOpacity, {
-              toValue: 1,
-              duration: 350,
-              useNativeDriver: true,
-            }),
+      const animation = Animated.parallel([
+        Animated.timing(cardOpacity, {
+          toValue: 1,
+          duration: 350,
+          useNativeDriver: true,
+        }),
+        Animated.spring(cardTranslateY, {
+          toValue: 0,
+          tension: 65,
+          friction: 9,
+          useNativeDriver: true,
+        }),
+      ]);
+      
+      animation.start();
+      
+      return () => animation.stop();
+    }, [cardOpacity, cardTranslateY]);
 
-            Animated.spring(cardTranslateY, {
-              toValue: 0,
-              tension: 65,
-              friction: 9,
-              useNativeDriver: true,
-            }),
-        ]).start();
-    }, []);
 
     const favoriteScale = useRef(new Animated.Value(1)).current;
 
