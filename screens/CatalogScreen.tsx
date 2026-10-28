@@ -94,7 +94,11 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
     return (
         <SafeAreaView style={styles.safeArea}>
             {loading ? (
-                <SkeletonProductGrid />
+                <View style={styles.loadingContainer}>
+                    <View style={styles.loadingHeader}>
+                        <View style={styles.loadingTitle} />
+                    </View>
+                </View>
             ): (
                 <FlatList
                 data={loading ? [] : filteredProducts}
