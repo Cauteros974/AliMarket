@@ -407,15 +407,18 @@ const createStyles = (colors: ThemeColors) =>
 
     eyebrow: {
       color: colors.primary,
-      fontSize: 14,
-      fontWeight: "900",
-    },
-
-    title: {
-      color: colors.primary,
       fontSize: 13,
       fontWeight: "900",
       letterSpacing: 1.1,
+    },
+    
+    title: {
+      color: colors.text,
+      fontSize: 29,
+      lineHeight: 35,
+      fontWeight: "900",
+      marginTop: 5,
+      letterSpacing: -0.7,
     },
 
     iconButton: {
