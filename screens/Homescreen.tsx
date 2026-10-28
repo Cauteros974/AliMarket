@@ -393,11 +393,16 @@ const createStyles = (colors: ThemeColors) =>
     },
 
     header: {
-      marginTop: 8,
-      marginBottom: 18,
+      marginTop: 10,
+      marginBottom: 20,
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
+    },
+
+    headerText: {
+      flex: 1,
+      paddingRight: 12,
     },
 
     eyebrow: {
@@ -526,4 +531,5 @@ const createStyles = (colors: ThemeColors) =>
       gap: 12,
       marginBottom: 12,
     },
+    
   });
