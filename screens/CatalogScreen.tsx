@@ -88,6 +88,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
         Boolean(filters.maxPrice),
         filters.freeDeliveryOnly,
         filters.discountsOnly,
+        filters.minRating > 0,
     ].filter(Boolean).length;
 
     return (
