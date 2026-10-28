@@ -112,7 +112,12 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                     keyboardShouldPersistTaps="handled"
                     ListHeaderComponent={
                         <View>
-                            <Text style={styles.title}>Catalog </Text>
+                            <View style={styles.header}>
+                                <View style={styles.headerText}>
+                                    <Text style={styles.eyebrow}>DISCOVER SOMETHING NEW</Text>
+                                    <Text style={styles.title}>Explore</Text>
+                                </View>
+                            </View>
                             <View style={styles.searchContainer}>
                                 <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
                                 <SearchSuggestions visible={searchQuery.length > 0} />
