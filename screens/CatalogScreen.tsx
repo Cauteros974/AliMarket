@@ -182,6 +182,9 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                                     size={15}
                                                     color={selected ? colors.white : colors.muted}
                                                 />
+                                                <Text style={[styles.sortText, selected && styles.sortTextActive]}>
+                                                    {option.label}
+                                                </Text>
                                             </Pressable>
                                         )
                                     })}
