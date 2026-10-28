@@ -412,10 +412,10 @@ const createStyles = (colors: ThemeColors) =>
     },
 
     title: {
-      color: colors.text,
-      fontSize: 28,
+      color: colors.primary,
+      fontSize: 13,
       fontWeight: "900",
-      marginTop: 4,
+      letterSpacing: 1.1,
     },
 
     iconButton: {
