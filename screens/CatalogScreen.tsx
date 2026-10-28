@@ -192,7 +192,11 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 <View style={styles.compareIcon}>
                                     <Ionicons name="git-compare-outline" size={20} color={colors.primary} />
                                 </View>
-                                
+
+                                <View>
+                                    <Text>Compare product</Text>
+                                </View>
+
                                 <OpenCompareButton />
                             </View>
 
