@@ -161,7 +161,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 </ScrollView>
                             </View>
 
-                            <View>
+                            <View style={styles.section}>
                                 <View style={styles.sectionHeader}>
                                     <Text style={styles.sectionTitle}>Sort by</Text>
                                     <Text style={styles.sectionHint}>{filteredProducts.length} products</Text>
