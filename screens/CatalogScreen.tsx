@@ -175,8 +175,13 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                             <Pressable
                                                 key={option.value}
                                                 onPress={() => setSortOption(option.value)}
+                                                style={[styles.sortButton, selected && styles.sortButtonActive]}
                                             >
-
+                                                <Ionicons
+                                                    name={option.icon}
+                                                    size={15}
+                                                    color={selected ? colors.white : colors.muted}
+                                                />
                                             </Pressable>
                                         )
                                     })}
