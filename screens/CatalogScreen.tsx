@@ -122,9 +122,10 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                     onPress={() => navigation.navigate("Notifications")}
                                     style={styles.notificationButton}
                                     accessibilityRole="button"
-                                    >
-                                        <Ionicons name="notifications-outline" size={22} color={colors.text} />
-                                    </Pressable>
+                                    accessibilityLabel="Notifications"
+                                >
+                                    <Ionicons name="notifications-outline" size={22} color={colors.text} />
+                                </Pressable>
                             </View>
                             <View style={styles.searchContainer}>
                                 <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
@@ -132,26 +133,32 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                             </View>
                             <SearchSuggestions visible={searchQuery.length > 0} />
 
-                            <ScrollView
-                                horizontal
-                                showsHorizontalScrollIndicator={false}
-                                contentContainerStyle={styles.row}
-                            >
-                                <CategoryChip
-                                    category={{ title: "All", icon: "apps-outline" }}
-                                    selected={!selectedCategoryId}
-                                    onPress={() => setSelectedCategoryId(null)}
-                                />
-
-                                {categories.map((category) => (
+                            <View style={styles.section}>
+                                <View style={styles.sectionHeader}>
+                                    <Text style={styles.sectionTitle}>Categories</Text>
+                                </View>
+                                
+                                <ScrollView
+                                    horizontal
+                                    showsHorizontalScrollIndicator={false}
+                                    contentContainerStyle={styles.row}
+                                >
                                     <CategoryChip
-                                        key={category.id}
-                                        category={category}
-                                        selected={selectedCategoryId === category.id}
-                                        onPress={() => setSelectedCategoryId(category.id)}
+                                        category={{ title: "All", icon: "apps-outline" }}
+                                        selected={!selectedCategoryId}
+                                        onPress={() => setSelectedCategoryId(null)}
                                     />
-                                ))}
-                            </ScrollView>
+
+                                    {categories.map((category) => (
+                                        <CategoryChip
+                                            key={category.id}
+                                            category={category}
+                                            selected={selectedCategoryId === category.id}
+                                            onPress={() => setSelectedCategoryId(category.id)}
+                                        />
+                                    ))}
+                                </ScrollView>
+                            </View>
 
                             <Text style={styles.blockTitle}>Sort</Text>
 
