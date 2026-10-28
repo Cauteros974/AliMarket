@@ -80,26 +80,20 @@ export default function ProductCard({
         setAdding(true);
 
         Animated.sequence([
-            Animated.spring(cartScale, {
-                toValue: 0.92,
-                tension: 180,
-                friction: 6,
-                useNativeDriver: true,
-            }),
+          Animated.spring(cartScale, {
+            toValue: 0.96,
+            useNativeDriver: true,
+          }),
 
-            Animated.spring(cartScale, {
-                toValue: 1.06,
-                tension: 180,
-                friction: 5,
-                useNativeDriver: true,
-            }),
-
-            Animated.spring(cartScale, {
-                toValue: 1,
-                tension: 160,
-                friction: 6,
-                useNativeDriver: true,
-            }),
+          Animated.spring(cartScale, {
+            toValue: 1.03,
+            useNativeDriver: true,
+          }),
+          
+          Animated.spring(cartScale, {
+            toValue: 1,
+            useNativeDriver: true,
+          }),
         ]).start();
 
         addToCart(product.id);
