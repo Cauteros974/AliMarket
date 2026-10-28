@@ -103,12 +103,13 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 </View>
             ): (
                 <FlatList
-                    data={loading ? [] : filteredProducts}
+                    data={filteredProducts}
                     keyExtractor={(item) => item.id}
                     numColumns={2}
                     showsVerticalScrollIndicator={false}
                     columnWrapperStyle={styles.gridRow}
                     contentContainerStyle={styles.content}
+                    keyboardShouldPersistTaps="handled"
                     ListHeaderComponent={
                         <View>
                             <Text style={styles.title}>Catalog </Text>
