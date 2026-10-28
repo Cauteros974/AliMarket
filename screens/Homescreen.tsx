@@ -202,6 +202,8 @@ export default function HomeScreen({ navigation }: Props) {
           <Pressable
             onPress={() => navigation.navigate("Notifications")}
             style={styles.iconButton}
+            accessibilityRole="button"
+            accessibilityLabel="Notifications"
           >
             <Text style={styles.iconText}>!</Text>
           </Pressable>
