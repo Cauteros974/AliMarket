@@ -10,4 +10,10 @@ export const colors = {
     text: "#24212B",
     muted: "#898394",
     textSecondary: "#70697D",
+    border: "#EDE8F5",
+    success: "#22A06B",
+    warning: "#F4AD36",
+    danger: "#E5484D",
+    black: "#000000",
+    white: "#FFFFFF",
 }
