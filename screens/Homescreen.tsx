@@ -191,10 +191,12 @@ export default function HomeScreen({ navigation }: Props) {
         contentContainerStyle={styles.content}
       >
         <View style={styles.header}>
-          <View>
+          <View style={styles.headerText}>
             <Text style={styles.eyebrow}>AliMarket</Text>
-
-            <Text style={styles.title}>Find anything you need</Text>
+            <Text style={styles.title}>Discover your style</Text>
+            <Text style={styles.headerSubtitle}>
+              Find something you'll love
+            </Text>
           </View>
 
           <Pressable
