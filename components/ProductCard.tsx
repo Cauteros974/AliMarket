@@ -116,89 +116,77 @@ export default function ProductCard({
           )
         : null;
 
-    return(
-        <Animated.View
-            style={[
-                styles.card,
-                {
-                    opacity: cardOpacity,
-                    transform: [
-                        {
-                            translateY: cardTranslateY,
-                        },
-                    ],
-                },
-            ]}
+    return (
+    <Animated.View
+      style={[
+        styles.card,
+        {
+          opacity: cardOpacity,
+          transform: [{ translateY: cardTranslateY }],
+        },
+      ]}
+    >
+      {/* Product image */}
+      <View style={styles.imageContainer}>
+        <Pressable
+          onPress={onPress}
+          style={styles.imagePressable}
+          accessibilityRole="button"
+          accessibilityLabel={`Открыть товар ${product.title}`}
         >
-          <Pressable onPress={onPress} style={styles.imageButton}>
-        <Image
-          source={product.image}
-          style={styles.image}
-          resizeMode="cover"
-        />
+          <Image
+            source={product.image}
+            style={styles.image}
+            resizeMode="cover"
+          />
+        </Pressable>
 
-        {/* Favorite button */}
-
+        {/* Favorites */}
         <Pressable
           onPress={handleFavorite}
           style={styles.favoriteButton}
           hitSlop={8}
+          accessibilityRole="button"
+          accessibilityLabel={
+            isFavorite
+              ? "Remove from favorites"
+              : "Add to favorites"
+          }
         >
           <Animated.View
-            style={{
-              transform: [
-                {
-                  scale: favoriteScale,
-                },
-              ],
-            }}
+            style={{ transform: [{ scale: favoriteScale }] }}
           >
             <Ionicons
               name={isFavorite ? "heart" : "heart-outline"}
-              size={20}
+              size={19}
               color={isFavorite ? colors.primary : colors.text}
             />
           </Animated.View>
         </Pressable>
 
-        {/* Discount badge */}
-
-        {product.oldPrice ? (
+        {/* Discount */}
+        {discount !== null && (
           <View style={styles.discountBadge}>
-            <Text style={styles.discountText}>
-              -
-              {Math.round(
-                ((product.oldPrice - product.price) /
-                  product.oldPrice) *
-                  100
-              )}
-              %
-            </Text>
+            <Text style={styles.discountText}>−{discount}%</Text>
           </View>
-        ) : null}
-      </Pressable>
+        )}
+      </View>
 
-      {/* --------------------------------------------------
-          PRODUCT INFO
-      -------------------------------------------------- */}
-
-      <Pressable onPress={onPress} style={styles.info}>
-        <Text
-          style={styles.title}
-          numberOfLines={2}
-        >
+      {/* Name, rating, and price */}
+      <Pressable
+        onPress={onPress}
+        style={styles.info}
+        accessibilityRole="button"
+      >
+        <Text style={styles.title} numberOfLines={2}>
           {product.title}
         </Text>
 
         <View style={styles.ratingRow}>
-          <Ionicons
-            name="star"
-            size={13}
-            color={colors.warning}
-          />
+          <Ionicons name="star" size={13} color={colors.warning} />
 
           <Text style={styles.rating}>
-            {product.rating}
+            {product.rating.toFixed(1)}
           </Text>
 
           <Text style={styles.reviews}>
@@ -207,42 +195,41 @@ export default function ProductCard({
         </View>
 
         <View style={styles.priceRow}>
-          <Text style={styles.price}>
+          <Text style={styles.price} numberOfLines={1}>
             {formatPrice(product.price)}
           </Text>
 
-          {product.oldPrice ? (
-            <Text style={styles.oldPrice}>
-              {formatPrice(product.oldPrice)}
-            </Text>
-          ) : null}
+          {product.oldPrice !== undefined &&
+            product.oldPrice > product.price && (
+              <Text style={styles.oldPrice} numberOfLines={1}>
+                {formatPrice(product.oldPrice)}
+              </Text>
+            )}
         </View>
       </Pressable>
 
-       <View style={styles.compareRow}>
+      {/* Product comparison */}
+      <View style={styles.compareRow}>
         <CompareButton productId={product.id} />
       </View>
 
-      {/* --------------------------------------------------
-          ADD TO CART
-      -------------------------------------------------- */}
-      
+      {/* Adding to cart */}
       <Animated.View
-        style={{
-          transform: [
-            {
-              scale: cartScale,
-            },
-          ],
-        }}
+        style={[
+          styles.cartAnimation,
+          { transform: [{ scale: cartScale }] },
+        ]}
       >
         <Pressable
           onPress={handleAddToCart}
           disabled={adding}
-          style={[
+          style={({ pressed }) => [
             styles.cartButton,
             added && styles.cartButtonAdded,
+            pressed && !adding && styles.cartButtonPressed,
           ]}
+          accessibilityRole="button"
+          accessibilityLabel={`Add ${product.title} to cart`}
         >
           <Ionicons
             name={
@@ -250,7 +237,7 @@ export default function ProductCard({
                 ? "checkmark-circle-outline"
                 : "bag-add-outline"
             }
-            size={18}
+            size={17}
             color={colors.white}
           />
 
@@ -258,35 +245,43 @@ export default function ProductCard({
             {adding
               ? "Adding..."
               : added
-              ? "Added"
-              : "Add to cart"}
+                ? "Added"
+                : "Add to cart"}
           </Text>
         </Pressable>
       </Animated.View>
-        </Animated.View>
-    )
-};
+    </Animated.View>
+  );
+}
 
 const styles = StyleSheet.create({
-    card: {
+  // Card
+  card: {
     flex: 1,
     minWidth: 0,
     backgroundColor: colors.surface,
-    borderRadius: 20,
+    borderRadius: 22,
     borderWidth: 1,
     borderColor: colors.border,
     overflow: "hidden",
+
+    shadowColor: "#35205F",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.045,
+    shadowRadius: 10,
+    elevation: 2,
   },
 
-  // --------------------------------------------------
-  // IMAGE
-  // --------------------------------------------------
-
-  imageButton: {
+  // Image
+  imageContainer: {
     position: "relative",
-    width: "100%",
-    height: 170,
+    height: 165,
     backgroundColor: colors.surfaceSoft,
+  },
+
+  imagePressable: {
+    width: "100%",
+    height: "100%",
   },
 
   image: {
@@ -294,137 +289,129 @@ const styles = StyleSheet.create({
     height: "100%",
   },
 
+  // Favorite button
   favoriteButton: {
     position: "absolute",
-    top: 10,
-    right: 10,
-
-    width: 38,
-    height: 38,
-
-    borderRadius: 19,
-
-    backgroundColor: "rgba(255,255,255,0.94)",
-
+    top: 9,
+    right: 9,
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: "rgba(255,255,255,0.96)",
     alignItems: "center",
     justifyContent: "center",
-
-    shadowOpacity: 0.08,
-    shadowRadius: 8,
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-
-    elevation: 3,
+    borderWidth: 1,
+    borderColor: "rgba(237,232,245,0.9)",
   },
 
+  // Discount badge
   discountBadge: {
     position: "absolute",
-    left: 10,
-    bottom: 10,
-
-    paddingHorizontal: 8,
+    left: 9,
+    bottom: 9,
+    paddingHorizontal: 9,
     paddingVertical: 5,
-
-    borderRadius: 999,
-
+    borderRadius: 10,
     backgroundColor: colors.primary,
   },
 
   discountText: {
     color: colors.white,
     fontSize: 11,
-    fontWeight: "900",
+    fontWeight: "800",
   },
 
-  // --------------------------------------------------
-  // INFO
-  // --------------------------------------------------
-
+  // Product information
   info: {
-    padding: 12,
+    paddingHorizontal: 11,
+    paddingTop: 11,
+    paddingBottom: 4,
   },
 
   title: {
     color: colors.text,
-    fontSize: 15,
-    lineHeight: 19,
-    fontWeight: "800",
-    minHeight: 38,
+    fontSize: 13,
+    lineHeight: 18,
+    fontWeight: "700",
+    minHeight: 36,
   },
 
   ratingRow: {
     flexDirection: "row",
     alignItems: "center",
     gap: 4,
-    marginTop: 8,
+    marginTop: 7,
   },
 
   rating: {
     color: colors.text,
-    fontSize: 12,
-    fontWeight: "800",
+    fontSize: 11,
+    fontWeight: "700",
   },
 
   reviews: {
     color: colors.muted,
-    fontSize: 11,
+    fontSize: 10,
   },
 
+  // Price
   priceRow: {
     flexDirection: "row",
     alignItems: "baseline",
-    gap: 7,
-    marginTop: 7,
+    flexWrap: "wrap",
+    columnGap: 6,
+    rowGap: 2,
+    marginTop: 8,
   },
 
   price: {
     color: colors.primary,
-    fontSize: 20,
-    fontWeight: "900",
+    fontSize: 17,
+    fontWeight: "800",
   },
 
   oldPrice: {
     color: colors.muted,
-    fontSize: 12,
+    fontSize: 11,
     textDecorationLine: "line-through",
   },
 
-  // --------------------------------------------------
-  // CART
-  // --------------------------------------------------
+  // Comparison
+  compareRow: {
+    paddingHorizontal: 10,
+    paddingTop: 5,
+    paddingBottom: 8,
+    alignItems: "flex-start",
+  },
+
+  // Cart
+  cartAnimation: {
+    paddingHorizontal: 9,
+    paddingBottom: 10,
+  },
 
   cartButton: {
-    marginHorizontal: 10,
-    marginBottom: 10,
-
-    minHeight: 42,
-
-    borderRadius: 14,
-
+    minHeight: 39,
+    paddingHorizontal: 8,
+    borderRadius: 13,
     backgroundColor: colors.primary,
-
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    gap: 6,
+  },
 
-    gap: 7,
+  cartButtonPressed: {
+    backgroundColor: colors.primaryDark,
   },
 
   cartButtonAdded: {
-    backgroundColor: "#22C55E",
+    backgroundColor: colors.success,
   },
 
   cartButtonText: {
     color: colors.white,
-    fontSize: 13,
-    fontWeight: "900",
-  },
-
-  compareRow: {
-    paddingHorizontal: 12,
-    marginBottom: 10,
-    alignItems: "flex-start",
+    fontSize: 12,
+    fontWeight: "800",
   },
 });
