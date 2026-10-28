@@ -166,6 +166,21 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                     <Text style={styles.sectionTitle}>Sort by</Text>
                                     <Text style={styles.sectionHint}>{filteredProducts.length} products</Text>
                                 </View>
+
+                                <View style={styles.sortRow}>
+                                    {sortOption.map((option) => {
+                                        const selected = sortOption === option.value;
+
+                                        return(
+                                            <Pressable
+                                                key={option.value}
+                                                onPress={() => setSortOption(option.value)}
+                                            >
+
+                                            </Pressable>
+                                        )
+                                    })}
+                                </View>
                             </View>
 
                             <Text style={styles.blockTitle}>Filters</Text>
