@@ -1,3 +1,4 @@
+import { Ionicons } from "@expo/vector-icons";
 import { useEffect, useMemo, useState } from "react";
 import { FlatList, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -11,17 +12,16 @@ import { OpenCompareButton } from "../components/OpenCompareButton";
 import { categories, products } from "../data/products";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
-import { SortOption } from "../types/shop";
 
 type CatalogScreenProps = {
     navigation: any;
 };
 
 const sortOptions = [
-    { value: "popular", label: "Popular" },
-    { value: "priceAsc", label: "Price ↑" },
-    { value: "priceDesc", label: "Price ↓" },
-    { value: "rating", label: "Rating" },
+    { value: "popular", label: "Popular", icon: "flame-outline" },
+    { value: "priceAsc", label: "Price ↑", icon: "arrow-up-outline" },
+    { value: "priceDesc", label: "Price ↓", icon: "arrow-down-outline" },
+    { value: "rating", label: "Rating", icon: "star-outline" },
 ] as const;
 
 export default function CatalogScreen({ navigation }: CatalogScreenProps) {
