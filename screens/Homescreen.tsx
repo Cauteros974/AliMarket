@@ -1,16 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { useEffect, useMemo, useRef, useState } from "react";
-import {
-  Animated,
-  Easing,
-  FlatList,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Animated, Easing, FlatList, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AnimatedProductCard from "../components/AnimatedProductCard";
 import CategoryChip from "../components/CategoryChip";
@@ -19,7 +10,6 @@ import SearchBar from "../components/SearchBar";
 import SearchSuggestions from "../components/SearchSuggestions";
 import SectionHeader from "../components/SectionHeader";
 import { categories, products } from "../data/products";
-import { colors } from "../theme/colors";
 import { useSeasonalTheme } from "../store/useSeasonalThemeStore";
 import { useShopStore } from "../store/useShopStore";
 
@@ -31,34 +21,34 @@ type ThemeColors = ReturnType<typeof useSeasonalTheme>["colors"];
 
 const WHITE = "#FFFFFF";
 
-// Advertising banners (gradient colors depend on the current season)
+// Advertising banners (purple gradients, the first one follows the theme)
 const getBanners = (colors: ThemeColors) => [
   {
     id: "summer",
-    label: "Summer sale",
-    title: "Up to 60% off gadgets and home goods",
-    subtitle: "Use coupon WELCOME10 on checkout",
+    label: "SPECIAL OFFER",
+    title: "Find your favourites for less",
+    subtitle: "Discover deals across the store",
     button: "Shop now",
     productId: "p1",
-    colors: [colors.primary, "#3e200c"] as const,
+    colors: [colors.primary, "#48209B"] as const,
   },
   {
     id: "electronics",
-    label: "Tech deals",
-    title: "New electronics from €19.99",
-    subtitle: "Headphones, gadgets and accessories",
+    label: "TECH COLLECTION",
+    title: "Upgrade your everyday essentials",
+    subtitle: "Discover gadgets and accessories",
     button: "Explore",
     productId: "p1",
-    colors: ["#FF5A1F", "#3e200c"] as const,
+    colors: ["#9255F5", "#5420B8"] as const,
   },
   {
     id: "fashion",
-    label: "Fashion week",
-    title: "Fresh styles for your everyday look",
-    subtitle: "Discover new arrivals and special offers",
+    label: "NEW ARRIVALS",
+    title: "A fresh look starts here",
+    subtitle: "Explore new styles and special finds",
     button: "Discover",
     productId: "p5",
-    colors: ["#FF6B35", "#3e200c"] as const,
+    colors: ["#B28AFB", "#7928E8"] as const,
   },
 ];
 
@@ -392,6 +382,7 @@ const createStyles = (colors: ThemeColors) =>
       paddingBottom: 28,
     },
 
+    // Header
     header: {
       marginTop: 10,
       marginBottom: 20,
@@ -411,7 +402,7 @@ const createStyles = (colors: ThemeColors) =>
       fontWeight: "900",
       letterSpacing: 1.1,
     },
-    
+
     title: {
       color: colors.text,
       fontSize: 29,
@@ -421,23 +412,26 @@ const createStyles = (colors: ThemeColors) =>
       letterSpacing: -0.7,
     },
 
+    headerSubtitle: {
+      color: colors.muted,
+      fontSize: 13,
+      marginTop: 5,
+    },
+
     iconButton: {
-      width: 44,
-      height: 44,
-      borderRadius: 22,
-      backgroundColor: colors.surface,
-      borderWidth: 1,
-      borderColor: colors.border,
+      width: 48,
+      height: 48,
+      borderRadius: 17,
+      overflow: "hidden",
+    },
+
+    notificationGradient: {
+      flex: 1,
       alignItems: "center",
       justifyContent: "center",
     },
 
-    iconText: {
-      color: colors.primary,
-      fontSize: 20,
-      fontWeight: "900",
-    },
-
+    // Season
     seasonBadge: {
       alignSelf: "flex-start",
       backgroundColor: colors.surfaceElevated,
@@ -453,6 +447,7 @@ const createStyles = (colors: ThemeColors) =>
       fontSize: 13,
     },
 
+    // Banner
     bannerContainer: {
       marginTop: 18,
       position: "relative",
@@ -463,52 +458,58 @@ const createStyles = (colors: ThemeColors) =>
     },
 
     banner: {
-      minHeight: 170,
-      borderRadius: 24,
-      padding: 18,
+      minHeight: 205,
+      borderRadius: 28,
+      padding: 21,
       overflow: "hidden",
+      justifyContent: "center",
     },
 
     bannerLabel: {
-      color: "rgba(255,255,255,0.8)",
-      fontSize: 13,
-      fontWeight: "800",
+      color: "rgba(255,255,255,0.82)",
+      fontSize: 10,
+      fontWeight: "900",
+      letterSpacing: 1.5,
       textTransform: "uppercase",
     },
 
     bannerTitle: {
       color: WHITE,
-      fontSize: 24,
-      lineHeight: 30,
+      fontSize: 25,
+      lineHeight: 31,
       fontWeight: "900",
-      marginTop: 8,
-      maxWidth: "86%",
+      marginTop: 12,
+      maxWidth: "90%",
     },
 
     bannerSubtitle: {
       color: "rgba(255,255,255,0.86)",
-      marginTop: 8,
-      fontWeight: "700",
+      marginTop: 9,
+      fontSize: 12,
+      lineHeight: 18,
+      fontWeight: "600",
+      maxWidth: "90%",
     },
 
     bannerButton: {
       alignSelf: "flex-start",
       backgroundColor: WHITE,
-      paddingHorizontal: 16,
-      paddingVertical: 10,
-      borderRadius: 999,
-      marginTop: 16,
+      paddingHorizontal: 19,
+      paddingVertical: 12,
+      borderRadius: 16,
+      marginTop: 17,
     },
 
     bannerButtonText: {
       color: colors.primary,
+      fontSize: 12,
       fontWeight: "900",
     },
 
     dots: {
       position: "absolute",
       right: 18,
-      bottom: 14,
+      bottom: 16,
       flexDirection: "row",
       alignItems: "center",
       gap: 6,
@@ -518,14 +519,15 @@ const createStyles = (colors: ThemeColors) =>
       width: 7,
       height: 7,
       borderRadius: 4,
-      backgroundColor: "rgba(255,255,255,0.5)",
+      backgroundColor: "rgba(255,255,255,0.45)",
     },
 
     activeDot: {
-      width: 20,
+      width: 21,
       backgroundColor: WHITE,
     },
 
+    // Grids
     grid: {
       gap: 12,
     },
@@ -534,5 +536,4 @@ const createStyles = (colors: ThemeColors) =>
       gap: 12,
       marginBottom: 12,
     },
-    
   });
