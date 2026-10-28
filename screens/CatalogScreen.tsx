@@ -118,6 +118,13 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                     <Text style={styles.title}>Explore</Text>
                                     <Text style={styles.subtitle}>Find your next favourite</Text>
                                 </View>
+                                <Pressable
+                                    onPress={() => navigation.navigate("Notifications")}
+                                    style={styles.notificationButton}
+                                    accessibilityRole="button"
+                                    >
+                                        <Ionicons name="notifications-outline" size={22} color={colors.text} />
+                                    </Pressable>
                             </View>
                             <View style={styles.searchContainer}>
                                 <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
