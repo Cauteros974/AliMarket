@@ -103,153 +103,153 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 </View>
             ): (
                 <FlatList
-                data={loading ? [] : filteredProducts}
-                keyExtractor={(item) => item.id}
-                numColumns={2}
-                showsVerticalScrollIndicator={false}
-                columnWrapperStyle={styles.gridRow}
-                contentContainerStyle={styles.content}
-                ListHeaderComponent={
-                    <View>
-                        <Text style={styles.title}>Catalog </Text>
-                        <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
-                        <SearchSuggestions visible={searchQuery.length > 0} />
+                    data={loading ? [] : filteredProducts}
+                    keyExtractor={(item) => item.id}
+                    numColumns={2}
+                    showsVerticalScrollIndicator={false}
+                    columnWrapperStyle={styles.gridRow}
+                    contentContainerStyle={styles.content}
+                    ListHeaderComponent={
+                        <View>
+                            <Text style={styles.title}>Catalog </Text>
+                            <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
+                            <SearchSuggestions visible={searchQuery.length > 0} />
 
-                        <ScrollView
-                            horizontal
-                            showsHorizontalScrollIndicator={false}
-                            contentContainerStyle={styles.row}
-                        >
-                            <CategoryChip
-                                category={{ title: "All", icon: "apps-outline" }}
-                                selected={!selectedCategoryId}
-                                onPress={() => setSelectedCategoryId(null)}
-                            />
-
-                            {categories.map((category) => (
+                            <ScrollView
+                                horizontal
+                                showsHorizontalScrollIndicator={false}
+                                contentContainerStyle={styles.row}
+                            >
                                 <CategoryChip
-                                    key={category.id}
-                                    category={category}
-                                    selected={selectedCategoryId === category.id}
-                                    onPress={() => setSelectedCategoryId(category.id)}
+                                    category={{ title: "All", icon: "apps-outline" }}
+                                    selected={!selectedCategoryId}
+                                    onPress={() => setSelectedCategoryId(null)}
                                 />
-                            ))}
-                        </ScrollView>
 
-                        <Text style={styles.blockTitle}>Sort</Text>
+                                {categories.map((category) => (
+                                    <CategoryChip
+                                        key={category.id}
+                                        category={category}
+                                        selected={selectedCategoryId === category.id}
+                                        onPress={() => setSelectedCategoryId(category.id)}
+                                    />
+                                ))}
+                            </ScrollView>
 
-                        <View style={styles.wrap}>
-                            {sortOptions.map((option) => (
+                            <Text style={styles.blockTitle}>Sort</Text>
+
+                            <View style={styles.wrap}>
+                                {sortOptions.map((option) => (
+                                    <Pressable
+                                        key={option.value}
+                                        onPress={() => setSortOption(option.value)}
+                                        style={[styles.filterButton, sortOption === option.value && styles.activeFilter]}
+                                    >
+                                        <Text
+                                            style={[
+                                                styles.filterText,
+                                                sortOption === option.value && styles.activeFilterText,
+                                            ]}
+                                        >
+                                            {option.label}
+                                        </Text>
+                                    </Pressable>
+                                ))}
+                            </View>
+
+                            <Text style={styles.blockTitle}>Filters</Text>
+                            <Pressable onPress={() => setFiltersVisible(true)} style={styles.allFiltersButton}>
+                                <Text style={styles.allFiltersText}>Open all filters</Text>
+                            </Pressable>
+
+                            <OpenCompareButton />
+
+                            <View style={styles.priceRow}>
+                                <TextInput
+                                    value={filters.minPrice}
+                                    onChangeText={(value) => updateFilters({ minPrice: value })}
+                                    keyboardType="numeric"
+                                    placeholder="Min €"
+                                    placeholderTextColor={colors.muted}
+                                    style={styles.input}
+                                />
+
+                                <TextInput
+                                    value={filters.maxPrice}
+                                    onChangeText={(value) => updateFilters({ maxPrice: value })}
+                                    keyboardType="numeric"
+                                    placeholder="Max €"
+                                    placeholderTextColor={colors.muted}
+                                    style={styles.input}
+                                />
+                            </View>
+
+                            <View style={styles.wrap}>
                                 <Pressable
-                                    key={option.value}
-                                    onPress={() => setSortOption(option.value)}
-                                    style={[styles.filterButton, sortOption === option.value && styles.activeFilter]}
+                                    onPress={() => updateFilters({ freeDeliveryOnly: !filters.freeDeliveryOnly })}
+                                    style={[styles.filterButton, filters.freeDeliveryOnly && styles.activeFilter]}
                                 >
                                     <Text
                                         style={[
                                             styles.filterText,
-                                            sortOption === option.value && styles.activeFilterText,
+                                            filters.freeDeliveryOnly && styles.activeFilterText,
                                         ]}
                                     >
-                                        {option.label}
+                                        Free delivery
                                     </Text>
                                 </Pressable>
-                            ))}
-                        </View>
 
-                        <Text style={styles.blockTitle}>Filters</Text>
-                        <Pressable onPress={() => setFiltersVisible(true)} style={styles.allFiltersButton}>
-                            <Text style={styles.allFiltersText}>Open all filters</Text>
-                        </Pressable>
-
-                        <OpenCompareButton />
-
-                        <View style={styles.priceRow}>
-                            <TextInput
-                                value={filters.minPrice}
-                                onChangeText={(value) => updateFilters({ minPrice: value })}
-                                keyboardType="numeric"
-                                placeholder="Min €"
-                                placeholderTextColor={colors.muted}
-                                style={styles.input}
-                            />
-
-                            <TextInput
-                                value={filters.maxPrice}
-                                onChangeText={(value) => updateFilters({ maxPrice: value })}
-                                keyboardType="numeric"
-                                placeholder="Max €"
-                                placeholderTextColor={colors.muted}
-                                style={styles.input}
-                            />
-                        </View>
-
-                        <View style={styles.wrap}>
-                            <Pressable
-                                onPress={() => updateFilters({ freeDeliveryOnly: !filters.freeDeliveryOnly })}
-                                style={[styles.filterButton, filters.freeDeliveryOnly && styles.activeFilter]}
-                            >
-                                <Text
-                                    style={[
-                                        styles.filterText,
-                                        filters.freeDeliveryOnly && styles.activeFilterText,
-                                    ]}
+                                <Pressable
+                                    onPress={() => updateFilters({ discountsOnly: !filters.discountsOnly })}
+                                    style={[styles.filterButton, filters.discountsOnly && styles.activeFilter]}
                                 >
-                                    Free delivery
-                                </Text>
-                            </Pressable>
+                                    <Text
+                                        style={[
+                                            styles.filterText,
+                                            filters.discountsOnly && styles.activeFilterText,
+                                        ]}
+                                    >
+                                        Discounts
+                                    </Text>
+                                </Pressable>
 
-                            <Pressable
-                                onPress={() => updateFilters({ discountsOnly: !filters.discountsOnly })}
-                                style={[styles.filterButton, filters.discountsOnly && styles.activeFilter]}
-                            >
-                                <Text
-                                    style={[
-                                        styles.filterText,
-                                        filters.discountsOnly && styles.activeFilterText,
-                                    ]}
+                                <Pressable
+                                    onPress={() =>
+                                        updateFilters({ minRating: filters.minRating === 4.5 ? 0 : 4.5 })
+                                    }
+                                    style={[styles.filterButton, filters.minRating === 4.5 && styles.activeFilter]}
                                 >
-                                    Discounts
-                                </Text>
-                            </Pressable>
+                                    <Text
+                                        style={[
+                                            styles.filterText,
+                                            filters.minRating === 4.5 && styles.activeFilterText,
+                                        ]}
+                                    >
+                                        4.5+ rating
+                                    </Text>
+                                </Pressable>
 
-                            <Pressable
-                                onPress={() =>
-                                    updateFilters({ minRating: filters.minRating === 4.5 ? 0 : 4.5 })
-                                }
-                                style={[styles.filterButton, filters.minRating === 4.5 && styles.activeFilter]}
-                            >
-                                <Text
-                                    style={[
-                                        styles.filterText,
-                                        filters.minRating === 4.5 && styles.activeFilterText,
-                                    ]}
-                                >
-                                    4.5+ rating
-                                </Text>
-                            </Pressable>
-
-                            <Pressable onPress={resetFilters} style={styles.filterButton}>
-                                <Text style={styles.filterText}>Reset</Text>
-                            </Pressable>
+                                <Pressable onPress={resetFilters} style={styles.filterButton}>
+                                    <Text style={styles.filterText}>Reset</Text>
+                                </Pressable>
+                            </View>
                         </View>
-                    </View>
-                }
-                ListEmptyComponent={
-                    <View style={styles.emptyState}>
-                        <Text style={styles.emptyTitle}>Nothing found</Text>
-                        <Text style={styles.emptyText}>Try another search or reset filters.</Text>
-                    </View>
-                }
-                renderItem={({ item }) => (
-                    <ProductCard
-                        product={item}
-                        isFavorite={favoriteIds.includes(item.id)}
-                        onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
-                        onToggleFavorite={() => toggleFavorite(item.id)}
-                    />
-                )}
-            />
+                    }
+                    ListEmptyComponent={
+                        <View style={styles.emptyState}>
+                            <Text style={styles.emptyTitle}>Nothing found</Text>
+                            <Text style={styles.emptyText}>Try another search or reset filters.</Text>
+                        </View>
+                    }
+                    renderItem={({ item }) => (
+                        <ProductCard
+                            product={item}
+                            isFavorite={favoriteIds.includes(item.id)}
+                            onPress={() => navigation.navigate("ProductDetails", { productId: item.id })}
+                            onToggleFavorite={() => toggleFavorite(item.id)}
+                        />
+                    )}
+                />
             )}
 
             <AllFiltersModal visible={filtersVisible} onClose={() => setFiltersVisible(false)}/>
