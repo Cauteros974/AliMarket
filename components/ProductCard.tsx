@@ -47,26 +47,25 @@ export default function ProductCard({
     }, [cardOpacity, cardTranslateY]);
 
 
-    const favoriteScale = useRef(new Animated.Value(1)).current;
+    const favoriteScale = useRef(new Animated.Value(1)).current;    
 
     function handleFavorite() {
-        Animated.sequence([
-            Animated.spring(favoriteScale, {
-                toValue: 1.35,
-                tension: 180,
-                friction: 5,
-                useNativeDriver: true,
-            }),
-
-            Animated.spring(favoriteScale, {
-                toValue: 1,
-                tension: 100,
-                friction: 5,
-                useNativeDriver: true,
-            }),
-        ]).start();
-
-        onToggleFavorite();
+      Animated.sequence([
+        Animated.spring(favoriteScale, {
+          toValue: 1.25,
+          tension: 180,
+          friction: 5,
+          useNativeDriver: true,
+        }),
+        Animated.spring(favoriteScale, {
+          toValue: 1,
+          tension: 120,
+          friction: 5,
+          useNativeDriver: true,
+        }),
+      ]).start();
+      
+      onToggleFavorite();
     }
     
     const cartScale = useRef(new Animated.Value(1)).current;
