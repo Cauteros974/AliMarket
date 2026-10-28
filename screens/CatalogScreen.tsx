@@ -113,7 +113,10 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                     ListHeaderComponent={
                         <View>
                             <Text style={styles.title}>Catalog </Text>
-                            <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
+                            <View style={styles.searchContainer}>
+                                <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
+                                <SearchSuggestions visible={searchQuery.length > 0} />
+                            </View>
                             <SearchSuggestions visible={searchQuery.length > 0} />
 
                             <ScrollView
