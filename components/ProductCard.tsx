@@ -3,10 +3,9 @@ import { useEffect, useRef,useState } from "react";
 import { Animated, Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
-import { Product } from "../types/product";
+import type { Product } from "../types/product";
 import { formatPrice } from "../utils/format";
 import CompareButton from "./CompareButton";
-import AnimatedAddToCartButton from "./AnimatedAddToCartButton";
 
 type ProductCardProps = {
     product: Product;
@@ -25,14 +24,14 @@ export default function ProductCard({
     const addToCart = useShopStore((state) => state.addToCart);
 
     const cardOpacity = useRef(new Animated.Value(0)).current;
-    const cardTranslateY = useRef(new Animated.Value(18)).current;
+    const cardTranslateY = useRef(new Animated.Value(14)).current;
 
     useEffect(() => {
         Animated.parallel([
             Animated.timing(cardOpacity, {
-                toValue: 1,
-                duration: 400,
-                useNativeDriver: true,
+              toValue: 1,
+              duration: 350,
+              useNativeDriver: true,
             }),
 
             Animated.spring(cardTranslateY, {
