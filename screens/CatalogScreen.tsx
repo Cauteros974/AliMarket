@@ -99,6 +99,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                         <View style={styles.loadingTitle} />
                         <View style={styles.loadingSubtitle} />
                     </View>
+                    <SkeletonProductGrid />
                 </View>
             ): (
                 <FlatList
