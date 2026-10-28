@@ -195,6 +195,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
 
                                 <View style={styles.compareTextContainer}>
                                     <Text style={styles.compareTitle}>Compare product</Text>
+                                    <Text style={styles.compareSubtitle}>Find the best option for you</Text>
                                 </View>
 
                                 <OpenCompareButton />
