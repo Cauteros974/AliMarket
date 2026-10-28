@@ -83,6 +83,13 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
             });
     }, [filters, searchQuery, selectedCategoryId, sortOption]);
 
+    const activeFilterCount = [
+        Boolean(filters.minPrice),
+        Boolean(filters.maxPrice),
+        filters.freeDeliveryOnly,
+        filters.discountsOnly,
+    ].filter(Boolean).length;
+
     return (
         <SafeAreaView style={styles.safeArea}>
             {loading ? (
