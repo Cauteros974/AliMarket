@@ -89,7 +89,7 @@ export default function ProductCard({
             toValue: 1.03,
             useNativeDriver: true,
           }),
-          
+
           Animated.spring(cartScale, {
             toValue: 1,
             useNativeDriver: true,
@@ -98,6 +98,7 @@ export default function ProductCard({
 
         addToCart(product.id);
 
+        // Save the current add confirmation logic
         setTimeout(() => {
             setAdding(false);
             setAdded(true);
@@ -107,6 +108,13 @@ export default function ProductCard({
             }, 1200);
         }, 350);
     }
+
+    const discount =
+      product.oldPrice && product.oldPrice > product.price
+        ? Math.round(
+            ((product.oldPrice - product.price) / product.oldPrice) * 100
+          )
+        : null;
 
     return(
         <Animated.View
