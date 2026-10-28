@@ -97,6 +97,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                 <View style={styles.loadingContainer}>
                     <View style={styles.loadingHeader}>
                         <View style={styles.loadingTitle} />
+                        <View style={styles.loadingSubtitle} />
                     </View>
                 </View>
             ): (
