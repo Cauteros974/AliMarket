@@ -1,3 +1,4 @@
+import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -205,7 +206,16 @@ export default function HomeScreen({ navigation }: Props) {
             accessibilityRole="button"
             accessibilityLabel="Notifications"
           >
-            <Text style={styles.iconText}>!</Text>
+            <LinearGradient
+              colors={[colors.primary, "#5420B8"]}
+              style={styles.notificationGradient}
+            >
+              <Ionicons
+                name="notifications-outline"
+                size={21}
+                color="#FFFFFF"
+              />
+            </LinearGradient>
           </Pressable>
         </View>
 
