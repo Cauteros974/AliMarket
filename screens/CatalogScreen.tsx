@@ -136,6 +136,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                             <View style={styles.section}>
                                 <View style={styles.sectionHeader}>
                                     <Text style={styles.sectionTitle}>Categories</Text>
+                                    <Text style={styles.sectionHint}>Explore by interest</Text>
                                 </View>
                                 
                                 <ScrollView
