@@ -187,7 +187,14 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 <Text style={styles.allFiltersText}>Open all filters</Text>
                             </Pressable>
 
-                            <OpenCompareButton />
+                            
+                            <View style={styles.compareContainer}>
+                                <View style={styles.compareIcon}>
+                                    <Ionicons name="git-compare-outline" size={20} color={colors.primary} />
+                                </View>
+                                
+                                <OpenCompareButton />
+                            </View>
 
                             <View style={styles.priceRow}>
                                 <TextInput
