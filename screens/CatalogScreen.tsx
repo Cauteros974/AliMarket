@@ -116,6 +116,7 @@ export default function CatalogScreen({ navigation }: CatalogScreenProps) {
                                 <View style={styles.headerText}>
                                     <Text style={styles.eyebrow}>DISCOVER SOMETHING NEW</Text>
                                     <Text style={styles.title}>Explore</Text>
+                                    <Text style={styles.subtitle}>Find your next favourite</Text>
                                 </View>
                             </View>
                             <View style={styles.searchContainer}>
