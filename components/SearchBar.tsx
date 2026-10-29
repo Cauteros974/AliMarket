@@ -41,6 +41,8 @@ export default function SearchBar({
           onPress={() => onChangeText("")}
           hitSlop={10}
           accessibilityRole="button"
+          accessibilityLabel="Clear search"
+          style={styles.clearButton}
         >
           <Ionicons 
             name="close-circle"
