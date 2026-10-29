@@ -16,7 +16,8 @@ export default function SearchBar({
   onChangeText,
   placeholder = "Search products",
   onFocus, 
-  onBlur
+  onBlur,
+  onSubmitEditing
 }: SearchBarProps) {
   return (
     <View style={styles.container}>
