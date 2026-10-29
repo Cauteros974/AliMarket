@@ -589,4 +589,10 @@ const createStyles = (colors: ThemeColors) =>
       gap: 12,
       marginBottom: 12,
     },
+
+    brandRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 10,
+    }
   });
