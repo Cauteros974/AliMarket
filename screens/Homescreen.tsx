@@ -637,7 +637,7 @@ const createStyles = (colors: ThemeColors) =>
       height: 8,
       borderRadius: 4,
       backgroundColor: colors.primary,
-      borderWidth: 2,
+      borderWidth: 1.5,
       borderColor: colors.surface,
     },
   });
