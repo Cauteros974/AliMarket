@@ -206,11 +206,12 @@ export default function HomeScreen({ navigation }: Props) {
     [navigation, setSelectedCategoryId]
   );
 
-  function openBanner() {
+  const openBanner = useCallback(() => {
     navigation.navigate("ProductDetails", {
       productId: currentBanner.productId,
     });
-  }
+  }, [currentBanner.productId, navigation]);
+
 
   function selectBanner(index: number) {
     if (index === bannerIndex) {
