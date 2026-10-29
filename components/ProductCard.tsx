@@ -262,7 +262,7 @@ export default function ProductCard({
 }
 
 const styles = StyleSheet.create({
-  // Card
+  // Main card
   card: {
     flex: 1,
     minWidth: 0,
@@ -271,15 +271,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
     overflow: "hidden",
-
-    shadowColor: "#35205F",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.045,
-    shadowRadius: 10,
-    elevation: 2,
+    shadowColor: "#392064",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.07,
+    shadowRadius: 12,
+    elevation: 3,
   },
 
-  // Image
+  // Image area
   imageContainer: {
     position: "relative",
     height: 165,
@@ -296,7 +295,7 @@ const styles = StyleSheet.create({
     height: "100%",
   },
 
-  // Favorite button
+  // Favourite button
   favoriteButton: {
     position: "absolute",
     top: 9,
@@ -308,16 +307,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: "rgba(237,232,245,0.9)",
+    borderColor: colors.border,
+    shadowColor: "#392064",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 5,
+    elevation: 2,
   },
 
   // Discount badge
   discountBadge: {
     position: "absolute",
     left: 9,
-    bottom: 9,
+    top: 9,
     paddingHorizontal: 9,
-    paddingVertical: 5,
+    paddingVertical: 6,
     borderRadius: 10,
     backgroundColor: colors.primary,
   },
@@ -325,40 +329,53 @@ const styles = StyleSheet.create({
   discountText: {
     color: colors.white,
     fontSize: 11,
-    fontWeight: "800",
+    fontWeight: "900",
   },
 
-  // Product information
+  // Product details
   info: {
     paddingHorizontal: 11,
-    paddingTop: 11,
-    paddingBottom: 4,
+    paddingTop: 12,
+    paddingBottom: 3,
   },
 
   title: {
     color: colors.text,
     fontSize: 13,
     lineHeight: 18,
-    fontWeight: "700",
+    fontWeight: "800",
     minHeight: 36,
   },
 
+  // Rating
   ratingRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 4,
-    marginTop: 7,
+    flexWrap: "wrap",
+    gap: 6,
+    marginTop: 8,
+  },
+
+  ratingBadge: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 3,
+    backgroundColor: colors.surfaceSoft,
+    paddingHorizontal: 6,
+    paddingVertical: 4,
+    borderRadius: 7,
   },
 
   rating: {
     color: colors.text,
-    fontSize: 11,
-    fontWeight: "700",
+    fontSize: 10,
+    fontWeight: "800",
   },
 
   reviews: {
     color: colors.muted,
     fontSize: 10,
+    flexShrink: 1,
   },
 
   // Price
@@ -368,13 +385,13 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     columnGap: 6,
     rowGap: 2,
-    marginTop: 8,
+    marginTop: 9,
   },
 
   price: {
     color: colors.primary,
-    fontSize: 17,
-    fontWeight: "800",
+    fontSize: 18,
+    fontWeight: "900",
   },
 
   oldPrice: {
@@ -383,24 +400,39 @@ const styles = StyleSheet.create({
     textDecorationLine: "line-through",
   },
 
-  // Comparison
+  // Delivery
+  deliveryRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 5,
+    marginTop: 8,
+  },
+
+  deliveryText: {
+    color: colors.muted,
+    fontSize: 10,
+    fontWeight: "600",
+    flexShrink: 1,
+  },
+
+  // Compare button area
   compareRow: {
     paddingHorizontal: 10,
-    paddingTop: 5,
+    paddingTop: 9,
     paddingBottom: 8,
     alignItems: "flex-start",
   },
 
-  // Cart
+  // Add-to-cart button
   cartAnimation: {
     paddingHorizontal: 9,
     paddingBottom: 10,
   },
 
   cartButton: {
-    minHeight: 39,
+    minHeight: 41,
     paddingHorizontal: 8,
-    borderRadius: 13,
+    borderRadius: 14,
     backgroundColor: colors.primary,
     flexDirection: "row",
     alignItems: "center",
