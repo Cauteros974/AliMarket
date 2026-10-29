@@ -629,4 +629,10 @@ const createStyles = (colors: ThemeColors) =>
       alignItems: "center",
       justifyContent: "center",
     },
+    notificationDot: {
+      position: "absolute",
+      right: 11,
+      width: 8,
+      height: 8,
+    },
   });
