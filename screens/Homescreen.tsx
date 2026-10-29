@@ -212,14 +212,13 @@ export default function HomeScreen({ navigation }: Props) {
     });
   }, [currentBanner.productId, navigation]);
 
-
-  function selectBanner(index: number) {
+  const selectBanner = useCallback(
     if (index === bannerIndex) {
       return;
     }
 
     changeBanner(index);
-  }
+  )
 
   return (
     <SafeAreaView style={styles.safeArea}>
