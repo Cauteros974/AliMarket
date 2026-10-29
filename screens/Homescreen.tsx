@@ -122,7 +122,7 @@ export default function HomeScreen({ navigation }: Props) {
         Animated.parallel([
           Animated.timing(bannerOpacity, {
             toValue: 1,
-            duration: 180,
+            duration: 280,
             easing: Easing.out(Easing.ease),
             useNativeDriver: true,
           })
