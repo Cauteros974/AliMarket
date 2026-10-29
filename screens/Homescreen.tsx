@@ -626,5 +626,7 @@ const createStyles = (colors: ThemeColors) =>
       backgroundColor: colors.surface,
       borderWidth: 1,
       borderColor: colors.border,
+      alignItems: "center",
+      justifyContent: "center",
     },
   });
