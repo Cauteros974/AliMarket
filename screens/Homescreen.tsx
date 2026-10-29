@@ -63,6 +63,8 @@ const seasonText: Record<string, string> = {
 const seasonIcons: Record <string, keyof typeof Ionicons.glyphMap> = {
   autumn: "leaf-outline",
   winter: "snow-outline",
+  spring: "flower-outline",
+  summer: "sunny-outline",
 }
 
 export default function HomeScreen({ navigation }: Props) {
