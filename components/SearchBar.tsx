@@ -37,7 +37,11 @@ export default function SearchBar({
       />
 
       {value.length > 0 &&  (
-        <Pressable>
+        <Pressable
+          onPress={() => onChangeText("")}
+          hitSlop={10}
+          accessibilityRole="button"
+        >
           <Ionicons 
             name="close-circle"
             size={19}
