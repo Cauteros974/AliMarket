@@ -39,7 +39,8 @@ export default function SearchBar({
         <Pressable>
           <Ionicons 
             name="close-circle"
-            size={10}
+            size={19}
+            color={colors.muted}
           />
         </Pressable>
       )}
