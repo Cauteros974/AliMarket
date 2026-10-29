@@ -213,12 +213,11 @@ export default function HomeScreen({ navigation }: Props) {
   }, [currentBanner.productId, navigation]);
 
   const selectBanner = useCallback(
-    if (index === bannerIndex) {
-      return;
-    }
-
-    changeBanner(index);
-  )
+    (index: number) => {
+      changeBanner(index);
+    },
+    [changeBanner]
+  );
 
   return (
     <SafeAreaView style={styles.safeArea}>
