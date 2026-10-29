@@ -227,12 +227,13 @@ export default function HomeScreen({ navigation }: Props) {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.header}>
-          <View style={styles.headerText}>
-            <Text style={styles.eyebrow}>AliMarket</Text>
-            <Text style={styles.title}>Discover your style</Text>
-            <Text style={styles.headerSubtitle}>
-              Find something you'll love
-            </Text>
+          <View style={styles.brandRow}>
+            <LinearGradient
+              colors={[colors.primary, "#5420B8"]}
+              style={styles.logo}
+            >
+              <Ionicons name="bag-handle" size={22} color={WHITE} />
+            </LinearGradient>
           </View>
 
           <Pressable
