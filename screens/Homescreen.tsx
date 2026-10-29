@@ -259,6 +259,7 @@ export default function HomeScreen({ navigation }: Props) {
         <View style={styles.intro}>
           <Text style={styles.eyebrow}>YOUR DAILY DISCOVERY</Text>
           <Text style={styles.title}>Find your{"\n"}</Text>
+          <Text style={styles.titleAccent}>next favourite.</Text>
         </View>
 
         <SearchBar
