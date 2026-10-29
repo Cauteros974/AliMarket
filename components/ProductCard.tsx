@@ -182,15 +182,17 @@ export default function ProductCard({
         </Text>
 
         <View style={styles.ratingRow}>
-          <Ionicons name="star" size={13} color={colors.warning} />
+          <View style={styles.ratingBadge}>
+            <Ionicons name="star" size={13} color={colors.warning} />
 
-          <Text style={styles.rating}>
-            {product.rating.toFixed(1)}
-          </Text>
+            <Text style={styles.rating}>
+              {product.rating.toFixed(1)}
+            </Text>
 
-          <Text style={styles.reviews}>
-            ({product.reviews.toLocaleString("en-US")})
-          </Text>
+            <Text style={styles.reviews}>
+              ({product.reviews.toLocaleString("en-US")}) reviews
+            </Text>
+          </View>
         </View>
 
         <View style={styles.priceRow}>
