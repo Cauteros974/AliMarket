@@ -9,6 +9,7 @@ import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
 import SearchSuggestions from "../components/SearchSuggestions";
 import SectionHeader from "../components/SectionHeader";
+import { colors } from "../theme/colors";
 import { categories, products } from "../data/products";
 import { useSeasonalTheme } from "../store/useSeasonalThemeStore";
 import { useShopStore } from "../store/useShopStore";
