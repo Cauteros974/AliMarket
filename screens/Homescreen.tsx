@@ -115,6 +115,18 @@ export default function HomeScreen({ navigation }: Props) {
         }),
       ]).start(({finished}) => {
         if (!finished) return;
+
+        setBannerIndex(nextIndex);
+        bannerTranslateX.setValue(12);
+
+        Animated.parallel([
+          Animated.timing(bannerOpacity, {
+            toValue: 1,
+            duration: 180,
+            easing: Easing.out(Easing.ease),
+            useNativeDriver: true,
+          })
+        ])
       })
     }
   )
