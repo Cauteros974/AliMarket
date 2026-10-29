@@ -113,7 +113,9 @@ export default function HomeScreen({ navigation }: Props) {
           easing: Easing.out(Easing.ease),
           useNativeDriver: true,
         }),
-      ])
+      ]).start(({finished}) => {
+        if (!finished) return;
+      })
     }
   )
 
