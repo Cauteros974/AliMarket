@@ -593,6 +593,14 @@ const createStyles = (colors: ThemeColors) =>
     brandRow: {
       flexDirection: "row",
       alignItems: "center",
-      gap: 10,
-    }
+      gap: 11,
+    },
+
+    logo: {
+      width: 46,
+      height: 46,
+      borderRadius: 16,
+      alignItems: "center",
+      justifyContent: "center",
+    },
   });
