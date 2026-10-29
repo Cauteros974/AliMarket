@@ -200,12 +200,11 @@ export default function ProductCard({
             {formatPrice(product.price)}
           </Text>
 
-          {product.oldPrice !== undefined &&
-            product.oldPrice > product.price && (
-              <Text style={styles.oldPrice} numberOfLines={1}>
-                {formatPrice(product.oldPrice)}
-              </Text>
-            )}
+          {discount != null && product.oldPrice != undefined && (
+            <Text style={styles.oldPrice} numberOfLines={1}>
+              {formatPrice(product.oldPrice)}
+            </Text>
+          )}
         </View>
       </Pressable>
 
