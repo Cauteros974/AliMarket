@@ -94,47 +94,13 @@ export default function HomeScreen({ navigation }: Props) {
 
   const [searchFocused, setSearchFocused] = useState(false);
 
-  function changeBanner(nextIndex: number) {
-    // First, hide the current banner
-    Animated.parallel([
-      Animated.timing(bannerOpacity, {
-        toValue: 0,
-        duration: 250,
-        easing: Easing.out(Easing.ease),
-        useNativeDriver: true,
-      }),
-
-      Animated.timing(bannerTranslateX, {
-        toValue: -20,
-        duration: 250,
-        easing: Easing.out(Easing.ease),
-        useNativeDriver: true,
-      }),
-    ]).start(() => {
-      // Changing the banner
-      setBannerIndex(nextIndex);
-
-      // Return it slightly to the right
-      bannerTranslateX.setValue(20);
-
-      // Show the new one
-      Animated.parallel([
-        Animated.timing(bannerOpacity, {
-          toValue: 1,
-          duration: 350,
-          easing: Easing.out(Easing.ease),
-          useNativeDriver: true,
-        }),
-
-        Animated.timing(bannerTranslateX, {
-          toValue: 0,
-          duration: 350,
-          easing: Easing.out(Easing.ease),
-          useNativeDriver: true,
-        }),
-      ]).start();
-    });
-  }
+  const changeBanner = useCallback(
+    {nextIndex: number} => {
+      if (nextIndex === bannerIndex || nextIndex < 0 || nextIndex >= banners.length) {
+        return;
+      }
+    }
+  )
 
   // Automatic banner change
   useEffect(() => {
