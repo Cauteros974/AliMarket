@@ -603,4 +603,14 @@ const createStyles = (colors: ThemeColors) =>
       alignItems: "center",
       justifyContent: "center",
     },
+    brandText: {
+      gap: 3,
+    },
+
+    brandName: {
+      color: colors.text,
+      fontSize: 18,
+      fontWeight: "900",
+      letterSpacing: -0.4,
+    },
   });
