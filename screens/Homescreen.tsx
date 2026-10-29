@@ -155,7 +155,11 @@ export default function HomeScreen({ navigation }: Props) {
             duration: 180,
             useNativeDriver: true,
           }),
-        ])
+        ]).start(({finished}) => {
+          if (!finished) return;
+
+          bannerTranslateX.setValue(12);
+        })
       })
     }, 4500);
 
