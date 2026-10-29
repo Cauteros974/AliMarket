@@ -73,4 +73,8 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "600",
   },
+  clearButton: {
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
