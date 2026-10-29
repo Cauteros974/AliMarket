@@ -167,7 +167,13 @@ export default function HomeScreen({ navigation }: Props) {
               easing: Easing.out(Easing.ease),
               useNativeDriver: true,
             }),
-          ])
+            Animated.timing(bannerTranslateX, {
+              toValue: 0,
+              duration: 280,
+              easing: Easing.out(Easing.ease),
+              useNativeDriver: true,
+            }),
+          ]).start();
         })
       })
     }, 4500);
