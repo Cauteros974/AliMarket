@@ -159,6 +159,15 @@ export default function HomeScreen({ navigation }: Props) {
           if (!finished) return;
 
           bannerTranslateX.setValue(12);
+
+          Animated.parallel([
+            Animated.timing(bannerOpacity, {
+              toValue: 1,
+              duration: 280,
+              easing: Easing.out(Easing.ease),
+              useNativeDriver: true,
+            }),
+          ])
         })
       })
     }, 4500);
