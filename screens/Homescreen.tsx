@@ -1,6 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Animated, Easing, FlatList, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AnimatedProductCard from "../components/AnimatedProductCard";
@@ -95,7 +95,7 @@ export default function HomeScreen({ navigation }: Props) {
   const [searchFocused, setSearchFocused] = useState(false);
 
   const changeBanner = useCallback(
-    {nextIndex: number} => {
+    (nextIndex: number) => {
       if (nextIndex === bannerIndex || nextIndex < 0 || nextIndex >= banners.length) {
         return;
       }
@@ -134,9 +134,9 @@ export default function HomeScreen({ navigation }: Props) {
           }),
         ]).start();
       });
-    },
+    }, 
     [bannerIndex, banners.length, bannerOpacity, bannerTranslateX]
-  )
+  );
 
   // Automatic banner change
   useEffect(() => {
@@ -174,12 +174,14 @@ export default function HomeScreen({ navigation }: Props) {
               useNativeDriver: true,
             }),
           ]).start();
-        })
+        });
+
+        return next;
       })
-    }, 4500);
+    }, 6000);
 
     return () => clearInterval(interval);
-  }, [bannerIndex]);
+  }, [banners.length, bannerOpacity, bannerTranslateX]);
 
   // Products
   const flashDeals = useMemo(
@@ -196,13 +198,13 @@ export default function HomeScreen({ navigation }: Props) {
     [recentlyViewedIds]
   );
 
-  function openCategory(categoryId: string) {
-    setSelectedCategoryId(categoryId);
-
-    navigation.navigate("CategoryDetails", {
-      categoryId,
-    });
-  }
+  const openCategory = useCallback(
+    (categoryId: string) => {
+      setSelectedCategoryId(categoryId);
+      navigation.navigate("CategoryDetails", { categoryId });
+    },
+    [navigation, setSelectedCategoryId]
+  );
 
   function openBanner() {
     navigation.navigate("ProductDetails", {
