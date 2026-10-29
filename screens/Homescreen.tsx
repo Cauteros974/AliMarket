@@ -234,6 +234,10 @@ export default function HomeScreen({ navigation }: Props) {
             >
               <Ionicons name="bag-handle" size={22} color={WHITE} />
             </LinearGradient>
+
+            <View style={styles.brandText}>
+              <Text style={styles.brandName}>AliMarket</Text>
+            </View>
           </View>
 
           <Pressable
