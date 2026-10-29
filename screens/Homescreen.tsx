@@ -256,6 +256,11 @@ export default function HomeScreen({ navigation }: Props) {
           </Pressable>
         </View>
 
+        <View style={styles.intro}>
+          <Text style={styles.eyebrow}>YOUR DAILY DISCOVERY</Text>
+          <Text style={styles.title}>Find your{"\n"}</Text>
+        </View>
+
         <SearchBar
           value={searchQuery}
           onChangeText={setSearchQuery}
