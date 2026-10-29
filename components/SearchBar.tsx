@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import { StyleSheet, TextInput, View } from "react-native";
+import { Pressable, StyleSheet, TextInput, View } from "react-native";
 import { colors } from "../theme/colors";
 
 type SearchBarProps = {
@@ -34,6 +34,15 @@ export default function SearchBar({
         autoCorrect={false}
         accessibilityLabel="Search products"
       />
+
+      {value.length > 0 &&  (
+        <Pressable>
+          <Ionicons 
+            name="close-circle"
+            size={10}
+          />
+        </Pressable>
+      )}
     </View>
   );
 }
