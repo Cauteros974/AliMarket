@@ -207,8 +207,8 @@ export default function ProductCard({
           )}
         </View>
 
-        <View>
-          <Ionicons name="cube-outline" size={12} />
+        <View style={styles.deliveryRow}>
+          <Ionicons name="cube-outline" size={13} color={colors.muted}/>
            <Text style={styles.deliveryText} numberOfLines={1}>
             {product.delivery}
           </Text>
