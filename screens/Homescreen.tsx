@@ -141,8 +141,17 @@ export default function HomeScreen({ navigation }: Props) {
   // Automatic banner change
   useEffect(() => {
     const interval = setInterval(() => {
-      const nextIndex = (bannerIndex + 1) % banners.length;
-      changeBanner(nextIndex);
+      setBannerIndex((current) => {
+        const next = (current + 1) % banners.length;
+
+        Animated.parallel([
+          Animated.timing(bannerOpacity, {
+            toValue: 0,
+            duration: 180,
+            useNativeDriver: true,
+          }),
+        ])
+      })
     }, 4500);
 
     return () => clearInterval(interval);
