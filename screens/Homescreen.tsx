@@ -237,6 +237,7 @@ export default function HomeScreen({ navigation }: Props) {
 
             <View style={styles.brandText}>
               <Text style={styles.brandName}>AliMarket</Text>
+              <Text style={styles.brandCaption}>Discover something new</Text>
             </View>
           </View>
 
