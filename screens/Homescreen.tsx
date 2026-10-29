@@ -107,6 +107,12 @@ export default function HomeScreen({ navigation }: Props) {
           easing: Easing.out(Easing.ease),
           useNativeDriver: true,
         }),
+        Animated.timing(bannerTranslateX, {
+          toValue: -12,
+          duration: 180,
+          easing: Easing.out(Easing.ease),
+          useNativeDriver: true,
+        }),
       ])
     }
   )
