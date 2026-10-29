@@ -206,6 +206,13 @@ export default function ProductCard({
             </Text>
           )}
         </View>
+
+        <View>
+          <Ionicons name="cube-outline" size={12} />
+           <Text style={styles.deliveryText} numberOfLines={1}>
+            {product.delivery}
+          </Text>
+        </View>
       </Pressable>
 
       {/* Product comparison */}
