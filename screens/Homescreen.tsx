@@ -618,5 +618,10 @@ const createStyles = (colors: ThemeColors) =>
       color: colors.muted,
       fontSize: 11,
       fontWeight: "600",
-    }
+    },
+    notificationButton: {
+      width: 46,
+      height: 46,
+      borderRadius: 16,
+    },
   });
