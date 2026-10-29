@@ -73,11 +73,10 @@ export default function ProductCard({
     const [added, setAdded] = useState(false);
 
     function handleAddToCart() {
-        if(adding) {
-            return;
-        }
+        if(adding) return;
 
         setAdding(true);
+        setAdded(false);
 
         Animated.sequence([
           Animated.spring(cartScale, {
@@ -132,7 +131,7 @@ export default function ProductCard({
           onPress={onPress}
           style={styles.imagePressable}
           accessibilityRole="button"
-          accessibilityLabel={`Открыть товар ${product.title}`}
+          accessibilityLabel={`Open product ${product.title}`}
         >
           <Image
             source={product.image}
