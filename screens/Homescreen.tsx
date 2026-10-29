@@ -99,6 +99,15 @@ export default function HomeScreen({ navigation }: Props) {
       if (nextIndex === bannerIndex || nextIndex < 0 || nextIndex >= banners.length) {
         return;
       }
+
+      Animated.parallel([
+        Animated.timing(bannerOpacity, {
+          toValue: 0,
+          duration: 180,
+          easing: Easing.out(Easing.ease),
+          useNativeDriver: true,
+        }),
+      ])
     }
   )
 
