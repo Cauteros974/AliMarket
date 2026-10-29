@@ -54,11 +54,16 @@ const getBanners = (colors: ThemeColors) => [
 ];
 
 const seasonText: Record<string, string> = {
-  autumn: "🍂 Cozy autumn finds",
-  winter: "❄️ Winter discoveries",
-  spring: "🌱 Time for a fresh start",
-  summer: "☀️ Summer finds",
+  autumn: "Autumn edit",
+  winter: "Winter collection",
+  spring: "Spring refresh",
+  summer: "Summer collection",
 };
+
+const seasonIcons: Record <string, keyof typeof Ionicons.glyphMap> = {
+  autumn: "leaf-outline",
+  winter: "snow-outline",
+}
 
 export default function HomeScreen({ navigation }: Props) {
   // Theme
