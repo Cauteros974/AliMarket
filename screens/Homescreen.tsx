@@ -243,20 +243,16 @@ export default function HomeScreen({ navigation }: Props) {
 
           <Pressable
             onPress={() => navigation.navigate("Notifications")}
-            style={styles.iconButton}
+            style={styles.notificationButton}
             accessibilityRole="button"
-            accessibilityLabel="Notifications"
+            accessibilityLabel="Open notifications"
           >
-            <LinearGradient
-              colors={[colors.primary, "#5420B8"]}
-              style={styles.notificationGradient}
-            >
-              <Ionicons
-                name="notifications-outline"
-                size={21}
-                color="#FFFFFF"
-              />
-            </LinearGradient>
+            <Ionicons
+              name="notifications-outline"
+              size={23}
+              color={colors.text}
+            />
+            <View style={styles.notificationDot} />
           </Pressable>
         </View>
 
