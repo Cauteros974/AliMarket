@@ -613,4 +613,10 @@ const createStyles = (colors: ThemeColors) =>
       fontWeight: "900",
       letterSpacing: -0.4,
     },
+
+    brandCaption: {
+      color: colors.muted,
+      fontSize: 11,
+      fontWeight: "600",
+    }
   });
