@@ -150,6 +150,11 @@ export default function HomeScreen({ navigation }: Props) {
             duration: 180,
             useNativeDriver: true,
           }),
+          Animated.timing(bannerTranslateX, {
+            toValue: -12,
+            duration: 180,
+            useNativeDriver: true,
+          }),
         ])
       })
     }, 4500);
