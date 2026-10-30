@@ -101,6 +101,10 @@ export default function ProfileScreen({ navigation }: Props) {
                             <Text style={styles.greeting}>
                                 {user ? `Welcome back, ${firstName}!` : "Welcome to AliMarket"}
                             </Text>
+
+                            <Text numberOfLines={1} style={styles.name}>
+                                {user?.name ?? "Guest customer"}
+                            </Text>
                         </View>
                     </View>
                  </View>
