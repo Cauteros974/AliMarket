@@ -62,7 +62,16 @@ export default function CartScreen({ navigation }: Props) {
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
       <View style={styles.content}>
         <View style={styles.header}>
-          <Text style={styles.title}>Cart</Text>
+          <Text style={styles.eyebrow}>YOUR SELECTION</Text>
+          <Text style={styles.title}>My cart</Text>
+
+          <View style={styles.countBadge}>
+            <Ionicons
+              name="bag-handle-outline"
+              size={17}
+              color={colors.primary}
+            />
+          </View>
 
           <FlatList
             data={cartProducts}
