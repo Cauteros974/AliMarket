@@ -70,6 +70,8 @@ export default function ProfileScreen({ navigation }: Props) {
                             styles.headerButton,
                             pressed && styles.pressed,
                         ]}
+                        accessibilityRole="button"
+                        accessibilityLabel="Open settings"
                     >
                         <Ionicons 
                             name="settings-outline"
