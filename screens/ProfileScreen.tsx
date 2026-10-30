@@ -212,6 +212,10 @@ function StatCard({
       accessibilityRole="button"
       accessibilityLabel={`${label}: ${value}`}
     >
+      <View style={styles.statIcon}>
+        <Ionicons name={icon} size={19} color={colors.primary} />
+      </View>
+
       <Text style={styles.statValue}>{value}</Text>
       <Text style={styles.statLabel}>{label}</Text>
     </Pressable>
