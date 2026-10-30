@@ -489,4 +489,21 @@ const styles = StyleSheet.create({
         fontWeight: "800",
         marginBottom: 4,
     },
+
+    name: {
+        color: colors.text,
+        fontSize: 18,
+        fontWeight: "900",
+    },
+    email: {
+        color: colors.muted,
+        fontSize: 12,
+        lineHeight: 17,
+        marginTop: 4,
+    },
+    profileDivider: {
+        height: 1,
+        backgroundColor: colors.border,
+        marginVertical: 15,
+    },
 })
