@@ -206,6 +206,16 @@ export default function CartScreen({ navigation }: Props) {
                   </View>
                 ) : null}
               </View>
+
+              <View style={styles.couponRow}>
+                 <View style={styles.couponInputWrapper}>
+                  <Ionicons
+                    name="ticket-outline"
+                    size={19}
+                    color={colors.muted}
+                  />
+                 </View>
+              </View>
             </View>
           ): null}
         </View>
