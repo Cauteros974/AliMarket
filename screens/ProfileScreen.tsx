@@ -561,4 +561,14 @@ const styles = StyleSheet.create({
         fontSize: 19,
         fontWeight: "900",
     },
+
+    sectionHint: {
+        color: colors.muted,
+        fontSize: 12,
+        marginTop: 4,
+    },
+    statsRow: {
+        flexDirection: "row",
+        gap: 10,
+    },
 })
