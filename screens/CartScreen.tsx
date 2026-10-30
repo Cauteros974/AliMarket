@@ -74,6 +74,14 @@ export default function CartScreen({ navigation }: Props) {
             <Text style={styles.countText}>{itemCount}</Text>
           </View>
 
+          {cartProducts.length > 0 ? (
+            <Text style={styles.subtitle}>
+              {itemCount === 1
+                ? "1 item waiting for you"
+                : `${itemCount} items waiting for you`}
+            </Text>
+          ): null}
+
           <FlatList
             data={cartProducts}
             keyExtractor={(entry) => entry.item.productId}
