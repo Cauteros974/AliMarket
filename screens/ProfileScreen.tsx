@@ -174,6 +174,15 @@ export default function ProfileScreen({ navigation }: Props) {
                             navigation.navigate("MainTabs", { screen: "Favorites" })
                         }
                     />
+
+                    <StatCard 
+                        icon="receipt-outline"
+                        value={favoriteCount}
+                        label="Saved"
+                        onPress={() => 
+                            navigation.navigate("MainTabs", { screen: "Favorites" })
+                        }
+                    />
                  </View>
             </ScrollView>
         </SafeAreaView>
