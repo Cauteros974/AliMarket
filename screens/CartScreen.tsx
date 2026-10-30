@@ -30,6 +30,11 @@ export default function CartScreen({ navigation }: Props) {
     0
   );
 
+  const itemCount = cartProducts.reduce(
+    (sum, entry) => sum + entry.item.quantity,
+    0
+  );
+
   const shipping = appliedCoupon === "FREESHIP" || subtotal === 0 ? 0 : 4.99;
   const discount =
     appliedCoupon === "WELCOME10" ? subtotal * 0.1 : appliedCoupon === "SALE15" ? subtotal * 0.15 : 0;
@@ -42,6 +47,15 @@ export default function CartScreen({ navigation }: Props) {
       ok ? "Coupon applied" : "Invalid coupon",
       ok ? "Discount added to your cart." : "Try WELCOME10, SALE15 or FREESHIP."
     );
+  }
+
+  function handleCheckout() {
+    if (cartProducts.length === 0) {
+      Alert.alert("Your cart is empty", "Add a product before checkout.");
+      return;
+    }
+
+    navigation.navigate("Checkout");
   }
 
   return (
