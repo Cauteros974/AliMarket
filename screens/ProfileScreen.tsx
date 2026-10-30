@@ -262,6 +262,20 @@ export default function ProfileScreen({ navigation }: Props) {
                         onPress={() => navigation.navigate("Support")}
                     />
                 </View>
+
+                <SectionHeading
+                    title="Preferences"
+                    subtitle="Customize your experience"
+                />
+
+                <View style={styles.menuGroup}>
+                    <MenuItem
+                        label="Settings"
+                        description="Theme, language and appearance"
+                        icon="options-outline"
+                        onPress={() => navigation.navigate("Settings")}
+                    />
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
