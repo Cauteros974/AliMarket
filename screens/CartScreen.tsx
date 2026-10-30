@@ -263,6 +263,15 @@ export default function CartScreen({ navigation }: Props) {
                   color={colors.primary}
                 />
               </Pressable>
+
+              <View style={styles.priceRows}>
+              <View style={styles.summaryRow}>
+                <Text style={styles.summaryLabel}>Subtotal</Text>
+                <Text style={styles.summaryValue}>
+                  {formatPrice(subtotal)}
+                </Text>
+              </View>
+            </View>
             </View>
           ): null}
         </View>
