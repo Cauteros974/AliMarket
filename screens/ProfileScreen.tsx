@@ -80,6 +80,18 @@ export default function ProfileScreen({ navigation }: Props) {
                         />
                     </Pressable>
                  </View>
+
+                 <View>
+                    <View>
+                        <View>
+                            {initials ? (
+                                <Text>{initials}</Text>
+                            ): (
+
+                            )}
+                        </View>
+                    </View>
+                 </View>
             </ScrollView>
         </SafeAreaView>
     );
