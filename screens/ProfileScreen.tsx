@@ -551,4 +551,14 @@ const styles = StyleSheet.create({
     logoutButtonText: {
         color: colors.danger,
     },
+
+    sectionHeader: {
+        marginTop: 25,
+        marginBottom: 12,
+    },
+    sectionTitle: {
+        color: colors.text,
+        fontSize: 19,
+        fontWeight: "900",
+    },
 })
