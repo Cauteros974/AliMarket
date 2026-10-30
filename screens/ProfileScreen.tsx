@@ -506,4 +506,24 @@ const styles = StyleSheet.create({
         backgroundColor: colors.border,
         marginVertical: 15,
     },
+
+    profileBottom: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        gap: 10,
+    },
+    
+    memberInfo: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 7,
+    },
+
+    memberText: {
+        color: colors.muted,
+        fontSize: 12,
+        fontWeight: "700",
+    },
 })
