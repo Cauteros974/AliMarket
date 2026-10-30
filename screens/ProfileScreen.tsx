@@ -105,6 +105,10 @@ export default function ProfileScreen({ navigation }: Props) {
                             <Text numberOfLines={1} style={styles.name}>
                                 {user?.name ?? "Guest customer"}
                             </Text>
+
+                            <Text numberOfLines={2} style={styles.email}>
+                                {user?.email ?? "Sign in to manage your account"}
+                            </Text>
                         </View>
                     </View>
                  </View>
