@@ -156,6 +156,16 @@ export default function CartScreen({ navigation }: Props) {
                         {product.title}
                       </Text>
                     </Pressable>    
+
+                    <Text style={styles.itemPrice}>
+                      {formatPrice(product.price)}
+                    </Text>
+
+                    <View style={styles.itemBottom}>
+                      <QuantityStepper
+                        quantity={item.item.quantity}
+                      />
+                    </View>
                   </View>
                 </View>
               )
