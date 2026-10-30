@@ -71,6 +71,7 @@ export default function CartScreen({ navigation }: Props) {
               size={17}
               color={colors.primary}
             />
+            <Text style={styles.countText}>{itemCount}</Text>
           </View>
 
           <FlatList
