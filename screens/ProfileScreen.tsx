@@ -209,6 +209,8 @@ function StatCard({
         styles.statCard,
         pressed && styles.pressed,
       ]}
+      accessibilityRole="button"
+      accessibilityLabel={`${label}: ${value}`}
     >
       <Text style={styles.statValue}>{value}</Text>
       <Text style={styles.statLabel}>{label}</Text>
