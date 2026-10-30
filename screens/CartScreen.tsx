@@ -328,6 +328,9 @@ export default function CartScreen({ navigation }: Props) {
                   size={15}
                   color={colors.muted}
                 />
+                <Text style={styles.secureText}>
+                  Secure checkout
+                </Text>
               </View>
             </View>
           ): null}
