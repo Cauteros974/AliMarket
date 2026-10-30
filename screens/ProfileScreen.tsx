@@ -665,4 +665,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+
+    notificationBadgeText: {
+        color: colors.white,
+        fontSize: 10,
+        fontWeight: "900",
+    },
 })
