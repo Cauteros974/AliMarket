@@ -693,4 +693,13 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "900",
     },
+
+    footerCaption: {
+        color: colors.muted,
+        fontSize: 11,
+        marginTop: 4,
+    },
+    pressed: {
+        opacity: 0.75,
+    },
 })
