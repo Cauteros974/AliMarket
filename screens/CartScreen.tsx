@@ -224,6 +224,8 @@ export default function CartScreen({ navigation }: Props) {
                    autoCorrect={false}
                    returnKeyType="done"
                    onSubmitEditing={handleApplyCoupon}
+                   style={styles.couponInput}
+                   accessibilityLabel="Promo code"
                   />
                  </View>
               </View>
