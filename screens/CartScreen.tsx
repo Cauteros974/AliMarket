@@ -168,7 +168,11 @@ export default function CartScreen({ navigation }: Props) {
                         onPlus={() => increaseQuantity(product.id)}
                       />
 
-                      <Pressable>
+                      <Pressable
+                        onPress={() => removeFromCart(product.id)}
+                        hitSlop={8}
+                        style={styles.removeButton}
+                      >
                         <Ionicons
                           name="trash-outline"
                           size={17}
