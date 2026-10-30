@@ -85,9 +85,13 @@ export default function ProfileScreen({ navigation }: Props) {
                     <View style={styles.profileTop}>
                         <View style={styles.avatar}>
                             {initials ? (
-                                <Text>{initials}</Text>
+                                <Text style={styles.avatarText}>{initials}</Text>
                             ): (
-
+                                <Ionicons
+                                    name="person"
+                                    size={34}
+                                    color={colors.primary}
+                                />
                             )}
                         </View>
                     </View>
