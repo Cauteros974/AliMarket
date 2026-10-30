@@ -144,6 +144,12 @@ export default function ProfileScreen({ navigation }: Props) {
                             >
                                 {user ? "Your account" : "Personal shopping"}
                             </Text>
+
+                            <Ionicons
+                                name={user ? "log-out-outline" : "arrow-forward"}
+                                size={16}
+                                color={user ? colors.danger : colors.white}
+                            />
                         </Pressable>
                     </View>
                  </View>
