@@ -274,7 +274,12 @@ export default function CartScreen({ navigation }: Props) {
 
               <View style={styles.summaryRow}>
                 <Text style={styles.summaryLabel}>Shipping</Text>
-                <Text>
+                <Text
+                  style={[
+                    styles.summaryValue,
+                    shipping === 0 && styles.freeShipping,
+                  ]}
+                >
                   {shipping === 0 ? "Free" : formatPrice(shipping)}
                 </Text>
               </View>
