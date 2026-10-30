@@ -80,10 +80,10 @@ export default function ProfileScreen({ navigation }: Props) {
                         />
                     </Pressable>
                  </View>
-
-                 <View>
-                    <View>
-                        <View>
+                 
+                 <View style={styles.profileCard}>
+                    <View style={styles.profileTop}>
+                        <View style={styles.avatar}>
                             {initials ? (
                                 <Text>{initials}</Text>
                             ): (
