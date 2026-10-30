@@ -411,6 +411,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         marginBottom: 18,
     },
+
     eyebrow: {
         color: colors.primary,
         fontSize: 10,
@@ -418,6 +419,7 @@ const styles = StyleSheet.create({
         letterSpacing: 2,
         marginBottom: 5,
     },
+
     title: {
         color: colors.text,
         fontSize: 30,
@@ -425,6 +427,7 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         letterSpacing: -0.8,
     },
+
     headerButton: {
         width: 46,
         height: 46,
@@ -434,5 +437,18 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         alignItems: "center",
         justifyContent: "center",
+    },
+
+    profileCard: {
+        backgroundColor: colors.surface,
+        borderRadius: 25,
+        borderWidth: 1,
+        borderColor: colors.border,
+        padding: 17,
+    },
+    profileTop: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 14,
     },
 })
