@@ -63,6 +63,14 @@ export default function ProfileScreen({ navigation }: Props) {
                          <Text style={styles.eyebrow}>YOUR SPACE</Text>
                          <Text style={styles.title}>My profile</Text>
                     </View>
+
+                    <Pressable>
+                        <Ionicons 
+                            name="settings-outline"
+                            size={12}
+                            color={colors.text}
+                        />
+                    </Pressable>
                  </View>
             </ScrollView>
         </SafeAreaView>
