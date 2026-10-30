@@ -93,6 +93,14 @@ export default function ProfileScreen({ navigation }: Props) {
                                     color={colors.primary}
                                 />
                             )}
+
+                            <View style={styles.onlineIndicator} />
+                        </View>
+
+                        <View style={styles.profileInfo}>
+                            <Text style={styles.greeting}>
+                                {user ? `Welcome back, ${firstName}!` : "Welcome to AliMarket"}
+                            </Text>
                         </View>
                     </View>
                  </View>
