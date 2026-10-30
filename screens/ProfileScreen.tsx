@@ -446,7 +446,7 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         padding: 17,
     },
-    
+
     profileTop: {
         flexDirection: "row",
         alignItems: "center",
@@ -466,5 +466,27 @@ const styles = StyleSheet.create({
         color: colors.primary,
         fontSize: 23,
         fontWeight: "900",
+    },
+
+    onlineIndicator: {
+        position: "absolute",
+        width: 13,
+        height: 13,
+        right: -2,
+        bottom: -2,
+        borderRadius: 7,
+        backgroundColor: colors.success,
+        borderWidth: 2,
+        borderColor: colors.surface,
+    },
+    profileInfo: {
+        flex: 1,
+        minWidth: 0,
+    },
+    greeting: {
+        color: colors.primary,
+        fontSize: 11,
+        fontWeight: "800",
+        marginBottom: 4,
     },
 })
