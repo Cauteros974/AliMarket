@@ -167,6 +167,14 @@ export default function CartScreen({ navigation }: Props) {
                         onMinus={() => decreaseQuantity(product.id)}
                         onPlus={() => increaseQuantity(product.id)}
                       />
+
+                      <Pressable>
+                        <Ionicons
+                          name="trash-outline"
+                          size={17}
+                          color={colors.danger}
+                        />
+                      </Pressable>
                     </View>
                   </View>
                 </View>
