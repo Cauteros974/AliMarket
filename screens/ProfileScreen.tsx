@@ -625,8 +625,21 @@ const styles = StyleSheet.create({
         gap: 12,
         paddingVertical: 11,
     },
-    
+
     menuItemPressed: {
         opacity: 0.65,
+    },
+
+    menuIcon: {
+        width: 43,
+        height: 43,
+        borderRadius: 14,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    menuInfo: {
+        flex: 1,
+        minWidth: 0,
     },
 })
