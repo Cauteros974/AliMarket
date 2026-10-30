@@ -591,4 +591,17 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginBottom: 10,
     },
+
+    statValue: {
+        color: colors.text,
+        fontSize: 23,
+        fontWeight: "900",
+    },
+
+    statLabel: {
+        color: colors.muted,
+        fontSize: 11,
+        fontWeight: "700",
+        marginTop: 3,
+    },
 })
