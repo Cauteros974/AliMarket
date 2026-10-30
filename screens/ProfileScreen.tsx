@@ -164,7 +164,16 @@ export default function ProfileScreen({ navigation }: Props) {
                         value={cartCount}
                         label="In cart"
                         onPress={() => navigation.navigate("MainTabs", { screen: "Cart" })}
-                    />        
+                    />
+
+                    <StatCard 
+                        icon="heart-outline"
+                        value={favoriteCount}
+                        label="Saved"
+                        onPress={() =>
+                            navigation.navigate("MainTabs", { screen: "Favorites" })
+                        }
+                    />
                  </View>
             </ScrollView>
         </SafeAreaView>
