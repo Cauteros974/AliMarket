@@ -242,6 +242,16 @@ export default function ProfileScreen({ navigation }: Props) {
                         icon="scan-outline"
                         onPress={() => navigation.navigate("QRScanner")}
                     />
+
+                    <MenuItem 
+                        label="Notifications"
+                        description={
+                            unreadCount > 0
+                                ? `${unreadCount} unread notification${unreadCount === 1 ? "" : "s"}`
+                                : "You're all caught up"
+                        }
+                        icon="notifications-outline"
+                    />
                 </View>
             </ScrollView>
         </SafeAreaView>
