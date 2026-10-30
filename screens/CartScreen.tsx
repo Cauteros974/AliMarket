@@ -105,6 +105,11 @@ export default function CartScreen({ navigation }: Props) {
                   ]}
                 >
                   <Text style={styles.shopButtonText}>Explore products</Text>
+                  <Ionicons
+                    name="arrow-forward"
+                    size={17}
+                    color={colors.white}
+                  />
                 </Pressable>
               </View>
             }
