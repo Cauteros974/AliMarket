@@ -243,6 +243,10 @@ export default function CartScreen({ navigation }: Props) {
 
               <Pressable
                 onPress={() => navigation.navigate("QRScanner")}
+                style={({ pressed }) => [
+                  styles.scanButton,
+                  pressed && styles.pressed,
+                ]}
               >
                 <Ionicons 
                   name="scan-outline"
