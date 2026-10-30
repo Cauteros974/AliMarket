@@ -116,6 +116,11 @@ export default function ProfileScreen({ navigation }: Props) {
 
                     <View style={styles.profileBottom}>
                         <View style={styles.memberInfo}>
+                            <Ionicons
+                                name="shield-checkmark-outline"
+                                size={17}
+                                color={colors.primary}
+                            />
                             <Text style={styles.memberText}>
                                 {user ? "Your account" : "Personal shopping"}
                             </Text>
