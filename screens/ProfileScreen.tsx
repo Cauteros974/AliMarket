@@ -254,6 +254,13 @@ export default function ProfileScreen({ navigation }: Props) {
                         badge={unreadCount > 0 ? String(unreadCount) : undefined}
                         onPress={() => navigation.navigate("Notifications")}
                     />
+
+                    <MenuItem
+                        label="Support center"
+                        description="Get help with your shopping"
+                        icon="help-circle-outline"
+                        onPress={() => navigation.navigate("Support")}
+                    />
                 </View>
             </ScrollView>
         </SafeAreaView>
