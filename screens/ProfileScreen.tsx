@@ -215,6 +215,19 @@ export default function ProfileScreen({ navigation }: Props) {
                         icon="location-outline"
                         onPress={() => navigation.navigate("Addresses")}
                     />
+                    <MenuItem
+                        label="Payment methods"
+                        description="Manage your payment options"
+                        icon="card-outline"
+                        onPress={() => navigation.navigate("PaymentMethods")}
+                    />
+                    
+                    <MenuItem
+                        label="Wishlist collections"
+                        description="Organize your favorite products"
+                        icon="albums-outline"
+                        onPress={() => navigation.navigate("WishlistCollections")}
+                    />
                 </View>
             </ScrollView>
         </SafeAreaView>
