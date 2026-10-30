@@ -278,14 +278,19 @@ export default function ProfileScreen({ navigation }: Props) {
                     />
                 </View>
 
-                <View>
-                    <View>
+                <View style={styles.footer}>
+                    <View style={styles.footerLogo}>
                         <Ionicons 
                             name="bag-handle"
                             size={16}
                             color={colors.primary}
                         />
                     </View>
+
+                    <Text style={styles.footerBrand}>AliMarket</Text>
+                    <Text style={styles.footerCaption}>
+                        A little something for everyone.
+                    </Text>
                 </View>
             </ScrollView>
         </SafeAreaView>
