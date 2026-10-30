@@ -93,9 +93,19 @@ export default function CartScreen({ navigation }: Props) {
             ItemSeparatorComponent={() => <View style={styles.itemSeparator} />}
             ListEmptyComponent={
               <View style={styles.emptyState}>
-                <Ionicons name="bag-handle-outline" size={46} color={colors.primary} />
+                <Ionicons name="bag-handle-outline" size={42} color={colors.primary} />
                 <Text style={styles.emptyTitle}>Your cart is empty</Text>
                 <Text style={styles.emptyText}>Discover something you love and it will appear here.</Text>
+
+                <Pressable
+                  onPress={() => navigation.navigate("MainTabs", {screen: "Catalog"})}
+                  style={({ pressed }) => [
+                    styles.shopButton,
+                    pressed && styles.pressed,
+                  ]}
+                >
+                  <Text style={styles.shopButtonText}>Explore products</Text>
+                </Pressable>
               </View>
             }
             renderItem={({ item }) => {
