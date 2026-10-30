@@ -271,6 +271,13 @@ export default function CartScreen({ navigation }: Props) {
                   {formatPrice(subtotal)}
                 </Text>
               </View>
+
+              <View style={styles.summaryRow}>
+                <Text style={styles.summaryLabel}>Shipping</Text>
+                <Text>
+                  {shipping === 0 ? "Free" : formatPrice(shipping)}
+                </Text>
+              </View>
             </View>
             </View>
           ): null}
