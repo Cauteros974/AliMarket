@@ -154,8 +154,17 @@ export default function ProfileScreen({ navigation }: Props) {
                     </View>
                  </View>
 
-                 <View>
-                    <Text>Your activity</Text>
+                <View style={styles.sectionHeader}>
+                    <Text style={styles.sectionTitle}>Your activity</Text>
+                </View>
+
+                 <View style={styles.statsRow}>
+                    <StatCard
+                        icon="bag-handle-outline"
+                        value={cartCount}
+                        label="In cart"
+                        onPress={() => navigation.navigate("MainTabs", { screen: "Cart" })}
+                    />        
                  </View>
             </ScrollView>
         </SafeAreaView>
@@ -180,6 +189,31 @@ function MenuItem({
             <Ionicons name="chevron-forward" size={18} color={colors.muted} />
         </Pressable>
     )
+}
+
+function StatCard({
+  icon,
+  value,
+  label,
+  onPress,
+}: {
+  icon: keyof typeof Ionicons.glyphMap;
+  value: number;
+  label: string;
+  onPress: () => void;
+}) {
+  return (
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [
+        styles.statCard,
+        pressed && styles.pressed,
+      ]}
+    >
+      <Text style={styles.statValue}>{value}</Text>
+      <Text style={styles.statLabel}>{label}</Text>
+    </Pressable>
+  );
 }
 
 const styles = StyleSheet.create({
