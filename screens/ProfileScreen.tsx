@@ -604,4 +604,17 @@ const styles = StyleSheet.create({
         fontWeight: "700",
         marginTop: 3,
     },
+
+    sectionHeading: {
+        marginTop: 25,
+        marginBottom: 12,
+    },
+
+    menuGroup: {
+        backgroundColor: colors.surface,
+        borderRadius: 21,
+        borderWidth: 1,
+        borderColor: colors.border,
+        paddingHorizontal: 12,
+    },
 })
