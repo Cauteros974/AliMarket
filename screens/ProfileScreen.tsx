@@ -111,6 +111,16 @@ export default function ProfileScreen({ navigation }: Props) {
                             </Text>
                         </View>
                     </View>
+
+                    <View style={styles.profileDivider} />
+
+                    <View style={styles.profileBottom}>
+                        <View style={styles.memberInfo}>
+                            <Text style={styles.memberText}>
+                                {user ? "Your account" : "Personal shopping"}
+                            </Text>
+                        </View>
+                    </View>
                  </View>
             </ScrollView>
         </SafeAreaView>
