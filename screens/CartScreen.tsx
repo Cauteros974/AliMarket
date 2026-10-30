@@ -307,7 +307,13 @@ export default function CartScreen({ navigation }: Props) {
                 <Text style={styles.totalValue}>{formatPrice(total)}</Text>
               </View>
 
-              <Pressable>
+              <Pressable
+                onPress={handleCheckout}
+                style={({ pressed }) => [
+                  styles.checkoutButton,
+                  pressed && styles.pressed,
+                ]}
+              >
                 <Text style={styles.checkoutText}>Continue to checkout</Text>
                 <Ionicons
                   name="arrow-forward"
