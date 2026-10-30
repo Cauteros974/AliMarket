@@ -293,6 +293,18 @@ export default function CartScreen({ navigation }: Props) {
                 </View>
               ) : null}
             </View>
+
+            <View style={styles.divider} />
+
+            <View style={styles.totalRow}>
+              <View>
+                <Text style={styles.totalLabel}>Total</Text>
+                <Text style={styles.totalCaption}>
+                  Taxes included if applicable
+                </Text>
+                </View>
+              </View>
+
             </View>
           ): null}
         </View>
