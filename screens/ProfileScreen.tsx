@@ -136,7 +136,12 @@ export default function ProfileScreen({ navigation }: Props) {
                                 pressed && styles.pressed,
                             ]}
                         >
-                            <Text>
+                            <Text
+                                style={[
+                                    styles.authButtonText,
+                                    user && styles.logoutButtonText,
+                                ]}
+                            >
                                 {user ? "Your account" : "Personal shopping"}
                             </Text>
                         </Pressable>
