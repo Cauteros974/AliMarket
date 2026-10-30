@@ -59,53 +59,55 @@ export default function CartScreen({ navigation }: Props) {
   }
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeArea} edges={["top"]}>
       <View style={styles.content}>
-        <Text style={styles.title}>Cart</Text>
+        <View style={styles.header}>
+          <Text style={styles.title}>Cart</Text>
 
-        <FlatList
-          data={cartProducts}
-          keyExtractor={(entry) => entry.item.productId}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.list}
-          ListEmptyComponent={
-            <View style={styles.emptyState}>
-              <Ionicons name="bag-handle-outline" size={46} color={colors.primary} />
-              <Text style={styles.emptyTitle}>Your cart is empty</Text>
-              <Text style={styles.emptyText}>Add something from the catalog to start.</Text>
-            </View>
-          }
-          renderItem={({ item }) => {
-            if (!item.product) return null;
+          <FlatList
+            data={cartProducts}
+            keyExtractor={(entry) => entry.item.productId}
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={styles.list}
+            ListEmptyComponent={
+              <View style={styles.emptyState}>
+                <Ionicons name="bag-handle-outline" size={46} color={colors.primary} />
+                <Text style={styles.emptyTitle}>Your cart is empty</Text>
+                <Text style={styles.emptyText}>Add something from the catalog to start.</Text>
+              </View>
+            }
+            renderItem={({ item }) => {
+              if (!item.product) return null;
 
-            return (
-              <Pressable
-                onPress={() => navigation.navigate("ProductDetails", { productId: item.product!.id })}
-                style={styles.cartItem}
-              >
-                <Image source={item.product.image} style={styles.image} />
+              return (
+                <Pressable
+                  onPress={() => navigation.navigate("ProductDetails", { productId: item.product!.id })}
+                  style={styles.cartItem}
+                >
+                  <Image source={item.product.image} style={styles.image} />
 
-                <View style={styles.itemInfo}>
-                  <Text numberOfLines={2} style={styles.itemTitle}>
-                    {item.product.title}
-                  </Text>
-                  <Text style={styles.itemPrice}>{formatPrice(item.product.price)}</Text>
+                  <View style={styles.itemInfo}>
+                    <Text numberOfLines={2} style={styles.itemTitle}>
+                      {item.product.title}
+                    </Text>
+                    <Text style={styles.itemPrice}>{formatPrice(item.product.price)}</Text>
 
-                  <View style={styles.itemFooter}>
-                    <QuantityStepper
-                      quantity={item.item.quantity}
-                      onMinus={() => decreaseQuantity(item.product!.id)}
-                      onPlus={() => increaseQuantity(item.product!.id)}
-                    />
-                    <Pressable onPress={() => removeFromCart(item.product!.id)}>
-                      <Text style={styles.removeText}>Remove</Text>
-                    </Pressable>
+                    <View style={styles.itemFooter}>
+                      <QuantityStepper
+                        quantity={item.item.quantity}
+                        onMinus={() => decreaseQuantity(item.product!.id)}
+                        onPlus={() => increaseQuantity(item.product!.id)}
+                      />
+                      <Pressable onPress={() => removeFromCart(item.product!.id)}>
+                        <Text style={styles.removeText}>Remove</Text>
+                      </Pressable>
+                    </View>
                   </View>
-                </View>
-              </Pressable>
-            );
-          }}
-        />
+                </Pressable>
+              );
+            }}
+          />
+        </View>
       </View>
 
       {cartProducts.length > 0 ? (
