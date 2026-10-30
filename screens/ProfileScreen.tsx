@@ -642,4 +642,17 @@ const styles = StyleSheet.create({
         flex: 1,
         minWidth: 0,
     },
+
+    menuText: {
+        color: colors.text,
+        fontSize: 13,
+        fontWeight: "800",
+    },
+
+    menuDescription: {
+        color: colors.muted,
+        fontSize: 11,
+        lineHeight: 16,
+        marginTop: 4,
+    },
 })
