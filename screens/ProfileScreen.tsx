@@ -617,4 +617,16 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         paddingHorizontal: 12,
     },
+
+    menuItem: {
+        minHeight: 76,
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 12,
+        paddingVertical: 11,
+    },
+    
+    menuItemPressed: {
+        opacity: 0.65,
+    },
 })
