@@ -153,6 +153,10 @@ export default function ProfileScreen({ navigation }: Props) {
                         </Pressable>
                     </View>
                  </View>
+
+                 <View>
+                    <Text>Your activity</Text>
+                 </View>
             </ScrollView>
         </SafeAreaView>
     );
