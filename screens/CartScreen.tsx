@@ -192,9 +192,22 @@ export default function CartScreen({ navigation }: Props) {
             <View style={styles.summary}>
               <View style={styles.summaryHeading}>
                 <Text style={styles.summaryTitle}>Order summary</Text>
+
+                {appliedCoupon ? (
+                  <View style={styles.appliedBadge}>
+                    <Ionicons
+                      name="checkmark-circle"
+                      size={14}
+                      color={colors.success}
+                    />
+                    <Text style={styles.appliedBadgeText}>
+                      {appliedCoupon}
+                    </Text>
+                  </View>
+                ) : null}
               </View>
             </View>
-          )}
+          ): null}
         </View>
       </View>
 
