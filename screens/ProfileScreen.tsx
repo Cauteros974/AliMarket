@@ -677,4 +677,20 @@ const styles = StyleSheet.create({
         marginTop: 30,
         paddingVertical: 8,
     },
+
+    footerLogo: {
+        width: 36,
+        height: 36,
+        borderRadius: 13,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: 8,
+    },
+
+    footerBrand: {
+        color: colors.text,
+        fontSize: 14,
+        fontWeight: "900",
+    },
 })
