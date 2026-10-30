@@ -187,6 +187,14 @@ export default function CartScreen({ navigation }: Props) {
               )
             }}
           />
+
+          {cartProducts.length > 0 ? (
+            <View style={styles.summary}>
+              <View style={styles.summaryHeading}>
+                <Text>Order summary</Text>
+              </View>
+            </View>
+          )}
         </View>
       </View>
 
