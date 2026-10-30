@@ -164,6 +164,8 @@ export default function CartScreen({ navigation }: Props) {
                     <View style={styles.itemBottom}>
                       <QuantityStepper
                         quantity={item.item.quantity}
+                        onMinus={() => decreaseQuantity(product.id)}
+                        onPlus={() => increaseQuantity(product.id)}
                       />
                     </View>
                   </View>
