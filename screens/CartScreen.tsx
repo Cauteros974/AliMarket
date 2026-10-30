@@ -283,6 +283,12 @@ export default function CartScreen({ navigation }: Props) {
                   {shipping === 0 ? "Free" : formatPrice(shipping)}
                 </Text>
               </View>
+
+              {discount > 0 ? (
+                <View style={styles.summaryRow}>
+                  <Text style={styles.summaryLabel}>Discount</Text>
+                </View>
+              ) : null}
             </View>
             </View>
           ): null}
