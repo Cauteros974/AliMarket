@@ -86,12 +86,16 @@ export default function CartScreen({ navigation }: Props) {
             data={cartProducts}
             keyExtractor={(entry) => entry.item.productId}
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={styles.list}
+            contentContainerStyle={[
+              styles.list,
+              cartProducts.length === 0 && styles.emptyList,
+            ]}
+            ItemSeparatorComponent={() => <View style={styles.itemSeparator} />}
             ListEmptyComponent={
               <View style={styles.emptyState}>
                 <Ionicons name="bag-handle-outline" size={46} color={colors.primary} />
                 <Text style={styles.emptyTitle}>Your cart is empty</Text>
-                <Text style={styles.emptyText}>Add something from the catalog to start.</Text>
+                <Text style={styles.emptyText}>Discover something you love and it will appear here.</Text>
               </View>
             }
             renderItem={({ item }) => {
