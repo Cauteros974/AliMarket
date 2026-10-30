@@ -3,7 +3,6 @@ import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-nati
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
-import { useRef } from "react";
 
 type Props = {
     navigation: any;
@@ -47,6 +46,7 @@ export default function ProfileScreen({ navigation }: Props) {
                 {
                     text: "Log out",
                     style: "destructive",
+                    onPress: () => logout(),
                 },
             ]
         );
@@ -297,28 +297,6 @@ export default function ProfileScreen({ navigation }: Props) {
     );
 }
 
-function MenuItem({
-    label,
-    description,
-    icon,
-    badge,
-    onPress,
-}: {
-    label: string;
-    icon: keyof typeof Ionicons.glyphMap;
-    onPress: () => void;
-}) {
-    return(
-        <Pressable onPress={onPress} style={styles.menuItem}>
-            <View style={styles.menuLeft}>
-                <Ionicons name={icon} size={20} color={colors.primary} />
-                <Text style={styles.menuText}>{label}</Text>
-            </View>
-            <Ionicons name="chevron-forward" size={18} color={colors.muted} />
-        </Pressable>
-    )
-}
-
 function StatCard({
   icon,
   value,
@@ -363,6 +341,56 @@ function SectionHeading({
       <Text style={styles.sectionTitle}>{title}</Text>
       <Text style={styles.sectionHint}>{subtitle}</Text>
     </View>
+  );
+}
+
+/* Universal menu item with an icon, description, and badge. */
+function MenuItem({
+  label,
+  description,
+  icon,
+  badge,
+  onPress,
+}: {
+  label: string;
+  description: string;
+  icon: keyof typeof Ionicons.glyphMap;
+  badge?: string;
+  onPress: () => void;
+}) {
+  return (
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [
+        styles.menuItem,
+        pressed && styles.menuItemPressed,
+      ]}
+      accessibilityRole="button"
+      accessibilityLabel={`${label}. ${description}`}
+    >
+      <View style={styles.menuIcon}>
+        <Ionicons name={icon} size={21} color={colors.primary} />
+      </View>
+
+      <View style={styles.menuInfo}>
+        <Text style={styles.menuText}>{label}</Text>
+        <Text numberOfLines={2} style={styles.menuDescription}>
+          {description}
+        </Text>
+      </View>
+
+      {badge ? (
+        <View style={styles.notificationBadge}>
+          <Text style={styles.notificationBadgeText}>{badge}</Text>
+        </View>
+      ) : null}
+
+      <Ionicons
+        name="chevron-forward"
+        size={18}
+        color={colors.muted}
+      />
+    </Pressable>
   );
 }
 
