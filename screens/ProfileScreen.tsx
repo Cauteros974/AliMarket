@@ -263,6 +263,7 @@ export default function ProfileScreen({ navigation }: Props) {
                     />
                 </View>
 
+                {/* Settings */}
                 <SectionHeading
                     title="Preferences"
                     subtitle="Customize your experience"
@@ -275,6 +276,16 @@ export default function ProfileScreen({ navigation }: Props) {
                         icon="options-outline"
                         onPress={() => navigation.navigate("Settings")}
                     />
+                </View>
+
+                <View>
+                    <View>
+                        <Ionicons 
+                            name="bag-handle"
+                            size={16}
+                            color={colors.primary}
+                        />
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
