@@ -287,6 +287,9 @@ export default function CartScreen({ navigation }: Props) {
               {discount > 0 ? (
                 <View style={styles.summaryRow}>
                   <Text style={styles.summaryLabel}>Discount</Text>
+                  <Text style={styles.discountValue}>
+                    -{formatPrice(discount)}
+                  </Text>
                 </View>
               ) : null}
             </View>
