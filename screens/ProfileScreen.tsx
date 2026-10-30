@@ -64,7 +64,13 @@ export default function ProfileScreen({ navigation }: Props) {
                          <Text style={styles.title}>My profile</Text>
                     </View>
 
-                    <Pressable>
+                    <Pressable
+                        onPress={() => navigation.navigate("Settings")}
+                        style={({ pressed }) => [
+                            styles.headerButton,
+                            pressed && styles.pressed,
+                        ]}
+                    >
                         <Ionicons 
                             name="settings-outline"
                             size={12}
