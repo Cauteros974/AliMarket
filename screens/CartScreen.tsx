@@ -322,6 +322,13 @@ export default function CartScreen({ navigation }: Props) {
                 />
               </Pressable>
 
+              <View style={styles.secureNote}>
+                <Ionicons
+                  name="shield-checkmark-outline"
+                  size={15}
+                  color={colors.muted}
+                />
+              </View>
             </View>
           ): null}
         </View>
