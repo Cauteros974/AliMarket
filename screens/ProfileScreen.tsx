@@ -208,6 +208,13 @@ export default function ProfileScreen({ navigation }: Props) {
                         icon="receipt-outline"
                         onPress={() => navigation.navigate("Orders")}
                     />
+
+                    <MenuItem
+                        label="Shipping addresses"
+                        description="Manage delivery destinations"
+                        icon="location-outline"
+                        onPress={() => navigation.navigate("Addresses")}
+                    />
                 </View>
             </ScrollView>
         </SafeAreaView>
