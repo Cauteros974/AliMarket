@@ -228,6 +228,16 @@ export default function CartScreen({ navigation }: Props) {
                    accessibilityLabel="Promo code"
                   />
                  </View>
+
+                 <Pressable
+                  onPress={handleApplyCoupon}
+                  style={({ pressed }) => [
+                    styles.applyButton,
+                    pressed && styles.pressed,
+                  ]}
+                 >
+                  <Text style={styles.applyText}>Apply</Text>
+                 </Pressable>
               </View>
             </View>
           ): null}
