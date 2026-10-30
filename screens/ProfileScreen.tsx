@@ -44,16 +44,28 @@ export default function ProfileScreen({ navigation }: Props) {
                     text: "Cancel",
                     style: "cancel",
                 }
-                 {
+                {
                     text: "Log out",
                     style: "destructive",
                 },
             ]
-        )
+        );
     }
     
     return(
-        
+        <SafeAreaView style={styles.safeArea} edges={["top"]}>
+            <ScrollView
+                contentContainerStyle={styles.content}
+                showsVerticalScrollIndicator={false}
+            >
+                 <View style={styles.header}>
+                    <View>
+                         <Text style={styles.eyebrow}>YOUR SPACE</Text>
+                         <Text style={styles.title}>My profile</Text>
+                    </View>
+                 </View>
+            </ScrollView>
+        </SafeAreaView>
     );
 }
 
