@@ -655,4 +655,14 @@ const styles = StyleSheet.create({
         lineHeight: 16,
         marginTop: 4,
     },
+
+    notificationBadge: {
+        minWidth: 23,
+        height: 23,
+        paddingHorizontal: 6,
+        borderRadius: 9,
+        backgroundColor: colors.primary,
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })
