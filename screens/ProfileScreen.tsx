@@ -43,7 +43,7 @@ export default function ProfileScreen({ navigation }: Props) {
                 {
                     text: "Cancel",
                     style: "cancel",
-                }
+                },
                 {
                     text: "Log out",
                     style: "destructive",
@@ -154,11 +154,12 @@ export default function ProfileScreen({ navigation }: Props) {
                     </View>
                  </View>
 
+                {/* Statistics */}
                 <View style={styles.sectionHeader}>
                     <Text style={styles.sectionTitle}>Your activity</Text>
                 </View>
-
-                 <View style={styles.statsRow}>
+                
+                <View style={styles.statsRow}>
                     <StatCard
                         icon="bag-handle-outline"
                         value={cartCount}
@@ -190,7 +191,12 @@ export default function ProfileScreen({ navigation }: Props) {
                         label="Orders"
                         onPress={() => navigation.navigate("Orders")}
                     />
-                 </View>
+                </View>
+
+                <SectionHeading
+                    title="Shopping"
+                    subtitle="Your orders and payment details"
+                />
             </ScrollView>
         </SafeAreaView>
     );
@@ -244,6 +250,22 @@ function StatCard({
       <Text style={styles.statValue}>{value}</Text>
       <Text style={styles.statLabel}>{label}</Text>
     </Pressable>
+  );
+}
+
+/* Heading for a group of settings and services. */
+function SectionHeading({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle: string;
+}) {
+  return (
+    <View style={styles.sectionHeading}>
+      <Text style={styles.sectionTitle}>{title}</Text>
+      <Text style={styles.sectionHint}>{subtitle}</Text>
+    </View>
   );
 }
 
