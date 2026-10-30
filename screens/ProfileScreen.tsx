@@ -58,7 +58,8 @@ export default function ProfileScreen({ navigation }: Props) {
                 contentContainerStyle={styles.content}
                 showsVerticalScrollIndicator={false}
             >
-                 <View style={styles.header}>
+                {/* Page title */}
+                <View style={styles.header}>
                     <View>
                          <Text style={styles.eyebrow}>YOUR SPACE</Text>
                          <Text style={styles.title}>My profile</Text>
@@ -80,7 +81,8 @@ export default function ProfileScreen({ navigation }: Props) {
                         />
                     </Pressable>
                  </View>
-                 
+
+                 {/* User card */}
                  <View style={styles.profileCard}>
                     <View style={styles.profileTop}>
                         <View style={styles.avatar}>
@@ -157,6 +159,7 @@ export default function ProfileScreen({ navigation }: Props) {
                 {/* Statistics */}
                 <View style={styles.sectionHeader}>
                     <Text style={styles.sectionTitle}>Your activity</Text>
+                    <Text style={styles.sectionHint}>A quick overview</Text>
                 </View>
                 
                 <View style={styles.statsRow}>
@@ -192,11 +195,20 @@ export default function ProfileScreen({ navigation }: Props) {
                         onPress={() => navigation.navigate("Orders")}
                     />
                 </View>
-
+                 {/* Shopping */}
                 <SectionHeading
                     title="Shopping"
                     subtitle="Your orders and payment details"
                 />
+
+                <View style={styles.menuGroup}>
+                    <MenuItem 
+                        label="Order history"
+                        description="Track and review your purchases"
+                        icon="receipt-outline"
+                        onPress={() => navigation.navigate("Orders")}
+                    />
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
@@ -204,7 +216,9 @@ export default function ProfileScreen({ navigation }: Props) {
 
 function MenuItem({
     label,
+    description,
     icon,
+    badge,
     onPress,
 }: {
     label: string;
