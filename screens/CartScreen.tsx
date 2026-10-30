@@ -114,34 +114,33 @@ export default function CartScreen({ navigation }: Props) {
               </View>
             }
             renderItem={({ item }) => {
-              if (!item.product) return null;
+              const product = item.product;
+              
+              if (!product) return null;
 
               return (
-                <Pressable
-                  onPress={() => navigation.navigate("ProductDetails", { productId: item.product!.id })}
-                  style={styles.cartItem}
-                >
-                  <Image source={item.product.image} style={styles.image} />
-
-                  <View style={styles.itemInfo}>
-                    <Text numberOfLines={2} style={styles.itemTitle}>
-                      {item.product.title}
-                    </Text>
-                    <Text style={styles.itemPrice}>{formatPrice(item.product.price)}</Text>
-
-                    <View style={styles.itemFooter}>
-                      <QuantityStepper
-                        quantity={item.item.quantity}
-                        onMinus={() => decreaseQuantity(item.product!.id)}
-                        onPlus={() => increaseQuantity(item.product!.id)}
-                      />
-                      <Pressable onPress={() => removeFromCart(item.product!.id)}>
-                        <Text style={styles.removeText}>Remove</Text>
-                      </Pressable>
-                    </View>
-                  </View>
-                </Pressable>
-              );
+                <View style={styles.cartItem}>
+                  <Pressable
+                    onPress={() =>
+                      navigation.navigate("ProductDetails", {
+                        productId: product.id,
+                      })
+                    }
+                    style={styles.imageButton}
+                    accessibilityRole="button"
+                    accessibilityLabel={`View ${product.title}`}
+                  >
+                    <Image source={product.image} style={styles.image} />
+                      {product.discountLabel ? (
+                        <View style={styles.discountBadge}>
+                          <Text style={styles.discountBadgeText}>
+                            {product.discountLabel}
+                          </Text>
+                        </View>
+                      ) : null}
+                  </Pressable>
+                </View>
+              )
             }}
           />
         </View>
