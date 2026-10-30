@@ -1,8 +1,9 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
+import { useRef } from "react";
 
 type Props = {
     navigation: any;
@@ -23,96 +24,36 @@ export default function ProfileScreen({ navigation }: Props) {
         (state) => state.notifications.filter((item) => !item.read).length
     );
 
+    const firstName = user?.name?.trim().split(/\s+/)[0] || "there";
+
+    const initials = 
+        user?.name
+            ?.trim()
+            .split(/\s+/)
+            .filter(Boolean)
+            .slice(0, 2)
+            .map((part) => part[0].toUpperCase())
+            .join("") || "";
+
+    function handleLogout() {
+        Alert.alert(
+            "Log out",
+            "Are you sure you want to log out of your account?",
+            [
+                {
+                    text: "Cancel",
+                    style: "cancel",
+                }
+                 {
+                    text: "Log out",
+                    style: "destructive",
+                },
+            ]
+        )
+    }
+    
     return(
-        <SafeAreaView style={styles.safeArea}>
-            <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-                <Text style={styles.title}>Profile</Text>
-
-                <View style={styles.profileCard}>
-                    <View style={styles.avatar}>
-                        <Ionicons name="person" size={34} color={colors.primary} />
-                    </View>
-
-                    <View style={styles.profileInfo}>
-                        <Text style={styles.name}>{user?.name ?? "Guest customer"}</Text>
-                        <Text style={styles.email}>{user?.email ?? "Login to save your orders"}</Text>
-                    </View>
-
-                    <Pressable 
-                        onPress={user ? logout : () => navigation.navigate("Auth")}
-                        style={styles.smallButton}
-                    >
-                        <Text style={styles.smallButtonText}>{user ? "Logout" : "Login"}</Text>
-                    </Pressable>
-                </View>
-
-                <View style={styles.statsRow}>
-                    <View style={styles.statCard}>
-                        <Text style={styles.statValue}>{cartCount}</Text>
-                        <Text style={styles.statLabel}>Cart</Text>
-                    </View>
-
-                    <View style={styles.statCard}>
-                        <Text style={styles.statValue}>{favoriteCount}</Text>
-                        <Text style={styles.statLabel}>Saved</Text>
-                    </View>
-
-                    <View style={styles.statCard}>
-                        <Text style={styles.statValue}>{orderCount}</Text>
-                        <Text style={styles.statLabel}>Orders</Text>
-                    </View>
-                </View>
-
-                <Text style={styles.sectionTitle}>Account</Text>
-
-                <MenuItem
-                    label="Order history"
-                    icon="receipt-outline"
-                    onPress={() => navigation.navigate("Orders")}
-                />
-
-                <MenuItem 
-                    label="Shiping address"
-                    icon="location-outline"
-                    onPress={() => navigation.navigate("Addresses")}
-                />
-
-                <MenuItem
-                    label="Payment methods"
-                    icon="card-outline"
-                    onPress={() => navigation.navigate("PaymentMethods")}
-                />
-                <MenuItem
-                    label="Wishlist collections"
-                    icon="albums-outline"
-                    onPress={() => navigation.navigate("WishlistCollections")}
-                />
-
-                <MenuItem 
-                    label="QR / barcode scanner" 
-                    icon="scan-outline" 
-                    onPress={() => navigation.navigate("QRScanner")} 
-                />
-
-                <MenuItem 
-                    label={`Notifications ${unreadCount ? `(${unreadCount})` : ""}`}
-                    icon="notifications-outline"
-                    onPress={() => navigation.navigate("Notifications")}
-                />
-
-                <MenuItem
-                    label="Support center"
-                    icon="help-circle-outline"
-                    onPress={() => navigation.navigate("Support")}
-                />
-
-                <MenuItem 
-                    label="Settings" 
-                    icon="settings-outline" 
-                    onPress={() => navigation.navigate("Settings")} 
-                />
-            </ScrollView>
-        </SafeAreaView>
+        
     );
 }
 
