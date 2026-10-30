@@ -397,109 +397,42 @@ function MenuItem({
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
-        backgroundColor: colors.background
+        backgroundColor: colors.background,
     },
     content: {
         paddingHorizontal: 18,
-        paddingTop: 8,
-        paddingBottom: 28
+        paddingTop: 10,
+        paddingBottom: 32,
     },
-    title: { 
-        color: colors.text, 
-        fontSize: 28, 
-        fontWeight: "900", 
-        marginBottom: 16 
-    },
-    profileCard: {
-        backgroundColor: colors.surface,
-        borderRadius: 22,
-        borderWidth: 1,
-        borderColor: colors.border,
-        padding: 16,
+    
+    header: {
         flexDirection: "row",
         alignItems: "center",
-        gap: 14,
+        justifyContent: "space-between",
+        marginBottom: 18,
     },
-    avatar: {
-        width: 64,
-        height: 64,
-        borderRadius: 32,
-        backgroundColor: colors.surfaceSoft,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    profileInfo: {
-        flex: 1
-    },
-    name: {
-        color: colors.text,
-        fontSize: 20,
-        fontWeight: "900"
-    },
-    email: {
-        color: colors.muted,
-        marginTop: 4
-    },
-    smallButton: {
-        backgroundColor: colors.primary,
-        paddingHorizontal: 12,
-        paddingVertical: 9,
-        borderRadius: 999,
-    },
-    smallButtonText: {
-        color: colors.white,
-        fontWeight: "900",
-        fontSize: 12,
-    },
-    statsRow: {
-        flexDirection: "row",
-        gap: 10,
-        marginTop: 12,
-    },
-    statCard: {
-        flex: 1,
-        backgroundColor: colors.surface,
-        borderRadius: 18,
-        borderWidth: 1,
-        borderColor: colors.border,
-        padding: 14,
-    },
-    statValue: {
+    eyebrow: {
         color: colors.primary,
-        fontSize: 23,
-        fontWeight: "900"
-    },
-    statLabel: {
-        color: colors.muted,
-        marginTop: 4,
-        fontWeight: "700"
-    },
-    sectionTitle: {
-        color: colors.text,
-        fontSize: 20,
+        fontSize: 10,
         fontWeight: "900",
-        marginTop: 24,
-        marginBottom: 12,
+        letterSpacing: 2,
+        marginBottom: 5,
     },
-    menuItem: {
-        minHeight: 54,
+    title: {
+        color: colors.text,
+        fontSize: 30,
+        lineHeight: 36,
+        fontWeight: "900",
+        letterSpacing: -0.8,
+    },
+    headerButton: {
+        width: 46,
+        height: 46,
         borderRadius: 16,
         backgroundColor: colors.surface,
         borderWidth: 1,
         borderColor: colors.border,
-        paddingHorizontal: 14,
-        marginBottom: 10,
-        flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "center",
     },
-    menuLeft: {
-        flexDirection: "row",
-        alignItems: "center",
-        gap: 10,
-    },
-    menuText: {
-        color: colors.text,
-        fontWeight: "800",
-    }
 })
