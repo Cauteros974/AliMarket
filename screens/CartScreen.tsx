@@ -214,6 +214,12 @@ export default function CartScreen({ navigation }: Props) {
                     size={19}
                     color={colors.muted}
                   />
+
+                  <TextInput
+                   value={couponCode}
+                   onChangeText={setCouponCode}
+                   placeholder="Enter promo code"
+                  />
                  </View>
               </View>
             </View>
