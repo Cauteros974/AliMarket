@@ -537,12 +537,18 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         gap: 7,
     },
+
     authButtonText: {
         color: colors.white,
         fontSize: 12,
         fontWeight: "900",
     },
+
     logoutButton: {
         backgroundColor: colors.surfaceSoft,
+    },
+
+    logoutButtonText: {
+        color: colors.danger,
     },
 })
