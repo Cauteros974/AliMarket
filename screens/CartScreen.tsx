@@ -172,6 +172,8 @@ export default function CartScreen({ navigation }: Props) {
                         onPress={() => removeFromCart(product.id)}
                         hitSlop={8}
                         style={styles.removeButton}
+                        accessibilityRole="button"
+                        accessibilityLabel={`Remove ${product.title} from cart`}
                       >
                         <Ionicons
                           name="trash-outline"
