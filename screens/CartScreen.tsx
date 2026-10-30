@@ -303,6 +303,8 @@ export default function CartScreen({ navigation }: Props) {
                   Taxes included if applicable
                 </Text>
                 </View>
+                
+                <Text style={styles.totalValue}>{formatPrice(total)}</Text>
               </View>
 
             </View>
