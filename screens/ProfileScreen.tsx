@@ -251,6 +251,8 @@ export default function ProfileScreen({ navigation }: Props) {
                                 : "You're all caught up"
                         }
                         icon="notifications-outline"
+                        badge={unreadCount > 0 ? String(unreadCount) : undefined}
+                        onPress={() => navigation.navigate("Notifications")}
                     />
                 </View>
             </ScrollView>
