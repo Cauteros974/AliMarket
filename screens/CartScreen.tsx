@@ -253,6 +253,15 @@ export default function CartScreen({ navigation }: Props) {
                   size={18}
                   color={colors.primary}
                 />
+
+                <Text style={styles.scanText}>
+                  Scan coupon QR / barcode
+                </Text>
+                <Ionicons
+                  name="chevron-forward"
+                  size={16}
+                  color={colors.primary}
+                />
               </Pressable>
             </View>
           ): null}
