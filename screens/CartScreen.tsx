@@ -120,6 +120,7 @@ export default function CartScreen({ navigation }: Props) {
 
               return (
                 <View style={styles.cartItem}>
+                  {/* Clicking on an image or a name opens the product */}
                   <Pressable
                     onPress={() =>
                       navigation.navigate("ProductDetails", {
@@ -139,6 +140,23 @@ export default function CartScreen({ navigation }: Props) {
                         </View>
                       ) : null}
                   </Pressable>
+                  
+                  <View style={styles.itemInfo}>
+                    <Pressable
+                      onPress={() =>
+                        navigation.navigate("ProductDetails", {
+                          productId: product.id,
+                        })
+                      }
+                      style={styles.imageButton}
+                      accessibilityRole="button"
+                      accessibilityLabel={`View ${product.title}`}
+                    >
+                      <Text numberOfLines={2} style={styles.itemTitle}>
+                        {product.title}
+                      </Text>
+                    </Pressable>    
+                  </View>
                 </View>
               )
             }}
