@@ -513,7 +513,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 10,
     },
-    
+
     memberInfo: {
         flex: 1,
         flexDirection: "row",
@@ -525,5 +525,24 @@ const styles = StyleSheet.create({
         color: colors.muted,
         fontSize: 12,
         fontWeight: "700",
+    },
+
+    authButton: {
+        minHeight: 38,
+        borderRadius: 13,
+        backgroundColor: colors.primary,
+        paddingHorizontal: 13,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 7,
+    },
+    authButtonText: {
+        color: colors.white,
+        fontSize: 12,
+        fontWeight: "900",
+    },
+    logoutButton: {
+        backgroundColor: colors.surfaceSoft,
     },
 })
