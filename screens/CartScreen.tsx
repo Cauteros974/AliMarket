@@ -222,6 +222,8 @@ export default function CartScreen({ navigation }: Props) {
                    placeholderTextColor={colors.muted}
                    autoCapitalize="characters"
                    autoCorrect={false}
+                   returnKeyType="done"
+                   onSubmitEditing={handleApplyCoupon}
                   />
                  </View>
               </View>
