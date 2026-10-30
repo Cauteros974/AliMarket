@@ -581,4 +581,14 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.border,
     },
+
+    statIcon: {
+        width: 35,
+        height: 35,
+        borderRadius: 12,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: 10,
+    },
 })
