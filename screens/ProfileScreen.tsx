@@ -125,6 +125,12 @@ export default function ProfileScreen({ navigation }: Props) {
                                 {user ? "Your account" : "Personal shopping"}
                             </Text>
                         </View>
+
+                        <Pressable>
+                            <Text>
+                                {user ? "Your account" : "Personal shopping"}
+                            </Text>
+                        </Pressable>
                     </View>
                  </View>
             </ScrollView>
