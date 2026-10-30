@@ -446,9 +446,25 @@ const styles = StyleSheet.create({
         borderColor: colors.border,
         padding: 17,
     },
+    
     profileTop: {
         flexDirection: "row",
         alignItems: "center",
         gap: 14,
+    },
+
+    avatar: {
+        width: 70,
+        height: 70,
+        borderRadius: 23,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+
+    avatarText: {
+        color: colors.primary,
+        fontSize: 23,
+        fontWeight: "900",
     },
 })
