@@ -219,6 +219,9 @@ export default function CartScreen({ navigation }: Props) {
                    value={couponCode}
                    onChangeText={setCouponCode}
                    placeholder="Enter promo code"
+                   placeholderTextColor={colors.muted}
+                   autoCapitalize="characters"
+                   autoCorrect={false}
                   />
                  </View>
               </View>
