@@ -229,6 +229,20 @@ export default function ProfileScreen({ navigation }: Props) {
                         onPress={() => navigation.navigate("WishlistCollections")}
                     />
                 </View>
+
+                {/* Services */}
+                <SectionHeading
+                    title="Services"
+                    subtitle="Tools to make shopping easier"
+                />
+                <View style={styles.menuGroup}>
+                    <MenuItem
+                        label="QR & barcode scanner"
+                        description="Scan a code or coupon"
+                        icon="scan-outline"
+                        onPress={() => navigation.navigate("QRScanner")}
+                    />
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
