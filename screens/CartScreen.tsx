@@ -207,6 +207,7 @@ export default function CartScreen({ navigation }: Props) {
                 ) : null}
               </View>
 
+              {/* Promo code */}
               <View style={styles.couponRow}>
                  <View style={styles.couponInputWrapper}>
                   <Ionicons
@@ -239,6 +240,16 @@ export default function CartScreen({ navigation }: Props) {
                   <Text style={styles.applyText}>Apply</Text>
                  </Pressable>
               </View>
+
+              <Pressable
+                onPress={() => navigation.navigate("QRScanner")}
+              >
+                <Ionicons 
+                  name="scan-outline"
+                  size={18}
+                  color={colors.primary}
+                />
+              </Pressable>
             </View>
           ): null}
         </View>
