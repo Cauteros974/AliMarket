@@ -65,6 +65,14 @@ export default function SettingsScreen() {
                             Make AliMarket feel like yours.
                         </Text>
                     </View>
+
+                    <View>
+                        <Ionicons 
+                            name="settings-outline"
+                            size={20}
+                            color={colors.primary}
+                        />
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
