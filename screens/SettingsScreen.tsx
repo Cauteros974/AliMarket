@@ -185,6 +185,17 @@ export default function SettingsScreen() {
                             </Text>
                         </View>
                     </View>
+
+                    <SeasonalThemeSettings />
+                </View>
+
+                <View style={styles.sectionHeader}>
+                    <Text>
+                        Language
+                    </Text>
+                    <Text>
+                        {locales.find(item) => item.value === locale}?.label ?? "Select"
+                    </Text>
                 </View>
             </ScrollView>
         </SafeAreaView>
