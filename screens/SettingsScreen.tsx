@@ -51,7 +51,7 @@ export default function SettingsScreen() {
     }
 
     return(
-        <SafeAreaView style={[styles.safeArea, isDark && styles.darkSafeArea]} edges={["top"]}>
+        <SafeAreaView style={[styles.safeArea, { backgroundColor: palette.background }]} edges={["top"]}>
             <ScrollView contentContainerStyle={styles.content}>
                 <View style={styles.header}>
                     <View>
@@ -90,7 +90,7 @@ export default function SettingsScreen() {
                     </Text>
                 </View>
 
-                <View style={[styles.themewRow]}>
+                <View style={[styles.themeRow]}>
                     {(["light", "dark"] as AppTheme[]).map((item) => {
                         const selected = theme === item;
                         const darkOption = item === "dark";
@@ -264,118 +264,4 @@ export default function SettingsScreen() {
 }
 
 const styles = StyleSheet.create({
-    safeArea: {
-        flex: 1,
-    },
-    content: {
-        paddingHorizontal: 18,
-        paddingTop: 16,
-        paddingBottom: 36,
-    },
-    header: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginBottom: 28,
-    },
-    eyebrow: {
-        fontSize: 10,
-        fontWeight: "900",
-        letterSpacing: 1.6,
-        marginBottom: 6,
-    },
-    title: {
-        fontSize: 30,
-        fontWeight: "900",
-        letterSpacing: -0.7,
-    },
-    description: {
-        fontSize: 13,
-        marginTop: 5,
-    },
-    headerIcon: {
-        width: 54,
-        height: 54,
-        borderRadius: 18,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    sectionHeader: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginTop: 24,
-        marginBottom: 12,
-    },
-    subtitle: {
-        color: colors.muted,
-        marginTop: 8,
-        fontWeight: "700",
-    },
-    sectionTitle: {
-        fontSize: 17,
-        fontWeight: "900",
-    },
-    sectionHint: {
-        fontSize: 12,
-        fontWeight: "600",
-    },
-    darkText: {
-        color: colors.white,
-    },
-    darkMuted: {
-        color: "#CBD5E1",
-    },
-    row: {
-        flexDirection: "row",
-        gap: 10,
-    },
-    option: {
-        flex: 1,
-        height: 52,
-        borderRadius: 16,
-        backgroundColor: colors.surface,
-        borderWidth: 1,
-        borderColor: colors.border,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    activeOption: {
-        backgroundColor: colors.primary,
-        borderColor: colors.primary,
-    },
-    optionText: {
-        color: colors.text,
-        fontWeight: "900",
-        textTransform: "capitalize",
-    },
-    activeOptionText: {
-        color: colors.white,
-    },
-    localeItem: {
-        minHeight: 52,
-        borderRadius: 16,
-        backgroundColor: colors.surface,
-        borderWidth: 1,
-        borderColor: colors.border,
-        paddingHorizontal: 14,
-        justifyContent: "center",
-        marginBottom: 10,
-    },
-    activeLocale: {
-        backgroundColor: colors.surfaceSoft,
-        borderColor: colors.primary,
-    },
-    localeText: {
-        color: colors.text,
-        fontWeight: "900",
-    },
-    activeLocaleText: {
-        color: colors.primary,
-    },
-    text: {
-        fontWeight: "600",
-        padding: 10,
-        paddingLeft: 1,
-    }
-})
+});
