@@ -313,7 +313,7 @@ const styles = StyleSheet.create({
   },
   sectionHint: {
     fontSize: 12,
-    fontWeight: "900",
+    fontWeight: "600",
   },
   themeRow: {
     gap: 10,
