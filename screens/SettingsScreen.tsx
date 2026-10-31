@@ -405,4 +405,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  localeBadgeText: {
+    fontSize: 11,
+    fontWeight: "900",
+  },
 });
