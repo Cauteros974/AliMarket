@@ -232,14 +232,15 @@ export default function SettingsScreen() {
                                     </Text>
                                 </View>
 
-                                <Text>
+                                <Text style={[styles.localeText, { color: palette.text }]}>
                                     {item.label}
                                 </Text>
 
                                 {selected && (
                                     <Ionicons 
                                         name="checkmark-circle"
-                                        size={20}
+                                        size={22}
+                                        color={colors.primary}
                                     />
                                 )}
                             </Pressable>
