@@ -344,4 +344,16 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "800",
   },
+  themeDescription: {
+    fontSize: 11,
+    marginTop: 4,
+  },
+  radioOuter: {
+    width: 21,
+    height: 21,
+    borderWidth: 2,
+    borderRadius: 11,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
