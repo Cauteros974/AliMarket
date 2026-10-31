@@ -311,4 +311,11 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: "900",
   },
+  sectionHint: {
+    fontSize: 12,
+    fontWeight: "900",
+  },
+  themeRow: {
+    gap: 10,
+  },
 });
