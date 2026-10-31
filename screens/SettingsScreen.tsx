@@ -34,11 +34,20 @@ export default function SettingsScreen() {
     };
 
     function changeTheme(value: AppTheme) {
+        if (value === theme) return;
+
         setTheme(value);
         showToast(
             `${value === "dark" ? "Dark" : "Light"} theme selected`,
             "info"
         );
+    }
+
+    function changeLocale(value: Locale) {
+        if (value === locale) return;
+        
+        setLocale(value);
+        showToast("Language preference saved", "info");
     }
 
     return(
