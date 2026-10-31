@@ -409,4 +409,17 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: "900",
   },
+  localeText: {
+    flex: 1,
+    fontSize: 14,
+    fontWeight: "700",
+  },
+  footer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  footerText: {
+    fontSize: 11,
+  },
 });
