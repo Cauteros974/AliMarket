@@ -398,4 +398,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 12,
   },
+  localeBadge: {
+    width: 38,
+    height: 34,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
