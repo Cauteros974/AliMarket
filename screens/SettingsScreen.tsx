@@ -250,7 +250,7 @@ export default function SettingsScreen() {
 
                 <View style={styles.footer}>
                     <Ionicons
-                        name="shield-checkmark"
+                        name="shield-checkmark-outline"
                         size={20}
                         color={colors.muted}
                     />
