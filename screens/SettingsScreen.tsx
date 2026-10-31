@@ -313,11 +313,12 @@ const styles = StyleSheet.create({
         fontWeight: "700",
     },
     sectionTitle: {
-        color: colors.text,
-        fontSize: 20,
+        fontSize: 17,
         fontWeight: "900",
-        marginTop: 24,
-        marginBottom: 12,
+    },
+    sectionHint: {
+        fontSize: 12,
+        fontWeight: "600",
     },
     darkText: {
         color: colors.white,
