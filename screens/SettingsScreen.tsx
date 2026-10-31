@@ -128,7 +128,7 @@ export default function SettingsScreen() {
                                     <Text style={[styles.themeName, { color: palette.text }]}>
                                         {darkOption ? "Dark mode" : "Light mode"}
                                     </Text>
-                                    <Text style={[styles.themeDescription, { color: palette.selected }]}>
+                                    <Text style={[styles.themeDescription, { color: palette.muted }]}>
                                         {darkOption ? "Easy on the eyes" : "Bright and clean"}
                                     </Text>
                                 </View>
