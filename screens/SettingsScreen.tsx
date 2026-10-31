@@ -293,6 +293,13 @@ const styles = StyleSheet.create({
         fontSize: 13,
         marginTop: 5,
     },
+    headerIcon: {
+        width: 50,
+        height: 50,
+        borderRadius: 20,
+        alignItems: "center",
+        justifyContent: "center",
+    },
     subtitle: {
         color: colors.muted,
         marginTop: 8,
