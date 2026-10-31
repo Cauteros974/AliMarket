@@ -335,5 +335,13 @@ const styles = StyleSheet.create({
     height: 46,
     borderRadius: 15,
     alignItems: "center",
+    justifyContent: "center",
+  },
+  themeTextContainer: {
+    flex: 1,
+  },
+  themeName: {
+    fontSize: 14,
+    fontWeight: "800",
   },
 });
