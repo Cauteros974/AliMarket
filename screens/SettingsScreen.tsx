@@ -90,9 +90,21 @@ export default function SettingsScreen() {
                 </View>
 
                 <View style={[styles.themewRow]}>
-                    {(["light", "dark"] as AppTheme[] => {
+                    {(["light", "dark"] as AppTheme[]).map((item) => {
                         const selected = theme === item;
                         const darkOption = item === "dark";
+                        
+                        return (
+                            <Pressable>
+                                <View>
+                                    <Ionicons 
+                                        name={darkOption ? "moon" : "sunny"}
+                                        size={22}
+                                        color={darkOption ? "#C4B5FD" : "#D97706"}
+                                    />
+                                </View>
+                            </Pressable>
+                        );
                     })}
                 </View>
             </ScrollView>
