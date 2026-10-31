@@ -381,4 +381,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  cardHeadingText: {
+    flex: 1,
+  },
+  cardTitle: {
+    fontSize: 13,
+    fontWeight: "800",
+  },
 });
