@@ -190,11 +190,11 @@ export default function SettingsScreen() {
                 </View>
 
                 <View style={styles.sectionHeader}>
-                    <Text>
+                    <Text style={[styles.sectionTitle, { color: palette.text }]}>
                         Language
                     </Text>
-                    <Text>
-                        {locales.find(item) => item.value === locale}?.label ?? "Select"
+                    <Text style={[styles.sectionHint, { color: palette.muted }]}>
+                        {locales.find((item) => item.value === locale)?.label ?? "Select"}
                     </Text>
                 </View>
             </ScrollView>
