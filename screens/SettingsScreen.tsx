@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
         marginBottom: 28,
     },
     eyebrow: {
-        fontSize: 20,
+        fontSize: 10,
         fontWeight: "900",
         letterSpacing: 1.6,
         marginBottom: 6,
