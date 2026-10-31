@@ -362,4 +362,10 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     backgroundColor: colors.primary,
   },
+  card: {
+    borderWidth: 1,
+    borderRadius: 19,
+    paddingHorizontal: 14,
+    overflow: "hidden",
+  },
 });
