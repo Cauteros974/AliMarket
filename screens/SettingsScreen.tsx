@@ -99,6 +99,15 @@ export default function SettingsScreen() {
                                 key={item}
                                 accessibilityRole="button"
                                 accessibilityState={{ selected }}
+                                onPress={() => changeTheme(item)}
+                                style={[
+                                    styles.themeOption,
+                                    {
+                                        backgroundColor: palette.surface,
+                                        borderColor: selected ? colors.primary : palette.border,
+                                    },
+                                    selected && styles.themeOptionSelected,
+                                ]}
                             >
                                 <View>
                                     <Ionicons 
