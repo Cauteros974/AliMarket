@@ -293,4 +293,11 @@ const styles = StyleSheet.create({
     fontSize: 13,
     marginTop: 5,
   },
+  headerIcon: {
+    width: 54,
+    height: 54,
+    borderRadius: 18,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
