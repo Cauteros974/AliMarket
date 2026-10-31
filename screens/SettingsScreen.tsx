@@ -176,11 +176,11 @@ export default function SettingsScreen() {
                             />
                         </View>
 
-                        <View>
+                        <View style={styles.cardHeadingText}>
                             <Text style={[styles.cardTitle, { color: palette.text }]}>
                                 Special occasions
                             </Text>
-                            <Text>
+                            <Text style={[styles.cardDescription, { color: palette.muted }]}>
                                 Customize the seasonal appearance.
                             </Text>
                         </View>
