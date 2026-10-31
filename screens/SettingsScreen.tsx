@@ -132,6 +132,10 @@ export default function SettingsScreen() {
                                         {darkOption ? "Easy on the eyes" : "Bright and clean"}
                                     </Text>
                                 </View>
+
+                                <View>
+                                    {selected && <View style={styles.radioInner} />}
+                                </View>
                             </Pressable>
                         );
                     })}
