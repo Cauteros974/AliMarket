@@ -276,6 +276,13 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
+        marginBottom: 28,
+    },
+    eyebrow: {
+        fontSize: 20,
+        fontWeight: "900",
+        letterSpacing: 1.6,
+        marginBottom: 6,
     },
     title: {
         color: colors.text,
