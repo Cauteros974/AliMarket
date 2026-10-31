@@ -272,4 +272,16 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 36,
   },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 28,
+  },
+  eyebrow: {
+    fontSize: 10,
+    fontWeight: "900",
+    letterSpacing: 1.6,
+    marginBottom: 6,
+  },
 });
