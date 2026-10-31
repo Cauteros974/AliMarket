@@ -55,8 +55,14 @@ export default function SettingsScreen() {
             <ScrollView contentContainerStyle={styles.content}>
                 <View style={styles.header}>
                     <View>
-                        <Text>
+                        <Text style={[styles.eyebrow, { color: colors.primary }]}>
                             PERSONALIZE
+                        </Text>
+                        <Text style={[styles.title, { color: palette.text }]}>
+                            Settings
+                        </Text>
+                        <Text style={[styles.description, { color: palette.muted }]}></Text><Text>
+                            Make AliMarket feel like yours.
                         </Text>
                     </View>
                 </View>
