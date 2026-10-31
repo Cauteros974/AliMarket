@@ -88,6 +88,13 @@ export default function SettingsScreen() {
                         Theme
                     </Text>
                 </View>
+
+                <View style={[styles.themewRow]}>
+                    {(["light", "dark"] as AppTheme[] => {
+                        const selected = theme === item;
+                        const darkOption = item === "dark";
+                    })}
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
