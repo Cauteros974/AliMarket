@@ -368,4 +368,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     overflow: "hidden",
   },
+  cardHeading: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    paddingVertical: 15,
+  },
+  cardIcon: {
+    width: 43,
+    height: 43,
+    borderRadius: 14,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
