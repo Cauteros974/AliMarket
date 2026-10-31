@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
@@ -51,44 +51,16 @@ export default function SettingsScreen() {
     }
 
     return(
-        <SafeAreaView style={[styles.safeArea, isDark && styles.darkSafeArea]}>
-            <View style={styles.content}>
-                 <Text style={[styles.title, isDark && styles.darkText]}>Settings</Text>
-                 <Text style={styles.text}> Theme and language are saved locally.</Text>
-
-                <Text style={[styles.subtitle, isDark && styles.darkMuted]}>Theme</Text>
-
-                <Text style={[styles.sectionTitle, isDark && styles.darkText]}>Theme</Text>
-
-                <View>
-                    {(["light", "dark"] as AppTheme[]).map((item) => (
-                        <Pressable
-                            key={item}
-                            onPress={() => changeTheme(item)}
-                        >
-                            <Text style={[styles.optionText, theme === item && styles.activeOptionText]}>
-                                {item}
-                            </Text>
-                        </Pressable>
-                    ))}
-                </View>
-
-                <SeasonalThemeSettings />
-
-                <Text style={[styles.sectionTitle, isDark && styles.darkText]}>Language</Text>
-
-                {locales.map((item) => (
-                    <Pressable
-                        key={item.value}
-                        onPress={() => setLocale(item.value)}
-                        style={[styles.localeItem, locale === item.value && styles.activeLocale]}
-                    >
-                        <Text style={[styles.localeText, locale === item.value && styles.activeLocaleText]}>
-                            {item.label}
+        <SafeAreaView style={[styles.safeArea, isDark && styles.darkSafeArea]} edges={["top"]}>
+            <ScrollView contentContainerStyle={styles.content}>
+                <View style={styles.header}>
+                    <View>
+                        <Text>
+                            PERSONALIZE
                         </Text>
-                    </Pressable>
-                ))}
-            </View>
+                    </View>
+                </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }
