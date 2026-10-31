@@ -163,12 +163,26 @@ export default function SettingsScreen() {
                     ]}
                 >
                     <View style={styles.cardHeading}>
-                        <View>
+                        <View
+                            style={[
+                                styles.cardIcon,
+                                { backgroundColor: palette.selected },
+                            ]}
+                        >
                             <Ionicons 
                                 name="color-palette-outline"
                                 size={20}
                                 color={colors.primary}
                             />
+                        </View>
+
+                        <View>
+                            <Text style={[styles.cardTitle, { color: palette.text }]}>
+                                Special occasions
+                            </Text>
+                            <Text>
+                                Customize the seasonal appearance.
+                            </Text>
                         </View>
                     </View>
                 </View>
