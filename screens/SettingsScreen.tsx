@@ -1,3 +1,4 @@
+import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useShopStore } from "../store/useShopStore";
@@ -5,11 +6,11 @@ import { colors } from "../theme/colors";
 import { AppTheme, Locale } from "../types/shop";
 import SeasonalThemeSettings from "../components/SeasonalThemeSettings";
 
-const locales: {label: string, value: Locale}[] = [
-    { label: "English", value: "en" },
-    { label: "Українська", value: "uk" },
-    { label: "Deutsch", value: "de" },
-    { label: "Français", value: "fr" },
+const locales: {label: string, value: Locale, flag: string}[] = [
+    { label: "English", value: "en", flag: "EN" },
+    { label: "Українська", value: "uk", flag: "UA" },
+    { label: "Deutsch", value: "de", flag: "DE" },
+    { label: "Français", value: "fr", flag: "FR" },
 ]
 
 export default function SettingsScreen() {
@@ -22,6 +23,15 @@ export default function SettingsScreen() {
     const showToast = useShopStore((state) => state.showToast);
 
     const isDark = theme === "dark";
+
+    const palette = {
+        background: isDark ? "#111827" : colors.background,
+        surface: isDark ? "#1F2937" : colors.surface,
+        text: isDark ? "#F9FAFB" : colors.text,
+        muted: isDark ? "#CBD5E1" : colors.muted,
+        border: isDark ? "#374151" : colors.border,
+        selected: isDark ? "#38265A" : colors.surfaceSoft,
+    };
 
     function changeTheme(value: AppTheme) {
         setTheme(value);
