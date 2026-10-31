@@ -267,13 +267,15 @@ const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
     },
-    darkSafeArea: {
-        backgroundColor: "#111827",
-    },
     content: {
         paddingHorizontal: 18,
         paddingTop: 16,
         paddingBottom: 36,
+    },
+    header: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
     },
     title: {
         color: colors.text,
