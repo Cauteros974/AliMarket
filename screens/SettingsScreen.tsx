@@ -200,10 +200,21 @@ export default function SettingsScreen() {
 
                 <View>
                     {locales.map((item, index) => {
+                        const selected = locale === item.value;
+
                         return(
                             <Pressable
                                 key={item.value}
                                 accessibilityRole="button"
+                                accessibilityState={{ selected }}
+                                onPress={() => changeLocale(item.value)}
+                                style={[
+                                    styles.localeItem,
+                                    index !== locales.length - 1 && {
+                                        borderBottomWidth: StyleSheet.hairlineWidth,
+                                        borderBottomColor: palette.border,
+                                    },
+                                ]}
                             >
                                 <View>
                                     <Text>
