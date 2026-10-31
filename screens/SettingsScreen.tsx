@@ -216,8 +216,18 @@ export default function SettingsScreen() {
                                     },
                                 ]}
                             >
-                                <View>
-                                    <Text>
+                                <View
+                                    style={[
+                                        styles.localeBadge,
+                                        { backgroundColor: selected ? palette.selected : palette.background },
+                                    ]}
+                                >
+                                    <Text
+                                        style={[
+                                            styles.localeBadgeText,
+                                            { color: selected ? colors.primary : palette.muted },
+                                        ]}
+                                    >
                                         {item.flag}
                                     </Text>
                                 </View>
