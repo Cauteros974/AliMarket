@@ -247,6 +247,12 @@ export default function SettingsScreen() {
                         )
                     })}
                 </View>
+
+                <View>
+                    <Text style={[styles.footerText, { color: palette.muted }]}>
+                        Your preferences are stored locally.
+                    </Text>
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
