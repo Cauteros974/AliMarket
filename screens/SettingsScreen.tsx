@@ -323,5 +323,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     padding: 13,
+    borderWidth: 1,
+    borderRadius: 18,
+    gap: 12,
   },
 });
