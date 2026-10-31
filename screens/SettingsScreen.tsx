@@ -153,13 +153,23 @@ export default function SettingsScreen() {
                     </Text>
                 </View>
 
-                <View>
-                    <View>
-                        <Ionicons 
-                            name="color-palette-outline"
-                            size={20}
-                            color={colors.primary}
-                        />
+                <View
+                    style={[
+                        styles.card,
+                        {
+                            backgroundColor: palette.surface,
+                            borderColor: palette.border,
+                        },
+                    ]}
+                >
+                    <View style={styles.cardHeading}>
+                        <View>
+                            <Ionicons 
+                                name="color-palette-outline"
+                                size={20}
+                                color={colors.primary}
+                            />
+                        </View>
                     </View>
                 </View>
             </ScrollView>
