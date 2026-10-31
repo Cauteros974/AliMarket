@@ -300,6 +300,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    sectionHeader: {
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+    },
     subtitle: {
         color: colors.muted,
         marginTop: 8,
