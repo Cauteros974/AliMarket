@@ -388,4 +388,14 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: "800",
   },
+  cardDescription: {
+    fontSize: 11,
+    marginTop: 4,
+  },
+  localeItem: {
+    minHeight: 59,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+  },
 });
