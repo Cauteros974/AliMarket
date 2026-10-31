@@ -197,6 +197,23 @@ export default function SettingsScreen() {
                         {locales.find((item) => item.value === locale)?.label ?? "Select"}
                     </Text>
                 </View>
+
+                <View>
+                    {locales.map((item, index) => {
+                        return(
+                            <Pressable
+                                key={item.value}
+                                accessibilityRole="button"
+                            >
+                                <View>
+                                    <Text>
+                                        {item.flag}
+                                    </Text>
+                                </View>
+                            </Pressable>
+                        )
+                    })}
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
