@@ -318,4 +318,10 @@ const styles = StyleSheet.create({
   themeRow: {
     gap: 10,
   },
+  themeOption: {
+    minHeight: 82,
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 13,
+  },
 });
