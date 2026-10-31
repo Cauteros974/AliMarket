@@ -302,8 +302,10 @@ const styles = StyleSheet.create({
     },
     sectionHeader: {
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
+        marginTop: 24,
+        marginBottom: 12,
     },
     subtitle: {
         color: colors.muted,
