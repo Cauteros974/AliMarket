@@ -248,7 +248,12 @@ export default function SettingsScreen() {
                     })}
                 </View>
 
-                <View>
+                <View style={styles.footer}>
+                    <Ionicons
+                        name="shield-checkmark"
+                        size={20}
+                        color={colors.muted}
+                    />
                     <Text style={[styles.footerText, { color: palette.muted }]}>
                         Your preferences are stored locally.
                     </Text>
