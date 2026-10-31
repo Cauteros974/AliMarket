@@ -95,7 +95,11 @@ export default function SettingsScreen() {
                         const darkOption = item === "dark";
                         
                         return (
-                            <Pressable>
+                            <Pressable
+                                key={item}
+                                accessibilityRole="button"
+                                accessibilityState={{ selected }}
+                            >
                                 <View>
                                     <Ionicons 
                                         name={darkOption ? "moon" : "sunny"}
