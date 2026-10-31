@@ -66,7 +66,12 @@ export default function SettingsScreen() {
                         </Text>
                     </View>
 
-                    <View>
+                    <View
+                        style={[
+                            styles.headerIcon,
+                            { backgroundColor: palette.selected },
+                        ]}
+                    >
                         <Ionicons 
                             name="settings-outline"
                             size={20}
