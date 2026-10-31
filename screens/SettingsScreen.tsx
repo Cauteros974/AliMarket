@@ -79,6 +79,15 @@ export default function SettingsScreen() {
                         />
                     </View>
                 </View>
+
+                <View>
+                    <Text style={[styles.sectionTitle, { color: palette.text }]}>
+                        Appearance
+                    </Text>
+                    <Text style={[styles.sectionHint, { color: palette.muted }]}>
+                        Theme
+                    </Text>
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
