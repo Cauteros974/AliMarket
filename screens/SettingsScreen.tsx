@@ -124,9 +124,12 @@ export default function SettingsScreen() {
                                     />
                                 </View>
 
-                                <View>
-                                    <Text>
+                                <View style={styles.themeTextContainer}>
+                                    <Text style={[styles.themeName, { color: palette.text }]}>
                                         {darkOption ? "Dark mode" : "Light mode"}
+                                    </Text>
+                                    <Text style={[styles.themeDescription, { color: palette.selected }]}>
+                                        {darkOption ? "Easy on the eyes" : "Bright and clean"}
                                     </Text>
                                 </View>
                             </Pressable>
