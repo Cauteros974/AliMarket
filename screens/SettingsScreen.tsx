@@ -289,6 +289,10 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         letterSpacing: -0.7,
     },
+    description: {
+        fontSize: 13,
+        marginTop: 5,
+    },
     subtitle: {
         color: colors.muted,
         marginTop: 8,
