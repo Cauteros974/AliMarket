@@ -80,7 +80,8 @@ export default function SettingsScreen() {
                     </View>
                 </View>
 
-                <View>
+                {/* Appearance */}
+                <View style={styles.sectionHeader}>
                     <Text style={[styles.sectionTitle, { color: palette.text }]}>
                         Appearance
                     </Text>
@@ -133,12 +134,33 @@ export default function SettingsScreen() {
                                     </Text>
                                 </View>
 
-                                <View>
+                                <View
+                                    style={[
+                                        styles.radioOuter,
+                                        { borderColor: selected ? colors.primary : palette.border },
+                                    ]}
+                                >
                                     {selected && <View style={styles.radioInner} />}
                                 </View>
                             </Pressable>
                         );
                     })}
+                </View>
+
+                <View>
+                    <Text>
+                        Seasonal theme
+                    </Text>
+                </View>
+
+                <View>
+                    <View>
+                        <Ionicons 
+                            name="color-palette-outline"
+                            size={20}
+                            color={colors.primary}
+                        />
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
