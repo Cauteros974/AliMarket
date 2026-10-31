@@ -109,12 +109,25 @@ export default function SettingsScreen() {
                                     selected && styles.themeOptionSelected,
                                 ]}
                             >
-                                <View>
+                                <View
+                                    style={[
+                                        styles.themeIcon,
+                                        {
+                                            backgroundColor: darkOption ? "#29233B" : "#FFF0C2",
+                                        }
+                                    ]}
+                                >
                                     <Ionicons 
                                         name={darkOption ? "moon" : "sunny"}
                                         size={22}
                                         color={darkOption ? "#C4B5FD" : "#D97706"}
                                     />
+                                </View>
+
+                                <View>
+                                    <Text>
+                                        {darkOption ? "Dark mode" : "Light mode"}
+                                    </Text>
                                 </View>
                             </Pressable>
                         );
