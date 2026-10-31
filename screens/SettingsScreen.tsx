@@ -231,6 +231,17 @@ export default function SettingsScreen() {
                                         {item.flag}
                                     </Text>
                                 </View>
+
+                                <Text>
+                                    {item.label}
+                                </Text>
+
+                                {selected && (
+                                    <Ionicons 
+                                        name="checkmark-circle"
+                                        size={20}
+                                    />
+                                )}
                             </Pressable>
                         )
                     })}
