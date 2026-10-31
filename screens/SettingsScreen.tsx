@@ -294,9 +294,9 @@ const styles = StyleSheet.create({
         marginTop: 5,
     },
     headerIcon: {
-        width: 50,
-        height: 50,
-        borderRadius: 20,
+        width: 54,
+        height: 54,
+        borderRadius: 18,
         alignItems: "center",
         justifyContent: "center",
     },
