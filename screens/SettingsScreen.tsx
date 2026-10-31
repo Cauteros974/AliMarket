@@ -285,12 +285,12 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   title: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: "900",
     letterSpacing: -0.7,
   },
   description: {
-    fontSize: 10,
+    fontSize: 13,
     marginTop: 5,
   },
 });
