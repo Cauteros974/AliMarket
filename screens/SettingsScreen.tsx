@@ -284,4 +284,13 @@ const styles = StyleSheet.create({
     letterSpacing: 1.6,
     marginBottom: 6,
   },
+  title: {
+    fontSize: 20,
+    fontWeight: "900",
+    letterSpacing: -0.7,
+  },
+  description: {
+    fontSize: 10,
+    marginTop: 5,
+  },
 });
