@@ -356,4 +356,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  radioInner: {
+    width: 11,
+    height: 11,
+    borderRadius: 6,
+    backgroundColor: colors.primary,
+  },
 });
