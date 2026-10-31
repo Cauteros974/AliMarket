@@ -327,4 +327,13 @@ const styles = StyleSheet.create({
     borderRadius: 18,
     gap: 12,
   },
+  themeOptionSelected: {
+    borderWidth: 1.5,
+  },
+  themeIcon: {
+    width: 46,
+    height: 46,
+    borderRadius: 15,
+    alignItems: "center",
+  },
 });
