@@ -108,6 +108,11 @@ export default function CatalogScreen({
         switch(sortOption) {
           case "priceAsc":
             return a.price - b.price;
+          case "priceDesc":
+            return b.price - a.price;
+          case "rating":
+            return b.rating - a.rating;
+
         }
         return b.sold - a.sold;
       });
