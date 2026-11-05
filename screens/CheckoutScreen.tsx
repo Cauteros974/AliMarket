@@ -150,7 +150,7 @@ export default function CheckoutScreen({navigation}: Props) {
                         {description}
                     </Text>
                 </View>
-                
+
                 {selected && (
                     <Text style={styles.selectedLabel}>Selected</Text>
                 )}
@@ -160,8 +160,15 @@ export default function CheckoutScreen({navigation}: Props) {
 
     return(
         <SafeAreaView style={styles.safeArea}>
-            <ScrollView contentContainerStyle={styles.content}>
+            <ScrollView 
+                contentContainerStyle={styles.content}
+                showsVerticalScrollIndicator={false}
+            >
                 <Text style={styles.title}>Checkout</Text>
+                <Text style={styles.subtitle}>
+                    Review your order before placing it.
+                </Text>
+
 
                 <View style={styles.card}>
                     <View style={styles.rowBetween}>
