@@ -105,9 +105,10 @@ export default function CatalogScreen({
         );
       })
       .sort((a, b) => {
-        if (sortOption === "priceAsc") return a.price - b.price;
-        if (sortOption === "priceDesc") return b.price - a.price;
-        if (sortOption === "rating") return b.rating - a.rating;
+        switch(sortOption) {
+          case "priceAsc":
+            return a.price - b.price;
+        }
         return b.sold - a.sold;
       });
   }, [filters, searchQuery, selectedCategoryId, sortOption]);
