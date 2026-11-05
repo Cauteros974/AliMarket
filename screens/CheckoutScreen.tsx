@@ -38,6 +38,12 @@ export default function CheckoutScreen({navigation}: Props) {
             );
             
             if (!product) return null;
+            
+            return {
+                product,
+                quantity: item.quantity,
+                lineTotal: product.price * item.quantity,
+            };
         })
     })
 
