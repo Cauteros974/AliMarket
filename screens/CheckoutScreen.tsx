@@ -78,7 +78,13 @@ export default function CheckoutScreen({navigation}: Props) {
     const total = Math.max(subtotal + shipping - discount, 0);
 
     function handlePlaceOrder() {
-        
+        if (cart.length === 0 || orderItems.length === 0) {
+            Alert.alert(
+                "Empty cart",
+                "Add products to your cart before placing an order."
+            );
+            return;
+        }
     }
 
     return(
