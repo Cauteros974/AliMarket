@@ -196,7 +196,7 @@ export default function CheckoutScreen({navigation}: Props) {
                             </Text>
                         </View>
                     ) : (
-                        <Text style={styles.muted}>No address selected.</Text>
+                        <Text style={styles.muted}>No delivery address selected.</Text>
                     )}
                 </View>
 
