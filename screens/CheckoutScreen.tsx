@@ -175,7 +175,9 @@ export default function CheckoutScreen({navigation}: Props) {
                         <Text style={styles.cardTitle}>Delivery address</Text>
 
                         <Pressable onPress={() => navigation.navigate("Addresses")}>
-                            <Text style={styles.link}>Change</Text>
+                            <Text style={styles.link}>
+                                {address ? "Change" : "Select"}
+                            </Text>
                         </Pressable>
                     </View>
 
