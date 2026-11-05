@@ -568,6 +568,11 @@ const styles = StyleSheet.create({
         fontWeight: "900",
     },
 
+    primaryButton: {
+        height: 54,
+        borderRadius: 17,
+    },
+
     primaryButtonText: {
         color: colors.white,
         fontSize: 16,
