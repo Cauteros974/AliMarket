@@ -150,6 +150,10 @@ export default function CheckoutScreen({navigation}: Props) {
                         {description}
                     </Text>
                 </View>
+                
+                {selected && (
+                    <Text style={styles.selectedLabel}>Selected</Text>
+                )}
             </Pressable>
         )
     }
