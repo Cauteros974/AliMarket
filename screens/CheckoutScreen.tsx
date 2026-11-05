@@ -25,6 +25,24 @@ export default function CheckoutScreen({navigation}: Props) {
 
     const address = addresses.find((item) => item.id === selectedAddressId);
 
+    const orderItems = useMemo(() => {
+        return cart
+            .map((item) => {
+                const product = products.find(
+                    (entry) => entry.id === item.productId
+                );
+
+                if (!product) return null;
+
+                return {
+                    product,
+                    quantity: item.quantity,
+                    lineTotal: product.price * item.quantity,
+                };
+            })
+            .filter((item) => item !== null);
+    }, [cart]);
+
     const subtotal = cart.reduce((sum, item) => {
         const product = products.find((entry) => entry.id === item.productId);
         return sum + (product?.price ?? 0) + item.quantity;
@@ -60,15 +78,7 @@ export default function CheckoutScreen({navigation}: Props) {
     const total = Math.max(subtotal + shipping - discount, 0);
 
     function handlePlaceOrder() {
-        const order = placeOrder(total);
-
-        if(!order) {
-            Alert.alert("Checkout blocked", "Add products and select a delivery address");
-            return;
-        }
-
-        Alert.alert("Order placed", `${order.id} was created successfully.`);
-        navigation.navigate("Orders");
+        
     }
 
     return(
