@@ -100,7 +100,18 @@ export default function CheckoutScreen({navigation}: Props) {
                         onPress: () => navigation.navigate("Addresses"),
                     },
                 ]
-            )
+            );
+            return;
+        }
+
+        const order = placeOrder;
+
+        if (!order) {
+            Alert.alert(
+                "Checkout blocked",
+                "We couldn't create your order. Please try again."
+            );
+            return;
         }
     }
 
