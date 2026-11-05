@@ -137,9 +137,10 @@ export default function CheckoutScreen({navigation}: Props) {
                 onPress={onPress}
                 style={[
                     styles.option,
+                    selected && styles.selectedOption,
                 ]}
             >
-                <View>
+                <View style={styles.optionRadio}>
                     {selected && <View style={styles.optionRadioInner} />}
                 </View>
             </Pressable>
