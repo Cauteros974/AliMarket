@@ -573,6 +573,7 @@ const styles = StyleSheet.create({
         borderRadius: 17,
         backgroundColor: colors.primary,
         alignItems: "center",
+        justifyContent: "center",
     },
 
     primaryButtonText: {
