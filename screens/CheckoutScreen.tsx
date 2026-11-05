@@ -562,6 +562,12 @@ const styles = StyleSheet.create({
         fontWeight: "700",
     },
 
+    footerPrice: {
+        color: colors.primary,
+        fontSize: 21,
+        fontWeight: "900",
+    },
+
     primaryButtonText: {
         color: colors.white,
         fontSize: 16,
