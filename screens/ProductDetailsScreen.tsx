@@ -63,8 +63,8 @@ export default function ProductDetailsScreen({
     );
   }
 
-  const isFavorite = favoriteIds.includes(productId);
   const productId = product.id;
+  const isFavorite = favoriteIds.includes(productId);
 
   function handleAddToCart() {
     addToCart(productId);
