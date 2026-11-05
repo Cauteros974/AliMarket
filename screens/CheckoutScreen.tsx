@@ -90,6 +90,16 @@ export default function CheckoutScreen({navigation}: Props) {
             Alert.alert(
                 "Delivery address required",
                 "Please select a delivery address first.",
+                [
+                    {
+                        text: "Cancel",
+                        style: "cancel",
+                    },
+                    {
+                        text: "Select address",
+                        onPress: () => navigation.navigate("Addresses"),
+                    },
+                ]
             )
         }
     }
