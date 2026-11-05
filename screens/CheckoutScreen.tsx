@@ -123,8 +123,13 @@ export default function CheckoutScreen({navigation}: Props) {
                     onPress: () => navigation.navigate("Orders"),
                 },
             ]
-        )
+        );
     }
+
+    function renderOption(
+        selected: boolean,
+        title: string,
+    )
 
     return(
         <SafeAreaView style={styles.safeArea}>
