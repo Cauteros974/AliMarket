@@ -146,6 +146,9 @@ export default function CheckoutScreen({navigation}: Props) {
 
                 <View style={styles.optionContent}>
                     <Text style={styles.optionTitle}>{title}</Text>
+                    <Text style={styles.optionDescription}>
+                        {description}
+                    </Text>
                 </View>
             </Pressable>
         )
