@@ -85,6 +85,13 @@ export default function CheckoutScreen({navigation}: Props) {
             );
             return;
         }
+
+        if(!address) {
+            Alert.alert(
+                "Delivery address required",
+                "Please select a delivery address first.",
+            )
+        }
     }
 
     return(
