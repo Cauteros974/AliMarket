@@ -113,6 +113,17 @@ export default function CheckoutScreen({navigation}: Props) {
             );
             return;
         }
+
+        Alert.alert(
+            "Order placed!",
+            `Your order ${order.id} was created successfully.`,
+            [
+                {
+                    text: "View orders",
+                    onPress: () => navigation.navigate("Orders"),
+                },
+            ]
+        )
     }
 
     return(
