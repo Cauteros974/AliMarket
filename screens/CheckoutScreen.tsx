@@ -191,6 +191,9 @@ export default function CheckoutScreen({navigation}: Props) {
                                 {address.city}, {address.street}
                             </Text>
 
+                            <Text style={styles.muted}>
+                                {address.phone}
+                            </Text>
                         </View>
                     ) : (
                         <Text style={styles.muted}>No address selected.</Text>
