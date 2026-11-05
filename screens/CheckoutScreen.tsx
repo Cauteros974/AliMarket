@@ -30,6 +30,17 @@ export default function CheckoutScreen({navigation}: Props) {
         return sum + (product?.price ?? 0) + item.quantity;
     }, 0);
 
+    const orderItem = useMemo(() => {
+        return cart
+        .map((item) => {
+            const product = products.find(
+                (entry) => entry.id === item.productId
+            );
+            
+            if (!product) return null;
+        })
+    })
+
     const shipping = appliedCoupon === "FRESHIP" || subtotal === 0 ? 0 : 4.99;
 
     const discount = 
