@@ -576,6 +576,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
 
+    disabledButton: {
+        opacity: 1,
+    },
+
     primaryButtonText: {
         color: colors.white,
         fontSize: 16,
