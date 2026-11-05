@@ -129,7 +129,22 @@ export default function CheckoutScreen({navigation}: Props) {
     function renderOption(
         selected: boolean,
         title: string,
-    )
+        description: string,
+        onPress: () => void
+    ) {
+        return(
+            <Pressable
+                onPress={onPress}
+                style={[
+                    styles.option,
+                ]}
+            >
+                <View>
+                    {selected && <View style={styles.optionRadioInner} />}
+                </View>
+            </Pressable>
+        )
+    }
 
     return(
         <SafeAreaView style={styles.safeArea}>
