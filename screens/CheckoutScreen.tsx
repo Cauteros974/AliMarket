@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { products } from "../data/products";
@@ -9,12 +10,18 @@ type Props = {
     navigation: any;
 }
 
+type DeliveryMethod = "standard" | "express";
+type PaymentMethod = "card" | "cash";
+
 export default function CheckoutScreen({navigation}: Props) {
     const cart = useShopStore((state) => state.cart);
     const addresses = useShopStore((state) => state.addresses);
     const selectedAddressId = useShopStore((state) => state.selectedAddressId);
     const appliedCoupon = useShopStore((state) => state.appliedCoupon);
     const placeOrder = useShopStore((state) => state.placeOrder);
+
+    const [deliveryMethod, setDeliveryMethod] = useState<DeliveryMethod>("standard");
+    const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("card");
 
     const address = addresses.find((item) => item.id === selectedAddressId);
 
