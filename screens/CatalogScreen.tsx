@@ -112,9 +112,10 @@ export default function CatalogScreen({
             return b.price - a.price;
           case "rating":
             return b.rating - a.rating;
-
+          case "popular":
+          default: 
+            return b.sold - a.sold;
         }
-        return b.sold - a.sold;
       });
   }, [filters, searchQuery, selectedCategoryId, sortOption]);
 
