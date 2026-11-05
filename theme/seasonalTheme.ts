@@ -6,6 +6,7 @@ export type SeasonColors = {
     background: string;
     surface: string;
     surfaceElevated: string;
+    surfaceSoft: string;
     primary: string;
     primaryPressed: string;
     onPrimary: string;
@@ -15,6 +16,7 @@ export type SeasonColors = {
     border: string;
     success: string;
     danger: string;
+    muted: string;
 };
 
 export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
@@ -32,6 +34,8 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         border: "#D8E5D5",
         success: "#23834B",
         danger: "#C44545",
+        surfaceSoft: "#F0E9FF",
+        muted: "#898495",
     },
 
     // Summer — turquoise and sunny shades.
@@ -48,6 +52,8 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         border: "#D2E9EB",
         success: "#218653",
         danger: "#C44545",
+        surfaceSoft: "#F0E9FF",
+        muted: "#898495",
     },
 
     // Autumn — amber, orange, and cream.
@@ -64,6 +70,8 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         border: "#EEDCC6",
         success: "#348052",
         danger: "#C44545",
+        surfaceSoft: "#F0E9FF",
+        muted: "#898495",
     },
 
     // Winter — icy blue and cold blue.
@@ -80,6 +88,8 @@ export const SEASONAL_THEMES: Record<Season, SeasonColors> = {
         border: "#D5E4F2",
         success: "#23834B",
         danger: "#C44545",
+        surfaceSoft: "#F0E9FF",
+        muted: "#898495",
     }
 };
 
