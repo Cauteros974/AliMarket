@@ -577,7 +577,7 @@ const styles = StyleSheet.create({
     },
 
     disabledButton: {
-        opacity: 0.5,
+        opacity: 0.45,
     },
 
     primaryButtonText: {
