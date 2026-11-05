@@ -45,7 +45,8 @@ export default function CheckoutScreen({navigation}: Props) {
                 lineTotal: product.price * item.quantity,
             };
         })
-    })
+        .filter((item) => item !== null);
+    },[cart]);
 
     const shipping = appliedCoupon === "FRESHIP" || subtotal === 0 ? 0 : 4.99;
 
