@@ -1,69 +1,104 @@
 import { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ProductShareSheet from "../components/ProductShareSheet";
 import { products } from "../data/products";
-import { RootStackParamList } from "../navigation/types";
+import type { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { formatPrice } from "../utils/format";
 
 type Props = NativeStackScreenProps<RootStackParamList, "ProductDetails">;
 
-export default function ProductDetailsScreen({ route, navigation }: Props) {
-  const product = products.find((item) => item.id === route.params.productId);
+export default function ProductDetailsScreen({
+  route,
+  navigation,
+}: Props) {
+  const product = products.find(
+    (item) => item.id === route.params.productId
+  );
+
   const addToCart = useShopStore((state) => state.addToCart);
   const favoriteIds = useShopStore((state) => state.favoriteIds);
   const toggleFavorite = useShopStore((state) => state.toggleFavorite);
-  const addRecentlyViewId = useShopStore((state) => state.addRecentlyViewed);
+  const addRecentlyViewed = useShopStore((state) => state.addRecentlyViewed);
+  const showToast = useShopStore((state) => state.showToast);
   const [shareVisible, setShareVisible] = useState(false);
+
+  // Hooks must be called before any conditional return.
+  useEffect(() => {
+    if (product) {
+      addRecentlyViewed(product.id);
+    }
+  }, [product?.id, addRecentlyViewed]);
 
   if (!product) {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.emptyState}>
-          <Pressable
-            onPress={() => navigation.goBack()}
-            style={styles.backButton}
-          >
+          <View style={styles.emptyIcon}>
             <Ionicons
-              name="arrow-back"
-              size={24}
-              color={colors.warning}
+              name="search-outline"
+              size={30}
+              color={colors.primary}
             />
-          </Pressable>
+          </View>
 
-          <Text style={styles.title}>Product not found</Text>
+          <Text style={styles.emptyTitle}>Product not found</Text>
+          <Text style={styles.emptyDescription}>
+            This product may no longer be available.
+          </Text>
+
+          <Pressable
+            accessibilityRole="button"
+            onPress={() => navigation.goBack()}
+            style={styles.backToCatalogButton}
+          >
+            <Text style={styles.backToCatalogText}>Go back</Text>
+          </Pressable>
         </View>
       </SafeAreaView>
     );
   }
 
-  useEffect(() => {
-    addRecentlyViewId(product.id);
-  }, [product.id]);
-
   const isFavorite = favoriteIds.includes(product.id);
 
+  function handleAddToCart() {
+    addToCart(product.id);
+    showToast("Added to cart", "success");
+  }
+
   return (
-    <SafeAreaView
-      style={styles.safeArea}
-      edges={["top", "bottom"]}
-    >
-      {/* Back button */}
-      <Pressable
-        onPress={() => navigation.goBack()}
-        style={styles.backButton}
-        hitSlop={10}
-      >
-        <Ionicons
-          name="arrow-back"
-          size={24}
-          color={colors.text}
-        />
-      </Pressable>
+    <SafeAreaView style={styles.safeArea} edges={["top", "bottom"]}>
+      <View style={styles.topBar}>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Go back"
+          onPress={() => navigation.goBack()}
+          style={styles.roundButton}
+          hitSlop={8}
+        >
+          <Ionicons name="arrow-back" size={22} color={colors.text} />
+        </Pressable>
+
+        <Text style={styles.topBarTitle}>Product details</Text>
+
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Share product"
+          onPress={() => setShareVisible(true)}
+          style={styles.roundButton}
+          hitSlop={8}
+        >
+          <Ionicons
+            name="share-social-outline"
+            size={21}
+            color={colors.text}
+          />
+        </Pressable>
+      </View>
 
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -73,15 +108,37 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
           <Image
             source={product.image}
             style={styles.image}
-            resizeMode="cover"
+            resizeMode="contain"
+            accessibilityLabel={product.title}
           />
+
+          {product.discountLabel ? (
+            <View style={styles.discountBadge}>
+              <Text style={styles.discountText}>
+                {product.discountLabel}
+              </Text>
+            </View>
+          ) : null}
+
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={
+              isFavorite ? "Remove from favorites" : "Add to favorites"
+            }
+            onPress={() => toggleFavorite(product.id)}
+            style={styles.imageFavoriteButton}
+          >
+            <Ionicons
+              name={isFavorite ? "heart" : "heart-outline"}
+              size={21}
+              color={isFavorite ? colors.danger : colors.text}
+            />
+          </Pressable>
         </View>
 
         <View style={styles.info}>
           <View style={styles.priceRow}>
-            <Text style={styles.price}>
-              {formatPrice(product.price)}
-            </Text>
+            <Text style={styles.price}>{formatPrice(product.price)}</Text>
 
             {product.oldPrice ? (
               <Text style={styles.oldPrice}>
@@ -90,138 +147,112 @@ export default function ProductDetailsScreen({ route, navigation }: Props) {
             ) : null}
           </View>
 
-          <Text style={styles.productTitle}>
-            {product.title}
-          </Text>
+          <Text style={styles.productTitle}>{product.title}</Text>
 
           <View style={styles.ratingRow}>
-            <Ionicons
-              name="star"
-              size={16}
-              color={colors.warning}
-            />
-
-            <Text style={styles.ratingText}>
-              {product.rating}
-            </Text>
-
+            <Ionicons name="star" size={16} color={colors.warning} />
+            <Text style={styles.ratingText}>{product.rating.toFixed(1)}</Text>
             <Text style={styles.mutedText}>
               {product.reviews.toLocaleString("en-US")} reviews
             </Text>
-
+            <View style={styles.ratingDot} />
             <Text style={styles.mutedText}>
               {product.sold.toLocaleString("en-US")} sold
             </Text>
           </View>
 
           <View style={styles.deliveryBox}>
+            <View style={styles.deliveryIcon}>
+              <Ionicons
+                name="airplane-outline"
+                size={21}
+                color={colors.primary}
+              />
+            </View>
+
+            <View style={styles.deliveryContent}>
+              <Text style={styles.deliveryTitle}>Delivery</Text>
+              <Text style={styles.deliveryText}>{product.delivery}</Text>
+            </View>
+
             <Ionicons
-              name="airplane-outline"
-              size={20}
-              color={colors.primary}
+              name="chevron-forward"
+              size={18}
+              color={colors.muted}
             />
+          </View>
 
-            <View>
-              <Text style={styles.deliveryTitle}>
-                Delivery
-              </Text>
+          {product.colors.length > 0 && (
+            <>
+              <Text style={styles.sectionTitle}>Available colors</Text>
 
-              <Text style={styles.deliveryText}>
-                {product.delivery}
+              <View style={styles.colorRow}>
+                {product.colors.map((color, index) => (
+                  <View
+                    key={`${color}-${index}`}
+                    style={[
+                      styles.colorDot,
+                      { backgroundColor: color },
+                    ]}
+                  />
+                ))}
+              </View>
+            </>
+          )}
+
+          <Text style={styles.sectionTitle}>Description</Text>
+          <Text style={styles.description}>{product.description}</Text>
+
+          <View style={styles.reviewsHeader}>
+            <Text style={styles.sectionTitle}>Customer reviews</Text>
+            <View style={styles.reviewCountBadge}>
+              <Text style={styles.reviewCountText}>
+                {product.reviews.toLocaleString("en-US")}
               </Text>
             </View>
           </View>
 
-          <Text style={styles.sectionTitle}>
-            Colors
+          <Text style={styles.reviewsHint}>
+            Ratings and reviews for this product.
           </Text>
 
-          <View style={styles.colorRow}>
-            {product.colors.map((color) => (
-              <View
-                key={color}
-                style={[
-                  styles.colorDot,
-                  { backgroundColor: color },
-                ]}
+          <View style={styles.shareActions}>
+            <Pressable
+              accessibilityRole="button"
+              onPress={() => setShareVisible(true)}
+              style={styles.shareButton}
+            >
+              <Ionicons
+                name="qr-code-outline"
+                size={19}
+                color={colors.primary}
               />
-            ))}
+              <Text style={styles.shareButtonText}>QR code / Share</Text>
+            </Pressable>
           </View>
-
-          <Text style={styles.sectionTitle}>
-            Description
-          </Text>
-
-          <Text style={styles.description}>
-            {product.description}
-          </Text>
-
-          <Text style={styles.sectionTitle}>
-            Reviews
-          </Text>
-
-          <Text style={styles.mutedText}>
-            {product.reviews.toLocaleString("en-US")} reviews
-          </Text>
-        </View>
-
-        <View style={styles.shareActions}>
-          <Pressable
-            style={styles.shareButton}
-            onPress={() => setShareVisible(true)}
-          >
-            <Ionicons 
-              name="qr-code-outline"
-              size={20}
-              color={colors.primary}
-            />
-
-            <Text style={styles.shareButtonText}>
-              QR Code
-            </Text>
-          </Pressable>
-
-          <Pressable
-            style={styles.shareButton}
-            onPress={() => setShareVisible(true)}
-          >
-            <Ionicons
-              name="share-outline"
-              size={20}
-              color={colors.primary}
-            />
-
-            <Text style={styles.shareButtonText}>
-              Share
-            </Text>
-          </Pressable>
         </View>
       </ScrollView>
 
-      {/* Bottom action bar */}
       <View style={styles.footer}>
-        <Pressable
-          onPress={() => toggleFavorite(product.id)}
-          style={styles.secondaryButton}
-        >
-          <Ionicons
-            name={isFavorite ? "heart" : "heart-outline"}
-            size={20}
-            color={colors.primary}
-          />
-        </Pressable>
+        <View style={styles.footerPrice}>
+          <Text style={styles.footerPriceLabel}>Total price</Text>
+          <Text style={styles.footerPriceValue}>
+            {formatPrice(product.price)}
+          </Text>
+        </View>
 
         <Pressable
-          onPress={() => addToCart(product.id)}
+          accessibilityRole="button"
+          accessibilityLabel="Add product to cart"
+          onPress={handleAddToCart}
           style={styles.primaryButton}
         >
-          <Text style={styles.primaryButtonText}>
-            Add to cart
-          </Text>
+          <Ionicons name="cart-outline" size={20} color={colors.white} />
+          <Text style={styles.primaryButtonText}>Add to cart</Text>
         </Pressable>
       </View>
 
-      <ProductShareSheet 
+      <ProductShareSheet
         visible={shareVisible}
         product={product}
         onClose={() => setShareVisible(false)}
@@ -235,40 +266,70 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
-  content: {
-    paddingBottom: 116,
+  topBar: {
+    minHeight: 58,
+    paddingHorizontal: 18,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
-  backButton: {
-    position: "absolute",
-    top: 12,
-    left: 18,
-    zIndex: 100,
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    backgroundColor: colors.white,
+  topBarTitle: {
+    color: colors.text,
+    fontSize: 16,
+    fontWeight: "800",
+  },
+  roundButton: {
+    width: 42,
+    height: 42,
+    borderRadius: 15,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
     alignItems: "center",
     justifyContent: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.12,
-    shadowRadius: 6,
-    elevation: 5,
+  },
+  content: {
+    paddingBottom: 125,
   },
   imageWrap: {
-    width: 360,
-    height: 330,
-    margin: 18,
-    borderRadius: 28,
+    width: "auto",
+    height: 320,
+    marginHorizontal: 18,
+    marginTop: 8,
+    borderRadius: 25,
     backgroundColor: colors.surfaceSoft,
     overflow: "hidden",
+    alignItems: "center",
+    justifyContent: "center",
   },
   image: {
     width: "100%",
     height: "100%",
+  },
+  discountBadge: {
+    position: "absolute",
+    top: 14,
+    left: 14,
+    backgroundColor: colors.danger,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 10,
+  },
+  discountText: {
+    color: colors.white,
+    fontSize: 11,
+    fontWeight: "900",
+  },
+  imageFavoriteButton: {
+    position: "absolute",
+    top: 12,
+    right: 12,
+    width: 42,
+    height: 42,
+    borderRadius: 15,
+    backgroundColor: colors.surface,
+    alignItems: "center",
+    justifyContent: "center",
   },
   info: {
     paddingHorizontal: 18,
@@ -276,144 +337,227 @@ const styles = StyleSheet.create({
   priceRow: {
     flexDirection: "row",
     alignItems: "baseline",
+    flexWrap: "wrap",
     gap: 10,
+    marginTop: 20,
   },
   price: {
     color: colors.primary,
-    fontSize: 30,
+    fontSize: 29,
     fontWeight: "900",
   },
   oldPrice: {
     color: colors.muted,
-    fontSize: 16,
+    fontSize: 15,
     textDecorationLine: "line-through",
   },
   productTitle: {
     color: colors.text,
-    fontSize: 24,
+    fontSize: 23,
     lineHeight: 30,
     fontWeight: "900",
-    marginTop: 10,
+    marginTop: 8,
   },
   ratingRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 6,
+    flexWrap: "wrap",
+    gap: 7,
     marginTop: 12,
   },
   ratingText: {
     color: colors.text,
     fontWeight: "900",
+    fontSize: 13,
   },
   mutedText: {
     color: colors.muted,
-    fontSize: 13,
+    fontSize: 12,
+  },
+  ratingDot: {
+    width: 3,
+    height: 3,
+    borderRadius: 2,
+    backgroundColor: colors.muted,
   },
   deliveryBox: {
     marginTop: 22,
-    borderRadius: 18,
+    borderRadius: 17,
     backgroundColor: colors.surface,
     borderWidth: 1,
     borderColor: colors.border,
-    padding: 14,
+    padding: 13,
     flexDirection: "row",
     alignItems: "center",
-    gap: 12,
+    gap: 11,
+  },
+  deliveryIcon: {
+    width: 42,
+    height: 42,
+    borderRadius: 13,
+    backgroundColor: colors.surfaceSoft,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  deliveryContent: {
+    flex: 1,
   },
   deliveryTitle: {
     color: colors.text,
-    fontWeight: "900",
+    fontWeight: "800",
+    fontSize: 13,
   },
   deliveryText: {
     color: colors.muted,
-    marginTop: 3,
+    fontSize: 12,
+    marginTop: 4,
   },
   sectionTitle: {
     color: colors.text,
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: "900",
     marginTop: 24,
     marginBottom: 10,
   },
   colorRow: {
     flexDirection: "row",
+    flexWrap: "wrap",
     gap: 10,
   },
   colorDot: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
+    width: 31,
+    height: 31,
+    borderRadius: 16,
     borderWidth: 2,
     borderColor: colors.white,
   },
   description: {
     color: colors.muted,
-    fontSize: 15,
-    lineHeight: 23,
+    fontSize: 14,
+    lineHeight: 22,
+  },
+  reviewsHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  reviewCountBadge: {
+    backgroundColor: colors.surfaceSoft,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 10,
+  },
+  reviewCountText: {
+    color: colors.primary,
+    fontSize: 11,
+    fontWeight: "900",
+  },
+  reviewsHint: {
+    color: colors.muted,
+    fontSize: 12,
+  },
+  shareActions: {
+    marginTop: 18,
+  },
+  shareButton: {
+    minHeight: 46,
+    borderRadius: 14,
+    backgroundColor: colors.surfaceSoft,
+    borderWidth: 1,
+    borderColor: colors.border,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+  },
+  shareButtonText: {
+    color: colors.primary,
+    fontSize: 13,
+    fontWeight: "800",
   },
   footer: {
     position: "absolute",
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: colors.white,
+    backgroundColor: colors.surface,
     borderTopWidth: 1,
     borderTopColor: colors.border,
-    padding: 16,
+    paddingHorizontal: 18,
+    paddingTop: 12,
+    paddingBottom: 12,
     flexDirection: "row",
-    gap: 12,
-  },
-  secondaryButton: {
-    width: 54,
-    height: 54,
-    borderRadius: 18,
-    backgroundColor: colors.surfaceSoft,
     alignItems: "center",
-    justifyContent: "center",
+    gap: 14,
+  },
+  footerPrice: {
+    flexShrink: 1,
+  },
+  footerPriceLabel: {
+    color: colors.muted,
+    fontSize: 10,
+    fontWeight: "600",
+  },
+  footerPriceValue: {
+    color: colors.text,
+    fontSize: 17,
+    fontWeight: "900",
+    marginTop: 3,
   },
   primaryButton: {
     flex: 1,
-    height: 54,
-    borderRadius: 18,
+    minHeight: 51,
+    borderRadius: 16,
     backgroundColor: colors.primary,
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    gap: 8,
+    paddingHorizontal: 12,
   },
   primaryButtonText: {
     color: colors.white,
     fontWeight: "900",
-    fontSize: 16,
+    fontSize: 14,
   },
   emptyState: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    padding: 28,
   },
-  title: {
+  emptyIcon: {
+    width: 68,
+    height: 68,
+    borderRadius: 23,
+    backgroundColor: colors.surfaceSoft,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 16,
+  },
+  emptyTitle: {
     color: colors.text,
     fontSize: 22,
     fontWeight: "900",
+    textAlign: "center",
   },
-  shareActions: {
-    flexDirection: "row",
-    gap: 10,
-    marginTop: 14
+  emptyDescription: {
+    color: colors.muted,
+    fontSize: 13,
+    textAlign: "center",
+    lineHeight: 20,
+    marginTop: 8,
   },
-  shareButton: {
-    flex: 1,
-    minHeight: 46,
+  backToCatalogButton: {
+    marginTop: 20,
+    paddingHorizontal: 22,
+    paddingVertical: 13,
     borderRadius: 14,
-    backgroundColor: "#FFF1EA",
-    borderWidth: 1,
-    borderColor: "#FFD8C5",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 7,
+    backgroundColor: colors.primary,
   },
-  shareButtonText: {
-    color: colors.primary,
-    fontSize: 14,
+  backToCatalogText: {
+    color: colors.white,
+    fontSize: 13,
     fontWeight: "800",
   },
 });
