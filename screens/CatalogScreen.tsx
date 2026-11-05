@@ -79,7 +79,10 @@ export default function CatalogScreen({
           product.title.toLowerCase().includes(query) ||
           product.description.toLowerCase().includes(query);
 
+        const validPriceRange = minPrice <= maxPrice;
+
         const matchesPrice =
+          validPriceRange &&
           product.price >= minPrice &&
           product.price <= maxPrice;
 
