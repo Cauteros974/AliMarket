@@ -549,7 +549,19 @@ const styles = StyleSheet.create({
         borderTopColor: colors.border,
         gap: 12,
     },
-    
+
+    footerTotal: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
+
+    footerLabel: {
+        color: colors.muted,
+        fontSize: 13,
+        fontWeight: "700",
+    },
+
     primaryButtonText: {
         color: colors.white,
         fontSize: 16,
