@@ -55,8 +55,16 @@ export default function CatalogScreen({
   }, []);
 
   // Filter and sort products
+  const rawMinPrice = filters.minPrice.trim();
+  const rawMaxPrice = filters.maxPrice.trim();
   const filteredProducts = useMemo(() => {
-    const minPrice = Number(filters.minPrice) || 0;
+    const parsedMinPrice = rawMinPrice === "" ? 0 : Number(rawMinPrice);
+    const parsedMaxPrice =
+      rawMaxPrice === "" ? Infinity : Number(rawMaxPrice);
+    const minPrice = 
+      Number.isFinite(parsedMinPrice) && parsedMinPrice >= 0
+        ? parsedMinPrice
+        : 0;
     const maxPrice =
       Number(filters.maxPrice) || Number.MAX_SAFE_INTEGER;
     const query = searchQuery.trim().toLowerCase();
