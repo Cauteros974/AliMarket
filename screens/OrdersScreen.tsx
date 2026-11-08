@@ -127,6 +127,38 @@ export default function OrdersScreen({ navigation }: Props) {
                         </Text>
                     </View>
                 </View>
+
+                <View style={styles.productsPreview}>
+                    {productNames.slice(0, 3).map((product) => (
+                        <View
+                            key={product.id}
+                            style={styles.productPreviewRow}
+                        >
+                            <View style={styles.productBullet}>
+                                <Ionicons
+                                    name="cube-outline"
+                                    size={15}
+                                    color={colors.primary}
+                                />
+                            </View>
+
+                            <Text
+                                numberOfLines={1}
+                                style={styles.productName}
+                            >
+                                {product.quantity} × {product.title}
+                            </Text>
+                        </View>
+                    ))}
+
+                    {productNames.length > 3 && (
+                        <Text style={styles.moreProducts}>
+                            +{productNames.length - 3} more products
+                        </Text>
+                    )}
+                </View>
+
+                <View style={styles.divider} />
             </Pressable>
         );
     }
