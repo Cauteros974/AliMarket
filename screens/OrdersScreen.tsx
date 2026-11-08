@@ -168,7 +168,13 @@ export default function OrdersScreen({ navigation }: Props) {
                             color={colors.muted}
                         />
                     </View>
-                    
+
+                    <View style={styles.orderTotalContainer}>
+                        <Text style={styles.totalCaption}>Total</Text>
+                        <Text style={styles.orderTotal}>
+                            {formatPrice(item.total)}
+                        </Text>
+                    </View>
                 </View>
 
                 <View style={styles.viewDetails}>
