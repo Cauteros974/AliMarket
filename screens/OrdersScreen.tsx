@@ -25,7 +25,25 @@ export default function OrdersScreen({ navigation }: Props) {
     );
 
     return ["All", ...statuses];
-  }, [orders])
+  }, [orders]);
+
+  const filteredOrders = useMemo(() => {
+    if (activeFilter === "All") {
+      return orders;
+    }
+    
+    return orders.filter(
+      (order) => String(order.status) === activeFilter
+    );
+  }, [orders, activeFilter]);
+
+  function getStatusColor(status: string) {
+    const normalized = status.toLowerCase();
+
+    if(normalized.includes("deliver")) {
+      return "#16A36A";
+    }
+  }
 
   return (
     <SafeAreaView style={styles.safeArea}>
