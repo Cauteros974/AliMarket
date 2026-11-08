@@ -175,6 +175,12 @@ export default function OrdersScreen({ navigation }: Props) {
                     <Text style={styles.viewDetailsText}>
                         View order details
                     </Text>
+
+                    <Ionicons
+                        name="chevron-forward"
+                        size={17}
+                        color={colors.primary}
+                    />
                 </View>
             </Pressable>
         );
