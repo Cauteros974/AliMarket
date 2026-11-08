@@ -1,4 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
+import { useMemo, useState } from "react";
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { products } from "../data/products";
@@ -10,9 +11,16 @@ type Props = {
   navigation: any;
 };
 
+type FilterValue = "All" | string;
+
 export default function OrdersScreen({ navigation }: Props) {
   const orders = useShopStore((state) => state.orders);
 
+  const [activeFilter, setActiveFilter] =
+        useState<FilterValue>("All");
+
+  
+        
   return (
     <SafeAreaView style={styles.safeArea}>
       <FlatList
