@@ -80,6 +80,13 @@ export default function OrdersScreen({ navigation }: Props) {
       return colors.surfaceSoft;
   }
 
+  function getProductCount(items: typeof orders[number]["items"]) {
+    return items.reduce(
+      (sum, item) => sum + item.quantity,
+        0
+    );
+  }
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <FlatList
