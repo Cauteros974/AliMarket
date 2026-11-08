@@ -19,8 +19,14 @@ export default function OrdersScreen({ navigation }: Props) {
   const [activeFilter, setActiveFilter] =
         useState<FilterValue>("All");
 
-  
-        
+  const filter = useMemo(() => {
+    const statuses = Array.from(
+      new Set(orders.map((order) => String(order.status)))
+    );
+
+    return ["All", ...statuses];
+  }, [orders])
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <FlatList
