@@ -167,6 +167,10 @@ export default function OrdersScreen({ navigation }: Props) {
                             size={16}
                             color={colors.muted}
                         />
+
+                        <Text style={styles.orderMetaText}>
+                            {getProductCount(item.items)} items
+                        </Text>
                     </View>
 
                     <View style={styles.orderTotalContainer}>
