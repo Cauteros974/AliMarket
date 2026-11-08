@@ -59,6 +59,18 @@ export default function OrdersScreen({ navigation }: Props) {
 
   }
 
+  function getStatusBackground(status: string) {
+    const normalized = status.toLowerCase();
+    
+    if (normalized.includes("deliver")) {
+      return "#E5F7EE";
+    }
+    
+    if (normalized.includes("cancel")) {
+      return "#FCEAEA";
+    }
+  }
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <FlatList
