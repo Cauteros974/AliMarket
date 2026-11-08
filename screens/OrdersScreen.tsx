@@ -159,6 +159,17 @@ export default function OrdersScreen({ navigation }: Props) {
                 </View>
 
                 <View style={styles.divider} />
+
+                <View style={styles.orderFooter}>
+                    <View style={styles.orderMeta}>
+                        <Ionicons
+                            name="bag-outline"
+                            size={16}
+                            color={colors.muted}
+                        />
+                    </View>
+                    
+                </View>
             </Pressable>
         );
     }
