@@ -43,6 +43,20 @@ export default function OrdersScreen({ navigation }: Props) {
     if(normalized.includes("deliver")) {
       return "#16A36A";
     }
+
+    if (normalized.includes("cancel")) {
+      return "#E05252";
+    }
+
+    if (
+      normalized.includes("ship") ||
+      normalized.includes("transit")
+    ) {
+        return "#3978D5";
+    }
+
+    return colors.primary;
+
   }
 
   return (
