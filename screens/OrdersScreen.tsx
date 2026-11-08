@@ -126,6 +126,29 @@ export default function OrdersScreen({ navigation }: Props) {
                             {formatDate(item.createdAt)}
                         </Text>
                     </View>
+
+                    <View
+                        style={[
+                            styles.statusBadge,
+                            { backgroundColor: statusBackground },
+                        ]}
+                    >
+                        <View
+                            style={[
+                                styles.statusDot,
+                                { backgroundColor: statusColor },
+                            ]}
+                        />
+
+                        <Text
+                            style={[
+                                styles.statusText,
+                                { color: statusColor },
+                            ]}
+                        >
+                            {String(item.status)}
+                        </Text>
+                    </View>
                 </View>
 
                 <View style={styles.productsPreview}>
