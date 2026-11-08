@@ -170,6 +170,12 @@ export default function OrdersScreen({ navigation }: Props) {
                     </View>
                     
                 </View>
+
+                <View style={styles.viewDetails}>
+                    <Text style={styles.viewDetailsText}>
+                        View order details
+                    </Text>
+                </View>
             </Pressable>
         );
     }
