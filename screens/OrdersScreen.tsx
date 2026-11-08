@@ -103,6 +103,32 @@ export default function OrdersScreen({ navigation }: Props) {
         const statusBackground = getStatusBackground(
             String(item.status)
         );
+
+        return (
+            <Pressable
+                onPress={() =>
+                    navigation.navigate("OrderDetails", {
+                        orderId: item.id,
+                    })
+                }
+                style={({ pressed }) => [
+                    styles.orderCard,
+                    pressed && styles.pressedCard,
+                ]}
+            >
+                <View style={styles.orderHeader}>
+                    <View style={styles.orderHeaderInfo}>
+                        <Text style={styles.orderNumber}>
+                            Order #{item.id}
+                        </Text>
+
+                        <Text style={styles.orderDate}>
+                            {formatDate(item.createdAt)}
+                        </Text>
+                    </View>
+                </View>
+            </Pressable>
+        );
     }
 
     return (
