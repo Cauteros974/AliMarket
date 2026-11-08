@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
-import type { NativeStackScreenProps } from "@react-navigation/native-stack";
+import type { RouteProp } from "@react-navigation/native";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ProductShareSheet from "../components/ProductShareSheet";
@@ -10,7 +11,10 @@ import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { formatPrice } from "../utils/format";
 
-type Props = NativeStackScreenProps<RootStackParamList, "ProductDetails">;
+type Props = {
+  route: RouteProp<RootStackParamList, "ProductDetails">;
+  navigation: NativeStackNavigationProp<RootStackParamList, "ProductDetails">;
+};
 
 export default function ProductDetailsScreen({
   route,
