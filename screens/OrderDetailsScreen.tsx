@@ -207,69 +207,17 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                             color={colors.white}
                         />
                     </View>
-                </Pressable>
 
-                <View style={styles.card}>
-                    <View style={styles.rowBetween}>
-                        <View>
-                            <Text style={styles.orderId}>{order.id}</Text>
-                            <Text style={styles.muted}>{formatDate(order.createdAt)}</Text>
-                        </View>
+                    <View style={styles.trackInfo}>
+                        <Text style={styles.trackTitle}>
+                            Track your order
+                        </Text>
 
-                        <View style={styles.statusBadge}>
-                            <Text style={styles.statusText}>{order.status}</Text>
-                        </View>
+                        <Text style={styles.trackDescription}>
+                            Check your delivery progress
+                        </Text>
                     </View>
-                </View>
-
-                <Pressable
-                    onPress={() => navigation.navigate("OrderTracking", {orderId: order.id})}
-                    style={styles.trackButton}
-                >
-                    <Text style={styles.trackText}>Track order</Text>
                 </Pressable>
-
-                <View style={styles.card}>
-                    <Text style={styles.cardTitle}>Delivery address</Text>
-                    <Text style={styles.muted}>
-                        {order.address.city}, {order.address.street}
-                    </Text>
-                    <Text style={styles.muted}>{order.address.phone}</Text>
-                </View>
-
-                <View style={styles.card}>
-                    <Text style={styles.cardTitle}>Products</Text>
-
-                    {order.items.map((cartItem) => {
-                        const product = products.find((item) => item.id === cartItem.productId);
-                        
-                        if (!product) return null;
-                        
-                        return(
-                            <View key={cartItem.productId} style={styles.productRow}>
-                                <Image source={product.image} style={styles.productImage} />
-
-                                <View style={styles.productInfo}>
-                                    <Text numberOfLines={2} style={styles.productTitle}>
-                                        {product.title}
-                                    </Text>
-
-                                    <Text style={styles.muted}>Quantity: {cartItem.quantity}</Text>
-                                    <Text style={styles.productPrice}>
-                                        {formatPrice(product.price * cartItem.quantity)}
-                                    </Text>
-                                </View>
-                            </View>
-                        )
-                    })}
-                </View>
-
-                <View style={styles.card}>
-                    <View style={styles.rowBetween}>
-                        <Text style={styles.totalLabel}>Total</Text>
-                        <Text style={styles.totalValue}>{formatPrice(order.total)}</Text>
-                    </View>
-                </View>
             </ScrollView>
         </SafeAreaView>
     );
