@@ -677,4 +677,32 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginBottom: 16,
     },
+
+    notFoundTitle: {
+        color: colors.text,
+        fontSize: 21,
+        fontWeight: "900",
+    },
+
+    notFoundText: {
+        color: colors.muted,
+        fontSize: 13,
+        textAlign: "center",
+        lineHeight: 20,
+        marginTop: 8,
+    },
+
+    backButton: {
+        backgroundColor: colors.primary,
+        paddingHorizontal: 25,
+        paddingVertical: 13,
+        borderRadius: 14,
+        marginTop: 20,
+    },
+
+    backButtonText: {
+        color: colors.white,
+        fontSize: 13,
+        fontWeight: "900",
+    },
 });
