@@ -110,7 +110,8 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                 quantity: cartItem.quantity,
                 lineTotal: product.price * cartItem.quantity,
             };
-        }
+        })
+        .filter((item) => item !== null);
 
     return(
         <SafeAreaView style={styles.safeArea}>
