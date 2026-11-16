@@ -616,4 +616,22 @@ const styles = StyleSheet.create({
         fontSize: 11,
     },
 
+    productPrice: {
+        color: colors.primary,
+        fontSize: 14,
+        fontWeight: "900",
+    },
+
+    summaryRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginVertical: 5,
+    },
+
+    summaryLabel: {
+        color: colors.muted,
+        fontSize: 13,
+        fontWeight: "600",
+    },
 });
