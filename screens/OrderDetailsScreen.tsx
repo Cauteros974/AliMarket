@@ -74,8 +74,12 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                         />
                     </View>
 
-                     <Text style={styles.notFoundTitle}>
+                    <Text style={styles.notFoundTitle}>
                         Order not found
+                    </Text>
+
+                    <Text style={styles.notFoundText}>
+                        This order may have been removed or is no longer available.
                     </Text>
                  </View>
             </SafeAreaView>
