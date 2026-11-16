@@ -184,7 +184,7 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
 
                              <Text style={styles.statusDescription}>
                                 {getStatusDescription(
-                                
+                                    String(order.status)
                                 )}
                             </Text>
                         </View>
