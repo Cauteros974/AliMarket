@@ -365,6 +365,10 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                         </Text>
                     </View>
                 </View>
+
+                <Text style={styles.footerNote}>
+                    Thank you for shopping with AliMarket!
+                </Text>
             </ScrollView>
         </SafeAreaView>
     );
