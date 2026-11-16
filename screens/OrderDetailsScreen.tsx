@@ -430,9 +430,12 @@ const styles = StyleSheet.create({
     },
 
     orderIcon: {
-        width: 40,
-        height: 40,
+        width: 46,
+        height: 46,
         borderRadius: 15,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
     },
 
     rowBetween: {
