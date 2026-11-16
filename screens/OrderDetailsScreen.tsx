@@ -102,6 +102,14 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
             const product = products.find(
                 (item) => item.id === cartItem.productId
             );
+
+            if (!product) return null;
+
+            return {
+                product,
+                quantity: cartItem.quantity,
+                lineTotal: product.price * cartItem.quantity,
+            };
         }
 
     return(
