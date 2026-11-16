@@ -313,6 +313,12 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                             </View>
                         </View>
                     ))}
+
+                    {orderProducts.length === 0 && (
+                        <Text style={styles.muted}>
+                            Product information is unavailable.
+                        </Text>
+                    )}
                 </View>
             </ScrollView>
         </SafeAreaView>
