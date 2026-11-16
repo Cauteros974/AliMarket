@@ -141,6 +141,7 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                     </View>
                 </View>
 
+                {/* Order information */}
                 <View style={styles.card}>
                     <View style={styles.orderHeader}>
                         <View style={styles.orderIcon}>
@@ -190,6 +191,16 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                         </View>
                     </View>
                 </View>
+
+                <Pressable>
+                    <View>
+                        <Ionicons 
+                            name="location-outline"
+                            size={21}
+                            color={colors.white}
+                        />
+                    </View>
+                </Pressable>
 
                 <View style={styles.card}>
                     <View style={styles.rowBetween}>
