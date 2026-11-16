@@ -163,6 +163,15 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                     </View>
                     
                     <View style={styles.divider} />
+                    
+                    <View style={styles.statusContainer}>
+                        <View
+                            style={[
+                                styles.statusDot,
+                                { backgroundColor: statusColor },
+                            ]}
+                        />
+                    </View>
                 </View>
 
                 <View style={styles.card}>
