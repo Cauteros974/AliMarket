@@ -477,4 +477,14 @@ const styles = StyleSheet.create({
         flex: 1,
         gap: 4,
     },
+
+    statusText: {
+        fontSize: 13,
+        fontWeight: "900"
+    },
+
+    statusDescription: {
+        color: colors.muted,
+        fontSize: 12,
+    },
 });
