@@ -198,8 +198,9 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                             orderId: order.id,
                         })
                     }
+                    style={styles.trackButton}
                 >
-                    <View>
+                    <View style={styles.trackIcon}>
                         <Ionicons 
                             name="location-outline"
                             size={21}
