@@ -359,6 +359,10 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                         <Text style={styles.totalLabel}>
                             Order total
                         </Text>
+
+                        <Text style={styles.totalValue}>
+                            {formatPrice(order.total)}
+                        </Text>
                     </View>
                 </View>
             </ScrollView>
