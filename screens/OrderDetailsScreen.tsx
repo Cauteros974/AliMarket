@@ -494,5 +494,14 @@ const styles = StyleSheet.create({
         backgroundColor: colors.primary,
         borderRadius: 18,
         padding: 14,
+        marginBottom: 13,
+        gap: 12,
+    },
+
+    trackIcon: {
+        width: 40,
+        height: 40,
+        borderRadius: 13,
+        backgroundColor: colors.muted
     }
 });
