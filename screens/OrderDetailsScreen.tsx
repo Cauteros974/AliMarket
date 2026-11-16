@@ -320,6 +320,18 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                         </Text>
                     )}
                 </View>
+
+                <View style={styles.card}>
+                    <View style={styles.sectionHeader}>
+                        <View style={styles.sectionIcon}>
+                            <Ionicons
+                                name="wallet-outline"
+                                size={19}
+                                color={colors.primary}
+                            />
+                        </View>
+                    </View>
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
