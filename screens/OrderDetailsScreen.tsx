@@ -380,8 +380,9 @@ const styles = StyleSheet.create({
         backgroundColor: colors.background 
     },
     content: { 
-        padding: 18, 
-        paddingBottom: 28 
+        paddingHorizontal: 18,
+        paddingTop: 12,
+        paddingBottom: 35,
     },
     header: {
         flexDirection: "column",
