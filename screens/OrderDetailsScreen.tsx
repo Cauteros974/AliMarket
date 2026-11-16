@@ -527,7 +527,13 @@ const styles = StyleSheet.create({
     sectionHeader: {
         flexDirection: "row",
         alignItems: "center",
-        gap: 12,
+        gap: 9,
         marginBottom: 15,
+    },
+
+    sectionIcon: {
+        width: 34,
+        height: 34,
+        justifyContent: "center",
     },
 });
