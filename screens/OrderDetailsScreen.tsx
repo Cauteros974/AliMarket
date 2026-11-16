@@ -283,6 +283,16 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                             </Text>
                         </View>
                     </View>
+
+                    {orderProducts.map((item) => (
+                        <View>
+                            <Image 
+                                source={item.product.image}
+                                style={styles.productImage}
+                                resizeMode="cover"
+                            />
+                        </View>
+                    ))}
                 </View>
             </ScrollView>
         </SafeAreaView>
