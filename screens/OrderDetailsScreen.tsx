@@ -429,6 +429,12 @@ const styles = StyleSheet.create({
         gap: 12,
     },
 
+    orderIcon: {
+        width: 40,
+        height: 40,
+        borderRadius: 15,
+    },
+
     rowBetween: {
         flexDirection: "row",
         justifyContent: "space-between",
