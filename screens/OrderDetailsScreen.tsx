@@ -580,13 +580,13 @@ const styles = StyleSheet.create({
     countText: {
         color: colors.primary,
         fontSize: 11,
-        fontWeight: "600",
+        fontWeight: "900",
     },
 
     productRow: {
         flexDirection: "row",
         gap: 12,
-        paddingVertical: 10,
+        paddingVertical: 12,
         borderTopWidth: 1,
         borderTopColor: colors.border,
     },
