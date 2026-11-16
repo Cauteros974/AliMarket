@@ -576,4 +576,19 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         paddingHorizontal: 7,
     },
+
+    countText: {
+        color: colors.primary,
+        fontSize: 11,
+        fontWeight: "600",
+    },
+
+    productRow: {
+        flexDirection: "row",
+        gap: 12,
+        paddingVertical: 10,
+        borderTopWidth: 1,
+        borderTopColor: colors.border,
+    },
+
 });
