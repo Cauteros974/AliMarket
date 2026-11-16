@@ -341,6 +341,16 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                         <Text style={styles.summaryLabel}>
                             Products
                         </Text>
+
+                        <Text style={styles.summaryValue}>
+                            {formatPrice(
+                                orderProducts.reduce(
+                                    (sum, item) =>
+                                        sum + item.lineTotal,
+                                    0
+                                )
+                            )}
+                        </Text>
                     </View>
                 </View>
             </ScrollView>
