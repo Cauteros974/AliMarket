@@ -239,6 +239,15 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                             Delivery address
                         </Text>
                     </View>
+
+                    <Text style={styles.addressTitle}>
+                        {order.address.title}
+                    </Text>
+
+
+                    <Text style={styles.addressText}>
+                        {order.address.city}, {order.address.street}
+                    </Text>
                 </View>
             </ScrollView>
         </SafeAreaView>
