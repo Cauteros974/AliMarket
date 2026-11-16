@@ -171,6 +171,17 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                                 { backgroundColor: statusColor },
                             ]}
                         />
+
+                        <View style={styles.statusInfo}>
+                            <Text
+                                style={[
+                                    styles.statusText,
+                                    { color: statusColor },
+                                ]}
+                            >
+                                {String(order.status)}
+                            </Text>
+                        </View>
                     </View>
                 </View>
 
