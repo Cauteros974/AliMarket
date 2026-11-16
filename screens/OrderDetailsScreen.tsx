@@ -45,6 +45,17 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
         if (normalized.includes("deliver")) {
             return "Your order has been delivered.";
         }
+
+        if (normalized.includes("cancel")) {
+            return "This order has been cancelled.";
+        }
+
+        if (
+            normalized.includes("ship") ||
+            normalized.includes("transit")
+        ) {
+            return "Your order is on its way.";
+        }
     }
 
 
