@@ -383,6 +383,10 @@ const styles = StyleSheet.create({
         padding: 18, 
         paddingBottom: 28 
     },
+    header: {
+        flexDirection: "column",
+        alignItems: "center"
+    },
     title: { 
         color: colors.text, 
         fontSize: 28, 
