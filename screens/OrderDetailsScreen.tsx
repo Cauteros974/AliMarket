@@ -112,6 +112,11 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
             };
         })
         .filter((item) => item !== null);
+    
+    const totalItems = order.items.reduce(
+        (sum, item) => sum + item.quantity,
+        0
+    )
 
     return(
         <SafeAreaView style={styles.safeArea}>
