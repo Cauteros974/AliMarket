@@ -192,7 +192,13 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                     </View>
                 </View>
 
-                <Pressable>
+                <Pressable
+                    onPress={() =>
+                        navigation.navigate("OrderTracking", {
+                            orderId: order.id,
+                        })
+                    }
+                >
                     <View>
                         <Ionicons 
                             name="location-outline"
