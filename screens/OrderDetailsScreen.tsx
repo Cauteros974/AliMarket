@@ -302,6 +302,14 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                                 >
                                     {item.product.title}
                                 </Text>
+
+                                <Text style={styles.productQuantity}>
+                                    Quantity: {item.quantity}
+                                </Text>
+
+                                <Text style={styles.productPrice}>
+                                    {formatPrice(item.lineTotal)}
+                                </Text>
                             </View>
                         </View>
                     ))}
