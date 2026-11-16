@@ -406,8 +406,8 @@ const styles = StyleSheet.create({
     },
 
     headerIcon: {
-        width: 50,
-        height: 50,
+        width: 46,
+        height: 46,
         borderRadius: 15,
     },
 
