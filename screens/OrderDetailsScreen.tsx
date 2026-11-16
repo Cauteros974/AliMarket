@@ -297,7 +297,7 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
 
                             <View style={styles.productInfo}>
                                 <Text
-                                    numberOfLines={3}
+                                    numberOfLines={2}
                                     style={styles.productTitle}
                                 >
                                     {item.product.title}
