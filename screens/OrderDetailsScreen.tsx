@@ -379,27 +379,38 @@ const styles = StyleSheet.create({
         flex: 1, 
         backgroundColor: colors.background 
     },
+
     content: { 
         paddingHorizontal: 18,
         paddingTop: 12,
         paddingBottom: 35,
     },
+
     header: {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
         marginBottom: 20,
     },
+
     title: { 
         color: colors.text, 
         fontSize: 28, 
         fontWeight: "900", 
     },
+
     subtitle: {
         color: colors.muted,
         fontSize: 13,
         marginTop: 5,
     },
+
+    headerIcon: {
+        width: 50,
+        height: 50,
+        borderRadius: 15,
+    },
+
     card: {
         backgroundColor: colors.surface,
         borderRadius: 18,
