@@ -603,4 +603,17 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         gap: 6,
     },
+
+    productTitle: {
+        color: colors.text,
+        fontSize: 13,
+        fontWeight: "800",
+        lineHeight: 19,
+    },
+
+    productQuantity: {
+        color: colors.muted,
+        fontSize: 11,
+    },
+
 });
