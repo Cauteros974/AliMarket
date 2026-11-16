@@ -487,4 +487,10 @@ const styles = StyleSheet.create({
         color: colors.muted,
         fontSize: 12,
     },
+
+    trackButton: {
+        flexDirection: "row",
+        alignItems: "center",
+        
+    }
 });
