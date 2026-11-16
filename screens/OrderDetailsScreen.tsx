@@ -591,4 +591,16 @@ const styles = StyleSheet.create({
         borderTopColor: colors.border,
     },
 
+    productImage: {
+        width: 82,
+        height: 82,
+        borderRadius: 15,
+        backgroundColor: colors.surfaceSoft,
+    },
+
+    productInfo: {
+        flex: 1,
+        justifyContent: "center",
+        gap: 6,
+    },
 });
