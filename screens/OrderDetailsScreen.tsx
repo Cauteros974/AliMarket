@@ -520,7 +520,7 @@ const styles = StyleSheet.create({
 
     trackDescription: {
         color: colors.white,
-        opacity: 0.9,
-        fontSize: 14
+        opacity: 0.8,
+        fontSize: 11
     }
 });
