@@ -534,6 +534,9 @@ const styles = StyleSheet.create({
     sectionIcon: {
         width: 34,
         height: 34,
+        borderRadius: 11,
+        backgroundColor: colors.accent,
+        alignItems: "center",
         justifyContent: "center",
     },
 });
