@@ -124,20 +124,33 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                 contentContainerStyle={styles.content}
                 showsVerticalScrollIndicator={false}
             >
+                {/* Header */}
                 <View style={styles.header}>
                     <Text style={styles.title}>Order details</Text>
 
                     <Text style={styles.subtitle}>
                         Your purchase information
                     </Text>
+
+                    <View style={styles.headerIcon}>
+                        <Ionicons
+                            name="receipt-outline"
+                            size={23}
+                            color={colors.primary}
+                        />
+                    </View>
                 </View>
 
-                <View style={styles.headerIcon}>
-                    <Ionicons
-                        name="receipt-outline"
-                        size={23}
-                        color={colors.primary}
-                    />
+                <View style={styles.card}>
+                    <View style={styles.orderHeader}>
+                        <View>
+                            <Ionicons 
+                                name="bag-check-outline"
+                                size={23}
+                                color={colors.primary}
+                            />
+                        </View>
+                    </View>
                 </View>
 
                 <View style={styles.card}>
