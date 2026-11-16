@@ -1,9 +1,9 @@
-import { RouteProp } from "@react-navigation/native";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import type { RouteProp } from "@react-navigation/native";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { products } from "../data/products";
-import { RootStackParamList } from "../navigation/types";
+import type { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
 import { colors } from "../theme/colors";
 import { formatDate, formatPrice } from "../utils/format";
@@ -17,6 +17,18 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
     const order = useShopStore((state) =>
         state.orders.find((item) => item.id === route.params.orderId)
     );
+
+    function getStatusColor(status: string) {
+        const normalized = status.toLowerCase();
+
+        if (normalized.includes("deliver")) {
+            return "#16A36A";
+        }
+
+        if (normalized.includes("cancel")) {
+            return "#E05252";
+        }
+    }
 
 
     if(!order) {
