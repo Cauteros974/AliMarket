@@ -255,6 +255,10 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                             size={15}
                             color={colors.muted}
                         />
+
+                        <Text style={styles.muted}>
+                            {order.address.phone}
+                        </Text>
                     </View>
                 </View>
             </ScrollView>
