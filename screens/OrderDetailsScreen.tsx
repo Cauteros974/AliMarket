@@ -1,3 +1,4 @@
+import { Ionicons } from "@expo/vector-icons";
 import type { RouteProp } from "@react-navigation/native";
 import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
@@ -56,15 +57,27 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
         ) {
             return "Your order is on its way.";
         }
+        
+        return "Your order is being processed.";
     }
 
 
     if(!order) {
         return(
             <SafeAreaView style={styles.safeArea}>
-                <View style={styles.emptyState}>
-                    <Text style={styles.emptyTitle}>Order not found</Text>
-                </View>
+                 <View style={styles.notFound}>
+                    <View style={styles.notFoundIcon}>
+                        <Ionicons
+                            name="alert-circle-outline"
+                            size={44}
+                            color={colors.primary}
+                        />
+                    </View>
+
+                     <Text style={styles.notFoundTitle}>
+                        Order not found
+                    </Text>
+                 </View>
             </SafeAreaView>
         );
     }
