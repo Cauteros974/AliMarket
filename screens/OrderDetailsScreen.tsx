@@ -127,7 +127,9 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                 <View style={styles.header}>
                     <Text style={styles.title}>Order details</Text>
 
-                    
+                    <Text style={styles.subtitle}>
+                        Your purchase information
+                    </Text>
                 </View>
 
                 <View style={styles.card}>
