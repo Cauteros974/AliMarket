@@ -155,8 +155,14 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                             <Text style={styles.orderId}>
                                 Order #{order.id}
                             </Text>
+
+                            <Text style={styles.muted}>
+                                {formatDate(order.createdAt)}
+                            </Text>
                         </View>
                     </View>
+                    
+                    <View style={styles.divider} />
                 </View>
 
                 <View style={styles.card}>
