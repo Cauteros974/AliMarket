@@ -416,39 +416,51 @@ const styles = StyleSheet.create({
 
     card: {
         backgroundColor: colors.surface,
-        borderRadius: 18,
+        borderRadius: 20,
         borderWidth: 1,
         borderColor: colors.border,
         padding: 16,
-        marginBottom: 12,
+        marginBottom: 13,
     },
+
+    orderHeader: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 12,
+    },
+
     rowBetween: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
         gap: 12,
     },
+
     orderId: { 
         color: colors.text, 
         fontSize: 17, 
         fontWeight: "900" 
     },
+
     muted: { 
         color: colors.muted, 
         marginTop: 4, 
         fontWeight: "700" 
     },
+    
     statusBadge: {
         backgroundColor: colors.surfaceSoft,
         borderRadius: 999,
         paddingHorizontal: 10,
         paddingVertical: 6,
     },
+
     statusText: { 
         color: colors.primary, 
         fontSize: 12, 
         fontWeight: "900" 
     },
+
     trackButton: {
         height: 46,
         borderRadius: 14,
@@ -457,16 +469,19 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginTop: 14,
     },
+
     cardTitle: { 
         color: colors.text, 
         fontSize: 18, 
         fontWeight: "900", 
         marginBottom: 8 
     },
+    
     trackText: {
         color: colors.white,
         fontWeight: "900",
     },
+
     productRow: {
         flexDirection: "row",
         gap: 12,
@@ -474,40 +489,48 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: colors.border,
     },
+
     productImage: {
         width: 72,
         height: 72,
         borderRadius: 14,
         backgroundColor: colors.surfaceSoft,
     },
+
     productInfo: { 
         flex: 1 
     },
+
     productTitle: { 
         color: colors.text, 
         fontWeight: "900", 
         lineHeight: 20 
     },
+
     productPrice: { 
         color: colors.primary, 
         fontWeight: "900", 
         marginTop: 6 
     },
+    
     totalLabel: { 
         color: colors.text, 
         fontSize: 18, 
         fontWeight: "900" 
     },
+
     totalValue: { 
         color: colors.primary, 
         fontSize: 20, 
         fontWeight: "900" 
     },
+
     emptyState: { 
         flex: 1, 
         alignItems: "center", 
         justifyContent: "center" 
     },
+
     emptyTitle: { 
         color: colors.text, 
         fontSize: 22, 
