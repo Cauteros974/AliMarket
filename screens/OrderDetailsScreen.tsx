@@ -535,8 +535,15 @@ const styles = StyleSheet.create({
         width: 34,
         height: 34,
         borderRadius: 11,
-        backgroundColor: colors.accent,
+        backgroundColor: colors.surfaceSoft,
         alignItems: "center",
         justifyContent: "center",
+    },
+
+    cardTitle: {
+        color: colors.text,
+        fontSize: 16,
+        fontWeight: "900",
+        flex: 1,
     },
 });
