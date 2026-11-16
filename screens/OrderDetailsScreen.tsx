@@ -28,6 +28,13 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
         if (normalized.includes("cancel")) {
             return "#E05252";
         }
+
+        if (
+            normalized.includes("ship") ||
+            normalized.includes("transit")
+        ) {
+            return "#3978D5";
+        }
     }
 
 
