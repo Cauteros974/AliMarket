@@ -517,4 +517,10 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "900",
     },
+
+    trackDescription: {
+        color: colors.white,
+        opacity: 0.9,
+        fontSize: 14
+    }
 });
