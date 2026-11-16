@@ -634,4 +634,16 @@ const styles = StyleSheet.create({
         fontSize: 13,
         fontWeight: "600",
     },
+
+    summaryValue: {
+        color: colors.text,
+        fontSize: 13,
+        fontWeight: "800",
+    },
+
+    totalLabel: {
+        color: colors.text,
+        fontSize: 16,
+        fontWeight: "900",
+    },
 });
