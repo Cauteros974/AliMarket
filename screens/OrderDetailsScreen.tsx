@@ -502,6 +502,8 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 13,
-        backgroundColor: colors.danger
+        backgroundColor: "rgba(255,255,255,0.18)",
+        alignItems: "center",
+        justifyContent: "center",
     }
 });
