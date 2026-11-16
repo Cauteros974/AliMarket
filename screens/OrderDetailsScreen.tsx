@@ -553,4 +553,27 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         marginBottom: 6,
     },
+
+    addressText: {
+        color: colors.muted,
+        fontSize: 13,
+        lineHeight: 20,
+    },
+
+    addressPhone: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 7,
+        marginTop: 10,
+    },
+
+    countBadge: {
+        minWidth: 26,
+        height: 26,
+        borderRadius: 9,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
+        paddingHorizontal: 7,
+    },
 });
