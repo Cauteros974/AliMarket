@@ -224,7 +224,8 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                         color={colors.white}
                     />
                 </Pressable>
-
+                
+                {/* Delivery address */}
                 <View style={styles.card}>
                     <View style={styles.sectionHeader}>
                         <View style={styles.sectionIcon}>
@@ -259,6 +260,18 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                         <Text style={styles.muted}>
                             {order.address.phone}
                         </Text>
+                    </View>
+                </View>
+
+                <View style={styles.card}>
+                    <View style={styles.sectionHeader}>
+                        <View style={styles.sectionIcon}>
+                            <Ionicons
+                                name="cube-outline"
+                                size={19}
+                                color={colors.primary}
+                            />
+                        </View>
                     </View>
                 </View>
             </ScrollView>
