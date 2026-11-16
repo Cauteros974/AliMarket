@@ -35,6 +35,16 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
         ) {
             return "#3978D5";
         }
+
+        return colors.primary;
+    }
+
+    function getStatusDescription(status: string) {
+        const normalized = status.toLowerCase();
+
+        if (normalized.includes("deliver")) {
+            return "Your order has been delivered.";
+        }
     }
 
 
