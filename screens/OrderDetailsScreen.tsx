@@ -132,6 +132,14 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                     </Text>
                 </View>
 
+                <View style={styles.headerIcon}>
+                    <Ionicons
+                        name="receipt-outline"
+                        size={23}
+                        color={colors.primary}
+                    />
+                </View>
+
                 <View style={styles.card}>
                     <View style={styles.rowBetween}>
                         <View>
