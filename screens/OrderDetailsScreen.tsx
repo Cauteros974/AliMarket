@@ -660,4 +660,21 @@ const styles = StyleSheet.create({
         fontWeight: "700",
         marginTop: 8,
     },
+
+    notFound: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 28,
+    },
+
+    notFoundIcon: {
+        width: 80,
+        height: 80,
+        borderRadius: 26,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: 16,
+    },
 });
