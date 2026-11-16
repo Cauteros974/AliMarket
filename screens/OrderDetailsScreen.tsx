@@ -81,6 +81,15 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                     <Text style={styles.notFoundText}>
                         This order may have been removed or is no longer available.
                     </Text>
+
+                    <Pressable
+                        onPress={() => navigation.goBack()}
+                        style={styles.backButton}
+                    >
+                        <Text style={styles.backButtonText}>
+                            Go back
+                        </Text>
+                    </Pressable>
                  </View>
             </SafeAreaView>
         );
