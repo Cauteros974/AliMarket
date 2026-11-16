@@ -143,7 +143,7 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
 
                 <View style={styles.card}>
                     <View style={styles.orderHeader}>
-                        <View>
+                        <View style={styles.orderIcon}>
                             <Ionicons 
                                 name="bag-check-outline"
                                 size={23}
