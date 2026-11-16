@@ -285,12 +285,24 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                     </View>
 
                     {orderProducts.map((item) => (
-                        <View>
+                        <View
+                            key={item.product.id}
+                            style={styles.productRow}
+                        >
                             <Image 
                                 source={item.product.image}
                                 style={styles.productImage}
                                 resizeMode="cover"
                             />
+
+                            <View style={styles.productInfo}>
+                                <Text
+                                    numberOfLines={2}
+                                    style={styles.productTitle}
+                                >
+                                    {item.product.title}
+                                </Text>
+                            </View>
                         </View>
                     ))}
                 </View>
