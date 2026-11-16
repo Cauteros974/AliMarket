@@ -248,6 +248,14 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                     <Text style={styles.addressText}>
                         {order.address.city}, {order.address.street}
                     </Text>
+                    
+                    <View style={styles.addressPhone}>
+                        <Ionicons
+                            name="call-outline"
+                            size={15}
+                            color={colors.muted}
+                        />
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
