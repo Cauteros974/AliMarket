@@ -352,6 +352,14 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                             )}
                         </Text>
                     </View>
+
+                    <View style={styles.divider} />
+
+                    <View style={styles.summaryRow}>
+                        <Text style={styles.totalLabel}>
+                            Order total
+                        </Text>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
