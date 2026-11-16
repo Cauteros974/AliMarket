@@ -321,6 +321,7 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                     )}
                 </View>
 
+                {/* Price summary */}
                 <View style={styles.card}>
                     <View style={styles.sectionHeader}>
                         <View style={styles.sectionIcon}>
@@ -330,6 +331,10 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                                 color={colors.primary}
                             />
                         </View>
+
+                        <Text style={styles.cardTitle}>
+                            Payment summary
+                        </Text>
                     </View>
                 </View>
             </ScrollView>
