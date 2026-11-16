@@ -646,4 +646,18 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: "900",
     },
+
+    totalValue: {
+        color: colors.primary,
+        fontSize: 20,
+        fontWeight: "900",
+    },
+
+    footerNote: {
+        color: colors.muted,
+        textAlign: "center",
+        fontSize: 12,
+        fontWeight: "700",
+        marginTop: 8,
+    },
 });
