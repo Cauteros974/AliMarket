@@ -452,6 +452,12 @@ const styles = StyleSheet.create({
     muted: {
         color: colors.muted,
         fontSize: 12,
-        fontWeight: "900",
+        fontWeight: "600",
+    },
+
+    divider: {
+        height: 1,
+        backgroundColor: colors.border,
+        marginVertical: 15,
     },
 });
