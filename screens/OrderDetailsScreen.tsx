@@ -546,4 +546,11 @@ const styles = StyleSheet.create({
         fontWeight: "900",
         flex: 1,
     },
+
+    addressTitle: {
+        color: colors.text,
+        fontSize: 14,
+        fontWeight: "900",
+        marginBottom: 6,
+    },
 });
