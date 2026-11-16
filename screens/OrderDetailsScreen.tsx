@@ -217,7 +217,25 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                             Check your delivery progress
                         </Text>
                     </View>
+
+                    <Ionicons
+                        name="chevron-forward"
+                        size={20}
+                        color={colors.white}
+                    />
                 </Pressable>
+
+                <View style={styles.card}>
+                    <View style={styles.sectionHeader}>
+                        <View style={styles.sectionIcon}>
+                            <Ionicons
+                                name="location-outline"
+                                size={19}
+                                color={colors.primary}
+                            />
+                        </View>
+                    </View>
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
