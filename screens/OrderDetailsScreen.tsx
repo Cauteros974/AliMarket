@@ -336,6 +336,12 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                             Payment summary
                         </Text>
                     </View>
+
+                    <View style={styles.summaryRow}>
+                        <Text style={styles.summaryLabel}>
+                            Products
+                        </Text>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
