@@ -460,4 +460,16 @@ const styles = StyleSheet.create({
         backgroundColor: colors.border,
         marginVertical: 15,
     },
+
+    statusContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
+    },
+
+    statusDot: {
+        width: 10,
+        height: 10,
+        borderRadius: 5,
+    },
 });
