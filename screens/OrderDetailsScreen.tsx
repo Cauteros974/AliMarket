@@ -505,5 +505,16 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(255,255,255,0.18)",
         alignItems: "center",
         justifyContent: "center",
-    }
+    },
+
+    trackInfo: {
+        flex: 1,
+        gap: 4,
+    },
+
+    trackTitle: {
+        color: colors.white,
+        fontSize: 14,
+        fontWeight: "900",
+    },
 });
