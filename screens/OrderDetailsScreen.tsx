@@ -272,6 +272,10 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                                 color={colors.primary}
                             />
                         </View>
+
+                        <Text style={styles.cardTitle}>
+                            Products
+                        </Text>
                     </View>
                 </View>
             </ScrollView>
