@@ -438,6 +438,17 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
 
+    orderHeaderInfo: {
+        flex: 1,
+        gap: 5,
+    },
+
+    orderId: {
+        color: colors.text,
+        fontSize: 16,
+        fontWeight: "900",
+    },
+
     rowBetween: {
         flexDirection: "row",
         justifyContent: "space-between",
