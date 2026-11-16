@@ -386,13 +386,19 @@ const styles = StyleSheet.create({
     },
     header: {
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginBottom: 20,
     },
     title: { 
         color: colors.text, 
         fontSize: 28, 
         fontWeight: "900", 
-        marginBottom: 16 
+    },
+    subtitle: {
+        color: colors.muted,
+        fontSize: 13,
+        marginTop: 5,
     },
     card: {
         backgroundColor: colors.surface,
