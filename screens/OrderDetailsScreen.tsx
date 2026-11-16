@@ -276,6 +276,12 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                         <Text style={styles.cardTitle}>
                             Products
                         </Text>
+
+                        <View style={styles.countBadge}>
+                            <Text style={styles.countText}>
+                                {totalItems}
+                            </Text>
+                        </View>
                     </View>
                 </View>
             </ScrollView>
