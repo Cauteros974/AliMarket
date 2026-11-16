@@ -464,12 +464,17 @@ const styles = StyleSheet.create({
     statusContainer: {
         flexDirection: "row",
         alignItems: "center",
-        gap: 10,
+        gap: 11,
     },
 
     statusDot: {
         width: 10,
         height: 10,
         borderRadius: 5,
+    },
+
+    statusInfo: {
+        flex: 1,
+        gap: 4,
     },
 });
