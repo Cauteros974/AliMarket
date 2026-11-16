@@ -150,6 +150,12 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
                                 color={colors.primary}
                             />
                         </View>
+
+                        <View style={styles.orderHeaderInfo}>
+                            <Text style={styles.orderId}>
+                                Order #{order.id}
+                            </Text>
+                        </View>
                     </View>
                 </View>
 
