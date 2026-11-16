@@ -120,8 +120,15 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
 
     return(
         <SafeAreaView style={styles.safeArea}>
-            <ScrollView contentContainerStyle={styles.content}>
-                <Text style={styles.title}>Order details</Text>
+            <ScrollView 
+                contentContainerStyle={styles.content}
+                showsVerticalScrollIndicator={false}
+            >
+                <View style={styles.header}>
+                    <Text style={styles.title}>Order details</Text>
+
+                    
+                </View>
 
                 <View style={styles.card}>
                     <View style={styles.rowBetween}>
