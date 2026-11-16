@@ -95,6 +95,15 @@ export default function OrderDetailsScreen({ navigation, route }: Props) {
         );
     }
 
+    const statusColor = getStatusColor(String(order.status));
+
+    const orderProducts = order.items
+        .map((cartItem) => {
+            const product = products.find(
+                (item) => item.id === cartItem.productId
+            );
+        }
+
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content}>
