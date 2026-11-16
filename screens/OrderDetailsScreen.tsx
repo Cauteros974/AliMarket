@@ -522,5 +522,12 @@ const styles = StyleSheet.create({
         color: colors.white,
         opacity: 0.8,
         fontSize: 11
-    }
+    },
+
+    sectionHeader: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 12,
+        marginBottom: 15,
+    },
 });
