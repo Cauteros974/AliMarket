@@ -325,6 +325,10 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                                                 </View>
                                             )}
                                         </View>
+
+                                        <Text style={styles.stepDescription}>
+                                            {step.description}
+                                        </Text>
                                     </View>
                                 </View>
                             )
