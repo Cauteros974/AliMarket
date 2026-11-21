@@ -839,4 +839,12 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginTop: 7,
     },
+
+    backButton: {
+        backgroundColor: colors.primary,
+        paddingHorizontal: 20,
+        paddingVertical: 13,
+        borderRadius: 10,
+        marginTop: 20,
+    },
 })
