@@ -480,71 +480,9 @@ const styles = StyleSheet.create({
         fontWeight: "800",
         letterSpacing: 1,
     },
-    card: {
-        width: 380,
-        backgroundColor: colors.surface,
-        borderRadius: 18,
-        borderWidth: 1,
-        borderColor: colors.border,
-        padding: 16
-    },
-    stepRow: {
-        flexDirection: "row",
-        gap: 12,
-        paddingVertical: 12,
-    },
-    dot: {
-        width: 18,
-        height: 18,
-        borderRadius: 9,
-        backgroundColor: colors.border,
-        marginTop: 2,
-    },
-    activeDot: {
-        backgroundColor: colors.primary
-    },
-    stepInfo: {
-        flex: 1
-    },
-    stepTitle: {
+    orderId: {
         color: colors.text,
-        fontWeight: "900",
-        fontSize: 16,
-    },
-    activeText: {
-        color: colors.primary
-    },
-    stepText: {
-        color: colors.primary,
-        marginTop: 4,
-        fontWeight: "700"
-    },
-    mapMock: {
-        minHeight: 150,
-        borderRadius: 22,
-        backgroundColor: colors.surfaceSoft,
-        padding: 18,
-        marginTop: 14,
-        justifyContent: "center",
-    },
-    mapTitle: {
-        color: colors.text,
-        fontSize: 18,
-        fontWeight: "900"
-    },
-    mapText: {
-        color: colors.muted,
-        marginTop: 8,
-        fontWeight: "800",
-    },
-    emptyState: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    emptyTitle: {
-        color: colors.text,
-        fontSize: 22,
+        fontSize: 15,
         fontWeight: "900",
     },
 })
