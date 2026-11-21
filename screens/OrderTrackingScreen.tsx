@@ -78,7 +78,7 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                         onPress={() => navigation.goBack()}
                         style={styles.backButton}
                     >
-                        <Text>
+                        <Text style={styles.backButtonText}>
                             Go back
                         </Text>
                     </Pressable>
@@ -86,8 +86,16 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
             </SafeAreaView>
         );
     }
-  
-    const activeIndex = steps.indexOf(order.status);
+    
+    const isCancelled =
+        String(order.status).toLowerCase().includes("cancel");
+
+    const activeIndex = steps.findIndex(
+        (step) => step.status === order.status
+    );
+
+    const isUnknownStatus = activeIndex === -1 && !isCancelled;
+
 
     return(
         <SafeAreaView style={styles.safeArea}>
