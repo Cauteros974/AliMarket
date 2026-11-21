@@ -136,8 +136,8 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                 </View>
                 
                 <View style={styles.orderCard}>
-                    <View>
-                        <View>
+                    <View style={styles.orderTop}>
+                        <View style={styles.orderIcon}>
                             <Ionicons 
                                 name="cube-outline"
                                 size={23}
