@@ -358,6 +358,20 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             color={colors.primary}
                         />
                     </View>
+
+                    <View style={styles.addressInfo}>
+                        <Text style={styles.addressLabel}>
+                            DELIVERY DESTINATION
+                        </Text>
+
+                        <Text style={styles.addressTitle}>
+                            {order.address.title}
+                        </Text>
+
+                        <Text style={styles.addressText}>
+                            {order.address.city}, {order.address.street}
+                        </Text>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
