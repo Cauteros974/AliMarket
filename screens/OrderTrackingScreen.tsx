@@ -349,6 +349,16 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                         })}
                     </View>
                 )}
+                
+                <View style={styles.addressCard}>
+                    <View style={styles.addressIcon}>
+                        <Ionicons
+                            name="location-outline"
+                            size={22}
+                            color={colors.primary}
+                        />
+                    </View>
+                </View>
             </ScrollView>
         </SafeAreaView>
     );
