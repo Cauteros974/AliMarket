@@ -301,7 +301,9 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
 
                                     <View
                                         style={[
-                                            styles.timelineContent
+                                            styles.timelineContent,
+                                            index === steps.length - 1 &&
+                                                styles.lastTimelineContent,
                                         ]}
                                     >
                                         <View>
