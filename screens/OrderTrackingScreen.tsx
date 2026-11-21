@@ -391,6 +391,18 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                         Delivery updates are based on the order status stored in the app.
                     </Text>
                 </View>
+
+                <Pressable
+                    onPress={() => 
+                        navigation.navigate("OrderDetails", {
+                            orderId: order.id,
+                        })
+                    }
+                >
+                    <Text>
+                        Back to order details
+                    </Text>
+                </Pressable>
             </ScrollView>
         </SafeAreaView>
     );
