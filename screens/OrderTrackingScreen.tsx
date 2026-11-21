@@ -403,6 +403,12 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                     <Text style={styles.detailsButtonText}>
                         Back to order details
                     </Text>
+
+                    <Ionicons
+                        name="arrow-forward"
+                        size={17}
+                        color={colors.primary}
+                    />
                 </Pressable>
             </ScrollView>
         </SafeAreaView>
