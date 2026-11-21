@@ -457,6 +457,11 @@ const styles = StyleSheet.create({
         padding: 16,
         marginBottom: 14,
     },
+    orderTop: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 11,
+    },
     card: {
         width: 380,
         backgroundColor: colors.surface,
