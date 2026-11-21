@@ -116,13 +116,21 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
             >
                 <View style={styles.header}>
                     <View>
-                        <Text>
+                        <Text style={styles.title}>
                             Track order
                         </Text>
 
-                        <Text>
+                        <Text style={styles.subtitle}>
                             Follow your package progress
                         </Text>
+                    </View>
+
+                    <View style={styles.headerIcon}>
+                        <Ionicons
+                            name="navigate-outline"
+                            size={24}
+                            color={colors.primary}
+                        />
                     </View>
                 </View>
             </ScrollView>
