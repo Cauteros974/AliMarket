@@ -438,9 +438,16 @@ const styles = StyleSheet.create({
     },
     subtitle: {
         color: colors.muted,
-        marginTop: 6,
-        marginBottom: 16,
-        fontWeight: "800",
+        fontSize: 13,
+        marginTop: 5,
+    },
+    headerIcon: {
+        width: 47,
+        height: 47,
+        borderRadius: 15,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
     },
     card: {
         width: 380,
