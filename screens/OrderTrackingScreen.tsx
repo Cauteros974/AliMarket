@@ -617,4 +617,11 @@ const styles = StyleSheet.create({
         borderRadius: 13,
         borderWidth: 3,
     },
+
+    timelineLine: {
+        width: 2,
+        flex: 1,
+        backgroundColor: colors.border,
+        marginVertical: 3,
+    },
 })
