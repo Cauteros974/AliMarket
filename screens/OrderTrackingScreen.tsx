@@ -224,6 +224,18 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                         </Text>
                     </View>
                 )}
+
+                {isCancelled && (
+                    <View>
+                        <View>
+                            <Ionicons 
+                                name="close-circle-outline"
+                                size={27}
+                                color="#E05252"
+                            />
+                        </View>
+                    </View>
+                )}
             </ScrollView>
         </SafeAreaView>
     );
