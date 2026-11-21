@@ -52,7 +52,7 @@ const steps: {
     },
 ]
 
-export default function OrderTrackingScreen({ route }: Props) {
+export default function OrderTrackingScreen({ route, navigation }: Props) {
     const order = useShopStore((state) => 
         state.orders.find((item) => item.id === route.params.orderId)
     );
@@ -61,6 +61,13 @@ export default function OrderTrackingScreen({ route }: Props) {
         return (
             <SafeAreaView style={styles.safeArea}>
                 <View style={styles.emptyState}>
+                    <View style={styles.emptyIcon}>
+                        <Ionicons 
+                            name="search-outline"
+                            size={42}
+                            color={colors.primary}
+                        />
+                    </View>
                     <Text style={styles.emptyTitle}>Order not found</Text>
                 </View>
             </SafeAreaView>
