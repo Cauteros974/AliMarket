@@ -706,4 +706,15 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+
+    cancelledInfo: {
+        flex: 1,
+        gap: 5,
+    },
+
+    cancelledTitle: {
+        color: "#E05252",
+        fontSize: 14,
+        fontWeight: "900",
+    },
 })
