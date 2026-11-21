@@ -685,4 +685,11 @@ const styles = StyleSheet.create({
     completedState: {
         color: colors.primary,
     },
+
+    cancelledCard: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 12,
+        backgroundColor: colors.surface,
+    },
 })
