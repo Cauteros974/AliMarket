@@ -114,6 +114,7 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                 contentContainerStyle={styles.content}
                 showsVerticalScrollIndicator={false}
             >
+                {/* Header */}
                 <View style={styles.header}>
                     <View>
                         <Text style={styles.title}>
@@ -131,6 +132,18 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             size={24}
                             color={colors.primary}
                         />
+                    </View>
+                </View>
+                
+                <View style={styles.orderCard}>
+                    <View>
+                        <View>
+                            <Ionicons 
+                                name="cube-outline"
+                                size={23}
+                                color={colors.primary}
+                            />
+                        </View>
                     </View>
                 </View>
             </ScrollView>
