@@ -541,4 +541,16 @@ const styles = StyleSheet.create({
         alignItems: "center",
         marginBottom: 14,
     },
+
+    sectionTitle: {
+        color: colors.text,
+        fontSize: 17,
+        fontWeight: "900",
+    },
+
+    progressPercent: {
+        color: colors.primary,
+        fontSize: 17,
+        fontWeight: "900",
+    },
 })
