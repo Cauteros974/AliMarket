@@ -25,7 +25,19 @@ const steps: {
         title: "Order placed",
         description: "Your order has been received and is being processed.",
         icon: "receipt-outline",
-    }
+    },
+    {
+        status: "Packed",
+        title: "Order packed",
+        description: "Your products have been prepared for shipment.",
+        icon: "cube-outline",
+    },
+    {
+        status: "Shipped",
+        title: "On the way",
+        description: "Your package has left the warehouse.",
+        icon: "car-outline",
+    },
 ]
 
 export default function OrderTrackingScreen({ route }: Props) {
