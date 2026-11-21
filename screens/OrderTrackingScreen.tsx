@@ -730,5 +730,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.surface,
         borderWidth: 1,
         borderColor: colors.border,
+        borderRadius: 20,
+        padding: 16,
+        marginBottom: 14,
     },
 })
