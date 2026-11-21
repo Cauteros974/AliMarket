@@ -808,4 +808,11 @@ const styles = StyleSheet.create({
         fontSize: 13,
         fontWeight: "900",
     },
+
+    emptyState: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 25,
+    },
 })
