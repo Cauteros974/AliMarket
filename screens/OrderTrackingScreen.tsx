@@ -519,10 +519,16 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 8,
     },
-    
+
     orderDate: {
         color: colors.muted,
         fontSize: 12,
         fontWeight: "700",
+    },
+
+    progressCard: {
+        backgroundColor: colors.surface,
+        borderWidth: 1,
+        borderColor: colors.border,
     },
 })
