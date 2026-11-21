@@ -756,5 +756,9 @@ const styles = StyleSheet.create({
         letterSpacing: 1,
     },
 
-    
+    addressTitle: {
+        color: colors.text,
+        fontSize: 14,
+        fontWeight: "900",
+    },
 })
