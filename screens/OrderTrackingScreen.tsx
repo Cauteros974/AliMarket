@@ -462,6 +462,14 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 11,
     },
+    orderIcon: {
+        width: 45,
+        height: 45,
+        borderRadius: 14,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
+    },
     card: {
         width: 380,
         backgroundColor: colors.surface,
