@@ -802,4 +802,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         gap: 8,
     },
+
+    detailsButtonText: {
+        color: colors.primary,
+        fontSize: 13,
+        fontWeight: "900",
+    },
 })
