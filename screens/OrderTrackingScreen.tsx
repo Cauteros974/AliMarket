@@ -644,4 +644,14 @@ const styles = StyleSheet.create({
         flexWrap: "wrap",
         gap: 8,
     },
+
+    stepTitle: {
+        color: colors.muted,
+        fontSize: 14,
+        fontWeight: "800",
+    },
+
+    completedText: {
+        color: colors.text,
+    },
 })
