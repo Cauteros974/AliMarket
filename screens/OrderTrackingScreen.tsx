@@ -449,6 +449,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    orderCard: {
+        backgroundColor: colors.surface,
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: colors.border,
+    },
     card: {
         width: 380,
         backgroundColor: colors.surface,
