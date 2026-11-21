@@ -624,4 +624,13 @@ const styles = StyleSheet.create({
         backgroundColor: colors.border,
         marginVertical: 3,
     },
+
+    completedLine: {
+        backgroundColor: colors.primary,
+    },
+
+    timelineContent: {
+        flex: 1,
+        paddingBottom: 19,
+    },
 })
