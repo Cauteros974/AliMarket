@@ -270,7 +270,15 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                                     style={styles.timelineRow}
                                 >
                                     <View style={styles.timelineIndicator}>
-                                        <View>
+                                        <View
+                                            style={[
+                                                styles.timelineDot,
+                                                completed &&
+                                                    styles.completedDot,
+                                                current &&
+                                                    styles.currentDot,
+                                            ]}
+                                        >
                                             {completed && (
                                                 <Ionicons
                                                     name="checkmark"
