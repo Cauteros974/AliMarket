@@ -573,4 +573,19 @@ const styles = StyleSheet.create({
         lineHeight: 17,
         marginTop: 11,
     },
+
+    timelineCard: {
+        backgroundColor: colors.surface,
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: colors.border,
+        padding: 17,
+        marginBottom: 14,
+    },
+
+    timelineRow: {
+        flexDirection: "row",
+        minHeight: 106,
+        gap: 13,
+    },
 })
