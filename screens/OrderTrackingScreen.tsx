@@ -825,4 +825,18 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginBottom: 17,
     },
+
+    emptyTitle: {
+        color: colors.text,
+        fontSize: 21,
+        fontWeight: "900",
+    },
+
+    emptyText: {
+        color: colors.muted,
+        fontSize: 13,
+        lineHeight: 20,
+        textAlign: "center",
+        marginTop: 7,
+    },
 })
