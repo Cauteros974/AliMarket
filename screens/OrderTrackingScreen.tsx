@@ -566,4 +566,11 @@ const styles = StyleSheet.create({
         backgroundColor: colors.primary,
         borderRadius: 999,
     },
+
+    progressHint: {
+        color: colors.muted,
+        fontSize: 11,
+        lineHeight: 17,
+        marginTop: 11,
+    },
 })
