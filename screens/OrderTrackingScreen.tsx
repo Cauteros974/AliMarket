@@ -222,7 +222,7 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             ? "Your order has been successfully delivered."
                             : isUnknownStatus
                                 ? "Waiting for a tracking update."
-                                : "Your order is moving through the delivery process."}
+                                : "Your order is moving through the delivery process."
                         </Text>
                     </View>
                 )}
@@ -422,7 +422,14 @@ const styles = StyleSheet.create({
     },
     content: {
         padding: 18,
-        paddingBottom: 28,
+        paddingTop: 12,
+        paddingBottom: 35,
+    },
+    header: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginBottom: 20,
     },
     title: {
         color: colors.text,
