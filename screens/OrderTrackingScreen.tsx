@@ -200,6 +200,21 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             <Text style={styles.sectionTitle}>
                                 Delivery progress
                             </Text>
+
+                            <Text style={styles.progressPercent}>
+                                {Math.round(progress * 100)}%
+                            </Text>
+                        </View>
+
+                        <View style={styles.progressTrack}>
+                            <View
+                                style={[
+                                    styles.progressFill,
+                                    {
+                                        width: `${progress * 100}%`,
+                                    },
+                                ]}
+                            />
                         </View>
                     </View>
                 )}
