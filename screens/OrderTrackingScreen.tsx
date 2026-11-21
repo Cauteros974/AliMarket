@@ -316,6 +316,14 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                                             >
                                                 {step.title}
                                             </Text>
+
+                                            {current && (
+                                                <View style={styles.currentBadge}>
+                                                    <Text style={styles.currentBadgeText}>
+                                                        Current
+                                                    </Text>
+                                                </View>
+                                            )}
                                         </View>
                                     </View>
                                 </View>
