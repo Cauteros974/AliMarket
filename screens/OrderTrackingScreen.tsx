@@ -633,4 +633,15 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingBottom: 19,
     },
+
+    lastTimelineContent: {
+        paddingBottom: 0,
+    },
+
+    timelineTitleRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        flexWrap: "wrap",
+        gap: 8,
+    },
 })
