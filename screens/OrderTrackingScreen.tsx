@@ -385,6 +385,11 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                         size={19}
                         color={colors.primary}
                     />
+
+                    <Text style={styles.demoText}>
+                        This is a demonstration tracking timeline.
+                        Delivery updates are based on the order status stored in the app.
+                    </Text>
                 </View>
             </ScrollView>
         </SafeAreaView>
