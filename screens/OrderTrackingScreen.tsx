@@ -194,6 +194,7 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                     </View>
                 </View>
 
+                {/* Progress */}
                 {!isCancelled && (
                     <View style={styles.progressCard}>
                         <View style={styles.progressHeader}>
@@ -226,6 +227,7 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                     </View>
                 )}
 
+                {/* Cancelled state */}
                 {isCancelled && (
                     <View style={styles.cancelledCard}>
                         <View style={styles.cancelledIcon}>
@@ -245,6 +247,19 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                                 This order is no longer being processed.
                             </Text>
                         </View>
+                    </View>
+                )}
+
+                {isCancelled && (
+                    <View>
+                        <Text>
+                            Tracking history
+                        </Text>
+
+                        {steps.map((step, index) => {
+                            const completed =
+                                activeIndex >= 0 && index <= activeIndex;
+                        }}
                     </View>
                 )}
             </ScrollView>
