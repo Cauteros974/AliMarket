@@ -691,5 +691,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 12,
         backgroundColor: colors.surface,
+        borderWidth: 1,
+        borderColor: "#F2CACA",
+        borderRadius: 18,
     },
 })
