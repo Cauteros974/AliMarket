@@ -144,6 +144,17 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                                 color={colors.primary}
                             />
                         </View>
+
+                        <View style={styles.orderInfo}>
+                            <Text style={styles.orderLabel}>
+                                ORDER NUMBER
+                            </Text>
+
+                            <Text style={styles.orderId}>
+                                #{order.id}
+                            </Text>
+                        </View>
+
                     </View>
                 </View>
             </ScrollView>
