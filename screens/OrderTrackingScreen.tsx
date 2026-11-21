@@ -791,4 +791,13 @@ const styles = StyleSheet.create({
         lineHeight: 17,
     },
 
+    detailsButton: {
+        height: 49,
+        borderRadius: 15,
+        borderWidth: 1,
+        borderColor: colors.border,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })
