@@ -251,14 +251,24 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                 )}
 
                 {isCancelled && (
-                    <View>
-                        <Text>
+                    <View style={styles.timelineCard}>
+                        <Text style={styles.sectionTitle}>
                             Tracking history
                         </Text>
 
                         {steps.map((step, index) => {
                             const completed =
                                 activeIndex >= 0 && index <= activeIndex;
+                            
+                            const current = index === activeIndex;
+
+                            const upcoming = !completed;
+
+                            return(
+                                <View>
+
+                                </View>
+                            )
                         }}
                     </View>
                 )}
