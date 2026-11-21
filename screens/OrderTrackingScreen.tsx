@@ -654,4 +654,11 @@ const styles = StyleSheet.create({
     completedText: {
         color: colors.text,
     },
+
+    currentBadge: {
+        backgroundColor: colors.surfaceSoft,
+        borderRadius: 999,
+        paddingHorizontal: 8,
+        paddingVertical: 4,
+    },
 })
