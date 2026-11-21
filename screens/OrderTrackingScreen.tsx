@@ -329,10 +329,24 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                                         <Text style={styles.stepDescription}>
                                             {step.description}
                                         </Text>
+
+                                        <Text
+                                            style={[
+                                                styles.stepState,
+                                                completed &&
+                                                    styles.completedState,
+                                            ]}
+                                        >
+                                            {completed
+                                                ? "Completed"
+                                                : upcoming
+                                                    ? "Waiting for update"
+                                                    : ""}
+                                        </Text>
                                     </View>
                                 </View>
-                            )
-                        }}
+                            );
+                        })}
                     </View>
                 )}
             </ScrollView>
