@@ -227,13 +227,19 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                 )}
 
                 {isCancelled && (
-                    <View>
-                        <View>
+                    <View style={styles.cancelledCard}>
+                        <View style={styles.cancelledIcon}>
                             <Ionicons 
                                 name="close-circle-outline"
                                 size={30}
                                 color="#E05252"
                             />
+                        </View>
+
+                        <View style={styles.cancelledInfo}>
+                            <Text style={styles.cancelledTitle}>
+                                Order cancelled
+                            </Text>
                         </View>
                     </View>
                 )}
