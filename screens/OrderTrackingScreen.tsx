@@ -350,6 +350,7 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                     </View>
                 )}
                 
+                {/* Delivery address */}
                 <View style={styles.addressCard}>
                     <View style={styles.addressIcon}>
                         <Ionicons
@@ -371,7 +372,19 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                         <Text style={styles.addressText}>
                             {order.address.city}, {order.address.street}
                         </Text>
+
+                        <Text style={styles.addressPhone}>
+                            {order.address.phone}
+                        </Text>
                     </View>
+                </View>
+
+                <View style={styles.demoNotice}>
+                    <Ionicons
+                        name="information-circle-outline"
+                        size={19}
+                        color={colors.primary}
+                    />
                 </View>
             </ScrollView>
         </SafeAreaView>
