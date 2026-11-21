@@ -734,4 +734,13 @@ const styles = StyleSheet.create({
         padding: 16,
         marginBottom: 14,
     },
+
+    addressIcon: {
+        width: 43,
+        height: 43,
+        borderRadius: 14,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })
