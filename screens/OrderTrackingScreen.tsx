@@ -155,6 +155,16 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             </Text>
                         </View>
 
+                        <View>
+                            <Text
+                                style={[
+                                    styles.statusText,
+                                    { color: statusColor },
+                                ]}
+                            >
+                                {String(order.status)}
+                            </Text>
+                        </View>
                     </View>
                 </View>
             </ScrollView>
