@@ -287,6 +287,16 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                                                 />
                                             )}
                                         </View>
+
+                                        {index !== steps.length - 1 && (
+                                            <View
+                                                style={[
+                                                    styles.timelineLine,
+                                                    completed &&
+                                                        styles.completedLine,
+                                                ]}
+                                            />
+                                        )}
                                     </View>
                                 </View>
                             )
