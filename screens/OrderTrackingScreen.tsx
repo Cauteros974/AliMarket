@@ -102,6 +102,12 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
             ? 0
             : (activeIndex + 1) / steps.length;
 
+    const statusColor = isCancelled
+        ? "#E05252"
+        : order.status === "Delivered"
+            ? "#16A36A"
+            : colors.primary;
+
     return(
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.content}>
