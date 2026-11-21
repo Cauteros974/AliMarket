@@ -661,4 +661,17 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8,
         paddingVertical: 4,
     },
+
+    currentBadgeText: {
+        color: colors.primary,
+        fontSize: 9,
+        fontWeight: "900",
+    },
+
+    stepDescription: {
+        color: colors.muted,
+        fontSize: 11,
+        lineHeight: 17,
+        marginTop: 6,
+    },
 })
