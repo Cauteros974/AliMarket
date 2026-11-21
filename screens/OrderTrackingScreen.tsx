@@ -1,23 +1,31 @@
-import { RouteProp } from "@react-navigation/native";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { ScrollView, View, Text, StyleSheet } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import type { RouteProp } from "@react-navigation/native";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { RootStackParamList } from "../navigation/types";
+import type { RootStackParamList } from "../navigation/types";
 import { useShopStore } from "../store/useShopStore";
-import { OrderStatus } from "../types/shop";
+import type { OrderStatus } from "../types/shop";
 import { colors } from "../theme/colors";
+import { formatDate } from "../utils/format";
 
 type Props = {
   route: RouteProp<RootStackParamList, "OrderTracking">;
   navigation: NativeStackNavigationProp<RootStackParamList, "OrderTracking">;
 };
 
-const steps: OrderStatus[] = [
-    "Processing",
-    "Packed",
-    "Shipped",
-    "Local warehouse",
-    "Delivered",
+const steps: {
+    status: OrderStatus;
+    title: string;
+    description: string,
+    icon: keyof typeof Ionicons.glyphMap;
+} [] = [
+    {
+        status: "Processing",
+        title: "Order placed",
+        description: "Your order has been received and is being processed.",
+        icon: "receipt-outline",
+    }
 ]
 
 export default function OrderTrackingScreen({ route }: Props) {
