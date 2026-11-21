@@ -135,6 +135,7 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                     </View>
                 </View>
                 
+                {/* Order card */}
                 <View style={styles.orderCard}>
                     <View style={styles.orderTop}>
                         <View style={styles.orderIcon}>
@@ -192,6 +193,16 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                         </Text>
                     </View>
                 </View>
+
+                {!isCancelled && (
+                    <View style={styles.progressCard}>
+                        <View style={styles.progressHeader}>
+                            <Text style={styles.sectionTitle}>
+                                Delivery progress
+                            </Text>
+                        </View>
+                    </View>
+                )}
             </ScrollView>
         </SafeAreaView>
     );
