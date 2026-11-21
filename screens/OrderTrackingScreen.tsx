@@ -717,4 +717,10 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "900",
     },
+
+    cancelledText: {
+        color: colors.muted,
+        fontSize: 11,
+        lineHeight: 17,
+    },
 })
