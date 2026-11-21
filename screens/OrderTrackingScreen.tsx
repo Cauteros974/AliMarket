@@ -485,4 +485,9 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: "900",
     },
+    statusBadge: {
+        borderRadius: 999,
+        paddingHorizontal: 10,
+        paddingVertical: 7,
+    },
 })
