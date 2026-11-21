@@ -96,6 +96,11 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
 
     const isUnknownStatus = activeIndex === -1 && !isCancelled;
 
+    const progress = isUnknownStatus
+        ? 0
+        : activeIndex === -1
+            ? 0
+            : (activeIndex + 1) / steps.length;
 
     return(
         <SafeAreaView style={styles.safeArea}>
