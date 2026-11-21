@@ -534,4 +534,11 @@ const styles = StyleSheet.create({
         padding: 16,
         marginBottom: 14,
     },
+
+    progressHeader: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: 14,
+    },
 })
