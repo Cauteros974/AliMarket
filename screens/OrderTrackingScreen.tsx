@@ -783,4 +783,12 @@ const styles = StyleSheet.create({
         padding: 13,
         marginBottom: 14,
     },
+
+    demoText: {
+        flex: 1,
+        color: colors.muted,
+        fontSize: 11,
+        lineHeight: 17,
+    },
+
 })
