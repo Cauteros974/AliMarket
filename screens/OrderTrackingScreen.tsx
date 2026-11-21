@@ -240,6 +240,10 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             <Text style={styles.cancelledTitle}>
                                 Order cancelled
                             </Text>
+
+                            <Text style={styles.cancelledText}>
+                                This order is no longer being processed.
+                            </Text>
                         </View>
                     </View>
                 )}
