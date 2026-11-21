@@ -216,6 +216,12 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                                 ]}
                             />
                         </View>
+
+                        <Text style={styles.progressHint}>
+                            ? "Your order has been successfully delivered."
+                            : isUnknownStatus
+                                ? "Waiting for a tracking update."
+                        </Text>
                     </View>
                 )}
             </ScrollView>
