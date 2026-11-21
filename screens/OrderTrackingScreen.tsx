@@ -398,8 +398,9 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             orderId: order.id,
                         })
                     }
+                    style={styles.detailsButton}
                 >
-                    <Text>
+                    <Text style={styles.detailsButtonText}>
                         Back to order details
                     </Text>
                 </Pressable>
