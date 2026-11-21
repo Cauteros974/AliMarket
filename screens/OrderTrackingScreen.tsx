@@ -110,36 +110,20 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
 
     return(
         <SafeAreaView style={styles.safeArea}>
-            <ScrollView contentContainerStyle={styles.content}>
-                <Text style={styles.title}>Tracking</Text>
-                <Text style={styles.subtitle}>{order.id}</Text>
+            <ScrollView 
+                contentContainerStyle={styles.content}
+                showsVerticalScrollIndicator={false}
+            >
+                <View style={styles.header}>
+                    <View>
+                        <Text>
+                            Track order
+                        </Text>
 
-                <View style={styles.card}>
-                    {steps.map((step, index) => {
-                        const active = index <= activeIndex;
-
-                        return(
-                            <View key={step} style={styles.stepRow}>
-                                <View style={[styles.dot, active && styles.activeDot]} />
-
-                                    <View style={styles.stepInfo}>
-                                        <Text style={[styles.stepTitle, active && styles.activeText]}>
-                                            {step}
-                                        </Text>
-                                    </View>
-                                    <Text style={styles.stepText}>
-                                        {active ? "Completed in demo timeline" : "Waiting for update"}
-                                    </Text>
-                                </View>
-                        )
-                    })}
-                </View>
-
-                <View style={styles.mapMock}>
-                    <Text style={styles.mapTitle}>Delivery route preview</Text>
-                    <Text style={styles.mapText}>
-                        {order.address.city}, {order.address.street}
-                    </Text>
+                        <Text>
+                            Follow your package progress
+                        </Text>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
