@@ -177,6 +177,16 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             </Text>
                         </View>
                     </View>
+
+                    <View style={styles.orderDivider} />
+
+                    <View style={styles.orderDateRow}>
+                        <Ionicons
+                            name="calendar-outline"
+                            size={17}
+                            color={colors.muted}
+                        />
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
