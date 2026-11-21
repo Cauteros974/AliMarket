@@ -815,4 +815,14 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         padding: 25,
     },
+
+    emptyIcon: {
+        width: 80,
+        height: 80,
+        borderRadius: 27,
+        backgroundColor: colors.surfaceSoft,
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: 17,
+    },
 })
