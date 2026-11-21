@@ -69,6 +69,19 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                         />
                     </View>
                     <Text style={styles.emptyTitle}>Order not found</Text>
+
+                    <Text style={styles.emptyText}>
+                        We couldn't find the order you're looking for.
+                    </Text>
+
+                    <Pressable
+                        onPress={() => navigation.goBack()}
+                        style={styles.backButton}
+                    >
+                        <Text>
+                            Go back
+                        </Text>
+                    </Pressable>
                 </View>
             </SafeAreaView>
         );
