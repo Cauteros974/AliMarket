@@ -743,4 +743,18 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+
+    addressInfo: {
+        flex: 1,
+        gap: 5,
+    },
+
+    addressLabel: {
+        color: colors.muted,
+        fontSize: 9,
+        fontWeight: "900",
+        letterSpacing: 1,
+    },
+
+    
 })
