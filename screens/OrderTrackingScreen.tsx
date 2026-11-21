@@ -490,4 +490,13 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         paddingVertical: 7,
     },
+    statusText: {
+        fontSize: 11,
+        fontWeight: "900",
+    },
+    orderDivider: {
+        height: 1,
+        backgroundColor: colors.border,
+        marginVertical: 14,
+    },
 })
