@@ -186,6 +186,10 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             size={17}
                             color={colors.muted}
                         />
+
+                        <Text style={styles.orderDate}>
+                            Ordered on {formatDate(order.createdAt)}
+                        </Text>
                     </View>
                 </View>
             </ScrollView>
