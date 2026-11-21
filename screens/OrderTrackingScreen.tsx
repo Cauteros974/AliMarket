@@ -588,4 +588,21 @@ const styles = StyleSheet.create({
         minHeight: 106,
         gap: 13,
     },
+
+    timelineIndicator: {
+        width: 24,
+        alignItems: "center",
+    },
+
+    timelineDot: {
+        width: 22,
+        height: 22,
+        borderRadius: 11,
+        backgroundColor: colors.surfaceSoft,
+        borderWidth: 2,
+        borderColor: colors.border,
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 1,
+    },
 })
