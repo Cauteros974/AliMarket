@@ -697,4 +697,13 @@ const styles = StyleSheet.create({
         padding: 16,
         marginBottom: 14,
     },
+
+    cancelledIcon: {
+        width: 30,
+        height: 30,
+        borderRadius: 10,
+        backgroundColor: "#020101",
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })
