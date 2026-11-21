@@ -605,4 +605,16 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         zIndex: 1,
     },
+
+    completedDot: {
+        backgroundColor: colors.primary,
+        borderColor: colors.primary,
+    },
+
+    currentDot: {
+        width: 26,
+        height: 26,
+        borderRadius: 13,
+        borderWidth: 3,
+    },
 })
