@@ -38,6 +38,18 @@ const steps: {
         description: "Your package has left the warehouse.",
         icon: "car-outline",
     },
+    {
+        status: "Local warehouse",
+        title: "Local warehouse",
+        description: "Your package has arrived at the local distribution center.",
+        icon: "business-outline",
+    },
+    {
+        status: "Delivered",
+        title: "Delivered",
+        description: "Your package has reached its destination.",
+        icon: "checkmark-done-outline",
+    },
 ]
 
 export default function OrderTrackingScreen({ route }: Props) {
