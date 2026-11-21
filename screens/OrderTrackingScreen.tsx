@@ -265,8 +265,21 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             const upcoming = !completed;
 
                             return(
-                                <View>
-
+                                <View
+                                    key={step.status}
+                                    style={styles.timelineRow}
+                                >
+                                    <View style={styles.timelineIndicator}>
+                                        <View>
+                                            {completed && (
+                                                <Ionicons
+                                                    name="checkmark"
+                                                    size={12}
+                                                    color={colors.white}
+                                                />
+                                            )}
+                                        </View>
+                                    </View>
                                 </View>
                             )
                         }}
