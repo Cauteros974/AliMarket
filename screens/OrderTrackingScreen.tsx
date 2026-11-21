@@ -723,4 +723,12 @@ const styles = StyleSheet.create({
         fontSize: 11,
         lineHeight: 17,
     },
+
+    addressCard: {
+        flexDirection: "row",
+        gap: 12,
+        backgroundColor: colors.surface,
+        borderWidth: 1,
+        borderColor: colors.border,
+    },
 })
