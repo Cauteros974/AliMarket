@@ -847,4 +847,10 @@ const styles = StyleSheet.create({
         borderRadius: 14,
         marginTop: 20,
     },
+
+    backButtonText: {
+        color: colors.white,
+        fontSize: 13,
+        fontWeight: "900",
+    },
 })
