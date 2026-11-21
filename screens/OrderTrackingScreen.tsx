@@ -454,6 +454,8 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         borderWidth: 1,
         borderColor: colors.border,
+        padding: 16,
+        marginBottom: 14,
     },
     card: {
         width: 380,
