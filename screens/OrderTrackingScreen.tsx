@@ -773,4 +773,14 @@ const styles = StyleSheet.create({
         fontSize: 11,
         marginTop: 2,
     },
+
+    demoNotice: {
+        flexDirection: "row",
+        alignItems: "flex-start",
+        gap: 9,
+        backgroundColor: colors.surfaceSoft,
+        borderRadius: 14,
+        padding: 13,
+        marginBottom: 14,
+    },
 })
