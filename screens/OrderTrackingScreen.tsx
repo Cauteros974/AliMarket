@@ -595,7 +595,7 @@ const styles = StyleSheet.create({
     },
 
     timelineDot: {
-        width: 22,
+        width: 10,
         height: 22,
         borderRadius: 11,
         backgroundColor: colors.surfaceSoft,
