@@ -420,27 +420,32 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.background,
     },
+
     content: {
         padding: 18,
         paddingTop: 12,
         paddingBottom: 35,
     },
+
     header: {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
         marginBottom: 20,
     },
+
     title: {
         color: colors.text,
         fontSize: 28,
         fontWeight: "900"
     },
+
     subtitle: {
         color: colors.muted,
         fontSize: 13,
         marginTop: 5,
     },
+
     headerIcon: {
         width: 47,
         height: 47,
@@ -449,6 +454,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+
     orderCard: {
         backgroundColor: colors.surface,
         borderRadius: 20,
@@ -457,11 +463,13 @@ const styles = StyleSheet.create({
         padding: 16,
         marginBottom: 14,
     },
+
     orderTop: {
         flexDirection: "row",
         alignItems: "center",
         gap: 11,
     },
+
     orderIcon: {
         width: 45,
         height: 45,
@@ -470,33 +478,51 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    
     orderInfo: {
         flex: 1,
         gap: 4,
     },
+
     orderLabel: {
         color: colors.muted,
         fontSize: 9,
         fontWeight: "800",
         letterSpacing: 1,
     },
+
     orderId: {
         color: colors.text,
         fontSize: 15,
         fontWeight: "900",
     },
+
     statusBadge: {
         borderRadius: 999,
         paddingHorizontal: 10,
         paddingVertical: 7,
     },
+
     statusText: {
         fontSize: 11,
         fontWeight: "900",
     },
+
     orderDivider: {
         height: 1,
         backgroundColor: colors.border,
         marginVertical: 14,
+    },
+
+    orderDateRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 8,
+    },
+    
+    orderDate: {
+        color: colors.muted,
+        fontSize: 12,
+        fontWeight: "700",
     },
 })
