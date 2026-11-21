@@ -699,9 +699,9 @@ const styles = StyleSheet.create({
     },
 
     cancelledIcon: {
-        width: 30,
-        height: 30,
-        borderRadius: 10,
+        width: 45,
+        height: 45,
+        borderRadius: 14,
         backgroundColor: "#020101",
         alignItems: "center",
         justifyContent: "center",
