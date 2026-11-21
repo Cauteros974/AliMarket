@@ -221,6 +221,7 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             ? "Your order has been successfully delivered."
                             : isUnknownStatus
                                 ? "Waiting for a tracking update."
+                                : "Your order is moving through the delivery process."}
                         </Text>
                     </View>
                 )}
@@ -230,7 +231,7 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                         <View>
                             <Ionicons 
                                 name="close-circle-outline"
-                                size={27}
+                                size={30}
                                 color="#E05252"
                             />
                         </View>
