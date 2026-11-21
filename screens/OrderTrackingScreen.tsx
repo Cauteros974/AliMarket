@@ -155,7 +155,14 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                             </Text>
                         </View>
 
-                        <View>
+                        <View
+                            style={[
+                                styles.statusBadge,
+                                {
+                                    backgroundColor: isCancelled
+                                }
+                            ]}
+                        >
                             <Text
                                 style={[
                                     styles.statusText,
