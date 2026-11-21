@@ -470,6 +470,16 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    orderInfo: {
+        flex: 1,
+        gap: 4,
+    },
+    orderLabel: {
+        color: colors.muted,
+        fontSize: 9,
+        fontWeight: "800",
+        letterSpacing: 1,
+    },
     card: {
         width: 380,
         backgroundColor: colors.surface,
