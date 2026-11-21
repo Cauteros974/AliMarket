@@ -761,4 +761,16 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "900",
     },
+
+    addressText: {
+        color: colors.muted,
+        fontSize: 12,
+        lineHeight: 18,
+    },
+
+    addressPhone: {
+        color: colors.muted,
+        fontSize: 11,
+        marginTop: 2,
+    },
 })
