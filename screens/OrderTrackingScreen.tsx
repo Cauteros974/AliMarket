@@ -298,6 +298,16 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                                             />
                                         )}
                                     </View>
+
+                                    <View
+                                        style={[
+                                            styles.timelineContent
+                                        ]}
+                                    >
+                                        <View>
+                                            <Text>{step.title}</Text>
+                                        </View>
+                                    </View>
                                 </View>
                             )
                         }}
