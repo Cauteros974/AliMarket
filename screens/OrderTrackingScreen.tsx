@@ -160,6 +160,10 @@ export default function OrderTrackingScreen({ route, navigation }: Props) {
                                 styles.statusBadge,
                                 {
                                     backgroundColor: isCancelled
+                                        ? "#FCEAEA"
+                                        : order.status === "Delivered"
+                                            ? "#E5F7EE"
+                                            : colors.surfaceSoft,
                                 }
                             ]}
                         >
