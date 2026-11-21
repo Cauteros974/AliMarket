@@ -674,4 +674,15 @@ const styles = StyleSheet.create({
         lineHeight: 17,
         marginTop: 6,
     },
+
+    stepState: {
+        color: colors.muted,
+        fontSize: 10,
+        fontWeight: "700",
+        marginTop: 7,
+    },
+
+    completedState: {
+        color: colors.primary,
+    },
 })
